@@ -8,7 +8,6 @@ namespace EspConverter.Models.Web
 {
     public class WebClass
     {
-        public string Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public bool Playable { get; set; }

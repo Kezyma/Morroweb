@@ -87,6 +87,9 @@ namespace EspConverter
                 ExportSkills(finalOrder, loadedData, outputDir);
                 ExportMagicEffects(finalOrder, loadedData, outputDir);
                 ExportScripts(finalOrder, loadedData, outputDir);
+                ExportSpells(finalOrder, loadedData, outputDir);
+                ExportMiscItems(finalOrder, loadedData, outputDir);
+                ExportWeapons(finalOrder, loadedData, outputDir);
 
                 Console.WriteLine("Processing complete.");
             }
@@ -142,7 +145,6 @@ namespace EspConverter
                     {
                         var classObj = new WebClass
                         {
-                            Id = obj.id,
                             Name = obj.name,
                             Description = obj.description,
                             Specialisation = obj.data.specialization.ToString(),
@@ -171,7 +173,6 @@ namespace EspConverter
                     {
                         var factionObj = new WebFaction
                         {
-                            Id = obj.id,
                             Name = obj.name,
                             Ranks = obj.rank_names,
                             Attributes = obj.data.favored_attributes,
@@ -205,7 +206,6 @@ namespace EspConverter
                     {
                         var factionObj = new WebRace
                         {
-                            Id = obj.id,
                             Name = obj.name,
                             Description = obj.description,
                             Beast = obj.data.flags.Contains("BEAST_RACE"),
@@ -253,7 +253,6 @@ namespace EspConverter
                     {
                         var skillObj = new WebSkill
                         {
-                            Id = obj.skill_id,
                             Description = obj.description,
                             Actions = obj.data.actions,
                             Attribute = obj.data.governing_attribute,
@@ -279,7 +278,6 @@ namespace EspConverter
                     {
                         var magicObj = new WebMagicEffect
                         {
-                            Id = obj.effect_id,
                             Description = obj.description,
                             School = obj.data.school,
                             BaseCost = obj.data.base_cost,
@@ -288,6 +286,7 @@ namespace EspConverter
                             Spellmaking = obj.data.flags.Contains("ALLOW_SPELLMAKING"),
                             Size = obj.data.size,
                             SizeCap = obj.data.size_cap,
+                            Icon = obj.icon.Split("\\").Last().Split(".").First()
                         };
                         gmstDict[obj.effect_id] = magicObj;
                     }
@@ -365,6 +364,106 @@ namespace EspConverter
             File.WriteAllText(dataFile, JsonConvert.SerializeObject(gmstDict, Formatting.Indented));
             Console.WriteLine("Birthsign records exported.");
         }
+        static void ExportSpells(List<string> loadOrder, Dictionary<string, Tes3Object[]> loadedData, string outputDir)
+        {
+            Console.WriteLine("Exporting Spell records.");
+            var gmstDict = new Dictionary<string, WebSpell>();
+            foreach (var file in loadOrder)
+            {
+                foreach (var obj in loadedData[file])
+                {
+                    if (obj.type == "Spell")
+                    {
+                        var magicObj = new WebSpell
+                        {
+                            Name = obj.name,
+                            Cost = obj.data.cost,
+                            Effects = obj.effects.Select(x => new WebSpellEffect
+                            {
+                                Effect = x.magic_effect,
+                                Skill = x.skill,
+                                Attribute = x.attribute,
+                                Range = x.range,
+                                Duration = x.duration,
+                                Area = x.area,
+                                Magnitude = new[] { x.min_magnitude, x.max_magnitude } 
+                            }).ToArray()
+                        };
+                        gmstDict[obj.id] = magicObj;
+                    }
+                }
+            }
+            var dataFile = Path.Combine(outputDir, $"morroweb.spell.json");
+            File.WriteAllText(dataFile, JsonConvert.SerializeObject(gmstDict, Formatting.Indented));
+            Console.WriteLine("Spell records exported.");
+        }
+        static void ExportMiscItems(List<string> loadOrder, Dictionary<string, Tes3Object[]> loadedData, string outputDir)
+        {
+            Console.WriteLine("Exporting MiscItem records.");
+            var gmstDict = new Dictionary<string, WebItem>();
+            foreach (var file in loadOrder)
+            {
+                foreach (var obj in loadedData[file])
+                {
+                    if (obj.type == "MiscItem")
+                    {
+                        var magicObj = new WebItem
+                        {
+                            Name = obj.name,
+                            Type = "Misc",
+                            Icon = obj.icon.Split("\\").Last().Split(".").First(),
+                            Weight = (float)(double)obj.data.weight,
+                            Value = obj.data.value,
+                            Flags = obj.data.flags
+                        };
+                        gmstDict[obj.id] = magicObj;
+                    }
+                }
+            }
+            var dataFile = Path.Combine(outputDir, $"morroweb.miscitem.json");
+            File.WriteAllText(dataFile, JsonConvert.SerializeObject(gmstDict, Formatting.Indented));
+            Console.WriteLine("MiscItem records exported.");
+        }
+        static void ExportWeapons(List<string> loadOrder, Dictionary<string, Tes3Object[]> loadedData, string outputDir)
+        {
+            Console.WriteLine("Exporting Weapon records.");
+            var gmstDict = new Dictionary<string, WebWeapon>();
+            foreach (var file in loadOrder)
+            {
+                foreach (var obj in loadedData[file])
+                {
+                    if (obj.type == "Weapon")
+                    {
+                        var magicObj = new WebWeapon
+                        {
+                            Name = obj.name,
+                            Type = "Weapon",
+                            Icon = obj.icon.Split("\\").Last().Split(".").First(),
+                            Weight = (float)(double)obj.data.weight,
+                            Value = obj.data.value,
+                            Flags = obj.data.flags,
+                            Enchanting = obj.enchanting,
+                            WeaponType = obj.data.weapon_type,
+                            Enchantment = obj.data.enchantment,
+                            Health = obj.data.health,
+                            Speed = (float)(double)obj.data.speed,
+                            Reach = obj.data.reach,
+                            Chop = [obj.data.chop_min, obj.data.chop_max],
+                            Thrust = [obj.data.thrust_min, obj.data.thrust_max],
+                            Slash = [obj.data.slash_min, obj.data.slash_max]
+                        };
+                        gmstDict[obj.id] = magicObj;
+                    }
+                }
+            }
+            var dataFile = Path.Combine(outputDir, $"morroweb.weapon.json");
+            File.WriteAllText(dataFile, JsonConvert.SerializeObject(gmstDict, Formatting.Indented));
+            Console.WriteLine("Weapon records exported.");
+        }
+
+
+
+
 
         static void ExportCells(List<string> loadOrder, Dictionary<string, Tes3Object[]> loadedData, string outputDir)
         {

@@ -8,7 +8,6 @@ namespace EspConverter.Models.Web
 {
     public class WebFaction
     {
-        public string Id { get; set; }
         public string Name { get; set; }
         public string[] Ranks { get; set; }
         public Dictionary<string, int> Reactions { get; set; }

@@ -8,9 +8,9 @@ namespace EspConverter.Models.Web
 {
     public class WebMagicEffect
     {
-        public string Id { get; set; }
         public string Description { get; set; }
         public string School { get; set; }
+        public string Icon { get; set; }
         public float BaseCost { get; set; }
         public bool Spellmaking { get; set; }
         public bool Enchanting { get; set; }

@@ -8,7 +8,6 @@ namespace EspConverter.Models.Web
 {
     public class WebRace
     {
-        public string Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string[] Spells { get; set; }
