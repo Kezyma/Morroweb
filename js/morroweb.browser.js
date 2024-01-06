@@ -38,7 +38,7 @@ var mwb_attributeMap = ["strength", "intelligence", "willpower", "agility", "spe
 
 function mwb_createTable(container, columns, dataSet) {
     var cardBody = $(`#${container}`);
-    var newTable = $(`<table id='${container}-datatable' class='mwb-table table-borderless display nowrap table table-compact table-striped w-100 responsive'></table>`);
+    var newTable = $(`<table id='${container}-datatable' class='mwb-table table-sm table-borderless display nowrap table table-compact table-striped w-100 responsive'></table>`);
     cardBody.append(newTable);
     currentTable = new DataTable(`#${container}-datatable`, {
         columns: columns,
@@ -54,25 +54,51 @@ function mwb_createTable(container, columns, dataSet) {
     [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 }
 
-function mwb_attributeIcon(attribute) {
+function mwb_attributeIcon(attribute, showLabel = true, collapse = true, title = false) {
     if (attribute != null && attribute != undefined)
     {
-        return `<img src='img\\icons\\attribute_${attribute.toLowerCase()}.png' data-bs-toggle="tooltip" data-bs-title='${attribute}' /> ${attribute}`;
+        var label = "";
+        if (showLabel) {
+            label = "<div class='" + (collapse ? "d-none d-xl-inline" : "d-inline") + "'>" + (title ? "<b>" : "") + attribute + (title ? "</b>" : "") + "</div>"
+        }
+        return `<img src='img\\icons\\attribute\\attribute_${attribute.toLowerCase()}.png' data-bs-toggle="tooltip" data-bs-title='${attribute}' /> ${label}`;
     }
     return ""
 }
 
-function mwb_skillIcon(skill) {
+function mwb_skillIcon(skill, showLabel = true, collapse = true, title = false) {
     if (skill != "None") {
-        return `<img src='img\\icons\\${skill.toLowerCase()}.png' data-bs-toggle="tooltip" data-bs-title='${mwb_gmst["sskill" + skill.toLowerCase()]}' /> ${mwb_gmst["sskill" + skill.toLowerCase()]}`;
+        var label = "";
+        if (showLabel) {
+            label = "<div class='" + (collapse ? "d-none d-xl-inline" : "d-inline") + "'>" + (title ? "<b>" : "") + mwb_gmst["sskill" + skill.toLowerCase()] + (title ? "</b>" : "") + "</div>"
+        }
+        return `<img src='img\\icons\\skill\\${skill.toLowerCase()}.png' data-bs-toggle="tooltip" data-bs-title='${mwb_gmst["sskill" + skill.toLowerCase()]}' /> ${label}`;
     }
 }
 
-function mwb_magicEffectIcon(effect, showLabel=true) {
+function mwb_magicEffectIcon(effect, showLabel = true, collapse = true, title = false) {
     var item = mwb_magicEffect[effect];
     var lookup = `seffect${effect.toLowerCase()}`;
-    var res = `<img src='img\\icons\\b_${item["Icon"].toLowerCase()}.png' data-bs-toggle="tooltip" data-bs-title='${mwb_gmst[lookup] ?? effect}' /> ${showLabel ? (mwb_gmst[lookup] ?? effect) : ""}`;
+    var label = "";
+    if (showLabel) {
+        label = "<div class='" + (collapse ? "d-none d-xl-inline" : "d-inline") + "'>" + (title ? "<b>" : "") + (mwb_gmst[lookup] ?? effect) + (title ? "</b>" : "") + "</div>"
+    }
+    var res = `<img src='img\\icons\\magiceffect\\b_${item["Icon"].toLowerCase()}.png' data-bs-toggle="tooltip" data-bs-title='${mwb_gmst[lookup] ?? effect}' /> ${label}`;
     return res;
+}
+
+function mwb_itemIcon(name, icon, showLabel = true, collapse = true, title = false) {
+    if (name != null && name != undefined && name != "") {
+        var label = "";
+        if (showLabel) {
+            label = "<div class='" + (collapse ? "d-none d-xl-inline" : "d-inline") + "'>" + (title ? "<b>" : "") + name + (title ? "</b>" : "") + "</div>"
+        }
+        return `<img src='img\\icons\\item\\${icon.toLowerCase()}.png' data-bs-toggle="tooltip" data-bs-title='${name}' /> ${label}`;
+    }
+    if (showLabel) {
+        return `${(title ? "<b>" : "")}${name}${(title ? "</b>" : "")}`
+    }
+    return ""
 }
 
 function mwb_titleCase(str) {
@@ -225,7 +251,7 @@ function mwb_magicEffectTable() {
         console.log(dataSet);
         var columns = [
             { title: "Id", render: mwb_col_idFormat },
-            { title: "Name", render: mwb_magicEffectIcon },
+            { title: "Name", render: (val) => mwb_magicEffectIcon(val, true, false, true) },
             { title: "School", render: mwb_skillIcon },
             { title: "Cost" },
             { title: "Speed" },
@@ -261,7 +287,7 @@ function mwb_skillTable() {
                 console.log(dataSet);
                 var columns = [
                     { title: "Id", render: mwb_col_idFormat },
-                    { title: "Name", render: mwb_skillIcon },
+                    { title: "Name", render: (val) => mwb_skillIcon(val, true, false, true) },
                     { title: "Attribute", render: (val) => mwb_attributeIcon(mwb_titleCase(mwb_attributeMap[val])) },
                     { title: "Specialisation", render: (val) => mwb_titleCase(mwb_specialisationMap[val]) }
                 ];
@@ -452,5 +478,46 @@ function mwb_raceTable() {
     }
     $(".mwb-panel").hide();
     $(`#mwb-race-table`).show();
+    $($.fn.dataTable.tables(true)).DataTable().columns.adjust();
+}
+
+var mwb_miscitem_init = false;
+var mwb_miscItem = null;
+function mwb_miscItemTable() {
+    if (!mwb_miscitem_init) {
+        $.get({
+            url: "json/morroweb.miscitem.json",
+            success: function (data) {
+                var dataSet = [];
+                mwb_miscItem = data;
+                for (var key in data) {
+                    if (key != null && key != undefined && key != "") {
+                        var dataObj = data[key];
+                        dataSet.push([
+                            key,
+                            key,
+                            dataObj["Weight"],
+                            dataObj["Value"]
+                        ]);
+                    }
+                }
+                console.log(dataSet);
+                var columns = [
+                    { title: "Id", render: mwb_col_idFormat },
+                    {
+                        title: "Name", render: function (val) {
+                            var obj = mwb_miscItem[val]
+                            return mwb_itemIcon(obj["Name"], obj["Icon"], true, false, true)
+                        } },
+                    { title: "Weight" },
+                    { title: "Value" }
+                ];
+                mwb_createTable("mwb-miscitem-table", columns, dataSet);
+                mwb_miscitem_init = true;
+            }
+        });
+    }
+    $(".mwb-panel").hide();
+    $(`#mwb-miscitem-table`).show();
     $($.fn.dataTable.tables(true)).DataTable().columns.adjust();
 }

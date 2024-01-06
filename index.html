@@ -10,6 +10,7 @@
         <script src="https://cdn.datatables.net/1.13.8/js/dataTables.bootstrap5.min.js"></script>
 
         <title>Morroweb</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/morroweb.css" />
         <script src="js/morroweb.browser.js"></script>
         <script src="js/morroweb.js"></script>
@@ -55,15 +56,16 @@
         <div id="morroweb-browser" class="container" style="display: none;">
             <div id="morroweb-browser-card" class="mw-card card mt-3">
                 <div class="card-header mw-card-header p-0" role="tablist">
-                    <button class="mw-button nav-link d-inline active" id="home-tab" data-bs-toggle="tab" data-bs-target="#mwb-home-panel" onclick="mwb_browserTab()">Browser</button>
-                    <button class="mw-button nav-link d-inline" id="profile-tab" data-bs-toggle="tab" data-bs-target="#mwb-class-table" onclick="mwb_classTable()">Class</button>
-                    <button class="mw-button nav-link d-inline" id="profile-tab" data-bs-toggle="tab" data-bs-target="#mwb-faction-table" onclick="mwb_factionTable()">Faction</button>
-                    <button class="mw-button nav-link d-inline" id="profile-tab" data-bs-toggle="tab" data-bs-target="#mwb-magiceffect-table"onclick="mwb_magicEffectTable()">Magic Effects</button>
-                    <button class="mw-button nav-link d-inline" id="profile-tab" data-bs-toggle="tab" data-bs-target="#mwb-skill-table"onclick="mwb_skillTable()">Skill</button>
-                    <button class="mw-button nav-link d-inline" id="profile-tab" data-bs-toggle="tab" data-bs-target="#mwb-spell-table"onclick="mwb_spellTable()">Spell</button>
-                    <button class="mw-button nav-link d-inline" id="profile-tab" data-bs-toggle="tab" data-bs-target="#mwb-race-table" onclick="mwb_raceTable()">Race</button>
+                    <button class="mw-button nav-link d-inline active" data-bs-toggle="tab" data-bs-target="#mwb-home-panel" onclick="mwb_browserTab()">Browser</button>
+                    <button class="mw-button nav-link d-inline" data-bs-toggle="tab" data-bs-target="#mwb-class-table" onclick="mwb_classTable()">Class</button>
+                    <button class="mw-button nav-link d-inline" data-bs-toggle="tab" data-bs-target="#mwb-faction-table" onclick="mwb_factionTable()">Faction</button>
+                    <button class="mw-button nav-link d-inline" data-bs-toggle="tab" data-bs-target="#mwb-magiceffect-table"onclick="mwb_magicEffectTable()">Magic Effects</button>
+                    <button class="mw-button nav-link d-inline" data-bs-toggle="tab" data-bs-target="#mwb-skill-table"onclick="mwb_skillTable()">Skill</button>
+                    <button class="mw-button nav-link d-inline" data-bs-toggle="tab" data-bs-target="#mwb-spell-table"onclick="mwb_spellTable()">Spell</button>
+                    <button class="mw-button nav-link d-inline" data-bs-toggle="tab" data-bs-target="#mwb-race-table" onclick="mwb_raceTable()">Race</button>
+                    <button class="mw-button nav-link d-inline" data-bs-toggle="tab" data-bs-target="#mwb-miscitem-table"onclick="mwb_miscItemTable()">Misc Items</button>
                 </div>
-                <div class="mw-card-body card-body p-0">
+                <div class="mw-card-body card-body">
                     <div id="mwb-home-panel" role="tabpanel" class="tab-pane mwb-panel p-2">
                         Welcome to the Morroweb browser. Records are directly exported from the GOTY esm files, as well as the Official Plugin esp files.
                     </div>
@@ -73,6 +75,7 @@
                     <div id="mwb-skill-table" role="tabpanel" class="tab-pane mwb-panel"></div>
                     <div id="mwb-spell-table" role="tabpanel" class="tab-pane mwb-panel"></div>
                     <div id="mwb-race-table" role="tabpanel" class="tab-pane mwb-panel"></div>
+                    <div id="mwb-miscitem-table" role="tabpanel" class="tab-pane mwb-panel"></div>
                 </div>
             </div>
         </div>
