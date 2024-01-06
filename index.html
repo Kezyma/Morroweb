@@ -15,55 +15,64 @@
         <script src="js/morroweb.js"></script>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg bg-light">
+        <nav id="mw-nav" class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Morroweb</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                <a id="mw-title" class="navbar-brand mw-button" href="#">Morroweb</a>
+                <!--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#" onclick="init_browser()">Browser</a>
+                            <a class="nav-link mw-button" aria-current="page" href="#" onclick="init_browser()">Browser</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#" onclick="init_game()">Play</a>
+                            <a class="nav-link mw-button" aria-current="page" href="#" onclick="init_game()">Play</a>
                         </li>
-                    </ul>
+                    </ul>-->
                     <!--<form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>-->
-                </div>
+                <!--</div>-->
             </div>
         </nav>
 
+        <!--
+        <div class="container">
+            <div class="card mw-card">
+                <div class="card-header mw-card-header">
+                    <span class="mw-card-title">Heading</span>
+                </div>
+                <div class="card-body mw-card-body">
+                    Card Text
+                </div>
+            </div>
+        </div>-->
+        
+
         <div id="morroweb-browser" class="container" style="display: none;">
-            <div id="morroweb-browser-card" class="card mt-3">
-                <ul class="nav nav-tabs card-header p-0" role="tablist">
-                    <li class="nav-item">
-                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#mwb-home-panel">Browser</button>
-                    </li>
-                    <li class="nav-item">
-                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#mwb-class-table" onclick="mwb_classTable()">Class</button>
-                    </li>
-                    <li class="nav-item">
-                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#mwb-faction-table" onclick="mwb_factionTable()">Faction</button>
-                    </li><li class="nav-item">
-                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#mwb-magiceffect-table"
-                            onclick="mwb_magicEffectTable()">Magic Effects</button>
-                    </li><li class="nav-item">
-                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#mwb-skill-table"
-                            onclick="mwb_skillTable()">Skill</button>
-                    </li>
-                </ul>
-                <div class="card-body p-0">
-                    <div id="mwb-home-panel" role="tabpanel" class="tab-pane mwb-panel"></div>
+            <div id="morroweb-browser-card" class="mw-card card mt-3">
+                <div class="card-header mw-card-header p-0" role="tablist">
+                    <button class="mw-button nav-link d-inline active" id="home-tab" data-bs-toggle="tab" data-bs-target="#mwb-home-panel" onclick="mwb_browserTab()">Browser</button>
+                    <button class="mw-button nav-link d-inline" id="profile-tab" data-bs-toggle="tab" data-bs-target="#mwb-class-table" onclick="mwb_classTable()">Class</button>
+                    <button class="mw-button nav-link d-inline" id="profile-tab" data-bs-toggle="tab" data-bs-target="#mwb-faction-table" onclick="mwb_factionTable()">Faction</button>
+                    <button class="mw-button nav-link d-inline" id="profile-tab" data-bs-toggle="tab" data-bs-target="#mwb-magiceffect-table"onclick="mwb_magicEffectTable()">Magic Effects</button>
+                    <button class="mw-button nav-link d-inline" id="profile-tab" data-bs-toggle="tab" data-bs-target="#mwb-skill-table"onclick="mwb_skillTable()">Skill</button>
+                    <button class="mw-button nav-link d-inline" id="profile-tab" data-bs-toggle="tab" data-bs-target="#mwb-spell-table"onclick="mwb_spellTable()">Spell</button>
+                    <button class="mw-button nav-link d-inline" id="profile-tab" data-bs-toggle="tab" data-bs-target="#mwb-race-table" onclick="mwb_raceTable()">Race</button>
+                </div>
+                <div class="mw-card-body card-body p-0">
+                    <div id="mwb-home-panel" role="tabpanel" class="tab-pane mwb-panel p-2">
+                        Welcome to the Morroweb browser. Records are directly exported from the GOTY esm files, as well as the Official Plugin esp files.
+                    </div>
                     <div id="mwb-class-table" role="tabpanel" class="tab-pane mwb-panel"></div>
                     <div id="mwb-faction-table" role="tabpanel" class="tab-pane mwb-panel"></div>
                     <div id="mwb-magiceffect-table" role="tabpanel" class="tab-pane mwb-panel"></div>
                     <div id="mwb-skill-table" role="tabpanel" class="tab-pane mwb-panel"></div>
+                    <div id="mwb-spell-table" role="tabpanel" class="tab-pane mwb-panel"></div>
+                    <div id="mwb-race-table" role="tabpanel" class="tab-pane mwb-panel"></div>
                 </div>
             </div>
         </div>
@@ -83,6 +92,7 @@
 
             $(document).ready(function () {
                 mw_init("morrowind-container");
+                init_browser()
             });
         </script>
     </body>
