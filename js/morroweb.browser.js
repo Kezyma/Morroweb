@@ -47,7 +47,7 @@ function mwb_createTable(container, columns, dataSet) {
         sScrollX: "100%",
         paging: false,
         scrollCollapse: true,
-        scrollY: '60vh'
+        scrollY: "60vh"
     });
 
     var tooltipTriggerList = $(`#${container} [data-bs-toggle="tooltip"]`);
