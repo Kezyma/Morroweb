@@ -1,6 +1,16 @@
 function mwb_init() {
-    
+    $.get({
+        url: "json/morroweb.gmst.json",
+        success: function (data) {
+            mwb_gmst = data;
+        }
+    });
 }
+
+var mwb_gmst = null;
+
+var mwb_specialisationMap = ["combat", "magic", "stealth"]
+var mwb_attributeMap = ["strength", "intelligence", "willpower", "agility", "speed", "endurance", "personality", "luck"];
 
 function mwb_createTable(container, columns, dataSet) {
     var cardBody = $(`#${container}`);
@@ -20,12 +30,24 @@ function mwb_createTable(container, columns, dataSet) {
     [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 }
 
-function mwb_attributeIcon(attribute) {
-    return `<img src='img\\icons\\attribute_${attribute.toLowerCase()}.png' data-bs-toggle="tooltip" data-bs-title='${attribute}' />`;
+function mwb_attributeIcon(attribute, name) {
+    if (attribute != null && attribute != undefined)
+    {
+        return `<img src='img\\icons\\attribute_${attribute.toLowerCase()}.png' data-bs-toggle="tooltip" data-bs-title='${name ?? attribute}' /><span class='d-none'>${name ?? attribute}</span>`;
+    }
+    return ""
 }
 
-function mwb_skillIcon(skill) {
-    return `<img src='img\\icons\\${skill.toLowerCase()}.png' data-bs-toggle="tooltip" data-bs-title='${skill}' />`;
+function mwb_skillIcon(skill, name) {
+    return `<img src='img\\icons\\${skill.toLowerCase()}.png' data-bs-toggle="tooltip" data-bs-title='${name ?? skill}' /><span class='d-none'>${name ?? skill}</span>`;
+}
+
+function mwb_titleCase(str) {
+    str = str.toLowerCase().split(' ');
+    for (var i = 0; i < str.length; i++) {
+        str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+    }
+    return str.join(' ');
 }
 
 var mwb_class_init = false;
@@ -49,7 +71,9 @@ function mwb_classTable() {
                     ]);
                 }
                 var columns = [
-                    { title: "Id" },
+                    {
+                        title: "Id",
+                        render: (id) => `<i>${id}</i>` },
                     { title: "Name" },
                     { title: "Specialisation" },
                     { 
@@ -64,7 +88,10 @@ function mwb_classTable() {
                         title: "Minor Skills",
                         render: (data) => data.map((attrObj) => mwb_skillIcon(attrObj)).join(""),
                     },
-                    { title: "Playable" }
+                    { 
+                        title: "Playable",
+                        render: (data) => data == true ? "Yes" : "No"
+                    }
                 ];
                 mwb_createTable("mwb-class-table", columns, dataSet);
                 mwb_class_init = true;
@@ -93,7 +120,10 @@ function mwb_factionTable() {
                     ]);
                 }
                 var columns = [
-                    { title: "Id" },
+                    {
+                        title: "Id",
+                        render: (id) => `<i>${id}</i>`
+                     },
                     { title: "Name" },
                     { 
                         title: "Ranks",
@@ -115,7 +145,7 @@ function mwb_factionTable() {
                     },
                     {
                         title: "Skills",
-                        render: (data) => data.map((attrObj) => (attrObj != "None") ? mwb_skillIcon(attrObj) : "").join(""),
+                        render: (data) => data.map((attrObj) => (attrObj != "None") ? mwb_skillIcon(attrObj, mwb_gmst[`sSkill${mwb_titleCase(attrObj)}`]) : "").join(""),
                     }
                 ];
                 mwb_createTable("mwb-faction-table", columns, dataSet);
@@ -125,4 +155,111 @@ function mwb_factionTable() {
     }
     $(".mwb-panel").hide();
     $(`#mwb-faction-table`).show();
+}
+
+var mwb_magiceffect_init = false;
+function mwb_magicEffectTable() {
+    if (!mwb_magiceffect_init) {
+        $.get({
+            url: "json/morroweb.magiceffect.json",
+            success: function (data) {
+                var dataSet = [];
+                for (var key in data) {
+                    var dataObj = data[key];
+                    dataSet.push([
+                        key,
+                        key,
+                        dataObj["School"],
+                        dataObj["BaseCost"],
+                        dataObj["Speed"],
+                        dataObj["Size"],
+                        dataObj["SizeCap"],
+                        dataObj["Spellmaking"],
+                        dataObj["Enchanting"]
+                    ]);
+                }
+                console.log(dataSet);
+                var columns = [
+                    { 
+                        title: "Id",
+                        render: (id) => `<i>${id}</i>`
+                    },
+                    {
+                        title: "Name",
+                        render: function (val) {
+                            var item = data[val];
+                            var lookup = `sEffect${val}`;
+                            var res = `<img src='img\\icons\\b_${item["Icon"]}.png' data-bs-toggle="tooltip" data-bs-title='${mwb_gmst[lookup] ?? val}' /> ${mwb_gmst[lookup] ?? val}`;
+                            return res;
+                        }
+                    },
+                    { 
+                        title: "School",
+                        render: (val) => `${mwb_skillIcon(val)} ${val}`
+                    },
+                    { title: "Cost" },
+                    { title: "Speed" },
+                    { title: "Size" },
+                    { title: "Size Cap" },
+                    {
+                        title: "Spellmaking",
+                        render: (data) => data == true ? "Yes" : "No" },
+                    {
+                        title: "Enchanting",
+                        render: (data) => data == true ? "Yes" : "No" },
+                ];
+                mwb_createTable("mwb-magiceffect-table", columns, dataSet);
+                mwb_magiceffect_init = true;
+            }
+        });
+    }
+    $(".mwb-panel").hide();
+    $(`#mwb-magiceffect-table`).show();
+}
+
+var mwb_skill_init = false;
+function mwb_skillTable() {
+    if (!mwb_skill_init) {
+        $.get({
+            url: "json/morroweb.skill.json",
+            success: function (data) {
+                var dataSet = [];
+                for (var key in data) {
+                    var dataObj = data[key];
+                    dataSet.push([
+                        key,
+                        key,
+                        dataObj["Attribute"],
+                        dataObj["Specialisation"]
+                    ]);
+                }
+                console.log(dataSet);
+                var columns = [
+                    {
+                        title: "Id",
+                        render: (id) => `<i>${id}</i>`
+                    },
+                    {
+                        title: "Name",
+                        render: function (val) {
+                            var lookup = `sSkill${mwb_titleCase(val)}`;
+                            return `<img src='img\\icons\\${val}.png' data-bs-toggle="tooltip" data-bs-title='${mwb_gmst[lookup]}' /> ${mwb_gmst[lookup]}`;
+                        }
+                    },
+                    {
+                        title: "Attribute",
+                        render: (val) => `${mwb_attributeIcon(mwb_attributeMap[val], mwb_titleCase(mwb_attributeMap[val]))} ${mwb_titleCase(mwb_attributeMap[val])}`
+                    },
+                    { 
+                        title: "Specialisation",
+                        render: (val) => mwb_titleCase(mwb_specialisationMap[val])               
+                    }
+                ];
+                mwb_createTable("mwb-skill-table", columns, dataSet);
+                mwb_skill_init = true;
+            }
+        });
+    }
+    $(".mwb-panel").hide();
+    $(`#mwb-skill-table`).show();
 }
