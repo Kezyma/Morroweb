@@ -71,7 +71,7 @@ function mwb_skillIcon(skill) {
 function mwb_magicEffectIcon(effect, showLabel=true) {
     var item = mwb_magicEffect[effect];
     var lookup = `seffect${effect.toLowerCase()}`;
-    var res = `<img src='img\\icons\\b_${item["Icon"]}.png' data-bs-toggle="tooltip" data-bs-title='${mwb_gmst[lookup] ?? effect}' /> ${showLabel ? (mwb_gmst[lookup] ?? effect) : ""}`;
+    var res = `<img src='img\\icons\\b_${item["Icon"].toLowerCase()}.png' data-bs-toggle="tooltip" data-bs-title='${mwb_gmst[lookup] ?? effect}' /> ${showLabel ? (mwb_gmst[lookup] ?? effect) : ""}`;
     return res;
 }
 
