@@ -38,7 +38,7 @@ var mwb_attributeMap = ["strength", "intelligence", "willpower", "agility", "spe
 
 function mwb_createTable(container, columns, dataSet) {
     var cardBody = $(`#${container}`);
-    var newTable = $(`<table id='${container}-datatable' class='mwb-table table-sm table-borderless display nowrap table table-compact table-striped w-100 responsive'></table>`);
+    var newTable = $(`<table id='${container}-datatable' class='mwb-table table-sm table-borderless display nowrap table table-compact table-striped w-100 responsive' style='font-size:1rem;'></table>`);
     cardBody.append(newTable);
     currentTable = new DataTable(`#${container}-datatable`, {
         columns: columns,
@@ -46,8 +46,8 @@ function mwb_createTable(container, columns, dataSet) {
         scrollX: true,
         sScrollX: "100%",
         paging: false,
-        scrollCollapse: true,
-        scrollY: "60vh"
+        scrollY: "70vh",
+        scrollCollapse: true
     });
 
     var tooltipTriggerList = $(`#${container} [data-bs-toggle="tooltip"]`);
