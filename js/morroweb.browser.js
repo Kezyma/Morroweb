@@ -61,7 +61,7 @@ function mwb_attributeIcon(attribute, showLabel = true, collapse = true, title =
         if (showLabel) {
             label = "<div class='" + (collapse ? "d-none d-xl-inline" : "d-inline") + "'>" + (title ? "<b>" : "") + attribute + (title ? "</b>" : "") + "</div>"
         }
-        return `<img src='img\\icons\\attribute\\attribute_${attribute.toLowerCase()}.png' data-bs-toggle="tooltip" data-bs-title='${attribute}' /> ${label}`;
+        return `<img src='img\\icons\\attribute\\attribute_${attribute.toLowerCase()}.png' data-bs-toggle="tooltip" data-bs-custom-class="mw-tooltip" data-bs-title='${attribute}' /> ${label}`;
     }
     return ""
 }
@@ -72,7 +72,7 @@ function mwb_skillIcon(skill, showLabel = true, collapse = true, title = false) 
         if (showLabel) {
             label = "<div class='" + (collapse ? "d-none d-xl-inline" : "d-inline") + "'>" + (title ? "<b>" : "") + mwb_gmst["sskill" + skill.toLowerCase()] + (title ? "</b>" : "") + "</div>"
         }
-        return `<img src='img\\icons\\skill\\${skill.toLowerCase()}.png' data-bs-toggle="tooltip" data-bs-title='${mwb_gmst["sskill" + skill.toLowerCase()]}' /> ${label}`;
+        return `<img src='img\\icons\\skill\\${skill.toLowerCase()}.png' data-bs-toggle="tooltip" data-bs-custom-class="mw-tooltip" data-bs-title='${mwb_gmst["sskill" + skill.toLowerCase()]}' /> ${label}`;
     }
 }
 
@@ -83,7 +83,7 @@ function mwb_magicEffectIcon(effect, showLabel = true, collapse = true, title = 
     if (showLabel) {
         label = "<div class='" + (collapse ? "d-none d-xl-inline" : "d-inline") + "'>" + (title ? "<b>" : "") + (mwb_gmst[lookup] ?? effect) + (title ? "</b>" : "") + "</div>"
     }
-    var res = `<img src='img\\icons\\magiceffect\\b_${item["Icon"].toLowerCase()}.png' data-bs-toggle="tooltip" data-bs-title='${mwb_gmst[lookup] ?? effect}' /> ${label}`;
+    var res = `<img src='img\\icons\\magiceffect\\b_${item["Icon"].toLowerCase()}.png' data-bs-toggle="tooltip" data-bs-custom-class="mw-tooltip" data-bs-title='${mwb_gmst[lookup] ?? effect}' /> ${label}`;
     return res;
 }
 
@@ -93,7 +93,7 @@ function mwb_itemIcon(name, icon, showLabel = true, collapse = true, title = fal
         if (showLabel) {
             label = "<div class='" + (collapse ? "d-none d-xl-inline" : "d-inline") + "'>" + (title ? "<b>" : "") + name + (title ? "</b>" : "") + "</div>"
         }
-        return `<img src='img\\icons\\item\\${icon.toLowerCase()}.png' data-bs-toggle="tooltip" data-bs-title='${name}' /> ${label}`;
+        return `<img src='img\\icons\\item\\${icon.toLowerCase()}.png' data-bs-toggle="tooltip" data-bs-custom-class="mw-tooltip" data-bs-title='${name}' /> ${label}`;
     }
     if (showLabel) {
         return `${(title ? "<b>" : "")}${name}${(title ? "</b>" : "")}`
