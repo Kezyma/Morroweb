@@ -93,7 +93,10 @@ function mwb_itemIcon(name, icon, showLabel = true, collapse = true, title = fal
         if (showLabel) {
             label = "<div class='" + (collapse ? "d-none d-xl-inline" : "d-inline") + "'>" + (title ? "<b>" : "") + name + (title ? "</b>" : "") + "</div>"
         }
-        return `<img src='img\\icons\\item\\${icon.toLowerCase()}.png' data-bs-toggle="tooltip" data-bs-custom-class="mw-tooltip" data-bs-title='${name}' /> ${label}`;
+        if (icon.length > 0) {
+            return `<img src='img\\icons\\item\\${icon.toLowerCase()}.png' data-bs-toggle="tooltip" data-bs-custom-class="mw-tooltip" data-bs-title='${name}' /> ${label}`;
+        }
+        return label
     }
     if (showLabel) {
         return `${(title ? "<b>" : "")}${name}${(title ? "</b>" : "")}`
@@ -248,7 +251,6 @@ function mwb_magicEffectTable() {
                 dataObj["Enchanting"]
             ]);
         }
-        console.log(dataSet);
         var columns = [
             { title: "Id", render: mwb_col_idFormat },
             { title: "Name", render: (val) => mwb_magicEffectIcon(val, true, false, true) },
@@ -284,7 +286,6 @@ function mwb_skillTable() {
                         dataObj["Specialisation"]
                     ]);
                 }
-                console.log(dataSet);
                 var columns = [
                     { title: "Id", render: mwb_col_idFormat },
                     { title: "Name", render: (val) => mwb_skillIcon(val, true, false, true) },
@@ -319,7 +320,6 @@ function mwb_spellTable() {
                 dataObj["Effects"]
             ]);
         }
-        console.log(dataSet);
         var columns = [
             { title: "Id", render: mwb_col_idFormat },
             { title: "Name", render: mwb_col_nameFormat },
@@ -434,7 +434,6 @@ function mwb_raceTable() {
                         dataObj["Beast"]
                     ]);
                 }
-                console.log(dataSet);
                 var columns = [
                     { title: "Id", render: mwb_col_idFormat },
                     { title: "Name", render: mwb_col_nameFormat },
@@ -463,7 +462,6 @@ function mwb_raceTable() {
                             for (var sp in val) {
                                 var spellItem = mwb_spell[val[sp]]
                                 res += `${mwb_magicEffectIcon(spellItem["Effects"][0]["Effect"], false)} ${spellItem["Name"]}<br/>`
-                                console.log(spellItem)
                             }
                             return res;
                         }
@@ -501,7 +499,6 @@ function mwb_miscItemTable() {
                         ]);
                     }
                 }
-                console.log(dataSet);
                 var columns = [
                     { title: "Id", render: mwb_col_idFormat },
                     {
@@ -519,5 +516,62 @@ function mwb_miscItemTable() {
     }
     $(".mwb-panel").hide();
     $(`#mwb-miscitem-table`).show();
+    $($.fn.dataTable.tables(true)).DataTable().columns.adjust();
+}
+
+var mwb_weapon_init = false;
+var mwb_weapon = null;
+function mwb_weaponTable() {
+    if (!mwb_weapon_init) {
+        $.get({
+            url: "json/morroweb.weapon.json",
+            success: function (data) {
+                var dataSet = [];
+                mwb_miscItem = data;
+                for (var key in data) {
+                    if (key != null && key != undefined && key != "") {
+                        var dataObj = data[key];
+                        dataSet.push([
+                            key,
+                            key,
+                            dataObj["WeaponType"],
+                            dataObj["Health"],
+                            dataObj["Enchantment"],
+                            dataObj["Chop"],
+                            dataObj["Slash"],
+                            dataObj["Thrust"],
+                            dataObj["Speed"],
+                            dataObj["Reach"],
+                            dataObj["Weight"],
+                            dataObj["Value"]
+                        ]);
+                    }
+                }
+                var columns = [
+                    { title: "Id", render: mwb_col_idFormat },
+                    {
+                        title: "Name", render: function (val) {
+                            var obj = mwb_miscItem[val]
+                            return mwb_itemIcon(obj["Name"], obj["Icon"], true, false, true)
+                        }
+                    },
+                    { title: "Weapon Type" },
+                    { title: "Health" },
+                    { title: "Enchantment" },
+                    { title: "Chop", render: (val) => `${val[0]}-${val[1]}` },
+                    { title: "Slash", render: (val) => `${val[0]}-${val[1]}` },
+                    { title: "Thrust", render: (val) => `${val[0]}-${val[1]}` },
+                    { title: "Speed" },
+                    { title: "Reach" },
+                    { title: "Weight" },
+                    { title: "Value" }
+                ];
+                mwb_createTable("mwb-weapon-table", columns, dataSet);
+                mwb_weapon_init = true;
+            }
+        });
+    }
+    $(".mwb-panel").hide();
+    $(`#mwb-weapon-table`).show();
     $($.fn.dataTable.tables(true)).DataTable().columns.adjust();
 }
