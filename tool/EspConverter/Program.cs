@@ -158,8 +158,8 @@ namespace EspConverter
                                     { "Major", new [] { classObj.data.major1, classObj.data.major2, classObj.data.major3, classObj.data.major4, classObj.data.major5 } },
                                     { "Minor", new [] { classObj.data.minor1, classObj.data.minor2, classObj.data.minor3, classObj.data.minor4, classObj.data.minor5 } },
                                     { "Playable", classObj.data.flags.Contains("PLAYABLE") },
-                                    { "Services", classObj.data.services },
-                                    { "Flags", classObj.data.flags.Split("|").Select(x => x.Trim()).ToArray() },
+                                    { "Services", classObj.data.services.Split("|").Select(x => x.Trim()).Where(x => !string.IsNullOrWhiteSpace(x)).ToArray() },
+                                    { "Flags", classObj.data.flags.Split("|").Select(x => x.Trim()).Where(x => !string.IsNullOrWhiteSpace(x)).ToArray() },
                                 };
                             break;
                         case "Race":

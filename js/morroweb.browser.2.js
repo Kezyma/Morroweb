@@ -63,7 +63,7 @@ function mw_showPanel(container) {
 //#region Icon Generators
 function mw_attribute_icon(attribute="") {
     var a = attribute.toLowerCase().trim()
-    if (a != "" && a != "None") {
+    if (a != "" && a != "none") {
         return `<img src='img/icons/attribute/attribute_${a}.png' data-bs-toggle="tooltip" data-bs-custom-class="mw-tooltip" data-bs-title='${mw_titleCase(attribute)}' />`
     }
     return "";
@@ -71,8 +71,8 @@ function mw_attribute_icon(attribute="") {
 
 function mw_skill_icon(skill = "") {
     var a = skill.toLowerCase().trim()
-    if (a != "" && a != "None") {
-        return `<img src='img/icons/skill/${a}.png' data-bs-toggle="tooltip" data-bs-custom-class="mw-tooltip" data-bs-title='${mw_titleCase(mw_gmst_lookup["sskill" + skill])}' />`
+    if (a != "" && a != "none") {
+        return `<img src='img/icons/skill/${a}.png' data-bs-toggle="tooltip" data-bs-custom-class="mw-tooltip" data-bs-title='${mw_titleCase(mw_gmst_lookup["sskill" + skill.toLowerCase()])}' />`
     }
     return "";
 }
@@ -85,12 +85,58 @@ function mw_id_format(id) {
     return `<i>${id}</i>`
 }
 
+function mw_yn_format(bool) {
+    if (bool) {
+        return "Yes";
+    }
+    return "No";
+}
+
+function mw_list_format(list) {
+    if (list.length > 0) {
+        var long = `<ul class="d-none d-xl-block">`
+        var short = `<select class='d-inline d-xl-none form-control form-control-sm mw-input' style='width:fit-content;'>`
+
+        for (var i in list) {
+            var item = list[i]
+            long += `<li>${item}</li>`
+            short += `<option>${item}</option>`
+        }
+
+        long += `</ul>`
+        short += `</select>`;
+        return long + short;
+    }
+    return ""
+}
+
+function mw_attribute_list(attributes=[]) {
+    var div = `<div>`;
+    for (var a in attributes) {
+        div += `<div class="d-inline d-xl-block">${mw_attribute_icon(attributes[a])} <div class="d-none d-xl-inline">${mw_titleCase(attributes[a])}</div></div>`
+    }
+    div += "</div>";
+    return div;
+}
+
+function mw_skill_list(skills = []) {
+    var div = `<div>`;
+    for (var a in skills) {
+        div += `<div class="d-inline d-xl-block">${mw_skill_icon(skills[a])} <div class="d-none d-xl-inline">${mw_titleCase(mw_gmst_lookup["sskill" + skills[a].toLowerCase()])}</div></div>`
+    }
+    div += "</div>";
+    return div;
+}
+
 function mw_titleCase(str) {
+    if (str != null && str != undefined) {
     str = str.toLowerCase().split(' ');
     for (var i = 0; i < str.length; i++) {
         str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
     }
     return str.join(' ');
+}
+return "";
 }
 //#endregion
 
@@ -167,6 +213,43 @@ function mw_skill_browser(container) {
                 }
                 mw_newDataTable(container, "skill", columns, rows);
                 mw_skill_init = true;
+            }
+        });
+    }
+}
+
+var mw_class_init = false;
+function mw_class_browser(container) {
+    mw_showPanel(container);
+    if (!mw_class_init) {
+        $.get({
+            url: "json/morroweb.class.json",
+            success: function (data) {
+                var columns = [
+                    { title: "Id", render: mw_id_format },
+                    { title: "Name" },
+                    { title: "Specialisation" },
+                    { title: "Attributes", render: (s) => mw_attribute_list(s) },
+                    { title: "Major Skills", render: (s) => mw_skill_list(s) },
+                    { title: "Minor Skills", render: (s) => mw_skill_list(s) },
+                    { title: "Playable", render: mw_yn_format },
+                    { title: "Services", render: (s) => mw_list_format(s.map((i) => mw_titleCase(i.replace("_", " ").replace("_", " ")))) }
+                ];
+                var rows = [];
+                for (var key in data) {
+                    rows.push([
+                        key,
+                        data[key]["Name"],
+                        data[key]["Specialisation"],
+                        data[key]["Attributes"],
+                        data[key]["Major"],
+                        data[key]["Minor"],
+                        data[key]["Playable"],
+                        data[key]["Services"]
+                    ]);
+                }
+                mw_newDataTable(container, "class", columns, rows);
+                mw_class_init = true;
             }
         });
     }

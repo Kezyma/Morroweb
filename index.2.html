@@ -31,6 +31,7 @@
                         <option value="gmst">Game Settings</option>
                         <option value="global">Global Variables</option>
                         <option value="skill">Skills</option>
+                        <option value="class">Classes</option>
                     </select>
                 </div>
                 <div class="mw-card-body card-body">
@@ -40,6 +41,7 @@
                     <div id="mw_gmst_container" role="tabpanel" class="tab-pane mwb-panel"></div>
                     <div id="mw_global_container" role="tabpanel" class="tab-pane mwb-panel"></div>
                     <div id="mw_skill_container" role="tabpanel" class="tab-pane mwb-panel"></div>
+                    <div id="mw_class_container" role="tabpanel" class="tab-pane mwb-panel"></div>
                 </div>
             </div>
         </div>
@@ -55,6 +57,9 @@
                         break;
                     case "skill":
                         mw_skill_browser('mw_skill_container');
+                        break;
+                    case "class":
+                        mw_class_browser("mw_class_container");
                         break;
                     default:
                         mw_showPanel('mw_home_container');
