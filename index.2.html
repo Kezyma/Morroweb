@@ -47,7 +47,21 @@
         </div>
 
         <script>
+            $(document).ready(function () {
+                var qs = new URL(location.href).searchParams.get("b");
+                if (qs != null && qs != undefined && qs != "") {
+                    $("#mw-browser-select").val(qs).change();
+                }
+            });
+
+            function setQueryString(val) {
+                var query = new URL(location.href);
+                query.searchParams.set("b", val)
+                window.history.pushState({title: "Morroweb", html: window.html, id: val}, null, query.href);
+            }
+
             $("#mw-browser-select").change(function () {
+                setQueryString($("#mw-browser-select").val());
                 switch ($("#mw-browser-select").val()) {
                     case "gmst":
                         mw_gmst_browser('mw_gmst_container');
