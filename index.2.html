@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css" />
+        <link rel="stylesheet" href="https://cdn.datatables.net/scroller/2.3.0/css/scroller.dataTables.min.css" />
+        <link rel="stylesheet" href="https://cdn.datatables.net/scroller/2.3.0/css/scroller.bootstrap5.min.css" />
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.8/js/dataTables.bootstrap5.min.js"></script>
+        <script src="https://cdn.datatables.net/plug-ins/1.13.7/features/scrollResize/dataTables.scrollResize.min.js"></script>
+        <script src="https://cdn.datatables.net/scroller/2.3.0/js/dataTables.scroller.min.js"></script>
+        <script src="https://cdn.datatables.net/scroller/2.3.0/js/scroller.bootstrap5.min.js"></script>
+
+        <title>Morroweb</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/morroweb.2.css" />
+        <script src="js/morroweb.browser.2.js"></script>
+        <script src="js/morroweb.js"></script>
+    </head>
+    <body>
+        <nav id="mw-nav" class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a id="mw-title" class="navbar-brand mw-button" href="#">Morroweb</a>
+            </div>
+        </nav>
+
+        <div id="morroweb-browser" class="container-fluid">
+            <div id="morroweb-browser-card" class="mw-card card">
+                <div class="card-header mw-card-header p-0" role="tablist">
+                    <button class="mw-button nav-link d-inline active" data-bs-toggle="tab" data-bs-target="#mw_home_container" 
+                        onclick="mw_showPanel('mw_home_container')">Browser</button>
+                    <button class="mw-button nav-link d-inline" data-bs-toggle="tab" data-bs-target="#mw_gmst_container" 
+                        onclick="mw_gmst_browser('mw_gmst_container')">Game Settings</button>
+                    <button class="mw-button nav-link d-inline" data-bs-toggle="tab" data-bs-target="#mw_global_container"
+                        onclick="mw_global_browser('mw_global_container')">Global Variables</button>
+                </div>
+                <div class="mw-card-body card-body">
+                    <div id="mw_home_container" role="tabpanel" class="tab-pane mwb-panel p-2">
+                        Welcome to the Morroweb browser. Records are directly exported from the GOTY esm files, as well as the Official Plugin esp files.
+                    </div>
+                    <div id="mw_gmst_container" role="tabpanel" class="tab-pane mwb-panel"></div>
+                    <div id="mw_global_container" role="tabpanel" class="tab-pane mwb-panel"></div>
+                </div>
+            </div>
+        </div>
+        <div id="morroweb-game" style="display: none;"></div>
+
+        <script>
+
+        </script>
+    </body>
+</html>

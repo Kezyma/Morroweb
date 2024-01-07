@@ -88,7 +88,6 @@ namespace EspConverter
             Console.WriteLine("Esp extraction complete.");
         }
 
-
         public static void GenerateJson(string jsonDir, string outputDir)
         {
             Console.WriteLine("Generating Json");
@@ -117,6 +116,7 @@ namespace EspConverter
 
                     switch (objectType)
                     {
+                        #region System
                         case "GameSetting":
                             if (!outputDict.ContainsKey("gmst")) outputDict["gmst"] = [];
                             var gmst = (converted as TES3_GameSetting);
@@ -126,6 +126,25 @@ namespace EspConverter
                             if (!outputDict.ContainsKey("global")) outputDict["global"] = [];
                             var global = (converted as TES3_GlobalVariable);
                             outputDict["global"][global.id] = global.value;
+                            break;
+                        case "Script":
+                            if (!outputDict.ContainsKey("script")) outputDict["script"] = [];
+                            var script = (converted as TES3_Script);
+                            outputDict["script"][script.id] = script.text.Split("\r\n").Select(x => x.Replace("\t", "")).Where(x => !x.Trim().StartsWith(";") && !string.IsNullOrWhiteSpace(x)).ToArray();
+                            break;
+                        #endregion
+
+                        #region Stats
+                        case "Skill":
+                            if (!outputDict.ContainsKey("skill")) outputDict["skill"] = [];
+                            var skill = (converted as TES3_Skill);
+                            outputDict["skill"][skill.skill_id] = new Dictionary<string, object>
+                                {
+                                    { "Description", skill.description },
+                                    { "Attribute", skill.data.governing_attribute },
+                                    { "Specialisation", skill.data.specialization },
+                                    { "Actions", skill.data.actions }
+                                };
                             break;
                         case "Class":
                             if (!outputDict.ContainsKey("class")) outputDict["class"] = [];
@@ -141,26 +160,6 @@ namespace EspConverter
                                     { "Playable", classObj.data.flags.Contains("PLAYABLE") },
                                     { "Services", classObj.data.services },
                                     { "Flags", classObj.data.flags.Split("|").Select(x => x.Trim()).ToArray() },
-                                };
-                            break;
-                        case "Faction":
-                            if (!outputDict.ContainsKey("faction")) outputDict["faction"] = [];
-                            var faction = (converted as TES3_Faction);
-                            outputDict["faction"][faction.id] = new Dictionary<string, object>
-                                {
-                                    { "Name", faction.name },
-                                    { "Ranks", faction.rank_names },
-                                    { "Reactions", faction.reactions.Select(x => x.faction).Distinct().ToDictionary(x => x, x => faction.reactions.Last(f => f.faction == x).reaction) },
-                                    { "Attributes", faction.data.favored_attributes },
-                                    { "Skills", faction.data.favored_skills },
-                                    { "Requirements", faction.data.requirements.Select(x => new Dictionary<string, object>
-                                        {
-                                            { "Attributes", x.attributes },
-                                            { "PrimarySkill", x.primary_skill },
-                                            { "FavouredSkill", x.favored_skill },
-                                            { "Reputation", x.reputation }
-                                        })
-                                    }
                                 };
                             break;
                         case "Race":
@@ -198,17 +197,40 @@ namespace EspConverter
                                     { "Beast", race.data.flags.Contains("BEAST_RACE") }
                                 };
                             break;
-                        case "Skill":
-                            if (!outputDict.ContainsKey("skill")) outputDict["skill"] = [];
-                            var skill = (converted as TES3_Skill);
-                            outputDict["skill"][skill.skill_id] = new Dictionary<string, object>
+                        case "Birthsign":
+                            if (!outputDict.ContainsKey("birthsign")) outputDict["birthsign"] = [];
+                            var birthsign = (converted as TES3_Birthsign);
+                            outputDict["birthsign"][birthsign.id] = new Dictionary<string, object>
                                 {
-                                    { "Description", skill.description },
-                                    { "Attribute", skill.data.governing_attribute },
-                                    { "Specialisation", skill.data.specialization },
-                                    { "Actions", skill.data.actions }
+                                    { "Name", birthsign.name },
+                                    { "Description", birthsign.description },
+                                    { "Spells", birthsign.spells },
+                                    { "Image", birthsign.texture.Split("\\").Last().Split(".").First() }
                                 };
                             break;
+                        case "Faction":
+                            if (!outputDict.ContainsKey("faction")) outputDict["faction"] = [];
+                            var faction = (converted as TES3_Faction);
+                            outputDict["faction"][faction.id] = new Dictionary<string, object>
+                                {
+                                    { "Name", faction.name },
+                                    { "Ranks", faction.rank_names },
+                                    { "Reactions", faction.reactions.Select(x => x.faction).Distinct().ToDictionary(x => x, x => faction.reactions.Last(f => f.faction == x).reaction) },
+                                    { "Attributes", faction.data.favored_attributes },
+                                    { "Skills", faction.data.favored_skills },
+                                    { "Requirements", faction.data.requirements.Select(x => new Dictionary<string, object>
+                                        {
+                                            { "Attributes", x.attributes },
+                                            { "PrimarySkill", x.primary_skill },
+                                            { "FavouredSkill", x.favored_skill },
+                                            { "Reputation", x.reputation }
+                                        })
+                                    }
+                                };
+                            break;
+                        #endregion
+
+                        #region Magic
                         case "MagicEffect":
                             if (!outputDict.ContainsKey("magiceffect")) outputDict["magiceffect"] = [];
                             var magicEffect = (converted as TES3_MagicEffect);
@@ -224,11 +246,6 @@ namespace EspConverter
                                     { "Spellmaking", magicEffect.data.flags.Contains("ALLOW_SPELLMAKING") },
                                     { "Enchanting", magicEffect.data.flags.Contains("ALLOW_ENCHANTING") }
                                 };
-                            break;
-                        case "Script":
-                            if (!outputDict.ContainsKey("script")) outputDict["script"] = [];
-                            var script = (converted as TES3_Script);
-                            outputDict["script"][script.id] = script.text.Split("\r\n").Select(x => x.Replace("\t", "")).Where(x => !x.Trim().StartsWith(";") && !string.IsNullOrWhiteSpace(x)).ToArray();
                             break;
                         case "Spell":
                             if (!outputDict.ContainsKey("spell")) outputDict["spell"] = [];
@@ -252,6 +269,29 @@ namespace EspConverter
                                     }
                                 };
                             break;
+                        case "Enchanting":
+                            if (!outputDict.ContainsKey("enchanting")) outputDict["enchanting"] = [];
+                            var enchanting = (converted as TES3_Enchanting);
+                            outputDict["enchanting"][enchanting.id] = new Dictionary<string, object>
+                                {
+                                    { "Type", enchanting.data.enchant_type },
+                                    { "Cost", enchanting.data.cost },
+                                    { "Charge", enchanting.data.max_charge },
+                                    { "Flags", enchanting.data.flags.Split("|").Select(x => x.Trim()).Where(x => !string.IsNullOrWhiteSpace(x)).ToArray() },
+                                    { "Effects", enchanting.effects.Select(x => new Dictionary<string, object> {
+                                        { "Effect", x.magic_effect },
+                                        { "Skill", x.skill },
+                                        { "Attribute", x.attribute },
+                                        { "Range", x.range },
+                                        { "Area", x.area },
+                                        { "Duration", x.duration },
+                                        { "Magnitude", new[] {x.min_magnitude, x.max_magnitude} }
+                                    })}
+                                };
+                            break;
+                        #endregion
+
+                        #region Items
                         case "MiscItem":
                             if (!outputDict.ContainsKey("miscitem")) outputDict["miscitem"] = [];
                             var miscItem = (converted as TES3_MiscItem);
@@ -283,17 +323,6 @@ namespace EspConverter
                                     { "Slash", new [] { weapon.data.slash_min, weapon.data.slash_max } },
                                     { "Thrust", new [] { weapon.data.thrust_min, weapon.data.thrust_max } },
                                     { "Flags", weapon.data.flags }
-                                };
-                            break;
-                        case "Birthsign":
-                            if (!outputDict.ContainsKey("birthsign")) outputDict["birthsign"] = [];
-                            var birthsign = (converted as TES3_Birthsign);
-                            outputDict["birthsign"][birthsign.id] = new Dictionary<string, object>
-                                {
-                                    { "Name", birthsign.name },
-                                    { "Description", birthsign.description },
-                                    { "Spells", birthsign.spells },
-                                    { "Image", birthsign.texture.Split("\\").Last().Split(".").First() }
                                 };
                             break;
                         case "Book":
@@ -376,6 +405,62 @@ namespace EspConverter
                                     { "Enchantment", clothing.data.enchantment }
                                 };
                             break;
+                        case "Ingredient":
+                            if (!outputDict.ContainsKey("ingredient")) outputDict["ingredient"] = [];
+                            var ingredient = (converted as TES3_Ingredient);
+                            outputDict["ingredient"][ingredient.id] = new Dictionary<string, object>
+                                {
+                                    { "Name", ingredient.name },
+                                    { "Icon", ingredient.icon.Split("\\").Last().Split(".").First() },
+                                    { "Weight", ingredient.data.weight },
+                                    { "Value", ingredient.data.value },
+                                    { "Effects", ingredient.data.effects },
+                                    { "Skills", ingredient.data.skills },
+                                    { "Attributes", ingredient.data.attributes }
+                                };
+                            break;
+                        case "Lockpick":
+                            if (!outputDict.ContainsKey("lockpick")) outputDict["lockpick"] = [];
+                            var lockpick = (converted as TES3_Lockpick);
+                            outputDict["lockpick"][lockpick.id] = new Dictionary<string, object>
+                                {
+                                    { "Name", lockpick.name },
+                                    { "Icon", lockpick.icon.Split("\\").Last().Split(".").First() },
+                                    { "Weight", lockpick.data.weight },
+                                    { "Value", lockpick.data.value },
+                                    { "Quality", lockpick.data.quality },
+                                    { "Uses", lockpick.data.uses }
+                                };
+                            break;
+                        case "Probe":
+                            if (!outputDict.ContainsKey("probe")) outputDict["probe"] = [];
+                            var probe = (converted as TES3_Probe);
+                            outputDict["probe"][probe.id] = new Dictionary<string, object>
+                                {
+                                    { "Name", probe.name },
+                                    { "Icon", probe.icon.Split("\\").Last().Split(".").First() },
+                                    { "Weight", probe.data.weight },
+                                    { "Value", probe.data.value },
+                                    { "Quality", probe.data.quality },
+                                    { "Uses", probe.data.uses }
+                                };
+                            break;
+                        case "RepairItem":
+                            if (!outputDict.ContainsKey("repairitem")) outputDict["repairitem"] = [];
+                            var repairItem = (converted as TES3_RepairItem);
+                            outputDict["repairitem"][repairItem.id] = new Dictionary<string, object>
+                                {
+                                    { "Name", repairItem.name },
+                                    { "Icon", repairItem.icon.Split("\\").Last().Split(".").First() },
+                                    { "Weight", repairItem.data.weight },
+                                    { "Value", repairItem.data.value },
+                                    { "Quality", repairItem.data.quality },
+                                    { "Uses", repairItem.data.uses }
+                                };
+                            break;
+                        #endregion
+
+                        #region Activators
                         case "Container":
                             if (!outputDict.ContainsKey("container")) outputDict["container"] = [];
                             var container = (converted as TES3_Container);
@@ -393,6 +478,9 @@ namespace EspConverter
                                     { "Inventory", container.inventory.ToDictionary(x => x[1], x => x[0]) }
                                 };
                             break;
+                        #endregion
+
+                        #region NPCs
                         case "Creature":
                             if (!outputDict.ContainsKey("creature")) outputDict["creature"] = [];
                             var creature = (converted as TES3_Creature);
@@ -443,98 +531,6 @@ namespace EspConverter
                                     { "Gold", creature.data.gold }
                                 };
                             break;
-                        case "Enchanting":
-                            if (!outputDict.ContainsKey("enchanting")) outputDict["enchanting"] = [];
-                            var enchanting = (converted as TES3_Enchanting);
-                            outputDict["enchanting"][enchanting.id] = new Dictionary<string, object>
-                                {
-                                    { "Type", enchanting.data.enchant_type },
-                                    { "Cost", enchanting.data.cost },
-                                    { "Charge", enchanting.data.max_charge },
-                                    { "Flags", enchanting.data.flags.Split("|").Select(x => x.Trim()).Where(x => !string.IsNullOrWhiteSpace(x)).ToArray() },
-                                    { "Effects", enchanting.effects.Select(x => new Dictionary<string, object> {
-                                        { "Effect", x.magic_effect },
-                                        { "Skill", x.skill },
-                                        { "Attribute", x.attribute },
-                                        { "Range", x.range },
-                                        { "Area", x.area },
-                                        { "Duration", x.duration },
-                                        { "Magnitude", new[] {x.min_magnitude, x.max_magnitude} }
-                                    })}
-                                };
-                            break;
-                        case "Ingredient":
-                            if (!outputDict.ContainsKey("ingredient")) outputDict["ingredient"] = [];
-                            var ingredient = (converted as TES3_Ingredient);
-                            outputDict["ingredient"][ingredient.id] = new Dictionary<string, object>
-                                {
-                                    { "Name", ingredient.name },
-                                    { "Icon", ingredient.icon.Split("\\").Last().Split(".").First() },
-                                    { "Weight", ingredient.data.weight },
-                                    { "Value", ingredient.data.value },
-                                    { "Effects", ingredient.data.effects },
-                                    { "Skills", ingredient.data.skills },
-                                    { "Attributes", ingredient.data.attributes }
-                                };
-                            break;
-                        case "LeveledCreature":
-                            if (!outputDict.ContainsKey("leveledcreature")) outputDict["leveledcreature"] = [];
-                            var leveledCreature = (converted as TES3_LeveledCreature);
-                            var leveledCreatureFlags = leveledCreature.flags;
-                            if (!string.IsNullOrWhiteSpace(leveledCreature.leveled_creature_flags))
-                            {
-                                if (!string.IsNullOrWhiteSpace(leveledCreatureFlags)) leveledCreatureFlags += " | ";
-                                leveledCreatureFlags += leveledCreature.leveled_creature_flags;
-                            }
-                            outputDict["leveledcreature"][leveledCreature.id] = new Dictionary<string, object>
-                                {
-                                    { "Flags", leveledCreatureFlags.Split("|").Select(x => x.Trim()).Where(x => !string.IsNullOrWhiteSpace(x)).ToArray() },
-                                    { "ChanceNone", leveledCreature.chance_none },
-                                    { "Creatures", leveledCreature.creatures.Select(x => x[0]).Distinct().ToDictionary(x => x, x => leveledCreature.creatures.Where(i => i[0] == x).Last()[1]) }
-                                };
-                            break;
-                        case "LeveledItem":
-                            if (!outputDict.ContainsKey("leveleditem")) outputDict["leveleditem"] = [];
-                            var leveledItem = (converted as TES3_LeveledItem);
-                            var leveledItemFlags = leveledItem.flags;
-                            if (!string.IsNullOrWhiteSpace(leveledItem.leveled_item_flags))
-                            {
-                                if (!string.IsNullOrWhiteSpace(leveledItemFlags)) leveledItemFlags += " | ";
-                                leveledItemFlags += leveledItem.leveled_item_flags;
-                            }
-                            outputDict["leveleditem"][leveledItem.id] = new Dictionary<string, object>
-                                {
-                                    { "Flags", leveledItemFlags.Split("|").Select(x => x.Trim()).Where(x => !string.IsNullOrWhiteSpace(x)).ToArray() },
-                                    { "ChanceNone", leveledItem.chance_none },
-                                    { "Items", leveledItem.items.Select(x => x[0]).Distinct().ToDictionary(x => x, x => leveledItem.items.Where(i => i[0] == x).Last()[1]) }
-                                };
-                            break;
-                        case "Lockpick":
-                            if (!outputDict.ContainsKey("lockpick")) outputDict["lockpick"] = [];
-                            var lockpick = (converted as TES3_Lockpick);
-                            outputDict["lockpick"][lockpick.id] = new Dictionary<string, object>
-                                {
-                                    { "Name", lockpick.name },
-                                    { "Icon", lockpick.icon.Split("\\").Last().Split(".").First() },
-                                    { "Weight", lockpick.data.weight },
-                                    { "Value", lockpick.data.value },
-                                    { "Quality", lockpick.data.quality },
-                                    { "Uses", lockpick.data.uses }
-                                };
-                            break;
-                        case "Probe":
-                            if (!outputDict.ContainsKey("probe")) outputDict["probe"] = [];
-                            var probe = (converted as TES3_Probe);
-                            outputDict["probe"][probe.id] = new Dictionary<string, object>
-                                {
-                                    { "Name", probe.name },
-                                    { "Icon", probe.icon.Split("\\").Last().Split(".").First() },
-                                    { "Weight", probe.data.weight },
-                                    { "Value", probe.data.value },
-                                    { "Quality", probe.data.quality },
-                                    { "Uses", probe.data.uses }
-                                };
-                            break;
                         case "Npc":
                             if (!outputDict.ContainsKey("npc")) outputDict["npc"] = [];
                             var npc = (converted as TES3_Npc);
@@ -577,6 +573,44 @@ namespace EspConverter
                                     { "Faction", npc.faction },
                                 };
                             break;
+                        #endregion
+
+                        #region Leveled Lists
+                        case "LeveledCreature":
+                            if (!outputDict.ContainsKey("leveledcreature")) outputDict["leveledcreature"] = [];
+                            var leveledCreature = (converted as TES3_LeveledCreature);
+                            var leveledCreatureFlags = leveledCreature.flags;
+                            if (!string.IsNullOrWhiteSpace(leveledCreature.leveled_creature_flags))
+                            {
+                                if (!string.IsNullOrWhiteSpace(leveledCreatureFlags)) leveledCreatureFlags += " | ";
+                                leveledCreatureFlags += leveledCreature.leveled_creature_flags;
+                            }
+                            outputDict["leveledcreature"][leveledCreature.id] = new Dictionary<string, object>
+                                {
+                                    { "Flags", leveledCreatureFlags.Split("|").Select(x => x.Trim()).Where(x => !string.IsNullOrWhiteSpace(x)).ToArray() },
+                                    { "ChanceNone", leveledCreature.chance_none },
+                                    { "Creatures", leveledCreature.creatures.Select(x => x[0]).Distinct().ToDictionary(x => x, x => leveledCreature.creatures.Where(i => i[0] == x).Last()[1]) }
+                                };
+                            break;
+                        case "LeveledItem":
+                            if (!outputDict.ContainsKey("leveleditem")) outputDict["leveleditem"] = [];
+                            var leveledItem = (converted as TES3_LeveledItem);
+                            var leveledItemFlags = leveledItem.flags;
+                            if (!string.IsNullOrWhiteSpace(leveledItem.leveled_item_flags))
+                            {
+                                if (!string.IsNullOrWhiteSpace(leveledItemFlags)) leveledItemFlags += " | ";
+                                leveledItemFlags += leveledItem.leveled_item_flags;
+                            }
+                            outputDict["leveleditem"][leveledItem.id] = new Dictionary<string, object>
+                                {
+                                    { "Flags", leveledItemFlags.Split("|").Select(x => x.Trim()).Where(x => !string.IsNullOrWhiteSpace(x)).ToArray() },
+                                    { "ChanceNone", leveledItem.chance_none },
+                                    { "Items", leveledItem.items.Select(x => x[0]).Distinct().ToDictionary(x => x, x => leveledItem.items.Where(i => i[0] == x).Last()[1]) }
+                                };
+                            break;
+                        #endregion
+
+                        #region Cells
                         case "Region":
                             if (!outputDict.ContainsKey("region")) outputDict["region"] = [];
                             var region = (converted as TES3_Region);
@@ -598,19 +632,6 @@ namespace EspConverter
                                             { "Blizzard", region.weather_chances.blizzard }
                                         }
                                     }
-                                };
-                            break;
-                        case "RepairItem":
-                            if (!outputDict.ContainsKey("repairitem")) outputDict["repairitem"] = [];
-                            var repairItem = (converted as TES3_RepairItem);
-                            outputDict["repairitem"][repairItem.id] = new Dictionary<string, object>
-                                {
-                                    { "Name", repairItem.name },
-                                    { "Icon", repairItem.icon.Split("\\").Last().Split(".").First() },
-                                    { "Weight", repairItem.data.weight },
-                                    { "Value", repairItem.data.value },
-                                    { "Quality", repairItem.data.quality },
-                                    { "Uses", repairItem.data.uses }
                                 };
                             break;
                         case "Cell":
@@ -658,6 +679,9 @@ namespace EspConverter
                             var referencesPath = Path.Combine(referencesDir, $"{HttpUtility.UrlEncode(cellReferenceFile)}.json");
                             File.WriteAllText(referencesPath, JsonConvert.SerializeObject(cellReferences, Formatting.Indented));
                             break;
+                        #endregion
+
+                        #region Dialogue
                         case "Dialogue":
                             if (!outputDict.ContainsKey("dialogue")) outputDict["dialogue"] = [];
                             var dialogue = (converted as TES3_Dialogue);
@@ -700,6 +724,8 @@ namespace EspConverter
                                     { "Script", dialoguInfo.script_text.Split("\r\n").Select(x => x.Replace("\t", "")).Where(x => !x.Trim().StartsWith(";") && !string.IsNullOrWhiteSpace(x)).ToArray() }
                                 };
                             break;
+                        #endregion
+
                         default: break;
                     }
                 }
@@ -724,37 +750,6 @@ namespace EspConverter
             }
 
             Console.WriteLine("Json generation complete.");
-        }
-
-        public static void GenerateTables(string jsonDir, string outputDir)
-        {
-
-        }
-
-        public static string HtmlTable(string[] headings, List<string[]> data)
-        {
-            var table = "<table class='mw-table'>";
-            table += "<thead>";
-            table += "<tr>";
-            foreach (var h in headings)
-            {
-                table += $"<th>{h}</th>";
-            }
-            table += "</tr>";
-            table += "</thead>";
-            table += "<tbody>";
-            foreach (var r in data)
-            {
-                table += "<tr>";
-                foreach (var c in r)
-                {
-                    table += $"<td>{c}</td>";
-                }
-                table += "</tr>";
-            }
-            table += "</tbody>";
-            table += "</table>";
-            return table;
         }
     }
 }
