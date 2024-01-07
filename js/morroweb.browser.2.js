@@ -19,7 +19,7 @@ var mw_gmst_lookup = {}
 
 $(document).ready(function () {
     mw_preLoad();
-    setInterval(mw_resize, 100);
+    setInterval(mw_resize, 1000);
 });
 
 function mw_resize() {
