@@ -1,13 +1,9 @@
-﻿using System;
-using System.Net;
-using System.IO.Compression;
-using System.Diagnostics;
-using EspConverter.Models.Tes3;
-using System.Text.Json.Serialization;
+﻿using EspConverter.Models.TES3;
 using Newtonsoft.Json;
-using EspConverter.Models.Web;
-using System.ComponentModel;
 using Newtonsoft.Json.Linq;
+using System.Diagnostics;
+using System.IO.Compression;
+using System.Net;
 
 namespace EspConverter
 {
@@ -62,490 +58,233 @@ namespace EspConverter
                     fileNames.Add(fileName);
                 }
 
-                // Read all the new json data.
-                Console.WriteLine("Loading all json data.");
-                var loadedData = new Dictionary<string, Tes3Object[]>();
-                foreach (var file in fileNames)
-                {
-                    var jsonPath = Path.Combine(jsonDir, $"{file}.json");
-                    var text = File.ReadAllText(jsonPath);
-                    var json = JsonConvert.DeserializeObject<Tes3Object[]>(text);
-                    loadedData[file] = json;
-                    Console.WriteLine($"Loaded {file} json data.");
-                }
-
                 // Calculate a load order.
                 var forceOrder = new[] { "Morrowind", "Tribunal", "Bloodmoon" };
                 var finalOrder = forceOrder.ToList();
                 finalOrder.AddRange(fileNames.Where(x => !forceOrder.Contains(x)));
-                
-                ExportGMSTs(finalOrder, loadedData, outputDir);
-                ExportGlobals(finalOrder, loadedData, outputDir);
-                ExportClasses(finalOrder, loadedData, outputDir);
-                ExportFactions(finalOrder, loadedData, outputDir);
-                ExportRaces(finalOrder, loadedData, outputDir);
-                ExportSkills(finalOrder, loadedData, outputDir);
-                ExportMagicEffects(finalOrder, loadedData, outputDir);
-                ExportScripts(finalOrder, loadedData, outputDir);
-                ExportSpells(finalOrder, loadedData, outputDir);
-                ExportMiscItems(finalOrder, loadedData, outputDir);
-                ExportWeapons(finalOrder, loadedData, outputDir);
+
+                // Overwrite records and export.
+                var outputDict = new Dictionary<string, Dictionary<string, object>>();
+                foreach (var key in finalOrder)
+                {
+                    dynamic jsonData = JsonConvert.DeserializeObject(File.ReadAllText(Path.Combine(jsonDir, $"{key}.json")));
+                    foreach (var record in (JArray)jsonData)
+                    {
+                        var objectType = record.Value<string>("type");
+                        var className = $"TES3_{objectType}";
+                        var classType = System.Reflection.Assembly.GetExecutingAssembly().GetTypes().FirstOrDefault(x => x.Name == className);
+                        var converted = JsonConvert.DeserializeObject(JsonConvert.SerializeObject(record), classType);
+
+                        switch (objectType)
+                        {
+                            case "GameSetting":
+                                if (!outputDict.ContainsKey("gmst")) outputDict["gmst"] = [];
+                                var gmst = (converted as TES3_GameSetting);
+                                outputDict["gmst"][gmst.id] = gmst.value.data;
+                                break;
+                            case "GlobalVariable":
+                                if (!outputDict.ContainsKey("global")) outputDict["global"] = [];
+                                var global = (converted as TES3_GlobalVariable);
+                                outputDict["global"][global.id] = global.value;
+                                break;
+                            case "Class":
+                                if (!outputDict.ContainsKey("class")) outputDict["class"] = [];
+                                var classObj = (converted as TES3_Class);
+                                outputDict["class"][classObj.id] = new Dictionary<string, object>
+                                {
+                                    { "Name", classObj.name },
+                                    { "Description", classObj.description },
+                                    { "Attributes", new [] { classObj.data.attribute1, classObj.data.attribute2 } },
+                                    { "Major", new [] { classObj.data.major1, classObj.data.major2, classObj.data.major3, classObj.data.major4, classObj.data.major5 } },
+                                    { "Minor", new [] { classObj.data.minor1, classObj.data.minor2, classObj.data.minor3, classObj.data.minor4, classObj.data.minor5 } },
+                                    { "Playable", classObj.data.flags.Contains("PLAYABLE") },
+                                    { "Services", classObj.data.services },
+                                    { "Flags", classObj.data.flags },
+                                };
+                                break;
+                            case "Faction":
+                                if (!outputDict.ContainsKey("faction")) outputDict["faction"] = [];
+                                var faction = (converted as TES3_Faction);
+                                outputDict["faction"][faction.id] = new Dictionary<string, object>
+                                {
+                                    { "Name", faction.name },
+                                    { "Ranks", faction.rank_names },
+                                    { "Reactions", faction.reactions.Select(x => x.faction).Distinct().ToDictionary(x => x, x => faction.reactions.Last(f => f.faction == x).reaction) },
+                                    { "Attributes", faction.data.favored_attributes },
+                                    { "Skills", faction.data.favored_skills },
+                                    { "Requirements", faction.data.requirements.Select(x => new Dictionary<string, object>
+                                        {
+                                            { "Attributes", x.attributes },
+                                            { "PrimarySkill", x.primary_skill },
+                                            { "FavouredSkill", x.favored_skill },
+                                            { "Reputation", x.reputation }
+                                        })
+                                    }
+                                };
+                                break;
+                            case "Race":
+                                if (!outputDict.ContainsKey("race")) outputDict["race"] = [];
+                                var race = (converted as TES3_Race);
+                                var skillBonuses = new Dictionary<string, object>();
+                                if (race.data.skill_bonuses.skill_0 != "None") skillBonuses[race.data.skill_bonuses.skill_0] = race.data.skill_bonuses.bonus_0;
+                                if (race.data.skill_bonuses.skill_1 != "None") skillBonuses[race.data.skill_bonuses.skill_1] = race.data.skill_bonuses.bonus_1;
+                                if (race.data.skill_bonuses.skill_2 != "None") skillBonuses[race.data.skill_bonuses.skill_2] = race.data.skill_bonuses.bonus_2;
+                                if (race.data.skill_bonuses.skill_3 != "None") skillBonuses[race.data.skill_bonuses.skill_3] = race.data.skill_bonuses.bonus_3;
+                                if (race.data.skill_bonuses.skill_4 != "None") skillBonuses[race.data.skill_bonuses.skill_4] = race.data.skill_bonuses.bonus_4;
+                                if (race.data.skill_bonuses.skill_5 != "None") skillBonuses[race.data.skill_bonuses.skill_5] = race.data.skill_bonuses.bonus_5;
+                                if (race.data.skill_bonuses.skill_6 != "None") skillBonuses[race.data.skill_bonuses.skill_6] = race.data.skill_bonuses.bonus_6;
+                                outputDict["race"][race.id] = new Dictionary<string, object>
+                                {
+                                    { "Name", race.name },
+                                    { "Description", race.description },
+                                    { "Spells", race.spells },
+                                    { "Attributes", new Dictionary<string, object>
+                                        {
+                                            { "Strength", race.data.strength },
+                                            { "Intelligence", race.data.intelligence },
+                                            { "Willpower", race.data.willpower },
+                                            { "Agility", race.data.agility },
+                                            { "Speed", race.data.speed },
+                                            { "Endurance", race.data.endurance },
+                                            { "Personality", race.data.personality },
+                                            { "Luck", race.data.luck }
+                                        }
+                                    },
+                                    { "SkillBonuses", skillBonuses },
+                                    { "Height", race.data.height },
+                                    { "Weight", race.data.weight },
+                                    { "Playable", race.data.flags.Contains("PLAYABLE") },
+                                    { "Beast", race.data.flags.Contains("BEAST_RACE") }
+                                };
+                                break;
+                            case "Skill":
+                                if (!outputDict.ContainsKey("skill")) outputDict["skill"] = [];
+                                var skill = (converted as TES3_Skill);
+                                outputDict["skill"][skill.skill_id] = new Dictionary<string, object>
+                                {
+                                    { "Description", skill.description },
+                                    { "Attribute", skill.data.governing_attribute },
+                                    { "Specialisation", skill.data.specialization },
+                                    { "Actions", skill.data.actions }
+                                };
+                                break;
+                            case "MagicEffect":
+                                if (!outputDict.ContainsKey("magiceffect")) outputDict["magiceffect"] = [];
+                                var magicEffect = (converted as TES3_MagicEffect);
+                                outputDict["magiceffect"][magicEffect.effect_id] = new Dictionary<string, object>
+                                {
+                                    { "Icon", magicEffect.icon.Split("\\").Last().Split(".").First() },
+                                    { "Description", magicEffect.description },
+                                    { "School", magicEffect.data.school },
+                                    { "Cost", magicEffect.data.base_cost },
+                                    { "Speed", magicEffect.data.speed },
+                                    { "Size", magicEffect.data.size },
+                                    { "SizeCap", magicEffect.data.size_cap },
+                                    { "Spellmaking", magicEffect.data.flags.Contains("ALLOW_SPELLMAKING") },
+                                    { "Enchanting", magicEffect.data.flags.Contains("ALLOW_ENCHANTING") }
+                                };
+                                break;
+                            case "Script":
+                                if (!outputDict.ContainsKey("script")) outputDict["script"] = [];
+                                var script = (converted as TES3_Script);
+                                outputDict["script"][script.id] = script.text.Split("\r\n").Select(x => x.Replace("\t", "")).Where(x => !x.Trim().StartsWith(";") && !string.IsNullOrWhiteSpace(x)).ToArray();
+                                break;
+                            case "Spell":
+                                if (!outputDict.ContainsKey("spell")) outputDict["spell"] = [];
+                                var spell = (converted as TES3_Spell);
+                                outputDict["spell"][spell.id] = new Dictionary<string, object>
+                                {
+                                    { "Name", spell.name },
+                                    { "Type", spell.data.spell_type },
+                                    { "Cost", spell.data.cost },
+                                    { "Flags", spell.data.flags },
+                                    { "Effects", spell.effects.Select(x => new Dictionary<string, object>
+                                        {
+                                            { "Effect", x.magic_effect },
+                                            { "Skill", x.skill },
+                                            { "Attribute", x.attribute },
+                                            { "Range", x.range },
+                                            { "Area", x.area },
+                                            { "Duration", x.duration },
+                                            { "Magnitude", new [] { x.min_magnitude, x.max_magnitude } }
+                                        })
+                                    }
+                                };
+                                break;
+                            case "MiscItem":
+                                if (!outputDict.ContainsKey("miscitem")) outputDict["miscitem"] = [];
+                                var miscItem = (converted as TES3_MiscItem);
+                                outputDict["miscitem"][miscItem.id] = new Dictionary<string, object>
+                                {
+                                    { "Name", miscItem.name },
+                                    { "Icon", miscItem.icon.Split("\\").Last().Split(".").First() },
+                                    { "Weight", miscItem.data.weight },
+                                    { "Value", miscItem.data.value },
+                                    { "Flags", miscItem.data.flags }
+                                };
+                                break;
+                            case "Weapon":
+                                if (!outputDict.ContainsKey("weapon")) outputDict["weapon"] = [];
+                                var weapon = (converted as TES3_Weapon);
+                                outputDict["weapon"][weapon.id] = new Dictionary<string, object>
+                                {
+                                    { "Name", weapon.name },
+                                    { "Icon", weapon.icon.Split("\\").Last().Split(".").First() },
+                                    { "Enchanting", weapon.enchanting },
+                                    { "Weight", weapon.data.weight },
+                                    { "Value", weapon.data.value },
+                                    { "Type", weapon.data.weapon_type },
+                                    { "Health", weapon.data.health },
+                                    { "Speed", weapon.data.speed },
+                                    { "Reach", weapon.data.reach },
+                                    { "Enchantment", weapon.data.enchantment },
+                                    { "Chop", new [] { weapon.data.chop_min, weapon.data.chop_max } },
+                                    { "Slash", new [] { weapon.data.slash_min, weapon.data.slash_max } },
+                                    { "Thrust", new [] { weapon.data.thrust_min, weapon.data.thrust_max } },
+                                    { "Flags", weapon.data.flags }
+                                };
+                                break;
+                            case "Birthsign":
+                                if (!outputDict.ContainsKey("birthsign")) outputDict["birthsign"] = [];
+                                var birthsign = (converted as TES3_Birthsign);
+                                outputDict["birthsign"][birthsign.id] = new Dictionary<string, object>
+                                {
+                                    { "Name", birthsign.name },
+                                    { "Description", birthsign.description },
+                                    { "Spells", birthsign.spells },
+                                    { "Image", birthsign.texture.Split("\\").Last().Split(".").First() }
+                                };
+                                break;
+                            case "Book":
+                                if (!outputDict.ContainsKey("book")) outputDict["book"] = [];
+                                var book = (converted as TES3_Book);
+                                outputDict["book"][book.id] = new Dictionary<string, object>
+                                {
+                                    { "Name", book.name },
+                                    { "Icon", book.icon.Split("\\").Last().Split(".").First() },
+                                    { "Enchanting", book.enchanting },
+                                    { "Text", book.text },
+                                    { "Type", book.data.book_type },
+                                    { "Skill", book.data.skill },
+                                    { "Enchantment", book.data.enchantment },
+                                    { "Weight", book.data.weight },
+                                    { "Value", book.data.value },
+                                };
+                                break;
+                            default: break;
+                        }
+                    }
+                }
+
+                foreach (var key in outputDict.Keys)
+                {
+                    var dataFile = Path.Combine(outputDir, $"morroweb.{key}.json");
+                    File.WriteAllText(dataFile, JsonConvert.SerializeObject(outputDict[key], Formatting.Indented));
+                }
 
                 Console.WriteLine("Processing complete.");
             }
             Console.ReadLine();
-        }
-
-        static void ExportGMSTs(List<string> loadOrder, Dictionary<string, Tes3Object[]> loadedData, string outputDir)
-        {
-            Console.WriteLine("Exporting GMST records.");
-            var gmstDict = new Dictionary<string, object>();
-            foreach (var file in loadOrder)
-            {
-                foreach (var obj in loadedData[file])
-                {
-                    if (obj.type == "GameSetting")
-                    {
-                        var prop = obj.value as JObject;
-                        gmstDict[obj.id] = prop.GetValue("data");
-                    }
-                }
-            }
-            var dataFile = Path.Combine(outputDir, $"morroweb.gmst.json");
-            File.WriteAllText(dataFile, JsonConvert.SerializeObject(gmstDict, Formatting.Indented));
-            Console.WriteLine("GMST records exported.");
-        }
-        static void ExportGlobals(List<string> loadOrder, Dictionary<string, Tes3Object[]> loadedData, string outputDir)
-        {
-            Console.WriteLine("Exporting Global records.");
-            var gmstDict = new Dictionary<string, object>();
-            foreach (var file in loadOrder)
-            {
-                foreach (var obj in loadedData[file])
-                {
-                    if (obj.type == "GlobalVariable")
-                    {
-                        gmstDict[obj.id] = obj.value;
-                    }
-                }
-            }
-            var dataFile = Path.Combine(outputDir, $"morroweb.global.json");
-            File.WriteAllText(dataFile, JsonConvert.SerializeObject(gmstDict, Formatting.Indented));
-            Console.WriteLine("Global records exported.");
-        }
-        static void ExportClasses(List<string> loadOrder, Dictionary<string, Tes3Object[]> loadedData, string outputDir)
-        {
-            Console.WriteLine("Exporting Class records.");
-            var gmstDict = new Dictionary<string, WebClass>();
-            foreach (var file in loadOrder)
-            {
-                foreach (var obj in loadedData[file])
-                {
-                    if (obj.type == "Class")
-                    {
-                        var classObj = new WebClass
-                        {
-                            Name = obj.name,
-                            Description = obj.description,
-                            Specialisation = obj.data.specialization.ToString(),
-                            Attributes = new[] { obj.data.attribute1, obj.data.attribute2 },
-                            Major = new[] { obj.data.major1, obj.data.major2, obj.data.major3, obj.data.major4, obj.data.major5 },
-                            Minor = new[] { obj.data.minor1, obj.data.minor2, obj.data.minor3, obj.data.minor4, obj.data.minor5 },
-                            Playable = obj.data.flags == "PLAYABLE"
-                        };
-                        gmstDict[obj.id] = classObj;
-                    }
-                }
-            }
-            var dataFile = Path.Combine(outputDir, $"morroweb.class.json");
-            File.WriteAllText(dataFile, JsonConvert.SerializeObject(gmstDict, Formatting.Indented));
-            Console.WriteLine("Class records exported.");
-        }
-        static void ExportFactions(List<string> loadOrder, Dictionary<string, Tes3Object[]> loadedData, string outputDir)
-        {
-            Console.WriteLine("Exporting Faction records.");
-            var gmstDict = new Dictionary<string, WebFaction>();
-            foreach (var file in loadOrder)
-            {
-                foreach (var obj in loadedData[file])
-                {
-                    if (obj.type == "Faction")
-                    {
-                        var factionObj = new WebFaction
-                        {
-                            Name = obj.name,
-                            Ranks = obj.rank_names,
-                            Attributes = obj.data.favored_attributes,
-                            Skills = obj.data.favored_skills,
-                            Reactions = obj.reactions.Select(x => x.faction).Distinct().ToDictionary(x =>  x, x => obj.reactions.LastOrDefault(y => y.faction == x).reaction),
-                            Requirements = obj.data.requirements.Select(y => new WebFactionRequirement
-                            {
-                                Attributes = y.attributes,
-                                FavouredSkill = y.favored_skill,
-                                PrimarySkill = y.primary_skill,
-                                Reputation = y.reputation
-                            }).ToArray()
-                        };
-                        gmstDict[obj.id] = factionObj;
-                    }
-                }
-            }
-            var dataFile = Path.Combine(outputDir, $"morroweb.faction.json");
-            File.WriteAllText(dataFile, JsonConvert.SerializeObject(gmstDict, Formatting.Indented));
-            Console.WriteLine("Faction records exported.");
-        }
-        static void ExportRaces(List<string> loadOrder, Dictionary<string, Tes3Object[]> loadedData, string outputDir)
-        {
-            Console.WriteLine("Exporting Race records.");
-            var gmstDict = new Dictionary<string, WebRace>();
-            foreach (var file in loadOrder)
-            {
-                foreach (var obj in loadedData[file])
-                {
-                    if (obj.type == "Race")
-                    {
-                        var factionObj = new WebRace
-                        {
-                            Name = obj.name,
-                            Description = obj.description,
-                            Beast = obj.data.flags.Contains("BEAST_RACE"),
-                            Playable = obj.data.flags.Contains("PLAYABLE"),
-                            Height = obj.data.height,
-                            Weight = (obj.data.weight as JArray).Values().Select(x => x.Value<float>()).ToArray(),
-                            Spells = obj.spells
-                        };
-                        factionObj.SkillBonuses = new Dictionary<string, int>();
-                        if (obj.data.skill_bonuses.skill_0 != "None") factionObj.SkillBonuses[obj.data.skill_bonuses.skill_0] = obj.data.skill_bonuses.bonus_0;
-                        if (obj.data.skill_bonuses.skill_1 != "None") factionObj.SkillBonuses[obj.data.skill_bonuses.skill_1] = obj.data.skill_bonuses.bonus_1;
-                        if (obj.data.skill_bonuses.skill_2 != "None") factionObj.SkillBonuses[obj.data.skill_bonuses.skill_2] = obj.data.skill_bonuses.bonus_2;
-                        if (obj.data.skill_bonuses.skill_3 != "None") factionObj.SkillBonuses[obj.data.skill_bonuses.skill_3] = obj.data.skill_bonuses.bonus_3;
-                        if (obj.data.skill_bonuses.skill_4 != "None") factionObj.SkillBonuses[obj.data.skill_bonuses.skill_4] = obj.data.skill_bonuses.bonus_4;
-                        if (obj.data.skill_bonuses.skill_5 != "None") factionObj.SkillBonuses[obj.data.skill_bonuses.skill_5] = obj.data.skill_bonuses.bonus_5;
-                        if (obj.data.skill_bonuses.skill_6 != "None") factionObj.SkillBonuses[obj.data.skill_bonuses.skill_6] = obj.data.skill_bonuses.bonus_6;
-                        factionObj.Attributes = new Dictionary<string, int[]>
-                        {
-                            { "strength", (obj.data.strength as JToken).Select(x => x.Value<int>()).ToArray() },
-                            { "intelligence", (obj.data.intelligence as JToken).Select(x => x.Value<int>()).ToArray() },
-                            { "willpower", (obj.data.willpower as JToken).Select(x => x.Value<int>()).ToArray() },
-                            { "agility", (obj.data.agility as JToken).Select(x => x.Value<int>()).ToArray() },
-                            { "speed", (obj.data.speed as JToken).Select(x => x.Value<int>()).ToArray() },
-                            { "endurance", (obj.data.endurance as JToken).Select(x => x.Value<int>()).ToArray() },
-                            { "personality", (obj.data.personality as JToken).Select(x => x.Value<int>()).ToArray() },
-                            { "luck", (obj.data.luck as JToken).Select(x => x.Value<int>()).ToArray() }
-                        };
-                        gmstDict[obj.id] = factionObj;
-                    }
-                }
-            }
-            var dataFile = Path.Combine(outputDir, $"morroweb.race.json");
-            File.WriteAllText(dataFile, JsonConvert.SerializeObject(gmstDict, Formatting.Indented));
-            Console.WriteLine("Race records exported.");
-        }
-        static void ExportSkills(List<string> loadOrder, Dictionary<string, Tes3Object[]> loadedData, string outputDir)
-        {
-            Console.WriteLine("Exporting Skill records.");
-            var gmstDict = new Dictionary<string, WebSkill>();
-            foreach (var file in loadOrder)
-            {
-                foreach (var obj in loadedData[file])
-                {
-                    if (obj.type == "Skill")
-                    {
-                        var skillObj = new WebSkill
-                        {
-                            Description = obj.description,
-                            Actions = obj.data.actions,
-                            Attribute = obj.data.governing_attribute,
-                            Specialisation = (int)(long)obj.data.specialization
-                        };
-                        gmstDict[obj.skill_id] = skillObj;
-                    }
-                }
-            }
-            var dataFile = Path.Combine(outputDir, $"morroweb.skill.json");
-            File.WriteAllText(dataFile, JsonConvert.SerializeObject(gmstDict, Formatting.Indented));
-            Console.WriteLine("Skill records exported.");
-        }
-        static void ExportMagicEffects(List<string> loadOrder, Dictionary<string, Tes3Object[]> loadedData, string outputDir)
-        {
-            Console.WriteLine("Exporting Magic Effect records.");
-            var gmstDict = new Dictionary<string, WebMagicEffect>();
-            foreach (var file in loadOrder)
-            {
-                foreach (var obj in loadedData[file])
-                {
-                    if (obj.type == "MagicEffect")
-                    {
-                        var magicObj = new WebMagicEffect
-                        {
-                            Description = obj.description,
-                            School = obj.data.school,
-                            BaseCost = obj.data.base_cost,
-                            Speed = (float)(double)obj.data.speed,
-                            Enchanting = obj.data.flags.Contains("ALLOW_ENCHANTING"),
-                            Spellmaking = obj.data.flags.Contains("ALLOW_SPELLMAKING"),
-                            Size = obj.data.size,
-                            SizeCap = obj.data.size_cap,
-                            Icon = obj.icon.Split("\\").Last().Split(".").First()
-                        };
-                        gmstDict[obj.effect_id] = magicObj;
-                    }
-                }
-            }
-            var dataFile = Path.Combine(outputDir, $"morroweb.magiceffect.json");
-            File.WriteAllText(dataFile, JsonConvert.SerializeObject(gmstDict, Formatting.Indented));
-            Console.WriteLine("Skill Magic Effect exported.");
-        }
-        static void ExportScripts(List<string> loadOrder, Dictionary<string, Tes3Object[]> loadedData, string outputDir)
-        {
-            Console.WriteLine("Exporting Script records.");
-            var gmstDict = new Dictionary<string, string[]>();
-            foreach (var file in loadOrder)
-            {
-                foreach (var obj in loadedData[file])
-                {
-                    if (obj.type == "Script")
-                    {
-                        var scriptText = obj.text.Split("\r\n").Where(x => !x.Trim().StartsWith(";") && !string.IsNullOrWhiteSpace(x.Trim())).Select(x => x.Replace("\t", "")).ToArray();
-                        gmstDict[obj.id] = scriptText;
-                    }
-                }
-            }
-            var dataFile = Path.Combine(outputDir, $"morroweb.script.json");
-            File.WriteAllText(dataFile, JsonConvert.SerializeObject(gmstDict, Formatting.Indented));
-            Console.WriteLine("Script records exported.");
-        }
-        static void ExportRegions(List<string> loadOrder, Dictionary<string, Tes3Object[]> loadedData, string outputDir)
-        {
-            Console.WriteLine("Exporting Region records.");
-            var gmstDict = new Dictionary<string, WebRegion>();
-            foreach (var file in loadOrder)
-            {
-                foreach (var obj in loadedData[file])
-                {
-                    if (obj.type == "Region")
-                    {
-                        var regionObj = new WebRegion
-                        {
-                            Id = obj.id,
-                            Name = obj.name,
-                            SleepCreatures = obj.sleep_creature
-                        };
-                        gmstDict[obj.id] = regionObj;
-                    }
-                }
-            }
-            var dataFile = Path.Combine(outputDir, $"morroweb.region.json");
-            File.WriteAllText(dataFile, JsonConvert.SerializeObject(gmstDict, Formatting.Indented));
-            Console.WriteLine("Region records exported.");
-        }
-        static void ExportBirthsigns(List<string> loadOrder, Dictionary<string, Tes3Object[]> loadedData, string outputDir)
-        {
-            Console.WriteLine("Exporting Birthsign records.");
-            var gmstDict = new Dictionary<string, WebBirthsign>();
-            foreach (var file in loadOrder)
-            {
-                foreach (var obj in loadedData[file])
-                {
-                    if (obj.type == "Birthsign")
-                    {
-                        var regionObj = new WebBirthsign
-                        {
-                            Id = obj.id,
-                            Name = obj.name,
-                            Description = obj.description,
-                            Spells = obj.spells,
-                        };
-                        gmstDict[obj.id] = regionObj;
-                    }
-                }
-            }
-            var dataFile = Path.Combine(outputDir, $"morroweb.birthsign.json");
-            File.WriteAllText(dataFile, JsonConvert.SerializeObject(gmstDict, Formatting.Indented));
-            Console.WriteLine("Birthsign records exported.");
-        }
-        static void ExportSpells(List<string> loadOrder, Dictionary<string, Tes3Object[]> loadedData, string outputDir)
-        {
-            Console.WriteLine("Exporting Spell records.");
-            var gmstDict = new Dictionary<string, WebSpell>();
-            foreach (var file in loadOrder)
-            {
-                foreach (var obj in loadedData[file])
-                {
-                    if (obj.type == "Spell")
-                    {
-                        var magicObj = new WebSpell
-                        {
-                            Name = obj.name,
-                            Cost = obj.data.cost,
-                            Effects = obj.effects.Select(x => new WebSpellEffect
-                            {
-                                Effect = x.magic_effect,
-                                Skill = x.skill,
-                                Attribute = x.attribute,
-                                Range = x.range,
-                                Duration = x.duration,
-                                Area = x.area,
-                                Magnitude = new[] { x.min_magnitude, x.max_magnitude } 
-                            }).ToArray()
-                        };
-                        gmstDict[obj.id] = magicObj;
-                    }
-                }
-            }
-            var dataFile = Path.Combine(outputDir, $"morroweb.spell.json");
-            File.WriteAllText(dataFile, JsonConvert.SerializeObject(gmstDict, Formatting.Indented));
-            Console.WriteLine("Spell records exported.");
-        }
-        static void ExportMiscItems(List<string> loadOrder, Dictionary<string, Tes3Object[]> loadedData, string outputDir)
-        {
-            Console.WriteLine("Exporting MiscItem records.");
-            var gmstDict = new Dictionary<string, WebItem>();
-            foreach (var file in loadOrder)
-            {
-                foreach (var obj in loadedData[file])
-                {
-                    if (obj.type == "MiscItem")
-                    {
-                        var magicObj = new WebItem
-                        {
-                            Name = obj.name,
-                            Type = "Misc",
-                            Icon = obj.icon.Split("\\").Last().Split(".").First(),
-                            Weight = (float)(double)obj.data.weight,
-                            Value = obj.data.value,
-                            Flags = obj.data.flags
-                        };
-                        gmstDict[obj.id] = magicObj;
-                    }
-                }
-            }
-            var dataFile = Path.Combine(outputDir, $"morroweb.miscitem.json");
-            File.WriteAllText(dataFile, JsonConvert.SerializeObject(gmstDict, Formatting.Indented));
-            Console.WriteLine("MiscItem records exported.");
-        }
-        static void ExportWeapons(List<string> loadOrder, Dictionary<string, Tes3Object[]> loadedData, string outputDir)
-        {
-            Console.WriteLine("Exporting Weapon records.");
-            var gmstDict = new Dictionary<string, WebWeapon>();
-            foreach (var file in loadOrder)
-            {
-                foreach (var obj in loadedData[file])
-                {
-                    if (obj.type == "Weapon")
-                    {
-                        var magicObj = new WebWeapon
-                        {
-                            Name = obj.name,
-                            Type = "Weapon",
-                            Icon = obj.icon.Split("\\").Last().Split(".").First(),
-                            Weight = (float)(double)obj.data.weight,
-                            Value = obj.data.value,
-                            Flags = obj.data.flags,
-                            Enchanting = obj.enchanting,
-                            WeaponType = obj.data.weapon_type,
-                            Enchantment = obj.data.enchantment,
-                            Health = obj.data.health,
-                            Speed = (float)(double)obj.data.speed,
-                            Reach = obj.data.reach,
-                            Chop = [obj.data.chop_min, obj.data.chop_max],
-                            Thrust = [obj.data.thrust_min, obj.data.thrust_max],
-                            Slash = [obj.data.slash_min, obj.data.slash_max]
-                        };
-                        gmstDict[obj.id] = magicObj;
-                    }
-                }
-            }
-            var dataFile = Path.Combine(outputDir, $"morroweb.weapon.json");
-            File.WriteAllText(dataFile, JsonConvert.SerializeObject(gmstDict, Formatting.Indented));
-            Console.WriteLine("Weapon records exported.");
-        }
-
-
-
-
-
-        static void ExportCells(List<string> loadOrder, Dictionary<string, Tes3Object[]> loadedData, string outputDir)
-        {
-            Console.WriteLine("Exporting cell records.");
-            var cellDict = new Dictionary<int, Dictionary<int, Tes3Object>>();
-            foreach (var file in loadOrder)
-            {
-                foreach (var obj in loadedData[file])
-                {
-                    
-                }
-            }
-            Console.WriteLine("Cell records exported.");
-        }
-
-        static void ExportDialogue(List<string> loadOrder, Dictionary<string, Tes3Object[]> loadedData, string outputDir)
-        {
-            Console.WriteLine("Exporting dialogue records.");
-            var dialogueDict = new Dictionary<string, Dictionary<string, Dictionary<string, Tes3Object>>>();
-            foreach (var file in loadOrder)
-            {
-                var jsonData = loadedData[file];
-                var types = jsonData.Select(x => x.type).Distinct().ToList();
-
-                var currentTopic = string.Empty;
-                foreach (var obj in jsonData)
-                {
-                    if (obj.type == "Dialogue")
-                    {
-                        currentTopic = obj.id;
-                        if (!dialogueDict.ContainsKey(obj.dialogue_type)) dialogueDict.Add(obj.dialogue_type, []);
-                        if (!dialogueDict[obj.dialogue_type].ContainsKey(currentTopic)) dialogueDict[obj.dialogue_type].Add(currentTopic, []);
-                    }
-                    if (obj.type == "DialogueInfo")
-                    {
-                        if (!dialogueDict.ContainsKey(obj.data.dialogue_type)) dialogueDict.Add(obj.data.dialogue_type, []);
-                        dialogueDict[obj.data.dialogue_type][currentTopic][obj.id] = obj;
-                    }
-                }
-            }
-
-            foreach (var dialogueType in dialogueDict.Keys)
-            {
-                var dialogueItem = dialogueDict[dialogueType];
-                var dialogeData = new WebDialogueType
-                {
-                    Name = dialogueType,
-                    Topics = dialogueItem.Select(y => new WebDialogueTopic
-                    {
-                        Text = y.Key,
-                        Lines = y.Value.Select(z => new WebDialogueLine
-                        {
-                            Id = z.Value.id,
-                            NextId = z.Value.next_id,
-                            PrevId = z.Value.prev_id,
-                            NPCId = z.Value.speaker_id,
-                            NPCSex = z.Value.data.speaker_sex,
-                            NPCRace = z.Value.speaker_race,
-                            NPCFaction = z.Value.speaker_faction,
-                            NPCClass = z.Value.speaker_class,
-                            NPCRank = z.Value.data.speaker_rank,
-                            NPCCell = z.Value.speaker_cell,
-                            PCFaction = z.Value.player_faction,
-                            PCRank = z.Value.data.player_rank,
-                            Scripts = z.Value.script_text.Split("\r\n").Where(a => !string.IsNullOrWhiteSpace(a) && !a.Trim().StartsWith(";")).ToArray(),
-                            Filters = z.Value.filters.Select(a => new WebDialogueFilter
-                            {
-                                Type = a.comparison,
-                                Func = a.function,
-                                Id = a.id,
-                                Value = a.value.data.ToString() ?? ""
-                            }).ToArray(),
-                            Disposition = z.Value.data.disposition,
-                            Text = z.Value.text
-                        }).ToList()
-                    }).ToArray()
-                };
-                var dataFile = Path.Combine(outputDir, $"morroweb.dialogue.{dialogueType.ToLower()}.json");
-                File.WriteAllText(dataFile, JsonConvert.SerializeObject(dialogeData, Formatting.Indented));
-
-            }
-            Console.WriteLine("Dialogue records exported.");
         }
     }
 }
