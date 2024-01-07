@@ -1,0 +1,305 @@
+{
+  "2801811436864812351": {
+    "Prev": "",
+    "Next": "2172169722028113362",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lassnr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I thank you again for helping me, %PCRace. You came to my aid when no one else would, and for that I will be forever grateful.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Tymvaul",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2172169722028113362": {
+    "Prev": "2801811436864812351",
+    "Next": "14571607365368254",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lassnr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Dead.  So it is as I feared. Well, at least now I know the truth.  Thank you so much, %PCRace. Without my son for company, I feel I shall soon wither and pass.  But so be it.  I will soon see my wife and son again in the afterlife.  Again, my thanks.  I don't have much to offer as a reward, but I want you to have these. They are the pelts of a snow bear I killed many years ago. Brynjolfr at Thirsk can forge them into special armor for you. Thanks again, kind %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Tymvaul 100",
+      "removeitem \"ingred_snowbear_pelt_unique\" 2",
+      "player->additem \"ingred_snowbear_pelt_unique\" 2",
+      "moddisposition 50",
+      "Goodbye"
+    ]
+  },
+  "14571607365368254": {
+    "Prev": "2172169722028113362",
+    "Next": "12158155531868129447",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lassnr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You...you killed my son? I send you to find him, save him, and you end his life? No! You will pay for this! You have killed my only son!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Setfight 100",
+      "Goodbye"
+    ]
+  },
+  "12158155531868129447": {
+    "Prev": "14571607365368254",
+    "Next": "22898278139066597",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lassnr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I knew he was alive! Oh thank you, %PCName! Although I hate to see him leave, I know Tymvaul will return some day and bring pride and honor to our family. I don't have much to offer as a reward, but I want you to have these. They are the pelts of a snow bear I killed many years ago. Brynjolfr at Thirsk can forge them into special armor for you. Thanks again, kind %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Tymvaul 100",
+      "removeitem \"ingred_snowbear_pelt_unique\" 5",
+      "player->additem \"ingred_snowbear_pelt_unique\" 5",
+      "moddisposition 50",
+      "Goodbye"
+    ]
+  },
+  "22898278139066597": {
+    "Prev": "12158155531868129447",
+    "Next": "3151747212577130105",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lassnr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Please hurry, %PCRace.  My son may still be alive, but he can't survive down there for long.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Tymvaul",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "3151747212577130105": {
+    "Prev": "22898278139066597",
+    "Next": "11858114972809617755",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lassnr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You...you will help me?  Oh, thank you, %PCRace!  Since my son fell into our well I have kept it locked, to avoid any more unfortunate accidents.  Here's the key -- the well is out back.  The waters of the well lead to Rimhull, but there is said to be another, more direct entrance to the ice caves, somewhere outside the village.  I know not where such an entrance may be, though it's probably hidden somewhere nearby. Now hurry!  Return when you have news of my son!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"BM_Tymvaul\" 30",
+      "removeitem \"key_Lassnr_well\" 1",
+      "player->additem \"key_Lassnr_well\" 1"
+    ]
+  },
+  "11858114972809617755": {
+    "Prev": "3151747212577130105",
+    "Next": "432236251715715971",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lassnr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Will no one help an old man?  Must I spend the rest of my life alone, not knowing if I could have saved my son's life?  Leave me now, %PCRace.  I no longer wish to speak to you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"BM_Tymvaul\" 20",
+      "Goodbye"
+    ]
+  },
+  "432236251715715971": {
+    "Prev": "11858114972809617755",
+    "Next": "1644930801133724028",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lassnr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My son, Tymvaul, was getting water, and fell into our well.  I am so lonely without him.  Ever since his mother passed, Tymvaul has been my only companion.  The pool beneath the well leads to a series of ice caves known as Rimhull.  So my boy may still be alive.  But I am too frail to search the caves, and everyone else in the village is convinced Tymvaul is already dead.  I must know if he still lives! Please, %PCRace, will you enter Rinhull and learn the fate of my son?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Tymvaul",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Tymvaul",
+        "Value": 40.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Less",
+        "Id": "tymvaul",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"BM_Tymvaul\" 10",
+      "Choice \"I can't help you, Lassnr.\" 1 \"I'll help you, Lassnr.  It's possible Tymvaul still lives.\" 2"
+    ]
+  },
+  "1644930801133724028": {
+    "Prev": "432236251715715971",
+    "Next": "10838214951360828948",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lassnr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Please, %PCRace -- what news of my son Tymvaul?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Tymvaul",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Tymvaul lives! He has given up his study of the dark arts, and is leaving Solstheim to study legitimate magicka. He said he will return some day and make you proud.\" 3"
+    ]
+  },
+  "10838214951360828948": {
+    "Prev": "1644930801133724028",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lassnr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Please, %PCRace -- what news of my son Tymvaul?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Tymvaul",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Choice \"Tymvaul was alive, but had been driven mad by some dark magic he found in Rimhull.  He spoke of raising the dead, and then attacked me.  I'm sorry, Lassnr -- I had no choice but to kill Tymvaul.\" 4 \"(Lie) I found Tymvaul's body at the bottom of the well.  I gave him a proper burial in the ice caves. I am so sorry, Lassnr.\" 5"
+    ]
+  }
+}

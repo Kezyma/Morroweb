@@ -1,0 +1,287 @@
+{
+  "3869262101710230208": {
+    "Prev": "",
+    "Next": "2802655181704113213",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm very disappointed in you, %PCName. You broke our rules, and I can't have one of your reputation in the Bal Molagmer. Make amends, and perhaps we can speak again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2802655181704113213": {
+    "Prev": "3869262101710230208",
+    "Next": "2070312325241575312",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "I'm disappointed in you, %PCName. You've been caught too many times. Tone down your act, pay off yours debts, then come see me again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcCrimeLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2070312325241575312": {
+    "Prev": "2802655181704113213",
+    "Next": "22344226852161226188",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Saryn Sarethi's blade has been returned to him.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Enamor",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "22344226852161226188": {
+    "Prev": "2070312325241575312",
+    "Next": "92591768378715184",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "So, the blade and note are in Salyn's chest? Good work. I hope you didn't have too much trouble.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "enamorInChest",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Enamor",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Enamor 100",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "92591768378715184": {
+    "Prev": "22344226852161226188",
+    "Next": "224935963700026344",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Just take the blade Enamor and the note I gave you. Put both of them in Salyn Sarethi's chest in the Tower of Dusk at Ghostgate.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Enamor",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "224935963700026344": {
+    "Prev": "92591768378715184",
+    "Next": "17465238702697223042",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "This is Enamor. A Guild member stole it from Salyn Sarethi, a noble and generous Buoyant Armiger. The blade was a gift from Vivec himself. We do not want the Thieves Guild to be blamed for this kind of theft. Take this blade and this note. Put them in Salyn Sarethi's chest in the Tower of Dusk in Ghostgate.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "indrele rathryon",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_SS_Generosity2",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Yngling",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Enamor 10",
+      "Player->AddItem bk_Enamor 1",
+      "Player->AddItem Glass_Dagger_Enamor 1"
+    ]
+  },
+  "17465238702697223042": {
+    "Prev": "224935963700026344",
+    "Next": "24464289543257920336",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "This is Enamor. A Guild member stole it from Salyn Sarethi, a noble and generous Buoyant Armiger. The blade was a gift from Vivec himself. We do not want the Thieves Guild to be blamed for this kind of theft. Take this blade and this note. Put them in Salyn Sarethi's chest in the Tower of Dusk in Ghostgate.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Generosity2",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Enamor 10",
+      "Player->AddItem bk_Enamor 1",
+      "Player->AddItem Glass_Dagger_Enamor 1"
+    ]
+  },
+  "24464289543257920336": {
+    "Prev": "17465238702697223042",
+    "Next": "389826103201461712",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "salyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I found the blade with a note from the Bal Molagmer which said the sword was stolen by mistake. I have no love for thieves, but perhaps these new Bal Molagmer are like the Bal Molagmer of the old poems. Honorable thieves, worthy of respect. Only time will tell.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Enamor",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "389826103201461712": {
+    "Prev": "24464289543257920336",
+    "Next": "23947167542883012393",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "salyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, it was stolen. I did not know anyone else knew. It was a priceless blade, a gift from Vivec himself. I was ashamed to report it.",
+    "Filters": [],
+    "Script": []
+  },
+  "23947167542883012393": {
+    "Prev": "389826103201461712",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "allding",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yeah, that was me. I didn't know Gentleman Jim was such a big fan of Dunmer poetry. He chewed me out for an hour and even recited some of Salyn Sarethi's poems. I won't make THAT mistake again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Enamor",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  }
+}

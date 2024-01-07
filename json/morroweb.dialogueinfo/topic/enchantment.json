@@ -1,0 +1,168 @@
+{
+  "234261118832512224": {
+    "Prev": "",
+    "Next": "202642100038582712",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hisin deep-raed",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can't wait to wrap my hands around the neck of that witch!!!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_ParalyzedBarbarian",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "202642100038582712": {
+    "Prev": "234261118832512224",
+    "Next": "311899330412314427",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hisin deep-raed",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ahhh! Filthy witch! I'll wear her bones in my beard! I'll bathe in her tears!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_ParalyzedBarbarian",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_ParalyzedBarbarian",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "311899330412314427": {
+    "Prev": "202642100038582712",
+    "Next": "26937280761915621216",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hisin deep-raed",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have honor, %PCName. I am a man of standing among my people. My father and my father's father, and his father before him, have had songs sung of their deeds, and I shall be no different. I distrust potions in general, but bring me one from a reputable alchemist, release me from this bondage, and I will reward you. Then I shall cleave that whore in twain!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AddTopic \"potion of Cure Common Disease\"",
+      "Journal \"MV_ParalyzedBarbarian\" 40"
+    ]
+  },
+  "26937280761915621216": {
+    "Prev": "311899330412314427",
+    "Next": "31356304912056132193",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hisin deep-raed",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've a spell to cure this malady? If this is a trick, stranger, yours will be the second neck I snap. Never mind. Go ahead with your spell...I couldn't be worse off than I am now. Treat me fairly, %PCName, and I will reward you. Hisin Deep-Raed shall have his revenge!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "AddTopic \"spell to Cure Disease\"",
+      "Journal \"MV_ParalyzedBarbarian\" 60"
+    ]
+  },
+  "31356304912056132193": {
+    "Prev": "26937280761915621216",
+    "Next": "2062532424175718236",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hisin deep-raed",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Bah! I'll rid myself of this disease through sheer force of will! You'd best be going stranger, for when I break free, I'll want to test the blade of my axe, and your neck will work just fine.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_ParalyzedBarbarian\" 50"
+    ]
+  },
+  "2062532424175718236": {
+    "Prev": "31356304912056132193",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hisin deep-raed",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Aye. A foul witch has given me some enchanted disease, leaving me rooted to this spot. She called it Witchwither. Foul temptress! I had been her escort; she was a big woman, friendly...you know. Then the damned witch ensorcelled me, leaving me at this spot, nearly naked, to display my shame to the world! Hisin Deep-Raed is not accustomed to being mocked, stranger! I shall paint the ground with her entrails!",
+    "Filters": [],
+    "Script": [
+      "Journal \"MV_ParalyzedBarbarian\" 20",
+      "Choice \"I can help you. I'll find you a potion that will cure your paralyzation.\" 1 \"I should be able to cure your paralyzation with a spell.\" 2 \"Sorry, there's nothing I can do for you. You'll just have to wait for it to wear off.\" 3"
+    ]
+  }
+}

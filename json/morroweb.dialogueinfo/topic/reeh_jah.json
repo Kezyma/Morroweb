@@ -1,0 +1,290 @@
+{
+  "1938012754189574957": {
+    "Prev": "",
+    "Next": "17721977623622912",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "reeh_jah",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's me.",
+    "Filters": [],
+    "Script": []
+  },
+  "17721977623622912": {
+    "Prev": "1938012754189574957",
+    "Next": "120501284514593885",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Im_Kilaya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Reeh-Jah? He sounds like one of our people, but I do not know him myself.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_RunawaySlave",
+        "Value": 97.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "reeh_jah",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "120501284514593885": {
+    "Prev": "17721977623622912",
+    "Next": "2256027995154351460",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Im_Kilaya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We will get him back to his people. Soon, by the Root, he will be back among his people, with the sweet smell of the Hist making fire in his veins.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_RunawaySlave",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2256027995154351460": {
+    "Prev": "120501284514593885",
+    "Next": "1311318669934126791",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Im_Kilaya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We've heard you returned that poor man to his captors. Do you know what happened to him after you brought him in? No? They had him flogged until the skin was flayed from his back. No, he's not dead. That would be too easy, you see, and he wouldn't bring a profit. They healed him, so they could flog him again. That's how the slavers serve notice to their slaves that escape is not an option. I hope you feel pride in your work. Get out of here, %PCRace. Get out while you can.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_RunawaySlave",
+        "Value": 105.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "reeh_jah",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModPCFacRep -5 \"Twin Lamps\"",
+      "ModDisposition -10",
+      "ModFight 20",
+      "Journal \"MV_RunawaySlave\" 140",
+      "Reeh_Jah->Disable"
+    ]
+  },
+  "1311318669934126791": {
+    "Prev": "2256027995154351460",
+    "Next": "55283621646222356",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Im_Kilaya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have done a good thing here, %PCName. You have helped one of our people with no promise of reward, and at great peril to yourself. I see good things for you if you continue on this path. The lamps burn brightly for you, I can see that. Take this as a show of our gratitude.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "reeh_jah",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_RunawaySlave",
+        "Value": 97.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_RunawaySlave\" 100",
+      "ModPCFacRep 10 \"Twin Lamps\"",
+      "Player->AddItem \"Blood Belt\" 1",
+      "Reeh_jah->AiWander 0 0 0 40 30 20 0 0 0 0 0 0"
+    ]
+  },
+  "55283621646222356": {
+    "Prev": "1311318669934126791",
+    "Next": "22448540271926316",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Im_Kilaya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We heard of the death of this poor slave. At least he did not die in captivity.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "reeh_jah",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "NotEqual",
+        "Id": "MV_RunawaySlave",
+        "Value": 105.0
+      }
+    ],
+    "Script": []
+  },
+  "22448540271926316": {
+    "Prev": "55283621646222356",
+    "Next": "44032433680631332",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "One of my slaves who has run away. Bring him back, and I'll reward you. Or...just kill him. It's a good lesson to teach the others.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "reeh_jah",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_RunawaySlave",
+        "Value": 97.0
+      }
+    ],
+    "Script": []
+  },
+  "44032433680631332": {
+    "Prev": "22448540271926316",
+    "Next": "29149262761479023067",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Brought one back for me, have you? Good work, bounty hunter. Good for the others to see, you know. Let them know there's no escaping this place. Here's your reward.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_RunawaySlave",
+        "Value": 103.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "reeh_jah",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_RunawaySlave\" 105",
+      "ModPCFacRep -10 \"Twin Lamps\"",
+      "Player->AddItem \"Gold_001\" 150",
+      "Reeh_jah->AiWander 0 0 0 40 30 20 0 0 0 0 0 0"
+    ]
+  },
+  "29149262761479023067": {
+    "Prev": "44032433680631332",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Got rid of an escapee for me, did you, bounty hunter? Well, I'd rather have them back alive, but it serves as a good example to the rest. Here's the reward.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "reeh_jah",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_RunawaySlave\" 105",
+      "ModPCFacRep -10 \"Twin Lamps\"",
+      "Player->AddItem \"Gold_001\" 50"
+    ]
+  }
+}

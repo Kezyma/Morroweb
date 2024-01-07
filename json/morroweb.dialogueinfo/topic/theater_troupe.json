@@ -1,0 +1,147 @@
+{
+  "151601225587425179": {
+    "Prev": "",
+    "Next": "17909253081076413268",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "marcel maurard",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've found a troupe forming? Then I must go to see the noble patron! Thank you my friend; you will not be forgotten!  Yes! Yes! The play's the thing, wherein I'll catch the purse strings of...that guy!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_Actor",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Actor\" 70"
+    ]
+  },
+  "17909253081076413268": {
+    "Prev": "151601225587425179",
+    "Next": "641618251874717179",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "marcel maurard",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah, but to have a company of players. For only then will I be able to showcase my arts! Yes, all the world's a stage...but no one wants to pay me to act on it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Actor",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "641618251874717179": {
+    "Prev": "17909253081076413268",
+    "Next": "17717322542289410966",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My troupe is coming together nicely, sweet bits.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_Actor",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Actor\" 60"
+    ]
+  },
+  "17717322542289410966": {
+    "Prev": "641618251874717179",
+    "Next": "1167237432045126568",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A company of players, yes! I would love to be able to form a company to put on my new play. But there are so few in the area that are willing to act, even for a good price. Of course, I need an actor with wit, grace, charm, and a firm...oh, never mind. You wouldn't be a bad choice, muffin, but you seem to have other matters to attend to. If you see someone else who fits the bill, send them to Uncle Crassius!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Actor",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Actor\" 60"
+    ]
+  },
+  "1167237432045126568": {
+    "Prev": "17717322542289410966",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec",
+    "PlayerFaction": "",
+    "Text": "Crassius Curio is quite a patron of the arts. He commissioned some artists to do a mural for him, and I heard that he has written a new play, and would like to have it performed. He'll probably be putting together a group soon. Oh...help us all.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Actor",
+        "Value": 50.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal EB_Actor 50"
+    ]
+  }
+}

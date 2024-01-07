@@ -1,0 +1,87 @@
+{
+  "3168228194215783409": {
+    "Prev": "",
+    "Next": "2053125750103547972",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharsten heart-fang",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've nothing more to say? A smart traveler would have at least a token of friendship to present, but I see you were raised among heathens. There is little else to say to you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_CariusGone",
+        "Value": 25.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Stones",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "misc_skull_Skaal",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "2053125750103547972": {
+    "Prev": "3168228194215783409",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharsten heart-fang",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You say you've brought the bones of one of our ancestors? Stupid Imperials. They need to learn to leave things as they are. Still, it is good that you have returned this to the Skaal. Perhaps there is hope for you and your kind. You are welcome here for the moment, but there is much to atone for.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_CariusGone",
+        "Value": 25.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Stones",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "misc_skull_Skaal",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Stones 10",
+      "Player->removeItem misc_skull_Skaal 1"
+    ]
+  }
+}

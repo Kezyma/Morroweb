@@ -1,0 +1,188 @@
+{
+  "228558056261517275": {
+    "Prev": "",
+    "Next": "11515203291141623008",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Llaalam Dredil",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Why haven't you delivered that letter yet?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_Express",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "11515203291141623008": {
+    "Prev": "228558056261517275",
+    "Next": "1224055172814311191",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Llaalam Dredil",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've delivered the package? Excellent. You should have a letter in return for me, though. Where is it?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_Express",
+        "Value": 40.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "bk_letterfromjzhirr",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1224055172814311191": {
+    "Prev": "11515203291141623008",
+    "Next": "1660228747875223891",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Llaalam Dredil",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've delivered the package? Excellent. And you have a letter from J'Zhirr? Well done. Here is your reward.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_Express",
+        "Value": 40.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_letterfromjzhirr",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Express\" 50",
+      "Player->AddItem \"Gold_001\" 75",
+      "RemoveItem \"Gold_001\" 75",
+      "Player->RemoveItem \"bk_letterfromjzhirr\" 1",
+      "AddItem \"bk_letterfromjzhirr\" 1"
+    ]
+  },
+  "1660228747875223891": {
+    "Prev": "1224055172814311191",
+    "Next": "274292533383316844",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Llaalam Dredil",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Fine, then. I will find a more suitable courier.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Express\" 30"
+    ]
+  },
+  "274292533383316844": {
+    "Prev": "1660228747875223891",
+    "Next": "29246122175967962",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Llaalam Dredil",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent. Here is the letter. Please get it to him as soon as possible. Just tell J'zhirr you have a delivery from Llaalam Dredil. He will know what to do, and should give you something to bring back to me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Express\" 20",
+      "Player->AddItem \"bk_letterfromllaalam\" 1",
+      "RemoveItem \"bk_letterfromllaalam\" 1",
+      "AddTopic \"delivery for Llaalam Dredil\""
+    ]
+  },
+  "29246122175967962": {
+    "Prev": "274292533383316844",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Llaalam Dredil",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I need someone to deliver this letter for me. It's important that it get to J'zhirr at the East Empire Company as soon as possible. He should also have something for me in return, which I'll need you to bring back. Can you do this?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_Express",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Express\" 10",
+      "Choice \"I'll deliver it for you.\" 1 \"I can't help you.\" 2"
+    ]
+  }
+}

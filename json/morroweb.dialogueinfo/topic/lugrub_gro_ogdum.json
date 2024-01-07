@@ -1,0 +1,188 @@
+{
+  "31272184055332464": {
+    "Prev": "",
+    "Next": "539230003236754717",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled, but maybe you can join the Imperial Legion again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "539230003236754717": {
+    "Prev": "31272184055332464",
+    "Next": "84891066449009192",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Lugrub is dead. Justice has been served.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_WidowLand",
+        "Value": 120.0
+      }
+    ],
+    "Script": []
+  },
+  "84891066449009192": {
+    "Prev": "539230003236754717",
+    "Next": "3162073681609615228",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So you killed Lugrub. Good. Now the Widow Vabdas is avenged and justice has been served. I have more orders for you.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "lugrub gro-ogdum",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_WidowLand",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal IL_WidowLand 120",
+      "ModPCFacRep 5 \"Imperial Legion\"",
+      "ModDisposition 20"
+    ]
+  },
+  "3162073681609615228": {
+    "Prev": "84891066449009192",
+    "Next": "144081098799642587",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Kill him to avenge the Widow Vabdas. If we don't act soon, his murder of Mansilamat Vabdas will ruin the reputation of the Legion.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_WidowLand",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "144081098799642587": {
+    "Prev": "3162073681609615228",
+    "Next": "26978167152757719615",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "Lugrub is one of my best soldiers, though he's sometimes rash and quick to anger.",
+    "Filters": [],
+    "Script": []
+  },
+  "26978167152757719615": {
+    "Prev": "144081098799642587",
+    "Next": "2499839573515549",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ancestor_ghost_vabdas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Lugrub is dead and my death is avenged. Speak with Darius and do not let him take my wife's land. Then I can rest.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_WidowLand",
+        "Value": 50.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "lugrub gro-ogdum",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2499839573515549": {
+    "Prev": "26978167152757719615",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ancestor_ghost_vabdas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I came to the mines to get fresh kwama eggs for my family. Lugrub gro-Ogdum was sleeping, and I snuck past him. When I found enough eggs, I went back the way I came, only this time Lugrub was awake. Lugrub murdered me so that no one would know he failed his duty. He dropped the broken axe he used next to my body in the water behind me.",
+    "Filters": [],
+    "Script": [
+      "Journal \"IL_WidowLand\" 50"
+    ]
+  }
+}

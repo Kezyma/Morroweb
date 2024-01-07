@@ -1,0 +1,140 @@
+{
+  "14890213041174414341": {
+    "Prev": "",
+    "Next": "2531820977154911215",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Elbert Nermarc",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for returning it to me, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_ScrollSales",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2531820977154911215": {
+    "Prev": "14890213041174414341",
+    "Next": "26583237742411730446",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Elbert Nermarc",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can't force you to turn it over, of course, but I spent so much time on the work in that book.  Please reconsider.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "26583237742411730446": {
+    "Prev": "2531820977154911215",
+    "Next": "7723313581324221287",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Elbert Nermarc",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A great deal of work went into these formulas; I cannot thank you enough for returning them to me.  You're certainly welcome back here anytime.  I'd be happy to offer you a small discount on anything I have here.  It's the least I can do.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"bk_nermarcnotes\" 1",
+      "additem \"bk_nermarcnotes\" 1",
+      "Journal MS_ScrollSales 100",
+      "setmercantile 5",
+      "moddisposition 40"
+    ]
+  },
+  "7723313581324221287": {
+    "Prev": "26583237742411730446",
+    "Next": "32492281732475020239",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Elbert Nermarc",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You found what?  Where?  Goodness!  I simply thought I'd misplaced the book somewhere.  May I have it back?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_ScrollSales",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Yes, here it is.\" 1 \"No, I don't think so.\" 2"
+    ]
+  },
+  "32492281732475020239": {
+    "Prev": "7723313581324221287",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "She didn't tell me where she got it, so I don't know.  Don't want to know, either.  It's not like it matters.  You can't read a thing in it anyway, except for somebody's name.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_ScrollSales",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  }
+}

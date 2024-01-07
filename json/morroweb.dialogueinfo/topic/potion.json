@@ -1,0 +1,300 @@
+{
+  "27482134233026921036": {
+    "Prev": "",
+    "Next": "15488233542752612417",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "divayth fyr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It worked, didn't it? Remarkable. Perhaps it will work on the other inmates. I'll have to proceed carefully, of course. You may be an exceptional case.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_3_CorprusCure",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "15488233542752612417": {
+    "Prev": "27482134233026921036",
+    "Next": "636330165231253963",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "divayth fyr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Remarkable. Let me check your skin... your eyes... your tongue.... Amazing. I think it worked. No sign of the disease at all. Of course, you still have corprus disease, just like I planned. But all your symptoms are gone. Marvelous. I'll go try it out on some of the more desperate inmates. But I'll answer any questions you have before you go.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_3_CorprusCure",
+        "Value": 25.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Journal \"A2_3_CorprusCure\" 50",
+      "player->addspell \"common disease immunity\"",
+      "player->addspell \"blight disease immunity\"",
+      "player->addspell \"corprus immunity\"",
+      "Cast \"Cure Common Disease Other\" Player",
+      "Cast \"Cure Blight Disease\" Player",
+      "player->removespell corprus"
+    ]
+  },
+  "636330165231253963": {
+    "Prev": "15488233542752612417",
+    "Next": "15529239743264811941",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "divayth fyr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. Now swallow... Goodness... Good grief! Look! Look! It's...  WORKING!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_3_CorprusCure",
+        "Value": 25.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 5"
+    ]
+  },
+  "15529239743264811941": {
+    "Prev": "636330165231253963",
+    "Next": "1427433522579319649",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "divayth fyr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. Open your mouth, and close your eyes...",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_3_CorprusCure",
+        "Value": 25.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 4"
+    ]
+  },
+  "1427433522579319649": {
+    "Prev": "15529239743264811941",
+    "Next": "7187841303802811",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "divayth fyr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What? Lost your nerve? Think there might be someone else who can cure your corprus? Very well. Go away, and come back when you're ready to take the potion.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_3_CorprusCure",
+        "Value": 25.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"A2_3_CorprusCure\" 46"
+    ]
+  },
+  "7187841303802811": {
+    "Prev": "1427433522579319649",
+    "Next": "2083193651795723417",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "divayth fyr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No, I' m sorry. You take it here, before my eyes, or you don't get it. Go away, and come back when you're ready to take the potion.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_3_CorprusCure",
+        "Value": 25.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal \"A2_3_CorprusCure\" 46",
+      "Goodbye"
+    ]
+  },
+  "2083193651795723417": {
+    "Prev": "7187841303802811",
+    "Next": "15308224362369325059",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "divayth fyr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So. As I said, I'll give you the potion, on the following condition: you must drink it here, before my eyes. It should act immediately, and I need to observe you very carefully. Agreed?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_3_CorprusCure",
+        "Value": 46.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, give me the potion\" 1 \"No, I'm not ready.\" 2 \"No, give me the potion, but let me use it as I please.\" 3"
+    ]
+  },
+  "15308224362369325059": {
+    "Prev": "2083193651795723417",
+    "Next": "18762288043234016588",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "divayth fyr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The boots first, please. And now, I'll give you the potion, on the following condition: you must drink it here, before my eyes. It should act immediately, and I need to observe you very carefully. Agreed?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_3_CorprusCure",
+        "Value": 25.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "dwemer_boots of flying",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem \"Dwemer_Boots of Flying\" 1",
+      "Choice \"Yes, give me the potion\" 1 \"No, I'm not ready.\" 2 \"No, give me the potion, but let me use it as I please.\" 3"
+    ]
+  },
+  "18762288043234016588": {
+    "Prev": "15308224362369325059",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "divayth fyr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. As I said, go down into the Corprusarium. Find an inmate named Yagrum Bagarn. Get a pair of boots from him. Then bring them back to me, and I'll give you a potion that will cure you of corprus. I think.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_3_CorprusCure",
+        "Value": 25.0
+      }
+    ],
+    "Script": []
+  }
+}

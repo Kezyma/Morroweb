@@ -1,0 +1,517 @@
+{
+  "2671417056199682241": {
+    "Prev": "",
+    "Next": "32098280671370025271",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alven salas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I no longer have the Black Jinx.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_BlackJinx",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "32098280671370025271": {
+    "Prev": "2671417056199682241",
+    "Next": "2332118487701510594",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "alven salas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "It's yours, %PCRank.",
+    "Filters": [],
+    "Script": [
+      "RemoveItem Ring_BlackJinx_uniq 1",
+      "Player->AddItem Ring_BlackJinx_uniq 1",
+      "Journal HT_BlackJinx 50"
+    ]
+  },
+  "2332118487701510594": {
+    "Prev": "32098280671370025271",
+    "Next": "2618932278204710860",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alven salas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "Yes, I have the ring, but we in the Morag Tong have a special interest in the ring as well. Would you steal from us, brother %PCName?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2618932278204710860": {
+    "Prev": "2332118487701510594",
+    "Next": "1301327073112815215",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alven salas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "Yes, I have the ring, but we in the Morag Tong have a special interest in the ring as well. Would you steal from us, sister %PCName?",
+    "Filters": [],
+    "Script": []
+  },
+  "1301327073112815215": {
+    "Prev": "2618932278204710860",
+    "Next": "2928129078161822531",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alven salas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So you do have some courage. We shall settle this now. To the death!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "2928129078161822531": {
+    "Prev": "1301327073112815215",
+    "Next": "1381345251844718733",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alven salas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So you are just another Telvanni coward. Go back to your servants, %PCRace. If you have any.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "1381345251844718733": {
+    "Prev": "2928129078161822531",
+    "Next": "1801015442259206251",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alven salas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If Dratha needs the ring so badly, I do not understand why she does not seek after it herself. Hiding behind mere servants like you is a sign of cowardice. Yes, I admit it. I have the ring. If you want it, you can fight me for it.",
+    "Filters": [],
+    "Script": [
+      "Choice \"Challenge him to a duel. Right here, right now.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "1801015442259206251": {
+    "Prev": "1381345251844718733",
+    "Next": "258030180245451464",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alven salas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Suppose I did have this ring, this \"Black Jinx?\" Would you take what is not rightfully yours?",
+    "Filters": [],
+    "Script": []
+  },
+  "258030180245451464": {
+    "Prev": "1801015442259206251",
+    "Next": "22039284382638715866",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raven omayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, this is it. Mistress Dratha will appreciate this. The ring can instill fear in others. I know a spell or two that are not as powerful as this ring, but I will teach them to you if you wish to learn.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "ring_blackjinx_uniq",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HT_BlackJinx 100",
+      "Player->RemoveItem Ring_BlackJinx_uniq 1",
+      "AddItem Ring_BlackJinx_uniq 1",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 10",
+      "Choice \"Yes, teach me the spells.\" 3 \"Nevemind.\" 4"
+    ]
+  },
+  "22039284382638715866": {
+    "Prev": "258030180245451464",
+    "Next": "17359974917517533",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raven omayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Why should I believe you if you won't show me the ring? Bring the ring to me or stop wasting my time.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "17359974917517533": {
+    "Prev": "22039284382638715866",
+    "Next": "13763159281593021698",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raven omayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then keep trying. Surely someone here in Sadrith Mora has heard of it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "13763159281593021698": {
+    "Prev": "17359974917517533",
+    "Next": "1563516389297868833",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raven omayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well. [Raven teaches you how to demoralize your opponents.] If you want more chores, speak with the other Mouths.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Player->AddSpell \"demoralize creature\"",
+      "Player->AddSpell \"demoralize humanoid\""
+    ]
+  },
+  "1563516389297868833": {
+    "Prev": "13763159281593021698",
+    "Next": "6203273181049916331",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raven omayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you want more chores, speak with the others Mouths.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": []
+  },
+  "6203273181049916331": {
+    "Prev": "1563516389297868833",
+    "Next": "17244526716127431",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raven omayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have already given me the Black Jinx.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_BlackJinx",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "17244526716127431": {
+    "Prev": "6203273181049916331",
+    "Next": "710931352669115448",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raven omayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you found the Ring of the Black Jinx?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_BlackJinx",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "710931352669115448": {
+    "Prev": "17244526716127431",
+    "Next": "17669191692911415784",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raven omayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Mistress Dratha has always had an interest in this ring. She believes that the ring is now here in Sadrith Mora. Acquire this ring and deliver it to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_Muck",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HT_BlackJinx 10"
+    ]
+  },
+  "17669191692911415784": {
+    "Prev": "710931352669115448",
+    "Next": "274411852152014200",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dratha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I am looking for it. Have you found it? You should learn to go through the proper channels. Take the ring to my Mouth, Raven Omayn in Sadrith Mora.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HT_BlackJinx",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "274411852152014200": {
+    "Prev": "17669191692911415784",
+    "Next": "57194689113888439",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Sadrith Mora, Morag Tong Guild",
+    "PlayerFaction": "",
+    "Text": "That is none of your concern, %PCName.",
+    "Filters": [],
+    "Script": []
+  },
+  "57194689113888439": {
+    "Prev": "274411852152014200",
+    "Next": "4399324382600825275",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "Sadrith Mora",
+    "PlayerFaction": "",
+    "Text": "I heard that Mistress Dratha was looking for this ring, but I do not know where you might find one.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "4399324382600825275": {
+    "Prev": "57194689113888439",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Sadrith Mora",
+    "PlayerFaction": "",
+    "Text": "I have heard of it. I believe the ring belongs to the Morag Tong. If you are brave, perhaps you could ask them. They have a guildhall on the northeast side of town.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

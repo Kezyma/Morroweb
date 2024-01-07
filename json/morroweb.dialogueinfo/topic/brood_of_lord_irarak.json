@@ -1,0 +1,112 @@
+{
+  "25655816301214215": {
+    "Prev": "",
+    "Next": "99259811639323932",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Irarak",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I am the Dark Lord Irarak, and these are my minions. They serve me as their Dark Master. Perhaps one day I will bestow upon them the gift of Life Eternal, but until then, they will be content to serve me obediently. They provide comfort for me, while I provide them with my presence.",
+    "Filters": [],
+    "Script": []
+  },
+  "99259811639323932": {
+    "Prev": "25655816301214215",
+    "Next": "1098044641198410150",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "volrina quarra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You let the \"Lord\" live? You are no longer welcome here, foul creature. Leave, or you will die where you stand.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Irarak",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 3.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampCult",
+        "Value": 70.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampCult",
+        "Value": 110.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampCult\" 130",
+      "ModDisposition -30"
+    ]
+  },
+  "1098044641198410150": {
+    "Prev": "99259811639323932",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "volrina quarra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Lord Irarak? Hah! Well, you have done well in destroying that fool. As I promised, you will be allowed access to the services here in Druscashti. Do not overstay your welcome.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "Irarak",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 3.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampCult",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampCult\" 120"
+    ]
+  }
+}

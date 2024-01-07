@@ -1,0 +1,166 @@
+{
+  "11198442583117636": {
+    "Prev": "",
+    "Next": "171769254223531596",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Alas, you have been expelled from the Legions. Maybe you can join the Imperial Legion again, and maybe not.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "171769254223531596": {
+    "Prev": "11198442583117636",
+    "Next": "4324141266358109",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have returned the plans to the Anumidium and helped save the Empire.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Blueprints",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "4324141266358109": {
+    "Prev": "171769254223531596",
+    "Next": "157542011839613883",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am glad you are still loyal. We will need %PCRaces like you for the troubles ahead. In exchange for these plans, I offer you [REWARD].",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal IL_Blueprints 100",
+      "ModPCFacRep 15 \"Imperial Legion\"",
+      "ModDisposition 25"
+    ]
+  },
+  "157542011839613883": {
+    "Prev": "4324141266358109",
+    "Next": "2631069731808723274",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This does not surprise me, %PCName. Even those I thought I could trust are turning against the Empire.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "2631069731808723274": {
+    "Prev": "157542011839613883",
+    "Next": "3016869932951231725",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see you have a fragment of the plans for the Anumidium. Will you return this to me now and help protect the Empire?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_dwrv_artifact30",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, take it.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "3016869932951231725": {
+    "Prev": "2631069731808723274",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "With a mere copy of the Anumidium, Tiber Septim was able to conquer all of Tamriel. Naturally in these troubling times, the new Emperor wants us to find any information we can on the original Anumidium. I have heard that the plans for the Anumidium rest somewhere in Red Mountain. If you find them, bring them to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_TalosTreason",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal IL_Blueprints 10"
+    ]
+  }
+}

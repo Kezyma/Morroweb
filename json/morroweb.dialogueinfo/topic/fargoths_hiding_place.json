@@ -1,0 +1,314 @@
+{
+  "2320119401125015415": {
+    "Prev": "",
+    "Next": "27267190741812863",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrisskar flat-foot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You killed the little runt? I don't know what you were thinking. He was a source of good income for me. If anyone asks, I don't know you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Lookout",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "fargoth",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "27267190741812863": {
+    "Prev": "2320119401125015415",
+    "Next": "2916020299178068693",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrisskar flat-foot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good that you found that for me, friend. I'll make that little fetcher pay for lying to me. Although, I've got to be honest, it is kind of fun messing with the little guy. I like to take something from his place and stick it in that old barrel in the Census and Excise courtyard. Hehe...gives the new arrivals something to look forward to.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_Lookout",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2916020299178068693": {
+    "Prev": "27267190741812863",
+    "Next": "13504245661527210384",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrisskar flat-foot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've found his hiding place? That's great, but where's the gold??? You trying to hold out on me, %PCRace?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_Lookout",
+        "Value": 40.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "Gold_001",
+        "Value": 300.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "13504245661527210384": {
+    "Prev": "2916020299178068693",
+    "Next": "7644117512997720799",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrisskar flat-foot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've found his hiding place? That's great. Tell you what...I'll give you 100 gold, and you can keep anything else that you found in there. Thanks for your help.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_Lookout",
+        "Value": 40.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 300.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem \"Gold_001\" 300",
+      "Player->AddItem \"Gold_001\" 100",
+      "Journal \"MS_Lookout\" 100",
+      "ModDisposition 40",
+      "AddItem \"Gold_001\" 200",
+      "Fargoth->ClearForceSneak",
+      "Fargoth->AiWander 512 0 0 60 30 10 0 0 0",
+      "Set fargothwalk to 3"
+    ]
+  },
+  "7644117512997720799": {
+    "Prev": "13504245661527210384",
+    "Next": "281291800472392465",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrisskar flat-foot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've just got to find where he's hiding his loot.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Lookout",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MS_Lookout",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "281291800472392465": {
+    "Prev": "7644117512997720799",
+    "Next": "88631762947825776",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrisskar flat-foot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? Well, I'll find someone else to do it, then.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_Lookout\" 30"
+    ]
+  },
+  "88631762947825776": {
+    "Prev": "281291800472392465",
+    "Next": "2971935711263120030",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrisskar flat-foot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent. Here's what I want you to do. I'm not sure where he goes, but I know he wanders around town at night. Watch his movements. The best vantage point is on top of the lighthouse south of town. That will give you a nice view of all of Seyda Neen. If you keep an eye on where he goes, I'm sure you'll be able to figure out where he's hiding that gold.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_Lookout\" 20"
+    ]
+  },
+  "2971935711263120030": {
+    "Prev": "88631762947825776",
+    "Next": "496873033139825815",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrisskar flat-foot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I know the little fetcher's got one somewhere in town. Just not sure where yet. I've already gone through his whole house, so I know he's not hiding it there. I'd like you find out where he's stashing his gold. If you can, I'll give you a share of the wealth. Are you up for it?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_Lookout",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_Lookout\" 10",
+      "Choice \"I'll do it.\" 1 \"No thanks.\" 2"
+    ]
+  },
+  "496873033139825815": {
+    "Prev": "2971935711263120030",
+    "Next": "2995591862332012921",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fargoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't have a hiding place. At least not anymore....",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_Lookout",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "2995591862332012921": {
+    "Prev": "496873033139825815",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fargoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hiding place? I don't know what you're talking about! Leave me alone.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Lookout",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  }
+}

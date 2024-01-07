@@ -1,0 +1,653 @@
+{
+  "23087154772548224694": {
+    "Prev": "",
+    "Next": "198457854900411065",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Leave now and do not return.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_DisguisedArmor",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -20",
+      "Goodbye"
+    ]
+  },
+  "198457854900411065": {
+    "Prev": "23087154772548224694",
+    "Next": "11366291431163315004",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've already given you the scroll. Deliver it to Maar Gan as usual.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "wearingHelmHHDA",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_DisguisedArmor",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "11366291431163315004": {
+    "Prev": "198457854900411065",
+    "Next": "1865813925855631379",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You... you're not Felsen!",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "wearingHelmHHDA",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcClothingModifier",
+        "Compare": "LessEqual",
+        "Id": "",
+        "Value": 167.0
+      },
+      {
+        "Type": "Function",
+        "Func": "SameSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1865813925855631379": {
+    "Prev": "11366291431163315004",
+    "Next": "324911752329204962",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You... you're not Relmerea!",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "wearingHelmHHDA",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcClothingModifier",
+        "Compare": "LessEqual",
+        "Id": "",
+        "Value": 167.0
+      },
+      {
+        "Type": "Function",
+        "Func": "SameSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "324911752329204962": {
+    "Prev": "1865813925855631379",
+    "Next": "1939528834266521004",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You... you're not Felsen!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_DisguisedArmor",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "1939528834266521004": {
+    "Prev": "324911752329204962",
+    "Next": "3171813996498013815",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You... you're not Relmerea!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_DisguisedArmor",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "3171813996498013815": {
+    "Prev": "1939528834266521004",
+    "Next": "128902102134226971",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Oh, certainly Relmerea, here are your orders. They are in code, of course. Deliver them to Maar Gan as usual.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "wearingHelmHHDA",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "SameSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "RemoveItem \"bk_NemindasOrders\" 1",
+      "Player->AddItem \"bk_NemindasOrders\" 1",
+      "Journal HH_DisguisedArmor 50"
+    ]
+  },
+  "128902102134226971": {
+    "Prev": "3171813996498013815",
+    "Next": "1677911471328724909",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Oh, certainly Felsen, here are you orders. They are in code, of course. Deliver them to Maar Gan as usual.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "wearingHelmHHDA",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "RemoveItem \"bk_NemindasOrders\" 1",
+      "Player->AddItem \"bk_NemindasOrders\" 1",
+      "Journal HH_DisguisedArmor 50"
+    ]
+  },
+  "1677911471328724909": {
+    "Prev": "128902102134226971",
+    "Next": "18921114831866614791",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Who are you? That's... that's Felsen's helm!",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bonemold_gah-julan_hhda",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "SameSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "18921114831866614791": {
+    "Prev": "1677911471328724909",
+    "Next": "2083710013277539764",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Who are you? That's... that's Relmerea's helm!",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bonemold_gah-julan_hhda",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "2083710013277539764": {
+    "Prev": "18921114831866614791",
+    "Next": "11603284148504407",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Thank you, Hlaalu. I will be sure our codes are changed. And we will avenge the deaths of all honorable Redorans.",
+    "Filters": [],
+    "Script": [
+      "Journal HH_DisguisedArmor 150",
+      "Goodbye"
+    ]
+  },
+  "11603284148504407": {
+    "Prev": "2083710013277539764",
+    "Next": "7240276761450421877",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled from House Hlaalu. You must make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "7240276761450421877": {
+    "Prev": "11603284148504407",
+    "Next": "4347295973051910183",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Neminda is dead. There is no way we can get the orders now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_DisguisedArmor",
+        "Value": 200.0
+      }
+    ],
+    "Script": []
+  },
+  "4347295973051910183": {
+    "Prev": "7240276761450421877",
+    "Next": "17315237053136128422",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You talked to Neminda without wearing the helm I gave you and ruined our best chance to find out what House Redoran is planning.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_DisguisedArmor",
+        "Value": 150.0
+      }
+    ],
+    "Script": []
+  },
+  "17315237053136128422": {
+    "Prev": "4347295973051910183",
+    "Next": "130642927037334594",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already gave me Neminda's orders.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_DisguisedArmor",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "130642927037334594": {
+    "Prev": "17315237053136128422",
+    "Next": "20835245682093714155",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Neminda is dead? I did not ask you to kill Neminda. You have no idea how this sets us back in the eyes of House Redoran. I don't want to deal with you right now.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "bk_nemindasorders",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "neminda",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HH_DisguisedArmor 200",
+      "ModDisposition -30",
+      "Goodbye"
+    ]
+  },
+  "20835245682093714155": {
+    "Prev": "130642927037334594",
+    "Next": "490723657739326166",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, this is exactly what I wanted. Good work, %PCName. Keep the helm, and take these 500 drakes for a job well done.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_nemindasorders",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HH_DisguisedArmor 100",
+      "Player->RemoveItem bk_nemindasorders 1",
+      "Player->AddItem Gold_001 500",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 15",
+      "Neminda->SetFight 30",
+      "Neminda->StopCombat"
+    ]
+  },
+  "490723657739326166": {
+    "Prev": "20835245682093714155",
+    "Next": "28454205141688612601",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, where did you put it? Bring me the orders you got from Neminda.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "28454205141688612601": {
+    "Prev": "490723657739326166",
+    "Next": "508311470467523231",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then go speak with Neminda and bring me the orders she gives you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "508311470467523231": {
+    "Prev": "28454205141688612601",
+    "Next": "68601841132598817",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Did you get the orders from Neminda?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_DisguisedArmor",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "68601841132598817": {
+    "Prev": "508311470467523231",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Yes, that is the code phrase you should use when you speak with Neminda. Make sure you wear the helm I gave you.",
+    "Filters": [],
+    "Script": []
+  }
+}

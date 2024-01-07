@@ -1,0 +1,899 @@
+{
+  "8979604721922677": {
+    "Prev": "",
+    "Next": "82391016824275307",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "atronach_storm_ttmk",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have not answered the riddles of my two brothers. Leave now and ponder your failure for a time. You may start anew when you return.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TT_MountKand",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "82391016824275307": {
+    "Prev": "8979604721922677",
+    "Next": "8954103542865824963",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "atronach_storm_ttmk",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have answered correctly, mortal.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_MountKand",
+        "Value": 75.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "8954103542865824963": {
+    "Prev": "82391016824275307",
+    "Next": "2675223696147633410",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "atronach_storm_ttmk",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I acknowledge that your answer is correct.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TT_MountKand 75",
+      "Goodbye"
+    ]
+  },
+  "2675223696147633410": {
+    "Prev": "8954103542865824963",
+    "Next": "1623726940313656748",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "atronach_storm_ttmk",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have failed my riddle, mortal. You will now die.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "1623726940313656748": {
+    "Prev": "2675223696147633410",
+    "Next": "15521218342647910935",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "atronach_storm_ttmk",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My fellow Atronach, Zedias-soko, was slain. The Altmer claims the Dunmer is guilty. The Dunmer says the Khajiit did it. The Orc swears he didn't kill Zedias-soko. The Khajiit says the Dunmer is lying. If only one of these speaks the truth, who killed Zedias-soko?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_MountKand",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"The Altmer.\" 2 \"The Dunmer.\" 2 \"The Orc.\" 1 \"The Khajiit.\" 2"
+    ]
+  },
+  "15521218342647910935": {
+    "Prev": "1623726940313656748",
+    "Next": "26176474093396680",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "atronach_frost_ttmk",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah! First you must pass the Fire Daedra's riddle. Leave this place, unworthy one.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TT_MountKand",
+        "Value": 25.0
+      }
+    ],
+    "Script": []
+  },
+  "26176474093396680": {
+    "Prev": "15521218342647910935",
+    "Next": "1917828747684414781",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "atronach_frost_ttmk",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have answered my riddle, mortal. Go on to the next challenge before your warm flesh angers me further.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_MountKand",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1917828747684414781": {
+    "Prev": "26176474093396680",
+    "Next": "89052178301533136",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "atronach_frost_ttmk",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent. You are a worthy opponent. If you do not wish to feel the chills of Oblivion, you may pass.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TT_MountKand 50",
+      "Goodbye"
+    ]
+  },
+  "89052178301533136": {
+    "Prev": "1917828747684414781",
+    "Next": "228982003130633988",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "atronach_frost_ttmk",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have failed the second riddle. You are unworthy.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "228982003130633988": {
+    "Prev": "89052178301533136",
+    "Next": "1527592161796923660",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "atronach_frost_ttmk",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you lie to me I will slay you with my sword. If you tell me the truth, I will slay you with a spell.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_MountKand",
+        "Value": 25.0
+      }
+    ],
+    "Script": [
+      "Choice \"You will slay me with your sword.\" 1 \"You will slay me with a spell.\" 2 \"Don't kill me!\" 2"
+    ]
+  },
+  "1527592161796923660": {
+    "Prev": "228982003130633988",
+    "Next": "1682530270256731988",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "atronach_flame_ttmk",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You ansswered my tessst.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_MountKand",
+        "Value": 25.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "1682530270256731988": {
+    "Prev": "1527592161796923660",
+    "Next": "954323262164567354",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "atronach_flame_ttmk",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Passs, mortal.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TT_MountKand 25",
+      "Goodbye"
+    ]
+  },
+  "954323262164567354": {
+    "Prev": "1682530270256731988",
+    "Next": "129027474885622520",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "atronach_flame_ttmk",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You fail! Now taste flame, mortal!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "129027474885622520": {
+    "Prev": "954323262164567354",
+    "Next": "1933331714277572582",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "atronach_flame_ttmk",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "[The Daedra speaks slowly in words it obviously memorized.]\r\nA metal neither black nor red\r\nAs hheavy as man's golden greed\r\nWhat you do to ssstay ahead\r\nWith fffriend or arrow or sssteed",
+    "Filters": [],
+    "Script": [
+      "Choice \"Ebony.\" 2 \"Glass.\" 2 \"Daedric.\" 2 \"Lead.\" 1 \"Iron.\" 2"
+    ]
+  },
+  "1933331714277572582": {
+    "Prev": "129027474885622520",
+    "Next": "12233804299749",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "salyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You failed my challenge.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Courtesy",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "12233804299749": {
+    "Prev": "1933331714277572582",
+    "Next": "27349240871873922341",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "salyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You proved that the Legion has courtesy.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Courtesy",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "27349240871873922341": {
+    "Prev": "12233804299749",
+    "Next": "2246361683139113416",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "salyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have failed my challenge.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Courtesy",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "2246361683139113416": {
+    "Prev": "27349240871873922341",
+    "Next": "1812628789569222026",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "salyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, you have proven to me that the Legion has courtesy. I admit I was wrong.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Courtesy",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1812628789569222026": {
+    "Prev": "2246361683139113416",
+    "Next": "166582510415131520",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "salyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well. You haven proven to me that you have wit and poetry. Perhaps the Legion has courtesy after all.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal IL_Courtesy 50",
+      "ModDisposition 20"
+    ]
+  },
+  "166582510415131520": {
+    "Prev": "1812628789569222026",
+    "Next": "132463012281332331",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "salyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are doing better than I expceted. But the next riddle is harder still:\r\nI gave you a sock, not unlike a box\r\nWith hammers and nails all around it\r\nTwo lids open when it knocks...",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcIntelligence",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Uh... A sock? I don't get it.\" 10 \"I'm not ready for this.\" 12 \"It must have been a great hit.\" 2"
+    ]
+  },
+  "132463012281332331": {
+    "Prev": "166582510415131520",
+    "Next": "108282206184077261",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "salyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are doing better than I expected. But the next riddle is harder still:\r\nI gave you a sock, not unlike a box\r\nWith hammers and nails all around it\r\nTwo lids open when it knocks...",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_redbookofriddles",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Uh... A sock? I don't get it.\" 10 \"I'm not ready for this.\" 12 \"It must have been a great hit.\" 2"
+    ]
+  },
+  "108282206184077261": {
+    "Prev": "132463012281332331",
+    "Next": "2117739392514831372",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "salyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are doing better than I expected. But the next riddle is harder still:\r\nI gave you a sock, not unlike a box\r\nWith hammers and nails all around it\r\nTwo lids open when it knocks...",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Choice \"Uh... A sock? I don't get it.\" 10 \"I'm not ready for this.\" 12"
+    ]
+  },
+  "2117739392514831372": {
+    "Prev": "108282206184077261",
+    "Next": "2060116972638820972",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "salyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very good. Now for the next riddle:\r\nPoets know the hearts of Men and Mer\r\nBut beasts can't know my heart, you see\r\nThis book was written by a bear...",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcIntelligence",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Uh... I don't know\" 10 \"I'm not ready for this.\" 12 \"Then it's not a book of poetry.\" 4"
+    ]
+  },
+  "2060116972638820972": {
+    "Prev": "2117739392514831372",
+    "Next": "21129323712343623609",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "salyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very good. Now for the next riddle:\r\nPoets know the hearts of Men and Mer\r\nBut beasts can't know my heart, you see\r\nThis book was written by a bear...",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_redbookofriddles",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Uh... I don't know\" 10 \"I'm not ready for this.\" 12 \"Then it's not a book of poetry.\" 4"
+    ]
+  },
+  "21129323712343623609": {
+    "Prev": "2060116972638820972",
+    "Next": "31460327602816615939",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "salyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very good. Now for the next riddle:\r\nPoets know the hearts of Men and Mer\r\nBut beasts can't know my heart, you see\r\nThis book was written by a bear...",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": [
+      "Choice \"Uh... I don't know\" 10 \"I'm not ready for this.\" 12"
+    ]
+  },
+  "31460327602816615939": {
+    "Prev": "21129323712343623609",
+    "Next": "1019814796960127929",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "salyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It has a tail, a side, and a head\r\nI call it what I call a snake\r\nIt has no body, and it is dead...",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 8.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcIntelligence",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Uh... wait a minute... let me think...\" 10 \"I'm not ready for this.\" 12 \"It must be a drake.\" 6"
+    ]
+  },
+  "1019814796960127929": {
+    "Prev": "31460327602816615939",
+    "Next": "510734803467401",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "salyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It has a tail, a side, and a head\r\nI call it what I call a snake\r\nIt has no body, and it is dead...",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 8.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_redbookofriddles",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Uh... wait a minute... let me think...\" 10 \"I'm not ready for this.\" 12 \"It must be a drake.\" 6"
+    ]
+  },
+  "510734803467401": {
+    "Prev": "1019814796960127929",
+    "Next": "16790281731304916137",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "salyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It has a tail, a side, and a head\r\nI call it what I call a snake\r\nIt has no body, and it is dead...",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 8.0
+      }
+    ],
+    "Script": [
+      "Choice \"Uh... wait a minute... let me think...\" 10 \"I'm not ready for this.\" 12"
+    ]
+  },
+  "16790281731304916137": {
+    "Prev": "510734803467401",
+    "Next": "2070365662331411716",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "salyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have lost the challenge. Go tell your commander that the Legions have no courtesy.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal IL_Courtesy 70",
+      "ModDisposition -10"
+    ]
+  },
+  "2070365662331411716": {
+    "Prev": "16790281731304916137",
+    "Next": "2481418939719222348",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "salyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Come back when you are ready to meet my challenge.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 12.0
+      }
+    ],
+    "Script": []
+  },
+  "2481418939719222348": {
+    "Prev": "2070365662331411716",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "salyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will ask of you a riddle and you must give the answer as a rhyme. Are you ready?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Courtesy",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"I am ready\" 8 \"I am not ready yet\" 12"
+    ]
+  }
+}

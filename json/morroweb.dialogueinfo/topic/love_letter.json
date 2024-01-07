@@ -1,0 +1,207 @@
+{
+  "25844256041796632373": {
+    "Prev": "",
+    "Next": "69042503158164759",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gadayn andarys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, none of that matters anymore. I've heard that Eraldil is dead. Now we'll never be together.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "eraldil",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Unrequited",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "69042503158164759": {
+    "Prev": "25844256041796632373",
+    "Next": "2550619780345925168",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gadayn andarys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've already shown it to her? So, you've spoken to Eraldil? What did she say?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_Unrequited",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "2550619780345925168": {
+    "Prev": "69042503158164759",
+    "Next": "21855822017907145",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gadayn andarys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "One day she'll be mine. I'm sure of it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_Unrequited",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "EB_Unrequited",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "21855822017907145": {
+    "Prev": "2550619780345925168",
+    "Next": "26713184502154919613",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gadayn andarys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? Well, perhaps one day I'll get the courage to speak with her myself.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Unrequited\" 30"
+    ]
+  },
+  "26713184502154919613": {
+    "Prev": "21855822017907145",
+    "Next": "1050611042202885739",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gadayn andarys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You will? Wonderful. If you'll just tell her how I feel, tell her how happy I'd make her, I'm sure she'd be interested. You'll probably find her in the Waistworks. That's where I've watched...seen her at times.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Unrequited\" 20"
+    ]
+  },
+  "1050611042202885739": {
+    "Prev": "26713184502154919613",
+    "Next": "9208160352001232312",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gadayn andarys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You found that? Oh, dear. I really meant to throw that away. It's all true, though. I have loved her since the moment I first set eyes on her. I just haven't had the courage to speak to her yet. Perhaps you'll speak to her for me? Plead my case? I'd be very grateful.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_Unrequited",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Unrequited\" 10",
+      "Choice \"I will speak to her on your behalf.\" 1 \"Sorry. You're on your own.\" 2"
+    ]
+  },
+  "9208160352001232312": {
+    "Prev": "1050611042202885739",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eraldil",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He thinks I might be interested in him? Ha! That's a ridiculous notion. The very thought...insane. I mean, has he seen himself in a mirror lately? I'm sure he's a decent enough sort, but that's ridiculous. He might be more suited for my cousin Glathel. She's low-born, plain, and desperate for a husband. But me? You can tell Gadayn that you've spoken to Eraldil, and she's not interested!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Unrequited",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Unrequited\" 40"
+    ]
+  }
+}

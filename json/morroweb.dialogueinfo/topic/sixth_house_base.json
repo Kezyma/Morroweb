@@ -1,0 +1,100 @@
+{
+  "9240151851750911432": {
+    "Prev": "",
+    "Next": "14693212602900226839",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raesa pullia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This Dagoth Gares slew the rest of the patrol, but spared the one trooper. He told the trooper he was being spared, so he might tell others that \"The Sleeper Awakes,\" and \"The Sixth House has Risen,\" and \"Dagoth Ur is Lord, and I am his Priest,\" and \"All will be One with Him in the Flesh.\" The trooper awakened outside the caves and returned here. We couldn't recognize him, and he didn't respond to questions... just kept rambling on like a madman until he died.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_2_6thHouse",
+        "Value": 5.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"A2_2_6thHouse\" 10"
+    ]
+  },
+  "14693212602900226839": {
+    "Prev": "9240151851750911432",
+    "Next": "883622486114287813",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raesa pullia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Only one trooper returned. He died soon after, horribly disfigured with corprus disease, and out of his wits. In his ravings, he spoke of a cavern on the coast -- he called it \"Ilunibi.\" It's not on our maps; try asking locals in Gnaar Mok. They fought with cultists and disfigured man-beasts -- corprus monsters, I think. They fled the attackers and got lost in the caves. Then they ran into a half-man creature named Dagoth Gares.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_2_6thHouse",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  },
+  "883622486114287813": {
+    "Prev": "14693212602900226839",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Champion Raesa Pullia at Fort Buckmoth says a patrol found a Sixth House base in a cave the locals call Ilunibi. However, the one trooper who escaped to report has died of corprus disease. Before he died, the trooper reported fighting with monsters and cultists, and something about a powerful Sixth House priest called Dagoth Gares. But go talk to Raesa Pullia at Fort Buckmoth. She'll have all the details.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 60.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "A2_2_6thHouse",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal \"A2_2_6thHouse\" 7"
+    ]
+  }
+}

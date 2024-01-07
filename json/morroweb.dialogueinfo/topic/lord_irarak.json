@@ -1,0 +1,222 @@
+{
+  "1922598322211921586": {
+    "Prev": "",
+    "Next": "17434118205396300",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Irarak",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I am the Lord Irarak. What can I do for you, Blood Friend?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampCult",
+        "Value": 40.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "17434118205396300": {
+    "Prev": "1922598322211921586",
+    "Next": "1656156112432421494",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ginith Ancestral Tomb",
+    "PlayerFaction": "",
+    "Text": "We serve Irarak. He is our master, and one day he will bestow upon us his Dark Gift.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Less",
+        "Id": "Irarak",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "Irarak",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1656156112432421494": {
+    "Prev": "17434118205396300",
+    "Next": "13904176242290924464",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Gnisis",
+    "PlayerFaction": "",
+    "Text": "What a moron. I've heard he's got himself holed up in the Ginith Ancestral Tomb. Has all of his little followers waiting on him hand and foot. Pathetic, that's what it is.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampCult",
+        "Value": 40.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "13904176242290924464": {
+    "Prev": "1656156112432421494",
+    "Next": "2793920452257867988",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Gnisis",
+    "PlayerFaction": "",
+    "Text": "Lord...ha! He's just a vampire, and not even a particularly menacing one at that. His real name is Gulmon Droth. I don't know where he got all this \"Lord Irarak\" stuff from. What an idiot.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampCult",
+        "Value": 40.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal VA_VampCult 60"
+    ]
+  },
+  "2793920452257867988": {
+    "Prev": "13904176242290924464",
+    "Next": "911513117245699921",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "volrina quarra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You let the \"Lord\" live? You are no longer welcome here, foul creature. Leave, or you will die where you stand.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_VampCult",
+        "Value": 90.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Irarak",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampCult\" 130",
+      "ModDisposition -30",
+      "Goodbye"
+    ]
+  },
+  "911513117245699921": {
+    "Prev": "2793920452257867988",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "volrina quarra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Lord Irarak? Hah! Well, you have done well in destroying that fool. As I promised, you will be allowed access to the services here in Druscashti. Do not overstay your welcome.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_VampCult",
+        "Value": 110.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "Irarak",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampCult\" 120"
+    ]
+  }
+}

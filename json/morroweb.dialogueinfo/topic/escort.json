@@ -1,0 +1,122 @@
+{
+  "29178295052931320816": {
+    "Prev": "",
+    "Next": "32399121261368227557",
+    "Type": "Topic",
+    "Disposition": 35,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "viatrix petilia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I need to get to Ghostgate Shrine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_RichPilgrim",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_RichPilgrim",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "32399121261368227557": {
+    "Prev": "29178295052931320816",
+    "Next": "954930174679211073",
+    "Type": "Topic",
+    "Disposition": 35,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "viatrix petilia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. Let's go. And be quick about it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_RichPilgrim\" 20",
+      "\"Viatrix Petilia\"->AiFollow Player 0,24454,45500,4538,0"
+    ]
+  },
+  "954930174679211073": {
+    "Prev": "32399121261368227557",
+    "Next": "2787118627358723517",
+    "Type": "Topic",
+    "Disposition": 35,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "viatrix petilia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hmmmph. I should have expected as much from the likes of you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_RichPilgrim\" 30",
+      "Goodbye"
+    ]
+  },
+  "2787118627358723517": {
+    "Prev": "954930174679211073",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 35,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "viatrix petilia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I need an escort to Ghostgate Shrine, and I need to be there in two days' time. I'll give you a tip when you get me there safely. I haven't got all day. Shall we go?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_RichPilgrim",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_RichPilgrim\" 10",
+      "Choice \"I will escort you there if I must.\" 1 \"I don't have the time to take you there.\" 2"
+    ]
+  }
+}

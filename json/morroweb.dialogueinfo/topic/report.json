@@ -1,0 +1,642 @@
+{
+  "18132143217243344": {
+    "Prev": "",
+    "Next": "2569448341692617890",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tirvel Balen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? Hrmph. Well, I'm not moving from this spot until someone goes with me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "2569448341692617890": {
+    "Prev": "18132143217243344",
+    "Next": "315428485948317831",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tirvel Balen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Really? Oh, that's great. Okay, let's get going. This has to get to Carnius as soon as possible.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AiFollow Player 0 -178944.422 153570.813 1020.390 0",
+      "Journal CO_9a 40",
+      "Goodbye"
+    ]
+  },
+  "315428485948317831": {
+    "Prev": "2569448341692617890",
+    "Next": "20954085239934059",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tirvel Balen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yeah, how did you know? I'm supposed to take this to the Fort, but..... but I don't really want to go. There's wolves and bears and things out there, you know? I'd feel much safer if I had an escort. Do you think maybe you'd go with me? I do need to get there soon.",
+    "Filters": [],
+    "Script": [
+      "Choice: \"Yes\" 1 \"No\" 2"
+    ]
+  },
+  "20954085239934059": {
+    "Prev": "315428485948317831",
+    "Next": "2555474102564920450",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The report didn't matter. It was the messenger I was concerned with.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_9a",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2555474102564920450": {
+    "Prev": "20954085239934059",
+    "Next": "2934499781261517924",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't need the report. In fact, it's better if I don't have it. I just want to make sure it doesn't reach this fort. Are we clear?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_9a",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "2934499781261517924": {
+    "Prev": "2555474102564920450",
+    "Next": "242341915154629551",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've placed some rather impossible demands on Falco lately, with the intention of his failing to meet them. When he does, it will erode confidence in the chain of command for the colony, and help convince the investors to pull out. One of those demands has been to deliver status reports. I'm concerned that one may make it through. Meet Hroldar in the courtyard, and follow him. Then go collect the messenger, and make sure he meets Hroldar as well, if you understand me...",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "242341915154629551": {
+    "Prev": "2934499781261517924",
+    "Next": "11403137842650611924",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm afraid you've missed the deadline, %PCRank. What a pity, both for you and for Falco. Now, I've work to do, so I suggest you just run along...",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_9",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "11403137842650611924": {
+    "Prev": "242341915154629551",
+    "Next": "142891143231433617",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm afraid you've missed the deadline, %PCRank. What a pity, both for you and for Falco. Now, I've work to do, so I suggest you just run along...",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_9",
+        "Value": 100.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "bk_colonyreport",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"bk_colonyreport\" 1",
+      "Goodbye"
+    ]
+  },
+  "142891143231433617": {
+    "Prev": "11403137842650611924",
+    "Next": "3553159861218623373",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already delivered the report, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_9",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "3553159861218623373": {
+    "Prev": "142891143231433617",
+    "Next": "109193005590056422",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hrmph. Well. I must say, I'm surprised - I didn't expect to see this report on time. Very well, %PCRank. Let Falco know I've received it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_9",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "CO_9",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"bk_colonyreport\" 1",
+      "Journal CO_9 50"
+    ]
+  },
+  "109193005590056422": {
+    "Prev": "3553159861218623373",
+    "Next": "1602622819186689297",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Constans Atrius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've told you all I know. Now please excuse me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_9",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "1602622819186689297": {
+    "Prev": "109193005590056422",
+    "Next": "827111968229172885",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Constans Atrius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Factor had a good amount of business to attend to today. I believe he's.... ah, he's out looking at prospective expansion sites today. Somewhere on the Eastern Coast of the island, I think. East of that big rock arch, you know, the one with the tomb at the base?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_9",
+        "Value": 10.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "Carniusloc",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal CO_9 40"
+    ]
+  },
+  "827111968229172885": {
+    "Prev": "1602622819186689297",
+    "Next": "1711612411241423612",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Constans Atrius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Factor Magius had quite a bit to do today. I believe he was headed out to location of that awful shipwreck that happened recently. Maybe you can catch him on the way?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_9",
+        "Value": 10.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "Carniusloc",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal CO_9 30"
+    ]
+  },
+  "1711612411241423612": {
+    "Prev": "827111968229172885",
+    "Next": "1787920381420628507",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Constans Atrius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Let's see. He had quite a busy schedule for today. I believe he's out at Brodir Grove, looking at potential sites for expanding Raven Rock. Perhaps you can catch him there?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_9",
+        "Value": 10.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "Carniusloc",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal CO_9 20"
+    ]
+  },
+  "1787920381420628507": {
+    "Prev": "1711612411241423612",
+    "Next": "1862527537207826121",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It never made it to the fort, and Tirvel never returned....  I don't know what happened.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_9a",
+        "Value": 90.0
+      }
+    ],
+    "Script": []
+  },
+  "1862527537207826121": {
+    "Prev": "1787920381420628507",
+    "Next": "1220735041821410869",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have someone else taking care of it, %PCName. Don't worry yourself about it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_9a",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "1220735041821410869": {
+    "Prev": "1862527537207826121",
+    "Next": "3077811711985715197",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You disappointed me, %PCName. I thought you could get the job done.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_9",
+        "Value": 110.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "3077811711985715197": {
+    "Prev": "1220735041821410869",
+    "Next": "865923884792730",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You didn't make it? I trusted you, %PCName!.... I can't allow you to remain employed if I can't count on you to get the job done. You're fired, and I probably will be before long, too.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_9",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal CO_9 110",
+      "PCExpell",
+      "Goodbye"
+    ]
+  },
+  "865923884792730": {
+    "Prev": "3077811711985715197",
+    "Next": "15097271261058031761",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sure Carnius didn't think you'd get it there on time. I'm glad you proved him wrong.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_9",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "15097271261058031761": {
+    "Prev": "865923884792730",
+    "Next": "2805626011669315746",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You got it to him on time? Excellent. I was sure he created that deadline out of spite, never intending my report to get to him before it expired. You've done good work, %PCName. You've bought us some more time.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_9",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal CO_9 60",
+      "player->additem \"gold_001\" 1000",
+      "ModPCFacRep 12 \"East Empire Company\""
+    ]
+  },
+  "2805626011669315746": {
+    "Prev": "15097271261058031761",
+    "Next": "8192138842741522023",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It needs to be in Carnius' hands in five hours, and you're going to get it to him. Don't let me down.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_9",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "8192138842741522023": {
+    "Prev": "2805626011669315746",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't have time to explain. Just take it and get going. Head straight for his office at the fort; don't waste time doing anything else. Now go!",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal CO_9 10",
+      "player->additem \"bk_colonyreport\" 1",
+      "StartScript ColonyReportTimer"
+    ]
+  }
+}

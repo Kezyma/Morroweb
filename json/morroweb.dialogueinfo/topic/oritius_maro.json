@@ -1,0 +1,148 @@
+{
+  "24280126882969123798": {
+    "Prev": "",
+    "Next": "227483403021325540",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "oritius maro",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Speaking.",
+    "Filters": [],
+    "Script": []
+  },
+  "227483403021325540": {
+    "Prev": "24280126882969123798",
+    "Next": "959422166305866937",
+    "Type": "Topic",
+    "Disposition": 20,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Gnisis",
+    "PlayerFaction": "",
+    "Text": "I heard he's been killed.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "oritius maro",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "959422166305866937": {
+    "Prev": "227483403021325540",
+    "Next": "51006263783923016",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "optio bologra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He's been poking around the storeroom. Very suspicious that one.",
+    "Filters": [],
+    "Script": []
+  },
+  "51006263783923016": {
+    "Prev": "959422166305866937",
+    "Next": "23185319452888613370",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Gnisis, Barracks",
+    "PlayerFaction": "",
+    "Text": "Here's here somewhere, look around.",
+    "Filters": [],
+    "Script": []
+  },
+  "23185319452888613370": {
+    "Prev": "51006263783923016",
+    "Next": "2122846351370926800",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Legion",
+    "SpeakerCell": "Gnisis",
+    "PlayerFaction": "",
+    "Text": "Check the Barracks. If you really want info on folks there, talk to Optio Bologra.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "LessEqual",
+        "Id": "Random100",
+        "Value": 25.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2122846351370926800": {
+    "Prev": "23185319452888613370",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Legion",
+    "SpeakerCell": "Gnisis",
+    "PlayerFaction": "",
+    "Text": "Yes, he's a member of the Talos Cult. Check the Barracks.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

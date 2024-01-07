@@ -1,0 +1,309 @@
+{
+  "2309419221152273360": {
+    "Prev": "",
+    "Next": "1733254642009716012",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vala catraso",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for bringing me the books, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_LiteracyCampaign",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1733254642009716012": {
+    "Prev": "2309419221152273360",
+    "Next": "760018993230107150",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vala catraso",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "These will be of more help than you know, %PCName. I am grateful.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_ChildrensAnuad",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HH_LiteracyCampaign 50",
+      "Player->RemoveItem \"bk_ABCs\" 1",
+      "Player->RemoveItem \"bk_ChildrensAnuad\" 1",
+      "ModDisposition 25"
+    ]
+  },
+  "760018993230107150": {
+    "Prev": "1733254642009716012",
+    "Next": "31565250312462128125",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vala catraso",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "These will be of more help than you know, %PCName. I am grateful.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HH_LiteracyCampaign 50",
+      "Player->RemoveItem \"bk_ABCs\" 1",
+      "Player->RemoveItem \"bk_AnnotatedAnuad\" 1",
+      "ModDisposition 25"
+    ]
+  },
+  "31565250312462128125": {
+    "Prev": "760018993230107150",
+    "Next": "1675913325281916553",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vala catraso",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Obviously you do not really care about my school or the literacy of the Dunmer. How can Morrowind truly be a part of the Empire when most Dunmer cannot read and know little of our common culture?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "1675913325281916553": {
+    "Prev": "31565250312462128125",
+    "Next": "2309020618267834688",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vala catraso",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you brought me books for my students?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_ABCs",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_AnnotatedAnuad",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_LiteracyCampaign",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here they are\" 1 \"No\" 2"
+    ]
+  },
+  "2309020618267834688": {
+    "Prev": "1675913325281916553",
+    "Next": "2906722141296481095",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vala catraso",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you brought me books for my students?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_ABCs",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_ChildrensAnuad",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_LiteracyCampaign",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here they are\" 1 \"No\" 2"
+    ]
+  },
+  "2906722141296481095": {
+    "Prev": "2309020618267834688",
+    "Next": "231765219276113209",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have done a good deed for Vala Catraso's students. You have my gratitude.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_LiteracyCampaign",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "231765219276113209": {
+    "Prev": "2906722141296481095",
+    "Next": "3165036591220623387",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Vala Catraso is dead? Am I to believe that you are not responsible somehow? No, I shall not have any more business with you.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "vala catraso",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "3165036591220623387": {
+    "Prev": "231765219276113209",
+    "Next": "170692844684458",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have done a good deed for Vala Catraso's students. You have my gratitude.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_LiteracyCampaign",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal HH_LiteracyCampaign 100",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 15"
+    ]
+  },
+  "170692844684458": {
+    "Prev": "3165036591220623387",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There are teachers in the Mages Guilds, but they often do not have enough books to teach from. Go to a bookstore and find the books \"Annotated Anuad' and \"ABCs for Barbarians.\" Bring a copy of each of these to Vala Catraso in the Ald'ruhn Guild of Mages.",
+    "Filters": [],
+    "Script": [
+      "Journal HH_LiteracyCampaign 10"
+    ]
+  }
+}

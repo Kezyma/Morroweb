@@ -1,0 +1,86 @@
+{
+  "3167635102034421974": {
+    "Prev": "",
+    "Next": "3216014132159614594",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hession",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Fantastic!  Here's all you have to do:  Go around and talk to everyone in the bar. If they're too drunk, or unruly, or just a bad character, throw them out. Report to me when you're done.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_Bouncer\" 10"
+    ]
+  },
+  "3216014132159614594": {
+    "Prev": "3167635102034421974",
+    "Next": "299763076779795897",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hession",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, that's okay.  I'm sure Grub will be making his way back here... eventually.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_Bouncer\" 200"
+    ]
+  },
+  "299763076779795897": {
+    "Prev": "3216014132159614594",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hession",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, well, you see my usual bouncer, Grub, didn't show today. Probably got lost in the Pavilion again, the Orcish ninny.  Anyway, would you be willing to stand in for him? All you would have to do is make one sweep through the bar crowd. If memory serves, we don't get too many people coming and going this time of day. What do you say?  Are you up for it?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_Bouncer",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, I can do that.\" 1 \"No thanks. I don't have the time.\" 2"
+    ]
+  }
+}

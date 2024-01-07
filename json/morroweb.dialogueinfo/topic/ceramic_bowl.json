@@ -1,0 +1,223 @@
+{
+  "2855221502464829161": {
+    "Prev": "",
+    "Next": "11452310712993128221",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ajira has enough mixing bowls now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Bowl",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "11452310712993128221": {
+    "Prev": "2855221502464829161",
+    "Next": "3491100221847319077",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, good. This is an very good bowl. Ajira thanks you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_StolenReport",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MG_Bowl 100",
+      "Player->RemoveItem misc_de_bowl_orange_green_01 1",
+      "ModPCFacRep 2 \"Mages Guild\"",
+      "ModDisposition 5"
+    ]
+  },
+  "3491100221847319077": {
+    "Prev": "11452310712993128221",
+    "Next": "14807131011802920503",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, good. This is an very good bowl. But now Ajira must find her stolen reports!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MG_Bowl 100",
+      "Player->RemoveItem misc_de_bowl_orange_green_01 1",
+      "ModPCFacRep 2 \"Mages Guild\"",
+      "ModDisposition 5"
+    ]
+  },
+  "14807131011802920503": {
+    "Prev": "3491100221847319077",
+    "Next": "613315248260022426",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Nevermind then. Ajira must find her stolen reports!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "613315248260022426": {
+    "Prev": "14807131011802920503",
+    "Next": "323961777544686368",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, Ajira needs a ceramic bowl. Did you find one for Ajira?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "misc_de_bowl_orange_green_01",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Bowl",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is.\" 1 \"No, net yet.\" 2"
+    ]
+  },
+  "323961777544686368": {
+    "Prev": "613315248260022426",
+    "Next": "143602792842043915",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, Ajira needs a ceramic bowl.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Bowl",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "143602792842043915": {
+    "Prev": "323961777544686368",
+    "Next": "20707151382527018432",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, take these 10 drakes and go find Ajira a ceramic bowl. Ajira thinks Ra'Virr the trader here in Balmora has some.",
+    "Filters": [],
+    "Script": [
+      "Journal MG_Bowl 10",
+      "Player->AddItem Gold_001 10"
+    ]
+  },
+  "20707151382527018432": {
+    "Prev": "143602792842043915",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ra'virr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, Ra'Virr should have a ceramic bowl. What will you barter for it?",
+    "Filters": [],
+    "Script": []
+  }
+}

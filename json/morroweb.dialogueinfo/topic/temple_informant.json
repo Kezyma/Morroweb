@@ -1,0 +1,215 @@
+{
+  "6810156903206912570": {
+    "Prev": "",
+    "Next": "207903074616370281",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Galsa Andrano speaks her mind, and, from what you say, sounds sincere. You handled her well. The Temple seems to recognize that King Helseth will not be content to be a puppet like King Llethan, and plans to act against us. Very good work, %PCName. The king will hear of your loyal service. Now you can help us with another matter. King Helseth is concerned about possible disloyalty among the Guards.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR06_Temple",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "207903074616370281": {
+    "Prev": "6810156903206912570",
+    "Next": "16280765113664524",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Galsa Andrano speaks her mind, and, from what you say, sounds sincere. You handled her well. The Temple seems to recognize that King Helseth will not be content to be a puppet like King Llethan, and plans to act against us. Very good work, %PCName. The king will hear of your loyal service. Now you can help us with another matter. King Helseth is concerned about possible disloyalty among the Guards.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR06_Temple",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal TR06_Temple 100",
+      "modDisposition 10"
+    ]
+  },
+  "16280765113664524": {
+    "Prev": "207903074616370281",
+    "Next": "2783938882759022025",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you found a Temple informant who can tell us whether the Temple is willing to accept King Helseth -- or whether the Temple plans to act against him?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR06_Temple",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2783938882759022025": {
+    "Prev": "16280765113664524",
+    "Next": "21183199682349125866",
+    "Type": "Topic",
+    "Disposition": 80,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "King Helseth joined the Temple when he arrived in Morrowind years ago. But the Temple is the enemy of the Empire, and King Helseth is an Imperial in every sense of the word. Now -- will you help us find a Temple informant who can tell us whether the Temple is willing to accept King Helseth -- or whether the Temple plans to act against him?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Choice \"I'll take care of it.\" 1  \"I'm not interested.\" 2"
+    ]
+  },
+  "21183199682349125866": {
+    "Prev": "2783938882759022025",
+    "Next": "12046122002202622977",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "King Helseth is a faithful member of both the Temple and the Imperial cult. Now -- will you help us find a Temple informant who can tell us whether the Temple is willing to accept King Helseth -- or whether the Temple plans to act against him?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Choice \"I'll take care of it.\" 1  \"I'm not interested.\" 2"
+    ]
+  },
+  "12046122002202622977": {
+    "Prev": "21183199682349125866",
+    "Next": "18138301841546825741",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A pity. King Helseth would be grateful for your help. And a grateful king can be a comfort and protection against those who would do you harm. If you change your mind, I'll be here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "18138301841546825741": {
+    "Prev": "12046122002202622977",
+    "Next": "69913192522855382",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. Find a Temple informant, then report to me if you find out whether the Temple is willing to accept King Helseth -- or whether the Temple plans to act against him.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TR06_Temple 1"
+    ]
+  },
+  "69913192522855382": {
+    "Prev": "18138301841546825741",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We need a source of information inside Almalexia's Temple. There are rumors of discontent in the Temple. Go to Almalexia's Temple. Look for someone discontented. Listen sympathetically. And find out whether the Temple is willing to accept King Helseth -- or whether the Temple plans to act against him.",
+    "Filters": [],
+    "Script": [
+      "Choice \"I'll take care of it.\" 1  \"I'm not interested.\" 2 \"Ask whether King Helseth is a loyal supporter of the Temple.\" 3"
+    ]
+  }
+}

@@ -1,0 +1,312 @@
+{
+  "2692091521624914048": {
+    "Prev": "",
+    "Next": "29712175531425610710",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you still a member of the guild? Once Trebonius gives the authorization, we can discuss guild matters again.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "29712175531425610710": {
+    "Prev": "2692091521624914048",
+    "Next": "2248010194715925383",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Were you expelled? Or did you clear that up already? You ought to make amends with Guildmaster Trebonius just to be sure.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "2248010194715925383": {
+    "Prev": "29712175531425610710",
+    "Next": "20109202052482526920",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled, %PCName. If you want to make amends, you should speak with Guildmaster Trebonius.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "20109202052482526920": {
+    "Prev": "2248010194715925383",
+    "Next": "23780154241691614441",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Your delivery of the Dwemer Tube was commendable, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Science",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "23780154241691614441": {
+    "Prev": "20109202052482526920",
+    "Next": "3677283781193998",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, this is what I wanted. Now I can finally study these \"bthurkz\" the Dwarves wrote about. I am impressed by your dedication to scholarship. Good work, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MG_Science 100",
+      "Player->RemoveItem misc_dwrv_artifact60 1",
+      "AddItem misc_dwrv_artifact60 1",
+      "ModPCFacRep 5 \"Mages Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "3677283781193998": {
+    "Prev": "23780154241691614441",
+    "Next": "1733512547813182",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is not a toy, %PCName. It is a valuable Dwemer artifact that is simply essential to my research.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "1733512547813182": {
+    "Prev": "3677283781193998",
+    "Next": "13809216011372125655",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Have you found a Dwemer Tube?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "misc_dwrv_artifact60",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Science",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give her the Dwemer Tube.\" 1 \"Keep the Dwemer Tube.\" 2"
+    ]
+  },
+  "13809216011372125655": {
+    "Prev": "1733512547813182",
+    "Next": "1988214138199322655",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Dwemer Tubes shouldn't be too hard to find. Go to Ald Velothi and travel along the coast to the west. You'll cross a bridge and you'll see Arkngthunch-Sturdumz ahead of you. You can't miss it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Science",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "1988214138199322655": {
+    "Prev": "13809216011372125655",
+    "Next": "10565178222768717924",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I appreciate your dedication, %PCName. Arkngthunch-Sturdumz is northwest of Gnisis, but there's an easier way to get there. Go to Ald Velothi and follow the coast to the west.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal MG_Science 10",
+      "ModDisposition 5"
+    ]
+  },
+  "10565178222768717924": {
+    "Prev": "1988214138199322655",
+    "Next": "1414322892325992694",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm disappointed, %PCName. You are obviously not truly dedicated to research. If you're concerned about Imperial Law, there's no need to worry. I will, of course, turn the device over to the Chair of Dwemer Studies... just as soon as I've finished my research.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "1414322892325992694": {
+    "Prev": "10565178222768717924",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "They're easy enough to find. I believe I saw some in Arkngthunch-Sturdumz when I was last there. Would you be willing to travel there and bring back the Dwemer Tube?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_ReturnBook",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes.\" 3 \"No.\" 4"
+    ]
+  }
+}

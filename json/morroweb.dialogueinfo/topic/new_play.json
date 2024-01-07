@@ -1,0 +1,98 @@
+{
+  "27477236391621315910": {
+    "Prev": "",
+    "Next": "7101222872264716142",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's going to be fabulous, my little sweetroll. \"The Lusty Argonian Maid\" will stir the soul, touch the heart, and rouse the...masses from their slumber.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "EB_Actor",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "7101222872264716142": {
+    "Prev": "27477236391621315910",
+    "Next": "122821007766032083",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is almost completed. I call it \"The Lusty Argonian Maid.\" It's a rather bawdy tale, but I think it will play well with the people. Be sweet to Uncle Crassius, and there's something in it for you, sweetcakes. Here, take a look at some of the work so far. I think it's scrumptious!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_Actor",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "EB_Actor",
+        "Value": 60.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "bk_lustyargonianmaid",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem \"bk_lustyargonianmaid\" 1",
+      "RemoveItem \"bk_lustyargonianmaid\" 1",
+      "Journal EB_Actor 55"
+    ]
+  },
+  "122821007766032083": {
+    "Prev": "7101222872264716142",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec",
+    "PlayerFaction": "",
+    "Text": "Well, it's probably no better than Crassius' old plays, which were awful. \"Dance of the Three-Legged Guar\" was quite a sight, though.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

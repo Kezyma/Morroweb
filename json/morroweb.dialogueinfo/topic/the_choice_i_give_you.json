@@ -1,0 +1,80 @@
+{
+  "196461299188713836": {
+    "Prev": "",
+    "Next": "1222775192271831727",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That is wise, %PCRace. Go now. Leave this one to me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_FakeSlave\" 70",
+      "Goodbye"
+    ]
+  },
+  "1222775192271831727": {
+    "Prev": "196461299188713836",
+    "Next": "1305721498373519320",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As you wish. The hand of the Camonna Tong will speed you to your final rest.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "StartCombat Player",
+      "Sterdecan->StartCombat Tul"
+    ]
+  },
+  "1305721498373519320": {
+    "Prev": "1222775192271831727",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The only choice. Go now, and forget about all of this. Or, die where you stand. It matters not to me.",
+    "Filters": [],
+    "Script": [
+      "Choice \"I cannot let you kill this man.\" 1 \"I do not wish to interfere.\" 2"
+    ]
+  }
+}

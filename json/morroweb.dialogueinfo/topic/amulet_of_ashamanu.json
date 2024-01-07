@@ -1,0 +1,74 @@
+{
+  "1967873241836522519": {
+    "Prev": "",
+    "Next": "145351405091549046",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "urshamusa rapli",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you again. I will use it to cure my people.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_WhiteGuar",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "145351405091549046": {
+    "Prev": "1967873241836522519",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "urshamusa rapli",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you, child. This amulet will be the salvation of my people. Take this in return. It is a shield of legend among my people, the Shield of the Undaunted. Use it, and you will feel the strength return to weary limbs. Travel well, friend.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_WhiteGuar",
+        "Value": 60.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "amulet of ashamanu (unique)",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MS_WhiteGuar",
+        "Value": 80.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_WhiteGuar\" 80",
+      "Player->RemoveItem \"amulet of ashamanu (unique)\" 1",
+      "AddItem \"amulet of ashamanu (unique)\" 1",
+      "RemoveItem \"shield of the undaunted\" 1",
+      "Player->AddItem \"shield of the undaunted\" 1"
+    ]
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "137249039912230197": {
+    "Prev": "",
+    "Next": "252811350929112745",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aurane frernis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Just what I needed! Thank you so much. Here, take this, and my gratitude. It's nice to see people will still help each other.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Gold_kanet_flower",
+        "Value": 5.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_gold_kanet_unique",
+        "Value": 5.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MS_Gold_kanet_flower",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_gold_kanet_Flower\" 100",
+      "player->removeitem \"Ingred_gold_kanet_unique\" 5",
+      "player->additem \"P_Fortify_Luck_E\" 1 ",
+      "additem \"Ingred_gold_kanet_unique\" 5",
+      "removeitem \"P_Fortify_Luck_E\" 1",
+      "ModDisposition 10"
+    ]
+  },
+  "252811350929112745": {
+    "Prev": "137249039912230197",
+    "Next": "2443819301647512680",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aurane frernis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I must find some Roland's Tear soon.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_Gold_kanet_flower",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "2443819301647512680": {
+    "Prev": "252811350929112745",
+    "Next": "191357945195430247",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aurane frernis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hmpf! You lot are just rude! Fine. I will have to go get it myself. But if I ruin this outfit, I'm blaming you!!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "191357945195430247": {
+    "Prev": "2443819301647512680",
+    "Next": "932425122266223858",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aurane frernis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Wonderful! Now, I may be wrong, but I think the ruins are east of here. Or was that west. No, no...east. And a bit to the north. Well, it's not very far at any rate. Near the water. I'll mark it on your map. Look to the eastern edge of the ruins. Now hurry, please. Oh, and be careful, I hear there are dangers near. Remember, I don't need regular gold kanet, only the Roland's Tear variety.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_Gold_Kanet_flower\" 5",
+      "ModDisposition 10",
+      "ShowMap \"Ald Sotha\""
+    ]
+  },
+  "932425122266223858": {
+    "Prev": "191357945195430247",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aurane frernis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The flower I need is called Roland's Tear, and it has magical powers greater than the ordinary gold kanet. It grows in the Daedric ruins near Vivec. I'd be grateful if you could go fetch five of the flowers for me.  Mind you, it's one particular type. The others won't do. If you could do this little favor for me I will make you something rare and wonderful from the ingredients left over.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MS_Gold_kanet_flower",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MS_Gold_kanet_flower 1",
+      "choice \"I have better things to do.\" 3 \"As long as you make it worth my while.\" 2"
+    ]
+  }
+}

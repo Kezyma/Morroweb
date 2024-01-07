@@ -1,0 +1,214 @@
+{
+  "167861857297358695": {
+    "Prev": "",
+    "Next": "2293026742673046",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vodunius nuccius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you. You're a life-saver. I'll grab the next boat out of here. Thanks again. And I hope your luck here is better than mine was.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_Nuccius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MS_Nuccius 100",
+      "player->additem Nuccius_Ring 1",
+      "player->removeitem gold_001 100",
+      "removeitem Nuccius_Ring 1"
+    ]
+  },
+  "2293026742673046": {
+    "Prev": "167861857297358695",
+    "Next": "1953998041836738",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vodunius nuccius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I understand. I'm broke, too. Well, if you come into some gold, think of me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_Nuccius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "1953998041836738": {
+    "Prev": "2293026742673046",
+    "Next": "5211249121351425077",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vodunius nuccius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I understand. If you change your mind, come see me again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_Nuccius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "5211249121351425077": {
+    "Prev": "1953998041836738",
+    "Next": "5054101151312129195",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vodunius nuccius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Not happy here? In fact, no, I'm not. If I had 100 drakes, I'd be on the next boat to Narsis. I came here to make my fortune, and all I've got is this cursed ring. Say. Would you give me 100 drakes for it? The ring itself is worth more than that, but the enchantment is cursed, and no one will buy it from me. It has a nifty little enchantment that fortifies your running. Problem is, it sucks the blood right out of you every time you use it. Please? You'll be doing me a real favor.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_Nuccius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "Gold_001",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Choice \"I don't have 100 drakes.\" 2 \"Not interested.\" 3"
+    ]
+  },
+  "5054101151312129195": {
+    "Prev": "5211249121351425077",
+    "Next": "98057901253811951",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vodunius nuccius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Not happy here? In fact, no, I'm not. If I had 100 drakes, I'd be on the next boat to Narsis. I came here to make my fortune, and all I've got is this cursed ring. Say. Would you give me 100 drakes for it? The ring itself is worth more than that, but the enchantment is cursed, and no one will buy it from me. It has a nifty little enchantment that helps you run faster. Problem is, it sucks the blood right out of you every time you use it. Please? You'll be doing me a real favor.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_Nuccius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Choice \"Here's 100 drakes. Give me the ring.\" 1 \"Not interested.\" 3"
+    ]
+  },
+  "98057901253811951": {
+    "Prev": "5054101151312129195",
+    "Next": "3242524371711819461",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "darvame hleran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh. Yes. He steers business my way, and I do him a little favor now and then. Poor fellow. I don't think he's happy here in Morrowind.",
+    "Filters": [],
+    "Script": [
+      "Journal MS_Nuccius 1"
+    ]
+  },
+  "3242524371711819461": {
+    "Prev": "98057901253811951",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vodunius nuccius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Right. That's me. If you decide to take the silt strider, tell Darvame Hleran I sent you.",
+    "Filters": [],
+    "Script": []
+  }
+}

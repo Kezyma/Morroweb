@@ -1,0 +1,92 @@
+{
+  "14496281543190528927": {
+    "Prev": "",
+    "Next": "1740610969133214148",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlormar wine-sot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then let's show this witch the way to her grave together!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_AbusedHealer\" 60",
+      "\"sosia caristiana\"->ModDisposition -50",
+      "\"sosia caristiana\"->SetFight 100"
+    ]
+  },
+  "1740610969133214148": {
+    "Prev": "14496281543190528927",
+    "Next": "19953314722543224383",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlormar wine-sot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then you will die alongside her!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_AbusedHealer\" 70",
+      "ModDisposition -50",
+      "SetFight 100",
+      "\"sosia caristiana\"->AiFollow Player 0 0 0 0 0",
+      "\"sosia caristiana\"->ModDisposition 25"
+    ]
+  },
+  "19953314722543224383": {
+    "Prev": "1740610969133214148",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlormar wine-sot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's right, they're all damn lies!  Is that a doubting look I see in your eye, friend?  Whose side are you on here?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_AbusedHealer",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"I'll side with you.\" 4 \"I believe Sosia.\" 5"
+    ]
+  }
+}

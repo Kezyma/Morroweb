@@ -1,0 +1,68 @@
+{
+  "133019111834417025": {
+    "Prev": "",
+    "Next": "2330831989973316120",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nelos onmar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Until I am with her again, I'll keep it close to my heart. Now, go! She must get that letter!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_VictimRomance",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "2330831989973316120": {
+    "Prev": "133019111834417025",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nelos onmar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have what? How...odd. She was a lovely young woman, but what would she want with a rogue like me? She is beautiful, though, and seemed sweet. For the first time in my life, I actually felt a little remorse for robbing someone. I should see her again. Here, take this. Tell her you have a note from Nelos. I must see her again. I won't forget this, friend.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_VictimRomance",
+        "Value": 40.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "extravagant_glove_left_maur",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_VictimRomance\" 60",
+      "Player->RemoveItem \"Extravagant_Glove_Left_Maur\" 1",
+      "AddItem \"Extravagant_Glove_Left_Maur\" 1",
+      "RemoveItem \"bk_NoteFromNelos\" 1",
+      "Player->AddItem \"bk_NoteFromNelos\" 1",
+      "AddTopic \"note from Nelos\""
+    ]
+  }
+}

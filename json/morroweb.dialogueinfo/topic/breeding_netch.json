@@ -1,0 +1,305 @@
+{
+  "59682519779821359": {
+    "Prev": "",
+    "Next": "293922180226815405",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "radd hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled, but maybe you can join the Imperial Legion again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "293922180226815405": {
+    "Prev": "59682519779821359",
+    "Next": "119758412530128345",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "radd hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already killed the Netch, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_GiantNetch",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "119758412530128345": {
+    "Prev": "293922180226815405",
+    "Next": "2511519096284397713",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "radd hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So the Netch are dead? Good work, %PCName.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "netch_betty_ilgn",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "netch_bull_ilgn",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_GiantNetch",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal IL_GiantNetch 100",
+      "ModPCFacRep 5 \"Imperial Legion\"",
+      "ModDisposition 10"
+    ]
+  },
+  "2511519096284397713": {
+    "Prev": "119758412530128345",
+    "Next": "72442945887047665",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "radd hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Like I said, there's a pair of breeding netch north of Gnaar Mok. Kill them before they wander back into town again and report back to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Damsel",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal IL_GiantNetch 10"
+    ]
+  },
+  "72442945887047665": {
+    "Prev": "2511519096284397713",
+    "Next": "1027117107191497899",
+    "Type": "Topic",
+    "Disposition": 80,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "wadarkhu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The netch just north of here are dead? Good. You saved %Name lots of trouble.",
+    "Filters": [],
+    "Script": []
+  },
+  "1027117107191497899": {
+    "Prev": "72442945887047665",
+    "Next": "4259291711256432531",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "wadarkhu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The netch just north of here are dead? Good. You saved %Name lots of trouble.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "netch_betty_ilgn",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "netch_bull_ilgn",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition 10"
+    ]
+  },
+  "4259291711256432531": {
+    "Prev": "1027117107191497899",
+    "Next": "3008711591170028426",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "wadarkhu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "%Name's ship was attacked. Kill them if you can.",
+    "Filters": [],
+    "Script": []
+  },
+  "3008711591170028426": {
+    "Prev": "4259291711256432531",
+    "Next": "807588932701718628",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Gnaar Mok",
+    "PlayerFaction": "",
+    "Text": "I'm so glad you killed them.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "netch_bull_ilgn",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "netch_betty_ilgn",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "807588932701718628": {
+    "Prev": "3008711591170028426",
+    "Next": "5775116511097732620",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Gnaar Mok",
+    "PlayerFaction": "",
+    "Text": "You're the one who killed them? Netch are valuable, but they're too dangerous to let them roam free. Thank you.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "netch_bull_ilgn",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "netch_betty_ilgn",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "moddisposition 5"
+    ]
+  },
+  "5775116511097732620": {
+    "Prev": "807588932701718628",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Gnaar Mok",
+    "PlayerFaction": "",
+    "Text": "That's right. There's a pair of them that wander about north of here. They've come near the town a few times. We drove them off, but I'm sure they'll be back unless someone does something.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

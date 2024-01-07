@@ -1,0 +1,139 @@
+{
+  "122994073048420261": {
+    "Prev": "28422561038584505",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You will find it west of here. I will mark it on your map.",
+    "Filters": [],
+    "Script": [
+      "ShowMap \"Falensarano\""
+    ]
+  },
+  "1693428742262414990": {
+    "Prev": "",
+    "Next": "2445025905398211113",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Whenever you're ready....",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "2445025905398211113": {
+    "Prev": "1693428742262414990",
+    "Next": "577412582176066263",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then off you go....",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "index_master",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "PlaySound \"Thunder2\"",
+      "Player->PositionCell, 410 898 -496 270, \"Falensarano, Propylon Chamber\"",
+      "goodbye"
+    ]
+  },
+  "577412582176066263": {
+    "Prev": "2445025905398211113",
+    "Next": "28422561038584505",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Unless you have a master index, I can't send you to Falensarano.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "28422561038584505": {
+    "Prev": "577412582176066263",
+    "Next": "122994073048420261",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you ready to travel to Falensarano?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Master_Index",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, send me to Falensarano.\" 1 \"Not yet.\" 2"
+    ]
+  }
+}

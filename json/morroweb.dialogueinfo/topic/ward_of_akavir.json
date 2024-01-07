@@ -1,0 +1,68 @@
+{
+  "31285127991350025129": {
+    "Prev": "",
+    "Next": "19412254743241727913",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "chargen captain",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have found it! After these many years, at last this ancient emblem of the Legions' honor is restored. Here is your reward of 3000 gold, with my thanks, and your valor shall be noted in my dispatches to the Imperial City. Safe travels, my friend.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "ms_firemoth",
+        "Value": 100.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "Ward of Akavir",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal ms_firemoth 100",
+      "Moddisposition 50",
+      "Player->additem \"gold_001\" 3000",
+      "Player->removeitem \"ward of akavir\" 1",
+      "Additem \"ward of akavir\" 1",
+      "Player->ModReputation 2"
+    ]
+  },
+  "19412254743241727913": {
+    "Prev": "31285127991350025129",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "chargen captain",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's an enchanted shield made from the skin of a dragon. The Legions hold this priceless artifact in high regard. It must be retrieved from Firemoth Fort if we are to preserve our honor.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "ms_firemoth",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  }
+}

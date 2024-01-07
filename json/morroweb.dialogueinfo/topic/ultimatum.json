@@ -1,0 +1,218 @@
+{
+  "2324150982201312199": {
+    "Prev": "",
+    "Next": "18930200502889324767",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled. Make amends and perhaps we will speak of this again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "18930200502889324767": {
+    "Prev": "2324150982201312199",
+    "Next": "285768169240878903",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Carecalmo is dead. There is nothing more to discuss.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_DB_Carecalmo",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "285768169240878903": {
+    "Prev": "18930200502889324767",
+    "Next": "33926928773419321",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have already cleansed Ashalmimilka of the Mehrunes Dagon cultists? Then a private war against the Dark Brotherhood and their allies in the cult of Mehrunes Dagon is our fate.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "carecalmo",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MT_DB_Carecalmo",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_DB_Darys",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MT_DB_Carecalmo 100",
+      "ModPCFacRep 5 \"Morag Tong\""
+    ]
+  },
+  "33926928773419321": {
+    "Prev": "285768169240878903",
+    "Next": "284828058757813668",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So Carecalmo refused to speak with you. Very well. We shall crush the Dark Brotherhood and their allies in the cult of Mehrunes Dagon. Take these 1000 drakes for the execution of Carecalmo.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "carecalmo",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal MT_DB_Carecalmo 100",
+      "Player->AddItem Gold_001 1000",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition 10"
+    ]
+  },
+  "284828058757813668": {
+    "Prev": "33926928773419321",
+    "Next": "1893215430663610941",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So Carecalmo refused to speak with you. Very well. We shall crush the Dark Brotherhood and their allies in the cult of Mehrunes Dagon. Take these 1000 drakes for the execution of Carecalmo.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_DB_Carecalmo",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal MT_DB_Carecalmo 100",
+      "Player->AddItem Gold_001 1000",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition 10"
+    ]
+  },
+  "1893215430663610941": {
+    "Prev": "284828058757813668",
+    "Next": "2408482173113921420",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Carecalmo can be found in Ashalmimilkala. When you speak to him, give him this ultimatum: Stop protecting the Dark Brotherhood or the Morag Tong will declare private war on all cultists of Mehrunes Dagon.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_DB_Darys",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MT_DB_Carecalmo 10",
+      "\"carecalmo\"->SetFight 30"
+    ]
+  },
+  "2408482173113921420": {
+    "Prev": "1893215430663610941",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "carecalmo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "YOU offer ME an ultimatum? No servant of Mephala can command me!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_DB_Carecalmo",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal MT_DB_Carecalmo 50",
+      "SetFight 100",
+      "Goodbye"
+    ]
+  }
+}

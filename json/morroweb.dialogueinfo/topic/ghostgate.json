@@ -1,0 +1,769 @@
+{
+  "7535323601775530403": {
+    "Prev": "",
+    "Next": "89619130211014407",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "wulf",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for taking my old lucky coin with you. I hope it brings you luck in Dagoth Ur.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC30_Imperial_veteran",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "89619130211014407": {
+    "Prev": "7535323601775530403",
+    "Next": "55751640100522301",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "wulf",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's very kind of you. Here's the coin. I've had it with me a long time, and it's always brought me luck. But I have no more use for it, and I'd like to pass it on to somebody younger. Somebody going places I can't go anymore. Your generation's shaper of history... an engine of destiny. That coin will bring you luck on the mountain. I promise. 'For Emperor and Empire,' as we say in the legions. Go with Kynareth.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "player->additem \"lucky_coin\" 1",
+      "Journal IC30_Imperial_veteran 1",
+      "player->addspell luck_of_the_emperor"
+    ]
+  },
+  "55751640100522301": {
+    "Prev": "89619130211014407",
+    "Next": "152821974433545033",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "wulf",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You're a suspicious sort. But maybe I can't blame you. Worried about a request from a strange old man in a strange place like this. Well, I won't press you. But I would sure be grateful for the favor, if you could see your way to changing your mind.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "152821974433545033": {
+    "Prev": "55751640100522301",
+    "Next": "1411310541799015643",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "wulf",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What a piece of luck! Look. I'm an old Legion veteran, as old as the poor old Emperor, bless his soul. I'm too old for campaigning. I came this far to look at hell. But I can't go any farther than this. I'd take it kindly if you'd carry this old lucky coin with you when you go to Dagoth Ur. Sort of a token of the tough young hero I used to be. Would you do that for an old man?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Choice \"I'm sorry, but my mother told me never to accept gifts from strangers.\" 3 \"I'll take your old lucky coin to Dagoth Ur with me.\" 4"
+    ]
+  },
+  "1411310541799015643": {
+    "Prev": "152821974433545033",
+    "Next": "8366295712082413670",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "wulf",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Suit yourself. I don't know why you'd bother to keep anything a secret here. I was just wondering if you might be headed inside the Ghostfence to Dagoth Ur.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "8366295712082413670": {
+    "Prev": "1411310541799015643",
+    "Next": "2626117175692425578",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "wulf",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This is a helluva place. Why are you here?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Perhaps I should keep my business here secret.\" 1 \"I am the Nerevarine, and I go to confront Dagoth Ur in his citadel.\" 2"
+    ]
+  },
+  "2626117175692425578": {
+    "Prev": "8366295712082413670",
+    "Next": "98508021598210761",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "viatrix petilia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Shrine at Ghostgate is a symbol of Almsivi's indomitable will and power. It is located within the Ghostfence. We'll pass through the Ghostgate and head northeast. Here, I'll mark Ghostgate on your map.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "MV_RichPilgrim",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_RichPilgrim",
+        "Value": 95.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "C3_DestroyDagoth",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "ShowMap Ghostgate"
+    ]
+  },
+  "98508021598210761": {
+    "Prev": "2626117175692425578",
+    "Next": "27061203462405631632",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "viatrix petilia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Shrine at Ghostgate is a symbol of Almsivi's indomitable will and power. Something you wouldn't understand. It is located within the Ghostfence. We'll pass through the Ghostgate and head northeast. Here, I'll mark Ghostgate on your map, so even an idiot can't get lost.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "MV_RichPilgrim",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_RichPilgrim",
+        "Value": 95.0
+      }
+    ],
+    "Script": [
+      "ShowMap Ghostgate"
+    ]
+  },
+  "27061203462405631632": {
+    "Prev": "98508021598210761",
+    "Next": "177404662621411356",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Ashlanders",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ghostgate is a great warrior's fort of the settled people. But you killed the Devil, Nerevarine. Maybe they will abandon the fort, like all the ancient strongholds.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "C3_DestroyDagoth",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "ShowMap Ghostgate"
+    ]
+  },
+  "177404662621411356": {
+    "Prev": "27061203462405631632",
+    "Next": "30621223841090319701",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Ashlanders",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ghostgate is a great warrior's fort of the settled people. It blocks the only hole in the magic wall that keeps Dagoth Ur and his evil trapped inside. These warriors serve false gods, but they are brave fighters.",
+    "Filters": [],
+    "Script": [
+      "ShowMap Ghostgate"
+    ]
+  },
+  "30621223841090319701": {
+    "Prev": "177404662621411356",
+    "Next": "7699289213174031515",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Ordinator",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I hope they maintain Ghostgate as a stronghold for the Ordinators and the Buoyant Armigers, and as a hostel for pilgrims. You know, Nerevarine, in years to come, they will make pilgrimages to Ghostgate and Red Mountain. We won't forget what you've done.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "C3_DestroyDagoth",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "ShowMap Ghostgate"
+    ]
+  },
+  "7699289213174031515": {
+    "Prev": "30621223841090319701",
+    "Next": "2003465172665322982",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Buoyant Armiger",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I hope they maintain Ghostgate as a stronghold for the Ordinators and the Buoyant Armigers, and as a hostel for pilgrims. You know, Nerevarine, in years to come, they will make pilgrimages to Ghostgate and Red Mountain. We won't forget what you've done.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "C3_DestroyDagoth",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "ShowMap Ghostgate"
+    ]
+  },
+  "2003465172665322982": {
+    "Prev": "7699289213174031515",
+    "Next": "128701751226129810",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Praise Almsivi! The Blight is gone, and the Devil Dagoth Ur is vanquished! Praise the Nerevarine! Bless you for delivering our people, and may Ghostgate stand forever as a monument to our victory.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "C3_DestroyDagoth",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "128701751226129810": {
+    "Prev": "2003465172665322982",
+    "Next": "4979140451658731096",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Priest Service",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ghostgate is garrisoned by the Ordinators and the Buoyant Armigers, and House Redoran maintains a hostel for pilgrims.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "4979140451658731096": {
+    "Prev": "128701751226129810",
+    "Next": "9943231312191816485",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Priest",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ghostgate is garrisoned by the Ordinators and the Buoyant Armigers, and House Redoran maintains a hostel for pilgrims.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "9943231312191816485": {
+    "Prev": "4979140451658731096",
+    "Next": "18559235791607614577",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Buoyant Armiger",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ghostgate is garrisoned by the Ordinators and the Buoyant Armigers, and House Redoran maintains a hostel for pilgrims.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "18559235791607614577": {
+    "Prev": "9943231312191816485",
+    "Next": "164592607010787908",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Ordinator",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ghostgate is garrisoned by the Ordinators and the Buoyant Armigers, and House Redoran maintains a hostel for pilgrims.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "164592607010787908": {
+    "Prev": "18559235791607614577",
+    "Next": "5720237012028631433",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Priest Service",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ghostgate is a stronghold that guards the only passage through the Ghostfence and into the blighted region of Red Mountain.",
+    "Filters": [],
+    "Script": [
+      "ShowMap Ghostgate"
+    ]
+  },
+  "5720237012028631433": {
+    "Prev": "164592607010787908",
+    "Next": "59522588670032230",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Priest",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ghostgate is a stronghold that guards the only passage through the Ghostfence and into the blighted region of Red Mountain.",
+    "Filters": [],
+    "Script": [
+      "ShowMap Ghostgate"
+    ]
+  },
+  "59522588670032230": {
+    "Prev": "5720237012028631433",
+    "Next": "1414362521980415573",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Buoyant Armiger",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ghostgate is a stronghold that guards the only passage through the Ghostfence and into the blighted region of Red Mountain.",
+    "Filters": [],
+    "Script": [
+      "ShowMap Ghostgate"
+    ]
+  },
+  "1414362521980415573": {
+    "Prev": "59522588670032230",
+    "Next": "213581728523616536",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Ordinator",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ghostgate is a stronghold that guards the only passage through the Ghostfence and into the blighted region of Red Mountain.",
+    "Filters": [],
+    "Script": [
+      "ShowMap Ghostgate"
+    ]
+  },
+  "213581728523616536": {
+    "Prev": "1414362521980415573",
+    "Next": "890437393252331801",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ghostgate",
+    "PlayerFaction": "",
+    "Text": "I hope they maintain Ghostgate as a stronghold for the Ordinators and the Buoyant Armigers, and as a hostel for pilgrims. You know, Nerevarine, in years to come, they will make pilgrimages here, and to Red Mountain. We won't forget what you've done.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "C3_DestroyDagoth",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "ShowMap Ghostgate"
+    ]
+  },
+  "890437393252331801": {
+    "Prev": "213581728523616536",
+    "Next": "309473091451012429",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ghostgate",
+    "PlayerFaction": "",
+    "Text": "For centuries Ordinators and Buoyant Armigers led by the Tribunal would passed through Ghostgate on annual raids against Dagoth Ur's ash vampire kin, but these raids were suspended because of heavy losses to the Temple forces.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 25.0
+      }
+    ],
+    "Script": [
+      "ShowMap Ghostgate"
+    ]
+  },
+  "309473091451012429": {
+    "Prev": "890437393252331801",
+    "Next": "4354159581991817441",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ghostgate",
+    "PlayerFaction": "",
+    "Text": "Ghostgate is garrisoned by the Ordinators and the Buoyant Armigers, and House Redoran maintains a hostel for pilgrims.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "ShowMap Ghostgate"
+    ]
+  },
+  "4354159581991817441": {
+    "Prev": "309473091451012429",
+    "Next": "891321951124373338",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ghostgate",
+    "PlayerFaction": "",
+    "Text": "Ghostgate is a stronghold that guards the only passage through the Ghostfence and into the blighted region of Red Mountain.",
+    "Filters": [],
+    "Script": [
+      "ShowMap Ghostgate"
+    ]
+  },
+  "891321951124373338": {
+    "Prev": "4354159581991817441",
+    "Next": "2382110661175539928",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Savant",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ghostgate was built as the gate citadel of the Ghostfence Ordinator and Buoyant Armiger garrisons. Now, since you've slain Dagoth Ur and banished the Blight, perhaps they should maintain the garrisons as a tribute to Almsivi and you, and all those who died to save Morrowind.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "C3_DestroyDagoth",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "ShowMap Ghostgate"
+    ]
+  },
+  "2382110661175539928": {
+    "Prev": "891321951124373338",
+    "Next": "84501946716224076",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Savant",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ghostgate is the gate citadel of the Ghostfence Ordinator and Buoyant Armiger garrisons. Ghostgate sits astride the only gap through which the monstrous hosts of Dagoth Ur might emerge from Red Mountain to threaten the rest of Morrowind. The Ghostfence itself is a colossal magical artifact that completely encircles Red Mountain and prevents the Blight from spilling its corruption across the rest of Vvardenfell.",
+    "Filters": [],
+    "Script": [
+      "ShowMap Ghostgate"
+    ]
+  },
+  "84501946716224076": {
+    "Prev": "2382110661175539928",
+    "Next": "21398155651429213465",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Scout",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Balmora",
+    "PlayerFaction": "",
+    "Text": "Now that Dagoth Ur is dead, and the Blight ended, I wonder if they'll maintain a garrison at Ghostgate. Or will it become a deserted ruin, like the old Dunmer strongholds. Only time will tell, Moon-and-Star.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "C3_DestroyDagoth",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "ShowMap Ghostgate"
+    ]
+  },
+  "21398155651429213465": {
+    "Prev": "84501946716224076",
+    "Next": "2926220644226323748",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Scout",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Balmora",
+    "PlayerFaction": "",
+    "Text": "Ghostgate is the stronghold on the south slope of Red Mountain that guards the only passage through the Ghostfence and into the blighted region of Red Mountain.",
+    "Filters": [],
+    "Script": [
+      "ShowMap Ghostgate"
+    ]
+  },
+  "2926220644226323748": {
+    "Prev": "21398155651429213465",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ghostgate guards the only passage through the Ghostfence and into the blighted region of Red Mountain.",
+    "Filters": [],
+    "Script": [
+      "ShowMap Ghostgate"
+    ]
+  }
+}

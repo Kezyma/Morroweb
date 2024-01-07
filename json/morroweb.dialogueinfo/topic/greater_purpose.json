@@ -1,0 +1,138 @@
+{
+  "3023911526304823908": {
+    "Prev": "",
+    "Next": "13242227302027229064",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "draugr_aesliip",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. Let us now destroy these daedra.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Draugr",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "13242227302027229064": {
+    "Prev": "3023911526304823908",
+    "Next": "29842256181166017895",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "draugr_aesliip",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As you wish. My death will only mean the death of these people, the Skaal. Your death means only that I will live on in this hell. You have made a poor choice.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Draugr",
+        "Value": 65.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Draugr 75",
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "29842256181166017895": {
+    "Prev": "13242227302027229064",
+    "Next": "17076290772015220859",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "draugr_aesliip",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This is wise. I will lower the barrier that keeps the demons at bay. You and I will be victorious, as the lives of all those above are forfeit if we are not.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Draugr",
+        "Value": 65.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Draugr 70",
+      "AiFollow Player 0 0 0 0 0 0"
+    ]
+  },
+  "17076290772015220859": {
+    "Prev": "29842256181166017895",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "draugr_aesliip",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Fight with me, %PCRace. Together we might vanquish these creatures, send them back to their unholy plane. I will lower the barrier, and we will cleanse the land of this scourge.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Draugr",
+        "Value": 62.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Draugr",
+        "Value": 67.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Draugr 67",
+      "Choice \"Let us destroy these creatures together.\" 1 \"I am honor-bound to end your life.\" 2"
+    ]
+  }
+}

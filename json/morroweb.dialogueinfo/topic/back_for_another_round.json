@@ -1,0 +1,182 @@
+{
+  "24466270221780819366": {
+    "Prev": "",
+    "Next": "26212118821994920994",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "holmar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What?  *hiccup*  Well, I'm not one to turn down a drink. Barkeep! *hiccup* gimme two more sujamma's! Now! I like one in each hand.  *gulp gulp gulp*  Ah... that hits the ssssspot..... *hiccup* [Holmar downs his drinks. He grins broadly. His eyes struggle to focus. He sways gently, like a tree in the wind....]",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "holmar->SetFatigue 0",
+      "high_pockets->AiWander, 128, 0, 0, 60, 60",
+      "StartScript HolmarCellCheck",
+      "player->RemoveItem Gold_001 60",
+      "Journal \"MS_HolyElf\" 130",
+      "Goodbye"
+    ]
+  },
+  "26212118821994920994": {
+    "Prev": "24466270221780819366",
+    "Next": "12896295041438815105",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "holmar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You can't afford my appetite, outlander. *hiccup*",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "12896295041438815105": {
+    "Prev": "26212118821994920994",
+    "Next": "1699126956327204753",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "holmar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, *hiccup* aren't you the uppity one. All right, have at. *hiccup*",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "holmar->StartCombat player",
+      "Goodbye"
+    ]
+  },
+  "1699126956327204753": {
+    "Prev": "12896295041438815105",
+    "Next": "128328401263457758",
+    "Type": "Topic",
+    "Disposition": 75,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "holmar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "*hiccup* Well, I guess that my pockets are starting to *hiccup* run a bit dry. And Wood Elf tossing *hiccup* just isn't as much fun when you're *hiccup* broke. I'll leave... but only because *hiccup* I love you so much, %PCRace. *hiccup*.  Um, okay.  *hiccup*.  I'll be out of here soon.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_HolyElf\" 150",
+      "high_pockets->AiWander, 128, 0, 0, 60, 60",
+      "StartScript HolmarCellCheck",
+      "Goodbye"
+    ]
+  },
+  "128328401263457758": {
+    "Prev": "1699126956327204753",
+    "Next": "126391760623911880",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "holmar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Not with that wee little beastie person peering at me with those big round eyes of his. *hiccup* He's putting a hex on me, I know it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "126391760623911880": {
+    "Prev": "128328401263457758",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "holmar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Once not enough, you squat, *hiccup* dumpy treefrog of an elf? I'll take on you and your ugly *hiccup* %PCRace friend too.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_HolyElf",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Choice \"Holmar, you're obviously drunk. Why don't you head out and sober up?\" 1 \"Time to pick on someone your own size, Holmar. Like me.\" 2 \"Hello Holmar, can I buy you some drinks?\" 3"
+    ]
+  }
+}

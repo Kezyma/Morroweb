@@ -1,0 +1,336 @@
+{
+  "211722135213915999": {
+    "Prev": "",
+    "Next": "12598372729412186",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlormar wine-sot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will have my axe, cur!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_AbusedHealer",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "12598372729412186": {
+    "Prev": "211722135213915999",
+    "Next": "971224391425227064",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlormar wine-sot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm not sure how you got your hands on it again, but I'll have that axe back now!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_AbusedHealer",
+        "Value": 85.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "cloudcleaver_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 0 0 0",
+      "ModDisposition -100",
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "971224391425227064": {
+    "Prev": "12598372729412186",
+    "Next": "307149423293015607",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlormar wine-sot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is good to have my axe in my hands again!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_AbusedHealer",
+        "Value": 85.0
+      }
+    ],
+    "Script": []
+  },
+  "307149423293015607": {
+    "Prev": "971224391425227064",
+    "Next": "9126137691851022437",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlormar wine-sot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That is a poor, poor decision on your part, friend.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 7.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 0 0 0",
+      "Journal \"MV_AbusedHealer\" 80",
+      "ModDisposition -100",
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "9126137691851022437": {
+    "Prev": "307149423293015607",
+    "Next": "17661150863116919945",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlormar wine-sot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah, thank you friend. I noticed you admiring the way I fought that old witch, even without the aid of a sharp blade. I don't have any money or treasure to thank you for your help with, but I can give you a few pointers that will help you be stronger in a fight.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem \"cloudcleaver_unique\" 1",
+      "AddItem \"cloudcleaver_unique\" 1",
+      "Player->ModStrength 2",
+      "AiWander 0,0,60,30,10,0,0,0,0,0,0",
+      "MessageBox \"Your Strength has increased by 2.\"",
+      "Journal \"MV_abusedhealer\" 85"
+    ]
+  },
+  "17661150863116919945": {
+    "Prev": "9126137691851022437",
+    "Next": "30762243651249824115",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlormar wine-sot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, let me hold her in my hands. Ah, my pretty, I've missed you so....",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "sosia caristiana",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "cloudcleaver_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Here's your axe, Hlormar.\" 6 \"It belongs with a true warrior. Me.\" 7"
+    ]
+  },
+  "30762243651249824115": {
+    "Prev": "17661150863116919945",
+    "Next": "80832147577017222",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlormar wine-sot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, let me hold her in my hands. Ah, my pretty, I've missed you so....",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "cloudcleaver_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Here's your axe, Hlormar.\" 6 \"It belongs with a true warrior. Me.\" 7"
+    ]
+  },
+  "80832147577017222": {
+    "Prev": "30762243651249824115",
+    "Next": "117453099256346415",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlormar wine-sot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah, me axe Cloudcleaver. A fine blade she is, though now I fear what that witch's touch will do to it. Me own father Balmir used it himself to slay the Terror of Wrothgar's Quagmire, he did. Now granted the Terror turned out to be a new born nix-hound eating the neighbor's marshmerrow, but me father found him and slew him nevertheless in as grand a fashion as I have ever borne witness to. I cannot wait to have the blade in my hands again, then I'll use it to take that witch's head clean off, I will.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_AbusedHealer",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "117453099256346415": {
+    "Prev": "80832147577017222",
+    "Next": "75769062165320288",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlormar wine-sot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A fine axe it is. Perhaps the best ever crafted.",
+    "Filters": [],
+    "Script": []
+  },
+  "75769062165320288": {
+    "Prev": "117453099256346415",
+    "Next": "58882709432450534",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sosia caristiana",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hlormar's obsession with that axe led to his death. I'll leave it with someone who can use it well. I thank you for your help stranger. I think that hothead would've killed me had you not intervened. Here, take these potions as my gift to you, and seek me out if you ever require my services in the future.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_AbusedHealer",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_AbusedHealer\" 75",
+      "player->additem \"P_Restore_Health_E\" 1",
+      "player->additem \"P_Restore_Fatigue_Q\" 1",
+      "player->additem \"P_Fortify_Health_Q\" 1",
+      "removeitem \"P_Restore_Health_E\" 1",
+      "removeitem \"P_Restore_Fatigue_Q\" 1",
+      "removeitem \"P_Fortify_Health_Q\" 1"
+    ]
+  },
+  "58882709432450534": {
+    "Prev": "75769062165320288",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sosia caristiana",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, I don't think he's ready to get it back quite yet. I can still see the rage burning in those tiny Nord eyes of his. However, if he meets me in three days at the Mage's Guild Hall in Caldera I will return everything I have of his, but not a minute sooner. Tell him that is Sosia's offer.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_AbusedHealer",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_AbusedHealer",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_AbusedHealer\" 50",
+      "AddTopic \"Sosia's offer\""
+    ]
+  }
+}

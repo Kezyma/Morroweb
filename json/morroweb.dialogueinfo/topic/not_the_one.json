@@ -1,0 +1,58 @@
+{
+  "1709015987100515242": {
+    "Prev": "",
+    "Next": "254753852702421420",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ghost_npc_peakstar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have failed. I was not the one.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Peakstar",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "254753852702421420": {
+    "Prev": "1709015987100515242",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ghost_npc_peakstar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am a failed Incarnate. So are all these who remain here with me in the Cavern of the Incarnate. I survived the blight, but I fell in battle with an Ash Vampire. I could not master the arts of war. Nor could I learn the ways of the Great Houses. They would not have accepted me as Hortator. Take these few poor things... they are of no use to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "player->additem peakstar_belt_unique 1",
+      "player->additem peakstar_pants_unique 1",
+      "Journal \"A2_6_Peakstar\" 100"
+    ]
+  }
+}

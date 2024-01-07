@@ -1,0 +1,120 @@
+{
+  "1440921321192784393": {
+    "Prev": "",
+    "Next": "2736952351712016287",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "We now both have the title of Arch-Mage.",
+    "Filters": [],
+    "Script": []
+  },
+  "2736952351712016287": {
+    "Prev": "1440921321192784393",
+    "Next": "36622168230729808",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Meet me in the Arena.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Guildmaster",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "36622168230729808": {
+    "Prev": "2736952351712016287",
+    "Next": "341679941149929157",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well. Meet me in the Arena here in Vivec. We will settle this once and for all.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MG_Guildmaster 50"
+    ]
+  },
+  "341679941149929157": {
+    "Prev": "36622168230729808",
+    "Next": "30086127161063612895",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then you will always be known as %PCName the %PCRank.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "30086127161063612895": {
+    "Prev": "341679941149929157",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I have seen how you lust after the power and prestige that only I have as the Guildmaster here in Vvardenfell. If you truly think that you can take my place, meet me in the Arena for a duel to the death.",
+    "Filters": [],
+    "Script": [
+      "Choice \"I will meet you in the Arena.\" 1 \"Nevemind.\" 2"
+    ]
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "1939529397376618848": {
+    "Prev": "",
+    "Next": "1543524373184712036",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "louis beauchamp",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh.  Oh...I see.  Well, um, yes...well.  If you change your mind...that is, if you reconsider my offer...please...please come back and we'll talk...you know, I'll...well.   Right....",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Airship",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"BM_Airship\" 30"
+    ]
+  },
+  "1543524373184712036": {
+    "Prev": "1939529397376618848",
+    "Next": "12795611575879682",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "louis beauchamp",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh...well...that's fine.  I understand...I....  Wait.  %PCName, did you say you would help me?  Why that's...that's...splen...I mean...oh, wonderful!  As I said, the airship is...was...headed north, to Solstheim....  The Amulet of Infectious Charm is...well, it's supposed to be at...that is, in...Hrothmund's Barrow.  At the eye of the beast...the wolf, I mean.  But you must...must say the wolf's name!  To enter!  Say, \"Ondjage.\"  Answer wrong, and the barrow will be sealed...forever!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Airship",
+        "Value": 20.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"BM_Airship\" 40"
+    ]
+  },
+  "12795611575879682": {
+    "Prev": "1543524373184712036",
+    "Next": "14433148062632914682",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "louis beauchamp",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Did they fly off course?  Or maybe...maybe they found the amulet, and...and flew away!  To meet women!  No fair maiden could resist a man with the...the Amulet of Infectious Charm...in an airship, no less!  Say...%PCName.... I...I don't suppose you're...well...for hire?  I would...pay you...greatly...to find my airship.  I'd need proof of what happened to it, of course!  Evidence, as it were...just...just to be sure.  And...of course...to bring me the...the amulet!  I NEED that amulet.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Airship",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Airship",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Journal \"BM_Airship\" 20",
+      "Choice \"No, Louis, I can't help you.  I have other matters to attend to.\" 1 \"You have a deal, Louis.  I'll head to Solstheim.  I'll bring back some evidence that shows what happened to your airship, and recover the Amulet of Infectious Charm.\" 2"
+    ]
+  },
+  "14433148062632914682": {
+    "Prev": "12795611575879682",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "louis beauchamp",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I...I suppose I should have...well, you know...gone myself.  But all that...flying, and cold weather and...well, maybe danger!  That's what I...what I get for trying to do...you know, hire...someone else to do the job...well, expedition, really....",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Airship",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  }
+}

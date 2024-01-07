@@ -1,0 +1,435 @@
+{
+  "931788811806312369": {
+    "Prev": "",
+    "Next": "4734280592558516829",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Habasi hears you broke our agreement. Habasi does not want to speak with you now.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "4734280592558516829": {
+    "Prev": "931788811806312369",
+    "Next": "12144246372326032157",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There is no more to say about this.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BalmoraDefenses",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "12144246372326032157": {
+    "Prev": "4734280592558516829",
+    "Next": "2923615262219576824",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hecerinde will help us secure the South Wall.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BalmoraDefenses",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2923615262219576824": {
+    "Prev": "12144246372326032157",
+    "Next": "929928635506023643",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hecerinde is the master of security? And you killed him? What were you thinking, %PCRank? Habasi is very displeased. There are no more jobs for you from Habasi.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "hecerinde",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BalmoraDefenses",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal TG_BalmoraDefenses 110",
+      "ModPCFacRep -5 \"Thieves Guild\"",
+      "ModDisposition -20"
+    ]
+  },
+  "929928635506023643": {
+    "Prev": "2923615262219576824",
+    "Next": "916227728199305439",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hecerinde is the master of security? And he will help us? This is good, Habasi thinks. It will not be long before the Sjoring Hard-Heart and the Camonna Tong make another move against us. You have been of good service, %PCRank. If there is any gold on your head for crimes others believe you did, Habasi will have it fixed.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BalmoraDefenses",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal TG_BalmoraDefenses 100",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 10",
+      "SetPCCrimeLevel 0",
+      "PayFineThief"
+    ]
+  },
+  "916227728199305439": {
+    "Prev": "929928635506023643",
+    "Next": "238301920417512447",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "You say you may have already killed the master of security? Habasi does not understand what you are doing. This is bad. There are no more jobs from Habasi.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_BalmoraDefenses",
+        "Value": 5.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "hecerinde",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TG_BalmoraDefenses 110"
+    ]
+  },
+  "238301920417512447": {
+    "Prev": "916227728199305439",
+    "Next": "87892486730416324",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "The master of security is an Altmer here in town. That is all Habasi knows.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_BalmoraDefenses",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Journal TG_BalmoraDefenses 10",
+      "AddTopic \"Altmer\""
+    ]
+  },
+  "87892486730416324": {
+    "Prev": "238301920417512447",
+    "Next": "16080186281673027193",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "culumaire",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I never go there. It's a dirty place, visited only by thieves and swindlers.",
+    "Filters": [],
+    "Script": []
+  },
+  "16080186281673027193": {
+    "Prev": "87892486730416324",
+    "Next": "239447392288875141",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Mage",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Balmora",
+    "PlayerFaction": "",
+    "Text": "Ask someone else. I do not care about such petty matters.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "239447392288875141": {
+    "Prev": "16080186281673027193",
+    "Next": "14491371188418521",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imare",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Secure the South Wall? What are you talking about, %PCRace?",
+    "Filters": [],
+    "Script": []
+  },
+  "14491371188418521": {
+    "Prev": "239447392288875141",
+    "Next": "4461197381408928682",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nalcarya of white haven",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I doubt they would care if someone stole their watered-down, inferior wines. My own shop's security needs are far more important. I've had all sorts of things stolen from me in this den of thieves.",
+    "Filters": [],
+    "Script": []
+  },
+  "4461197381408928682": {
+    "Prev": "14491371188418521",
+    "Next": "55322541014636609",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tyermaillin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Clearly you have confused me with someone else. I don't care about that infested hole-in-the-wall.",
+    "Filters": [],
+    "Script": []
+  },
+  "55322541014636609": {
+    "Prev": "4461197381408928682",
+    "Next": "6526210061533224512",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hecerinde",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As I said, I will help secure the South Wall. Have Sugar-Lips speak to me to arrange the petty details.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BalmoraDefenses",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "6526210061533224512": {
+    "Prev": "55322541014636609",
+    "Next": "964732811306020441",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hecerinde",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I must admit I've been negligent towards the Guild. I will certainly help you secure the South Wall. Tell Sugar-Lips that I am at her service.",
+    "Filters": [],
+    "Script": [
+      "Journal TG_BalmoraDefenses 50"
+    ]
+  },
+  "964732811306020441": {
+    "Prev": "6526210061533224512",
+    "Next": "1231518482963922943",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Balmora, South Wall Cornerclub",
+    "PlayerFaction": "",
+    "Text": "Yes, this the South Wall.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "nolore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1231518482963922943": {
+    "Prev": "964732811306020441",
+    "Next": "31493116962731018960",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Balmora, Council Club",
+    "PlayerFaction": "",
+    "Text": "That's where the Thieves Guild scum hang out.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "nolore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "31493116962731018960": {
+    "Prev": "1231518482963922943",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Balmora",
+    "PlayerFaction": "",
+    "Text": "South Wall is a working class cornerclub in Balmora, east of Odai River, on the south end of Labor Street, owned by Bacola Closcius.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "nolore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

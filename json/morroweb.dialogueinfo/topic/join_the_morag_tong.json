@@ -1,0 +1,649 @@
+{
+  "634827443204810172": {
+    "Prev": "",
+    "Next": "1709420591376330367",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You belong to us already, %PCRank %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritOran",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1709420591376330367": {
+    "Prev": "634827443204810172",
+    "Next": "825911412645628441",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Feruren Oran is dead? Then welcome %PCName, to the Morag Tong. Any Master of the Morag Tong can tell you what writs are available and weather you are a candidate for advancement. When you have proven yourself, I will have special duties for you.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "feruren oran",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritOran",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal MT_WritOran 100",
+      "StartScript TopicsWebspinner"
+    ]
+  },
+  "825911412645628441": {
+    "Prev": "1709420591376330367",
+    "Next": "205646955323927419",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have given you the authority to act in the name of the Morag Tong. You are charged with the honorable execution of Feruren Oran. Succeed and join us. Fail and die.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritOran",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "205646955323927419": {
+    "Prev": "825911412645628441",
+    "Next": "115679232096729505",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will let you join as a probationer. To gain full membership, you must pass a test. Here is a writ for the honorable execution of Feruren Oran. You can find him in the Elven Nations Cornerclub, which is in the Hlaalu Plaza. Slay him honorably and report to me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MT_WritOran 10",
+      "\"Feruren Oran\"->Enable",
+      "Player->AddItem writ_oran 1",
+      "PCJoinFaction \"Morag Tong\""
+    ]
+  },
+  "115679232096729505": {
+    "Prev": "205646955323927419",
+    "Next": "11868113203021324799",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Morag Tong executes writs and performs special duties as the ruling houses direct. Guild members never harm or steal from any brother or sister - regardless of rank. Never betray our secrets or our identities. If you break any of these rules, you must immediately speak with a Master to regain your good standing or you may be targeted for execution. Do you feel you can succeed within these guidelines?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "choice \"Yes. I wish to bring honor to the Guild.\" 1 \"No. I don't want any part of this.\" 4"
+    ]
+  },
+  "11868113203021324799": {
+    "Prev": "115679232096729505",
+    "Next": "23163320921639027638",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You were unwise to have contacted me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "23163320921639027638": {
+    "Prev": "11868113203021324799",
+    "Next": "1020270021195132426",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Morag Tong has been watching you, and we are pleased. One of your exceptional talent cannot go unmastered. Join us.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "RankRequirement",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, I will join.\" 1 \"What do you stand for?\" 2"
+    ]
+  },
+  "1020270021195132426": {
+    "Prev": "23163320921639027638",
+    "Next": "1377788052495522935",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Your skills are weak and your discipline is untempered. Still, you have found me, so perhaps I will let you ask again when you have something to offer.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "1377788052495522935": {
+    "Prev": "1020270021195132426",
+    "Next": "1672228472121934760",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "movis darys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will speak with Eno Hlaalu if you let me live. Your move, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_DB_Darys",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1672228472121934760": {
+    "Prev": "1377788052495522935",
+    "Next": "287139661462023013",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "movis darys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you know, then it is over... I swore an oath to the Dark Brotherhood, but I have learned that their ways not as honorable as the Morag Tong. All I can promise is that I will speak with Eno Hlaalu. If that is enough, report to him. If not, I will test your skill. Take this belt as a sign of my good faith.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MT_DB_Darys 50",
+      "RemoveItem \"sanguinebeltdenial\" 1",
+      "Player->AddItem \"sanguinebeltdenial\" 1"
+    ]
+  },
+  "287139661462023013": {
+    "Prev": "1672228472121934760",
+    "Next": "275917676943623769",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "movis darys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Had me worried there. Must be a mistake, eh?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "275917676943623769": {
+    "Prev": "287139661462023013",
+    "Next": "24705735860428828",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "movis darys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Morag Tong? But I'm just a simple peasant. What do I know about killing and all that?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MT_DB_Darys",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"We know who you are. If you do not join, I will give you an honorable death.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "24705735860428828": {
+    "Prev": "275917676943623769",
+    "Next": "25680321111445128264",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "Vivec, Arena Hidden Area",
+    "PlayerFaction": "Morag Tong",
+    "Text": "You are already one of us, brother %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "25680321111445128264": {
+    "Prev": "24705735860428828",
+    "Next": "176203207021511884",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "Vivec, Arena Hidden Area",
+    "PlayerFaction": "Morag Tong",
+    "Text": "You are already one of us, sister %PCName.",
+    "Filters": [],
+    "Script": []
+  },
+  "176203207021511884": {
+    "Prev": "25680321111445128264",
+    "Next": "2799159172401615208",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "Vivec, Arena Hidden Area",
+    "PlayerFaction": "",
+    "Text": "So you have found our headquarters. This speaks well of you. Perhaps you should speak with Grandmaster Eno Hlaalu.",
+    "Filters": [],
+    "Script": []
+  },
+  "2799159172401615208": {
+    "Prev": "176203207021511884",
+    "Next": "6058107993067310164",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "huleeya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, you may be worthy. Your first test is to find Grandmaster Eno Hlaalu. By tradition he lives in the secret tunnels under the Arena here in Vivec. Only the Grandmaster can allow foreigners like us to join.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcReputation",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_7HuleeyaInformant",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "6058107993067310164": {
+    "Prev": "2799159172401615208",
+    "Next": "1158419943357823083",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "huleeya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Perhaps, but I do not believe you are ready.",
+    "Filters": [],
+    "Script": []
+  },
+  "1158419943357823083": {
+    "Prev": "6058107993067310164",
+    "Next": "835710542790813512",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "Vivec",
+    "PlayerFaction": "",
+    "Text": "By tradition, the Grandmaster of the Morag Tong lives in the Arena Canton here in Vivec.",
+    "Filters": [],
+    "Script": []
+  },
+  "835710542790813512": {
+    "Prev": "1158419943357823083",
+    "Next": "1844510294212178407",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Agent",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec",
+    "PlayerFaction": "",
+    "Text": "I have heard the Morag Tong stays in secret tunnels somewhere under the Arena, but I do not know how one might join.",
+    "Filters": [],
+    "Script": []
+  },
+  "1844510294212178407": {
+    "Prev": "835710542790813512",
+    "Next": "182625339176210112",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Assassin",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec",
+    "PlayerFaction": "",
+    "Text": "Grandmaster Eno Hlaalu may be found in the Arena Canton here in Vivec.",
+    "Filters": [],
+    "Script": []
+  },
+  "182625339176210112": {
+    "Prev": "1844510294212178407",
+    "Next": "1299818518383812323",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Savant",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec",
+    "PlayerFaction": "",
+    "Text": "I believe the current Grandmaster is Eno Hlaalu. I have heard rumors that the Morag Tong has a base somewhere under the Arena here in Vivec.",
+    "Filters": [],
+    "Script": []
+  },
+  "1299818518383812323": {
+    "Prev": "182625339176210112",
+    "Next": "870227794202657527",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Savant Service",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec",
+    "PlayerFaction": "",
+    "Text": "I believe the current Grandmaster is Eno Hlaalu. I have heard rumors that the Morag Tong has a base somewhere under the Arena here in Vivec.",
+    "Filters": [],
+    "Script": []
+  },
+  "870227794202657527": {
+    "Prev": "1299818518383812323",
+    "Next": "1023111355124622548",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ordinator wander",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec, Arena Canalworks",
+    "PlayerFaction": "",
+    "Text": "If you seek the Morag Tong you should look in the storage area here in the Canalworks.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcReputation",
+        "Compare": "Greater",
+        "Id": "",
+        "Value": 10.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcCrimeLevel",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1023111355124622548": {
+    "Prev": "870227794202657527",
+    "Next": "246652254123626288",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ordinator wander",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec, Arena Canalworks",
+    "PlayerFaction": "",
+    "Text": "Here in Morrowind, members of the Morag Tong follow an honorable and traditional profession. I do see them from time to time at this post.",
+    "Filters": [],
+    "Script": []
+  },
+  "246652254123626288": {
+    "Prev": "1023111355124622548",
+    "Next": "20248233211637824614",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec, Arena",
+    "PlayerFaction": "",
+    "Text": "I see them from time to time, but I do not know where to find them.",
+    "Filters": [],
+    "Script": []
+  },
+  "20248233211637824614": {
+    "Prev": "246652254123626288",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you wish to join us, you must seek out Eno Hlaalu, the Grandmaster of the Morag Tong in Vivec.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

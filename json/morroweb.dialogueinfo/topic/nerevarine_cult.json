@@ -1,0 +1,451 @@
+{
+  "2555422906701421176": {
+    "Prev": "",
+    "Next": "8610183342453224014",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "huleeya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have destroyed the Devil Dagoth Ur, and ended the Blight in Morrowind. Now, I wonder, will you fulfill the other ancient prophecies of the Nerevarine? Will you drive the foreigners from the land, and restore the ancient lands and rights of the Ashlander peoples?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "C3_DestroyDagoth",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "8610183342453224014": {
+    "Prev": "2555422906701421176",
+    "Next": "678171652181916488",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "huleeya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I gave you a summary for Caius. Feel free to read it, of course.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_7HuleeyaInformant",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "678171652181916488": {
+    "Prev": "8610183342453224014",
+    "Next": "4521285731865015712",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "huleeya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "To understand the Nerevarine cult, you must understand the history of the Ashlanders. Nerevar means something very different to the Ashlanders from what he means to Dunmer of the Great Houses. You should also know about the persecution of the Nerevarine, and the legacy of the False Incarnate, for the Nerevarine cult is at the heart of the ancient conflict between the nomadic Ashlanders and the settled Great House Dunmer. Here is a summary for Caius, but ask your questions, and I'll answer in detail.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_7HuleeyaInformant",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem, \"bk_A1_7_HuleeyaInformant\", 1",
+      "Journal, \"A1_7HuleeyaInformant\", 50"
+    ]
+  },
+  "4521285731865015712": {
+    "Prev": "678171652181916488",
+    "Next": "27284517228114283",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": 5,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Legion",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So how does it feel to have a cult worshipping you, %PCName?",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "nolore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "C3_DestroyDagoth",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "27284517228114283": {
+    "Prev": "4521285731865015712",
+    "Next": "2256261611595218084",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": 5,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Legion",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "An Ashlander religious cult called the Nerevarine cult believes prophecies of a reincarnation of the ancient Dunmer hero Nerevar who will come to cast down the false gods of the Tribunal Temple, and drive all outlanders from Morrowind. The cult is outlawed by the Temple and the Empire.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "nolore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2256261611595218084": {
+    "Prev": "27284517228114283",
+    "Next": "64511245481011284",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hassour zainsubani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I suspect the Nerevarine cult will continue to look for the other prophesied blessings. Will you drive the foreigners from Morrowind, I wonder. And renew the ancient promises of the Dunmer to honor the lands and ancient rights of the Ashlanders?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "C3_DestroyDagoth",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "64511245481011284": {
+    "Prev": "2256261611595218084",
+    "Next": "1481620928894511200",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hassour zainsubani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "They worship the Great Ashkhan and Hortator, Nerevar Moon-and-Star, who in ages past destroyed the evil, godless dwarves and banished the treacherous Dagoth Ur and his foul hosts beneath Red Mountain. The cult is of small consequence in Ashlander worship, and only among the Urshilaku do its followers have any influence. Others Ashlanders tribes share the sentiments of the cult, but regard the Nerevarine prophecies with suspicion and skepticism.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_11_ZainsubaniInformant",
+        "Value": 31.0
+      }
+    ],
+    "Script": []
+  },
+  "1481620928894511200": {
+    "Prev": "64511245481011284",
+    "Next": "2878618358233196267",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hassour zainsubani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That is not a subject for idle conversation.",
+    "Filters": [],
+    "Script": []
+  },
+  "2878618358233196267": {
+    "Prev": "1481620928894511200",
+    "Next": "2248623544292614292",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mehra milo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is strange, %PCName. Now that you have fulfilled the Nerevarine prophecies, will there continue to be a Nerevarine cult? I wonder -- are there other Nerevarine prophecies? We must search the libraries at Holamayan.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "C3_DestroyDagoth",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2248623544292614292": {
+    "Prev": "2878618358233196267",
+    "Next": "5662240352721728034",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mehra milo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As I said, the Dissident priests have a book called 'Progress of Truth' which gives their views on the beliefs of the Nerevarine cult.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_10_MehraMilo",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "5662240352721728034": {
+    "Prev": "2248623544292614292",
+    "Next": "68816306670122859",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mehra milo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Temple worships Nerevar as a saint and hero, but prophecies of his reincarnation are punished as wicked heresy. The Nerevarine cult claims the Tribunal are false gods, hence the Temple's persecution of the Nerevarine cult. A group called the Dissident Priests disputes Temple doctrine on the Nerevarine prophecies. The proscribed book 'Progress of Truth' describes their beliefs. Get a copy of 'Progress of Truth' for Caius Cosades. That will tell him things he needs to know about the Nerevarine cult.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_V_VivecInformants",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal, \"A1_10_MehraMilo\", 50",
+      "modDisposition 10"
+    ]
+  },
+  "68816306670122859": {
+    "Prev": "5662240352721728034",
+    "Next": "23175310173091111047",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sharn gra-muzgob",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Now YOU are the expert on the Nerevarine cult, eh, Nerevarine?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "C3_DestroyDagoth",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "23175310173091111047": {
+    "Prev": "68816306670122859",
+    "Next": "2436419953283993854",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sharn gra-muzgob",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I gave you a copy of my notes for Caius. Read them.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_4_MuzgobInformant",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "2436419953283993854": {
+    "Prev": "23175310173091111047",
+    "Next": "2294319044234813059",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sharn gra-muzgob",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This Ashlander cult believes the long-dead hero Nerevar will be reborn to honor ancient promises to the tribes. According to legend, the prophesied Nerevarine will cast down the false gods of the Tribunal Temple, restore the traditional ancestor worship practiced by the Ashlanders, and drive all outlanders from Morrowind. Both Temple and Empire outlaw the cult, but it persists among the Ashlanders, who care little for Imperial or Temple law. Here. Take this copy of my notes on the topic for Caius.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_4_MuzgobInformant",
+        "Value": 15.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem, \"bk_A1_4_SharnsNotes\", 1",
+      "Journal, \"A1_4_MuzgobInformant\", 20"
+    ]
+  },
+  "2294319044234813059": {
+    "Prev": "2436419953283993854",
+    "Next": "266167143838114101",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sharn gra-muzgob",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "When you've taken care of the errand, we can discuss the Nerevarine cult.",
+    "Filters": [],
+    "Script": []
+  },
+  "266167143838114101": {
+    "Prev": "2294319044234813059",
+    "Next": "693611116985216283",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Scout",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, %PCName, you're a hero, and people worship heroes. It must be strange, having a cult to worship you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "C3_DestroyDagoth",
+        "Value": 50.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "693611116985216283": {
+    "Prev": "266167143838114101",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Scout",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's an Ashlander cult that believes that the ancient hero Nerevar will be reborn to cast down the Temple and drive the Imperials out of Morrowind.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "146942566425513340": {
+    "Prev": "",
+    "Next": "2090914198831011425",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "manirai",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. I have given you the Seizing, an enchanted token of the Erabenimsun, that all may know that we have named you Nerevarine and Champion.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B4_KillWarLovers",
+        "Value": 55.0
+      }
+    ],
+    "Script": []
+  },
+  "2090914198831011425": {
+    "Prev": "146942566425513340",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "manirai",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here. Take this enchanted token of the Erabenimsun, that all may know that we have named you Nerevarine and Champion.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B4_KillWarLovers",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal \"B4_KillWarLovers\" 55",
+      "player->additem \"Seizing\" 1",
+      "modDisposition 10"
+    ]
+  }
+}

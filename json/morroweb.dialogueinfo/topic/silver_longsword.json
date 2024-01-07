@@ -1,0 +1,130 @@
+{
+  "1123312651276024537": {
+    "Prev": "",
+    "Next": "25600147066227241",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dremora_ttpc",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I accept this sword. Thank you, %PCName. You have the grace of courtesy. You should read the inscription on the shrine to complete your pilgrimage.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TT_PuzzleCanal 50",
+      "Player->RemoveItem \"silver longsword\" 1",
+      "\"com_chest_02_puzzlecana\"->AddItem \"silver longsword\" 1"
+    ]
+  },
+  "25600147066227241": {
+    "Prev": "1123312651276024537",
+    "Next": "177882818415072153",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dremora_ttpc",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Perhaps you should read the shrine again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "177882818415072153": {
+    "Prev": "25600147066227241",
+    "Next": "298815949633225620",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dremora_ttpc",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As you see. I am unarmed. But you are brave and gallant. <sigh> Will you give me your longsword so that I may stand a chance against your might?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "silver longsword",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, take it.\" 1 \"No, nevermind.\" 2"
+    ]
+  },
+  "298815949633225620": {
+    "Prev": "177882818415072153",
+    "Next": "1967785902196119714",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dremora_ttpc",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I remember you, %PCName. You have already given me a silver longsword.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_PuzzleCanal",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1967785902196119714": {
+    "Prev": "298815949633225620",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dremora_ttpc",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can only accept plain silver longswords. I didn't make the rules.",
+    "Filters": [],
+    "Script": []
+  }
+}

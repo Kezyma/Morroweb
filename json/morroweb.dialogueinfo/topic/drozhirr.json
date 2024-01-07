@@ -1,0 +1,75 @@
+{
+  "105752034716668514": {
+    "Prev": "",
+    "Next": "218691749250224775",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Caldera",
+    "PlayerFaction": "",
+    "Text": "I've heard of him. Rumor has it he's holed up somewhere around town with his band of thugs. They say he's in some caves to the east of town, on the other side of the hills. I'd just as soon avoid him, myself.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "MV_BanditVictim",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "aeta wave-breaker",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "218691749250224775": {
+    "Prev": "105752034716668514",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aeta wave-breaker",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, that scoundrel. He's got my family heirlooms, and I want them back.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "MV_BanditVictim",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_BanditVictim",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  }
+}

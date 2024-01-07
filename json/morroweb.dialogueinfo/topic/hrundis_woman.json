@@ -1,0 +1,355 @@
+{
+  "1130346229495343": {
+    "Prev": "",
+    "Next": "2843072841406729539",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled, %PCName. Make amends and speak with me again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2843072841406729539": {
+    "Prev": "1130346229495343",
+    "Next": "955617456775519810",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hrundi agreed to join our cause.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_Hostage",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "955617456775519810": {
+    "Prev": "2843072841406729539",
+    "Next": "127375835222129100",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Did you talk him into joining? Good. We're making progress, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_Hostage",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal TG_Hostage 100",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "127375835222129100": {
+    "Prev": "955617456775519810",
+    "Next": "1837714222687411127",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Like Percius Mercius said, Hrundi has a Dunmer lover. If you can find out who she is, you can pressure Hrundi to join our cause. You can find Hrundi in the Sadrith Mora Fighters Guild. I'm sure you can find out something by asking around town.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "hrundi",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TG_Hostage 10"
+    ]
+  },
+  "1837714222687411127": {
+    "Prev": "127375835222129100",
+    "Next": "10084190842059030079",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've told you I would join your cause. Let us not speak of this again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_Hostage",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "10084190842059030079": {
+    "Prev": "1837714222687411127",
+    "Next": "7011129042709226964",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already know my secret. What is it you'd have me do?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_Hostage",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "7011129042709226964": {
+    "Prev": "10084190842059030079",
+    "Next": "166145571103822333",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You dare to speak this way to me? Leave me!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_Hostage",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TG_Hostage",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "166145571103822333": {
+    "Prev": "7011129042709226964",
+    "Next": "209515294163129824",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falena hlaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already know. Hrundi and I are lovers. When he saves up enough money, we're going to move far, far away from here.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_Hostage",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "209515294163129824": {
+    "Prev": "166145571103822333",
+    "Next": "2944023478249629569",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falena hlaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't work for Sjoring Hard-Heart, do you? Okay, then, I'll admit it. Hrundi and I are lovers.",
+    "Filters": [],
+    "Script": [
+      "Journal TG_Hostage 60"
+    ]
+  },
+  "2944023478249629569": {
+    "Prev": "209515294163129824",
+    "Next": "26864221308038710",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falena hlaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You're asking the wrong girl. Leave me alone. There's nothing going on between Hrundi and me.",
+    "Filters": [],
+    "Script": []
+  },
+  "26864221308038710": {
+    "Prev": "2944023478249629569",
+    "Next": "148633229812427759",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Sadrith Mora, Fara's Hole in the Wall",
+    "PlayerFaction": "",
+    "Text": "Hrundi comes here as often as he can to see Falena Hlaren.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_Hostage",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TG_Hostage",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal TG_Hostage 60"
+    ]
+  },
+  "148633229812427759": {
+    "Prev": "26864221308038710",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Sadrith Mora",
+    "PlayerFaction": "",
+    "Text": "I don't know, but Hrundi usually hangs out at Fara's Hole in the Wall.",
+    "Filters": [
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "nartise arobar",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_Hostage",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TG_Hostage",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  }
+}

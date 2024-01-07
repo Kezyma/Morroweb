@@ -1,0 +1,134 @@
+{
+  "26623107281961725336": {
+    "Prev": "",
+    "Next": "69438808559732229",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fathasa llethri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will not have my son becoming one of your kind.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampRich",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "69438808559732229": {
+    "Prev": "26623107281961725336",
+    "Next": "287729144134582816",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fathasa llethri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? I should have expected as much. Leave here, vampire. Leave my family alone.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampRich\" 40"
+    ]
+  },
+  "287729144134582816": {
+    "Prev": "69438808559732229",
+    "Next": "1456843831407910377",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fathasa llethri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You will? Interesting. I wish you luck in your attempt, dark one. Maybe your words can succeed where mine could not. You will find my son here in the house, just a few rooms away from here. Unless you show him that vampires are not as strong as he believes them to be, I fear for his life. Find a way to show him this, vampire.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampRich\" 30"
+    ]
+  },
+  "1456843831407910377": {
+    "Prev": "287729144134582816",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fathasa llethri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I assumed you had heard the talk about town. Well, there's no harm in telling you now. He wishes to join you in your undead existence. He thinks this will give him the power and respect accorded him. Foolish boy. Maybe you can work with me, vampire. Show my son that your kind is not all-powerful. Convince him you have weaknesses. I have treasures even one of your kind must covet.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampRich\" 20",
+      "Choice \"I will attempt to convince your son.\" 1 \"It is no business of mine.\" 2"
+    ]
+  }
+}

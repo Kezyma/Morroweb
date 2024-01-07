@@ -1,0 +1,488 @@
+{
+  "9733230931942120215": {
+    "Prev": "",
+    "Next": "2021634584321478",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Alcedonia Amnis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The matter's been settled; don't waste any more thought on it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_7",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "2021634584321478": {
+    "Prev": "9733230931942120215",
+    "Next": "2553182661751311862",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Alcedonia Amnis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Was that really necessary? Now I'll have to mop the floor, and it still probably won't get the stains out...",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_7",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "2553182661751311862": {
+    "Prev": "2021634584321478",
+    "Next": "254687784154554429",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Alcedonia Amnis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So he's going to knock it off, huh? Good. But he's still not getting any more drinks from me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_7",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "254687784154554429": {
+    "Prev": "2553182661751311862",
+    "Next": "266941581293182298",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Alcedonia Amnis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I cut him off a while ago, but he hasn't calmed down. Something's got to be done; it's ruining what little business I have.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_7",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "266941581293182298": {
+    "Prev": "254687784154554429",
+    "Next": "2403636022325222352",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you again for dealing with him.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_7",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "2403636022325222352": {
+    "Prev": "266941581293182298",
+    "Next": "1561685130538251",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He's dead? This is not at all what I wanted... I realize you had to defend yourself, but I had hoped this could be resolved peacefully. What's done is done, I suppose. At least the matter is settled.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_7",
+        "Value": 70.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal CO_7 90",
+      "Set ColonyState to 11",
+      "ModPCFacRep 6 \"East Empire Company\""
+    ]
+  },
+  "1561685130538251": {
+    "Prev": "2403636022325222352",
+    "Next": "16852285991568521853",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you, %PCName. It would've been easy to kill him, and it would have been in your right to do so. You've shown great compassion, and I wish to reward that.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_7",
+        "Value": 60.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->additem \"gold_001\" 1500",
+      "Journal CO_7 80",
+      "ModPCFacRep 12 \"East Empire Company\"",
+      "Set ColonyState to 11"
+    ]
+  },
+  "16852285991568521853": {
+    "Prev": "1561685130538251",
+    "Next": "28657123871584410883",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you figured out what's going on with him, %PCName?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_7",
+        "Value": 10.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "28657123871584410883": {
+    "Prev": "16852285991568521853",
+    "Next": "983333062796423119",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't know what's gotten into him. Word is that he's been trying to fight anyone who walks into the bar. This just isn't like him at all. Find out what's going on, and see if you can settle him down, all right %PCName? He's probably still in there.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal CO_7 10"
+    ]
+  },
+  "983333062796423119": {
+    "Prev": "28657123871584410883",
+    "Next": "163207604672914768",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, yes. You've already settled the matter. Focus on your current assignment, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_7",
+        "Value": 100.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "163207604672914768": {
+    "Prev": "983333062796423119",
+    "Next": "303031471878116613",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Dead, eh? Well. Can't say I care much. In fact, it might serve as a good lesson to the rest of the miners. Good job, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_7",
+        "Value": 70.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal CO_7 110",
+      "player->additem \"gold_001\" 2000",
+      "ModPCFacRep 10 \"East Empire Company\"",
+      "Set ColonyState to 11"
+    ]
+  },
+  "303031471878116613": {
+    "Prev": "163207604672914768",
+    "Next": "29796309321902731817",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He's been taken care of? Good. I have no use for those that can't just focus on their work. In fact, perhaps I'll have him thrown out of the colony for this. That'll certainly send a message, won't it? No matter. It's good to know I can trust you to take care of things, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_7",
+        "Value": 60.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal CO_7 100",
+      "player->additem \"gold_001\" 2000",
+      "ModPCFacRep 10 \"East Empire Company\"",
+      "Set ColonyState to 11"
+    ]
+  },
+  "29796309321902731817": {
+    "Prev": "303031471878116613",
+    "Next": "23982545136408845",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Has the problem been resolved? I need the miners focused on their work, not on some loony old man.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_7",
+        "Value": 30.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "23982545136408845": {
+    "Prev": "29796309321902731817",
+    "Next": "1522024500924426079",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't know the whole story, nor do I care to. He's causing problems, and is disrupting business. Make sure he stops causing problems, understand? He's at the bar. Go take care of it.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "1522024500924426079": {
+    "Prev": "23982545136408845",
+    "Next": "371825717381027286",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dralora Favelnim",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "How could you do that to him?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_7",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "371825717381027286": {
+    "Prev": "1522024500924426079",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dralora Favelnim",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My husband is a good man, and wouldn't hurt anyone on purpose.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_7",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  }
+}

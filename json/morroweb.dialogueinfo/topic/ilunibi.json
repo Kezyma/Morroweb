@@ -1,0 +1,119 @@
+{
+  "224505250272879331": {
+    "Prev": "",
+    "Next": "54083088479877367",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Gnaar Mok",
+    "PlayerFaction": "",
+    "Text": "Ilunibi Caverns. That's what they call the old sea cave up on the north end of the island, right on Khartag Point. Don't poke around in there. It's a convenient smuggler's hole, and they might not welcome visitors.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcSneak",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 30.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Khartag Point\""
+    ]
+  },
+  "54083088479877367": {
+    "Prev": "224505250272879331",
+    "Next": "20013219441605812658",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Gnaar Mok",
+    "PlayerFaction": "",
+    "Text": "Ilunibi Caverns. That's what they call the old sea cave up on the north end of the island, right on Khartag Point. Don't be poking your nose in there. Someone might object.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Khartag Point\""
+    ]
+  },
+  "20013219441605812658": {
+    "Prev": "54083088479877367",
+    "Next": "1590419473271298631",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Scout",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Gnaar Mok",
+    "PlayerFaction": "",
+    "Text": "There's an old sea cave nearby, called Ilunibi Caverns, up on the north end of the island, right on Khartag Point. Nothing but rats and slaughterfish. Sometimes smugglers and outlaws use it for a hide-out, but it's wet and nasty, and not real comfortable.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Khartag Point\""
+    ]
+  },
+  "1590419473271298631": {
+    "Prev": "20013219441605812658",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raesa pullia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's what the dead trooper called the sea caverns where he found the Sixth House base. It's not on our maps, and no one here has heard of it. Maybe the locals in Gnaar Mok can tell you where to find it. Or you may have to search for it yourself.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_2_6thHouse",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  }
+}

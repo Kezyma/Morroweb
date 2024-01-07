@@ -1,0 +1,167 @@
+{
+  "24430312222773930489": {
+    "Prev": "",
+    "Next": "1043787231339532219",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can't talk to you about this until you make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1043787231339532219": {
+    "Prev": "24430312222773930489",
+    "Next": "1857689260431831",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already brought me a Grandmaster's Retort.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_GrandmasterRetort",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1857689260431831": {
+    "Prev": "1043787231339532219",
+    "Next": "801518214237073056",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, even I can see this is a fine retort. Our customer should be quite satisfied. And here's some gold to satisfy you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_GrandmasterRetort 100",
+      "Player->RemoveItem Apparatus_G_Retort_01 1",
+      "Player->AddItem \"gold_001\" 200",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "801518214237073056": {
+    "Prev": "1857689260431831",
+    "Next": "2696042752400413985",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Keep looking, then. You'll find one eventually. Like I said, Berwen in Tel Mora might still have one.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "2696042752400413985": {
+    "Prev": "801518214237073056",
+    "Next": "27370208421296421915",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So have you found a Grandmaster's Retort yet?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "apparatus_g_retort_01",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_GrandmasterRetort",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is\" 1 \"No, not yet\" 2"
+    ]
+  },
+  "27370208421296421915": {
+    "Prev": "2696042752400413985",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "They're not usually for sale, and when they are, they're a bit too pricey for most people. I've heard that Berwen the Trader in Tel Mora is selling one, but you can get it for a \"special discount,\" if you're careful. There may be a few others here and there. Bring me any Grandmaster's Retort, and I'll pay you well for it.",
+    "Filters": [],
+    "Script": [
+      "Journal TG_GrandmasterRetort 10"
+    ]
+  }
+}

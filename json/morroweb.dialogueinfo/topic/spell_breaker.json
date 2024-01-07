@@ -1,0 +1,324 @@
+{
+  "156044058427417824": {
+    "Prev": "",
+    "Next": "22356163842721019050",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mastrius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is a shield of immense power, known for its resistance to even the most arcane magic. I have heard it lies in Bthuand, a Dwemer ruin north of here. The former owner now lies there as well, unable to control it's enchantments.",
+    "Filters": [],
+    "Script": [
+      "Journal \"VA_VampCurse\" 55"
+    ]
+  },
+  "22356163842721019050": {
+    "Prev": "156044058427417824",
+    "Next": "2565020123127955397",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What?  How is it that you have this?  This was part of the museum's collection!  GUARDS!",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "spellbreaker",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "spell_breaker_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "SetPCCrimeLevel 100000",
+      "Set PCThief to 1",
+      "Goodbye"
+    ]
+  },
+  "2565020123127955397": {
+    "Prev": "22356163842721019050",
+    "Next": "2575816023434916",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, we do thank you for selling it to the Museum.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "spellbreaker",
+        "Value": 2.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "spell_breaker_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2575816023434916": {
+    "Prev": "2565020123127955397",
+    "Next": "7411251422061528740",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So be it.  Should you change your mind, you know where to find me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "7411251422061528740": {
+    "Prev": "2575816023434916",
+    "Next": "1544112589268919606",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "spell_breaker_unique",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"spell_breaker_unique\" 1",
+      "set MuseumDonations to MuseumDonations + 1",
+      "set spellbreaker to 2",
+      "\"spell_breaker_unique_x\"->Enable",
+      "moddisposition 5"
+    ]
+  },
+  "1544112589268919606": {
+    "Prev": "7411251422061528740",
+    "Next": "28548300551487621743",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't have Spell Breaker with you? Then come back with it, and we'll settle the deal.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "spell_breaker_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "28548300551487621743": {
+    "Prev": "1544112589268919606",
+    "Next": "223752499985296945",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "spell_breaker_unique",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"spell_breaker_unique\" 1",
+      "player->additem \"gold_001\" 30000",
+      "set spellbreaker to 2",
+      "\"spell_breaker_unique_x\"->Enable"
+    ]
+  },
+  "223752499985296945": {
+    "Prev": "28548300551487621743",
+    "Next": "144398162662511070",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't have Spell Breaker with you? Then come back with it, and we'll settle the deal.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "spell_breaker_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "144398162662511070": {
+    "Prev": "223752499985296945",
+    "Next": "8460317492075730605",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A wonderful shield, and very resistant to magicka, from what I understand.  May we add this to our collection? I can offer you 30000 gold in exchange for it.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "spellbreaker",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_Blade",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Sell the item.\" 1 \"Keep the item.\" 2 \"Donate the item.\" 3"
+    ]
+  },
+  "8460317492075730605": {
+    "Prev": "144398162662511070",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A wonderful shield, and very resistant to magicka, from what I understand.  May we add this to our collection? I can offer you 30000 gold in exchange for it.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "spellbreaker",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Sell the item.\" 1 \"Keep the item.\" 2"
+    ]
+  }
+}

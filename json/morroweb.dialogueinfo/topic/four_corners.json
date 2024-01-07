@@ -1,0 +1,339 @@
+{
+  "2743498352267021944": {
+    "Prev": "",
+    "Next": "887648753083728254",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tholer saryoni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have killed one of the Ashlander tribal leaders. You are not the type of person we want in the Temple.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B8_Failed_Nerevarine",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "887648753083728254": {
+    "Prev": "2743498352267021944",
+    "Next": "180838129185352721",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tholer saryoni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are no longer a member of the Temple. I have nothing more to say to you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "ExpTemple",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "180838129185352721": {
+    "Prev": "887648753083728254",
+    "Next": "21848128161506332405",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tholer saryoni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled from the Temple. If you cannot obey our simple rules, you will never advance far in the Temple.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "21848128161506332405": {
+    "Prev": "180838129185352721",
+    "Next": "153057154607530173",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tholer saryoni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have heard that you claim to be the Incarnate. This is a serious matter. Before we discuss this, let me pray and meditate on the validity of these rumors.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B8_MeetVivec",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "153057154607530173": {
+    "Prev": "21848128161506332405",
+    "Next": "2546119801253129125",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "tholer saryoni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "You already made these pilgrimages, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_DagonFel",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_AldSotha",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_BalUr",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_AldDaedroth",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2546119801253129125": {
+    "Prev": "153057154607530173",
+    "Next": "2766468512454813770",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tholer saryoni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have finished the Pilgrimages of the Four Corners of the House of Troubles. I may have more duties for you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_DagonFel",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_AldSotha",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_BalUr",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_AldDaedroth",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2766468512454813770": {
+    "Prev": "2546119801253129125",
+    "Next": "3093529840607520818",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tholer saryoni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Fourth Corner of the House of Troubles is Sheogorath, the Mad Star, who threatens the Dunmer with madness. It is time to renew a pact Vivec made with Sheogorath long ago. To do so, you must find the Gambolpuddy.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_DagonFel",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_AldSotha",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_BalUr",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3093529840607520818": {
+    "Prev": "2766468512454813770",
+    "Next": "85761739158131290",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tholer saryoni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Third Corner of the House of Troubles is Molag Bal, who tries to destroy the Dunmer by corrupting our bloodlines. Bal Ur is known as the Birthplace of Molag Bal where the Doom Drum tricked Molag Bal into becoming mortal. Vivec defeated Molag Bal here and sent him back into Oblivion. Bal Ur is just north of Suran, but to get there easily, you will need a way to levitate over the mountains.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_DagonFel",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_AldSotha",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal TT_BalUr 10",
+      "ShowMap \"Bal Ur\""
+    ]
+  },
+  "85761739158131290": {
+    "Prev": "3093529840607520818",
+    "Next": "17387101471785030673",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tholer saryoni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Second Corner of the House of Troubles is Mehrunes Dagon, the Daedra of Destruction who represents the trials the Dunmer face in the lands of Morrowind. At Ald Sotha, the daedric ruins northeast of Vivec City, Vivec rescued Sotha Sil, the only survivor of the minor House Sotha, from the armies of Mehrunes Dagon. Fight your way to the statue of Mehrunes Dagon and recite Vivec's \"Four Corners of the House of Troubles.\"",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_DagonFel",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal TT_AldSotha 10",
+      "ShowMap \"Ald Sotha\""
+    ]
+  },
+  "17387101471785030673": {
+    "Prev": "85761739158131290",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tholer saryoni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The First Corner of the House of Troubles is Malacath, the Daedric patron of the Orcs who tests the Dunmer for weakness. There is a shrine to Malacath on Sheogorad, southwest of Dagon Fel. Head south past the Dwemer ruins and take the second road to the west. Look for the shrine to the north. Take four Daedra hearts to the shrine. When you donate the hearts at the shrine, recite Vivec's \"Four Corners of the House of Troubles.\"",
+    "Filters": [],
+    "Script": [
+      "Journal TT_DagonFel 10"
+    ]
+  }
+}

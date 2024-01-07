@@ -1,0 +1,130 @@
+{
+  "29691247171687613591": {
+    "Prev": "",
+    "Next": "291199704243078759",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athellor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I need you to investigate Solstheim's ancient sites.  Burial barrows, standing stones, that sort of thing.  Who knows what information they hold?  Here's 200 gold for traveling expenses, equipment, or whatever else you may need.  If you find any solid evidence of the Falmer's existence, bring it back to me here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition 10",
+      "player->additem \"gold_001\" 200",
+      "Journal \"BM_Falmer\" 50"
+    ]
+  },
+  "291199704243078759": {
+    "Prev": "29691247171687613591",
+    "Next": "12999313612484813733",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athellor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, that IS disappointing.  You listened so intently to my tale, I thought for sure you'd want to help me.  Oh well.  If you change your mind, the job is open.  Unless, of course, I find another interested party.  Good day, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -20",
+      "Journal \"BM_Falmer\" 40",
+      "Goodbye"
+    ]
+  },
+  "12999313612484813733": {
+    "Prev": "291199704243078759",
+    "Next": "109292383113818899",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athellor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Listen, %PCName....  You seem an able sort. And you did listen politely to my ramblings!  Would you be interested in helping me with my research?  I need someone to do a bit of exploring and investigating. I'll pay you, of course, with some gold up front. Are you interested?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Falmer",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Falmer",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Sounds intriguing, Athellor.  What would you have me do?\" 1 \"Afraid not, Athellor.  I've got more important matters to attend to.\" 2"
+    ]
+  },
+  "109292383113818899": {
+    "Prev": "12999313612484813733",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athellor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've already hired an explorer -- you.  Now please get going.  I'm anxious to know what evidence you might find.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Falmer",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Falmer",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  }
+}

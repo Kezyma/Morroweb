@@ -1,0 +1,66 @@
+{
+  "6764105131991725236": {
+    "Prev": "",
+    "Next": "2606582081921021143",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "domalen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Right. Galuro Belan. She's an apothecary over in the Telvanni section. I don't think her business is doing to well right now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "EB_False",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_False\" 30"
+    ]
+  },
+  "2606582081921021143": {
+    "Prev": "6764105131991725236",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aurane frernis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Galuro Belan? That fetcher! I can't believe she'd do this to me! I'm reporting this to the magistrate! This is ridiculous. Thank you for your help. Here's your payment, as promised.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_False",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_False",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_False\" 60",
+      "Player->AddItem \"Gold_001\" 100"
+    ]
+  }
+}

@@ -1,0 +1,380 @@
+{
+  "19719233132606017381": {
+    "Prev": "",
+    "Next": "1307668252958912919",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've already agreed to help me, %PCName.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1307668252958912919": {
+    "Prev": "19719233132606017381",
+    "Next": "250902982322346677",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent. I am glad to have you working with me. From now on, every future assignment you are given will come from me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal CO_Choice 40",
+      "Set ColonySide to 1"
+    ]
+  },
+  "250902982322346677": {
+    "Prev": "1307668252958912919",
+    "Next": "1475227665173746596",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, then perhaps you are someone Carnius has a use for. Know now that if you choose to follow him, I will never fully be able to trust you again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "moddisposition -10"
+    ]
+  },
+  "1475227665173746596": {
+    "Prev": "250902982322346677",
+    "Next": "21654105471991116184",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You're already helping me, %PCRank. What's your point?",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "21654105471991116184": {
+    "Prev": "1475227665173746596",
+    "Next": "6443273313180924741",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A wise decision, %PCRank. I will occasionally have special requests of you; for now, see me when you are ready for your next assignment.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal CO_Choice 50",
+      "Set ColonySide to 2"
+    ]
+  },
+  "6443273313180924741": {
+    "Prev": "21654105471991116184",
+    "Next": "143441702629573336",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? You may wish to re-think that, %PCRank. And I'd certainly advise that you don't go running off to Falco. That could prove to be very bad for you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Moddisposition -10"
+    ]
+  },
+  "143441702629573336": {
+    "Prev": "6443273313180924741",
+    "Next": "1543619101927727209",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've already agreed to assist me. Focus on your current assignment.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_Choice",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1543619101927727209": {
+    "Prev": "143441702629573336",
+    "Next": "3673208881304510560",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am disappointed, though not terribly surprised. Do as you will, %PCName, but do not cross me or you will regret it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_Choice",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Moddisposition -20"
+    ]
+  },
+  "3673208881304510560": {
+    "Prev": "1543619101927727209",
+    "Next": "1198821995279888290",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you made your choice yet? I am not a patient man, and you do not want me as an enemy, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_Choice",
+        "Value": 25.0
+      }
+    ],
+    "Script": [
+      "Choice \"I'll do as you wish.\" 3 \"No.\" 4"
+    ]
+  },
+  "1198821995279888290": {
+    "Prev": "3673208881304510560",
+    "Next": "740273771187514530",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Believe me, I can make you a much better offer than Falco ever could. Don't be fooled. I will tolerate you only for as long as you are useful to me. If you perform well enough, it will be to your benefit. I think it's clear that I'm in a position to offer you a great deal more than Falco might; serve me well, and you may end up taking Falco's place. Take a little time and think it over, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_Choice",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal CO_Choice 25"
+    ]
+  },
+  "740273771187514530": {
+    "Prev": "1198821995279888290",
+    "Next": "178767544998822394",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have made your choice, I see. I had hoped we would not be at odds, but I still intend to protect this colony and its people.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_Choice",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "moddisposition -20"
+    ]
+  },
+  "178767544998822394": {
+    "Prev": "740273771187514530",
+    "Next": "13804127071074624920",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have already agreed to help me, %PCName, and I am grateful for it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_Choice",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "13804127071074624920": {
+    "Prev": "178767544998822394",
+    "Next": "14474317972410625803",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you decided to do what is right, %PCName?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_Choice",
+        "Value": 22.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes. I will help you.\" 1 \"No.\" 2"
+    ]
+  },
+  "14474317972410625803": {
+    "Prev": "13804127071074624920",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can reveal to you now that the true reason I took this position was to counter whatever schemes Carnius may have. I want to see this colony succeed, %PCName, and I believe you can help me to see that it does. I shall give you some time to think it over. Let me know when you are ready to make a choice.",
+    "Filters": [],
+    "Script": [
+      "Journal CO_Choice 22"
+    ]
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "2487228797996310828": {
+    "Prev": "517729084258077147",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Lalatia Varian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The ancient Dunmer stronghold of Rotheran is located on the southern coast of Sheogorad. It is a place of evil reputation, remote, and seldom visited.",
+    "Filters": [],
+    "Script": [
+      "ShowMap Rotheran"
+    ]
+  },
+  "2895312243682321155": {
+    "Prev": "",
+    "Next": "23205147582745226600",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Whenever you're ready....",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "23205147582745226600": {
+    "Prev": "2895312243682321155",
+    "Next": "350930662239814868",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then off you go....",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "index_master",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "PlaySound \"Thunder2\"",
+      "Player->PositionCell, 428 638 -368 270, \"Rotheran, Propylon Chamber\"",
+      "goodbye"
+    ]
+  },
+  "350930662239814868": {
+    "Prev": "23205147582745226600",
+    "Next": "517729084258077147",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Unless you have a master index, I can't send you to Rotheran.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "517729084258077147": {
+    "Prev": "350930662239814868",
+    "Next": "2487228797996310828",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you ready to travel to Rotheran?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Master_Index",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, send me to Rotheran.\" 1 \"Not yet.\" 2"
+    ]
+  }
+}

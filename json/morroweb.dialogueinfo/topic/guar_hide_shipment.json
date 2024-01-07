@@ -1,0 +1,743 @@
+{
+  "8083108423229214523": {
+    "Prev": "",
+    "Next": "139545371908222455",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "marsus tullius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, now that it's all resolved, I'd best get on my way.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "139545371908222455": {
+    "Prev": "8083108423229214523",
+    "Next": "11082198441326114665",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "marsus tullius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "They were from the Erabenimsun herds? I had no idea! I hope you sent my apologies, friend. I have no quarrel with those people, and I do not wish one. I suppose I'll have to find some other guar, then. I'd tell you to visit my father for your reward, but he was the one paying for this trip. Without those hides, I don't think he'll be able to pay you. Thank you again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 80.0
+      }
+    ],
+    "Script": [
+      "AddTopic \"Marsus Tullius' hides\"",
+      "Journal \"MV_InnocentAshlanders\" 110"
+    ]
+  },
+  "11082198441326114665": {
+    "Prev": "139545371908222455",
+    "Next": "11577176101811226318",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "marsus tullius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've already got my hides? Amazing! Thanks for your help. Don't know what I would have done without this shipment. Would have taken quite a loss. Make sure you visit my father, Stentus Tullius, in Tel Aruhn. I'll make sure to send word ahead about what a help you were to me. I'm sure he'll reward you well.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 75.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_guar_hide_marsus",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "AddTopic \"Marsus Tullius' hides\"",
+      "Journal \"MV_InnocentAshlanders\" 105",
+      "Player->RemoveItem \"Ingred_Guar_Hide_Marsus\" 10",
+      "AddItem \"Ingred_Guar_Hide_Marsus\" 10"
+    ]
+  },
+  "11577176101811226318": {
+    "Prev": "11082198441326114665",
+    "Next": "3046519316269584068",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "marsus tullius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thanks for your help. Don't know what I would have done without this shipment. Would have taken quite a loss. Make sure you visit my father, Stentus Tullius, in Tel Aruhn. I'll make sure to send word ahead about what a help you were to me. I'm sure he'll reward you well.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 75.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_guar_hide_marsus",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "AddTopic \"Marsus Tullius' hides\"",
+      "Journal \"MV_InnocentAshlanders\" 105",
+      "Player->RemoveItem \"Ingred_Guar_Hide_Marsus\" 10",
+      "AddItem \"Ingred_Guar_Hide_Marsus\" 10"
+    ]
+  },
+  "3046519316269584068": {
+    "Prev": "11577176101811226318",
+    "Next": "32261124232014829492",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "marsus tullius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, my. I didn't realize...I just figured it was a herd of wild guar. Well, no danger of me heading back that way. I've no desire to make any more enemies with those folk. Thanks for your help. Make sure you visit my father, Stents Tullius, in Tel Aruhn. I'll make sure to send word ahead about what a help you were to me. I'm sure he'll reward you well.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 85.0
+      }
+    ],
+    "Script": [
+      "AddTopic \"Marsus Tullius' hides\"",
+      "Journal \"MV_InnocentAshlanders\" 100",
+      "Player->RemoveItem \"Ingred_Guar_Hide_Marsus\" 10",
+      "AddItem \"Ingred_Guar_Hide_Marsus\" 10"
+    ]
+  },
+  "32261124232014829492": {
+    "Prev": "3046519316269584068",
+    "Next": "1158265851207817610",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "marsus tullius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You found them? Well, go get them back for me!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "1158265851207817610": {
+    "Prev": "32261124232014829492",
+    "Next": "568031035161126426",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "marsus tullius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "They would be easy enough to recognize as mine. I made sure to put my stamp on them immediately.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "568031035161126426": {
+    "Prev": "1158265851207817610",
+    "Next": "27523249782809726636",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tinti",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We will abide by your decision.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "27523249782809726636": {
+    "Prev": "568031035161126426",
+    "Next": "10978552115465249",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tinti",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well, %PCName. Let this trader know that should he step foot on our lands again, we will not be so generous with him, be he your friend or not. Travel with speed, my friend.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_InnocentAshlanders\" 85",
+      "RemoveItem \"Ingred_Guar_Hide_Marsus\" 5",
+      "Hairan->RemoveItem \"Ingred_Guar_Hide_Marsus\" 5",
+      "Player->AddItem \"Ingred_Guar_Hide_Marsus\" 10"
+    ]
+  },
+  "10978552115465249": {
+    "Prev": "27523249782809726636",
+    "Next": "12375534273582296",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tinti",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If this is your decision, %PCName, so be it. Here, take this as a token of our friendship. I hope to meet you again. Travel with the winds, my friend.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_InnocentAshlanders\" 80",
+      "RemoveItem \"Herder's Belt\" 1",
+      "Player->AddItem \"Herder's Belt\" 1"
+    ]
+  },
+  "12375534273582296": {
+    "Prev": "10978552115465249",
+    "Next": "19728522333519971",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tinti",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "These are the lands of our people, and the guar hides this trader carried were of our herds. It was our right to take back these hides, and we deny his claim on them. Why has he sent you on this errand? Is he not man enough to defend himself? But...since you take this man's part, for friendship, we will return the hides to you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 45.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_InnocentAshlanders\" 60",
+      "Journal \"MV_InnocentAshlanders\" 70",
+      "Choice \"Thank you, friends. I will return the hides to the trader.\" 1 \"No, these hides clearly belong to you and your people. The trader was wrong to take them.\" 2"
+    ]
+  },
+  "19728522333519971": {
+    "Prev": "12375534273582296",
+    "Next": "34869153249527509",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tinti",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have heard our stance on this issue, and it will not waver.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 75.0
+      }
+    ],
+    "Script": []
+  },
+  "34869153249527509": {
+    "Prev": "19728522333519971",
+    "Next": "2158532528900332511",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tinti",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "These are the lands of our people, and the guar hides this trader carried were of our herds. It was our right to take back these hides, and we deny his claim on them. Why has he sent you on this errand? Is he not man enough to defend himself? We will die before seeing that Imperial dog get our hides.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_InnocentAshlanders\" 60",
+      "Journal \"MV_InnocentAshlanders\" 75"
+    ]
+  },
+  "2158532528900332511": {
+    "Prev": "34869153249527509",
+    "Next": "18488254321437729617",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hairan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We will abide by your decision.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "18488254321437729617": {
+    "Prev": "2158532528900332511",
+    "Next": "2575881562722713761",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hairan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well, %PCName. Let this trader know that should he step foot on our lands again, we will not be so generous with him, be he your friend or not. Travel with speed, my friend.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_InnocentAshlanders\" 85",
+      "RemoveItem \"Ingred_Guar_Hide_Marsus\" 5",
+      "Tinti->RemoveItem \"Ingred_Guar_Hide_Marsus\" 5",
+      "Player->AddItem \"Ingred_Guar_Hide_Marsus\" 10"
+    ]
+  },
+  "2575881562722713761": {
+    "Prev": "18488254321437729617",
+    "Next": "24627443908314285",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hairan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If this is your decision, %PCName, so be it. Here, take this as a token of our friendship. I hope to meet you again. Travel with the winds, my friend.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_InnocentAshlanders\" 80",
+      "RemoveItem \"Herder's Belt\" 1",
+      "Player->AddItem \"Herder's Belt\" 1"
+    ]
+  },
+  "24627443908314285": {
+    "Prev": "2575881562722713761",
+    "Next": "2661929332129984516",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hairan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "These are the lands of our people, and the guar hides this trader carried were of our herds. It was our right to take back these hides, and we deny his claim on them. Why has he sent you on this errand? Is he not man enough to defend himself? But...since you take this man's part, for friendship, we will return the hides to you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 45.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_InnocentAshlanders\" 60",
+      "Journal \"MV_InnocentAshlanders\" 70",
+      "Choice \"Thank you, friends. I will return the hides to the trader.\" 1 \"No, these hides clearly belong to you and your people. The trader was wrong to take them.\" 2"
+    ]
+  },
+  "2661929332129984516": {
+    "Prev": "24627443908314285",
+    "Next": "384823126282574911",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hairan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have heard our stance on this issue, and it will not waver.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 75.0
+      }
+    ],
+    "Script": []
+  },
+  "384823126282574911": {
+    "Prev": "2661929332129984516",
+    "Next": "3154164802064822044",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hairan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "These are the lands of our people, and the guar hides this trader carried were of our herds. It was our right to take back these hides, and we deny his claim on them. Why has he sent you on this errand? Is he not man enough to defend himself? We will die before seeing that Imperial dog get our hides.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_InnocentAshlanders\" 60",
+      "Journal \"MV_InnocentAshlanders\" 75",
+      "StartCombat Player"
+    ]
+  },
+  "3154164802064822044": {
+    "Prev": "384823126282574911",
+    "Next": "198316576180527547",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Zainab Camp",
+    "PlayerFaction": "",
+    "Text": "None of our tribe would have done this thing, %PCRace. We are an honorable people, and have no needs beyond what we have.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_InnocentAshlanders\" 45"
+    ]
+  },
+  "198316576180527547": {
+    "Prev": "3154164802064822044",
+    "Next": "26654989450409849",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ahemmusa Camp",
+    "PlayerFaction": "",
+    "Text": "None of our tribe would have done this thing, %PCRace. We are an honorable people, and have no needs beyond what we have.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_InnocentAshlanders\" 47"
+    ]
+  },
+  "26654989450409849": {
+    "Prev": "198316576180527547",
+    "Next": "268643198792019947",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Urshilaku Camp",
+    "PlayerFaction": "",
+    "Text": "None of our tribe would have done this thing, %PCRace. We are an honorable people, and have no needs beyond what we have.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_InnocentAshlanders\" 46"
+    ]
+  },
+  "268643198792019947": {
+    "Prev": "26654989450409849",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Erabenimsun Camp",
+    "PlayerFaction": "",
+    "Text": "We know of the incident of which you speak. Tinti and Hairan are honorable warriors, and would never steal. Perhaps this trader offended them in some way, or tried to steal from our herds. Speak with them and make your charges, if you have the courage. They are here in camp, should you wish to speak with them.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 80.0
+      },
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "tinti",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "hairan",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_InnocentAshlanders\" 50"
+    ]
+  }
+}

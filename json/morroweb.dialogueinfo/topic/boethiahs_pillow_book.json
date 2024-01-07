@@ -1,0 +1,288 @@
+{
+  "881211305725862": {
+    "Prev": "",
+    "Next": "11603173851255815562",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been kicked out of the Guild, %PCName. Better make amends, or no one's going to talk to you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "11603173851255815562": {
+    "Prev": "881211305725862",
+    "Next": "9525116802602111359",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "You already gave me that book.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BadGandosa",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "9525116802602111359": {
+    "Prev": "11603173851255815562",
+    "Next": "1820128696250983861",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hm. Interesting books these Dunmer have. We're getting paid well for this job. I looked over the emergency supplies here and found a ring and amulet you might like. Just don't tell anyone I gave them to you, eh?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_BadGandosa 100",
+      "Player->RemoveItem bk_BoethiahPillowBook 1",
+      "Player->AddItem \"Amulet of Far Silence\" 1",
+      "Player->AddITem \"Chameleon Ring\" 1",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "1820128696250983861": {
+    "Prev": "9525116802602111359",
+    "Next": "356490401580731169",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I need that book. I can't keep my client waiting forever. I might have to hire someone else to get that book, if you know what I mean.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "356490401580731169": {
+    "Prev": "1820128696250983861",
+    "Next": "3033324731730423095",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I need that book. I can't keep my client waiting forever. I might have to hire someone else to get that book, if you know what I mean.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "3033324731730423095": {
+    "Prev": "356490401580731169",
+    "Next": "852777701620214023",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, I have a client that wanted some dirt on the Arobar family. Would you be willing to part with that book?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal TG_BadGandosa 10",
+      "Choice \"Give him the book\" 1 \"Keep the book\" 2"
+    ]
+  },
+  "852777701620214023": {
+    "Prev": "3033324731730423095",
+    "Next": "27376271801754517649",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh. Well, a client of ours wants some dirt on Gandosa Arobar. If you find her copy of Boethiah's Pillow Book, give it to me and I'll give you a little something for your trouble.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Journal TG_BadGandosa 10"
+    ]
+  },
+  "27376271801754517649": {
+    "Prev": "852777701620214023",
+    "Next": "1166228012882422360",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Is that Boethiah's Pillow Book? You didn't happen to find that in Arobar Manor, did you?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_BoethiahPillowBook",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_BadGandosa",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"I found it in Arobar Manor\" 3 \"I found it somewhere else\" 4"
+    ]
+  },
+  "1166228012882422360": {
+    "Prev": "27376271801754517649",
+    "Next": "2880265852599717584",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Did you get the book?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_BoethiahPillowBook",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BadGandosa",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is\" 1 \"No, not yet\" 2"
+    ]
+  },
+  "2880265852599717584": {
+    "Prev": "1166228012882422360",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "A client of ours wants some dirt on the Arobar family. Apparently Gandosa Arobar has a copy of this book, which has been banned by the Temple. Fetch the book and return it to me. I have to admit I'm a bit curious myself.",
+    "Filters": [],
+    "Script": [
+      "Journal TG_BadGandosa 10"
+    ]
+  }
+}

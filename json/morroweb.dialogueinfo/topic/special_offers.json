@@ -1,0 +1,644 @@
+{
+  "2373127101139223483": {
+    "Prev": "",
+    "Next": "3132611008163025325",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Special offers?  No, you took care of that, didn't you?  Did a good job of ruining my business while you were at it.  Thanks for nothing.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_ScrollSales",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "3132611008163025325": {
+    "Prev": "2373127101139223483",
+    "Next": "7201322451864834",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah, yes. Well, I uhh, lost contact with my supplier. Yes, that's it. So I've been forced to discontinue the extra bargains. Sorry.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MS_ScrollSales",
+        "Value": 30.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Ahnia",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "7201322451864834": {
+    "Prev": "3132611008163025325",
+    "Next": "1827029767830026975",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Nothing today.  My, ah, supplier hasn't contacted me lately.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_ScrollSales",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "1827029767830026975": {
+    "Prev": "7201322451864834",
+    "Next": "13290221043231629971",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's a deal.  Come back again, okay?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      },
+      {
+        "Type": "Global",
+        "Func": "PcGold",
+        "Compare": "GreaterEqual",
+        "Id": "PCGold",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"gold_001\" 60",
+      "player->additem \"sc_illneasbreath\" 1",
+      "Goodbye"
+    ]
+  },
+  "13290221043231629971": {
+    "Prev": "1827029767830026975",
+    "Next": "160202201873219182",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Don't try that with me.  I'm not stupid.  Come back when you get the money.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      },
+      {
+        "Type": "Global",
+        "Func": "PcGold",
+        "Compare": "Less",
+        "Id": "PCGold",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "160202201873219182": {
+    "Prev": "13290221043231629971",
+    "Next": "1919923602187215225",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's a deal.  Come back again sometime, okay?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      },
+      {
+        "Type": "Global",
+        "Func": "PcGold",
+        "Compare": "GreaterEqual",
+        "Id": "PCGold",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"gold_001\" 60",
+      "player->additem \"sc_fifthbarrier\" 1",
+      "Goodbye"
+    ]
+  },
+  "1919923602187215225": {
+    "Prev": "160202201873219182",
+    "Next": "20156222432954125163",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do I look like I hatched yesterday?  Come back when you actually have some money.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      },
+      {
+        "Type": "Global",
+        "Func": "PcGold",
+        "Compare": "Less",
+        "Id": "PCGold",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "20156222432954125163": {
+    "Prev": "1919923602187215225",
+    "Next": "196130823143679631",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hey, look.  I can't give away all my trade secrets, now can I?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_ScrollSales",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "196130823143679631": {
+    "Prev": "20156222432954125163",
+    "Next": "1186290356920926",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't see why everyone has to assume that just because I'm capable of offering some very good prices on quality merchandise that there's something shady going on!  I was just telling Ahnia the other day that...ahh...err, nevermind.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal MS_ScrollSales 20",
+      "addtopic \"Ahnia\""
+    ]
+  },
+  "1186290356920926": {
+    "Prev": "196130823143679631",
+    "Next": "20107156261427620184",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, I had a few extras, so I've marked this down for a quick sale!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "Random100",
+        "Value": 66.0
+      }
+    ],
+    "Script": []
+  },
+  "20107156261427620184": {
+    "Prev": "1186290356920926",
+    "Next": "3362225121057124641",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you're implying what I think you're implying, I am not amused.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "Random100",
+        "Value": 33.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "3362225121057124641": {
+    "Prev": "20107156261427620184",
+    "Next": "25372258541914617778",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What do you mean?  I like you, %Pcname, and I'm just trying to make you a good offer.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "25372258541914617778": {
+    "Prev": "3362225121057124641",
+    "Next": "15903105941233125176",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Suit yourself.  It'll be gone the next time you come back...",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "15903105941233125176": {
+    "Prev": "25372258541914617778",
+    "Next": "17410238642134315325",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Nice try, %PCName.  Come back when you've got the cash for it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "PcGold",
+        "Compare": "Less",
+        "Id": "PCGold",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "17410238642134315325": {
+    "Prev": "15903105941233125176",
+    "Next": "3104611963357713494",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's a deal.  Here you go!  Come back soon.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "PcGold",
+        "Compare": "GreaterEqual",
+        "Id": "PCGold",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"gold_001\" 60",
+      "player->additem \"sc_hellfire\" 1",
+      "Goodbye"
+    ]
+  },
+  "3104611963357713494": {
+    "Prev": "17410238642134315325",
+    "Next": "1909214902943113",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Just for you, friend, I've got a great deal here on a Hellfire scroll.  I'll part with it for a mere 60 drakes.  Interested?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_ScrollSales",
+        "Value": 10.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "Random100",
+        "Value": 66.0
+      }
+    ],
+    "Script": [
+      "Choice: \"I'll take it.\" 1 \"No thanks.\" 2 \"Why is this so cheap?\" 3",
+      "StartScript GetPCGold"
+    ]
+  },
+  "1909214902943113": {
+    "Prev": "3104611963357713494",
+    "Next": "326283064751725005",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, since you ask, it turns out I happen to have a Fifth Barrier scroll.  60 drakes.  Interested?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_ScrollSales",
+        "Value": 10.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "Random100",
+        "Value": 33.0
+      }
+    ],
+    "Script": [
+      "Choice: \"I'll take it.\" 4 \"No thanks.\" 2 \"Why is this so cheap?\" 3",
+      "StartScript GetPCGold"
+    ]
+  },
+  "326283064751725005": {
+    "Prev": "1909214902943113",
+    "Next": "3195850381997513934",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This is your lucky day, friend!  I've got a brand new scroll of Illnea's Breath right here.  Want it?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_ScrollSales",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice: \"I'll take it.\" 5 \"No thanks.\" 2 \"Why is this so cheap?\" 3",
+      "StartScript GetPCGold"
+    ]
+  },
+  "3195850381997513934": {
+    "Prev": "326283064751725005",
+    "Next": "29950135741694612978",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Look, I appreciate the interest, but I only offer extra deals to my valued customers.  Nothing personal.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_ScrollSales",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "29950135741694612978": {
+    "Prev": "3195850381997513934",
+    "Next": "24722193100010461",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Every now and then I'll have special bargains on certain items.  Just for valued customers like yourself, of course.  Check back with me on a regular basis, and I'll see if I can make you a deal.",
+    "Filters": [],
+    "Script": [
+      "Journal MS_ScrollSales 10"
+    ]
+  },
+  "24722193100010461": {
+    "Prev": "29950135741694612978",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No, nothing special here. Not for the likes of you, anyway. Just what you see.",
+    "Filters": [],
+    "Script": []
+  }
+}

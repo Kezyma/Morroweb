@@ -1,0 +1,328 @@
+{
+  "1704230413868424601": {
+    "Prev": "",
+    "Next": "1093414055430324952",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled from House Redoran. Make amends and perhaps we can speak again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1093414055430324952": {
+    "Prev": "1704230413868424601",
+    "Next": "1986149661173028475",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "There's no need to ask about the hostile mudcrabs if Drulene Falen is dead.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_MudcrabNest",
+        "Value": 200.0
+      }
+    ],
+    "Script": []
+  },
+  "1986149661173028475": {
+    "Prev": "1093414055430324952",
+    "Next": "1047220465778425",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I heard you murdered Drulene Falen. I cannot believe you would do such a thing. I will have you expelled from House Redoran for this.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "drulene falen",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "HR_MudcrabNest",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "PCExpell \"Redoran\"",
+      "Set ExpRedoran to 1"
+    ]
+  },
+  "1047220465778425": {
+    "Prev": "1986149661173028475",
+    "Next": "3088141102055721713",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Drulene Falen is dead? I had not heard that. I suppose someone else will take over her guar herd. In the meantime, I may have other duties for you.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "drulene falen",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Journal HR_MudcrabNest 200"
+    ]
+  },
+  "3088141102055721713": {
+    "Prev": "1047220465778425",
+    "Next": "2892831394170643924",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "You took care of the hostile mudcrabs, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_MudcrabNest",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2892831394170643924": {
+    "Prev": "3088141102055721713",
+    "Next": "13375185002423811333",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "You've killed the mudcrabs for Drulene Falen? Good work, %PCName. Speak with me again when you are ready for more duties.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "mudcrab_hrmudcrabnest",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HR_MudcrabNest 100",
+      "ModPCFacRep 5 Redoran",
+      "ModDisposition 5"
+    ]
+  },
+  "13375185002423811333": {
+    "Prev": "2892831394170643924",
+    "Next": "2047626408579814131",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Go talk to Drulene Falen. Her guar herd is due west of here, just over the hills. She can tell you more about her mudcrab problem.",
+    "Filters": [],
+    "Script": [
+      "Journal HR_MudcrabNest 10"
+    ]
+  },
+  "2047626408579814131": {
+    "Prev": "13375185002423811333",
+    "Next": "154832607376713391",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drulene falen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I haven't seen any more mudcrabs. Thanks for asking, though.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_MudcrabNest",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "154832607376713391": {
+    "Prev": "2047626408579814131",
+    "Next": "3126295132301722776",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drulene falen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here you go, %PCName. After a hard day there's nothing better than chewing some Hackle-Lo.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem Ingred_Hackle-Lo_Leaf_01 2",
+      "Journal HR_MudcrabNest 40",
+      "ModDisposition 15"
+    ]
+  },
+  "3126295132301722776": {
+    "Prev": "154832607376713391",
+    "Next": "2049483771994314491",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drulene falen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It can be an acquired taste. Thanks again, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal HR_MudcrabNest 40",
+      "ModDisposition 15"
+    ]
+  },
+  "2049483771994314491": {
+    "Prev": "3126295132301722776",
+    "Next": "12139205032757013447",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drulene falen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You killed the mudcrabs that were bothering my guar? Thank the Tribunal! I might not have to move back to Tear after all... You look tired, %PCName. Can I offer you some Hackle-Lo?",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "mudcrab_hrmudcrabnest",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes\" 1 \"No\" 2"
+    ]
+  },
+  "12139205032757013447": {
+    "Prev": "2049483771994314491",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drulene falen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There's a pair of them that's been hunting my guar. Just the other day they killed one and dragged it off. They usually come from the coast to the southwest. If this keeps up, I might have to sell what I still got and move back to Tear.",
+    "Filters": [],
+    "Script": [
+      "Journal HR_MudcrabNest 30"
+    ]
+  }
+}

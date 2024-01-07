@@ -1,0 +1,495 @@
+{
+  "990311851282486634": {
+    "Prev": "",
+    "Next": "1118129162199514605",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "new_shoes bragor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "They said they'd kill me if I escaped from prison again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TG_BrotherBragor",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1118129162199514605": {
+    "Prev": "990311851282486634",
+    "Next": "2170927635195427214",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Joshur",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No, Joshur is Khajiit. Joshur just get caught again.",
+    "Filters": [],
+    "Script": []
+  },
+  "2170927635195427214": {
+    "Prev": "1118129162199514605",
+    "Next": "25044327452001718262",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll make my escape as soon as I can.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "prisonerFreed",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "25044327452001718262": {
+    "Prev": "2170927635195427214",
+    "Next": "3186311430615611062",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you, %PCName. I'll make my escape as soon as the coast is clear.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "prisonerFreed",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Set prisonerFreed to 1",
+      "ModDisposition 25"
+    ]
+  },
+  "3186311430615611062": {
+    "Prev": "25044327452001718262",
+    "Next": "286961629738253393",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "They can't keep me here forever. I'll get you back for this.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "prisonerFreed",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "286961629738253393": {
+    "Prev": "3186311430615611062",
+    "Next": "22398252372154112058",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Pelagiad, South Wall",
+    "PlayerFaction": "",
+    "Text": "You have the key. Will you free me, %PCName?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "key_standard_01_pel_fort_prison",
+        "Value": 0.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "prisonerFreed",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, I will free you.\" 1 \"No, rot here in jail.\" 2"
+    ]
+  },
+  "22398252372154112058": {
+    "Prev": "286961629738253393",
+    "Next": "317707467213039376",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ebonheart, Hawkmoth Legion Garrison",
+    "PlayerFaction": "",
+    "Text": "You have the key. Will you free me, %PCName?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "key_cell_ebonheart_01",
+        "Value": 0.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "prisonerFreed",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, I will free you.\" 1 \"No, rot here in jail.\" 2"
+    ]
+  },
+  "317707467213039376": {
+    "Prev": "22398252372154112058",
+    "Next": "1577061643167831582",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Buckmoth Legion Fort, Prison",
+    "PlayerFaction": "",
+    "Text": "You have the key. Will you free me, %PCName?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "key_cell_buckmoth_01",
+        "Value": 0.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "prisonerFreed",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, I will free you.\" 1 \"No, rot here in jail.\" 2"
+    ]
+  },
+  "1577061643167831582": {
+    "Prev": "317707467213039376",
+    "Next": "257584896576321748",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You'll need the key to free me of my bonds.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "prisonerFreed",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "257584896576321748": {
+    "Prev": "1577061643167831582",
+    "Next": "87621806131998990",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ragash gra-shuzgub",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You help me escape from that crazy guy. I thought I'd never get out again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescueRagash",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "87621806131998990": {
+    "Prev": "257584896576321748",
+    "Next": "255019814910016118",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ragash gra-shuzgub",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I follow you out of this place.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "AiFollow Player 0 -87568 95360 1312 0"
+    ]
+  },
+  "255019814910016118": {
+    "Prev": "87621806131998990",
+    "Next": "1263962871778618849",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ragash gra-shuzgub",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I wait here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 60 30 10 0 0 0 0 0 0"
+    ]
+  },
+  "1263962871778618849": {
+    "Prev": "255019814910016118",
+    "Next": "1910828842270183680",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ragash gra-shuzgub",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We getting out of here?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescueRagash",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Follow me.\" 5 \"Wait here.\" 6"
+    ]
+  },
+  "1910828842270183680": {
+    "Prev": "1263962871778618849",
+    "Next": "3082281742382790",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ragash gra-shuzgub",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Him letting me go? About time he did. I follow you out of here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescueRagash",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Journal IL_RescueRagash 50",
+      "AiFollow Player 0 -87568 95360 1312 0"
+    ]
+  },
+  "3082281742382790": {
+    "Prev": "1910828842270183680",
+    "Next": "5556116373094125412",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ragash gra-shuzgub",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you. Thank you so much. I need to get out of Arvs Drelen. I'll follow you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal IL_RescueRagash 50",
+      "AiFollow Player 0 -87568 95360 1312 0"
+    ]
+  },
+  "5556116373094125412": {
+    "Prev": "3082281742382790",
+    "Next": "6157729145474456",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ragash gra-shuzgub",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Why not? Why you not help me?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": []
+  },
+  "6157729145474456": {
+    "Prev": "5556116373094125412",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ragash gra-shuzgub",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I just came to collect taxes as I was told, and he lock me up in this room! Can you help?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Yes, follow me.\" 3 \"No, you're on your own.\" 4"
+    ]
+  }
+}

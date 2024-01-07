@@ -1,0 +1,487 @@
+{
+  "1104624391298717464": {
+    "Prev": "",
+    "Next": "280015842174554223",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "antonius nuncius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We've discussed that enough, I think.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 90.0
+      }
+    ],
+    "Script": []
+  },
+  "280015842174554223": {
+    "Prev": "1104624391298717464",
+    "Next": "279642131753703842",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "antonius nuncius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, yes. Terrible thing. Don't know why you'd be asking me about it. Did I mention how the shipments stopped arriving?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 70.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "FoundBooze",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "279642131753703842": {
+    "Prev": "280015842174554223",
+    "Next": "285307976209647238",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "antonius nuncius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am here to help. As if I had a choice.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 50.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "285307976209647238": {
+    "Prev": "279642131753703842",
+    "Next": "2043046572321622169",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "antonius nuncius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Told you that, did he? I guess he never officially did. Still, the shipments stopped arriving. What's to be done about that?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 50.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2043046572321622169": {
+    "Prev": "285307976209647238",
+    "Next": "1984917676266309583",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "antonius nuncius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes...odd that the Captain would ban liquor for his troops. There's no understanding some people.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Morale",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Choice \"He tells me he never banned alcohol.\" 1 \"Thank you for your help.\" 2"
+    ]
+  },
+  "1984917676266309583": {
+    "Prev": "2043046572321622169",
+    "Next": "8635141702297311790",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That matter has been settled.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "8635141702297311790": {
+    "Prev": "1984917676266309583",
+    "Next": "3449145852181410575",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, you've said that seems to be related to why the morale has been low.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "3449145852181410575": {
+    "Prev": "8635141702297311790",
+    "Next": "32333211692661618893",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have no real interest in banning alcohol at Fort Frostmoth, especially since the morale has been low. Antonius Nuncius, however, felt strongly about it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Morale",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "32333211692661618893": {
+    "Prev": "3449145852181410575",
+    "Next": "2086423597133116327",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "Looks like that all got cleared up. I didn't think Captain Carius was such a bad guy. I mean, he's the only one who actually seems to enjoy living on this island.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2086423597133116327": {
+    "Prev": "32333211692661618893",
+    "Next": "2330322865754412248",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "I'd feel a whole lot better talking about this if I had something to wet my whistle, but you seem okay. I just know that I heard from Antonius Nuncius that the Captain had placed a ban on all alcohol at the fort. And, sure enough, there was none to be found.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Morale",
+        "Value": 100.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "gavebooze",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "2330322865754412248": {
+    "Prev": "2086423597133116327",
+    "Next": "1467211307176393291",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "Look, I'm not sure what caused all this. I just know that I heard from Antonius Nuncius that the Captain had placed a ban on all alcohol at the fort. And, sure enough, there was none to be found.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Morale",
+        "Value": 100.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "gavebooze",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "1467211307176393291": {
+    "Prev": "2330322865754412248",
+    "Next": "171972259119624768",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "I'd feel a whole lot better talking about this if I had some booze to wet my whistle.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Morale",
+        "Value": 100.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "gavebooze",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "171972259119624768": {
+    "Prev": "1467211307176393291",
+    "Next": "148981241377210189",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "Got nothing else to say about that right now. Why don't you talk to the Captain?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "148981241377210189": {
+    "Prev": "171972259119624768",
+    "Next": "232673708231219126",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "It's a pretty foul situation, if you ask me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Morale",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "232673708231219126": {
+    "Prev": "148981241377210189",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "That's right...no liquor at all is allowed at Fort Frostmoth these days. Captain's orders, I guess. Seemed odd coming from him. Captain Carius seemed like a fair enough guy, as long as we carried out our duties. Guess he figured we weren't up to his standards, so he cut us off. Since then, everyone's been in a pretty foul mood.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      },
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "falx carius",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Morale 40"
+    ]
+  }
+}

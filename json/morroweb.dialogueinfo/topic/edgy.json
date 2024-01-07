@@ -1,0 +1,89 @@
+{
+  "2197127723143529518": {
+    "Prev": "",
+    "Next": "27857142962059331621",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That is no longer a concern.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "27857142962059331621": {
+    "Prev": "2197127723143529518",
+    "Next": "2110454261754829984",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "They have been on edge. I worry about some of these disturbing trends.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Morale",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2110454261754829984": {
+    "Prev": "27857142962059331621",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As I said, this is a difficult post. These soldiers are separated from their families and forced to live in harsh conditions. To be fair, most of these men were sent to this island as punishment for a past offense. They are not the best of soldiers. Yet. Still, until recently, they had performed their duties adequately. Lately, I have noticed some disturbing trends.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Morale",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Morale 10"
+    ]
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "1894718751106922076": {
+    "Prev": "",
+    "Next": "25782308992801615099",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ra'tesh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ra'Tesh hopes all will be well with the customers he likes.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Champion",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "25782308992801615099": {
+    "Prev": "1894718751106922076",
+    "Next": "390810409135788050",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ra'tesh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ra'Tesh thinks you are a bad person, and hopes Karrod beats you severely.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal TR_Champion 60"
+    ]
+  },
+  "390810409135788050": {
+    "Prev": "25782308992801615099",
+    "Next": "2502455282139131423",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ra'tesh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent. Ra'Tesh will have one of his barmaids occupy Karrod for the evening. He will be very tired when it comes time for the duel. Fight well, but don't hurt the face! Not the lovely, lovely face. Ra'Tesh would miss seeing beautiful Karrod.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Set KarrodBribe to 1",
+      "Journal TR_Champion 50"
+    ]
+  },
+  "2502455282139131423": {
+    "Prev": "390810409135788050",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ra'tesh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Why you, of course! Karrod cannot lose...although you look a bit dangerous to Ra'Tesh. Ra'Tesh would not like to see lovely Karrod disfigured in any way! Ra'Tesh would hate to see that! If you promise not to mar the lovely Karrod, Ra'Tesh will help you in the duel. What do you say?",
+    "Filters": [],
+    "Script": [
+      "Journal TR_Champion 40",
+      "Choice \"I will do my best not to harm him.\" 1 \"I can promise nothing.\" 2"
+    ]
+  }
+}

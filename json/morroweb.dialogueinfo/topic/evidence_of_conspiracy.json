@@ -1,0 +1,1499 @@
+{
+  "1425428293323619623": {
+    "Prev": "",
+    "Next": "751152312700211340",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Hloggar the Bloody",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't get it. Don't you want to fight? Oh! Wait! I see. You are a GOOD guy! Sure. I understand. So now I got to get lost. Fast, right? Okay. Time to use that old Recall amulet. So long, pal... and thanks.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Goodbye",
+      "PLAYSOUND \"mysticism cast\"",
+      "Journal TR08_Hlaalu_Hloggar 1",
+      "\"Hloggar the Bloody\"->disable"
+    ]
+  },
+  "751152312700211340": {
+    "Prev": "1425428293323619623",
+    "Next": "2679027654131189196",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Hloggar the Bloody",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That suits me fine. For Athyn! Let all the world be bathed in your dog's-water blood!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "SetDisposition 0",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "2679027654131189196": {
+    "Prev": "751152312700211340",
+    "Next": "6402201441051315060",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Hloggar the Bloody",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yeah? Well, what are you going to do about it?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Choice \"Denounce Hloggar the Bloody, and execute him.\" 1 \"Warn Hloggar the Bloody, and let him escape.\" 2"
+    ]
+  },
+  "6402201441051315060": {
+    "Prev": "2679027654131189196",
+    "Next": "1867560121062713134",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Forven Berano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, gods, THANK you! Blessings of the Nine, and Almsivi, and anything else you like! Thank gods I have a Mark set. I'll be gone instantly -- and I assure you, I will never betray your mercy.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Goodbye",
+      "PLAYSOUND \"mysticism cast\"",
+      "Journal TR08_Hlaalu_Berano 1",
+      "\"Forven Berano\"->disable"
+    ]
+  },
+  "1867560121062713134": {
+    "Prev": "6402201441051315060",
+    "Next": "2230120016258277695",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Forven Berano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are contemptible. A lackey of the bloody tyrant Helseth. I shall show you a real Hlaalu noble knows how to live -- or die -- for honor and justice.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "SetDisposition 0",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "2230120016258277695": {
+    "Prev": "1867560121062713134",
+    "Next": "2943615344769027125",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Forven Berano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't know what you're talking about. This is obviously some mistake....",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Choice \"Denounce Forven Berano, and execute him.\" 1 \"Warn Forven Berano, and let him escape.\" 2"
+    ]
+  },
+  "2943615344769027125": {
+    "Prev": "2230120016258277695",
+    "Next": "2107921537599125856",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Bedal Alen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have shown yourself an honorable %PCRace. I thank you. I will absent myself from Mournhold immediately. And I would die before I'd betray your generosity to me. And now, if you'll excuse me, I believe an Almsivi Intervention will swiftly deliver me out of peril.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Goodbye",
+      "PLAYSOUND \"mysticism cast\"",
+      "Journal TR08_Hlaalu_Alen 1",
+      "\"Bedal Alen\"->disable"
+    ]
+  },
+  "2107921537599125856": {
+    "Prev": "2943615344769027125",
+    "Next": "166172163062182704",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Bedal Alen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "But... I can see I am doomed. then it is better to die here than rot in Helseth's dungeon. Do your worst, villain!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "SetDisposition 0",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "166172163062182704": {
+    "Prev": "2107921537599125856",
+    "Next": "32511263772492521876",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Bedal Alen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, dear. I KNEW this would happen. Please, have mercy on me!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Choice \"Denounce Bedal Alen, and execute him.\" 1 \"Warn Bedal Alen, and let him escape.\" 2"
+    ]
+  },
+  "32511263772492521876": {
+    "Prev": "166172163062182704",
+    "Next": "2381627194204327816",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've handled this matter.  And now I'd like your help finding the anonymous writer of 'The Common Tongue'.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR09_Journalist",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2381627194204327816": {
+    "Prev": "32511263772492521876",
+    "Next": "22942152382747617324",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've handled this matter.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "22942152382747617324": {
+    "Prev": "2381627194204327816",
+    "Next": "8512305702820914442",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've executed Forven Berano, Hloggar the Bloody, and Bedal Alen? Congratulations. It is customary to pay the executioner for his services. Here are 3000 gold pieces, with our thanks. And now I'd like your help finding the anonymous writer of 'The Common Tongue'.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Hloggar_A",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Alen_A",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Berano_A",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TR08_Hlaalu 170",
+      "player->additem gold_001 3000"
+    ]
+  },
+  "8512305702820914442": {
+    "Prev": "22942152382747617324",
+    "Next": "3000027341015313067",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Forven Berano escaped? There must be a leak here at the Palace. Well, at least you got Bedal Alen and Hloggar the Bloody. It is customary to pay the executioner for his services. Here are 2000 gold pieces, with our thanks. And now I'd like your help finding the anonymous writer of 'The Common Tongue'.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Hloggar_A",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Alen_A",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Berano",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TR08_Hlaalu 160",
+      "player->additem gold_001 2000"
+    ]
+  },
+  "3000027341015313067": {
+    "Prev": "8512305702820914442",
+    "Next": "801318463087516491",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hloggar the Bloody escaped? There must be a leak here at the Palace. Well, at least you got Bedal Alen and Forven Berano. It is customary to pay the executioner for his services. Here are 2000 gold pieces, with our thanks. And now I'd like your help finding the anonymous writer of 'The Common Tongue'.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Hloggar",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Alen_A",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Berano_A",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TR08_Hlaalu 150",
+      "player->additem gold_001 2000"
+    ]
+  },
+  "801318463087516491": {
+    "Prev": "3000027341015313067",
+    "Next": "516985781372431527",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Bedal Alen escaped? There must be a leak here at the Palace. Well, at least you got Hloggar the Bloody and Forven Berano. It is customary to pay the executioner for his services. Here are 2000 gold pieces, with our thanks. And now I'd like your help finding the anonymous writer of 'The Common Tongue'.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Hloggar_A",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Alen",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Berano_A",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TR08_Hlaalu 140",
+      "player->additem gold_001 2000"
+    ]
+  },
+  "516985781372431527": {
+    "Prev": "801318463087516491",
+    "Next": "88481508657826590",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Bedal Alen and Forven Berano have escaped? There must be a leak here at the Palace. Well, at least you got Hloggar the Bloody. It is customary to pay the executioner for his services. Here are 1000 gold pieces, with our thanks. And now I'd like your help finding the anonymous writer of 'The Common Tongue'.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Hloggar_A",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Alen",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Berano",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TR08_Hlaalu 130",
+      "player->additem gold_001 1000"
+    ]
+  },
+  "88481508657826590": {
+    "Prev": "516985781372431527",
+    "Next": "3006226345427623208",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Bedal Alen and Hloggar the Bloody have escaped? There must be a leak here at the Palace. Well, at least you got Forven Berano. It is customary to pay the executioner for his services. Here are 1000 gold pieces, with our thanks. And now I'd like your help finding the anonymous writer of 'The Common Tongue'.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Hloggar",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Alen",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Berano_A",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TR08_Hlaalu 120",
+      "player->additem gold_001 1000"
+    ]
+  },
+  "3006226345427623208": {
+    "Prev": "88481508657826590",
+    "Next": "388186121265616853",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Forven Berano and Hloggar the Bloody have escaped? There must be a leak here at the Palace. Well, at least you got Bedal Alen. It is customary to pay the executioner for his services. Here are 1000 gold pieces, with our thanks. And now I'd like your help finding the anonymous writer of 'The Common Tongue'.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Hloggar",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Alen_A",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Berano",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TR08_Hlaalu 110",
+      "player->additem gold_001 1000"
+    ]
+  },
+  "388186121265616853": {
+    "Prev": "3006226345427623208",
+    "Next": "22397219983188013114",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Forven Berano, Hloggar the Bloody, and Bedal Alen have escaped? All three? There must be a leak here at the Palace. Well, you've done the best you could. You have my thanks, and I'll tell King Helseth that you tried. And now I'd like your help finding the anonymous writer of 'The Common Tongue'.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Hloggar",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Alen",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Berano",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TR08_Hlaalu 100"
+    ]
+  },
+  "22397219983188013114": {
+    "Prev": "388186121265616853",
+    "Next": "6283196821705319601",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You say you've ALREADY taken care of Forven Berano, Hloggar the Bloody, and Bedal Alen? Hmm. Well, then.... Congratulations are in order. It is customary to pay the executioner for his services. Here are 3000 gold pieces, with our thanks. And now I'd like your help finding the anonymous writer of 'The Common Tongue'.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Alen",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Hloggar the Bloody",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Forven Berano",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TR08_Hlaalu 170",
+      "player->additem gold_001 3000"
+    ]
+  },
+  "6283196821705319601": {
+    "Prev": "22397219983188013114",
+    "Next": "14399267381300428279",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You say you've ALREADY taken care of Forven Berano, Hloggar the Bloody, and Bedal Alen? Hmm. Well, then.... Congratulations are in order. It is customary to pay the executioner for his services. Here are 3000 gold pieces, with our thanks. And now I'd like your help finding the anonymous writer of 'The Common Tongue'.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Bedal Alen",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Hloggar",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Forven Berano",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TR08_Hlaalu 170",
+      "player->additem gold_001 3000"
+    ]
+  },
+  "14399267381300428279": {
+    "Prev": "6283196821705319601",
+    "Next": "3721317462150410009",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You say you've ALREADY taken care of Forven Berano, Hloggar the Bloody, and Bedal Alen? Hmm. Well, then.... Congratulations are in order. It is customary to pay the executioner for his services. Here are 3000 gold pieces, with our thanks. And now I'd like your help finding the anonymous writer of 'The Common Tongue'.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Alen",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Hloggar",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Forven Berano",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TR08_Hlaalu 170",
+      "player->additem gold_001 3000"
+    ]
+  },
+  "3721317462150410009": {
+    "Prev": "14399267381300428279",
+    "Next": "2865515807672510974",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You say you've ALREADY taken care of Forven Berano, Hloggar the Bloody, and Bedal Alen? Hmm. Well, then.... Congratulations are in order. It is customary to pay the executioner for his services. Here are 3000 gold pieces, with our thanks. And now I'd like your help finding the anonymous writer of 'The Common Tongue'.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Bedal Alen",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Hloggar the Bloody",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Berano",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TR08_Hlaalu 170",
+      "player->additem gold_001 3000"
+    ]
+  },
+  "2865515807672510974": {
+    "Prev": "3721317462150410009",
+    "Next": "24185153553115317202",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You say you've ALREADY taken care of Forven Berano, Hloggar the Bloody, and Bedal Alen? Hmm. Well, then.... Congratulations are in order. It is customary to pay the executioner for his services. Here are 3000 gold pieces, with our thanks. And now I'd like your help finding the anonymous writer of 'The Common Tongue'.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Alen",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Hloggar the Bloody",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Forven Berano",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TR08_Hlaalu 170",
+      "player->additem gold_001 3000"
+    ]
+  },
+  "24185153553115317202": {
+    "Prev": "2865515807672510974",
+    "Next": "1347120661170528087",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You say you've ALREADY taken care of Forven Berano, Hloggar the Bloody, and Bedal Alen? Hmm. Well, then.... Congratulations are in order. It is customary to pay the executioner for his services. Here are 3000 gold pieces, with our thanks. And now I'd like your help finding the anonymous writer of 'The Common Tongue'.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Alen",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Hloggar the Bloody",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Berano",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TR08_Hlaalu 170",
+      "player->additem gold_001 3000"
+    ]
+  },
+  "1347120661170528087": {
+    "Prev": "24185153553115317202",
+    "Next": "28304203112857216765",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You say you've ALREADY taken care of Forven Berano, Hloggar the Bloody, and Bedal Alen? Hmm. Well, then.... Congratulations are in order. It is customary to pay the executioner for his services. Here are 3000 gold pieces, with our thanks. And now I'd like your help finding the anonymous writer of 'The Common Tongue'.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Bedal Alen",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Hloggar",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Berano",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TR08_Hlaalu 170",
+      "player->additem gold_001 3000"
+    ]
+  },
+  "28304203112857216765": {
+    "Prev": "1347120661170528087",
+    "Next": "9413209982831614458",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You say you've ALREADY taken care of Forven Berano, Hloggar the Bloody, and Bedal Alen? Hmm. Well, then.... Congratulations are in order. It is customary to pay the executioner for his services. Here are 3000 gold pieces, with our thanks. And now I'd like your help finding the anonymous writer of 'The Common Tongue'.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Bedal Alen",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Hloggar the Bloody",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu_Berano",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TR08_Hlaalu 170",
+      "player->additem gold_001 3000"
+    ]
+  },
+  "9413209982831614458": {
+    "Prev": "28304203112857216765",
+    "Next": "31158207662441429162",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You say you've ALREADY executed Forven Berano, Hloggar the Bloody, and Bedal Alen? Hmm. Well. Remarkable how you have anticipated our needs. Well, then..... Congratulations are in order. It is customary to pay the executioner for his services. Here are 3000 gold pieces, with our thanks. And now I'd like your help finding the anonymous writer of 'The Common Tongue'.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Bedal Alen",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Hloggar the Bloody",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Forven Berano",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TR08_Hlaalu 170",
+      "player->additem gold_001 3000"
+    ]
+  },
+  "31158207662441429162": {
+    "Prev": "9413209982831614458",
+    "Next": "21218246162851630212",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "When you've executed Forven Berano, Hloggar the Bloody, and Bedal Alen, report back to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "21218246162851630212": {
+    "Prev": "31158207662441429162",
+    "Next": "2769721614108754923",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I think you should be interested. Serving King Helseth is in your best interests. But suit yourself. Speak to me again if you change your mind.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Journal TR08_Hlaalu 60"
+    ]
+  },
+  "2769721614108754923": {
+    "Prev": "21218246162851630212",
+    "Next": "1634286842608823514",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent. When you've executed the traitors, report back to me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Journal TR08_Hlaalu 70",
+      "player->additem writ_Berano 1",
+      "player->additem writ_Hloggar 1",
+      "player->additem writ_Alen 1"
+    ]
+  },
+  "1634286842608823514": {
+    "Prev": "2769721614108754923",
+    "Next": "6878140171131223567",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This letter you've found is very interesting. Forven Berano, Hloggar the Bloody, and Bedal Alen are obviously conspiring to assassinate King Helseth. This is treason, punishable by death. I will immediately draw up writs for their execution. You would do the king a great service if you would execute these traitors.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 50.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_Alen_note",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"I'll take care of it.\" 4 \"I'm not interested.\" 5"
+    ]
+  },
+  "6878140171131223567": {
+    "Prev": "1634286842608823514",
+    "Next": "4713226482746032536",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you found evidence of conspiracy against King Helseth by Hlaalu nobles?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "4713226482746032536": {
+    "Prev": "6878140171131223567",
+    "Next": "1526203503169927967",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That is a matter for you to study. Only the widow of the dead king, Ravani Llethan, lives at Llethan Manor now. There might be guards. Perhaps you should go to offer your condolences to the widow, and have a look around.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal TR08_Hlaalu_A 5",
+      "Choice \"I'll take care of it.\" 1 \"I'm not interested.\" 2"
+    ]
+  },
+  "1526203503169927967": {
+    "Prev": "4713226482746032536",
+    "Next": "1811751251971822563",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you have to depend on me for such information, you may not be that useful to me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Choice \"I'll take care of it.\" 1 \"I'm not interested.\" 2"
+    ]
+  },
+  "1811751251971822563": {
+    "Prev": "1526203503169927967",
+    "Next": "25921050121785337",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. I see. You are not interested now, perhaps. But I feel confident that you will change your mind. I'll be here waiting.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "25921050121785337": {
+    "Prev": "1811751251971822563",
+    "Next": "1277319948387327597",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. If you find evidence of conspiracy, bring it to me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TR08_Hlaalu 1"
+    ]
+  },
+  "1277319948387327597": {
+    "Prev": "25921050121785337",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The old king's Hlaalu supporters haven't accepted King Helseth's accession to the Throne with good grace. Maybe they think that another candidate -- a Hlaalu candidate, for example -- would be better. Maybe they have some plan to express such a preference. If so, I doubt they would be candid about it. But maybe you should search Llethan Manor for documents, diaries or other tangible evidence of such plans.",
+    "Filters": [],
+    "Script": [
+      "Choice \"I'll take care of it.\" 1 \"I'm not interested.\" 2 \"Ask about Llethan Manor defenses.\" 3"
+    ]
+  }
+}

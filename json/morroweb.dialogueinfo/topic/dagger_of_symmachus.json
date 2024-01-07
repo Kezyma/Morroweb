@@ -1,0 +1,304 @@
+{
+  "355514238245786103": {
+    "Prev": "",
+    "Next": "116336417220047344",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What? How is it you have the Dagger again? It belongs to the Museum now! GUARDS!!!",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "dagsym",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "glass dagger_symmachus_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "setPCCrimeLevel 20000",
+      "Set PCThief to 1",
+      "Goodbye"
+    ]
+  },
+  "116336417220047344": {
+    "Prev": "355514238245786103",
+    "Next": "15586255921142611383",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, it is a wonderful addition to our collection. Thank you again.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "dagsym",
+        "Value": 2.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "glass dagger_symmachus_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "15586255921142611383": {
+    "Prev": "116336417220047344",
+    "Next": "1154028037258554785",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't have the Dagger of Symmachus with you? Well, please go get it, and we can complete our arrangement.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "glass dagger_symmachus_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1154028037258554785": {
+    "Prev": "15586255921142611383",
+    "Next": "8374360613721709",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "glass dagger_symmachus_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"glass dagger_symmachus_unique\" 1",
+      "set MuseumDonations to MuseumDonations + 1",
+      "set dagsym to 2",
+      "\"glass dagger_symmachus_unique_x\"->Enable",
+      "moddisposition 5"
+    ]
+  },
+  "8374360613721709": {
+    "Prev": "1154028037258554785",
+    "Next": "268859891876731686",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "glass dagger_symmachus_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"glass dagger_symmachus_unique\" 1",
+      "player->additem \"gold_001\" 10000",
+      "set dagsym to 2",
+      "\"glass dagger_symmachus_unique_x\"->Enable"
+    ]
+  },
+  "268859891876731686": {
+    "Prev": "8374360613721709",
+    "Next": "11352129501219027127",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't have the Dagger of Symmachus with you? Well, please go get it, and we can complete our arrangement.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "glass dagger_symmachus_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "11352129501219027127": {
+    "Prev": "268859891876731686",
+    "Next": "3240932492137114962",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I understand, though I'm disappointed. It's a piece of such local historical significance.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "3240932492137114962": {
+    "Prev": "11352129501219027127",
+    "Next": "2664391812277428155",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The ceremonial dagger of General Symmachus? How did you come to possess this? What a local treasure! If you're willing to part with it, I can offer you 10,000 gold for it.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "dagsym",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_Blade",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Sell the item.\" 1 \"Keep the item.\" 2 \"Donate the item.\" 3"
+    ]
+  },
+  "2664391812277428155": {
+    "Prev": "3240932492137114962",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The ceremonial dagger of General Symmachus? How did you come to possess this? What a local treasure! If you're willing to part with it, I can offer you 10,000 gold for it.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "dagsym",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Sell the item.\" 1 \"Keep the item.\" 2"
+    ]
+  }
+}

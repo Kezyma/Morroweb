@@ -1,0 +1,557 @@
+{
+  "1633422571577321463": {
+    "Prev": "",
+    "Next": "15348395254621997",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yak gro-skandar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Yeah, good weapons. Good you brought them.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_ThiefTrader",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "15348395254621997": {
+    "Prev": "1633422571577321463",
+    "Next": "2631730557255437957",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yak gro-skandar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I got it. You got your gold. Leave me alone.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_ThiefTrader",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2631730557255437957": {
+    "Prev": "15348395254621997",
+    "Next": "10602291441046027734",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yak gro-skandar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Heard Lucan didn't think you were delivering his shipment. He gets that way. Deal's off as far as I'm concerned. If you still got it, you keep the stuff.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_ThiefTrader",
+        "Value": 90.0
+      }
+    ],
+    "Script": []
+  },
+  "10602291441046027734": {
+    "Prev": "2631730557255437957",
+    "Next": "167413689259947108",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yak gro-skandar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Expected Lucan a while back. Good he send you, though, brother. Not bad stuff. Here's your gold.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_ThiefTrader",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MV_ThiefTrader",
+        "Value": 30.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "silver staff",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "silver flameblade",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "silver war axe",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "steel shortsword",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_ThiefTrader\" 105",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "Player->RemoveItem \"Silver War Axe\" 1",
+      "Player->RemoveItem \"Silver Flameblade\" 1",
+      "Player->RemoveItem \"Steel Shortsword\" 1",
+      "Player->RemoveItem \"Steel Staff\" 1",
+      "AddItem \"Silver War Axe\" 1",
+      "AddItem \"Silver Flameblade\" 1",
+      "AddItem \"Steel Staff\" 1",
+      "AddItem \"Steel Shortsword\" 1",
+      "RemoveItem \"Gold_001\" 100",
+      "Player->AddItem \"Gold_001\" 100",
+      "Goodbye"
+    ]
+  },
+  "167413689259947108": {
+    "Prev": "10602291441046027734",
+    "Next": "2814559022850731348",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yak gro-skandar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Lucan don't show when he supposed to. Now you don't have weapons he gave you, brother? You better find the weapons. Quick.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_ThiefTrader",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MV_ThiefTrader",
+        "Value": 30.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "silver staff",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "steel shortsword",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "silver flameblade",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "silver war axe",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModPCFacRep -5 \"Thieves Guild\""
+    ]
+  },
+  "2814559022850731348": {
+    "Prev": "167413689259947108",
+    "Next": "115301334438127271",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yak gro-skandar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Supposed to meet me with shipment. Didn't show. Don't like that. Good that you brought them, though. Good weapons. Here.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_ThiefTrader",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MV_ThiefTrader",
+        "Value": 30.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "silver war axe",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "silver flameblade",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "steel shortsword",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "steel staff",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_ThiefTrader\" 100",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "Player->RemoveItem \"Silver War Axe\" 1",
+      "Player->RemoveItem \"Silver Flameblade\" 1",
+      "Player->RemoveItem \"Steel Shortsword\" 1",
+      "Player->RemoveItem \"Steel Staff\" 1",
+      "AddItem \"Silver War Axe\" 1",
+      "AddItem \"Silver Flameblade\" 1",
+      "AddItem \"Steel Staff\" 1",
+      "AddItem \"Steel Shortsword\" 1",
+      "RemoveItem \"Gold_001\" 100",
+      "Player->AddItem \"Gold_001\" 100",
+      "Goodbye"
+    ]
+  },
+  "115301334438127271": {
+    "Prev": "2814559022850731348",
+    "Next": "5951276441287013861",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yak gro-skandar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "First he don't show. Now he send you, and you don't have all the weapons. I think you find them, and quick. Get going.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_ThiefTrader",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MV_ThiefTrader",
+        "Value": 30.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "silver staff",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModPCFacRep -5 \"Thieves Guild\""
+    ]
+  },
+  "5951276441287013861": {
+    "Prev": "115301334438127271",
+    "Next": "794319906187539269",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yak gro-skandar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "First he don't show. Now he send you, and you don't have all the weapons. I think you find them, and quick. Get going.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_ThiefTrader",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MV_ThiefTrader",
+        "Value": 30.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "silver flameblade",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModPCFacRep -5 \"Thieves Guild\""
+    ]
+  },
+  "794319906187539269": {
+    "Prev": "5951276441287013861",
+    "Next": "2230522408757827574",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yak gro-skandar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "First he don't show. Now he send you, and you don't have all the weapons. I think you find them, and quick. Get going.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_ThiefTrader",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MV_ThiefTrader",
+        "Value": 30.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "steel shortsword",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModPCFacRep -5 \"Thieves Guild\""
+    ]
+  },
+  "2230522408757827574": {
+    "Prev": "794319906187539269",
+    "Next": "185921096601618193",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yak gro-skandar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "First he don't show. Now he send you, and you don't have all the weapons. I think you find them, and quick. Get going.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_ThiefTrader",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MV_ThiefTrader",
+        "Value": 30.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "steel staff",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModPCFacRep -5 \"Thieves Guild\""
+    ]
+  },
+  "185921096601618193": {
+    "Prev": "2230522408757827574",
+    "Next": "2152925381916717176",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lucan ostorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good thing that you were able to deliver it. Could have been a problem.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_ThiefTrader",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2152925381916717176": {
+    "Prev": "185921096601618193",
+    "Next": "29901477152808146",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lucan ostorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You killed my contact. I'll have your head for that.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "yak gro-skandar",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_ThiefTrader",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MV_ThiefTrader",
+        "Value": 25.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "29901477152808146": {
+    "Prev": "2152925381916717176",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lucan ostorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's right. Just tell Yak gro-Skandar that's what you have. And hurry up about it. Those weapons will get to Ald-ruhn quickly, or there will be trouble.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "yak gro-skandar",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

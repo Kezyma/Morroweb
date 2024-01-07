@@ -1,0 +1,80 @@
+{
+  "367316099307276611": {
+    "Prev": "",
+    "Next": "1953121723209921247",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vivec_god",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have given you a copy of my proposed plan. Read it, study it, commit it to memory.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B8_MeetVivec",
+        "Value": 55.0
+      }
+    ],
+    "Script": []
+  },
+  "1953121723209921247": {
+    "Prev": "367316099307276611",
+    "Next": "6739307621390017830",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vivec_god",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "To destroy Dagoth Ur, you must sever his connection with the Heart of Lorkhan. To do this, strike the Heart with the artifact hammer Sunder once, then strike the Heart more than once with the artifact blade Keening. You must wear Wraithguard, because you cannot handle either Sunder or Keening unless you are wearing Wraithguard. That is the short, simple explanation. Here is the long, detailed explanation, written down for your convenience. Read it, study it, commit it to memory.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->additem \"bk_Vivecs_Plan\" 1",
+      "Journal \"B8_MeetVivec\" 55",
+      "ShowMap Vemynal ",
+      "ShowMap Odrosal",
+      "ShowMap \"Dagoth Ur\""
+    ]
+  },
+  "6739307621390017830": {
+    "Prev": "1953121723209921247",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vivec_god",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "To defeat Dagoth Ur, go to Red Mountain to recover the artifact hammer Sunder from Gate Citadel Vemynal, then recover the artifact blade Keening from Gate Citadel Odrosal. Then proceed with Wraithguard, Sunder, and Keening to the citadel of Dagoth Ur. Within the citadel, find the Heart of Lorkhan. Use the three artifacts to sever Dagoth Ur's connection to the Heart, and he will be destroyed, and the Blight ended on Morrowind.",
+    "Filters": [],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  }
+}

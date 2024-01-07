@@ -1,0 +1,174 @@
+{
+  "1678212291273917501": {
+    "Prev": "",
+    "Next": "31458209292949325837",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tsiya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, thank you for the note. Tsiya will miss him.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_SkoomaCorpse",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MV_SkoomaCorpse",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "31458209292949325837": {
+    "Prev": "1678212291273917501",
+    "Next": "8172272613189828252",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tsiya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, this. Well, this was really for a friend...never mind. Thank you for returning it. Tsiya can't imagine you care whose it is. In fact, take this. It was supposed to be Ernil's when he brought Tsiya these things.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "apparatus_a_spipe_tsiya",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AddTopic \"Skooma Pipe\"",
+      "Journal \"MV_SkoomaCorpse\" 20",
+      "RemoveItem \"Gold_001\" 50",
+      "AddItem \"Apparatus_A_Spipe_Tsiya\" 1",
+      "Player->RemoveItem \"Apparatus_A_Spipe_Tsiya\" 1",
+      "Player->AddItem \"Gold_001\" 50",
+      "RemoveItem \"Ingred_Moon_Sugar_01\" 10",
+      "Player->AddItem \"Ingred_Moon_Sugar_01\" 10",
+      "AddItem \"bk_notefromernil\" 1",
+      "Player->RemoveItem \"bk_notefromernil\" 1"
+    ]
+  },
+  "8172272613189828252": {
+    "Prev": "31458209292949325837",
+    "Next": "2186131443169943633",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tsiya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah, well, it's a shame you didn't pick up that skooma pipe. No need to skooma-coat what it was. Tsiya was looking forward to getting her pipe. Well, thanks for the information.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "apparatus_a_spipe_tsiya",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "AddTopic \"Skooma Pipe\"",
+      "Player->RemoveItem \"bk_notefromernil\" 1",
+      "Journal \"MV_SkoomaCorpse\" 15"
+    ]
+  },
+  "2186131443169943633": {
+    "Prev": "8172272613189828252",
+    "Next": "25959573123342439",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tsiya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Nothing? Well, thanks for the news, anyway.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_SkoomaCorpse\" 30",
+      "Goodbye"
+    ]
+  },
+  "25959573123342439": {
+    "Prev": "2186131443169943633",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tsiya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've got a note from Ernil for Tsiya? That's odd...Tsiya was expecting him here any day now. He's dead? Oh, no. Ernil was a good man, and always dealt fairly. Tsiya doesn't suppose you found anything he might have been delivering to Tsiya did you?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_SkoomaCorpse",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_SkoomaCorpse\" 10",
+      "Choice \"Yes, there was something on the body that might have belonged to you.\" 1 \"No, I didn't find anything.\" 2"
+    ]
+  }
+}

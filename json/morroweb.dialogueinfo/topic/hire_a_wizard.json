@@ -1,0 +1,391 @@
+{
+  "136931341560028801": {
+    "Prev": "",
+    "Next": "6269192372209510459",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can't talk to you about this until you make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "6269192372209510459": {
+    "Prev": "136931341560028801",
+    "Next": "20056111982881732606",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already hired a wizard. When his contract expires, maybe I'll need your help again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SadrithMoraDefenses",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "20056111982881732606": {
+    "Prev": "6269192372209510459",
+    "Next": "11413155111305026625",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, our new guard has already arrived. Good work, %PCName. I was using this ring to help defend the place, but I don't need it anymore.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SadrithMoraDefenses",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SadrithMoraDefenses 100",
+      "Player->AddItem \"Dire Shardbolt Ring\" 1",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "11413155111305026625": {
+    "Prev": "20056111982881732606",
+    "Next": "2023815520175463594",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Never mind. I understand that the person in charge of hiring out wizards is dead. That was Arielle Phiencel. A shame. You don't know anything about her death, do you? Anyway, there are other jobs for you to do.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "arielle phiencel",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SadrithMoraDefenses 110"
+    ]
+  },
+  "2023815520175463594": {
+    "Prev": "11413155111305026625",
+    "Next": "24874229662579113327",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go to the Mages Guild over at Wolverine Hall and see if you can hire a wizard to protect our guildhouse here from the Camonna Tong thugs.",
+    "Filters": [],
+    "Script": [
+      "Journal TG_SadrithMoraDefenses 10",
+      "ShowMap \"Wolverine Hall\""
+    ]
+  },
+  "24874229662579113327": {
+    "Prev": "2023815520175463594",
+    "Next": "2916819197152471909",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arielle phiencel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't care what happened to him, all transactions are final, and I'm not sending you another guard. Battlemages don't grow on trees, you know.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "natalinus flavonius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SadrithMoraDefenses",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "2916819197152471909": {
+    "Prev": "24874229662579113327",
+    "Next": "2360830167101947152",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arielle phiencel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I have sent you a guard.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SadrithMoraDefenses",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "2360830167101947152": {
+    "Prev": "2916819197152471909",
+    "Next": "872010171619915056",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arielle phiencel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, these are all fine samples. I will send one of our fine Battlemages, Natalinus Flavonius, over to Dirty Muriel's.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SadrithMoraDefenses 70",
+      "Player->RemoveItem Ingred_Raw_Ebony_01 4",
+      "AddItem Ingred_Raw_Ebony_01 4",
+      "\"Natalinus Flavonius\"->Enable"
+    ]
+  },
+  "872010171619915056": {
+    "Prev": "2360830167101947152",
+    "Next": "20526276181085724445",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arielle phiencel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No ebony, no guard for your guildhall.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "20526276181085724445": {
+    "Prev": "872010171619915056",
+    "Next": "586530852730729886",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arielle phiencel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So do you have the ebony?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_raw_ebony_01",
+        "Value": 4.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SadrithMoraDefenses",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here they are\" 1 \"No, not yet\" 2"
+    ]
+  },
+  "586530852730729886": {
+    "Prev": "20526276181085724445",
+    "Next": "3976128851710228578",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arielle phiencel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I could arrange for a wizard to guard your precious guildhall. But first you must bring me four pieces of raw ebony for an experiment. If you bring me the ebony, I will send you a guard.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SadrithMoraDefenses",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SadrithMoraDefenses 50"
+    ]
+  },
+  "3976128851710228578": {
+    "Prev": "586530852730729886",
+    "Next": "1410252031064720099",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "erer darothril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Who, me? I'm no guard.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TG_SadrithMoraDefenses",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1410252031064720099": {
+    "Prev": "3976128851710228578",
+    "Next": "1240260903277665",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "natalinus flavonius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, you hired me to guard this room.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SadrithMoraDefenses",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "1240260903277665": {
+    "Prev": "1410252031064720099",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "Sadrith Mora, Wolverine Hall",
+    "PlayerFaction": "",
+    "Text": "You want to hire a wizard as a guard? Talk to Arielle Phiencel.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "arielle phiencel",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

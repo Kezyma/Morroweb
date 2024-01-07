@@ -1,0 +1,287 @@
+{
+  "1223428587300376462": {
+    "Prev": "",
+    "Next": "149566323006016870",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled from House Hlaalu. You must make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "149566323006016870": {
+    "Prev": "1223428587300376462",
+    "Next": "1732111579259325430",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "You don't need to say it again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_DisguisedArmor",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HH_DisguisedArmor",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1732111579259325430": {
+    "Prev": "149566323006016870",
+    "Next": "19821293371703031681",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. Take this helm and speak with Neminda at the Redoran Council. Take a silt strider to Ald'ruhn, then look under Skar. When she asks what you want, say you are an orphan of Arnesia. Neminda should give you a coded message to deliver. Bring that coded message to me instead.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "SameSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HH_DisguisedArmor 10",
+      "Player->AddItem Bonemold_Gah-Julan_HHDA 1",
+      "Neminda->AddItem bk_nemindasorders 1"
+    ]
+  },
+  "19821293371703031681": {
+    "Prev": "1732111579259325430",
+    "Next": "1770536112529922357",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. Take this helm and speak with Neminda at the Redoran Council. Take a silt strider to Ald'ruhn, then look under Skar. When she asks what you want, say you are an orphan of Arnesia. Neminda should give you a coded message to deliver. Bring that coded message to me instead.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "SameSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HH_DisguisedArmor 11",
+      "Player->AddItem Bonemold_Gah-Julan_HHDA 1",
+      "Neminda->AddItem bk_nemindasorders 1"
+    ]
+  },
+  "1770536112529922357": {
+    "Prev": "19821293371703031681",
+    "Next": "7062267821651731091",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I expected better of you. Perhaps you don't deserve the title of %PCRank.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "7062267821651731091": {
+    "Prev": "1770536112529922357",
+    "Next": "8038280651571829605",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I expected better of you. Perhaps you don't deserve the title of %PCRank.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "8038280651571829605": {
+    "Prev": "7062267821651731091",
+    "Next": "756310263772131418",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "How fortunate! Your voice sounds almost like the Redoran Felsen Sethandus who died... um, just recently. Would you be willing to disguise yourself as Felsen Sethandus and get orders from House Redoran, then deliver the orders to me?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "NotEqual",
+        "Id": "PCRace",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "NotEqual",
+        "Id": "PCRace",
+        "Value": 6.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HH_DisguisedArmor",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes.\" 1 \"No, too busy.\" 2"
+    ]
+  },
+  "756310263772131418": {
+    "Prev": "8038280651571829605",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "How fortunate! Your voice sounds almost like the Redoran Relmerea Saram who died... um, just recently. Would you be willing to disguise yourself as Relmerea Saram and get orders from House Redoran, then deliver the orders to me?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "NotEqual",
+        "Id": "PCRace",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "NotEqual",
+        "Id": "PCRace",
+        "Value": 6.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HH_DisguisedArmor",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes.\" 1 \"No, too busy.\" 2"
+    ]
+  }
+}

@@ -1,0 +1,271 @@
+{
+  "18264120082043913475": {
+    "Prev": "",
+    "Next": "14276934815485651",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have heard that you are a False Incarnate. I am not yet convinced, but I no longer trust you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B8_MeetVivec",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "14276934815485651": {
+    "Prev": "18264120082043913475",
+    "Next": "21708170632605020008",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled from the Temple. You must make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "21708170632605020008": {
+    "Prev": "14276934815485651",
+    "Next": "32543167861531928609",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have already attempted your Pilgrimage to the Sanctus Shrine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TT_SanctusShrine",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "32543167861531928609": {
+    "Prev": "21708170632605020008",
+    "Next": "60769063282655868",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have already made your Pilgrimage to the Sanctus Shrine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TT_SanctusShrine",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "60769063282655868": {
+    "Prev": "32543167861531928609",
+    "Next": "126512307697242",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You broke your oath of silence, %PCRank %PCName. This is disappointing. Perhaps you are not suited for the Temple.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_SanctusShrine",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal TT_SanctusShrine 110",
+      "ModDisposition -5"
+    ]
+  },
+  "126512307697242": {
+    "Prev": "60769063282655868",
+    "Next": "3189322204757623647",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You made the Pilgrimage to the Sanctus Shrine, and you have proven your piety. I celebrate your devotion. Perhaps you would enjoy these books.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TT_SanctusShrine",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal TT_SanctusShrine 100",
+      "ModPCFacRep 5 \"Temple\"",
+      "ModDisposition 15",
+      "Player->ModReputation 1",
+      "Player->AddItem \"bookskill_illusion2\" 1",
+      "Player->AddItem \"BookSkill_Blunt Weapon5\" 1",
+      "Player->AddItem \"bookskill_restoration3\" 1",
+      "Player->AddItem \"bookskill_speechcraft5\" 1"
+    ]
+  },
+  "3189322204757623647": {
+    "Prev": "126512307697242",
+    "Next": "181922508205576825",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I swear you to silence. You may not speak again until you reach the Sanctus Shrine in Dagon Fel. The shrine is on an island west of Sheogorad. Look for a shack with a triolith beside it. I will mark it on your map.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TT_SanctusShrine 20",
+      "ShowMap \"Sanctus Shrine\""
+    ]
+  },
+  "181922508205576825": {
+    "Prev": "3189322204757623647",
+    "Next": "370914584915329295",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You may wait as long as you wish.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "370914584915329295": {
+    "Prev": "181922508205576825",
+    "Next": "186591732139393916",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "To make the Pilgrimage, I must swear you to silence. If you speak with anyone before reaching the shrine, you will have broken your vow. Before you are sworn to silence, you may wish to purchase some potions of levitation or water walking. There is no easy way to get to the Sanctus Shrine in Dagon Fel and the waters can be dangerous. Tell me when you are ready to take the vow of Silence.",
+    "Filters": [],
+    "Script": [
+      "Journal TT_SanctusShrine 10",
+      "Choice \"Take vow of silence\" 1 \"Wait\" 2"
+    ]
+  },
+  "186591732139393916": {
+    "Prev": "370914584915329295",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "llirala sendas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, this is the Sanctus Shrine. This is the very shack Tholer Saryoni lived in when he wrote his sermons. I am merely the caretaker.",
+    "Filters": [],
+    "Script": []
+  }
+}

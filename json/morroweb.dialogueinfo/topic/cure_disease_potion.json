@@ -1,0 +1,910 @@
+{
+  "225026087201129623": {
+    "Prev": "",
+    "Next": "20705291032551824452",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled from House Redoran. Make amends and perhaps we can speak again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "20705291032551824452": {
+    "Prev": "225026087201129623",
+    "Next": "64751121921011859",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I heard that you murdered Theldyn Virith. House Redoran does not tolerate murderers.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "theldyn virith",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "64751121921011859": {
+    "Prev": "20705291032551824452",
+    "Next": "2960919028871413944",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "You already delivered the Cure Disease potion.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Courier",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2960919028871413944": {
+    "Prev": "64751121921011859",
+    "Next": "2910111461769027825",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Good work, %PCName. I heard you delivered the potion. Just tell me when you're ready for more duties.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Courier",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Journal HR_Courier 100",
+      "ModPCFacRep 5 Redoran",
+      "ModDisposition 5"
+    ]
+  },
+  "2910111461769027825": {
+    "Prev": "2960919028871413944",
+    "Next": "312165525537922327",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I've already given you the potion. Just deliver it to Theldyn Virith in Ald Velothi.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Courier",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "312165525537922327": {
+    "Prev": "2910111461769027825",
+    "Next": "74363173922534955",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Here. Take this Cure Disease Potion to Theldyn Virith in Ald Velothi. While you're there, ask if there's anything he needs done.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_MudcrabNest",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HR_Courier 10",
+      "Player->AddItem P_Cure_Common_S 1"
+    ]
+  },
+  "74363173922534955": {
+    "Prev": "312165525537922327",
+    "Next": "17037292011274431261",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard you'd been expelled, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "17037292011274431261": {
+    "Prev": "74363173922534955",
+    "Next": "905612119606851",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Thank you again for delivering the potion. One of the Arvel family was ill.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Courier",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "905612119606851": {
+    "Prev": "17037292011274431261",
+    "Next": "13197204303127218833",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. The Arvel family will be grateful. Anything I can do for you? I might have some duties for you later.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "p_cure_common_s",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem P_Cure_Common_S 1",
+      "AddItem P_Cure_Common_S 1",
+      "ModDisposition 10",
+      "Journal HR_Courier 40"
+    ]
+  },
+  "13197204303127218833": {
+    "Prev": "905612119606851",
+    "Next": "158602197192824292",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are? You're here to deliver the potion? Well, where is it?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "158602197192824292": {
+    "Prev": "13197204303127218833",
+    "Next": "346893951864618506",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, I'm sorry. I was expecting a potion from Ald'ruhn, so I assumed...",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "346893951864618506": {
+    "Prev": "158602197192824292",
+    "Next": "645811855296408403",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Are you here to deliver the potion?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Courier",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes\" 1 \"No\" 2"
+    ]
+  },
+  "645811855296408403": {
+    "Prev": "346893951864618506",
+    "Next": "281416807327643731",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Geon Auline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, thank you for helping me. It's a silly story, really. I'd been down in the sewers...  why? Well, I'd gotten a tip that a rare and valuable item might be down there. All I found, however, was rats. No matter now; everything is fine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_CrimsonPlague",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "281416807327643731": {
+    "Prev": "645811855296408403",
+    "Next": "2093648261068731590",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Geon Auline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah, thank you, %PCName. I was unaware you did charity work in addition to your other talents.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "p_cure_common_s",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_EstateSale",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"p_cure_common_s\" 1",
+      "Journal MS_CrimsonPlague 30"
+    ]
+  },
+  "2093648261068731590": {
+    "Prev": "281416807327643731",
+    "Next": "4700105752189125138",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Geon Auline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you. It seems you don't quite make a mess of everything, now do you?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "p_cure_common_s",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_EstateSale",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"p_cure_common_s\" 1",
+      "Journal MS_CrimsonPlague 30"
+    ]
+  },
+  "4700105752189125138": {
+    "Prev": "2093648261068731590",
+    "Next": "1458628831211458510",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Geon Auline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you so much, %PCName. I'll be able to return to my work in full health. Give my regards to Nerile, would you?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "p_cure_common_s",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"p_cure_common_s\" 1",
+      "additem \"p_cure_common_s\" 1",
+      "Journal MS_CrimsonPlague 30"
+    ]
+  },
+  "1458628831211458510": {
+    "Prev": "4700105752189125138",
+    "Next": "27427225562271510984",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Geon Auline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Is this some kind of joke? I'm a sick man, and I need to return to my work. I don't have time for games.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "27427225562271510984": {
+    "Prev": "1458628831211458510",
+    "Next": "2500013613722825900",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Geon Auline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, I'm sorry. It's just that Nerile at the Temple said she'd send someone over with it. I suppose I assumed it was you; I don't often get visitors.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": []
+  },
+  "2500013613722825900": {
+    "Prev": "27427225562271510984",
+    "Next": "216054691140254606",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Geon Auline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you here to deliver the potion?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_CrimsonPlague",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Give him the potion\" 3 \"Keep the potion\" 4"
+    ]
+  },
+  "216054691140254606": {
+    "Prev": "2500013613722825900",
+    "Next": "2950564922513021735",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Nerile Andaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for taking care of that, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_CrimsonPlague",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "2950564922513021735": {
+    "Prev": "216054691140254606",
+    "Next": "28034269291993114715",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Nerile Andaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What do you mean, Athelyn Malas is dead? There's no explanation for that. He was ill, yes, but the disease wouldn't have killed him so quickly. %PCName... I find it difficult to believe you had nothing to do with this. I can't trust you, and I'm afraid I can't work with someone I don't trust. Please leave. Now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_CrimsonPlague",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MS_CrimsonPlague",
+        "Value": 70.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "athelyn malas",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "moddisposition -50",
+      "Journal MS_CrimsonPlague 69",
+      "Goodbye"
+    ]
+  },
+  "28034269291993114715": {
+    "Prev": "2950564922513021735",
+    "Next": "19270318832462019622",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Nerile Andaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I know. Please don't hate me. But after those vicious rats showed up, I realized I still can't afford to leave the Temple. Besides, I'd like to take a closer look at one of them, to see if I can't really figure out what's going on here. Just take the potion to Athelyn Malas; he should be somewhere outside the Temple, in the courtyard. I do appreciate this, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_CrimsonPlague",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Journal MS_CrimsonPlague 50",
+      "player->additem \"p_cure_common_s\" 1"
+    ]
+  },
+  "19270318832462019622": {
+    "Prev": "28034269291993114715",
+    "Next": "1504524591886717331",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Nerile Andaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You delivered the potion? Wonderful, %PCName. I know it was a simple task, perhaps even an annoying one, but it was important nonetheless. I imagine Geon Auline will be feeling much better in the next few days.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_CrimsonPlague",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "1504524591886717331": {
+    "Prev": "19270318832462019622",
+    "Next": "26232230222930126739",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Nerile Andaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It needs to go to Geon Auline, %PCName. I fear his condition has only worsened since I first heard of it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_CrimsonPlague",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "26232230222930126739": {
+    "Prev": "1504524591886717331",
+    "Next": "708047761928518667",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Nerile Andaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I know it's a menial task, most likely beneath someone of your stature. I'd take it myself, but I need to stay here in case anyone else arrives needing assistance. I do appreciate it, %PCName. Just let me know when you've delivered it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_CrimsonPlague",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal MS_CrimsonPLague 20",
+      "player->additem \"p_cure_common_s\" 1"
+    ]
+  },
+  "708047761928518667": {
+    "Prev": "26232230222930126739",
+    "Next": "1378102702713318908",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Nerile Andaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I know it's a menial task, most likely beneath someone of your stature. I'd take it myself, but I need to stay here in case anyone else arrives needing assistance. I do appreciate it, %PCName. Just let me know when you've delivered it.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "PlagueActivate",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MS_CrimsonPLague 20",
+      "player->additem \"p_cure_common_s\" 1"
+    ]
+  },
+  "1378102702713318908": {
+    "Prev": "708047761928518667",
+    "Next": "3008421318100436980",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athelyn malas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hrmph. At least you made an effort to help. More than I can say for these so-called \"Healers\".",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_CrimsonPlague",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "3008421318100436980": {
+    "Prev": "1378102702713318908",
+    "Next": "100912981223056424",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athelyn malas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, at least someone around here isn't determined to let an old man die. I'll just take this and go home. No sense in hanging around here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "p_cure_common_s",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"p_cure_common_s\" 1",
+      "additem \"p_cure_common_s\" 1",
+      "Journal MS_CrimsonPlague 60"
+    ]
+  },
+  "100912981223056424": {
+    "Prev": "3008421318100436980",
+    "Next": "1936234272619022679",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athelyn malas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's not enough that an old man can't get help, but he has to suffer mocking at the hands of someone like you? Get away from me, %PCRace!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "1936234272619022679": {
+    "Prev": "100912981223056424",
+    "Next": "28082211612176819653",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athelyn malas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Is it that bad, that you won't even get near me to give me the damned potion? Where's your compassion?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": [
+      "moddisposition -10"
+    ]
+  },
+  "28082211612176819653": {
+    "Prev": "1936234272619022679",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athelyn malas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What, they sent you out with a potion instead of letting me come in? Fine. Whatever. I don't care. I'm just tired of being sick. Just give it to me, will you?",
+    "Filters": [],
+    "Script": [
+      "Choice: \"Give him the potion.\" 5 \"Keep the potion.\" 6"
+    ]
+  }
+}

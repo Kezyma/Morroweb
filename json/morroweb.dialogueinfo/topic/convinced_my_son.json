@@ -1,0 +1,38 @@
+{
+  "2644813540383817125": {
+    "Prev": "",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fathasa llethri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent! It sounded like there was a fight going on in there, and from the looks of you, it seems you got the worst of it. No matter. I thank you for your efforts. Here, take this. I think it will help even your kind.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_VampRich",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampRich\" 80",
+      "player->additem \"ring_fathasa_unique\" 1"
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "956872517528464": {
+    "Prev": "",
+    "Next": "194628832854511441",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uupse fyr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "They do seem to find the drumming comforting, poor things. I think they'll be a lot more peaceful now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_3_CorprusSafe",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "194628832854511441": {
+    "Prev": "956872517528464",
+    "Next": "20563289352119022773",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uupse fyr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. That guarskin drum will do perfectly. I'll take it and play a little soothing rhythm, and I think that will pacify the poor corprus victims so they won't be so savage and aggressive.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_3_CorprusCure",
+        "Value": 10.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_de_drum_02",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"misc_de_drum_02\" 1",
+      "additem \"misc_de_drum_02\" 1",
+      "Journal A2_3_CorprusSafe 100",
+      "startscript CorprusBeastSafe"
+    ]
+  },
+  "20563289352119022773": {
+    "Prev": "194628832854511441",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uupse fyr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. Look around. There's a guarskin drum somewhere. If you'll find it and bring it to me, I'll sooth the corprus victims with a little music.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_3_CorprusCure",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  }
+}

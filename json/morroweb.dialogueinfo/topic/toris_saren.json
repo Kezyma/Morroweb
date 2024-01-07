@@ -1,0 +1,240 @@
+{
+  "31622245761269217751": {
+    "Prev": "",
+    "Next": "17521268213258123123",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "17521268213258123123": {
+    "Prev": "31622245761269217751",
+    "Next": "30923121053170710200",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Toris Saren is dead by your hand.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritSaren",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "30923121053170710200": {
+    "Prev": "17521268213258123123",
+    "Next": "2749526863171126654",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You say Toris Saren is already dead? By your own hand? That is unfortunate. The Saren family is influential and it is clear that the execution of this Writ was not honorable. You will get credit for this Writ, but I must use the payment to mend relations with the Saren family.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "toris saren",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MT_WritSaren",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal MT_WritSaren 100",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition -10"
+    ]
+  },
+  "2749526863171126654": {
+    "Prev": "30923121053170710200",
+    "Next": "252632453295095407",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have claimed and executed the Writ on Toris Saren. Here is your payment.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MT_WritSaren",
+        "Value": 90.0
+      }
+    ],
+    "Script": [
+      "Journal MT_WritSaren 110",
+      "Player->AddItem \"Gold_001\" 500",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition 10"
+    ]
+  },
+  "252632453295095407": {
+    "Prev": "2749526863171126654",
+    "Next": "25706151801018223005",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have claimed and executed the Writ on Toris Saren. Here is your payment.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MT_WritSaren",
+        "Value": 80.0
+      }
+    ],
+    "Script": [
+      "Journal MT_WritSaren 100",
+      "Player->AddItem \"Gold_001\" 500",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition 5"
+    ]
+  },
+  "25706151801018223005": {
+    "Prev": "252632453295095407",
+    "Next": "3104920736297131424",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have given this Writ to you already, %PCName.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "writ_saren",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritSaren",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "3104920736297131424": {
+    "Prev": "25706151801018223005",
+    "Next": "13937285692277523983",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have given this Writ to you already, %PCName. As you know, Writs are issued only once. Your official paperwork will exonerate you from your deeds when you are confronted by the authorities - so guard it well. If you have lost it, you will have to suffer punishment for your crimes. This can be costly... very costly. But members of the %Faction must have immaculate reputations.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "writ_saren",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritSaren",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "13937285692277523983": {
+    "Prev": "3104920736297131424",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Toris Saren may be found in Saren Manor in the Plaza of the Redoran Canton here in Vivec. His family is influential. Make sure his execution is swift and honorable. You need no more instructions than this.",
+    "Filters": [],
+    "Script": [
+      "Journal MT_WritSaren 10",
+      "Player->AddItem \"writ_saren\" 1"
+    ]
+  }
+}

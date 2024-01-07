@@ -1,0 +1,158 @@
+{
+  "1280311661531218170": {
+    "Prev": "",
+    "Next": "6357211092137920258",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have demonstrated your knowledge of the basic spells.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_WizardSpells",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "6357211092137920258": {
+    "Prev": "1280311661531218170",
+    "Next": "1622274672481210084",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have learned the rudimentary spells. I am proud to be your patron. For your next lesson, please take this book on War Magic by the legendary Zurin Arctus.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "learnedWizardSpells",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_WizardSpells",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HT_WizardSpells 100",
+      "Player->AddItem  bookskill_destruction4 1",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 5"
+    ]
+  },
+  "1622274672481210084": {
+    "Prev": "6357211092137920258",
+    "Next": "24187163892101531244",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see you have already learned the rudimentary spells. I am proud to be your patron. For your next lesson, please take this book on War Magic by the legendary Zurin Arctus.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "learnedWizardSpells",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "HT_WizardSpells",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HT_WizardSpells 100",
+      "Player->AddItem  bookskill_destruction4 1",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 15"
+    ]
+  },
+  "24187163892101531244": {
+    "Prev": "1622274672481210084",
+    "Next": "3088429521932618889",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you are having trouble finding these spells, should speak with the Telvanni mage trainer in Vivec, Fevyn Ralen. Or perhaps Felara Andrethi over at Tel Aruhn.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_WizardSpells",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "3088429521932618889": {
+    "Prev": "24187163892101531244",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Learn the rudimentary spell of Recall, a spell of flying, and a spell fire damage. I will recognize the standard spells such as Levitate, Great Levitate, or Wild Levitate. For fire damage, I would suggest Fireball, Greater Fireball, or Fire Storm. Spells you research yourself will not be sufficient.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_MineCure",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HT_WizardSpells 10"
+    ]
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "42698712920931994": {
+    "Prev": "",
+    "Next": "3020531837167412839",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "You have returned the Amulet of Sanguine Nimble Armor.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_S_NimbleArmor",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3020531837167412839": {
+    "Prev": "42698712920931994",
+    "Next": "1436670373263130998",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "With this, you have returned all the Threads of the Webspinner to the Morag Tong. You will be blessed by Mephala's skill.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "ThreadsWebspinner",
+        "Value": 25.0
+      }
+    ],
+    "Script": [
+      "Journal MT_S_NimbleArmor 100",
+      "Player->RemoveItem SanguineAmuletNimbleArmor 1",
+      "Player->AddSpell SkillMephala_SP",
+      "Set ThreadsWebspinner to ThreadsWebspinner + 1",
+      "ModPCFacRep 25 \"Morag Tong\"",
+      "ModDisposition 25"
+    ]
+  },
+  "1436670373263130998": {
+    "Prev": "3020531837167412839",
+    "Next": "1139730484723812275",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "The threads of the Webspinner return to us one by one.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MT_S_NimbleArmor 100",
+      "Player->RemoveItem SanguineAmuletNimbleArmor 1",
+      "Set ThreadsWebspinner to ThreadsWebspinner + 1",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition 10"
+    ]
+  },
+  "1139730484723812275": {
+    "Prev": "1436670373263130998",
+    "Next": "18857239281542421776",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "If you do not return this Thread, how can I be sure where your true loyalties lie?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "18857239281542421776": {
+    "Prev": "1139730484723812275",
+    "Next": "760532696120096908",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "You have been expelled from the Morag Tong... But I see you have one of the Threads of the Webspinner. Will you return this Thread?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sanguineamuletnimblearmor",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is\" 1 \"No\" 2"
+    ]
+  },
+  "760532696120096908": {
+    "Prev": "18857239281542421776",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "I see you have the Amulet of Sanguine Nimble Armor, one of the Threads of the Webspinner that Mephala dedicated to our cause long ago. Will you return this Thread to the custody of the Morag Tong?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sanguineamuletnimblearmor",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is\" 1 \"No\" 2"
+    ]
+  }
+}

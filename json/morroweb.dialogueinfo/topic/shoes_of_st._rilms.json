@@ -1,0 +1,379 @@
+{
+  "41531243822222944": {
+    "Prev": "",
+    "Next": "3500247525422821",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I trust that you placed the shoes somewhere for safekeeping?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "shoes of st. rilms",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_RilmsShoes",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "3500247525422821": {
+    "Prev": "41531243822222944",
+    "Next": "19843123472424815563",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I gave you the Shoes of St. Rilms. Do you not remember? No, I see that you have them with you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_RilmsShoes",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "19843123472424815563": {
+    "Prev": "3500247525422821",
+    "Next": "1145677011254016993",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "As Archcanon you may examine the shoes. I entrust them to your care.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_RilmsShoes",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal TT_RilmsShoes 110",
+      "RemoveItem \"Shoes of St. Rilms\" 1",
+      "Player->AddItem \"Shoes of St. Rilms\" 1"
+    ]
+  },
+  "1145677011254016993": {
+    "Prev": "19843123472424815563",
+    "Next": "1774174411550615094",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have heard rumors that you claim to be the Nerevarine. I do not know what to think of these rumors, but I will not give you any duties right now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B8_MeetVivec",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1774174411550615094": {
+    "Prev": "1145677011254016993",
+    "Next": "204787987147084079",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled from the Temple.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "204787987147084079": {
+    "Prev": "1774174411550615094",
+    "Next": "3356299751213721194",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You brought me the Shoes of St. Rilms. I assure you they are being well cared for.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_RilmsShoes",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3356299751213721194": {
+    "Prev": "204787987147084079",
+    "Next": "116364879174329937",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. I will make sure they are cared for.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TT_RilmsShoes 100",
+      "Player->RemoveItem \"Shoes of St. Rilms\" 1",
+      "AddItem \"Shoes of St. Rilms\" 1",
+      "ModPCFacRep 5 \"Temple\"",
+      "ModDisposition 15"
+    ]
+  },
+  "116364879174329937": {
+    "Prev": "3356299751213721194",
+    "Next": "320114617757622224",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Perhaps you do not understand the importance of this priceless relic.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "320114617757622224": {
+    "Prev": "116364879174329937",
+    "Next": "2063629758266821600",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are... are those the Shoes of St. Rilms? Have you already recovered them from the depths of Ald Sotha?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "shoes of st. rilms",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TT_RilmsShoes",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give her the shoess\" 1 \"Keep the shoes.\" 2"
+    ]
+  },
+  "2063629758266821600": {
+    "Prev": "320114617757622224",
+    "Next": "31066300861810217199",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, these are the Shoes of St. Rilms. Will you return them to their proper place in the Temple?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "shoes of st. rilms",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give shoes\" 1 \"Keep shoes\" 2"
+    ]
+  },
+  "31066300861810217199": {
+    "Prev": "2063629758266821600",
+    "Next": "32740177071035924759",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go to Ald Sotha, just northeast of Vivec, and return this sacred relic to the Temple.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_RilmsShoes",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "32740177071035924759": {
+    "Prev": "31066300861810217199",
+    "Next": "711211223005210331",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 5,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "In a dream, a priest had a vision of the Shoes of St. Rilms lying neglected in the depths of Ald Sotha, just northeast of Vivec. Go to Ald Sotha and, if this is a true vision, return this sacred relic to the Temple. I offer you these potions to aid you in your quest.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 15.0
+      }
+    ],
+    "Script": [
+      "Journal TT_RilmsShoes 10",
+      "Player->AddItem \"p_heroism_s\" 1",
+      "Player->AddItem \"p_restore_health_e\" 4",
+      "Player->AddItem \"p_invisibility_q\" 2"
+    ]
+  },
+  "711211223005210331": {
+    "Prev": "32740177071035924759",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "In a dream, a priest had a vision of the Shoes of St. Rilms lying neglected in the depths of Ald Sotha, just northeast of Vivec. Go to Ald Sotha and, if this is a true vision, return this sacred relic to the Temple. Ald Sotha may be too difficult for you, %PCName, but you might make it through with the aid of these potions. In the priests' vision, the shoes were in a chest, behind a statue of Mehrunes Dagon.",
+    "Filters": [],
+    "Script": [
+      "Journal TT_RilmsShoes 10",
+      "Player->AddItem \"p_heroism_s\" 1",
+      "Player->AddItem \"p_restore_health_e\" 4",
+      "Player->AddItem \"p_invisibility_q\" 2"
+    ]
+  }
+}

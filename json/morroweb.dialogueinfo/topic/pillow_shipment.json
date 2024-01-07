@@ -1,0 +1,32 @@
+{
+  "1806026616964426083": {
+    "Prev": "",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drarayne thelas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A shipwreck? That's horrible! Oh, all of those wonderful pillows.... Well, I thank you, %PCName. It is good to know what became of my shipment, though the loss of pillows saddens me. A few of those were stuffed with racer plumes. A real shame. Still, thank you for your help with this. Take this as a token of my appreciation. It has served me well.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_pillowinvoice",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Player->removeitem \"bk_pillowinvoice\" 1",
+      "Player->AddItem \"misc_uni_pillow_unique\" 1",
+      "RemoveItem \"misc_uni_pillow_unique\" 1"
+    ]
+  }
+}

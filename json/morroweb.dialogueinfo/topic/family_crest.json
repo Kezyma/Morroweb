@@ -1,0 +1,253 @@
+{
+  "29849179521312713522": {
+    "Prev": "",
+    "Next": "1985462302872217981",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinyaramen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, that ring bears the seal of my great family. Where did you get it? Never mind. I'm sure it was taken off one of my ancestors killed by your kind.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "extravagant_ring_aund_uni",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1985462302872217981": {
+    "Prev": "29849179521312713522",
+    "Next": "2806096322446914728",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dhaunayne aundae",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Any Altmer who has met one of my kin should recognize the seal on that ring.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampChild",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampChild",
+        "Value": 120.0
+      }
+    ],
+    "Script": []
+  },
+  "2806096322446914728": {
+    "Prev": "1985462302872217981",
+    "Next": "2044011974223826608",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "iniel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hmmm...yes. I believe I've seen it before, or at least one similar. I think it was when I was in the Gateway Inn last week, talking to another Altmer. Hard to be certain, though. It was a long night of drinking. I'm sure you would understand.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "extravagant_ring_aund_uni",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampChild",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampChild\" 50"
+    ]
+  },
+  "2044011974223826608": {
+    "Prev": "2806096322446914728",
+    "Next": "174063592164725394",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tusamircil",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Suit yourself.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "extravagant_ring_aund_uni",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampChild",
+        "Value": 30.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampChild\" 65"
+    ]
+  },
+  "174063592164725394": {
+    "Prev": "2044011974223826608",
+    "Next": "276876021965916192",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tusamircil",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here you go. Don't know where you'd find him, though. He wandered in here last week and said he'd be back soon. Who knows, though? Could be months before he returns. Better you find him yourself.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "extravagant_ring_aund_uni",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampChild",
+        "Value": 30.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampChild\" 66",
+      "player->additem \"p_sinyaramen_unique\" 1",
+      "removeitem \"p_sinyaramen_unique\" 1"
+    ]
+  },
+  "276876021965916192": {
+    "Prev": "174063592164725394",
+    "Next": "1318722250291721515",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tusamircil",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sure you don't want that potion?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "extravagant_ring_aund_uni",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_VampChild",
+        "Value": 65.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, I suppose I do.\" 1 \"No. I don't need it.\" 2"
+    ]
+  },
+  "1318722250291721515": {
+    "Prev": "276876021965916192",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tusamircil",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I've seen a ring like that before. Sinyaramen wears it. Don't expect that he'll speak with you, though. He has little use for your kind. Although...he ordered a potion from me last week. If you deliver it to him for me, he might be willing to talk to you.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "extravagant_ring_aund_uni",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampChild",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampChild\" 60",
+      "Choice \"I'll take it to him.\" 1 \"I'll get him to speak to me.\" 2"
+    ]
+  }
+}

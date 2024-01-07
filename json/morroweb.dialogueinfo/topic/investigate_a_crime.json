@@ -1,0 +1,503 @@
+{
+  "39801273820234262": {
+    "Prev": "",
+    "Next": "30224322531077229300",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharsten heart-fang",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have made your decision. The matter is settled.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Trial",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "30224322531077229300": {
+    "Prev": "39801273820234262",
+    "Next": "180135733115265070",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharsten heart-fang",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Halfhand is dead? This is not our way, %PCName. I am displeased by your actions, though I suspected that Halfhand was a liar. Perhaps there was some wisdom in his death, after all. Now, though, you are to prove your strength as a warrior.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "rigmor halfhand",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Trial",
+        "Value": 90.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Trial 200"
+    ]
+  },
+  "180135733115265070": {
+    "Prev": "30224322531077229300",
+    "Next": "26404246201071430830",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharsten heart-fang",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So, Halfhand has invented this tale of theft? Over a woman? By the All-Maker, this will not go unpunished! By Skaal tradition, making a false accusation carries the same penalty as the crime that is claimed. In this case, either exile or death by sacrifice to the wolves. The verdict is yours to decide.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Trial",
+        "Value": 60.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Trial",
+        "Value": 90.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Trial 70"
+    ]
+  },
+  "26404246201071430830": {
+    "Prev": "180135733115265070",
+    "Next": "2162112551611331997",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharsten heart-fang",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You seem to have uncovered some important information. Go to Halfhand and present the information to him, and then bring the man to me. This matter will be resolved.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Trial",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Trial",
+        "Value": 55.0
+      }
+    ],
+    "Script": []
+  },
+  "2162112551611331997": {
+    "Prev": "26404246201071430830",
+    "Next": "1414307701526810588",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharsten heart-fang",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Come to me when you have more information, %PCName. This matter is a serious one, and we will not proceed until all of the facts have been discovered.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Trial",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Trial",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "1414307701526810588": {
+    "Prev": "2162112551611331997",
+    "Next": "903296881154523484",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharsten heart-fang",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are to investigate the charges of theft brought against Engar Ice-Mane. Speak with me again when you have learned something of value.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Trial",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Trial",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "903296881154523484": {
+    "Prev": "1414307701526810588",
+    "Next": "5120192622944011037",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharsten heart-fang",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Engar Ice-Mane has been accused of theft. His accuser, Rigmor Halfhand, claims that Ice-Mane stole furs from his house. These furs were, indeed, found in Ice-Mane's residence. The Skaal do not take such things lightly. We have little, and each is given according to his need. This offense is punishable by exile or sacrifice to the wolves. Ice-Mane will surely choose the wolves. Now, speak with the Skaal. Find out what you can. Then, report your findings to me, so the guilty may be punished appropriately.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Trial",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Trial 20"
+    ]
+  },
+  "5120192622944011037": {
+    "Prev": "903296881154523484",
+    "Next": "577163341177323781",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "korst wind-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have heard about this crime, and it puzzles me. Engar Ice-Mane is known to be an honorable warrior. Still, making a false accusation against another man seems a risky thing to do. I doubt even Rigmor Halfhand would do such a thing.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Trial",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Trial",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "577163341177323781": {
+    "Prev": "5120192622944011037",
+    "Next": "1419744821525324961",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "engar ice-mane",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I know what I am accused of, and I know that it is a lie! I have no need for the furs of Rigmor Halfhand. I am a Skaal warrior. My honor and the honor of the Skaal are my life. But I will bear this injustice as any warrior should--with dignity.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Trial",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Trial",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "1419744821525324961": {
+    "Prev": "577163341177323781",
+    "Next": "27611331103032161",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rigmor halfhand",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have told you my crime. My life is forfeit. Do what you must, stranger.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Trial",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "27611331103032161": {
+    "Prev": "1419744821525324961",
+    "Next": "947517408212530314",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rigmor halfhand",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You...found that letter. But why would...? This is an outrage! I never.... I only wanted the woman. Why did that fool have to choose the wolves? He could have simply left, and she and I could have been together forever! You know my crime, and I know you must tell Heart-Fang. Let us go to him, and I will accept my fate.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Trial",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Trial",
+        "Value": 60.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_BMtrial_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Trial 60",
+      "AiFollow Player 0 0 0 0 0 0"
+    ]
+  },
+  "947517408212530314": {
+    "Prev": "27611331103032161",
+    "Next": "253535863746719736",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rigmor halfhand",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can't understand why he would do such a thing. We of the Skaal give to each according to need. If Ice-Mane had needed more furs, they would have been provided. But, instead, he stole them from my home. It is difficult to explain. I feel sorry for his lovely wife, who will be left all alone.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Trial",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Trial",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "253535863746719736": {
+    "Prev": "947517408212530314",
+    "Next": "156293051273478360",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "risi ice-mane",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Rigmor Halfhand is a clever one, and his words can be like honey. You saw the letter he wrote me. It may be the reason he has brought these accusations against my husband.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Trial",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Trial",
+        "Value": 70.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_BMtrial_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "156293051273478360": {
+    "Prev": "253535863746719736",
+    "Next": "9266155452655111371",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "risi ice-mane",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Engar would never do a thing such as this. He is a man of honor, and we want for nothing. I cannot imagine what would drive Rigmor to make such an accusation. Perhaps he is jealous of my husband, and these charges are meant to disgrace him.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Trial",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Trial",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Trial 45"
+    ]
+  },
+  "9266155452655111371": {
+    "Prev": "156293051273478360",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Skaal",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The accusations that Rigmor Halfhand has made against Engar Ice-Mane? A terrible situation.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Trial",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Trial",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  }
+}

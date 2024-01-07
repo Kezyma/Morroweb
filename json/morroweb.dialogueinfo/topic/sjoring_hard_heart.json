@@ -1,0 +1,411 @@
+{
+  "10598195842914226196": {
+    "Prev": "",
+    "Next": "1368823450872210624",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Regretably, you broke the rules of the Fighters Guild and you have been expelled. Make amends, and then I can speak with you about this again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1368823450872210624": {
+    "Prev": "10598195842914226196",
+    "Next": "239495628700830035",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Although Sjoring Hard-Heart is dead, we must not rest easily. I fear there are troubling times ahead, not just for the Fighters Guild, but for all of Tamriel. Be wary and always ready for the threats yet to come. Use your position as Guildmaster to try and protect the Fighters Guild, not by allying with such as the Camonna Tong, but with hard work and high standards.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_KillHardHeart",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "239495628700830035": {
+    "Prev": "1368823450872210624",
+    "Next": "2601311142807014922",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Sjoring is already dead? I'm glad to hear it, %PCName. You've saved the Fighters Guild from the corruption of the Camonna Tong. As I promised, I am naming you the new Guildmaster. Congratulations, Master %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_KillHardHeart",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "sjoring hard-heart",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_KillHardHeart 100",
+      "PCRaiseRank",
+      "PCRaiseRank",
+      "ModDisposition 25"
+    ]
+  },
+  "2601311142807014922": {
+    "Prev": "239495628700830035",
+    "Next": "2571320421097520523",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "You have saved the Fighters Guild from Sjoring Hard-Heart and his allies in the Camonna Tong. As I promised, I am naming you the new Guildmaster. Congratulations, Master %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_KillHardHeart",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "sjoring hard-heart",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_KillHardHeart 100",
+      "PCRaiseRank",
+      "PCRaiseRank",
+      "ModDisposition 25"
+    ]
+  },
+  "2571320421097520523": {
+    "Prev": "2601311142807014922",
+    "Next": "830160843218527715",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "You must kill the Guildmaster Sjoring Hard-Heart. He'll likely be in the Fighters Guild in Vivec, and he'll be expecting you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_KillHardHeart",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "FG_KillHardHeart",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "830160843218527715": {
+    "Prev": "2571320421097520523",
+    "Next": "13713468844885334",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "There is one more step to freeing the Fighters Guild from corruption. You must kill the Guildmaster Sjoring Hard-Heart. Take this key, %PCName. It will let you into my private rooms. In the chests you will find two suits of armor. They were mine from years ago. They may help you fight Sjoring Hard-Heart. In spite of his faults, he's one of the best warriors in Vvardenfell, so be careful. He'll likely be in the Fighters Guild in Vivec, and he'll be expecting you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "FG_KillHardHeart",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_KillCronies",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem \"Key_Persius Mercius\" 1",
+      "Journal FG_KillHardHeart 10"
+    ]
+  },
+  "13713468844885334": {
+    "Prev": "830160843218527715",
+    "Next": "31547305661085429731",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled, %PCName. Make amends and speak with me again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "31547305661085429731": {
+    "Prev": "13713468844885334",
+    "Next": "157232741256349268",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Sjoring Hard-Heart is dead. His vendetta is over.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_KillHardHeart",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "157232741256349268": {
+    "Prev": "31547305661085429731",
+    "Next": "240612790302534091",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "So Sjoring Hard-Heart is dead. Whatever his personal vendetta, he won't trouble our Guild again. The remaining leaders of the Fighters Guild are more sympathetic to us. Since you've saved the Thieves Guild here in Vvardenfell, I think you deserve this. It's the Skeleton Key--the most perfect tool ever created for lockpicking. I found it when I lived in Hammerfell. Use it wisely. Now, I have new jobs for you to do.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "sjoring hard-heart",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_KillHardHeart",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal TG_KillHardHeart 100",
+      "Player->AddItem Skeleton_key 1",
+      "ModPCFacRep 15 \"Thieves Guild\"",
+      "ModDisposition 15"
+    ]
+  },
+  "240612790302534091": {
+    "Prev": "157232741256349268",
+    "Next": "30204235622024525152",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "You already killed Sjoring, too, %PCName? What? You're the new Master of the Fighters Guild, too? Oh, what luck! With you in charge, I'm sure both guilds will prosper. Since you've saved the Thieves Guild here in Vvardenfell, I think you deserve this. It's the Skeleton Key--the most perfect tool ever created for lockpicking. I found it when I lived in Hammerfell. Use it wisely. Now, I have new jobs for you to do.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "sjoring hard-heart",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_KillHardHeart 100",
+      "Player->AddItem Skeleton_key 1",
+      "ModPCFacRep 15 \"Thieves Guild\"",
+      "ModDisposition 15"
+    ]
+  },
+  "30204235622024525152": {
+    "Prev": "240612790302534091",
+    "Next": "140814791369423678",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "You already killed Sjoring, too, %PCName? Well, then. I guess that's settled. Sjoring Hard-Heart won't trouble our Guild again. Since you've saved the Thieves Guild here in Vvardenfell, I think you deserve this. It's the Skeleton Key--the most perfect tool ever created for lockpicking. I found when I lived in Hammerfell. Use it wisely. Now, I have new jobs for you to do.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "sjoring hard-heart",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_KillHardHeart",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TG_KillHardHeart 100",
+      "Player->AddItem Skeleton_key 1",
+      "ModPCFacRep 15 \"Thieves Guild\"",
+      "ModDisposition 15"
+    ]
+  },
+  "140814791369423678": {
+    "Prev": "30204235622024525152",
+    "Next": "1289228943189657075",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "He's the head of the Fighters Guild here in Vvardenfell. We've tried bribes, blackmail, and even diplomacy. Sjoring has some personal stake in this. I don't know what, but even without the Camonna Tong's backing, he's already planning an attack on all our Guild halls. Go to the Fighters Guild here in Vivec. Kill Sjoring Hard-Heart and report back to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_KillIenith",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal TG_KillHardHeart 10"
+    ]
+  },
+  "1289228943189657075": {
+    "Prev": "140814791369423678",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "We'll get back to him another time. For now, concentrate on your tasks at hand.",
+    "Filters": [],
+    "Script": []
+  }
+}

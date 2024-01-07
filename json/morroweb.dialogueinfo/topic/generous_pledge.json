@@ -1,0 +1,243 @@
+{
+  "5335322465444076": {
+    "Prev": "",
+    "Next": "24327223743162511959",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Canctunian Ponius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you again for recovering our embezzled funds.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC14_Ponius",
+        "Value": 45.0
+      }
+    ],
+    "Script": []
+  },
+  "24327223743162511959": {
+    "Prev": "5335322465444076",
+    "Next": "1829817871509330722",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Canctunian Ponius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for recovering our embezzled funds. And here are the 1000 drakes I pledged to support an Imperial cult mission to the Ashlanders.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC14_Ponius",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC14_Ponius",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal IC14_Ponius 45",
+      "player->additem gold_001 1000"
+    ]
+  },
+  "1829817871509330722": {
+    "Prev": "24327223743162511959",
+    "Next": "1430325626161632435",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Canctunian Ponius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you recover the embezzled funds from the absconded clerk, Mossanon, I'll be happy to redeem my generous pledge.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC14_Ponius",
+        "Value": 15.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC14_Ponius",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1430325626161632435": {
+    "Prev": "1829817871509330722",
+    "Next": "6155188911816721183",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Canctunian Ponius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Please accept my apologies. I wish things were otherwise.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC14_Ponius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC14_Ponius",
+        "Value": 50.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal IC14_Ponius 10",
+      "Goodbye"
+    ]
+  },
+  "6155188911816721183": {
+    "Prev": "1430325626161632435",
+    "Next": "2582528093292722917",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Canctunian Ponius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That is a most welcome offer. Our clerk, an Altmer named Mossanon, absconded with 3000 drakes. We have no idea where he went. To avoid scandal, we have not reported the crime to the guards. If you can track this Mossanon down and recover the missing 3000 drakes, I would be more than happy to immediately redeem my generous pledge to the Imperial cult.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC14_Ponius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC14_Ponius",
+        "Value": 50.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal IC14_Ponius 15"
+    ]
+  },
+  "2582528093292722917": {
+    "Prev": "6155188911816721183",
+    "Next": "1062520161701613229",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Canctunian Ponius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are from the Imperial cult, then? I'll be frank with you, but you must keep this in confidence. I cannot redeem my pledge at this time. Our clerk embezzled funds, and to avoid scandal, I am covering losses to the East Empire Company out of my own fortune.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC14_Ponius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC14_Ponius",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Offer to track down the clerk and recover the gold.\" 1 \"Thank him for his frankness and leave.\" 2"
+    ]
+  },
+  "1062520161701613229": {
+    "Prev": "2582528093292722917",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Iulus Truptor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "When I spoke with him some time ago, Canctunian Ponius promised us a donation of 1000 drakes for a mission to the Ashlanders. Canctunian Ponius is an important and prominent member of our community, and his word is widely respected. That is why it is strange that he has not been forthcoming with his generous pledge.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC14_Ponius",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  }
+}

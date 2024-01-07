@@ -1,0 +1,362 @@
+{
+  "2938014119877632517": {
+    "Prev": "",
+    "Next": "2460174521348913213",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baren alen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already gave me the sealed report, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BankCourier",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2460174521348913213": {
+    "Prev": "2938014119877632517",
+    "Next": "28720144861272210269",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baren alen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The seal on this has been broken, %PCName. I will tell Edryno Arethi not to use you as a courier again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "UnsealedEdryno1",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HH_BankCourier 50",
+      "Player->RemoveItem bk_TreasuryReport 1",
+      "AddItem bk_TreasuryReport 1",
+      "ModDisposition -10"
+    ]
+  },
+  "28720144861272210269": {
+    "Prev": "2460174521348913213",
+    "Next": "98777283760725765",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baren alen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good, good. You can tell Edryno Arethi that you delivered it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HH_BankCourier 50",
+      "Player->RemoveItem bk_TreasuryReport 1",
+      "AddItem bk_TreasuryReport 1",
+      "ModDisposition 10"
+    ]
+  },
+  "98777283760725765": {
+    "Prev": "28720144861272210269",
+    "Next": "31477120381910716734",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baren alen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, thank Almalexia. I'm tired of dealing with all the reports I get.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "31477120381910716734": {
+    "Prev": "98777283760725765",
+    "Next": "577557432208111956",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baren alen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Is that report for me?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_treasuryreport",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, take it.\" 1 \"No, nevermind.\" 2"
+    ]
+  },
+  "577557432208111956": {
+    "Prev": "31477120381910716734",
+    "Next": "60848537344015698",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baren alen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Another treasury report? Do you have it with you?",
+    "Filters": [],
+    "Script": []
+  },
+  "60848537344015698": {
+    "Prev": "577557432208111956",
+    "Next": "104117681333725076",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled. I cannot discuss business with you unless you make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "104117681333725076": {
+    "Prev": "60848537344015698",
+    "Next": "8376251091577311713",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already delivered the sealed report, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BankCourier",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "8376251091577311713": {
+    "Prev": "104117681333725076",
+    "Next": "265722432261529432",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What? Are you saying that Baren Alen is dead? This is a major blow to House Hlaalu. I am not sure what kinds of business I can give you now that he's dead.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "baren alen",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "265722432261529432": {
+    "Prev": "8376251091577311713",
+    "Next": "430820087111742358",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm glad you delivered the report, but you should not have opened it. That kind of unreliability is why I must send all my messages in code.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "UnsealedEdryno1",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BankCourier",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal HH_BankCourier 100",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition -10"
+    ]
+  },
+  "430820087111742358": {
+    "Prev": "265722432261529432",
+    "Next": "27787190841023416114",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm glad you were able to get that report to Baren Alen in time. Here, take these 50 drakes for your trouble.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BankCourier",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal HH_BankCourier 100",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 10",
+      "Player->AddItem Gold_001 50"
+    ]
+  },
+  "27787190841023416114": {
+    "Prev": "430820087111742358",
+    "Next": "275181379550130399",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Like I said, deliver the sealed report to Baren Alen at the Hlaalu Treasury.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BankCourier",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "275181379550130399": {
+    "Prev": "27787190841023416114",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Take this sealed report to Baren Alen, the clerk of the Hlaalu Treasury in Vivec.",
+    "Filters": [],
+    "Script": [
+      "Journal HH_BankCourier 10",
+      "Player->AddItem \"bk_TreasuryReport\" 1"
+    ]
+  }
+}

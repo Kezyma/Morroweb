@@ -1,0 +1,194 @@
+{
+  "1459212808479224743": {
+    "Prev": "",
+    "Next": "936319538248841994",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Regretably, you broke the rules of the Fighters Guild and you have been expelled. First make amends, and then I can speak with you about this again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "936319538248841994": {
+    "Prev": "1459212808479224743",
+    "Next": "195781222524312234",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Eydis Fire-Eye used to be one of Sjoring Hard-Heart's supporters, but something changed her mind. We don't have to worry about her anymore, just kill Lorbumol gro-Aglakh.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_ElithPalSupply",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BitterBribe",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "195781222524312234": {
+    "Prev": "936319538248841994",
+    "Next": "172029969243517829",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Don't let your conscience trouble you, %PCName. You did the right thing.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_KillCronies",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "172029969243517829": {
+    "Prev": "195781222524312234",
+    "Next": "14862105102587224443",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Now that Eydis Fire-Eye and Lorbumol gro-Aglakh are dead, you must take the battle to Sjoring Hard-Heart.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_KillCronies",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "lorbumol gro-aglakh",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "eydis fire-eye",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_KillCronies 100",
+      "ModPCFacRep 5 \"Fighters Guild\"",
+      "ModDisposition 20"
+    ]
+  },
+  "14862105102587224443": {
+    "Prev": "172029969243517829",
+    "Next": "120212398643415761",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Good work, %PCName. You must also kill Lorbumol gro-Aglakh before the Fighters Guild can free itself from corruption.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_KillCronies",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "eydis fire-eye",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_KillCronies 40"
+    ]
+  },
+  "120212398643415761": {
+    "Prev": "14862105102587224443",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "You can find her at the Guild of Fighters in Balmora. Kill her and report back to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_ElithPalSupply",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal FG_KillCronies 10"
+    ]
+  }
+}

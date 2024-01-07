@@ -1,0 +1,115 @@
+{
+  "274028629326191476": {
+    "Prev": "",
+    "Next": "119523070011984762",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I haven't heard about any more trouble along the caravan track, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Kagouti",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "119523070011984762": {
+    "Prev": "274028629326191476",
+    "Next": "222837934133111340",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, I guess the Kagouti you already killed near there are the ones that were attacking travelers. If I hear about any more attacks I'll let you know.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "HR_Kagouti",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "kagouti_hrk",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HR_Kagouti 100",
+      "ModPCFacRep 5 \"Redoran\"",
+      "ModDisposition 10"
+    ]
+  },
+  "222837934133111340": {
+    "Prev": "119523070011984762",
+    "Next": "1617913282209311210",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good work, %PCName. We need to keep the trade routes running, even with all that's going on.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "kagouti_hrk",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HR_Kagouti 100",
+      "ModPCFacRep 5 \"Redoran\"",
+      "ModDisposition 10"
+    ]
+  },
+  "1617913282209311210": {
+    "Prev": "222837934133111340",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A den of Kagouti have been attacking travelers just south of the Ouada Samsi. Find this Kagouti den, kill the pack leader, and report back to me.",
+    "Filters": [],
+    "Script": [
+      "Journal HR_Kagouti 10"
+    ]
+  }
+}

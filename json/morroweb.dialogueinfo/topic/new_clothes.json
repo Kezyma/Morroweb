@@ -1,0 +1,339 @@
+{
+  "2995477702150928555": {
+    "Prev": "",
+    "Next": "15325090245307514",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ra'zahr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Give %Name the skirt. Yes, %Name wears the skirt.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HT_TheranaClothes 72",
+      "Player->RemoveItem \"Therana's Skirt\" 1",
+      "AddItem \"Therana's Skirt\" 1",
+      "Therana->StartCombat \"Ra'Zahr\"",
+      "Goodbye"
+    ]
+  },
+  "15325090245307514": {
+    "Prev": "2995477702150928555",
+    "Next": "1474919062366228919",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ra'zahr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "%Name does whatever %PCName says.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "1474919062366228919": {
+    "Prev": "15325090245307514",
+    "Next": "367810844623014655",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ra'zahr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You want me to wear that skirt?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "therana's skirt",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, wear it.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "367810844623014655": {
+    "Prev": "1474919062366228919",
+    "Next": "20576138042911313219",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "therana",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "New clothes? What new clothes? Oh, yes, I wanted a Khajiit fur skirt. Are you listening? Yes, pay attention. A Khajiit fur skirt. Tell Felisa that I already have one, thank you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_TheranaClothes",
+        "Value": 72.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "20576138042911313219": {
+    "Prev": "367810844623014655",
+    "Next": "1981624180393829501",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "therana",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, is that my new skirt? How do I know it's not cursed? Why don't you put it on.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "therana's skirt",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_TheranaClothes",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "1981624180393829501": {
+    "Prev": "20576138042911313219",
+    "Next": "627630832154226541",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "felisa ulessen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "First, you must set a Mark. Then you can use Recall to return to that Mark at any time. [Felisa teaches you how to cast these spells.]",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Player->AddSpell \"Mark\"",
+      "Player->AddSpell \"Recall\""
+    ]
+  },
+  "627630832154226541": {
+    "Prev": "1981624180393829501",
+    "Next": "21227137021368528657",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "felisa ulessen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Your choice, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": []
+  },
+  "21227137021368528657": {
+    "Prev": "627630832154226541",
+    "Next": "36537283597219742",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "felisa ulessen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I do not have anything else for you to deliver to Mistress Therana.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_TheranaClothes",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "36537283597219742": {
+    "Prev": "21227137021368528657",
+    "Next": "1516171072954725739",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "felisa ulessen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I trust you did not have any trouble... Well, in any case, I owe you 500 drakes for the delivery. Perhaps I could also teach you how to Mark and Recall if you don't know how already.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_TheranaClothes",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal HT_TheranaClothes 100",
+      "Player->AddItem Gold_001 500",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 10",
+      "Choice \"Teach me Mark and Recall.\" 3 \"Nevermind.\" 4"
+    ]
+  },
+  "1516171072954725739": {
+    "Prev": "36537283597219742",
+    "Next": "2023129157225922498",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "felisa ulessen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I know Mistress Therana can be difficult. If you have any trouble, just use the scroll I gave you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_TheranaClothes",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2023129157225922498": {
+    "Prev": "1516171072954725739",
+    "Next": "23843270377156302",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "felisa ulessen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I gave you the skirt. Deliver it to Mistress Therana in Tel Branora. You have to deliver it to her personally, not just put it somewhere in Tel Branora.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_TheranaClothes",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "23843270377156302": {
+    "Prev": "2023129157225922498",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "felisa ulessen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Take this skirt and deliver it to Mistress Therana. She lives in Tel Branora and can be... eccentric at times. Take these ALMSIVI Intervention scrolls. Don't hesitate to use them if Therana becomes... difficult.",
+    "Filters": [],
+    "Script": [
+      "Journal HT_TheranaClothes 10",
+      "Player->AddItem \"therana's skirt\" 1",
+      "Player->AddItem \"sc_almsiviintervention\" 2",
+      "ShowMap \"Tel Branora\""
+    ]
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "31349130311423327956": {
+    "Prev": "",
+    "Next": "66232099776423208",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharsten heart-fang2",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If that is how you feel, so be it. This Hunt was made for Heart-Fang and Heart-Fang alone! For generations, I have led the Skaal, the Ring of Hircine on my finger, granting me eternal life. This Hunt is my birthright! This Hunt is Heart-Fang's destiny! Now you will face me in my true form, the form I was born to wear.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_WildHunt",
+        "Value": 30.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "set fangtalk to 4",
+      "Journal BM_WildHunt 64",
+      "Goodbye"
+    ]
+  },
+  "66232099776423208": {
+    "Prev": "31349130311423327956",
+    "Next": "9077233123202717270",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharsten heart-fang2",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then let us go. I will reach the end of this Hunter's game!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_WildHunt",
+        "Value": 30.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AiFollow Player 0 0 0 0 0 0",
+      "Journal BM_Wildhunt 62"
+    ]
+  },
+  "9077233123202717270": {
+    "Prev": "66232099776423208",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharsten heart-fang2",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Perhaps together we can find our way to the end. With you by my side, the Hunter will have met his match. Heart-Fang will bring glory to his people! What say you, %PCName?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_WildHunt",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Choice \"Let us go together.\" 1 \"Only one may survive the Hunt. Me.\" 2"
+    ]
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "30251170153267416724": {
+    "Prev": "",
+    "Next": "1750816471896112570",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gidar Verothan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What? You've already helped us get here; where else would we go?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_1",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "1750816471896112570": {
+    "Prev": "30251170153267416724",
+    "Next": "23254184393224817541",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gidar Verothan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "East Empire Company",
+    "Text": "You're kidding, aren't you? We'll be eaten alive if we stay here! ....I hope you know what you're doing. Hurry back, okay?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 0 0 0 ",
+      "Goodbye"
+    ]
+  },
+  "23254184393224817541": {
+    "Prev": "1750816471896112570",
+    "Next": "157512543115238648",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gidar Verothan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "East Empire Company",
+    "Text": "Gladly. Let's go.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "AiFollow Player 0 0 0 0 0 0",
+      "Goodbye"
+    ]
+  },
+  "157512543115238648": {
+    "Prev": "23254184393224817541",
+    "Next": "2532031899315718403",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gidar Verothan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "East Empire Company",
+    "Text": " We're still headed for Raven Rock, right?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_1",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Wait here.\" 3 \"Follow me.\" 4"
+    ]
+  },
+  "2532031899315718403": {
+    "Prev": "157512543115238648",
+    "Next": "32643126451689331446",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gidar Verothan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "East Empire Company",
+    "Text": "All right then. We all voted, and decided that you get to take the lead. None of us are particularly fond of the woods - I'm not saying we're cowards, mind you - and we felt that you'd be better off leading the way. I can at least mark the spot on your map, so you know which way to head. Lead on!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal CO_1 20",
+      "ShowMap \"Raven Rock\"",
+      "AiFollow Player 0 0 0 0 0",
+      "Goodbye"
+    ]
+  },
+  "32643126451689331446": {
+    "Prev": "2532031899315718403",
+    "Next": "3251928562421521323",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gidar Verothan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "East Empire Company",
+    "Text": "Well, hurry it up. We can't stay here forever, else we'll get Carnius mad. Trust me, you don't want to see him when he's mad.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "3251928562421521323": {
+    "Prev": "32643126451689331446",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gidar Verothan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "East Empire Company",
+    "Text": "Gamin, Sabinus and I need to get to the site so we can start work. Can we leave, or do you need more time?",
+    "Filters": [],
+    "Script": [
+      "Choice \"I'm ready. Let's go.\" 1 \"Wait, I need more time.\" 2"
+    ]
+  }
+}

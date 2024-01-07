@@ -1,0 +1,103 @@
+{
+  "18594971180055423": {
+    "Prev": "",
+    "Next": "22859227312017726376",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Uryn Maren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thanks for covering for me, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_6a",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "22859227312017726376": {
+    "Prev": "18594971180055423",
+    "Next": "1435821370102461880",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Uryn Maren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Nice work. This will put him in a tough position; even if he does realize what happened, he won't be able to do anything about it, because that'll mean admitting he was drinking on the job.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_6a",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1435821370102461880": {
+    "Prev": "22859227312017726376",
+    "Next": "1551510542703230506",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Uryn Maren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Just give him that whiskey I handed you, %PCName. That should occupy him.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_6a",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "1551510542703230506": {
+    "Prev": "1435821370102461880",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Uryn Maren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It should be a pretty simple task, really. I know that Aldam has a fondness for whiskey. Give this to him, and he should be out of the way long enough for me to do my job. Stay close to him; it's important that we're not seen together until the job is all done. I'll come find you once I've got my hands on the ore. Okay, I'm going to head down near the storeroom.",
+    "Filters": [],
+    "Script": [
+      "removeitem \"potion_cyro_whiskey_01\" 1",
+      "player->additem \"potion_cyro_whiskey_01\" 1",
+      "Journal CO_6a 40",
+      "Goodbye"
+    ]
+  }
+}

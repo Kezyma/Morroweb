@@ -1,0 +1,116 @@
+{
+  "48087609131895092": {
+    "Prev": "",
+    "Next": "2743228013242411209",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "marcel maurard",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, to be an actor. To act, perchance to earn some money!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "EB_Actor",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "2743228013242411209": {
+    "Prev": "48087609131895092",
+    "Next": "25654172201233017752",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "marcel maurard",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Leave here? I could not! It is the finest spot in all Vivec from which to sell my wares. Otherwise, I'd have nothing upon which to support myself. Dear friend, neither a borrower nor an honest tradesman be--that's what my father always told me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "25654172201233017752": {
+    "Prev": "2743228013242411209",
+    "Next": "21541118321089624775",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "marcel maurard",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Slay me? No, kind friend. For who would slay a talent such as mine? All I need is an outlet for my art so the people will adore me! Although, there lies more peril in your sword than in twenty of their eyes.... No! I must stay here, friend. Slay me if you must, but it would be a loss to the world.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "21541118321089624775": {
+    "Prev": "25654172201233017752",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "marcel maurard",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am an actor! Or at least I hope to be. I am the poor player who struts and frets for a while on a stage and then has lunch. I am full of sound and furiousness! Oh, if there were but a good theater troupe in this town, I could give up selling these baubles. Oh! Woe is me!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Actor",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_Actor",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Actor\" 40",
+      "Choice \"You should leave this area.\" 1 \"Leave here now or die.\" 2"
+    ]
+  }
+}

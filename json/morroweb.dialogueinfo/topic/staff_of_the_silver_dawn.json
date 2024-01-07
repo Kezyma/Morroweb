@@ -1,0 +1,389 @@
+{
+  "3014221814844930858": {
+    "Prev": "",
+    "Next": "14900108892200726968",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arielle phiencel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I no longer have a Staff of the Silver Dawn.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_SilverDawn",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "14900108892200726968": {
+    "Prev": "3014221814844930858",
+    "Next": "2269785181847612796",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arielle phiencel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I already sold you the Staff of the Silver Dawn.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_SilverDawn",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2269785181847612796": {
+    "Prev": "14900108892200726968",
+    "Next": "53243859633031386",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arielle phiencel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here. Take it. Come see me if you're ever looking for another enchanted item.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 300.0
+      }
+    ],
+    "Script": [
+      "Journal HT_SilverDawn 50",
+      "Player->RemoveItem Gold_001 300",
+      "AddItem Gold_001 300",
+      "Player->AddItem \"silver_staff_dawn_uniq\" 1",
+      "RemoveItem \"silver_staff_dawn_uniq\" 1",
+      "ModDisposition 10"
+    ]
+  },
+  "53243859633031386": {
+    "Prev": "2269785181847612796",
+    "Next": "2721111286380525163",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arielle phiencel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sorry, but you do not have 300 drakes.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2721111286380525163": {
+    "Prev": "53243859633031386",
+    "Next": "22122235832069916495",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arielle phiencel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, your loss. I'm sure it's worth more than that.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "22122235832069916495": {
+    "Prev": "2721111286380525163",
+    "Next": "1053881362062210014",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arielle phiencel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I have a Staff of the Silver Dawn. I don't use it very often. I prefer daggers, myself. I'll sell it to you for 300 drakes.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 300.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give her 300 drakes.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "1053881362062210014": {
+    "Prev": "22122235832069916495",
+    "Next": "26865306851011112403",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arara uvulas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. I hope Master Neloth will be pleased with it. I have this old dagger I no longer use. And I can teach you to blind your enemies as the staff does.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HT_SilverDawn 100",
+      "Player->RemoveItem \"silver_staff_dawn_uniq\" 1",
+      "Player->AddItem \"Glass Jinkblade\" 1",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 10",
+      "Choice \"Teach me to blind my enemies.\" 3 \"Nevermind.\" 4"
+    ]
+  },
+  "26865306851011112403": {
+    "Prev": "1053881362062210014",
+    "Next": "1343019900777228544",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arara uvulas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Master Neloth will want the Staff of the Silver Dawn soon, %PCName. You should give it to me before Master Neloth becomes less cooperative.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "1343019900777228544": {
+    "Prev": "26865306851011112403",
+    "Next": "14609166082516018278",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arara uvulas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, of course. [Arara teaches you to blind your enemies.] Now, if you'll excuse me...",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Player->AddSpell \"Blind\""
+    ]
+  },
+  "14609166082516018278": {
+    "Prev": "1343019900777228544",
+    "Next": "2078644499423237",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arara uvulas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well. If you want more chores, speak with the other Mouths.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": []
+  },
+  "2078644499423237": {
+    "Prev": "14609166082516018278",
+    "Next": "2350369409077802",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arara uvulas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already gave me the Staff of the Silver Dawn.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_SilverDawn",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2350369409077802": {
+    "Prev": "2078644499423237",
+    "Next": "2924124023160222167",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arara uvulas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Is that the Staff of the Silver Dawn?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "silver_staff_dawn_uniq",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is.\" 1 \"No.\" 2"
+    ]
+  },
+  "2924124023160222167": {
+    "Prev": "2350369409077802",
+    "Next": "980825976575721993",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arara uvulas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "I believe someone in the Mages Guild here is Sadrith Mora has this staff. Master Neloth wants the staff, and I cannot leave my duties here long enough to fetch it for him. Go to Wolverine Hall, get the staff, and bring it back to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_SloadSoap",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HT_SilverDawn 10"
+    ]
+  },
+  "980825976575721993": {
+    "Prev": "2924124023160222167",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "Sadrith Mora, Wolverine Hall: Mage's Guild",
+    "PlayerFaction": "",
+    "Text": "Yes, Arielle has a staff like that.",
+    "Filters": [],
+    "Script": []
+  }
+}

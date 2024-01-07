@@ -1,0 +1,181 @@
+{
+  "183334574215068207": {
+    "Prev": "",
+    "Next": "1050229730214181415",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mallam ryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have already found the plans in Nchuleft.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_NchuleftKey",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1050229730214181415": {
+    "Prev": "183334574215068207",
+    "Next": "96971868859129593",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mallam ryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. If you were successful, Archmagister Gothren wanted you to have this.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "misc_dwrv_artifact40",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HT_NchuleftKey 100",
+      "Player->RemoveItem misc_dwrv_artifact40 1",
+      "Player->AddItem \"cephalopod_helm_HTNK\" 1",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 10"
+    ]
+  },
+  "96971868859129593": {
+    "Prev": "1050229730214181415",
+    "Next": "32578150651382923996",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mallam ryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I do not appreciate any %PCRank who tries to trick me. Bring me the plans or else.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "32578150651382923996": {
+    "Prev": "96971868859129593",
+    "Next": "288358785201856523",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mallam ryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Archmagister Gothren was right to question your loyalty and rapid advance in House Telvanni.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5",
+      "Goodbye"
+    ]
+  },
+  "288358785201856523": {
+    "Prev": "32578150651382923996",
+    "Next": "1957282521308731186",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mallam ryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you found the plans Archmagister Gothren was looking for?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_NchuleftKey",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here they are.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "1957282521308731186": {
+    "Prev": "288358785201856523",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mallam ryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This Dwemer ruin lies west of the town of Vos. Apparently these ruins are what Archmagister Gothren wanted Ainat Sanababi to look for. Archmagister Gothren wants some plans or blueprints from from Nchuleft. Find these plans and return them to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_SpyBaladas",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HT_NchuleftKey 10"
+    ]
+  }
+}

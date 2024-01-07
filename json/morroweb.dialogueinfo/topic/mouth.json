@@ -1,0 +1,557 @@
+{
+  "13505292251785214139": {
+    "Prev": "",
+    "Next": "2773691233123032421",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edd theman",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am your Mouth. Just tell me how you want me to vote in the Council or if you want me to do chores for you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_RecruitEddie",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2773691233123032421": {
+    "Prev": "13505292251785214139",
+    "Next": "30012123941681426245",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edd theman",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I said I'd be your Mouth, and I will.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_RecruitEddie",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "30012123941681426245": {
+    "Prev": "2773691233123032421",
+    "Next": "1489528613257577600",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edd theman",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've waited for years to be someone's Mouth. I won't disappoint you. I'll go to the Council Hall right away. If you want me to do any chores for you, just let me know.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HT_RecruitEddie 50",
+      "Player->RemoveItem \"Silver Staff of Peace\" 1",
+      "AddItem \"Silver Staff of Peace\" 1",
+      "RaiseRank",
+      "ModDisposition 25"
+    ]
+  },
+  "1489528613257577600": {
+    "Prev": "30012123941681426245",
+    "Next": "1588528929105317599",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edd theman",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's okay. I've been waiting to be a Mouth for years.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "1588528929105317599": {
+    "Prev": "1489528613257577600",
+    "Next": "116874561303526186",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edd theman",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If I'm your Mouth, you'll be my patron. You'll need to give me a Silver Staff of Peace.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "silver staff of peace",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give him a Silver Staff of Peace.\" 1 \"Not yet.\" 2"
+    ]
+  },
+  "116874561303526186": {
+    "Prev": "1588528929105317599",
+    "Next": "1902777671926311181",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edd theman",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If I'm your Mouth, you'll be my patron. You'll need to give me a Silver Staff of Peace.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "1902777671926311181": {
+    "Prev": "116874561303526186",
+    "Next": "32232176972854918728",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edd theman",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, I've waited a few years. I can wait a few more.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "32232176972854918728": {
+    "Prev": "1902777671926311181",
+    "Next": "5367212781752710133",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edd theman",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "You want me to be your Mouth?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_RecruitEddie",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes.\" 3 \"No.\" 4"
+    ]
+  },
+  "5367212781752710133": {
+    "Prev": "32232176972854918728",
+    "Next": "258695568698630613",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have a Mouth to be your voice in the Council.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_RecruitEddie",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "258695568698630613": {
+    "Prev": "5367212781752710133",
+    "Next": "246161228433932280",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have found a Mouth to represent you on the Council. As your protege, Fast Eddie will do chores for you. I am pleased to see my own protege rise so quickly to the rank of %NextPCRank in House Telvanni. Please accept this glove. It was one of my first successful enchantments.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_RecruitEddie",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal HT_RecruitEddie 100",
+      "Player->AddItem AryonGloveRight 1",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "PCRaiseRank \"Telvanni\"",
+      "ModDisposition 15",
+      "\"Edd Theman\"->PositionCell -305 -295 360 50 \"Sadrith Mora, Telvanni Council House\"",
+      "Player->ModReputation 1"
+    ]
+  },
+  "246161228433932280": {
+    "Prev": "258695568698630613",
+    "Next": "110911103735626668",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 5,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "I have heard of a promising Telvanni in Balmora who might agree to be your Mouth, but I do not know more than this. Ask the other Telvanni if they know of someone who would agree to be your Mouth.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_Shishi",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HT_RecruitEddie 10"
+    ]
+  },
+  "110911103735626668": {
+    "Prev": "246161228433932280",
+    "Next": "136435496179877345",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "While other Councilors would insist that you stay in the Telvanni Council Hall day and night awaiting my decisions, I understand the insignificance of the daily business of the Council.",
+    "Filters": [],
+    "Script": []
+  },
+  "136435496179877345": {
+    "Prev": "110911103735626668",
+    "Next": "1163919051684115261",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Each Mouth represents his or her patron, who is one of the older and more respected members of the Council. The Mouths receive messengers from their patrons and cast their patron's votes in the Council.",
+    "Filters": [],
+    "Script": []
+  },
+  "1163919051684115261": {
+    "Prev": "136435496179877345",
+    "Next": "22066205071817629754",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "enar releth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "If you are looking for a mouth of your own, you might ask Fast Eddie in Balmora.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HT_RecruitEddie",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_RecruitEddie",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HT_RecruitEddie 30"
+    ]
+  },
+  "22066205071817629754": {
+    "Prev": "1163919051684115261",
+    "Next": "261354555601414922",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raven omayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There is a Telvanni in Balmora who is ready for the rank of Mouth, but the other Councilors believe that he is not trustworthy. His calls himself Fast Eddie.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HT_RecruitEddie",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_RecruitEddie",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HT_RecruitEddie 30"
+    ]
+  },
+  "261354555601414922": {
+    "Prev": "22066205071817629754",
+    "Next": "6094141332621129897",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 5,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "Sadrith Mora, Telvanni Council House",
+    "PlayerFaction": "",
+    "Text": "I am not a Mouth for anyone. I oversee the construction of strongholds and bases for House Telvanni. If you have business with House Telvanni, speak with one of the Mouths in the Telvanni Council House.",
+    "Filters": [],
+    "Script": []
+  },
+  "6094141332621129897": {
+    "Prev": "261354555601414922",
+    "Next": "2842226587811411462",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "Sadrith Mora, Telvanni Council House",
+    "PlayerFaction": "",
+    "Text": "I am a Mouth in House Telvanni. I speak the words of my patron here in the Telvanni Council",
+    "Filters": [],
+    "Script": []
+  },
+  "2842226587811411462": {
+    "Prev": "6094141332621129897",
+    "Next": "573921062895019982",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "Sadrith Mora, Telvanni Council House",
+    "PlayerFaction": "",
+    "Text": "The Telvanni Mouths are in the main Council House.",
+    "Filters": [],
+    "Script": []
+  },
+  "573921062895019982": {
+    "Prev": "2842226587811411462",
+    "Next": "1341256932533132561",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Khajiit",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Balmora",
+    "PlayerFaction": "",
+    "Text": "Mouth? What about your mouth?",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_RecruitEddie",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HT_RecruitEddie",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1341256932533132561": {
+    "Prev": "573921062895019982",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Balmora",
+    "PlayerFaction": "",
+    "Text": "Isn't Fast Eddie near that rank?",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_RecruitEddie",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HT_RecruitEddie",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  }
+}

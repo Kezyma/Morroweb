@@ -1,0 +1,297 @@
+{
+  "215722304160130119": {
+    "Prev": "",
+    "Next": "30478205042865912286",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What? How is it that you have this? This belongs to the Museum! GUARDS!",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "robelich",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "robe_lich_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "SetPCCrimeLevel 10000",
+      "Set PCThief to 1",
+      "Goodbye"
+    ]
+  },
+  "30478205042865912286": {
+    "Prev": "215722304160130119",
+    "Next": "3233715140569619977",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, thank you for allowing us to add it to our collection.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "robelich",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "3233715140569619977": {
+    "Prev": "30478205042865912286",
+    "Next": "11140326121516229745",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't have the Robe of the Lich with you? Then come back with it, and we'll settle the deal.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "robe_lich_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "11140326121516229745": {
+    "Prev": "3233715140569619977",
+    "Next": "816041051286623449",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't have the Robe of the Lich with you? Then come back with it, and we'll settle the deal.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "robe_lich_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "816041051286623449": {
+    "Prev": "11140326121516229745",
+    "Next": "317131157378318821",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Splendid. I must say I feel more comfortable with this in the Museum's collection than I would knowing it was somewhere out in the world.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "robe_lich_unique",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "set robelich to 2",
+      "player->removeitem \"robe_lich_unique\" 1 ",
+      "set MuseumDonations to MuseumDonations + 1",
+      "\"robe_lich_unique_x\"->Enable",
+      "moddisposition 5"
+    ]
+  },
+  "317131157378318821": {
+    "Prev": "816041051286623449",
+    "Next": "2648015349111219845",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Splendid. I must say I feel more comfortable with this in the Museum's collection than I would knowing it was somewhere out in the world.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "robe_lich_unique",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "set robelich to 2",
+      "player->removeitem \"robe_lich_unique\" 1 ",
+      "player->additem \"gold_001\" 11000",
+      "\"robe_lich_unique_x\"->Enable"
+    ]
+  },
+  "2648015349111219845": {
+    "Prev": "317131157378318821",
+    "Next": "990914675153962768",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The decision is yours, %PCName. Though I will advise caution if you intend to make use of the robe.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "990914675153962768": {
+    "Prev": "2648015349111219845",
+    "Next": "1142610169139473235",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Information is scarce at best when it comes to this artifact. Some have said it was pulled from a lich when it was defeated; others say it was developed by an evil mage who wanted the power of a lich without the.... drawbacks. Either way, it is a powerful item indeed. Do you wish to part with it? I can offer you 11000 gold for it.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "robelich",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_Blade",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Sell the item.\" 1 \"Keep the item.\" 2 \"Donate the item.\" 3"
+    ]
+  },
+  "1142610169139473235": {
+    "Prev": "990914675153962768",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Information is scarce at best when it comes to this artifact. Some have said it was pulled from a lich when it was defeated; others say it was developed by an evil mage who wanted the power of a lich without the.... drawbacks. Either way, it is a powerful item indeed. Do you wish to part with it? I can offer you 11000 gold for it.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "robelich",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Sell the item.\" 1 \"Keep the item.\" 2"
+    ]
+  }
+}

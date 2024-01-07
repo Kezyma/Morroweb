@@ -1,0 +1,217 @@
+{
+  "53623503436224975": {
+    "Prev": "",
+    "Next": "2781515578315333264",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled from the Fighters Guild. Until you make amends, I can't talk to you about this contract.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2781515578315333264": {
+    "Prev": "53623503436224975",
+    "Next": "10284321213265728830",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The victims of Rels Tenim are grateful to you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_TenimBounty",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "10284321213265728830": {
+    "Prev": "2781515578315333264",
+    "Next": "1054520043147619122",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, if you've already dealt with Rels Tenim, you certainly deserve the 200 septims.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_TenimBounty",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "rels tenim",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_TenimBounty 100",
+      "Player->AddItem Gold_001 200",
+      "ModPCFacRep 5 \"Fighters Guild\"",
+      "ModDisposition 15"
+    ]
+  },
+  "1054520043147619122": {
+    "Prev": "10284321213265728830",
+    "Next": "3090161822041826623",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard that Rels Tenim is dead. Good work, %PCName. Here's the 200 septims for the contract.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "rels tenim",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_TenimBounty 100",
+      "Player->AddItem Gold_001 200",
+      "ModPCFacRep 5 \"Fighters Guild\"",
+      "ModDisposition 15"
+    ]
+  },
+  "3090161822041826623": {
+    "Prev": "1054520043147619122",
+    "Next": "24312103672549026950",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Rels Tenim is a murderer who has escaped from justice. He was last seen near Vos. While you're taking care of the Corprus Stalker, you might want to see if you can track down Rels Tenim.",
+    "Filters": [],
+    "Script": [
+      "Journal FG_TenimBounty 10"
+    ]
+  },
+  "24312103672549026950": {
+    "Prev": "3090161822041826623",
+    "Next": "20172134881549327566",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ahemmusa Camp",
+    "PlayerFaction": "",
+    "Text": "A man went to the cavern of Shallit, on a small island southwest of Ald Daedroth. He left at night when neither Masser nor Secunda could be seen. Perhaps this is the man you seek. To get there, cross the water to the first island north of camp. From that island, travel northwest, two more islands. On the second island's north side, the entrance to Shallit will be found at the water's edge in a small cove.",
+    "Filters": [],
+    "Script": [
+      "Journal \"FG_TenimBounty\" 60"
+    ]
+  },
+  "20172134881549327566": {
+    "Prev": "24312103672549026950",
+    "Next": "3018814831736624468",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Farmer",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vos",
+    "PlayerFaction": "",
+    "Text": "Rels Tenim? He's a bandit. He stole some guar, and some crops, and I don't know what else. I don't know where he is now, but the Ahemmusa might know. Check at the Ahemussa Camp north of here.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Ahemmusa Camp\""
+    ]
+  },
+  "3018814831736624468": {
+    "Prev": "20172134881549327566",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vos",
+    "PlayerFaction": "",
+    "Text": "Rels Tenim is a thief and outlaw. He's stolen from some of the farmers in Vos. Check with some of the local farmers. I'm sure they'll know something about him.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

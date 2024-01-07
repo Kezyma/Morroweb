@@ -1,0 +1,1097 @@
+{
+  "11652263981039529283": {
+    "Prev": "",
+    "Next": "23072326822626319393",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "jeleen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You...you say my Mirisa is dead? Noooooooo! Why? Why did this happen? She was so young, so innocent.... %PCName...I thank you for relaying this information, tragic as it may be. I'm sure you did everything in your power to help my love. Please, take this gold as payment for your services. Now if you don't mind, I wish to be alone.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Missionary",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Missionary",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "mirisa",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Missionary 130",
+      "\"jeleen\"->removeitem \"gold_001\" 100",
+      "player->additem \"gold_001\" 100",
+      "StartScript JeleenScript",
+      "Goodbye"
+    ]
+  },
+  "23072326822626319393": {
+    "Prev": "11652263981039529283",
+    "Next": "31081201001469630002",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mirisa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "But I have returned, thanks to you!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "BM_Missionary",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "31081201001469630002": {
+    "Prev": "23072326822626319393",
+    "Next": "6391326961312014944",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mirisa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Erich has had me locked in this room every day! I could have escaped a couple of times, but I was afraid he would kill me if I got caught! Please, you have to get me out of here!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Missionary",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "6391326961312014944": {
+    "Prev": "31081201001469630002",
+    "Next": "16851108133131815789",
+    "Type": "Topic",
+    "Disposition": 90,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "erich the unworthy",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ha! You want to know a secret? I have the little tramp locked upstairs in my room! That's right. She came here preaching about how mead is evil. Made me right furious, it did. So I took her. I smack her around every now and then, throw mead on her, that sort of thing! Ha ha ha ha ha!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Missionary",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Missionary 30"
+    ]
+  },
+  "16851108133131815789": {
+    "Prev": "6391326961312014944",
+    "Next": "1554930775122174012",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "erich the unworthy",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yeah, she came here. The self-righteous harpy wouldn't shut up. What right did she have, telling Nords to give up their mead? Maybe she got lost in the snow. Or maybe the wolves got her. Solstheim can be a dangerous place...if you get my meaning.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Missionary",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "1554930775122174012": {
+    "Prev": "16851108133131815789",
+    "Next": "21269138791398527082",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "erich the unworthy",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, isn't that sad. Boo hoo. I don't know nothin'.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Missionary",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "21269138791398527082": {
+    "Prev": "1554930775122174012",
+    "Next": "148026881499014763",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bm_reinhardt",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard about your rescue of the missionary, %PCName. Well done.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Missionary",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "148026881499014763": {
+    "Prev": "21269138791398527082",
+    "Next": "960528908203218280",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bm_reinhardt",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I saw the missionary near Thirsk, but I haven't been back to the mead hall in several weeks.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Missionary",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Missionary",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "960528908203218280": {
+    "Prev": "148026881499014763",
+    "Next": "2909816132232708867",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Skaal Village",
+    "PlayerFaction": "",
+    "Text": "There's no Mirisa around here. If she left the Imperial Cult shrine and was headed north, she never made it this far.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Missionary",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Missionary",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2909816132232708867": {
+    "Prev": "960528908203218280",
+    "Next": "32420167051000822422",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skjoldr wolf-runner",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Aye, the missionary came here several weeks ago. She started talking about her Shrine, and then began preaching about the evils of mead. Nice lass, but a little high-strung. Erich, he...he didn't really like what she had to say. Thought he'd teach her a lesson. I'm...I'm not really sure where she is now. [Skjoldr gives you a knowing look, and then gestures with his head to the staircase leading to the second floor.]",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "erich the unworthy",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "32420167051000822422": {
+    "Prev": "2909816132232708867",
+    "Next": "2428930209180125822",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skjoldr wolf-runner",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, it would seem Erich has finally met his destiny, so there's no harm in letting you know the truth. The missionary is upstairs, locked in Erich's room. She's been there for quite a while, too, poor thing. If you intend to let her go, no one here will stop you.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "erich the unworthy",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Missionary 30"
+    ]
+  },
+  "2428930209180125822": {
+    "Prev": "32420167051000822422",
+    "Next": "18940121921488332294",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "brandr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You talking about that missionary from the Imperial Cult? Pretty little thing, Redguard?  Yeah, I saw her.  It was a few weeks ago.  Said something about heading to the Thirsk mead hall to turn the residents away from their mead.  Thought it was evil, or some such nonsense.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Missionary",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Missionary",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Missionary 20"
+    ]
+  },
+  "18940121921488332294": {
+    "Prev": "2428930209180125822",
+    "Next": "12184209671458928093",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "erna the quiet",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Mirisa? That missionary? I saw her a few weeks ago near the Thirsk mead hall, just south of here. She told me she wanted to preach to the Thirsk Nords abouts the evils of drink. I hope she succeeds. I've seen many a good man ruined by mead....",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Missionary",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Missionary",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Missionary 20"
+    ]
+  },
+  "12184209671458928093": {
+    "Prev": "18940121921488332294",
+    "Next": "2256979452273014806",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "jeleen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I...I don't suppose you would be willing to look for Mirisa?  She means a great deal to me.  That is, she...her work...is very important to the Imperial Cult.  You have the look of an adventurer about you, %PCName.  If you could find Mirisa and return her to me, I would gladly empty the shrine's coffers into your purse.  She left here over a month ago and headed north, toward Lake Fjalding.  You should begin your search in that area.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Missionary",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Missionary",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Missionary 10"
+    ]
+  },
+  "2256979452273014806": {
+    "Prev": "12184209671458928093",
+    "Next": "78031492062473418",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ulfrun",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Talk to Erich. That's all I'll say.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Missionary",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "erich the unworthy",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "78031492062473418": {
+    "Prev": "2256979452273014806",
+    "Next": "3179926421209517050",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "svenja snow-song",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, now that Erich's dead I suppose it doesn't matter if I tell you. Last I saw her she was upstairs, locked in Erich's room.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Missionary",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "erich the unworthy",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Trial",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3179926421209517050": {
+    "Prev": "78031492062473418",
+    "Next": "375211679751927042",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "svenja snow-song",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, now that Erich's dead I suppose it doesn't matter if I tell you. Last I saw her she was upstairs, locked in Erich's room.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Missionary",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_MeadHall",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Trial",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "375211679751927042": {
+    "Prev": "3179926421209517050",
+    "Next": "7756166051346315060",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "svenja snow-song",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Erich knows where she is. That's all I can tell you. As much as I hate the lumbering oaf he's still my clan brother.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Missionary",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_MeadHall",
+        "Value": 40.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "erich the unworthy",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Trial",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "7756166051346315060": {
+    "Prev": "375211679751927042",
+    "Next": "3084424813107914750",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "svenja snow-song",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Word is she's dead, poor thing. Would you know anything about that?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Missionary",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_MeadHall",
+        "Value": 40.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "mirisa",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "3084424813107914750": {
+    "Prev": "7756166051346315060",
+    "Next": "1685620876597129287",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "svenja snow-song",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "She was here, locked in Erich's room, but now she's gone. I let her go when the workers came to repair the mead hall.  Hopefully she made it back to wherever she came from.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Missionary",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_MeadHall",
+        "Value": 40.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "mirisa",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1685620876597129287": {
+    "Prev": "3084424813107914750",
+    "Next": "1080125061633516167",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "svenja_outside",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Word is she's dead, poor thing. Would you know anything about that?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Missionary",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "mirisa",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1080125061633516167": {
+    "Prev": "1685620876597129287",
+    "Next": "11701191713761039",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "svenja_outside",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "She was here, locked in Erich's room, but now she's gone. I let her go when the workers came to repair the mead hall. Hopefully she made it back to wherever she came from.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Missionary",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "mirisa",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Missionary",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "11701191713761039": {
+    "Prev": "1080125061633516167",
+    "Next": "919225818719726697",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "svenja_outside",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "She was here, locked in Erich's room, but now she's gone. Hopefully she made it back to wherever she came from.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "mirisa",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Missionary",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "919225818719726697": {
+    "Prev": "11701191713761039",
+    "Next": "1475491265822332",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "jeleen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "She was headed north to preach the way of the Nine Divines.  Surely she should have been back by now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Missionary",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Missionary",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "1475491265822332": {
+    "Prev": "919225818719726697",
+    "Next": "1422319035468925211",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "jeleen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "But she has returned, thanks to you!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Missionary",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "1422319035468925211": {
+    "Prev": "1475491265822332",
+    "Next": "1174015093162515132",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "jeleen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "With my Mirisa dead, I have nothing to live for. Life just seems so...empty.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Missionary",
+        "Value": 120.0
+      }
+    ],
+    "Script": []
+  },
+  "1174015093162515132": {
+    "Prev": "1422319035468925211",
+    "Next": "3141814952301548965",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ingmar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I met the lass a few weeks ago, while I was out here hunting bear for Brynjolfr. She was headed to Thirsk to preach about her gods.  If you ask me, that woman's more interested in getting us Nords to give up our mead than convert to her shrine.  Must have something against drinking. She'd better be good and blessed if she plans on spreading that dung in the mead hall!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Missionary",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Missionary",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Missionary 20"
+    ]
+  },
+  "3141814952301548965": {
+    "Prev": "1174015093162515132",
+    "Next": "9015317752454611009",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "brynjolfr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Aye, you're damn right the poor lass never returned. She came here preaching about the evils of drink. Erich the Unworthy got right furious. He took that missionary, and has her locked in his room! He likes to taunt her, even beat her. It's just not right. That Erich's a bully and a braggart, and is unloved by the lot of us. But he IS a clan brother, and we can't interfere in his business, much as we'd like to. Shame someone doesn't teach the lout a lesson.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Missionary",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "mirisa",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Missionary",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Missionary 30"
+    ]
+  },
+  "9015317752454611009": {
+    "Prev": "3141814952301548965",
+    "Next": "1348231002823014675",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "brynjolfr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "She's dead. You wouldn't happen to know anything about that, would you?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Missionary",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "mirisa",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1348231002823014675": {
+    "Prev": "9015317752454611009",
+    "Next": "25566700339223390",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Solstheim, Thirsk",
+    "PlayerFaction": "",
+    "Text": "Talk to Erich the Unworthy. That's all I'll say.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "erich the unworthy",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Missionary",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "25566700339223390": {
+    "Prev": "1348231002823014675",
+    "Next": "1008030947131769266",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Solstheim, Thirsk",
+    "PlayerFaction": "",
+    "Text": "Well, now that Erich's dead I guess it doesn't matter if I tell you. Last I saw of her, she was locked in Erich's room.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "erich the unworthy",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Missionary",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1008030947131769266": {
+    "Prev": "25566700339223390",
+    "Next": "11815158101380922110",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Solstheim, Thirsk",
+    "PlayerFaction": "",
+    "Text": "She's dead, poor girl.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "mirisa",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "11815158101380922110": {
+    "Prev": "1008030947131769266",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Solstheim, Thirsk",
+    "PlayerFaction": "",
+    "Text": "You say the missionary has been returned to the Imperial shrine? Ha! Good for you, %PCName!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Missionary",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Missionary",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  }
+}

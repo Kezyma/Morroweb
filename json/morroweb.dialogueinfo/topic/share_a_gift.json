@@ -1,0 +1,593 @@
+{
+  "32626169693218327458": {
+    "Prev": "",
+    "Next": "16018308101007410374",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I see! Very clever is Ahnassi's friend, and a very fine glove is Elvul's Black Blindfold. Ahnassi likes this glove very much... but it is Ahnassi's gift to her friend, and her friend must keep it. Ahnassi is very happy that we have shared so many gifts. But that is what friends are for, yes?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 90.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "black_blindfold_glove",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "16018308101007410374": {
+    "Prev": "32626169693218327458",
+    "Next": "24327213582633913942",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, Ahnassi is very happy that we have shared so many gifts. But that is what friends are for, yes?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 90.0
+      }
+    ],
+    "Script": []
+  },
+  "24327213582633913942": {
+    "Prev": "16018308101007410374",
+    "Next": "144732820620126011",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "But so GLAD!! Guess what! There is a secret passage, hidden underwater, to sneak into the Imperial Commission! And all you have to do is search for the hidden underwater entrance. It must be nearby! Too easy!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 87.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Journal Romance_Ahnassi 90"
+    ]
+  },
+  "144732820620126011": {
+    "Prev": "24327213582633913942",
+    "Next": "18259244012205711974",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ahnassi has another surprise? Are you ready? Have you heard of Elvul's Black Blindfold, a magic glove which blinds and befuddles archers? Ahnassi knows nothing about magic, but she has heard this is a wonderful glove, very beautiful, very valuable. But so sad. It is in Rufinus Alleius's chest of drawers in the living quarters of the Imperial Commission in Ebonheart. Many Imperial guards. Very tough, very dangerous. So sad....",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 87.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 5"
+    ]
+  },
+  "18259244012205711974": {
+    "Prev": "144732820620126011",
+    "Next": "26858293782045022526",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh.... But... it's too much. For Ahnassi? Ahnassi.... It is so lovely. But you must let Ahnassi give you a gift in return. What could possibly be so rare, so fine? Here. Ahnassi gives you these. They are rare and precious. Ahnassi could never use them. But Ahnassi hopes they bring you luck in a hard place.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 85.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "flamemirror robe",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"flamemirror robe\" 1",
+      "player->additem \"ebony throwing star\" 20",
+      "Journal romance_ahnassi 87"
+    ]
+  },
+  "26858293782045022526": {
+    "Prev": "18259244012205711974",
+    "Next": "7857295551774327091",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are very, very welcome. Ahnassi hopes you treasure the robe always.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 85.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "flamemirror robe",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal romance_ahnassi 95"
+    ]
+  },
+  "7857295551774327091": {
+    "Prev": "26858293782045022526",
+    "Next": "13269293143072630372",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, look! A Flamemirror Robe! How clever you are! But we both knew that, did we not? And my goodness. Such enchantments. And very, very pretty....",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 85.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "flamemirror robe",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Thank Ahnassi for the tip.\" 3 \"Give Ahnassi the robe as a gift.\" 4"
+    ]
+  },
+  "13269293143072630372": {
+    "Prev": "7857295551774327091",
+    "Next": "12064128402121312652",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ahnassi can't wait to see this Flamemirror Robe. Very valuable. Very mysterious. Ahnassi can't wait to see what it is.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 85.0
+      }
+    ],
+    "Script": []
+  },
+  "12064128402121312652": {
+    "Prev": "13269293143072630372",
+    "Next": "1345620136626220872",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ahnassi has a secret! Do you know what a Flamemirror Robe is? Well, Ahnassi does not, but she knows it is VERY valuable. And... A friend has told Ahnassi where it is! In the Telvanni Tower in Vivec! At the Telvanni Compound! This wizard Mavon Drenim, he does not wear it, so he keeps in it his clothes closet! Because you are so smart, Ahnassi knows you will get this Flamemirror Robe. And bring it to show Ahnassi how smart you are.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 83.0
+      }
+    ],
+    "Script": [
+      "Journal Romance_Ahnassi 85"
+    ]
+  },
+  "1345620136626220872": {
+    "Prev": "12064128402121312652",
+    "Next": "760513461937517880",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I LOVE my pretty coda flower. And I LOVE your pretty gold kanet, too. So you keep the gold kanet, yes, and treasure it always. Thank you so much. Thank you, thank you, thank you. And now... you can ask Ahnassi to share a gift again, for it is Ahnassi's turn! Isn't this fun?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 82.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_bc_coda_flower",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_gold_kanet_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem ingred_bc_coda_flower 1",
+      "journal romance_ahnassi 83"
+    ]
+  },
+  "760513461937517880": {
+    "Prev": "1345620136626220872",
+    "Next": "2437228437217865212",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Where are Ahnassi's pretty flowers? A pretty coda flower for Ahnassi, and a pretty gold kanet for %PCname? Ahnassi can't WAIT to get her pretty flowers.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 82.0
+      }
+    ],
+    "Script": []
+  },
+  "2437228437217865212": {
+    "Prev": "760513461937517880",
+    "Next": "26886322212088215683",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ahnassi hopes you will visit with her friend Senyndie, and learn many fine tricks. And now it is YOUR turn to give Ahnassi a gift. And Ahnassi knows JUST what she wants. FLOWERS! Of course a special friend knows JUST what flowers to get. So Ahnassi will tell you. Just two! One for you, and one for me. A pretty coda flower for Ahnassi, and a pretty gold kanet for %PCname. Ahnassi can't WAIT to get her pretty flowers.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 81.0
+      }
+    ],
+    "Script": [
+      "journal romance_ahnassi 82"
+    ]
+  },
+  "26886322212088215683": {
+    "Prev": "2437228437217865212",
+    "Next": "7985093320464820",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So go see Senyndie, and tell her Ahnassi sends you. Senyndie is Ahnassi's friend, and I know she will be happy to see you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 80.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal Romance_Ahnassi 81",
+      "addtopic ahnassi"
+    ]
+  },
+  "7985093320464820": {
+    "Prev": "26886322212088215683",
+    "Next": "1516726798376127158",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ahnassi sees how her VERY good friend is always doing, always learning new tricks. So Ahnassi must tell you a secret. Ahnassi has a friend, Senyndie, a nice Redguard female, who trains fighters at the Arena in Vivec. And the secret Ahnassi tells is that Senyndie is a secret master of the guild discipline called 'acrobatics.' Do you know what that means? That means there is no one else on Vvardenfell who is so fine an acrobat as Senyndie. And no one else can train you so well.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 80.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 2"
+    ]
+  },
+  "1516726798376127158": {
+    "Prev": "7985093320464820",
+    "Next": "30744916578855883",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ahnassi's friend likes the gifts Ahnassi gives? Good. Then perhaps Ahnassi will think hard about another nice gift when her friend comes to see her again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "30744916578855883": {
+    "Prev": "1516726798376127158",
+    "Next": "1264913824304223193",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "And Ahnassi has a NEW secret to share with her true and good friend. Guess what Ahnassi hears? Beldrose Dralor. You know this name? The biggest fatcat factor of Redoran? Guess who has a very special key to very special chests in the Redoran Treasury at the Redoran Compound in Vivec? YOU GUESSED! Beldrose Dralor. But you do not guess where he KEEPS this key! It is so silly! You won't believe! In HIS WIFE'S CLOTHES CHEST! In his manor on tier-top! What do you think? Is this not a fine gift Ahnassi shares?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal Romance_Ahnassi 60",
+      "player->Additem \"Extravagant_Shirt_02\" 1",
+      "player->Additem \"Extravagant_Pants_02\" 1",
+      "player->Additem \"BookSkill_Short Blade5\" 1",
+      "Journal Romance_Ahnassi 50"
+    ]
+  },
+  "1264913824304223193": {
+    "Prev": "30744916578855883",
+    "Next": "26617211232048212511",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Look what Ahnassi found? Isn't it pretty? And it is just your size! You will look so fine, Ahnassi is proud to have such a fine-looking friend. And LOOK! What a surprise! Inside these clothes, what do I find but a book, a very special book, a book Ahnassi knows her friend will like.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 45.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  },
+  "26617211232048212511": {
+    "Prev": "1264913824304223193",
+    "Next": "117971235311411748",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are so welcome. It is nothing. It pleases Ahnassi to give her new friends such gifts.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 37.0
+      }
+    ],
+    "Script": []
+  },
+  "117971235311411748": {
+    "Prev": "26617211232048212511",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here. This is a little nothing that Ahnassi finds. A tasty treat, and handy.",
+    "Filters": [],
+    "Script": [
+      "Player->Additem \"P_Feather_Q\" 1",
+      "Journal Romance_Ahnassi 37"
+    ]
+  }
+}

@@ -1,0 +1,253 @@
+{
+  "1280223015766": {
+    "Prev": "",
+    "Next": "820545132715116915",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mastrius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "One day I will escape from this prison.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampCurse",
+        "Value": 60.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampCurse",
+        "Value": 90.0
+      }
+    ],
+    "Script": []
+  },
+  "820545132715116915": {
+    "Prev": "1280223015766",
+    "Next": "28092968363843",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mastrius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have returned with the items. Perfect. I have made the preparations necessary to complete the spell. I will only require one thing further from you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampCurse",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampCurse",
+        "Value": 60.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "ingred_daedras_heart_01",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "spell_breaker_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem \"ingred_daedras_heart_01\" 1",
+      "Player->RemoveItem \"spell_breaker_unique\" 1",
+      "Additem \"ingred_daedras_heart_01\" 1",
+      "AddItem \"spell_breaker_unique\" 1"
+    ]
+  },
+  "28092968363843": {
+    "Prev": "820545132715116915",
+    "Next": "154946771452611130",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mastrius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Why have you not brought me the items I desire? Make haste! I will be free of this prison, and I...we...will rule the world above.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampCurse",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampCurse",
+        "Value": 60.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "spell_breaker_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "154946771452611130": {
+    "Prev": "28092968363843",
+    "Next": "316978715130218648",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mastrius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Why have you not brought me the items I desire? Make haste! I will be free of this prison, and I...we...will rule the world above.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampCurse",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampCurse",
+        "Value": 60.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "ingred_daedras_heart_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "316978715130218648": {
+    "Prev": "154946771452611130",
+    "Next": "31931137473110828419",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mastrius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? Pah! I should have figured as much from one so new as you to the dark powers. Leave me. Another will come to free me from this prison.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampCurse\" 50"
+    ]
+  },
+  "31931137473110828419": {
+    "Prev": "316978715130218648",
+    "Next": "3145650071658710677",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mastrius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent. I could sense you had the stuff of greatness. Here is what you must do. I will need you to bring me two items. The first is Spell Breaker. It is a powerful shield, which some say was forged by the hands of a Daedra Prince. I should be able to use it as a conduit to remove the spell. The other item I will need is the heart of a daedra. This will give me the strength I need to dispel the enchantment.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampCurse\" 40",
+      "\"spell_breaker_unique\"->Enable"
+    ]
+  },
+  "3145650071658710677": {
+    "Prev": "31931137473110828419",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mastrius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Though I have been trapped here for centuries and my body is weak, my mind is not dead. I feel that I have devised a way to break this barrier that keeps me locked in here. Perhaps you will help me, my friend. The two of us could rule the outside world together. None could stand before our combined might!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampCurse",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampCurse\" 30",
+      "Choice \"I will help to free you.\" 1 \"No. I will not attempt to meddle in the affairs of a Daedra Prince.\" 2"
+    ]
+  }
+}

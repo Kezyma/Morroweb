@@ -1,0 +1,160 @@
+{
+  "3222036221572711362": {
+    "Prev": "",
+    "Next": "973010327749529116",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been kicked out of the Guild, %PCName. Better make amends, or no one's going to talk to you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "973010327749529116": {
+    "Prev": "3222036221572711362",
+    "Next": "1266419891067229822",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "You already brought me a copy of \"Withershins.\"",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_Withershins",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1266419891067229822": {
+    "Prev": "973010327749529116",
+    "Next": "28531006396010330",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "This is the right book, %PCName. I'll give you a fair price for it. How does 1000 septims sound?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_Withershins 100",
+      "Player->RemoveItem BookSkill_Restoration1 1",
+      "Player->AddItem Gold_001 1000",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "28531006396010330": {
+    "Prev": "1266419891067229822",
+    "Next": "14871243791130115580",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Well, keep looking. Like I said, I think Miles Gloriosus over in Maar Gan has a copy. I don't know where he keeps it, though.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "14871243791130115580": {
+    "Prev": "28531006396010330",
+    "Next": "2198391773122030806",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Did you get a copy of \"Withershins?\"",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bookskill_restoration1",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is\" 1 \"No, not yet\" 2"
+    ]
+  },
+  "2198391773122030806": {
+    "Prev": "14871243791130115580",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Another client wants us to find a copy of this book for him. It's not for sale if you know what I mean. I've heard that Miles Gloriosus over at the Andus Tradehouse in Maar Gan has a copy.",
+    "Filters": [],
+    "Script": [
+      "Journal TG_Withershins 10"
+    ]
+  }
+}

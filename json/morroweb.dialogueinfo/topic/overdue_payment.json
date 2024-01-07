@@ -1,0 +1,548 @@
+{
+  "1136135072279312389": {
+    "Prev": "",
+    "Next": "2090314536287661173",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ienas sarandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. The items should be returned to the Ald'ruhn merchants with my apologies. Thank you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Aldruhn",
+        "Value": 45.0
+      }
+    ],
+    "Script": []
+  },
+  "2090314536287661173": {
+    "Prev": "1136135072279312389",
+    "Next": "32147262272102422806",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ienas sarandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sorry, but I have no gold to give you, and that is that.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal Town_Aldruhn 35"
+    ]
+  },
+  "32147262272102422806": {
+    "Prev": "2090314536287661173",
+    "Next": "1266284481779822971",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ienas sarandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You clearly do not appreciate the finer points of honor, outlander. No self-respecting Dunmer would allow himself to be influenced by crude threats. I told you. I have not the cash now, but I expect to have it soon. These are the words of a gentleman. And I will not have my honor questioned by a rude outlander.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": [
+      "Journal Town_Aldruhn 40"
+    ]
+  },
+  "1266284481779822971": {
+    "Prev": "32147262272102422806",
+    "Next": "23939876240323066",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ienas sarandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Now I know what I must do. I must give my parent's house to the Temple. And I shall enter the Temple myself, and see if I can make something of my life. Thank you, %PCName. You've taught me a valuable lesson. From this day forward, I shall make my honest way in the world, and try to be of service to others.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 9.0
+      }
+    ],
+    "Script": [
+      "player->additem Sarandas_shoes_2 1",
+      "removeitem Sarandas_shoes_2 1",
+      "player->additem Sarandas_shirt_2 1",
+      "removeitem Sarandas_shirt_2 1",
+      "player->additem Sarandas_ring_2 1",
+      "removeitem Sarandas_ring_2 1",
+      "player->additem Sarandas_ring_1 1",
+      "removeitem Sarandas_ring_1 1",
+      "player->additem Sarandas_pants_2 1",
+      "removeitem Sarandas_pants_2 1",
+      "player->additem Sarandas_belt 1",
+      "removeitem Sarandas_belt 1",
+      "player->additem Sarandas_amulet 1",
+      "removeitem Sarandas_amulet 1",
+      "moddisposition 30",
+      "player->modReputation 1",
+      "startscript movesarandas",
+      "Journal Town_Aldruhn 45"
+    ]
+  },
+  "23939876240323066": {
+    "Prev": "1266284481779822971",
+    "Next": "783494950023670",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ienas sarandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here. Take these items and return them. Give the brocade shirt and silk pants to Bivale Teneran. Give the racer suede belt to Tiras Sadus. Give the ebony ring and the glass ring to Daynes Redothril. Give the designer shoes to Llether Vari. Give the firejade amulet to Bevene Releth. They are all merchants in Ald'ruhn. Return the goods, with my apologies.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 7.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 9"
+    ]
+  },
+  "783494950023670": {
+    "Prev": "23939876240323066",
+    "Next": "9336988587373",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ienas sarandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Indeed, it is as you say. '...Nor encumber myself with profitless treasures, but shall share freely among house and hearth.' I have forgotten the Grace of Generosity, the words of  Lord Vivec. You are right to remind me of Saryoni's Sermons. I've been a fool. I've wasted my family fortunes, all in pursuit of profitless treasures. I should share freely, rather than squander the great gifts of home and hearth.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 7"
+    ]
+  },
+  "9336988587373": {
+    "Prev": "783494950023670",
+    "Next": "245011191273177586",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ienas sarandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's time I faced facts. And lived up to the hopes my poor departed parents had for me. I'll just have to sell the house, and find some better, more honorable way to live. It's hard. But it's fair. I've learned my lesson. From this day forward, I will make my honest way in the world.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 8.0
+      }
+    ],
+    "Script": [
+      "player->additem Sarandas_shoes_2 1",
+      "removeitem Sarandas_shoes_2 1",
+      "player->additem Sarandas_shirt_2 1",
+      "removeitem Sarandas_shirt_2 1",
+      "player->additem Sarandas_ring_2 1",
+      "removeitem Sarandas_ring_2 1",
+      "player->additem Sarandas_ring_1 1",
+      "removeitem Sarandas_ring_1 1",
+      "player->additem Sarandas_pants_2 1",
+      "removeitem Sarandas_pants_2 1",
+      "player->additem Sarandas_belt 1",
+      "removeitem Sarandas_belt 1",
+      "player->additem Sarandas_amulet 1",
+      "removeitem Sarandas_amulet 1",
+      "startscript movesarandas",
+      "Journal Town_Aldruhn 45"
+    ]
+  },
+  "245011191273177586": {
+    "Prev": "9336988587373",
+    "Next": "196311919643620715",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ienas sarandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here. Take these items and return them. Give the brocade shirt and silk pants to Bivale Teneran. Give the racer suede belt to Tiras Sadus. Give the ebony ring and the glass ring to Daynes Redothril. Give the designer shoes to Llether Vari. Give the firejade amulet to Bevene Releth. They are all merchants in Ald'ruhn. Return the goods, with my apologies.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 7.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 8"
+    ]
+  },
+  "196311919643620715": {
+    "Prev": "245011191273177586",
+    "Next": "4083203743167810288",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ienas sarandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. Yes. You're so right. You've been very patient and reasonable, %PCName. As you say, I have the goods, I owe the money, and the honorable thing to do would be just to return the goods. It's... It's... Oh, it's too much to bear! I've lost everything my parents left me, and sold all the furnishings, just to pay my gambling debts. I've tried to pretend it will all work out, but I'm just fooling myself.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 5"
+    ]
+  },
+  "4083203743167810288": {
+    "Prev": "196311919643620715",
+    "Next": "173882128522232732",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ienas sarandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. Indeed. That is FINE brandy. Thank you, friend. It's... It's... Oh, it's too much to bear! I've been such a fool. I've lost everything my parents left me, and sold all the furnishings, just to pay my gambling debts. I've tried to pretend it will all work out, but I'm just fooling myself.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 7"
+    ]
+  },
+  "173882128522232732": {
+    "Prev": "4083203743167810288",
+    "Next": "26221260442221021900",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ienas sarandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. Indeed. That is FINE brandy. Thank you, friend. It's... It's... Oh, it's too much to bear! I've been such a fool. I've lost everything my parents left me, and sold all the furnishings, just to pay my gambling debts. I've tried to pretend it will all work out, but I'm just fooling myself.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 7"
+    ]
+  },
+  "26221260442221021900": {
+    "Prev": "173882128522232732",
+    "Next": "755621398870423083",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ienas sarandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. Indeed. That is FINE whiskey. Thank you, friend. It's... It's... Oh, it's too much to bear! I've been such a fool. I've lost everything my parents left me, and sold all the furnishings, just to pay my gambling debts. I've tried to pretend it will all work out, but I'm just fooling myself.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 7"
+    ]
+  },
+  "755621398870423083": {
+    "Prev": "26221260442221021900",
+    "Next": "143922153952227323",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ienas sarandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I do have some overdue payments with local merchants. But I'm afraid I can't pay my debts right now. You see, I'm a little strapped for cash at the moment. But I have certain very attractive prospects underway, and I'm sure I'll be able to pay very soon.",
+    "Filters": [],
+    "Script": [
+      "Choice \"Offer a sympathetic ear and friendly advice.\" 5 \"Threaten to take the merchant's goods by violence.\" 6 \"Take no immediate action.\" 10"
+    ]
+  },
+  "143922153952227323": {
+    "Prev": "755621398870423083",
+    "Next": "2000627057172059807",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ienas sarandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I do have some overdue payments with local merchants. But I'm afraid I can't pay my debts right now. You see, I'm a little strapped for cash at the moment. But I have certain very attractive prospects underway, and I'm sure I'll be able to pay very soon.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcSpeechcraft",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Offer a sympathetic ear and friendly advice.\" 5 \"Threaten to take the merchant's goods by violence.\" 6 \"Take no immediate action.\" 10"
+    ]
+  },
+  "2000627057172059807": {
+    "Prev": "143922153952227323",
+    "Next": "62717177107585185",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ienas sarandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I do have some overdue payments with local merchants. But I'm afraid I can't pay my debts right now. You see, I'm a little strapped for cash at the moment. But I have certain very attractive prospects underway, and I'm sure I'll be able to pay very soon.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_SaryonisSermons",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Offer a quote from 'Saryoni's Sermons' and a sympathetic ear.\" 4 \"Threaten to take the merchant's goods by violence.\" 6 \"Take no immediate action.\" 10"
+    ]
+  },
+  "62717177107585185": {
+    "Prev": "2000627057172059807",
+    "Next": "1642317902423633",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ienas sarandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I do have some overdue payments with local merchants. But I'm afraid I can't pay my debts right now. You see, I'm a little strapped for cash at the moment. But I have certain very attractive prospects underway, and I'm sure I'll be able to pay very soon.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "potion_comberry_brandy_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Offer a drink of brandy and a sympathetic ear.\" 3 \"Threaten to take the merchant's goods by violence.\" 6 \"Take no immediate action.\" 10"
+    ]
+  },
+  "1642317902423633": {
+    "Prev": "62717177107585185",
+    "Next": "17770171059525240",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ienas sarandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I do have some overdue payments with local merchants. But I'm afraid I can't pay my debts right now. You see, I'm a little strapped for cash at the moment. But I have certain very attractive prospects underway, and I'm sure I'll be able to pay very soon.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "potion_cyro_brandy_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Offer a drink of brandy and a sympathetic ear.\" 2 \"Threaten to take the merchant's goods by violence.\" 6 \"Take no immediate action.\" 10"
+    ]
+  },
+  "17770171059525240": {
+    "Prev": "1642317902423633",
+    "Next": "1794512819309942055",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ienas sarandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I do have some overdue payments with local merchants. But I'm afraid I can't pay my debts right now. You see, I'm a little strapped for cash at the moment. But I have certain very attractive prospects underway, and I'm sure I'll be able to pay very soon.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Potion_Cyro_Whiskey_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Offer a drink of whiskey and a sympathetic ear.\" 1 \"Threaten to take the merchant's goods by violence.\" 6; \"Take no immediate action.\" 10"
+    ]
+  },
+  "1794512819309942055": {
+    "Prev": "17770171059525240",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ienas sarandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I do have some overdue payments with local merchants. But I'm afraid I can't pay my debts right now. You see, I'm a little strapped for cash at the moment. But I have certain very attractive prospects underway, and I'm sure I'll be able to pay very soon.",
+    "Filters": [],
+    "Script": [
+      "Choice \"Threaten to take the merchant's goods by violence.\" 6 \"Take no immediate action.\" 10"
+    ]
+  }
+}

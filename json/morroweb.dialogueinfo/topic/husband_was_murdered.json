@@ -1,0 +1,117 @@
+{
+  "657697982082225184": {
+    "Prev": "",
+    "Next": "7926215012261930358",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "widow vabdas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What do you care, foreigner? You stole my land and it is as if you murdered him yourself. Get out of my house.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "IL_WidowLand",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "7926215012261930358": {
+    "Prev": "657697982082225184",
+    "Next": "1290410833307288630",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "widow vabdas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So now you know the truth.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_WidowLand",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "1290410833307288630": {
+    "Prev": "7926215012261930358",
+    "Next": "15039233462678614391",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "widow vabdas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you have proof that my husband was murdered, take the proof to Darius over at the Madach Tradehouse.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "lugrub's axe",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_WidowLand",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "15039233462678614391": {
+    "Prev": "1290410833307288630",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "widow vabdas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My husband went to the Eggmine and never came home. He knew the mine was closed by you foreigners and guarded by the Legions, but we had no fresh kwama eggs. If you want to help me, go the mines and find out the truth.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_WidowLand",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal IL_WidowLand 40"
+    ]
+  }
+}

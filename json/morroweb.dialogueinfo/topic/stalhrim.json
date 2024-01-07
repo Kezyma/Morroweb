@@ -1,0 +1,757 @@
+{
+  "24960322633058729095": {
+    "Prev": "",
+    "Next": "270532496010814599",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent work, %PCRank. Now, you'll have to decide whether you want Stalhrim weapons or Stalhrim armor.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_raw_Stalhrim_01",
+        "Value": 1.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "Stalhrimgiven",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "set \"Carnius Magius\".PCHasStalhrim to 1",
+      "player->removeitem \"ingred_raw_stalhrim_01\" 1"
+    ]
+  },
+  "270532496010814599": {
+    "Prev": "24960322633058729095",
+    "Next": "2905423486037004",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent work, %PCRank. Once you've given me enough, we can discuss your acquiring Stalhrim weapons and Stalhrim armor.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_raw_Stalhrim_01",
+        "Value": 1.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "Stalhrimgiven",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "set \"Carnius Magius\".PCHasStalhrim to 1",
+      "player->removeitem \"ingred_raw_stalhrim_01\" 1"
+    ]
+  },
+  "2905423486037004": {
+    "Prev": "270532496010814599",
+    "Next": "2282422603075131729",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, where is it? Don't waste my time, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2282422603075131729": {
+    "Prev": "2905423486037004",
+    "Next": "3213517364154376468",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "All right. Just be sure you bring it to me as soon as you have it. I'd hate to think that you're holding out on me, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "3213517364154376468": {
+    "Prev": "2282422603075131729",
+    "Next": "2677411163373231969",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you have a piece for me?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_8a",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice : \"Yes, here's one.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "2677411163373231969": {
+    "Prev": "3213517364154376468",
+    "Next": "2923928293248557471",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent. Now that you've completed your task, I'll just relieve you of this. In the future, I suggest you bring me any Stalhrim you find. In exchange for doing this work for me, I will do a great deal for you. You bring me more Stalhrim, and in exchange, I will have weapons and armor crafted from it for you... I told you great things would come from allying yourself with me, didn't I?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_8a",
+        "Value": 40.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_raw_Stalhrim_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"ingred_raw_stalhrim_01\" 1",
+      "player->additem \"gold_001\" 3000",
+      "Journal CO_8a 50",
+      "ModPCFacRep 12 \"East Empire Company\""
+    ]
+  },
+  "2923928293248557471": {
+    "Prev": "2677411163373231969",
+    "Next": "3149821282532121977",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Bring me a piece of it from the mine, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_8a",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "3149821282532121977": {
+    "Prev": "2923928293248557471",
+    "Next": "919918461102110231",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "They're all dead? Good. With them out of the way, there's no one else to reveal just how valuable the Stalhrim is. You currently possess the only tool on this island capable of cutting into Stalhrim. There are a few more like it, but none here have them. So you will acquire pieces of Stalhrim for me, starting now. Bring me at least one piece from the block in the mine, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_8a",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal CO_8a 30"
+    ]
+  },
+  "919918461102110231": {
+    "Prev": "3149821282532121977",
+    "Next": "30158186984095955",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Find those Nords and kill them. They're the only ones who understand the true importance of the Stalhrim.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_8a",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "30158186984095955": {
+    "Prev": "919918461102110231",
+    "Next": "1126922898306423231",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's Nordic, whether the fools at Raven Rock know it or not. And it's immensely valuable - worth more than the rest of that whole stinking mine. Know that this, THIS is the reason I took this ridiculous position in the first place; I want that ice, and I want all of it. Since Graring is already dead, there's no one to stop you from taking it.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 2.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "graring",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1126922898306423231": {
+    "Prev": "30158186984095955",
+    "Next": "31580105842381012513",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's Nordic, whether the fools at Raven Rock know it or not. And it's immensely valuable - worth more than the rest of that whole stinking mine. Know that this, THIS is the reason I took this ridiculous position in the first place; I want that ice, and I want all of it. That means you're going to eliminate the only people who know anything about it. Go to the north, just south of where the Harstad river meets the Ilsid, and find the three Nords there. Kill them, and get the pick axe I know they have.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal CO_8a 10",
+      "StartScript ColonyNordAxe"
+    ]
+  },
+  "31580105842381012513": {
+    "Prev": "1126922898306423231",
+    "Next": "181459415254915849",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Stale what? I assure you I have no idea what you're talking about, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "181459415254915849": {
+    "Prev": "31580105842381012513",
+    "Next": "17457546157029387",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "From the information Graring gave you, it's clearly far more useful to us as armor and weapons than as chunks of ice. And it'll be tougher for Carnius to take away, too. Make sure that if you find any more of it, you take it to Graring.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_8",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "17457546157029387": {
+    "Prev": "181459415254915849",
+    "Next": "5008273181096230475",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Get some of it to Graring, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_8",
+        "Value": 30.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "5008273181096230475": {
+    "Prev": "17457546157029387",
+    "Next": "2066918330920214020",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've heard Carnius mention the word before; I just never knew what he was talking about. He has heard about the burial cavern, of course, and is expressing an unusual amount of interest in it. Get it before Carnius can, and take it back to Graring.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_8",
+        "Value": 30.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2066918330920214020": {
+    "Prev": "5008273181096230475",
+    "Next": "1536517000274814875",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hidar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Though the Skaal shun its use, Stalhrim weapons are very effective. For that reason, I do not feel it is wrong to use it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_8",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1536517000274814875": {
+    "Prev": "2066918330920214020",
+    "Next": "23467183481320924466",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aenar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is sacred, but it is useful. It can be made to craft Stalhrim armor, if one has the tools and knows the proper techniques.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_8",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "23467183481320924466": {
+    "Prev": "1536517000274814875",
+    "Next": "1011530623524630653",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "graring",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have some with you? Talk to Aenar if you wish to have armor crafted; Hidar will forge weapons for you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_8",
+        "Value": 50.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "aenar",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "hidar",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1011530623524630653": {
+    "Prev": "23467183481320924466",
+    "Next": "20279543186431377",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "graring",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have some of it? I shall not take it from you; that you were willing to bring it is proof enough. Now that I now you can be trusted, you may come to us at any time, and we will construct for you armor and weapons. Speak to Aenar and Hidar; they will do these things for you with my blessing.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_8",
+        "Value": 40.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_raw_Stalhrim_01",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "aenar",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "hidar",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal CO_8 50"
+    ]
+  },
+  "20279543186431377": {
+    "Prev": "1011530623524630653",
+    "Next": "19980283012905216357",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "graring",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Bring me some of it, so that I may know you can be trusted. Then, we shall speak more of it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_8",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "19980283012905216357": {
+    "Prev": "20279543186431377",
+    "Next": "20491359422657064",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "graring",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are not the first to seek it. Outsiders like this woman have been here before; always demanding, always offering payment that is useless to us. But they get nothing. The Skaal give them nothing because they call it sacred; we give them nothing because we know they would misuse it.",
+    "Filters": [],
+    "Script": []
+  },
+  "20491359422657064": {
+    "Prev": "19980283012905216357",
+    "Next": "636826752824332726",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Raven Rock",
+    "PlayerFaction": "",
+    "Text": "Is that the stuff we found in the mine? Weird, huh? It looks just like ice, but we couldn't put a dent in it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_8a",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "636826752824332726": {
+    "Prev": "20491359422657064",
+    "Next": "1702824556150167478",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Raven Rock",
+    "PlayerFaction": "",
+    "Text": "Is that the stuff we found in the mine? Weird, huh? It looks just like ice, but we couldn't put a dent in it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_8",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "1702824556150167478": {
+    "Prev": "636826752824332726",
+    "Next": "1492976812926509",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Solstheim, Thirsk",
+    "PlayerFaction": "",
+    "Text": "That's of no concern to you. There are some things, some sacred things, that are best left as they are.",
+    "Filters": [],
+    "Script": []
+  },
+  "1492976812926509": {
+    "Prev": "1702824556150167478",
+    "Next": "11703135369074201",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "brynjolfr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You speak of something ancient and sacred. I would never work with such a material!",
+    "Filters": [],
+    "Script": []
+  },
+  "11703135369074201": {
+    "Prev": "1492976812926509",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Solstheim",
+    "PlayerFaction": "",
+    "Text": "Sorry, I don't know what you're talking about.",
+    "Filters": [],
+    "Script": []
+  }
+}

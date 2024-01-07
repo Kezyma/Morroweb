@@ -1,0 +1,83 @@
+{
+  "241526254114337396": {
+    "Prev": "",
+    "Next": "5435245362049830954",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bakh gro-sham",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard that was all taken care of.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Assassins",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "5435245362049830954": {
+    "Prev": "241526254114337396",
+    "Next": "2052928225302921166",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bakh gro-sham",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's all I know. Do with the information what you will. And tell the big guy hello for me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Assassins",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2052928225302921166": {
+    "Prev": "5435245362049830954",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bakh gro-sham",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My sources tell me that there's a plot, but not against the king. From what I've been able to gather, there will be an attempt made on the Queen Mother's life. I'm not sure who would want to target her--from what I know, she has no enemies in Mournhold--but that's what my sources are telling me.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "HelAss",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Set HelAss to 2",
+      "Journal TR_Assassins 50"
+    ]
+  }
+}

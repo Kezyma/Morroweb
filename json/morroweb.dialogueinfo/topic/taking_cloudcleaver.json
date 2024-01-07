@@ -1,0 +1,91 @@
+{
+  "26332259411248911020": {
+    "Prev": "",
+    "Next": "2244928392473729022",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlormar wine-sot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah, thank you friend. I noticed you admiring the way I fought that old witch, even without the aid of a sharp blade. I don't have any money or treasure to thank you for your help with, but I can give you a few pointers that will help you be stronger in a fight.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Player->ModStrength 2",
+      "Journal MV_abusedhealer 85",
+      "AiWander 0,0,60,30,10,0,0,0,0,0,0"
+    ]
+  },
+  "2244928392473729022": {
+    "Prev": "26332259411248911020",
+    "Next": "2757230905834523173",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlormar wine-sot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Methinks that a poor, poor decision on your part friend.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_AbusedHealer\" 80",
+      "ModDisposition -100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "2757230905834523173": {
+    "Prev": "2244928392473729022",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlormar wine-sot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, let me hold her in my hands - ah, my pretty, I've missed you so....",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "MV_AbusedHealer",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Here's your axe, Hlormar.\" 1 \"It belongs with a true warrior. Me.\" 2"
+    ]
+  }
+}

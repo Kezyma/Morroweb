@@ -1,0 +1,290 @@
+{
+  "23336204581832611976": {
+    "Prev": "",
+    "Next": "6400257011881023722",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled from House Redoran. Make amends if you can.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "6400257011881023722": {
+    "Prev": "23336204581832611976",
+    "Next": "158131442190951070",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "The Hlaalu will have a hard time doing business there with Raynasa Rethan gone.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_AttackRethan",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "158131442190951070": {
+    "Prev": "6400257011881023722",
+    "Next": "2392557151515428536",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "So Raynasa Rethan is already dead. Good work, %PCName.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "raynasa rethan",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "HR_AttackRethan",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HR_AttackRethan 100",
+      "ModPCFacRep 10 \"Redoran\"",
+      "ModDisposition 10",
+      "Player->ModReputation 1"
+    ]
+  },
+  "2392557151515428536": {
+    "Prev": "158131442190951070",
+    "Next": "84346128103924607",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "So Rethan Manor now has no Hlaalu lord. Good work, %PCName.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "raynasa rethan",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_AttackRethan",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HR_AttackRethan 100",
+      "ModPCFacRep 10 \"Redoran\"",
+      "ModDisposition 10",
+      "Player->ModReputation 1"
+    ]
+  },
+  "84346128103924607": {
+    "Prev": "2392557151515428536",
+    "Next": "312088763616122893",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Rethan Manor is on the Odai Plateau, on the River Odai which heads south from Balmora. Go there and slay Raynasa Rethan. Show these Hlaalu that we mean business.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_AttackUvirith",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HR_AttackRethan 10",
+      "ShowMap \"Odai Plateau\""
+    ]
+  },
+  "312088763616122893": {
+    "Prev": "84346128103924607",
+    "Next": "482622429622738",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "A stronghold is no good without its master.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_AttackRethan",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "482622429622738": {
+    "Prev": "312088763616122893",
+    "Next": "2364117383169438305",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "She is already dead? This is excellent news, %PCName.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "raynasa rethan",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "HT_AttackRethan",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HT_AttackRethan 100",
+      "ModPCFacRep 10 \"Telvanni\"",
+      "ModDisposition 10",
+      "Player->ModReputation 1"
+    ]
+  },
+  "2364117383169438305": {
+    "Prev": "482622429622738",
+    "Next": "264238851038814188",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "So Raynasa Rethan is no more. You are a credit to your House, %PCName.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "raynasa rethan",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_AttackRethan",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HT_AttackRethan 100",
+      "ModPCFacRep 10 \"Telvanni\"",
+      "ModDisposition 10",
+      "Player->ModReputation 1"
+    ]
+  },
+  "264238851038814188": {
+    "Prev": "2364117383169438305",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Rethan Manor is on the Odai Plateau. Follow the Odai River south from Balmora and you will see it on your right. Go there and slay this young Hlaalu noble.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_RecruitEddie",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HT_AttackRethan 10",
+      "ShowMap \"Odai Plateau\""
+    ]
+  }
+}

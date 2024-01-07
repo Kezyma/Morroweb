@@ -1,0 +1,141 @@
+{
+  "2673411162303316624": {
+    "Prev": "",
+    "Next": "187562405697071968",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "paur maston",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for helping me reach Molag Mar.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_TraderMissed",
+        "Value": 95.0
+      }
+    ],
+    "Script": []
+  },
+  "187562405697071968": {
+    "Prev": "2673411162303316624",
+    "Next": "1007580052588126661",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "paur maston",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, hopefully, I'll be able to make it there in one piece.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_TraderMissed",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_TraderMissed",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1007580052588126661": {
+    "Prev": "187562405697071968",
+    "Next": "17343287881318820021",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "paur maston",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent! Let's be on our way, then.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_TraderMissed\" 30",
+      "\"Paur Maston\"->AiFollow Player 0 0 0 0 0 0 0",
+      "Goodbye"
+    ]
+  },
+  "17343287881318820021": {
+    "Prev": "1007580052588126661",
+    "Next": "30315275591875210745",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "paur maston",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? Well, maybe I'll be able to make it on my own. Good luck to you, then.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_TraderMissed\" 40",
+      "Goodbye"
+    ]
+  },
+  "30315275591875210745": {
+    "Prev": "17343287881318820021",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "paur maston",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've heard the road there is populated by dangerous creatures, and I fear I can't make it alone. Perhaps you'd be willing to escort me? I have little to compensate you for your trouble, but once we meet up with Vanjirra, she should be able to reward you well.",
+    "Filters": [],
+    "Script": [
+      "Journal \"MV_TraderMissed\" 20",
+      "Choice \"I can accompany you to Molag Mar.\" 1 \"Sorry, I don't have time for that now.\" 2"
+    ]
+  }
+}

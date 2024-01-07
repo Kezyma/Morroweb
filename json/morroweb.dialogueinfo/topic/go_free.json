@@ -1,0 +1,1343 @@
+{
+  "199641425381905494": {
+    "Prev": "",
+    "Next": "981612079163648130",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eleedal_lei",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I will free the others. Soon we will return to Black Marsh.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_SlaveRebellion",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "981612079163648130": {
+    "Prev": "199641425381905494",
+    "Next": "18195562447755",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eleedal_lei",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I am free now. I will free the others and lead them back to Black Marsh.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HT_SlaveRebellion 50",
+      "Player->RemoveItem \"key_abebaalslaves_01\" 1",
+      "AddItem \"key_abebaalslaves_01\" 1",
+      "Set slaveStatus to 3",
+      "Set FreedSlavesCounter to FreedSlavesCounter + 10",
+      "ModDisposition 50"
+    ]
+  },
+  "18195562447755": {
+    "Prev": "981612079163648130",
+    "Next": "1313830142681810318",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eleedal_lei",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you set me free, I will free any slaves that remain here and lead them to safety.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "1313830142681810318": {
+    "Prev": "18195562447755",
+    "Next": "1942430040302163712",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eleedal_lei",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you found the key?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "key_abebaalslaves_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Unlock his bracers and give him the key.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "1942430040302163712": {
+    "Prev": "1313830142681810318",
+    "Next": "626832206718828325",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eleedal_lei",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you want to set us free, look for the key to our bracers somewhere here in the egg mine or in Tel Branora.",
+    "Filters": [],
+    "Script": []
+  },
+  "626832206718828325": {
+    "Prev": "1942430040302163712",
+    "Next": "300681198467613390",
+    "Type": "Topic",
+    "Disposition": 90,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You freed me, %PCName. Are you in the Twin Lamps?",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "slaveStatus",
+        "Value": 3.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "FreedSlavesCounter",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "300681198467613390": {
+    "Prev": "626832206718828325",
+    "Next": "2112269131757221074",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You freed me, %PCName.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "slaveStatus",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "2112269131757221074": {
+    "Prev": "300681198467613390",
+    "Next": "2615847683142510678",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dahleena",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, %Name is free! You are a good friend of %Name. Dahleena leaves when the moons are right.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Set slaveStatus to 3",
+      "Set FreedSlavesCounter to FreedSlavesCounter + 1",
+      "ModDisposition 50",
+      "Journal HR_CalderaDisrupt 50"
+    ]
+  },
+  "2615847683142510678": {
+    "Prev": "2112269131757221074",
+    "Next": "57342934926223481",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Khajiit",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, %Name is free! You are a good friend of %Name.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Set slaveStatus to 3",
+      "Set FreedSlavesCounter to FreedSlavesCounter + 1",
+      "ModDisposition 50"
+    ]
+  },
+  "57342934926223481": {
+    "Prev": "2615847683142510678",
+    "Next": "303214343264320459",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, now I am free. Thank you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Set slaveStatus to 3",
+      "Set FreedSlavesCounter to FreedSlavesCounter + 1",
+      "ModDisposition 50"
+    ]
+  },
+  "303214343264320459": {
+    "Prev": "57342934926223481",
+    "Next": "2847517866258810790",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Khajiit",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "%Name is so very sorry. Please do not punish poor %Name.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "2847517866258810790": {
+    "Prev": "303214343264320459",
+    "Next": "267091420155215554",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am sorry. Please forgive me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "267091420155215554": {
+    "Prev": "2847517866258810790",
+    "Next": "2590123069223445779",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Hlormaren",
+    "PlayerFaction": "",
+    "Text": "You have the key. Will you let me go free?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "key_hlormarenslaves_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Unlock the slaves' bracers.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "2590123069223445779": {
+    "Prev": "267091420155215554",
+    "Next": "226398648182778706",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Molag Mar",
+    "PlayerFaction": "",
+    "Text": "No. There is no hope for us.",
+    "Filters": [],
+    "Script": []
+  },
+  "226398648182778706": {
+    "Prev": "2590123069223445779",
+    "Next": "1720321173178261542",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Kudanat",
+    "PlayerFaction": "",
+    "Text": "You have the key. Will you let me go free?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "key_kudanatslaves_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Unlock the slaves' bracers.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "1720321173178261542": {
+    "Prev": "226398648182778706",
+    "Next": "2411283323124512985",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Yakanalit",
+    "PlayerFaction": "",
+    "Text": "You have the key. Will you let me go free?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "key_yakanalitslaves_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Unlock the slaves' bracers.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "2411283323124512985": {
+    "Prev": "1720321173178261542",
+    "Next": "2693921643411530513",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Sadrith Mora, Gateway Inn",
+    "PlayerFaction": "",
+    "Text": "No. There is no hope for us.",
+    "Filters": [],
+    "Script": []
+  },
+  "2693921643411530513": {
+    "Prev": "2411283323124512985",
+    "Next": "712011242789727655",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Sinsibadon",
+    "PlayerFaction": "",
+    "Text": "You have the key. Will you let me go free?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "key_sinsibadonslaves_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Unlock the slaves' bracers.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "712011242789727655": {
+    "Prev": "2693921643411530513",
+    "Next": "530232165429289",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Minabi",
+    "PlayerFaction": "",
+    "Text": "You have the key. Will you let me go free?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "key_minabislaves_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Unlock the slaves' bracers.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "530232165429289": {
+    "Prev": "712011242789727655",
+    "Next": "3072424924240316428",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Abebaal Egg Mine",
+    "PlayerFaction": "",
+    "Text": "Our leader, Eleedal-Lei will lead us to freedom.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_SlaveRebellion",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "3072424924240316428": {
+    "Prev": "530232165429289",
+    "Next": "2772326544705429552",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Abebaal Egg Mine",
+    "PlayerFaction": "",
+    "Text": "No, there is no need. We are already free. Speak with our leader, Eleedal-Lei and join us in this slave rebellion.",
+    "Filters": [],
+    "Script": []
+  },
+  "2772326544705429552": {
+    "Prev": "3072424924240316428",
+    "Next": "19111110603127916876",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Zainsipilu",
+    "PlayerFaction": "",
+    "Text": "You have the key. Will you let me go free?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "key_zainsipiluslaves_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Unlock the slaves' bracers.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "19111110603127916876": {
+    "Prev": "2772326544705429552",
+    "Next": "11723330318197440",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hides_his_foot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I am free now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_TwinLamps3",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "11723330318197440": {
+    "Prev": "19111110603127916876",
+    "Next": "22181768139641505",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hides_his_foot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you here to set me free? Should we travel together?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_TwinLamps3",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "22181768139641505": {
+    "Prev": "11723330318197440",
+    "Next": "520421455239399130",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hides_his_foot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go free? No, I am old and could not make it on my own.",
+    "Filters": [],
+    "Script": []
+  },
+  "520421455239399130": {
+    "Prev": "22181768139641505",
+    "Next": "20269221682313710349",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gah_julan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have the key. Will you let me go free?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "key_drenplantationslaves_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Unlock the slaves' bracers.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "20269221682313710349": {
+    "Prev": "520421455239399130",
+    "Next": "1511598931222410982",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Dren Plantation",
+    "PlayerFaction": "",
+    "Text": "You have the key. Will you let me go free?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "key_drenplantationslaves_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Unlock the slaves' bracers.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "1511598931222410982": {
+    "Prev": "20269221682313710349",
+    "Next": "1364230960270223245",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Habinbaes",
+    "PlayerFaction": "",
+    "Text": "You have the key. Will you let me go free?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "key_habinbaesslaves_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Unlock the slaves' bracers.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "1364230960270223245": {
+    "Prev": "1511598931222410982",
+    "Next": "19690135432027614893",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Assarnud",
+    "PlayerFaction": "",
+    "Text": "You have the key. Will you let me go free?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "key_assarnudslaves_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Unlock the slaves' bracers.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "19690135432027614893": {
+    "Prev": "1364230960270223245",
+    "Next": "79436122621222157",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Sadrith Mora",
+    "PlayerFaction": "",
+    "Text": "No. There is no hope for us.",
+    "Filters": [],
+    "Script": []
+  },
+  "79436122621222157": {
+    "Prev": "19690135432027614893",
+    "Next": "807030795185926776",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Shushan",
+    "PlayerFaction": "",
+    "Text": "You have the key. Will you let me go free?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "key_shushanslaves_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Unlock the slaves' bracers.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "807030795185926776": {
+    "Prev": "79436122621222157",
+    "Next": "294747312583227810",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Rotheran, Arena",
+    "PlayerFaction": "",
+    "Text": "You have the key. Will you let me go free?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "key_rotheranslaves_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Unlock the slaves' bracers.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "294747312583227810": {
+    "Prev": "807030795185926776",
+    "Next": "219561677132301495",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Addamasartus",
+    "PlayerFaction": "",
+    "Text": "You have the key. Will you let me go free?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "key_addamasartusslaves_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Unlock the slaves' bracers.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "219561677132301495": {
+    "Prev": "294747312583227810",
+    "Next": "1064131682241792852",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Zebabi",
+    "PlayerFaction": "",
+    "Text": "You have the key. Will you let me go free?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "key_zebabislaves_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Unlock the slaves' bracers.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "1064131682241792852": {
+    "Prev": "219561677132301495",
+    "Next": "28110259223086024144",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Hinnabi",
+    "PlayerFaction": "",
+    "Text": "You have the key. Will you let me go free?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "key_hinnabislaves_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Unlock the slaves' bracers.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "28110259223086024144": {
+    "Prev": "1064131682241792852",
+    "Next": "344923501556916651",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "llaals ores",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No, there is no escape. You'll have to talk to the slavemaster.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "key_telaruhnslaves_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "344923501556916651": {
+    "Prev": "28110259223086024144",
+    "Next": "452829757792223617",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Tel Aruhn",
+    "PlayerFaction": "",
+    "Text": "No, there is no escape.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "key_telaruhnslaves_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "452829757792223617": {
+    "Prev": "344923501556916651",
+    "Next": "30650113062954514459",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Caldera",
+    "PlayerFaction": "",
+    "Text": "You have the key. Will you let me go free?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "key_calderaslaves_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Unlock the slaves' bracers.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "30650113062954514459": {
+    "Prev": "452829757792223617",
+    "Next": "294360691158826692",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec, Telvanni Canalworks",
+    "PlayerFaction": "",
+    "Text": "You have the key. Will you let me go free?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "key_vivectelvannislaves_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Unlock the slaves' bracers.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "294360691158826692": {
+    "Prev": "30650113062954514459",
+    "Next": "41722152871713897",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Panat",
+    "PlayerFaction": "",
+    "Text": "You have the key. Will you let me go free?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "key_panatslaves_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Unlock the slaves' bracers.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "41722152871713897": {
+    "Prev": "294360691158826692",
+    "Next": "624284792753415499",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Saturan",
+    "PlayerFaction": "",
+    "Text": "You have the key. Will you let me go free?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "key_saturanslaves_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Unlock the slaves' bracers.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "624284792753415499": {
+    "Prev": "41722152871713897",
+    "Next": "7242622142754312",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Suran, Suran Slave Market",
+    "PlayerFaction": "",
+    "Text": "No. There is no escape.",
+    "Filters": [],
+    "Script": []
+  },
+  "7242622142754312": {
+    "Prev": "624284792753415499",
+    "Next": "5625301911022612026",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Tel Branora",
+    "PlayerFaction": "",
+    "Text": "No. There is no escape.",
+    "Filters": [],
+    "Script": []
+  },
+  "5625301911022612026": {
+    "Prev": "7242622142754312",
+    "Next": "28146221662688417841",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Shushishi",
+    "PlayerFaction": "",
+    "Text": "You have the key. Will you let me go free?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "key_shushishislaves",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Unlock the slaves' bracers.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "28146221662688417841": {
+    "Prev": "5625301911022612026",
+    "Next": "44754633117727424",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Sha-Adnius",
+    "PlayerFaction": "",
+    "Text": "You have the key. Will you let me go free?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "key_shaadniusslaves_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Unlock the slaves' bracers.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "44754633117727424": {
+    "Prev": "28146221662688417841",
+    "Next": "619617600177165678",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Assarnud",
+    "PlayerFaction": "",
+    "Text": "You have the key. Will you let me go free?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "key_assarnudslaves_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Unlock the slaves' bracers.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "619617600177165678": {
+    "Prev": "44754633117727424",
+    "Next": "31183117942325532704",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Aharunartus",
+    "PlayerFaction": "",
+    "Text": "You have the key. Will you let me go free?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "key_aharunartusslaves_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Unlock the slaves' bracers.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "31183117942325532704": {
+    "Prev": "619617600177165678",
+    "Next": "306708653098526208",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Khajiit",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go free? You let %Name go free?",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "slaveStatus",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Choice \"Set your slave free.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "306708653098526208": {
+    "Prev": "31183117942325532704",
+    "Next": "939528842654827543",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Free? You are letting me go free?",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "slaveStatus",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Choice \"Set your slave free.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "939528842654827543": {
+    "Prev": "306708653098526208",
+    "Next": "5161469619064654",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Khajiit",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "%Name cannot be freed without the key.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "slaveStatus",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "5161469619064654": {
+    "Prev": "939528842654827543",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You must find the key to these bracers before I can be freed.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "slaveStatus",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

@@ -1,0 +1,325 @@
+{
+  "17811250333131423154": {
+    "Prev": "",
+    "Next": "21304320282436929459",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled, and I don't have to talk to you about any contracts.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "21304320282436929459": {
+    "Prev": "17811250333131423154",
+    "Next": "24130260953192126206",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Nar gro-Shagramph learned his lesson.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_DebtOrc",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "24130260953192126206": {
+    "Prev": "21304320282436929459",
+    "Next": "5286177301983028434",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here's 100 septims, %PCRank. Easy money. You want more orders, I got them.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_DebtOrc 100",
+      "Player->AddItem Gold_001 100",
+      "Player->RemoveItem \"juicedaw ring\" 1",
+      "AddItem \"juicedaw ring\" 1",
+      "ModPCFacRep 5 \"Fighters Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "5286177301983028434": {
+    "Prev": "24130260953192126206",
+    "Next": "381366572423214427",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Don't make me mad, %PCRank. Just hand the ring over.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "381366572423214427": {
+    "Prev": "5286177301983028434",
+    "Next": "8786793340314081",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Nar's dead? I like your style, %PCRace. Give me the ring and I'll get your pay.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "juicedaw ring",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "nar gro-shagramph",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give him the ring.\" 1 \"Keep the ring.\" 2"
+    ]
+  },
+  "8786793340314081": {
+    "Prev": "381366572423214427",
+    "Next": "17662152241512620165",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What? Nar's already dead? Well, serves him right. You want more orders, I got 'em.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "nar gro-shagramph",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_DebtOrc",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal FG_DebtOrc 200"
+    ]
+  },
+  "17662152241512620165": {
+    "Prev": "8786793340314081",
+    "Next": "74712968725022364",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have the ring? Good. Give me the ring and I'll get your pay.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "juicedaw ring",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give him the ring.\" 1 \"Keep the ring.\" 2"
+    ]
+  },
+  "74712968725022364": {
+    "Prev": "17662152241512620165",
+    "Next": "90852076372625148",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Just go to the Hlaalu Canton Plaza and get me the ring from Nar gro-Shagramph.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_DebtOrc",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "90852076372625148": {
+    "Prev": "74712968725022364",
+    "Next": "23660216722554221941",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Nar gro-Shagramph said he'd get a Juicedaw Feather Ring for our client. Nar says he doesn't have the ring, but he's a liar. Find him in the Hlaalu Canton Plaza and bring me that ring.",
+    "Filters": [],
+    "Script": [
+      "Journal FG_DebtOrc 10"
+    ]
+  },
+  "23660216722554221941": {
+    "Prev": "90852076372625148",
+    "Next": "2978729673242626386",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nar gro-shagramph",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I gave you the ring. You lose it already?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_DebtOrc",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2978729673242626386": {
+    "Prev": "23660216722554221941",
+    "Next": "23042181156722337",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nar gro-shagramph",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Fine. Take it. Never liked the stupid ring anyway.",
+    "Filters": [],
+    "Script": [
+      "Journal FG_DebtOrc 50",
+      "RemoveItem \"juicedaw ring\" 1",
+      "Player->AddItem \"juicedaw ring\" 1"
+    ]
+  },
+  "23042181156722337": {
+    "Prev": "2978729673242626386",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nar gro-shagramph",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't got any ring. I don't know what you're talking about.",
+    "Filters": [],
+    "Script": []
+  }
+}

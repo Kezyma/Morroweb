@@ -1,0 +1,226 @@
+{
+  "1427239111867813711": {
+    "Prev": "",
+    "Next": "684728182570312304",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Ajira hears you are expelled. Ajira was told to say you should make amends with the Arch-Mage, but Ajira tells you that the wizards here have many things to do and many things on their minds. Soon Ranis Athrys will forget you are expelled and then Ajira can speak with you again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "684728182570312304": {
+    "Prev": "1427239111867813711",
+    "Next": "15190141021775821033",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "You already brought them to Ajira.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Flowers",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "15190141021775821033": {
+    "Prev": "684728182570312304",
+    "Next": "2391230347906617918",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, these are the flowers that Ajira needs. Ajira has made more potions for you. Ajira hopes that you will use them well.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "ingred_gold_kanet_01",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "ingred_stoneflower_petals_01",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "ingred_willow_anther_01",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "ingred_heather_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal MG_Flowers 100",
+      "Player->RemoveItem ingred_gold_kanet_01 1",
+      "Player->RemoveItem ingred_stoneflower_petals_01 1",
+      "Player->RemoveItem ingred_willow_anther_01 1",
+      "Player->RemoveItem ingred_heather_01 1",
+      "Player->AddItem p_restore_magicka_c 6",
+      "ModPCFacRep 5 \"Mages Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "2391230347906617918": {
+    "Prev": "15190141021775821033",
+    "Next": "208273422225957411",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do not lie to Ajira. Ajira needs Gold Kanet, Stoneflower Petals, Willow Anther, and Heather. You do not have all that Ajira needs.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "208273422225957411": {
+    "Prev": "2391230347906617918",
+    "Next": "7746196512579424772",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ajira must make Journeyman before Galbedir. Ajira must have those flowers very soon or Ajira might forget that good things you've done and ask Ajira's good friend Bribanne Erien to bring her the flowers.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "7746196512579424772": {
+    "Prev": "208273422225957411",
+    "Next": "21449235312183423290",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Do you have the flowers that Ajira wants?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Flowers",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here they are.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "21449235312183423290": {
+    "Prev": "7746196512579424772",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Yes, Ajira must study flowers now. Ajira needs samples of Gold Kanet, Stoneflower Petals, Willow Anther, and Heather. These can all be found on the shores of Lake Amaya.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Sabotage",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MG_Flowers 10",
+      "\"de_p_desk_01_galbedir\"->RemoveItem Misc_fakesoulgem 1"
+    ]
+  }
+}

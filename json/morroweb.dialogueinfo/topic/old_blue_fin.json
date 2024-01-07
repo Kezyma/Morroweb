@@ -1,0 +1,106 @@
+{
+  "1165615935225391208": {
+    "Prev": "",
+    "Next": "14363406356571922",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard you'd been expelled, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "14363406356571922": {
+    "Prev": "1165615935225391208",
+    "Next": "147455673196725693",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Without Old Blue Fin stirring things up, Ald Velothi will be quiet again. You know, I'm almost sorry to see him go.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_OldBlueFin",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "147455673196725693": {
+    "Prev": "14363406356571922",
+    "Next": "15351327632079127551",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "So Old Blue Fin is finally dead. The Dreughers here in town asked me to give you this Dreugh wax if you got rid of Old Blue fin.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "slaughterfish_hr_sfavd",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HR_OldBlueFin 100",
+      "ModDisposition 10",
+      "ModPCFacRep 5 Redoran",
+      "Player->AddItem Ingred_Dreugh_Wax_01 10"
+    ]
+  },
+  "15351327632079127551": {
+    "Prev": "147455673196725693",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "He's a Slaughterfish we see around here every couple of years. He came back bigger and meaner than ever and has been hanging around the docks. Me and him go way back... But this time he's gone too far. Kill him before he puts my fishermen out of business.",
+    "Filters": [],
+    "Script": [
+      "Journal HR_OldBlueFin 20",
+      "\"slaughterfish_hr_sfavd\"->Enable"
+    ]
+  }
+}

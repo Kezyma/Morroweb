@@ -1,0 +1,287 @@
+{
+  "3922260952221617242": {
+    "Prev": "",
+    "Next": "24090274741846113116",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you the one who claims to be the Nerevarine? You should speak with Archcanon Saryoni. Before these rumors are put to rest, I cannot give you duties.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B8_MeetVivec",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "24090274741846113116": {
+    "Prev": "3922260952221617242",
+    "Next": "9810231202021210917",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled from the Temple.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "9810231202021210917": {
+    "Prev": "24090274741846113116",
+    "Next": "664232252081011837",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have entrusted the Crosier of St. Llothis into your care, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_LlothisCrosier",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "664232252081011837": {
+    "Prev": "9810231202021210917",
+    "Next": "9250581517119381",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "As %PCRank, you may examine any of the sacred relics.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_LlothisCrosier",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal TT_LlothisCrosier 110",
+      "RemoveItem CrosierStLlothis 1",
+      "Player->AddItem CrosierStLlothis 1"
+    ]
+  },
+  "9250581517119381": {
+    "Prev": "664232252081011837",
+    "Next": "26222170711033919771",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have miraculously returned the Crosier of St. Llothis.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_LlothisCrosier",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "26222170711033919771": {
+    "Prev": "9250581517119381",
+    "Next": "1572623732162924705",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, this is the Crosier of St. Llothis. I can feel his undefeated spirit within. You have brought great honor to the Temple, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "crosierstllothis",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TT_LlothisCrosier 100",
+      "Player->RemoveItem CrosierStLlothis 1",
+      "AddItem CrosierStLlothis 1",
+      "ModPCFacRep 5 \"Temple\"",
+      "ModDisposition 25",
+      "Player->ModReputation 1"
+    ]
+  },
+  "1572623732162924705": {
+    "Prev": "26222170711033919771",
+    "Next": "13529138422436327926",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am sorry, but I do not believe you. Bring me the Crosier.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "13529138422436327926": {
+    "Prev": "1572623732162924705",
+    "Next": "2751912392220615920",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am disappointed, but if you do not believe that you can retrieve it, I will not force you to try.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "2751912392220615920": {
+    "Prev": "13529138422436327926",
+    "Next": "2850113976518827084",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you retrieved the Crosier of St. Llothis?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_LlothisCrosier",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "2850113976518827084": {
+    "Prev": "2751912392220615920",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The former captain of the Buoyant Armigers, Voruse Bethrimo, fought against the terrible creatures of Dagoth Ur, but was slain while protecting those under his command as they retreated. He carried the Crosier of St. Llothis, a holy artifact which is now in the hands of our enemies. You may wait until you are stronger to take this last quest, but I ask you to go to the depths of Red Mountain and retrieve the sacred Crosier of St. Llothis.",
+    "Filters": [],
+    "Script": [
+      "Journal TT_LlothisCrosier 10"
+    ]
+  }
+}

@@ -1,0 +1,363 @@
+{
+  "26689290131481922823": {
+    "Prev": "",
+    "Next": "28566261832327412815",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "piernette beluelle",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you again. That bowl means a lot to my husband and me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Piernette",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "28566261832327412815": {
+    "Prev": "26689290131481922823",
+    "Next": "3220717647633128828",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "piernette beluelle",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you very much. It means a lot to me and my husband. I'm sorry. I'm just a poor farmer, and have little to offer as a reward. But I've lived here for years, and my husband and I have many friends. Perhaps I can offer you some valuable advice on how to get best value for your goods. And can I introduce you to a good friend at Fort Pelagiad? Ygfa is a Healer and Imperial cult Adept. She might try to get you to join the Imperial cult. But that's not a bad thing.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Piernette",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "misc_Beluelle_silver_bowl",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem misc_Beluelle_silver_bowl 1",
+      "player->modMercantile 1",
+      "MessageBox \"Your Mercantile skill has increased by 1.\"",
+      "Journal MS_Piernette 100",
+      "ygfa->modDisposition 20"
+    ]
+  },
+  "3220717647633128828": {
+    "Prev": "28566261832327412815",
+    "Next": "305056023160002464",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "piernette beluelle",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are bold. And cruel. You may do as you wish. But I promise you. Others shall know of your disgraceful behavior.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Piernette",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Journal MS_Piernette 90",
+      "ygfa->modDisposition -20"
+    ]
+  },
+  "305056023160002464": {
+    "Prev": "3220717647633128828",
+    "Next": "14890162861202723012",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "piernette beluelle",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sorry. I'm a poor farmer. I have nothing to offer as a reward. And, as I am a defenseless woman, and my husband is away, I am at your mercy.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Piernette",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "misc_Beluelle_silver_bowl",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "14890162861202723012": {
+    "Prev": "305056023160002464",
+    "Next": "916136663079111094",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "piernette beluelle",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sorry. I'm a poor farmer. I have nothing to offer as a reward. And, as I am a defenseless woman, and my husband is away, I am at your mercy.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Piernette",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, of course. Here's the bowl.\" 3 \"I found it. I'm keeping it.\" 5"
+    ]
+  },
+  "916136663079111094": {
+    "Prev": "14890162861202723012",
+    "Next": "2741439121360216603",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "piernette beluelle",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm not sure I understand. But if you do get the bowl, please bring it to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Piernette",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": []
+  },
+  "2741439121360216603": {
+    "Prev": "916136663079111094",
+    "Next": "456712210212117074",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "piernette beluelle",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That bowl disappeared from my house while I was visiting friends at Fort Pelagiad. My husband -- he's an officer in the Legions serving in Argonia -- received the bowl as a gift from grateful East Empire Company merchants. His file was escorting a Company courier when they were overwhelmed by bandits, but my husband slew the bandit chief and drove the bandits away. Were you... planning to return the bowl to me?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Piernette",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "misc_Beluelle_silver_bowl",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"I was expecting a reward.\" 4 \"No. I found it. I'm keeping it.\" 5 \"I don't have the bowl.\" 6"
+    ]
+  },
+  "456712210212117074": {
+    "Prev": "2741439121360216603",
+    "Next": "246032351162491230",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "piernette beluelle",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That bowl disappeared from my house while I was visiting friends at Fort Pelagiad. My husband -- he's an officer in the Legions serving in Argonia -- received the bowl as a gift from grateful East Empire Company merchants. His file was escorting a Company courier when they were overwhelmed by bandits, but my husband slew the bandit chief and drove the bandits away. Were you... planning to return the bowl to me?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Piernette",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_Beluelle_silver_bowl",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, of course. Here's the bowl.\" 3 \"I was expecting a reward.\" 4 \"No. I found it. I'm keeping it.\" 5"
+    ]
+  },
+  "246032351162491230": {
+    "Prev": "456712210212117074",
+    "Next": "9112453313103287",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "piernette beluelle",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, then, good day to you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Piernette",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "9112453313103287": {
+    "Prev": "246032351162491230",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "piernette beluelle",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A silver bowl given to my husband disappeared from my house recently. Do you know what happened to it?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Piernette",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"I found your silver bowl.\" 1 \"No, I don't. Sorry to trouble you.\" 2"
+    ]
+  }
+}

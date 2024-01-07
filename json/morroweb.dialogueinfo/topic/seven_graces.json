@@ -1,0 +1,247 @@
+{
+  "1519811956773023887": {
+    "Prev": "",
+    "Next": "31232196492080230716",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "You have completed the Pilgrimages of the Seven Graces.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_SevenGraces",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "31232196492080230716": {
+    "Prev": "1519811956773023887",
+    "Next": "865231401234484357",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "Oh? You have already finished these Pilgrimages? The Temple must be your true calling. I admire your dedication.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "completedGraces",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TT_SevenGraces",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TT_SevenGraces 100",
+      "ModPCFacRep 20 \"Temple\""
+    ]
+  },
+  "865231401234484357": {
+    "Prev": "31232196492080230716",
+    "Next": "11300140492729029260",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "Yes, you have finished the Pilgrimages of the Seven Graces. I commend you for this. You are now ready for more challenging duties and advancement.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "completedGraces",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "RankRequirement",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_SevenGraces",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal TT_SevenGraces 100",
+      "ModPCFacRep 20 \"Temple\""
+    ]
+  },
+  "11300140492729029260": {
+    "Prev": "865231401234484357",
+    "Next": "1488680881899826057",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "Yes, you have finished the Pilgrimages of the Seven Graces. I commend you for this. You are now ready for more challenging duties.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "completedGraces",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_SevenGraces",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal TT_SevenGraces 100",
+      "ModPCFacRep 20 \"Temple\""
+    ]
+  },
+  "1488680881899826057": {
+    "Prev": "11300140492729029260",
+    "Next": "35207929259296856",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "You have been given a copy of \"The Pilgrim's Path.\" Simply follow the directions in that book to each shrine. When you have visited all these shrines, speak with me again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_SevenGraces",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "35207929259296856": {
+    "Prev": "1488680881899826057",
+    "Next": "19683932309994734",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "Ghostgate",
+    "PlayerFaction": "Temple",
+    "Text": "Take this book, \"The Pilgrim's Path.\" It describes where the pilgrimage sites are. After you have completed these pilgrimages, speak with me again. The pilgrimage to Ghostgate is the most difficult, but if you have already come this far, the rest should be no trouble for you. You should start by visiting the Ghostgate shrine just north of the gate while you're here.",
+    "Filters": [],
+    "Script": [
+      "Journal TT_SevenGraces 10",
+      "Player->AddItem \"bk_PilgrimsPath\" 1",
+      "ShowMap \"Gnisis\"",
+      "ShowMap \"Vivec\"",
+      "ShowMap \"Ghostgate\"",
+      "ShowMap \"Koal Cave Entrance\"",
+      "ShowMap \"Fields of Kummu\""
+    ]
+  },
+  "19683932309994734": {
+    "Prev": "35207929259296856",
+    "Next": "1864757021296724248",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "Take this book, \"The Pilgrim's Path.\" It describes where the pilgrimage sites are. After you have completed these pilgrimages, speak with me again. I should warn you that while most of these are easy, the pilgrimages of Ghostgate and the Ruddy Man are more difficult. You may wish to do those last.",
+    "Filters": [],
+    "Script": [
+      "Journal TT_SevenGraces 10",
+      "Player->AddItem \"bk_PilgrimsPath\" 1",
+      "ShowMap \"Gnisis\"",
+      "ShowMap \"Vivec\"",
+      "ShowMap \"Ghostgate\"",
+      "ShowMap \"Koal Cave Entrance\"",
+      "ShowMap \"Fields of Kummu\""
+    ]
+  },
+  "1864757021296724248": {
+    "Prev": "19683932309994734",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 5,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is customary for every member of the Temple to do the Pilgrimages of the Seven Graces. If you want to learn more, read \"The Pilgrim's Path.\"",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TT_SevenGraces",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  }
+}

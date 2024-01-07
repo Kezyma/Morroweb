@@ -1,0 +1,243 @@
+{
+  "3031530767408715845": {
+    "Prev": "",
+    "Next": "2934813841288227803",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have heard that you are a False Incarnate. I am not yet convinced, but I no longer trust you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B8_MeetVivec",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2934813841288227803": {
+    "Prev": "3031530767408715845",
+    "Next": "2889621797140235311",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled from the Temple.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2889621797140235311": {
+    "Prev": "2934813841288227803",
+    "Next": "235312634960598316",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ihinipalit has been cleansed of the dark cult.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_StAralor",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "235312634960598316": {
+    "Prev": "2889621797140235311",
+    "Next": "15056236732001914979",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already cleansed the dark cult from Ihinipalit? Then you have earned the respect of the Ancestors. Please take this Ancestral Wisdom Staff and my gratitude.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "bjadmund",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TT_StAralor",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TT_StAralor 100",
+      "Player->AddItem SteelStaffAncestors_TTSA 1",
+      "ModPCFacRep 5 \"Temple\"",
+      "ModDisposition 15"
+    ]
+  },
+  "15056236732001914979": {
+    "Prev": "235312634960598316",
+    "Next": "13493326771957210662",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I heard Bjadmund is dead and the dark cult has been cleansed from the shrine of Ihinipalit. You have earned the respect of the Ancestors. Please take this Ancestral Wisdom Staff and my gratitude.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "bjadmund",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_StAralor",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal TT_StAralor 100",
+      "Player->AddItem SteelStaffAncestors_TTSA 1",
+      "ModPCFacRep 5 \"Temple\"",
+      "ModDisposition 15"
+    ]
+  },
+  "13493326771957210662": {
+    "Prev": "15056236732001914979",
+    "Next": "675622753312023997",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Find Ihinipalit beneath the St. Delyn Canton. Bring the Temple's justice to the leader of this cult, Bjadmund.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_StAralor",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "675622753312023997": {
+    "Prev": "13493326771957210662",
+    "Next": "574829537840520129",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 5,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "The cult meets there. I know only that Ihinipalit is somewhere beneath the St. Delyn Canton. Go there with fire in your eyes and in your heart. Bring the Temple's justice to the leader of this cult, Bjadmund. I wish I could accompany you, %PCRank %PCName, but I cannot. However, I can offer you these scrolls.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 15.0
+      }
+    ],
+    "Script": [
+      "Journal TT_StAralor 10",
+      "Player->AddItem \"sc_hellfire\" 2",
+      "Player->AddItem \"sc_elementalburstfire\" 2",
+      "Player->AddItem \"sc_fifthbarrier\" 2"
+    ]
+  },
+  "574829537840520129": {
+    "Prev": "675622753312023997",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 5,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "The cult meets there. I know only that Ihinipalit is somewhere beneath the St. Delyn Canton. Go there with fire in your eyes and in your heart. Bring the Temple's justice to the leader of this cult, Bjadmund. I wish I could accompany you, %PCRank %PCName, but I cannot. However, I can offer you these scrolls. This place holds as much danger as Ald Sotha. I did not believe you were ready, but you have proven me wrong. I hope that you will surprise me and return unharmed from Ihinipalit as well.",
+    "Filters": [],
+    "Script": [
+      "Journal TT_StAralor 10",
+      "Player->AddItem \"sc_hellfire\" 2",
+      "Player->AddItem \"sc_elementalburstfire\" 2",
+      "Player->AddItem \"sc_fifthbarrier\" 2"
+    ]
+  }
+}

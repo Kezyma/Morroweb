@@ -1,0 +1,639 @@
+{
+  "1090495731944522834": {
+    "Prev": "",
+    "Next": "8171246292878086",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He's a thief, and clearly a liar as well. Oh, don't you worry. I'll take care of this personally. But I assure you, I had nothing to do with it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_6",
+        "Value": 50.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal CO_6 70"
+    ]
+  },
+  "8171246292878086": {
+    "Prev": "1090495731944522834",
+    "Next": "14469177891765617505",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good work helping him, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_6a",
+        "Value": 60.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "14469177891765617505": {
+    "Prev": "8171246292878086",
+    "Next": "36202666340073112",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Pulled it off, did you? Well done. There's hope for you yet, %PCRank. Take this for now, and soon we'll discuss your next assignment.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_6a",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "player->additem \"gold_001\" 1000",
+      "Journal CO_6a 60",
+      "ModPCFacRep 12 \"East Empire Company\"",
+      "Set ColonyState to 9"
+    ]
+  },
+  "36202666340073112": {
+    "Prev": "14469177891765617505",
+    "Next": "211333191448215333",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You'll need to distract the guard so that he can sneak into the storeroom.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_6a",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "211333191448215333": {
+    "Prev": "36202666340073112",
+    "Next": "21528308381406726192",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've got the ore? Good. But the damage has been done; Falco has placed a guard in front of the storeroom in the mine. With that guard there, Uryn will be hard pressed to sneak in and steal more of the ore. That's why you're going to distract the guard. Go find Uryn in the mine and talk to him.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_6a",
+        "Value": 20.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_raw_ebony_01",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"ingred_raw_ebony_01\" 5",
+      "Journal CO_6a 30"
+    ]
+  },
+  "21528308381406726192": {
+    "Prev": "211333191448215333",
+    "Next": "2206119986301038899",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You say you've emptied the chest, but I don't see any ore. Bring it to me, and then we'll discuss the next step.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_6a",
+        "Value": 20.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "ingred_raw_ebony_01",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "2206119986301038899": {
+    "Prev": "21528308381406726192",
+    "Next": "18919283351333021791",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Get the ore out of that chest in his house, %PCRank. I need him clear of suspicion, so he can continue his work.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_6a",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "18919283351333021791": {
+    "Prev": "2206119986301038899",
+    "Next": "22620309011735818592",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Uryn's been stealing ore since mining began, but Falco has begun to notice the discrepancy. Thus far, he's been keeping the ore stashed in a chest in his house. I believe Falco knows about this chest, and so I need you to make sure there's no ore in it. Find it, remove the ore, and bring it to me. Here - you'll need this key to get into his house. Make it quick, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal CO_6a 10",
+      "player->additem \"key_maryn\" 1"
+    ]
+  },
+  "22620309011735818592": {
+    "Prev": "18919283351333021791",
+    "Next": "32205319231247020964",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Who? I'm afraid I'm not familiar with him.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_6",
+        "Value": 10.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "32205319231247020964": {
+    "Prev": "22620309011735818592",
+    "Next": "877725451222214819",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You were seen, and that ruins everything. Now that he's on to you, there's no chance of catching him again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_6",
+        "Value": 100.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "877725451222214819": {
+    "Prev": "32205319231247020964",
+    "Next": "7463639462227674",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There's nothing more to be done about him, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_6",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "7463639462227674": {
+    "Prev": "877725451222214819",
+    "Next": "29937114560429823",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He was found dead shortly after being locked up. Of course I have no proof that he was murdered, and there are no witnesses. I'm sure Carnius had something to do with it, but if I can't prove it, I don't dare accuse him of it. At least the thieving problems should stop, for now. You've done good work, %PCName. Thank you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_6",
+        "Value": 70.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal CO_6 80",
+      "Set ColonyState to 9",
+      "ModPCFacRep 12 \"East Empire Company\"",
+      "Player->additem \"gold_001\" 500"
+    ]
+  },
+  "29937114560429823": {
+    "Prev": "7463639462227674",
+    "Next": "295153071310868423",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Has Carnius had anything to say about Uryn's explanation?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_6",
+        "Value": 65.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "295153071310868423": {
+    "Prev": "29937114560429823",
+    "Next": "5182326392356329444",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Just as I suspected. I didn't want to say anything at the time, but I was relatively sure that Carnius was involved. Well, now that we have a witness, perhaps it's time that we bring this matter to the attention of the investors...  I'll see to it that Uryn is sequestered in one of the colony's store rooms for now. Go see what Carnius has to say for himself, won't you?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_6",
+        "Value": 60.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal CO_6 65"
+    ]
+  },
+  "5182326392356329444": {
+    "Prev": "295153071310868423",
+    "Next": "22121313241050631997",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You found him where? Well, why haven't you confronted him about it??",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_6",
+        "Value": 50.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "22121313241050631997": {
+    "Prev": "5182326392356329444",
+    "Next": "10515140221890110987",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Follow him, %PCName. My guess is that now that he thinks he's safe, he'll probably do something to implicate himself.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_6",
+        "Value": 40.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "10515140221890110987": {
+    "Prev": "22121313241050631997",
+    "Next": "189653128749722069",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What? My information was very reliable... it may be that he was tipped off by someone. I don't claim to have a monopoly on spying here at Raven Rock. Well, if we don't have any evidence, then we'll just have to catch him red-handed. He should be in the mine; follow him and see if he does anything suspicious. Take care not to be seen by anyone, as they could alert him to your presence.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_6",
+        "Value": 30.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal CO_6 40"
+    ]
+  },
+  "189653128749722069": {
+    "Prev": "10515140221890110987",
+    "Next": "1691556681045331085",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have the key, %PCName. Go find that chest, and the proof we need.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_6",
+        "Value": 20.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1691556681045331085": {
+    "Prev": "189653128749722069",
+    "Next": "214809897483119958",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I won't reveal where the information came from, but I can tell you that I believe he's hiding the ore in a chest in his house until he can off-load it to someone else. I want you to find that chest, and get the ore from it. You'll need this key to get into his house.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "CO_6",
+        "Value": 20.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal CO_6 20",
+      "player->additem \"key_maryn\" 1"
+    ]
+  },
+  "214809897483119958": {
+    "Prev": "1691556681045331085",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Uryn Maren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's me.",
+    "Filters": [],
+    "Script": []
+  }
+}

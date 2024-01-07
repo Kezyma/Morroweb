@@ -1,0 +1,135 @@
+{
+  "7156288131930628836": {
+    "Prev": "",
+    "Next": "286159861420130786",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Salas Valor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It doesn't matter. I don't care.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_MissingHand_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "286159861420130786": {
+    "Prev": "7156288131930628836",
+    "Next": "25303182781377419003",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Salas Valor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "HAH! What gods-forsaken part of the world do you come from, that you do not recognize the armor of Almalexia's Hands -- the armor of Her most loyal and trusted guards and followers? Come! Look closely! It is glorious armor, isn't it? And how glorious it is to be one of Her Hands. Yes. I was one of Her Hands. Once. But no more.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal TR_MissingHand_01 10"
+    ]
+  },
+  "25303182781377419003": {
+    "Prev": "286159861420130786",
+    "Next": "1735615606132715643",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Salas Valor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "WHY DO YOU PERSIST?! Are you MAD? Or... I see. SHE sent you... to humiliate me, and laugh in my face. Well. I know how to deal with you....",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "StartCombat Player",
+      "setdisposition 0",
+      "setfight 100",
+      "Goodbye"
+    ]
+  },
+  "1735615606132715643": {
+    "Prev": "25303182781377419003",
+    "Next": "26176241431060618970",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Salas Valor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go. Before I change my mind.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TR_MissingHand_01 1"
+    ]
+  },
+  "26176241431060618970": {
+    "Prev": "1735615606132715643",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Salas Valor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do not mock me. I said... I do not want company. Go away.",
+    "Filters": [],
+    "Script": [
+      "Choice \"I'm sorry. Shall I leave?\" 1 \"I do not mock you. Honest.\" 2 \"Are you an Ordinator?\" 3"
+    ]
+  }
+}

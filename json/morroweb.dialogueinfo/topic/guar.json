@@ -1,0 +1,133 @@
+{
+  "82066228252682449": {
+    "Prev": "",
+    "Next": "5038160252747222583",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "llovyn andus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Now, why did you have to go and do a thing like that? When did Corky ever hurt you?",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "guar_llovyn_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "5038160252747222583": {
+    "Prev": "82066228252682449",
+    "Next": "6866171142138823382",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "llovyn andus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He's your now.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "corkyFollow",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_RentCollector",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "6866171142138823382": {
+    "Prev": "5038160252747222583",
+    "Next": "72333715197826989",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "llovyn andus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Corky? Sure. Hey, Corky! This %PCRace here is your new owner! Say hello, Corky!",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "guar_llovyn_unique",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_RentCollector",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "\"guar_llovyn_unique\"->AiFollow Player 0 0 0 0 0",
+      "Set corkyFollow to 1"
+    ]
+  },
+  "72333715197826989": {
+    "Prev": "6866171142138823382",
+    "Next": "1152220974292963699",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gudling the rascal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The guar is the dominant domesticated herd animal of Morrowind, useful as a pack animal and for its meat and hides.",
+    "Filters": [],
+    "Script": []
+  },
+  "1152220974292963699": {
+    "Prev": "72333715197826989",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Briring",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The guar is the dominant domesticated herd animal of Morrowind, useful as a pack animal and for its meat and hides.",
+    "Filters": [],
+    "Script": []
+  }
+}

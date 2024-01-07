@@ -1,0 +1,239 @@
+{
+  "43527430229073339": {
+    "Prev": "",
+    "Next": "828715951384012138",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled, %PCName. Make amends, and perhaps we will speak again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "828715951384012138": {
+    "Prev": "43527430229073339",
+    "Next": "31021275302309512454",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "You have returned the Belt of Sanguine Fleetness, but this is only one of the Threads of the Webspinner.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_S_Fleetness",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "31021275302309512454": {
+    "Prev": "828715951384012138",
+    "Next": "290953272132517159",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "With this, you have returned all the Threads of the Webspinner to the Morag Tong. You will be blessed by Mephala's skill.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "ThreadsWebspinner",
+        "Value": 25.0
+      }
+    ],
+    "Script": [
+      "Journal MT_S_Fleetness 100",
+      "Player->RemoveItem SanguineBeltFleetness 1",
+      "Set ThreadsWebspinner to ThreadsWebspinner + 1",
+      "ModPCFacRep 25 \"Morag Tong\"",
+      "ModDisposition 25",
+      "Player->AddSpell SkillMephala_SP"
+    ]
+  },
+  "290953272132517159": {
+    "Prev": "31021275302309512454",
+    "Next": "30630224821256923463",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "The Belt of Sanguine Fleetness will take its place with the rest of the Threads of the Webspinner. Soon all these Threads will be returned to us by the machinations of Mephala, for all Threads lead to her black hands.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MT_S_Fleetness 100",
+      "Player->RemoveItem SanguineBeltFleetness 1",
+      "Set ThreadsWebspinner to ThreadsWebspinner + 1",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition 10"
+    ]
+  },
+  "30630224821256923463": {
+    "Prev": "290953272132517159",
+    "Next": "10531282653014606",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "So. You do not truly care for our cause.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "10531282653014606": {
+    "Prev": "30630224821256923463",
+    "Next": "262208946300554584",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "You have the Belt of Sanguine Fleetness, one of the Threads of the Webspinner. Now then, return the Belt to me so that it may once again be dedicated to Mephala's service.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sanguinebeltfleetness",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_DB_Contact",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Choice \"Here it is\" 1 \"Keep it\" 2"
+    ]
+  },
+  "262208946300554584": {
+    "Prev": "10531282653014606",
+    "Next": "23046109941891621226",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "Over the years, the Threads of the Webspinner have found the way into the hands of our enemies. By Mephala's subtle manipulations, all these Threads shall return to us. Hrordis has this belt. She is a Nord, a Sorceress, and a member of the Dark Brotherhood. Find her in Pelagiad at the Halfway Inn. Return the belt to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_DB_Contact",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MT_S_Fleetness 10",
+      "ShowMap \"Pelagiad\""
+    ]
+  },
+  "23046109941891621226": {
+    "Prev": "262208946300554584",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrordis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What? No, of course I won't hand it over. This belt is mine.",
+    "Filters": [],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "21438159911183310319": {
+    "Prev": "",
+    "Next": "1888224935819519566",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mevure hlen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've found a price list? Excellent! I...I can't believe this! This is from the Duke's office. He must be setting the margins for the Company and taking a cut of the profits! This is an outrage. I'll find another way to restock my goods. Thank you, %PCName. I'm sure you've learned a bit about business from all of this. I'm sure this knowledge will help you in business dealings in the future.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_TradeSpy",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_TradeSpy",
+        "Value": 50.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_letterfromllaalam2",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_TradeSpy\" 50",
+      "Player->RemoveItem \"bk_letterfromllaalam2\" 1",
+      "AddItem \"bk_letterfromllaalam2\" 1",
+      "MessageBox \"Your Mercantile skill has increased by 2.\"",
+      "Player->ModMercantile 2"
+    ]
+  },
+  "1888224935819519566": {
+    "Prev": "21438159911183310319",
+    "Next": "2961864531945232277",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mevure hlen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, I know they're not set simply by the market value of the goods. If you can find me some sort of a price list, I might be able to get an idea of what kind of game is being run here.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_TradeSpy",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "2961864531945232277": {
+    "Prev": "1888224935819519566",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "J'zhirr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Set the prices? J'Zhirr does not understand. Prices are determined by simple supply and demand. Perhaps you were reading things you shouldn't have been, eh? Perhaps J'Zhirr should call the guards?",
+    "Filters": [],
+    "Script": []
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "6182187442282824457": {
+    "Prev": "",
+    "Next": "910887013066421075",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "taros dral",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There is no more to say about this matter.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "DA_Mephala",
+        "Value": 57.0
+      }
+    ],
+    "Script": []
+  },
+  "910887013066421075": {
+    "Prev": "6182187442282824457",
+    "Next": "2029520333370719468",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "taros dral",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've killed him in a way other than was described? That was unwise. Mephala is not pleased. Leave here.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "DA_Mephala",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "balyn omavel",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "DA_Mephala",
+        "Value": 57.0
+      }
+    ],
+    "Script": [
+      "Journal DA_Mephala 57",
+      "ModDisposition -20"
+    ]
+  },
+  "2029520333370719468": {
+    "Prev": "910887013066421075",
+    "Next": "167835806235413657",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "taros dral",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well done. Mephala wishes to speak to you directly. This is a great honor for you. Approach her altar.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "DA_Mephala",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "167835806235413657": {
+    "Prev": "2029520333370719468",
+    "Next": "27538310523058411201",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "taros dral",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Unfortunately, you were seen going into the house of Balyn Omavel. Mephala is not pleased. No matter. I will find someone more competent to complete this task. Goodbye.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "DA_Mephala",
+        "Value": 55.0
+      }
+    ],
+    "Script": []
+  },
+  "27538310523058411201": {
+    "Prev": "167835806235413657",
+    "Next": "640110986418626260",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "taros dral",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been given your task, %PCName. You should complete it before Mephala is angered.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "DA_Mephala",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "640110986418626260": {
+    "Prev": "27538310523058411201",
+    "Next": "1228230000377717685",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "taros dral",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent. There is a member of our brotherhood living in Balmora, Balyn Omavel. He has been...freelancing, if you will. This is unacceptable, and he must be removed. Unfortunately, his brother is a rather important member of our brotherhood, so it would be difficult to bring it to the attention of the others. Use this poison in his food. It acts swiftly, as should you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "RemoveItem \"ingred_treated_bittergreen_uniq\" 5",
+      "Player->AddItem \"ingred_treated_bittergreen_uniq\" 5",
+      "Journal \"DA_Mephala\" 40"
+    ]
+  },
+  "1228230000377717685": {
+    "Prev": "640110986418626260",
+    "Next": "1053123401240582096",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "taros dral",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I understand. I trust you will speak to no one about this. Mephala would be most displeased, and her reach is great.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"DA_Mephala\" 30"
+    ]
+  },
+  "1053123401240582096": {
+    "Prev": "1228230000377717685",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "taros dral",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The great Daedra Mephala has given me information that must be acted on. If you would be willing to work with me, I'm certain Mephala would be grateful.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "DA_Mephala",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal \"DA_Mephala\" 10",
+      "Choice \"I would like to help.\" 1 \"I do not wish to become involved.\" 2"
+    ]
+  }
+}

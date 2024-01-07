@@ -1,0 +1,314 @@
+{
+  "2804248222450826609": {
+    "Prev": "",
+    "Next": "1302832359562832012",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been kicked out of the Guild, %PCName. Better make amends, or no one's going to talk to you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1302832359562832012": {
+    "Prev": "2804248222450826609",
+    "Next": "253522969535623419",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've already reported back to me about the Darts of Judgement.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_DartsJudgement",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "253522969535623419": {
+    "Prev": "1302832359562832012",
+    "Next": "254145780283283149",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here's 2000 septims for the Darts. You've done pretty good work for me, %PCRank. If you've got a price on your head, I'll see if I can't take care of it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "dart_uniq_judgement",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Journal TG_DartsJudgement 100",
+      "Player->RemoveItem dart_uniq_Judgement 4",
+      "Player->AddItem Gold_001 2000",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 15",
+      "SetPCCrimeLevel 0",
+      "PayFineThief"
+    ]
+  },
+  "254145780283283149": {
+    "Prev": "253522969535623419",
+    "Next": "1486412527258484984",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here's 1500 septims for the Darts. You've done pretty good work for me, %PCRank. If you've got a price on your head, I'll see if I can't take care of it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "dart_uniq_judgement",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal TG_DartsJudgement 100",
+      "Player->RemoveItem dart_uniq_Judgement 3",
+      "Player->AddItem Gold_001 1500",
+      "ModPCFacRep 4 \"Thieves Guild\"",
+      "ModDisposition 10",
+      "SetPCCrimeLevel 0",
+      "PayFineThief"
+    ]
+  },
+  "1486412527258484984": {
+    "Prev": "254145780283283149",
+    "Next": "25742108381534816858",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here's 1000 septims for the Darts. You've done pretty good work for me, %PCRank. If you've got a price on your head, I'll see if I can't take care of it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "dart_uniq_judgement",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal TG_DartsJudgement 100",
+      "Player->RemoveItem dart_uniq_Judgement 2",
+      "Player->AddItem Gold_001 1000",
+      "ModPCFacRep 3 \"Thieves Guild\"",
+      "ModDisposition 7",
+      "SetPCCrimeLevel 0",
+      "PayFineThief"
+    ]
+  },
+  "25742108381534816858": {
+    "Prev": "1486412527258484984",
+    "Next": "128451230346628089",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here's 500 septims for the Dart. You've done pretty good work for me, %PCRank. If you've got a price on your head, I'll see if I can't take care of it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "dart_uniq_judgement",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_DartsJudgement 100",
+      "Player->RemoveItem dart_uniq_Judgement 1",
+      "Player->AddItem Gold_001 500",
+      "ModPCFacRep 2 \"Thieves Guild\"",
+      "ModDisposition 5",
+      "SetPCCrimeLevel 0",
+      "PayFineThief"
+    ]
+  },
+  "128451230346628089": {
+    "Prev": "25742108381534816858",
+    "Next": "2324377901351912514",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "You put them to good use, then. You've done pretty good work for me, %PCRank. If you've got a price on your head, I'll see if I can't take care of it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal TG_DartsJudgement 105",
+      "SetPCCrimeLevel 0",
+      "PayFineThief"
+    ]
+  },
+  "2324377901351912514": {
+    "Prev": "128451230346628089",
+    "Next": "255911509131683354",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "So you found the Darts of Judgement. Do you want to keep them or sell them to the Guild?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "dart_uniq_judgement",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give him the darts\" 1 \"Keep the darts\" 2"
+    ]
+  },
+  "255911509131683354": {
+    "Prev": "2324377901351912514",
+    "Next": "3254929206812423775",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Eindel has four Darts of Judgement. They're very rare arrows made in my home province of Valenwood. Eindel is a guard at Llethri Manor in Ald'ruhn. If you find the Darts there, feel free to use them, but the Guild will pay good money if you don't want them.",
+    "Filters": [],
+    "Script": [
+      "Journal TG_DartsJudgement 10"
+    ]
+  },
+  "3254929206812423775": {
+    "Prev": "255911509131683354",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eindel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's none of your business.",
+    "Filters": [],
+    "Script": []
+  }
+}

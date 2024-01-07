@@ -1,0 +1,330 @@
+{
+  "2547818411818817634": {
+    "Prev": "",
+    "Next": "10583300472912820903",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled from the Fighters Guild, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "10583300472912820903": {
+    "Prev": "2547818411818817634",
+    "Next": "1421915513303888575",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I heard you killed Dangor. Get out of here before I lose my temper.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_ElithPalSupply",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "dangor",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -30",
+      "Goodbye"
+    ]
+  },
+  "1421915513303888575": {
+    "Prev": "10583300472912820903",
+    "Next": "25126301662018720770",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I heard you killed Dangor. Get out of here before I lose my temper.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_ElithPalSupply",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "dangor",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "25126301662018720770": {
+    "Prev": "1421915513303888575",
+    "Next": "1839729140436710481",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No point in delivering any supplies if Dangor is dead.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_ElithPalSupply",
+        "Value": 200.0
+      }
+    ],
+    "Script": []
+  },
+  "1839729140436710481": {
+    "Prev": "25126301662018720770",
+    "Next": "815312965344517174",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Dangor is dead? Are you sure? That's sad news indeed. Seems like the Empire's under attack wherever you go.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "dangor",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_ElithPalSupply",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal FG_ElithPalSupply 200"
+    ]
+  },
+  "815312965344517174": {
+    "Prev": "1839729140436710481",
+    "Next": "288922933456666301",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Thanks for delivering the flin, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_ElithPalSupply",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "288922933456666301": {
+    "Prev": "815312965344517174",
+    "Next": "23855136412586923070",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here you go, %PCName. And here's the 500 septims I owe you for the contract. Check with me again if you need more orders.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem Potion_Cyro_Brandy_01 1",
+      "Player->AddItem Gold_001 500",
+      "Journal FG_ElithPalSupply 100"
+    ]
+  },
+  "23855136412586923070": {
+    "Prev": "288922933456666301",
+    "Next": "203517166171138628",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, any time, %PCName. Here's 500 septims for the delivery.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem Gold_001 500",
+      "Journal FG_ElithPalSupply 100"
+    ]
+  },
+  "203517166171138628": {
+    "Prev": "23855136412586923070",
+    "Next": "2824311695442117091",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Good work, %PCName. A load of flin can get heavy after a few steps. I prefer brandy myself. Could I offer you some? Something to wet your throat after the load trip?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_ElithPalSupply",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "ModPCFacRep 5 \"Fighters Guild\"",
+      "ModDisposition 5",
+      "Choice Yes 1 No 2"
+    ]
+  },
+  "2824311695442117091": {
+    "Prev": "203517166171138628",
+    "Next": "2869728211889817692",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Just deliver the flin to Dangor at the Elith-Pal Mine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_ElithPalSupply",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "2869728211889817692": {
+    "Prev": "2824311695442117091",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Here's the flin. Deliver it to Dangor. He's a Bosmer who works at the Elith-Pal Mine which is on the base of Red Mountain just west of the Zainab camp.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_SuranBandits",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal FG_ElithPalSupply 10",
+      "Player->AddItem Potion_Cyro_Whiskey_01 20"
+    ]
+  }
+}

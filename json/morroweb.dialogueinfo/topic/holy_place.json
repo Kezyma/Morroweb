@@ -1,0 +1,106 @@
+{
+  "13583210432618915808": {
+    "Prev": "",
+    "Next": "1917126767292224824",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nevrasa dralor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, the Fields of Kummu are a most holy place indeed.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_WanderingPilgrim",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "1917126767292224824": {
+    "Prev": "13583210432618915808",
+    "Next": "10773261372655418704",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nevrasa dralor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you so much. I know the Fields of Kummu are near the water; the view from there is supposed to be breathtaking. I've also been told there is a farm nearby where pilgrims may sometimes stop and rest weary legs.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_WanderingPilgrim\" 30",
+      "\"Nevrasa Dralor\"->AiFollow Player 0,14879,-34134,925,0"
+    ]
+  },
+  "10773261372655418704": {
+    "Prev": "1917126767292224824",
+    "Next": "184785664582518059",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nevrasa dralor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? Well, I'm sure I'll eventually find it. Take care, traveler.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_WanderingPilgrim\" 40"
+    ]
+  },
+  "184785664582518059": {
+    "Prev": "10773261372655418704",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nevrasa dralor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, the Fields of Kummu. I am on a pilgrimage to this holiest of places, but I seem to have lost my way. Perhaps you can help me find it? Surely you know this area better than I. I can pay you for your time. Say, 150 septims?",
+    "Filters": [],
+    "Script": [
+      "Journal \"MV_WanderingPilgrim\" 20",
+      "Choice \"I will try and lead you to this place.\" 1 \"I'm sorry. I haven't the time.\" 2"
+    ]
+  }
+}

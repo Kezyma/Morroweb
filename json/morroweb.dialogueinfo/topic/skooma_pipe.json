@@ -1,0 +1,95 @@
+{
+  "10069139481424330250": {
+    "Prev": "",
+    "Next": "246726257187299582",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tsiya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good to have it back. Thank you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_SkoomaCorpse",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "246726257187299582": {
+    "Prev": "10069139481424330250",
+    "Next": "304241277686459998",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tsiya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, you've found it! Excellent. Here's a little something for you. It was supposed to be Ernil's when he got here. Tsiya would appreciate it if you'd keep quiet about this. You understand, yes?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_SkoomaCorpse",
+        "Value": 15.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "apparatus_a_spipe_tsiya",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_SkoomaCorpse\" 20",
+      "RemoveItem \"Gold_001\" 50",
+      "AddItem \"Apparatus_A_Spipe_Tsiya\" 1",
+      "Player->RemoveItem \"Apparatus_A_Spipe_Tsiya\" 1",
+      "Player->AddItem \"Gold_001\" 50",
+      "RemoveItem \"Ingred_Moon_Sugar_01\" 10",
+      "Player->AddItem \"Ingred_Moon_Sugar_01\" 10"
+    ]
+  },
+  "304241277686459998": {
+    "Prev": "246726257187299582",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tsiya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, well, Ernil was supposed to be delivering that to me. Would have been nice to have.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "MV_SkoomaCorpse",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

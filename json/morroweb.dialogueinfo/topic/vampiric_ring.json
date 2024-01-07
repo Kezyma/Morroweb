@@ -1,0 +1,304 @@
+{
+  "2636582932423629427": {
+    "Prev": "",
+    "Next": "442113149346232404",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "YWhat?  How is it that you have this?  This was part of the museum's collection!  GUARDS!",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ringvampiric",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "ring_vampiric_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "SetPCCrimeLevel 100000",
+      "Set PCThief to 1",
+      "Goodbye"
+    ]
+  },
+  "442113149346232404": {
+    "Prev": "2636582932423629427",
+    "Next": "47252532716122524",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, thank you for allowing us to add it to our collection.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "ringvampiric",
+        "Value": 2.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "ring_vampiric_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "47252532716122524": {
+    "Prev": "442113149346232404",
+    "Next": "11477275431709811888",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do with it what you will, %PCName.  It is yours to use, for good or for evil.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "11477275431709811888": {
+    "Prev": "47252532716122524",
+    "Next": "2739129846195455050",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Created for evil purposes or not, the ring still has a place in our collection.  Thank you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ring_vampiric_unique",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "set ringvampiric to 2",
+      "player->removeitem \"ring_vampiric_unique\" 1",
+      "set MuseumDonations to MuseumDonations + 1",
+      "\"ring_vampiric_unique_x\"->Enable",
+      "moddisposition 5"
+    ]
+  },
+  "2739129846195455050": {
+    "Prev": "11477275431709811888",
+    "Next": "6303166282681810246",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Created for evil purposes or not, the ring still has a place in our collection.  Thank you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ring_vampiric_unique",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "set ringvampiric to 2",
+      "player->removeitem \"ring_vampiric_unique\" 1",
+      "player->additem \"gold_001\" 16000",
+      "\"ring_vampiric_unique_x\"->Enable"
+    ]
+  },
+  "6303166282681810246": {
+    "Prev": "2739129846195455050",
+    "Next": "19656117701823607",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't have the Vampiric Ring with you? Then come back with it, and we'll settle the deal.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "ring_vampiric_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "19656117701823607": {
+    "Prev": "6303166282681810246",
+    "Next": "27873291821363631188",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't have the Vampiric Ring with you? Then come back with it, and we'll settle the deal.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "ring_vampiric_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "27873291821363631188": {
+    "Prev": "19656117701823607",
+    "Next": "10902301362093915093",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A powerful ring, indeed.  Do you no longer wish to keep it? If you wish to sell it, I'm prepared to offer you 16000 gold for it.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ringvampiric",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_Blade",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Sell the item.\" 1 \"Keep the item.\" 2 \"Donate the item.\" 3"
+    ]
+  },
+  "10902301362093915093": {
+    "Prev": "27873291821363631188",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A powerful ring, indeed.  Do you no longer wish to keep it? I can offer you 16000 gold in exchange for it.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ringvampiric",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Sell the item.\" 1 \"Keep the item.\" 2"
+    ]
+  }
+}

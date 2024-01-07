@@ -1,0 +1,281 @@
+{
+  "233381851916610348": {
+    "Prev": "",
+    "Next": "2811024839205246927",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sirilonwe",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My rival is dead by your hands.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_Shashev",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal VA_Shashev 10"
+    ]
+  },
+  "2811024839205246927": {
+    "Prev": "233381851916610348",
+    "Next": "9825322466812215",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sirilonwe",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He is dead, but you do not have his key! Stupid creature. I need that key if I am to gain access to all of his research.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "shashev",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_Shashev",
+        "Value": 10.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "key_shashev",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal VA_Shashev 10"
+    ]
+  },
+  "9825322466812215": {
+    "Prev": "2811024839205246927",
+    "Next": "263351794215120912",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sirilonwe",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent. Sometimes I wonder if it is not a good thing your kind exists. You may keep whatever else you found on his corpse. I'm sure that the fool had something of use to you. If you are still looking for something to do, I require some vampire dust for a spell I'm researching.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "shashev",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_Shashev",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "key_shashev",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_Shashev\" 100",
+      "Player->RemoveItem \"key_shashev\" 1",
+      "AddItem \"key_shashev\" 1",
+      "StartScript blueScript"
+    ]
+  },
+  "263351794215120912": {
+    "Prev": "9825322466812215",
+    "Next": "22382137861203922950",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sirilonwe",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent. Sometimes I wonder if it is not a good thing your kind exists. You may keep whatever else you found on his corpse. I'm sure that the fool had something of use to you. If you are still looking for something to do, I require some vampire dust for a spell I'm researching.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "shashev",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_Shashev",
+        "Value": 10.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "key_shashev",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_Shashev\" 100",
+      "Player->RemoveItem \"key_shashev\" 1",
+      "AddItem \"key_shashev\" 1",
+      "StartScript blueScript"
+    ]
+  },
+  "22382137861203922950": {
+    "Prev": "263351794215120912",
+    "Next": "3024723747100571902",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sirilonwe",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've already killed Shashev, Dark One? Well done indeed. And it is good you brought me the key as well. If you are still looking for something to do, I require some vampire dust for a spell I'm researching.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "shashev",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "key_shashev",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_Shashev\" 100",
+      "Player->RemoveItem \"key_shashev\" 1",
+      "AddItem \"key_shashev\" 1"
+    ]
+  },
+  "3024723747100571902": {
+    "Prev": "22382137861203922950",
+    "Next": "1104444413038726341",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sirilonwe",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've already killed Shashev, Dark One? Well done indeed. But I need his key from him. Get it for me.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "shashev",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "key_shashev",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1104444413038726341": {
+    "Prev": "3024723747100571902",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sirilonwe",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. I need to have a rival eliminated, but I don't wish to be directly involved in the affair. His name is Shashev, and my informants tell me he is at the Ald-Skar Inn in Ald'ruhn. Kill him for me, vampire, and return with his key.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "shashev",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal VA_Shashev 10"
+    ]
+  }
+}

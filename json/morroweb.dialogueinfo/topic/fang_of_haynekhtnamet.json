@@ -1,0 +1,303 @@
+{
+  "131252357167441766": {
+    "Prev": "",
+    "Next": "153813192265688571",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What?  How is it that you have this?  This was part of the museum's collection!  GUARDS!",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "daggerfang",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "dagger_fang_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "SetPCCrimeLevel 32000",
+      "Set PCThief to 1",
+      "Goodbye"
+    ]
+  },
+  "153813192265688571": {
+    "Prev": "131252357167441766",
+    "Next": "15076317992333211384",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, thank you for allowing us to add it to our collection.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "daggerfang",
+        "Value": 2.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "dagger_fang_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "15076317992333211384": {
+    "Prev": "153813192265688571",
+    "Next": "17052181021948511835",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm very proud to have this remarkable piece for our collection.  Thank you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "dagger_fang_unique",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "set daggerfang to 2",
+      "player->removeitem \"dagger_fang_unique\" 1",
+      "set MuseumDonations to MuseumDonations + 1",
+      "\"dagger_fang_unique_x\"->Enable"
+    ]
+  },
+  "17052181021948511835": {
+    "Prev": "15076317992333211384",
+    "Next": "29101282063187723543",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm very proud to have this remarkable piece for our collection.  Thank you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "dagger_fang_unique",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "set daggerfang to 2",
+      "player->removeitem \"dagger_fang_unique\" 1",
+      "player->additem \"gold_001\" 16000",
+      "\"dagger_fang_unique_x\"->Enable"
+    ]
+  },
+  "29101282063187723543": {
+    "Prev": "17052181021948511835",
+    "Next": "18620203791047623668",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't have the Fang of Haynekhtnamet with you? Then come back with it, and we'll settle the deal.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "dagger_fang_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "18620203791047623668": {
+    "Prev": "29101282063187723543",
+    "Next": "339681083211718818",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't have the Fang of Haynekhtnamet with you? Then come back with it, and we'll settle the deal.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "dagger_fang_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "339681083211718818": {
+    "Prev": "18620203791047623668",
+    "Next": "14006415183118868",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's your choice, of course.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "14006415183118868": {
+    "Prev": "339681083211718818",
+    "Next": "13575268082318229030",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah, yes.  The blade forged from a dragon fang, surpassed in its wonder only by its difficulty to pronounce.  Do you wish to sell this to the museum? Or perhaps donate it? I can offer you 16000 gold if you choose to sell it.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "daggerfang",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_Blade",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Sell the item.\" 1 \"Keep the item.\" 2 \"Donate the item.\" 3"
+    ]
+  },
+  "13575268082318229030": {
+    "Prev": "14006415183118868",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah, yes.  The blade forged from a dragon fang, surpassed in its wonder only by its difficulty to pronounce.  Do you wish to sell this to the museum? I can offer you 16000 gold for it.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "daggerfang",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Sell the item.\" 1 \"Keep the item.\" 2"
+    ]
+  }
+}

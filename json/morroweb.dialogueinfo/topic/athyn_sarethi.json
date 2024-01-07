@@ -1,0 +1,115 @@
+{
+  "27050156118185519": {
+    "Prev": "",
+    "Next": "15762241253205011873",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled from House Redoran. Make amends and perhaps we can speak again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "15762241253205011873": {
+    "Prev": "27050156118185519",
+    "Next": "20542384186359985",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 3,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "He is a good man and was a close friend of my father. You will find no better sponsor in all of House Redoran.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_GuardSarethi",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "20542384186359985": {
+    "Prev": "15762241253205011873",
+    "Next": "845780002835527282",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 3,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I hope Athyn is okay. He and my father were close friends, and the Sarethi family has had enough trouble recently. Guard duties pays in drakes, %PCName. It's not much, but perhaps you can put it to good use.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_GuardSarethi",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal HR_GuardSarethi 100",
+      "Player->AddItem Gold_001 200",
+      "ModPCFacRep 5 \"Redoran\"",
+      "ModDisposition 20",
+      "\"gragus lleran\"->disable",
+      "\"arsyn salas\"->disable"
+    ]
+  },
+  "845780002835527282": {
+    "Prev": "20542384186359985",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 3,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Quickly. Go to Sarethi Manor. From here it is the second door to your right after you get back to Skar. Stay there until Athyn Sarethi gives you other orders or until more guards arrive.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_GuardGuarHerds",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HR_GuardSarethi 10"
+    ]
+  }
+}

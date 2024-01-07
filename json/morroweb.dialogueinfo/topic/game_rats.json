@@ -1,0 +1,395 @@
+{
+  "1901166683196814348": {
+    "Prev": "",
+    "Next": "192915027591723003",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yngling half-troll",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm glad you spared my game rats. Go talk to Edryno Arethi. I told her to give you a bonus if you did your job well.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "rat_cave_hhte2",
+        "Value": 3.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "rat_cave_hhte1",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_TheExterminator",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "192915027591723003": {
+    "Prev": "1901166683196814348",
+    "Next": "18822218122226213824",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yngling half-troll",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You killed my game rats, %PCName. How can I beat Dram Bero in the Arena if I don't have any game rats?",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "rat_cave_hhte1",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "18822218122226213824": {
+    "Prev": "192915027591723003",
+    "Next": "872419048252081858",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yngling half-troll",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I raise game rats for the Arena. I train them myself. The rat breeding pen is in my basement. Edryno should have given you a key. Be careful with my rats, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_TheExterminator",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "872419048252081858": {
+    "Prev": "18822218122226213824",
+    "Next": "28229162701018829824",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yngling half-troll",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I raise game rats for the Arena. I train them myself. Leave my rats alone, %PCName.",
+    "Filters": [],
+    "Script": []
+  },
+  "28229162701018829824": {
+    "Prev": "872419048252081858",
+    "Next": "2922722723319817636",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled. I cannot discuss business with you unless you make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2922722723319817636": {
+    "Prev": "28229162701018829824",
+    "Next": "12226161721096332708",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yngling is dead? That is news to me. When did it happen? Well, I suppose he had a lot of enemies. I'm sure no one cares about his game rats anymore, and if he's dead, I won't get paid for this. Forget I asked, %PCName. Now I might have other business to discuss...",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "yngling half-troll",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EscortMerchant",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Odirniran",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HH_TheExterminator 200"
+    ]
+  },
+  "12226161721096332708": {
+    "Prev": "2922722723319817636",
+    "Next": "1079514763229815196",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I wonder if Yngling's rats will win this week in the Arena?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_TheExterminator",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1079514763229815196": {
+    "Prev": "12226161721096332708",
+    "Next": "168011655124876907",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ynging just told me you cured the blighted rats. Since you also spared the game rats, Yngling told me to pay you 1000 drakes.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "gameRatsCured",
+        "Value": 3.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "LessEqual",
+        "Id": "rat_cave_hhte1",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_TheExterminator",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HH_TheExterminator 100",
+      "ModPCFacRep 10 \"Hlaalu\"",
+      "ModDisposition 15",
+      "Player->AddItem Gold_001 1000"
+    ]
+  },
+  "168011655124876907": {
+    "Prev": "1079514763229815196",
+    "Next": "1822239393110914598",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ynging just told me you killed the blighted rats. Since it looks like you spared most of the game rats, Yngling told me to pay you 1000 drakes.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "rat_cave_hhte2",
+        "Value": 3.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "LessEqual",
+        "Id": "rat_cave_hhte1",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_TheExterminator",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HH_TheExterminator 100",
+      "ModPCFacRep 10 \"Hlaalu\"",
+      "ModDisposition 15",
+      "Player->AddItem Gold_001 1000"
+    ]
+  },
+  "1822239393110914598": {
+    "Prev": "168011655124876907",
+    "Next": "27472738513619092",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You killed the blighted rats, but you also killed some of the game rats. Yngling told me to only pay you a token fee of one drake.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "rat_cave_hhte2",
+        "Value": 3.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_TheExterminator",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HH_TheExterminator 100",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "Player->AddItem Gold_001 1"
+    ]
+  },
+  "27472738513619092": {
+    "Prev": "1822239393110914598",
+    "Next": "17500308341805313254",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I just gave you a key. Go to Yngling Half_Troll's basement and kill the blighted rats. Try and leave the healthy rats alone.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_TheExterminator",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "17500308341805313254": {
+    "Prev": "27472738513619092",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yngling Half-Troll raises game rats in Yngling Manor here in Vivec. One of his rivals snuck three blighted rats into his breeding pen. Go to Yngling Manor and kill the blighted rats, but spare his prized game rats. The game rats are used to being handled and should ignore you. The blighted rats are wild and should attack you. Here's a key to Yngling's basement.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Odirniran",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EscortMerchant",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HH_TheExterminator 10",
+      "Player->AddItem key_yinglingbasement 1"
+    ]
+  }
+}

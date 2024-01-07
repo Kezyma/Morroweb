@@ -1,0 +1,230 @@
+{
+  "25166277721472414893": {
+    "Prev": "",
+    "Next": "352211801756417471",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlormar wine-sot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is good she is dead.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_AbusedHealer",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "sosia caristiana",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "NotEqual",
+        "Id": "MV_AbusedHealer",
+        "Value": 35.0
+      }
+    ],
+    "Script": []
+  },
+  "352211801756417471": {
+    "Prev": "25166277721472414893",
+    "Next": "967013834339425374",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlormar wine-sot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've no more to say to you, coward. Get out of my sight.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_AbusedHealer",
+        "Value": 35.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "967013834339425374": {
+    "Prev": "352211801756417471",
+    "Next": "8649317322736618533",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlormar wine-sot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That she is. She must pay for what she's done to me!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_AbusedHealer",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_AbusedHealer",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "8649317322736618533": {
+    "Prev": "967013834339425374",
+    "Next": "29712207392309926898",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlormar wine-sot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Onward friend, we must find this witch before she moves again. I can feel Cloudcleaver calling out to me to rescue it from the clutches of evil.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_AbusedHealer",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "NotEqual",
+        "Id": "MV_AbusedHealer",
+        "Value": 35.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_AbusedHealer",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "29712207392309926898": {
+    "Prev": "8649317322736618533",
+    "Next": "30533140152978823634",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlormar wine-sot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Bah, I took you for a coward the moment I saw you!  Stand aside then and make way for any real warriors who be walking this path.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_AbusedHealer\" 35",
+      "ModDisposition -10"
+    ]
+  },
+  "30533140152978823634": {
+    "Prev": "29712207392309926898",
+    "Next": "2763820566258111868",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlormar wine-sot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I knew you had the bloodlust in you, stranger! I believe she is still camped where I left her up to the northwest, though I could be wrong as the spell disoriented me a bit, it did. You know this area better than me -- lead the way! This witch shall rue the day she met Hlormar Wine-Sot!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_AbusedHealer\" 30",
+      "\"Hlormar Wine-Sot\"->AiFollow Player 0,0,0,0,0"
+    ]
+  },
+  "2763820566258111868": {
+    "Prev": "30533140152978823634",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlormar wine-sot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A witch she had to be. I was on my way to Caldera when I met her. She was a stranger here like myself, and our conversations lightened the burden of travel. She was quite friendly and, well, y'know, we set up camp together. But that night she revealed the witch inside. Cast a spell on me. I couldn't so much as blink! Stole everything, even my worn out clothes, but most importantly, she took my prized axe Cloudcleaver. Join with me, stranger! And let's find her and extract her entrails together!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_AbusedHealer",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_AbusedHealer\" 10",
+      "Choice \"I will help you find her.\" 2 \"I have too much else to do.\" 3"
+    ]
+  }
+}

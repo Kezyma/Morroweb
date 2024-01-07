@@ -1,0 +1,190 @@
+{
+  "22935285051102919033": {
+    "Prev": "",
+    "Next": "3181823687238116822",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "thrud",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You help Thrud free Dilborn, and make bad people sad. Thrud happy, happy, happy -- like pig in mud!  Now Dilborn read many books for Thrud, make Thrud smart.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_BarbarianBook",
+        "Value": 160.0
+      }
+    ],
+    "Script": []
+  },
+  "3181823687238116822": {
+    "Prev": "22935285051102919033",
+    "Next": "26168303952191121965",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "thrud",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You try help Thrud free Dilborn. But Dilborn gone. Thrud sad. Now Thrud got books, but not got Dilborn. Thrud stay here now and pray to book spirits so Dilborn not be lonely.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_BarbarianBook",
+        "Value": 150.0
+      }
+    ],
+    "Script": []
+  },
+  "26168303952191121965": {
+    "Prev": "3181823687238116822",
+    "Next": "25769127661071629949",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "thrud",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You help Thrud free Dilborn. Thrud happy, happy, happy -- like pig in mud! Now Dilborn read many books for Thrud, make Thrud smart.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_BarbarianBook",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "25769127661071629949": {
+    "Prev": "26168303952191121965",
+    "Next": "680331054211436846",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "thrud",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go to sewers, %PCName. Thrud see Dilborn go to sewers.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_BarbarianBook",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MS_BarbarianBook",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "680331054211436846": {
+    "Prev": "25769127661071629949",
+    "Next": "14173265921352611430",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "thrud",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thrud happy, happy, %PCRace. Find Dilborn now, yes? Thrud see Dilborn go down in sewers near here. Dilborn go to sewers lots to meet friends, Dilborn says. Most times, Dilborn back soon, and happy, happy. But Dilborn not back soon now. We go to sewers, find Dilborn!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_BarbarianBook\" 20",
+      "thrud->AiFollow Player 0,0,0,0,0"
+    ]
+  },
+  "14173265921352611430": {
+    "Prev": "680331054211436846",
+    "Next": "1074712006559130422",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "thrud",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thrud sad. Thrud want Dilborn come back soon.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_BarbarianBook\" 100"
+    ]
+  },
+  "1074712006559130422": {
+    "Prev": "14173265921352611430",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "thrud",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Dilborn big and mighty wizard. Dilborn read books to Thrud... all the words, big words, two, maybe three times. Now Dilborn gone, no one read books to Thrud. Thrud sad. Thrud miss friend Dilborn. You help Thrud find Dilborn?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Okay, I will help you.\" 1 \"No, thanks. I don't have the time.\" 2"
+    ]
+  }
+}

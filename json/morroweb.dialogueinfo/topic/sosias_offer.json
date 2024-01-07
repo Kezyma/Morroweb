@@ -1,0 +1,117 @@
+{
+  "2239543419732420": {
+    "Prev": "",
+    "Next": "30647273571651030033",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlormar wine-sot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then you will die alongside her!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_AbusedHealer\" 70",
+      "AiWander 0 0 0 0 0 0 0",
+      "ModDisposition -100",
+      "SetFight 100",
+      "StartCombat Player"
+    ]
+  },
+  "30647273571651030033": {
+    "Prev": "2239543419732420",
+    "Next": "13867582706920928",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlormar wine-sot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then let's show this witch the way to her grave together!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_AbusedHealer\" 60",
+      "StartCombat \"Sosia Caristiana\""
+    ]
+  },
+  "13867582706920928": {
+    "Prev": "30647273571651030033",
+    "Next": "25615172011894832380",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlormar wine-sot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well I'll not be waiting another three days to have me bloody axe when it is in the hands of that damned witch!  Are you going to help me, friend, or are you believing the lies spilling out of that witch's face?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_AbusedHealer",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Choice \"I'll side with you.\" 4 \"I believe Sosia.\" 5"
+    ]
+  },
+  "25615172011894832380": {
+    "Prev": "13867582706920928",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sosia caristiana",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've heard my offer, and it will not change.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "hlormar wine-sot",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

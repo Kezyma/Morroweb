@@ -1,0 +1,248 @@
+{
+  "1637761982177931739": {
+    "Prev": "",
+    "Next": "3113587232413124358",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "teris raledran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Certainly! The two of us are more than glad to give you your fee. We'd like to thank you again for your companionship. It gets a bit lonely on the road, and sometimes Rollie gets awfully quiet on long trips. (He's getting a little moody in his old age.) Take care, stranger!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_RichTrader",
+        "Value": 90.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "guar_rollie_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "RemoveItem \"Gold_001\" 200",
+      "Player->AddItem \"Gold_001\" 200",
+      "Journal \"MV_RichTrader\" 100",
+      "Goodbye"
+    ]
+  },
+  "3113587232413124358": {
+    "Prev": "1637761982177931739",
+    "Next": "15577461303487",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "teris raledran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, I'm afraid I can't pay you all of what I promised, with the loss of my beloved Rollie. Here, take this. I'll use the rest to have a proper burial for my one true friend, perhaps build him a memorial. At least most of the goods got here, though. He would have wanted it that way. Farewell.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_RichTrader",
+        "Value": 90.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "guar_rollie_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "RemoveItem \"Gold_001\" 100",
+      "Player->AddItem \"Gold_001\" 100",
+      "Journal \"MV_RichTrader\" 105",
+      "Goodbye"
+    ]
+  },
+  "15577461303487": {
+    "Prev": "3113587232413124358",
+    "Next": "321386794501911914",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "teris raledran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, I figure that 200 septims would be fair. Sounds about right, doesn't it? Yes, that's a fair arrangement. Again, thank you for your trouble. You'll be paid when we arrive at the store.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_RichTrader",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "321386794501911914": {
+    "Prev": "15577461303487",
+    "Next": "21445224882320713163",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Museum has been compensated quite well. Thank you for your donations.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "MuseumDonations",
+        "Value": 2.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Blade",
+        "Value": 45.0
+      }
+    ],
+    "Script": []
+  },
+  "21445224882320713163": {
+    "Prev": "321386794501911914",
+    "Next": "108842202568024816",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've already been quite a friend to the Museum. I'll give you the piece. I'm classifying it as a Dwemer Battle Shield. As I said, I'm not sure what to make of it. The spike attached to the front of the shield seems to be loose, but a competent smith can probably take care of that for you. Good luck to you, and if you're able to recreate the Blade of Nerevar, I'd love to see the finished product.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "MuseumDonations",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal TR_Blade 45",
+      "Player->AddItem \"dwemer_shield_battle_unique\" 1"
+    ]
+  },
+  "108842202568024816": {
+    "Prev": "21445224882320713163",
+    "Next": "1690280142105732407",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Bring me a couple quality pieces, and I'll be able to help you, friend.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "MuseumDonations",
+        "Value": 2.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_Blade",
+        "Value": 40.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "bladepiece_03",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1690280142105732407": {
+    "Prev": "108842202568024816",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm always looking for new pieces for the Museum of Artifacts. Unique items, armor and weapons of lore--you know the stuff. If you would be willing to donate a couple to the Museum, I'd be willing to part with the shield.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "bladepiece_03",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_Blade",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "TR_Blade",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TR_Blade 40"
+    ]
+  }
+}

@@ -1,0 +1,323 @@
+{
+  "16061107653160313729": {
+    "Prev": "",
+    "Next": "14707155682221223996",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "King Hlaalu Helseth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There is no need to speak of this further.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Champion",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "14707155682221223996": {
+    "Prev": "16061107653160313729",
+    "Next": "2483789722806727854",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "King Hlaalu Helseth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm impressed, %PCName. None have ever defeated Karrod in battle, and I certainly didn't expect you to be the first. You continue to surprise me. You have proven your worth to me, as well as your loyalty. Take this as a token of my faith in our friendship. It was my father's ceremonial dagger, and I place it now in your possession. Do not disgrace his memory, %PCName. Now, let us discuss my plans for you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_Champion",
+        "Value": 70.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "KarrodBeaten",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem \"glass dagger_symmachus_unique\" 1",
+      "RemoveItem \"glass dagger_symmachus_unique\" 1",
+      "StartScript HelsMoveScript",
+      "Journal TR_Champion 80"
+    ]
+  },
+  "2483789722806727854": {
+    "Prev": "14707155682221223996",
+    "Next": "20388175531037128290",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "King Hlaalu Helseth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My champion is dead, %PCName. Your treachery will not go unpunished! Guards!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Champion",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_Champion",
+        "Value": 70.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "karrod",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Set KingHit to 1",
+      "Goodbye"
+    ]
+  },
+  "20388175531037128290": {
+    "Prev": "2483789722806727854",
+    "Next": "29068919923063464",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "King Hlaalu Helseth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see you are prepared to fight my champion, but you have your mercenary with you. Though I understand the value of a good sword at your side, this is to be a personal battle. Please escort your companion out of the Throne Room. He will be safe outside. When you return, we may begin.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Champion",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_Champion",
+        "Value": 70.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "MercenaryNear",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "KarrodFightStart",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "29068919923063464": {
+    "Prev": "20388175531037128290",
+    "Next": "367250812126122308",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "King Hlaalu Helseth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ahhh...you have come to meet Karrod in battle. Good for you. Karrod is looking a bit under the weather today, but no matter. Perhaps you've heard that Karrod has never been defeated in battle? It's true. Amazing, don't you think? Regardless, this will be a fair fight. You may both use whatever weapons are at your disposal. I wish you both luck. None are to interfere, and you will begin on my command.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Champion",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_Champion",
+        "Value": 70.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "karrodBribe",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "KarrodFightStart",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Set KarrodFightStart to 3",
+      "Journal TR_Champion 70",
+      "Goodbye"
+    ]
+  },
+  "367250812126122308": {
+    "Prev": "29068919923063464",
+    "Next": "3193511784866211470",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "King Hlaalu Helseth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ahhh...you have come to meet Karrod in battle. Good for you. Have I mentioned that Karrod has never been defeated? Perhaps I hadn't. This is to be a fair fight. Use whatever weapons or spells are at your disposal. I wish you both luck. At least one of you will need it. None are to interfere, and you will begin on my command.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Champion",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_Champion",
+        "Value": 70.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "karrodBribe",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "KarrodFightStart",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Set KarrodFightStart to 3",
+      "Journal TR_Champion 70",
+      "Goodbye"
+    ]
+  },
+  "3193511784866211470": {
+    "Prev": "367250812126122308",
+    "Next": "110562582019886957",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "King Hlaalu Helseth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You will meet him tomorrow. Report back here tomorrow and be prepared to face Karrod.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Champion",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_Champion",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "110562582019886957": {
+    "Prev": "3193511784866211470",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "King Hlaalu Helseth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That is correct. I have come to know you a bit, %PCName. I believe you can be of some use to me. But the plans I have will require someone of great strength or wit. Perhaps both. The time has come for you to prove this to me. You will return here tomorrow, and you will duel Karrod. If you are able to defeat him, we will discuss my plans for you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_Champion",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal TR_Champion 20",
+      "Set FightDay to DaysPassed",
+      "StartScript KarrodMovement"
+    ]
+  }
+}

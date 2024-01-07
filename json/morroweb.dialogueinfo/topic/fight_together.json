@@ -1,0 +1,210 @@
+{
+  "145783453542027234": {
+    "Prev": "",
+    "Next": "20346204972850912813",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ulyne henim",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Daris Adram has met our justice. There is no need to fight together any more.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "daris adram",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "20346204972850912813": {
+    "Prev": "145783453542027234",
+    "Next": "14303183551984930906",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ulyne henim",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will fight by your side.",
+    "Filters": [],
+    "Script": [
+      "Journal FG_Vas 50",
+      "AiFollow Player 0 0 0 0 0 0 0 0 0"
+    ]
+  },
+  "14303183551984930906": {
+    "Prev": "20346204972850912813",
+    "Next": "19808204903220023708",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ulyne henim",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will wait here for you.",
+    "Filters": [],
+    "Script": [
+      "AiWander 128 6 0 40 30 20 0 0 0 0 0 0"
+    ]
+  },
+  "19808204903220023708": {
+    "Prev": "14303183551984930906",
+    "Next": "16742267121877231535",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ulyne henim",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Shall I wait here for you?",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "followNow",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"No, we fight together\" 1 \"Yes, wait here\" 2"
+    ]
+  },
+  "16742267121877231535": {
+    "Prev": "19808204903220023708",
+    "Next": "28245263682091225442",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ulyne henim",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Shall we bring justice to the foul Necromancer Daris Adram?",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "followNow",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, we fight together\" 1 \"No, wait here\" 2"
+    ]
+  },
+  "28245263682091225442": {
+    "Prev": "16742267121877231535",
+    "Next": "1612516822937913517",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Fjorgeir",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Just lead the way, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HH_Stronghold 250",
+      "AiFollow Player 0 0 0 0 0"
+    ]
+  },
+  "1612516822937913517": {
+    "Prev": "28245263682091225442",
+    "Next": "1522026081463327988",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Fjorgeir",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So, I'm to guard right here, eh? You can count on me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 10 10 10 0 0 0 0 0 0"
+    ]
+  },
+  "1522026081463327988": {
+    "Prev": "1612516822937913517",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Fjorgeir",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Aye. I'll fight by your side until your gold runs dry.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 200.0
+      }
+    ],
+    "Script": [
+      "Choice \"Guard this spot.\" 2 \"Fight with me.\" 1"
+    ]
+  }
+}

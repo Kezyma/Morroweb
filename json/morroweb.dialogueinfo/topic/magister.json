@@ -1,0 +1,343 @@
+{
+  "36163026617241160": {
+    "Prev": "",
+    "Next": "148659523103917485",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "You are the new Archmagister of House Telvanni.",
+    "Filters": [],
+    "Script": [
+      "Journal HT_Archmagister 100"
+    ]
+  },
+  "148659523103917485": {
+    "Prev": "36163026617241160",
+    "Next": "14108226602918829242",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 8,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "You have the support of the other Councilors, and Gothren is dead. Congratulations, Archmagister %PCName.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "gothren",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "PCRaiseRank",
+      "ModPCFacRep 10 \"Telvanni\"",
+      "Player->ModReputation 2"
+    ]
+  },
+  "14108226602918829242": {
+    "Prev": "148659523103917485",
+    "Next": "15288236602867123314",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 8,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Once you have disposed of Archmagister Gothren, speak with me again.",
+    "Filters": [],
+    "Script": []
+  },
+  "15288236602867123314": {
+    "Prev": "14108226602918829242",
+    "Next": "27297279481221126977",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Take your time.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": []
+  },
+  "27297279481221126977": {
+    "Prev": "15288236602867123314",
+    "Next": "97781470879530159",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well, then. You are now raised to the rank of Master, and so you shall remain forever.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "PCRaiseRank"
+    ]
+  },
+  "97781470879530159": {
+    "Prev": "27297279481221126977",
+    "Next": "29113209461956825528",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well. I must admit I am surprised. I thought you would surely claim the title for yourself. You understand that if you choose the title of Master now, you can NEVER advance further in House Telvanni? You can never again make a claim for Archmagister?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"I understand. I shall remain a Master, and never seek advancement in House Telvanni again.\" 5 \"Let me think about this.\" 6"
+    ]
+  },
+  "29113209461956825528": {
+    "Prev": "97781470879530159",
+    "Next": "271657617423732024",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. I have long waited to see who the next Archmagister would be. I can think of no better qualified candidates. You have my support and that of the surviving councilors. Now you must dispose of Archmagister Gothren. You will find him in his tower in Tel Aruhn.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal HT_Archmagister 10",
+      "PCRaiseRank",
+      "PCRaiseRank",
+      "ModPCFacRep 10 \"Telvanni\"",
+      "ModDisposition 10",
+      "Player->ModReputation 2"
+    ]
+  },
+  "271657617423732024": {
+    "Prev": "29113209461956825528",
+    "Next": "1486930267545827349",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Take your time.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "1486930267545827349": {
+    "Prev": "271657617423732024",
+    "Next": "90982837642815098",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are now the Magister of House Telvanni. Defeat Gothren and you shall be the Archmagister.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "PCRaiseRank"
+    ]
+  },
+  "90982837642815098": {
+    "Prev": "1486930267545827349",
+    "Next": "6003260711229824663",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "You have foresworn the title of Magister... But perhaps you have changed your mind. Will you fight Archmagister Gothren and claim the title as your own?",
+    "Filters": [],
+    "Script": [
+      "Choice \"I have decided to fight Gothren.\" 4 \"No, not yet.\" 3"
+    ]
+  },
+  "6003260711229824663": {
+    "Prev": "90982837642815098",
+    "Next": "28413373290119565",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 6,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "You have been named Hortator of House Telvanni, so you already have the support of the surviving Councilors. No one is more deserving to be the new Archmagister than you. Congratulations, Archmagister.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B7_TelvanniHort",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "PCRaiseRank",
+      "PCRaiseRank",
+      "PCRaiseRank",
+      "ModPCFacRep 20 \"Telvanni\"",
+      "Player->ModReputation 2"
+    ]
+  },
+  "28413373290119565": {
+    "Prev": "6003260711229824663",
+    "Next": "161989636323058544",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 6,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Since Gothren's untimely death, none of the Councilors have tried to take his title for themselves. I doubt anyone would challenge your claim to be the new Archmagister of House Telvanni. Congratulations, Archmagister.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "gothren",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "PCRaiseRank",
+      "PCRaiseRank",
+      "PCRaiseRank",
+      "ModPCFacRep 20 \"Telvanni\"",
+      "Player->ModReputation 2"
+    ]
+  },
+  "161989636323058544": {
+    "Prev": "28413373290119565",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 6,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "I can grant you the rank of Master now. That will give you an equal place on the Telvanni Council. But if you aspire to a higher claim, I can also grant you the title of Magister. By accepting the title of Magister, you are announcing that you deserve the title of Archmagister more than Gothren who currently holds that rank. Which will it be?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Grant me the title of Master. I have no plans of fighting Gothren.\" 1 \"I will topple Gothren from his tower. Proclaim me Magister.\" 2 \"I need to think about this.\" 3"
+    ]
+  }
+}

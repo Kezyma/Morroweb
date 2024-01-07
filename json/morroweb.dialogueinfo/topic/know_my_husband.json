@@ -1,0 +1,246 @@
+{
+  "77104645294093102": {
+    "Prev": "",
+    "Next": "166372063172931058",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Arnsa Thendas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It doesn't matter now. He's gone, and I have to try to move on.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_EstateSale",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "166372063172931058": {
+    "Prev": "77104645294093102",
+    "Next": "9834119352974318464",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Arnsa Thendas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm so glad I've met someone else who knew Sandas.  These are such trying times, and the comfort of friends is all I have.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_EstateSale",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "9834119352974318464": {
+    "Prev": "166372063172931058",
+    "Next": "2393318779144814829",
+    "Type": "Topic",
+    "Disposition": 80,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Arnsa Thendas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, I'm sorry...I had no idea. Sandas always spoke so fondly of his time in the Legion.  I'm sure you must miss him almost as terribly as I do.  Since you were so close, perhaps there's a particular item you'd like to remember him by?  I can afford to part with something before the sale.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MS_EstateSale 35"
+    ]
+  },
+  "2393318779144814829": {
+    "Prev": "9834119352974318464",
+    "Next": "2676243711463821193",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Arnsa Thendas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, you've already mentioned it. As I said, I don't recall him ever speaking of you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_EstateSale",
+        "Value": 35.0
+      }
+    ],
+    "Script": []
+  },
+  "2676243711463821193": {
+    "Prev": "2393318779144814829",
+    "Next": "2808077562358230196",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Arnsa Thendas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hmm.  I'm afraid Sandas never spoke of you, and he talked quite a bit about his time in the Legion.  Well, if you're truly here to pay your respects, then I thank you.  Otherwise, I really must be getting back to taking care of his personal effects.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2808077562358230196": {
+    "Prev": "2676243711463821193",
+    "Next": "2607728294409721065",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Arnsa Thendas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My husband never worked for the Fighters' Guild...  what is this, some sort of scam?  How DARE you lie to a woman about her dead husband!  I'll have nothing further to do with you!  Now get out of here!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "moddisposition -50",
+      "Journal MS_EstateSale 25",
+      "Goodbye"
+    ]
+  },
+  "2607728294409721065": {
+    "Prev": "2808077562358230196",
+    "Next": "1738548422693230035",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Arnsa Thendas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's a shame you never met him, really.  He was such a good man... but, if you didn't know him, then why exactly are you here?  Does it have something to do with the Estate Sale?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal MS_EstateSale 23"
+    ]
+  },
+  "1738548422693230035": {
+    "Prev": "2607728294409721065",
+    "Next": "1462724598217851392",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Arnsa Thendas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As I said, it's too bad you didn't know him. Everyone was fond of him.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_EstateSale",
+        "Value": 23.0
+      }
+    ],
+    "Script": []
+  },
+  "1462724598217851392": {
+    "Prev": "1738548422693230035",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Arnsa Thendas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Were you an acquaintance of my husband's?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_EstateSale",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Choice: \"[Lie] Yes, we served in the Imperial Legion together.\" 1 \"[Lie] Yes, we both worked for the Fighters' Guild.\" 2 \"No, I didn't know him.\" 3"
+    ]
+  }
+}

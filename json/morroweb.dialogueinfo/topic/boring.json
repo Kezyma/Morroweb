@@ -1,0 +1,181 @@
+{
+  "26630408133142918": {
+    "Prev": "",
+    "Next": "1312622174627579",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Aldam Berendus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Funny how a little alcohol can make just about anything seem more interesting.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_6a",
+        "Value": 10.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "aldammove",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1312622174627579": {
+    "Prev": "26630408133142918",
+    "Next": "13330291462925414299",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Aldam Berendus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, sorry - I don't drink. I mean, aside from the occasional whiskey. You wouldn't....  you don't happen to have any, do you?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice: \"I do, in fact. Here you are.\" 3 \"No, sorry.\" 2"
+    ]
+  },
+  "13330291462925414299": {
+    "Prev": "1312622174627579",
+    "Next": "47868462177818176",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Aldam Berendus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah, that's okay. I should be concentrating on this job, anyway.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "47868462177818176": {
+    "Prev": "13330291462925414299",
+    "Next": "13262352819572651",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Aldam Berendus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Mmmm....thanks, %PCName. I better not drink this here where anyone can see me, though. Uhh... I'll be back in a few minutes.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"potion_cyro_whiskey_01\" 1",
+      "additem \"potion_cyro_whiskey_01\" 1",
+      "ModDisposition 40",
+      "Goodbye"
+    ]
+  },
+  "13262352819572651": {
+    "Prev": "47868462177818176",
+    "Next": "307772688437787115",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Aldam Berendus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Nothing entertaining has happened since I got here. You have any ideas?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_6a",
+        "Value": 40.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Potion_Cyro_Whiskey_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice: \"How about a drink?\" 1 \"I don't have any suggestions. Sorry.\" 2"
+    ]
+  },
+  "307772688437787115": {
+    "Prev": "13262352819572651",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Aldam Berendus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If Falco says it's important, then I guess it is, but all I do is just stand around.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_6a",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  }
+}

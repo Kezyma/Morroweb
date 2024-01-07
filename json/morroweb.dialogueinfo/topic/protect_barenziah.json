@@ -1,0 +1,163 @@
+{
+  "80108882305914334": {
+    "Prev": "",
+    "Next": "12089231192216013739",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "King Hlaalu Helseth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is good you were able to do your job.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Assassins",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "12089231192216013739": {
+    "Prev": "80108882305914334",
+    "Next": "1296919820082663",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "King Hlaalu Helseth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You were able to hold off the assassins. Interesting. Perhaps the threat was not as great as it seemed. We commend you. Take this as a show of our appreciation. We are impressed with your efforts so far. When you are ready, speak to me about further service to your king.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_Assassins",
+        "Value": 90.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem \"Helseth's Collar\" 1",
+      "Journal TR_Assassins 100"
+    ]
+  },
+  "1296919820082663": {
+    "Prev": "12089231192216013739",
+    "Next": "14621163341000426850",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "King Hlaalu Helseth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Wait in the antechamber outside Barenziah's room at nightfall and protect her from the assassins. You are to hide behind the screens in the anteroom, and make sure to close the door to the room behind you. We do not want to let the assassins know they are expected. In the meantime, find out whatever else you can about the attempt. Report to us when you have completed your task.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_Assassins",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "14621163341000426850": {
+    "Prev": "1296919820082663",
+    "Next": "7547368142016737",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "King Hlaalu Helseth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It would be unwise to station more guards outside her doors, as that would alert the killers to our knowledge. Better to catch them in the act. One of our royal guards could be involved in this attempt, so they will be kept occupied elsewhere. You will stay in the antechamber outside our mother's chambers tomorrow evening, and deal with these assassins when they arrive. Close the door behind you and hide behind the screens, so as not to alert them to your presence. Meantime, find out whatever else you can.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_Assassins",
+        "Value": 80.0
+      }
+    ],
+    "Script": [
+      "Journal TR_Assassins 80"
+    ]
+  },
+  "7547368142016737": {
+    "Prev": "14621163341000426850",
+    "Next": "767031538762426847",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "plitinius mero",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Protect her? Ha! My sympathies lie with the assassins, friend. The Lady is far from helpless, as many have come to find out the hard way. Still, it is odd that someone would even attempt it. Why kill her? Her son lives only down the hall, and he bears the burden of rule. There is no understanding the machinations of madmen or politicians.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_Assassins",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "767031538762426847": {
+    "Prev": "7547368142016737",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "barenziah",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My son has sent you to protect me? Ha! Please, friend...I mean no disrespect. I'm not laughing at you, or at the seemingly noble sentiments my son exhibits. It just seems odd to me that any would want to have me killed. And my son knows as well as any that I can protect myself. Still, do as he has commanded you. He is the king, and it is best to concede to his wishes. Take care, my friend.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_Assassins",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  }
+}

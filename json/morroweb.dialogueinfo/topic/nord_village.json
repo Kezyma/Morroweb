@@ -1,0 +1,132 @@
+{
+  "568655991130923386": {
+    "Prev": "",
+    "Next": "31861149012312711138",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "saenus lusius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go there and find out what you can about the Captain's disappearance. It is on the northeastern tip of the island.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_CariusGone",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_CariusGone",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "31861149012312711138": {
+    "Prev": "568655991130923386",
+    "Next": "1891112258348110301",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "saenus lusius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is on the northeastern tip of Solstheim. These Skaal are nature-worshippers, and they seem to have a special commune with the creatures of this island. If anyone knows what attacked the fort, it will be these Nords. I will mark their location on your map. I would like you to earn their trust and find out what you can. You may have to remain with them for many days, but I believe you are up to the task. Here, take this--it was found in one of their tombs. Perhaps they will take it as a sign of good faith.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_CariusGone",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 0 0 0",
+      "\"gaea artoria\"->AiWander 0 0 0 0 0 0",
+      "Journal BM_CariusGone 25",
+      "Player->AddItem misc_Skull_Skaal 1",
+      "ShowMap \"Skaal Village\""
+    ]
+  },
+  "1891112258348110301": {
+    "Prev": "31861149012312711138",
+    "Next": "2667819882822310011",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gaea artoria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go find those savages and see what they've done with the Cap'n.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_CariusGone",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_CariusGone",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2667819882822310011": {
+    "Prev": "1891112258348110301",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gaea artoria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "They're a bunch of savages that live on the northeast tip of the island. The Skaal, they call themselves. I'll mark their village on your map. A bunch of animal spirit-worshipping freaks...wolves especially. What does that tell you? I'm sure they know what happened to the Captain. Now you go find out. They're not likely to trust you, so take this. They'll like it. You should stay with them until you find out what's happened. Get in good with them, earn their trust.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_CariusGone",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 0 0 0",
+      "\"saenus lusius\"->AiWander 0 0 0 0 0 0",
+      "Journal BM_CariusGone 20",
+      "Player->AddItem misc_Skull_Skaal 1",
+      "ShowMap \"Skaal Village\""
+    ]
+  }
+}

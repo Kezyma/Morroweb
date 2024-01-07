@@ -1,0 +1,277 @@
+{
+  "85572479156276788": {
+    "Prev": "",
+    "Next": "244242601612171461",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "volrina quarra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There is no need to speak further about this.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampAmulet",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "244242601612171461": {
+    "Prev": "85572479156276788",
+    "Next": "20583187613273223117",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "volrina quarra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have found them all? You surprise me, New Meat. I expected much less of you. You shall be rewarded, though. Take this amulet; it is one of my unsuccessful attempts. However, it will allow you to return to Druscashti at will. And, since you have been less incompetent than I imagined, I will have future rewards for you, if you are able to rid this world of enough of the other vampire clans that stain it.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "extravagant_amulet_01",
+        "Value": 5.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_void_salts_01",
+        "Value": 2.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_daedras_heart_01",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_vampire_dust_01",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_skull10",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_VampAmulet",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem \"extravagant_amulet_01\" 5",
+      "Player->RemoveItem \"ingred_void_salts_01\" 2",
+      "Player->RemoveItem \"ingred_daedras_heart_01\" 1",
+      "Player->RemoveItem \"ingred_vampire_dust_01\" 1",
+      "Player->RemoveItem \"misc_skull10\" 1",
+      "Player->AddItem \"amulet_quarra\" 1",
+      "Journal \"VA_VampAmulet\" 30"
+    ]
+  },
+  "20583187613273223117": {
+    "Prev": "244242601612171461",
+    "Next": "2025445662945327499",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "volrina quarra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have found them all? You surprise me, New Meat. I expected much less of you. You shall be rewarded, though. Take this amulet; it is one of my unsuccessful attempts. However, it will allow you to return to Druscashti at will. And, since you have been less incompetent than I imagined, I will have future rewards for you, if you are able to rid this world of enough of the other vampire clans that stain it.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "extravagant_amulet_01",
+        "Value": 5.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_void_salts_01",
+        "Value": 2.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_daedras_heart_01",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_vampire_dust_01",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_skull00",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_VampAmulet",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem \"extravagant_amulet_01\" 5",
+      "Player->RemoveItem \"ingred_void_salts_01\" 2",
+      "Player->RemoveItem \"ingred_daedras_heart_01\" 1",
+      "Player->RemoveItem \"ingred_vampire_dust_01\" 1",
+      "Player->RemoveItem \"misc_skull00\" 1",
+      "Player->AddItem \"amulet_quarra\" 1",
+      "Journal \"VA_VampAmulet\" 30"
+    ]
+  },
+  "2025445662945327499": {
+    "Prev": "20583187613273223117",
+    "Next": "2113224195815625230",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "volrina quarra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Return to me when you have all of the ingredients I need, waste of my blood.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_VampAmulet",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "2113224195815625230": {
+    "Prev": "2025445662945327499",
+    "Next": "3220021953679228145",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "volrina quarra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As I expected. I will have one of my competent minions complete my task. Leave my sight.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampAmulet\" 25"
+    ]
+  },
+  "3220021953679228145": {
+    "Prev": "2113224195815625230",
+    "Next": "1040515641492015484",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "volrina quarra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Fine, then. Here is what you must retrieve for me: five extravagant sapphire amulets, two portions of void salts, the heart of a daedra, some ectoplasm, a skull of a man or a mer, and some vampire dust. Now go, so that you might find your end more quickly.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampAmulet\" 20"
+    ]
+  },
+  "1040515641492015484": {
+    "Prev": "3220021953679228145",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "volrina quarra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There are a number of them, some not easy to obtain. It could take you many days to find what I need, and you will likely die in the attempt. Do you feel yourself up for the task, Fresh Blood?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampAmulet",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampAmulet\" 10",
+      "Choice \"I will do as you ask.\" 1 \"No, I have no interest in this.\" 2"
+    ]
+  }
+}

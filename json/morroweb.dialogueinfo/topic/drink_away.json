@@ -1,0 +1,106 @@
+{
+  "11555122442026132634": {
+    "Prev": "",
+    "Next": "2545215469614928165",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "therdon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for mentioning that job opportunity at the smithy's to me, %PCName. I hope to check it out very soon, as soon as I finish my shein.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_JobHunt",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "2545215469614928165": {
+    "Prev": "11555122442026132634",
+    "Next": "11446266333137416728",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "therdon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What's that? Bols Indalen at Craftmen's Hall is looking for a new apprentice? Hmm....  Well, it's not making pillows, but it is work. I just might try that out. Thanks, %PCRace. Next time you see me, perhaps I'll be working in the smith's shop. Have a drink on me!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_JobHunt\" 20",
+      "player->AddItem potion_cyro_brandy_01 1",
+      "StartScript TherdonCellCheck"
+    ]
+  },
+  "11446266333137416728": {
+    "Prev": "2545215469614928165",
+    "Next": "1924184011407624986",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "therdon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It didn't take long for the money guys in the exquisites upstairs to burn through all our pillow venture capital. Offices in the best Telvanni towers, 1500-septim chairs upholstered in the finest scamp skin, and unlimited stores of matze. We would spend 16 hours a day or more in there, doing what we loved -- crafting pillows. It was a dream come true for me. Ever since I was young, I dreamed of creating the perfect pillow. Well, those days are over now. I need to find work.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 2"
+    ]
+  },
+  "1924184011407624986": {
+    "Prev": "11446266333137416728",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "therdon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, my life isn't exactly gold-kanet-sunshine-happy at the moment. More like bungler's-bane-bummer. I got laid off from my job at the pillow factory last week. The market for pillows has really bottomed out in the last few years. Turns out that the average family home doesn't need 25 pillows per person like we originally thought. Who knew the market would turn so sour so suddenly?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  }
+}

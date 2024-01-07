@@ -1,0 +1,117 @@
+{
+  "2201432251561329909": {
+    "Prev": "",
+    "Next": "5011294721301725275",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There is not time to waste. Make your preparations quickly.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "5011294721301725275": {
+    "Prev": "2201432251561329909",
+    "Next": "165579374197431762",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then I shall send you now. Do what you must, Nerevarine.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TR_SothaSil 20",
+      "StartScript SothaSilTeleport",
+      "Goodbye"
+    ]
+  },
+  "165579374197431762": {
+    "Prev": "5011294721301725275",
+    "Next": "320352193233691170",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you prepared now to stop Sotha Sil and take your place amongst the gods?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_SothaSil",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"I am prepared to go.\" 1 \"I need time to prepare.\" 2"
+    ]
+  },
+  "320352193233691170": {
+    "Prev": "165579374197431762",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I believe it is your calling to stop Sotha Sil's mad schemings. I do not know that he can be reasoned with, %PCName, but it is possible. If he cannot be, you must end his life. Though the idea saddens me, it is best for Morrowind...and it is best for him, as well. You have the power to do this. The Trueflame can kill a god, if wielded by one of noble intent. Steel yourself, %PCName, and do what must be done. I will send you to his Clockwork City now, if you are prepared. Good luck, Nerevarine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_SothaSil",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal TR_SothaSil 10",
+      "Choice \"I am prepared to go.\" 1 \"I need time to prepare.\" 2"
+    ]
+  }
+}

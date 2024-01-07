@@ -1,0 +1,455 @@
+{
+  "2676311797272564592": {
+    "Prev": "",
+    "Next": "2468732417700032616",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have no miners to sell today.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 150.0
+      }
+    ],
+    "Script": []
+  },
+  "2468732417700032616": {
+    "Prev": "2676311797272564592",
+    "Next": "24431353222227",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. I will give orders to have Llaals taken from the slave pit. Go on inside. He's your problem now.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "\"Llaals Ores\"->PositionCell 1030 -2660 180 180 \"Tel Aruhn, Underground\"",
+      "Journal HH_Stronghold 150",
+      "Player->RemoveItem Gold_001 200"
+    ]
+  },
+  "24431353222227": {
+    "Prev": "2468732417700032616",
+    "Next": "767027153239117774",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There are no other miners to recruit here in Tel Aruhn. I will see you again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "767027153239117774": {
+    "Prev": "24431353222227",
+    "Next": "9095164821621212302",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I do not know about any free miners here, but I have a slave, Llaals Oren, who says he used to be a miner. He is rebellious and lazy. I will sell him to you for 200 drakes. A bargain.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 140.0
+      }
+    ],
+    "Script": [
+      "Choice \"Agreed. 200 drakes.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "9095164821621212302": {
+    "Prev": "767027153239117774",
+    "Next": "105671786334028820",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "llaals ores",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You want me to work in an egg mine? That's the best thing I've heard in months. I know where Shurdan-Raplay is. I'll meet you there. You didn't waste your money, and I'll prove it to you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 150.0
+      }
+    ],
+    "Script": []
+  },
+  "105671786334028820": {
+    "Prev": "9095164821621212302",
+    "Next": "1516817441512128397",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "llaals ores",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I was once a miner, but now I am slave.",
+    "Filters": [],
+    "Script": []
+  },
+  "1516817441512128397": {
+    "Prev": "105671786334028820",
+    "Next": "17354141771247217718",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilasour tansumiran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Shurdan-Raplay Egg Mine",
+    "PlayerFaction": "",
+    "Text": "We should be able to handle a mine this size.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 150.0
+      }
+    ],
+    "Script": []
+  },
+  "17354141771247217718": {
+    "Prev": "1516817441512128397",
+    "Next": "2147595191176116795",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilasour tansumiran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have found work here in Gnisis.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "hiredMiner",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 150.0
+      }
+    ],
+    "Script": []
+  },
+  "2147595191176116795": {
+    "Prev": "17354141771247217718",
+    "Next": "31481326321608422602",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilasour tansumiran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will be at the mine as soon as my men are ready.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 150.0
+      }
+    ],
+    "Script": []
+  },
+  "31481326321608422602": {
+    "Prev": "2147595191176116795",
+    "Next": "28232131542672118578",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilasour tansumiran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard that the Shurdan-Raplay Mine was going to open again, despite the bandits and the blight. I will serve you and your House faithfully. I will be at the mine with my crew in a few days.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 130.0
+      }
+    ],
+    "Script": [
+      "Journal HH_Stronghold 150",
+      "Set hiredMiner to 1"
+    ]
+  },
+  "28232131542672118578": {
+    "Prev": "31481326321608422602",
+    "Next": "27325619285420414",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilasour tansumiran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are? Wait... I heard that mine was blighted. You won't find any miners willing to work in a blighted mine.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "27325619285420414": {
+    "Prev": "28232131542672118578",
+    "Next": "2733520125189161033",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilasour tansumiran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I know. Work is hard to find these days.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "2733520125189161033": {
+    "Prev": "27325619285420414",
+    "Next": "143746490177381168",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilasour tansumiran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I am an egg miner, and I'm looking for work. Why do you ask?",
+    "Filters": [],
+    "Script": [
+      "Choice \"I need miners in the Shurdan-Raplay mine.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "143746490177381168": {
+    "Prev": "2733520125189161033",
+    "Next": "16101117361719819313",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "dondos driler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "You've recruited some miners and the Shurdan-Raplay Egg Mine should give you some steady income.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 150.0
+      }
+    ],
+    "Script": []
+  },
+  "16101117361719819313": {
+    "Prev": "143746490177381168",
+    "Next": "25168236351934711042",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "dondos driler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "In House Hlaalu, we always have a shortage of egg miners. But this gives us the opportunity to recruit miners from the other Houses. There are usually some unemployed miners in Gnisis and Tel Aruhn. Go to either of these cities and ask around.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HH_Stronghold 130"
+    ]
+  },
+  "25168236351934711042": {
+    "Prev": "16101117361719819313",
+    "Next": "30793285321867813511",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Gnisis",
+    "PlayerFaction": "",
+    "Text": "I heard Ilasour Tansumiran was looking for work. He lives on the north side of Gnisis between the Temple and the mines.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "30793285321867813511": {
+    "Prev": "25168236351934711042",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Tel Aruhn",
+    "PlayerFaction": "",
+    "Text": "I do not know of any egg miners around here. Perhaps the slave trader, Savile Imayn, has one for sale.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

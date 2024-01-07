@@ -1,0 +1,392 @@
+{
+  "2485614984231611628": {
+    "Prev": "",
+    "Next": "2960191241830414411",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dondos driler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There are no more bandits near your stronghold to guard against.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 270.0
+      }
+    ],
+    "Script": []
+  },
+  "2960191241830414411": {
+    "Prev": "2485614984231611628",
+    "Next": "125321075642894768",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dondos driler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I hope the hired guard was helpful in rooting out the bandits. I will give the orders to put the finishing touches on your stronghold.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "maros gimayn",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 220.0
+      }
+    ],
+    "Script": [
+      "Journal HH_Stronghold 270",
+      "StartScript Strong_Build3_H"
+    ]
+  },
+  "125321075642894768": {
+    "Prev": "2960191241830414411",
+    "Next": "3817850459511342",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dondos driler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The bandit leader is dead? Good. I will give the orders to put the finishing touches on your stronghold.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "maros gimayn",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 200.0
+      }
+    ],
+    "Script": [
+      "Journal HH_Stronghold 270",
+      "StartScript Strong_Build3_H"
+    ]
+  },
+  "3817850459511342": {
+    "Prev": "125321075642894768",
+    "Next": "1267665832530216695",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dondos driler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see that you hired a guard from the Fighters Guild. Now you must find the bandits nearby and kill their leader.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 250.0
+      }
+    ],
+    "Script": []
+  },
+  "1267665832530216695": {
+    "Prev": "3817850459511342",
+    "Next": "27030318083194722955",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dondos driler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, go to the Fighters Guild or the Imperial Legion here in Balmora. See if they will let you hire someone to garrison your stronghold. Perhaps with their aid you can track down the bandits near your stronghold.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 200.0
+      }
+    ],
+    "Script": [
+      "Journal HH_Stronghold 210"
+    ]
+  },
+  "27030318083194722955": {
+    "Prev": "1267665832530216695",
+    "Next": "507222291760011238",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Fjorgeir",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Maros Gimayn, the leader of those bandits, is dead.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "maros gimayn",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 200.0
+      }
+    ],
+    "Script": []
+  },
+  "507222291760011238": {
+    "Prev": "27030318083194722955",
+    "Next": "3909298021984318380",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Fjorgeir",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Aye, I can help ye with the bandits. I know just where they are. A little cave called Zainsipilu just across the Odai River and south over the hills. I can stay here and guard the stronghold while you fight, or we can fight together as long as your gold is good.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 200.0
+      }
+    ],
+    "Script": []
+  },
+  "3909298021984318380": {
+    "Prev": "507222291760011238",
+    "Next": "9653076625635239",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "flaenia amiulusus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If Fjorgeir is dead, that is unfortunate, but there's nothing more I can do about it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 220.0
+      }
+    ],
+    "Script": []
+  },
+  "9653076625635239": {
+    "Prev": "3909298021984318380",
+    "Next": "14712204241993116163",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "flaenia amiulusus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have already given you a contract for Fjorgeir. He is the only mercenary available right now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 220.0
+      }
+    ],
+    "Script": []
+  },
+  "14712204241993116163": {
+    "Prev": "9653076625635239",
+    "Next": "25345712215749113",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "flaenia amiulusus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well. I will send word to him. He will be waiting for you at your stronghold.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HH_Stronghold 220",
+      "\"Fjorgeir\"->Enable"
+    ]
+  },
+  "25345712215749113": {
+    "Prev": "14712204241993116163",
+    "Next": "1900992531875117267",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "flaenia amiulusus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, if you think you can make other arrangements...",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "1900992531875117267": {
+    "Prev": "25345712215749113",
+    "Next": "71172972785517856",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "flaenia amiulusus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We do not have enough men to hire to just anyone. But I do know someone you could hire. His name is Fjorgeir. For 1000 septims, I will send him word and a contract.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 205.0
+      }
+    ],
+    "Script": [
+      "Choice \"Pay 1000 gold.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "71172972785517856": {
+    "Prev": "1900992531875117267",
+    "Next": "2697328327259714631",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Fighters Guild",
+    "SpeakerCell": "Balmora, Guild of Fighters",
+    "PlayerFaction": "",
+    "Text": "Speak with Flaenia. She handles contracts.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 205.0
+      }
+    ],
+    "Script": []
+  },
+  "2697328327259714631": {
+    "Prev": "71172972785517856",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Legion",
+    "SpeakerCell": "Moonmoth Legion Fort",
+    "PlayerFaction": "",
+    "Text": "We need every Legionnaire we have.",
+    "Filters": [],
+    "Script": []
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "486931633131216969": {
+    "Prev": "",
+    "Next": "2780525891654228653",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lucan ostorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thanks for delivering that shipment, friend. I won't forget your help.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_ThiefTrader",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2780525891654228653": {
+    "Prev": "486931633131216969",
+    "Next": "4946198561330522126",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lucan ostorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard you killed my contact. I can't allow that to happen.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_ThiefTrader",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MV_ThiefTrader",
+        "Value": 25.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "yak gro-skandar",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "4946198561330522126": {
+    "Prev": "2780525891654228653",
+    "Next": "1059528040223128969",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lucan ostorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As I've told you I need to get that stuff to Yak gro-Skandar in Ald-ruhn.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_ThiefTrader",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MV_ThiefTrader",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1059528040223128969": {
+    "Prev": "4946198561330522126",
+    "Next": "18539173202809929520",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lucan ostorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You will? Excellent. And may, uh, Zenithar's divine provincial light shine on all of your...um...merchantly activities. Good luck! Just tell gro-Skandar that you have Lucan's shipment. He'll know what to do.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_ThiefTrader\" 20",
+      "RemoveItem \"Steel Shortsword\" 1",
+      "RemoveItem \"Silver Flameblade\" 1",
+      "RemoveItem \"Steel Staff\" 1",
+      "RemoveItem \"Silver War Axe\" 1",
+      "Player->AddItem \"Steel Shortsword\" 1",
+      "Player->AddItem \"Silver Flameblade\" 1",
+      "Player->AddItem \"Steel Staff\" 1",
+      "Player->AddItem \"Silver War Axe\" 1",
+      "AddTopic \"Lucan's Shipment\"",
+      "Goodbye"
+    ]
+  },
+  "18539173202809929520": {
+    "Prev": "1059528040223128969",
+    "Next": "3025081672668520201",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lucan ostorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? Damn. I really could have used the help.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_ThiefTrader\" 30",
+      "Goodbye"
+    ]
+  },
+  "3025081672668520201": {
+    "Prev": "18539173202809929520",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lucan ostorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here's the deal: I've got to get these weapons to Yak gro-Skandar in Ald'ruhn as quickly as possible. He was supposed to meet me here, but hasn't shown up yet. I suppose I must have missed him. If you're willing to deliver these to him at the Rat in the Pot, I'd be grateful, and I figure I could throw 100 septims your way. Of course, I'd ask you to swear an oath to Zenithar...may He grace us with lots of loot, that you'd deliver my goods, or, um, face his heavenly wrath.",
+    "Filters": [],
+    "Script": [
+      "Journal \"MV_ThiefTrader\" 10",
+      "Choice \"I swear by Zenithar that I will deliver your goods.\" 1 \"I will not swear an oath.\" 2"
+    ]
+  }
+}

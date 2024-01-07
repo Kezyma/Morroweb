@@ -1,0 +1,366 @@
+{
+  "11147124732626816250": {
+    "Prev": "",
+    "Next": "173076926231895779",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drarayne thelas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The rats haven't been back yet, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_RatHunt",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "173076926231895779": {
+    "Prev": "11147124732626816250",
+    "Next": "2355541851345424085",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There's nothing more to say about that.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_RatHunt",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "2355541851345424085": {
+    "Prev": "173076926231895779",
+    "Next": "1373217258705328919",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, the first job is a bust, %PCName. I've learned something unfortunate happened to Drarayne Thelas. Are you ready for more orders?",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "drarayne thelas",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "FG_RatHunt",
+        "Value": 110.0
+      }
+    ],
+    "Script": [
+      "Journal FG_RatHunt 110"
+    ]
+  },
+  "1373217258705328919": {
+    "Prev": "2355541851345424085",
+    "Next": "5260646322063696",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drarayne thelas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll take your word that the cave rats are dead. Here, take these 100 septims. It's what I agreed to pay the Fighters Guild.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_RatHunt",
+        "Value": 30.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "rat_cave_fgrh",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal FG_RatHunt 100",
+      "ModPCFacRep 5 \"Fighters Guild\"",
+      "ModDisposition 20",
+      "Player->AddItem Gold_001 100"
+    ]
+  },
+  "5260646322063696": {
+    "Prev": "1373217258705328919",
+    "Next": "60812724252421585",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drarayne thelas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You killed the cave rats? Well why didn't you say so? Here's 100 septims, which I what I said I'd pay the Fighters Guild.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "rat_cave_fgrh",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal FG_RatHunt 100",
+      "ModPCFacRep 5 \"Fighters Guild\"",
+      "ModDisposition 20",
+      "Player->AddItem Gold_001 100"
+    ]
+  },
+  "60812724252421585": {
+    "Prev": "5260646322063696",
+    "Next": "19239116422101919048",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drarayne thelas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you going to kill those cave rats for me?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_RatHunt",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "19239116422101919048": {
+    "Prev": "60812724252421585",
+    "Next": "133589265499213026",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drarayne thelas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "These rats are such a nuisance! I'm worried they'll eat all of my pillows. You like pillows, don't you, %PCName? Anyway, I've got one trapped in my bedroom here, and the other two are in my storage area upstairs. Rats, that is...not pillows. Here's the key for that door. There are at least three of these beasts. I hope they haven't gotten into my good pillows....",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_RatHunt",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal FG_RatHunt 50",
+      "RemoveItem \"key_drarayne_thelas\" 1",
+      "Player->AddItem \"key_drarayne_thelas\" 1"
+    ]
+  },
+  "133589265499213026": {
+    "Prev": "19239116422101919048",
+    "Next": "689727192777426648",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drarayne thelas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've got a cave rat infestation, and the Fighters Guild swore they were going to take care of it. By the time they get here, I'm worried that all of my pillows will be destroyed!",
+    "Filters": [],
+    "Script": []
+  },
+  "689727192777426648": {
+    "Prev": "133589265499213026",
+    "Next": "298932640111666",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled from the Fighters Guild. Until you make amends, I cannot discuss contracts with you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "298932640111666": {
+    "Prev": "689727192777426648",
+    "Next": "234178531192911823",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So you killed the rats, %PCName? Not bad...for you. You ready for more orders?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_RatHunt",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal FG_RatHunt 105"
+    ]
+  },
+  "234178531192911823": {
+    "Prev": "298932640111666",
+    "Next": "235269291210662028",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go to Drarayne Thelas' house. It's here in Balmora, along the river on the east side. Ask her where the rats are coming from. Kill the rats and get your payment from Drarayne Thelas. Report back to me once you've taken care of this.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "FG_RatHunt",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal FG_RatHunt 10"
+    ]
+  },
+  "235269291210662028": {
+    "Prev": "234178531192911823",
+    "Next": "1342125536122627750",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Hunter",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The cave rat is a subterranean variety of the hardy, abundant hunter-scavenger. Rat meat is tough and greasy, with an unpleasant odor and taste. Nonetheless, it is cheap, abundant, and nutritious, and palatable when cooked in a stew and masked by strong, strong spices.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1342125536122627750": {
+    "Prev": "235269291210662028",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Barbarian",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The cave rat is a subterranean variety of the hardy, abundant hunter-scavenger. Rat meat is tough and greasy, with an unpleasant odor and taste. Nonetheless, it is cheap, abundant, and nutritious, and palatable when cooked in a stew and masked by strong, strong spices.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

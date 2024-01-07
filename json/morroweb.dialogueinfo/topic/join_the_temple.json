@@ -1,0 +1,493 @@
+{
+  "20387168602971829199": {
+    "Prev": "",
+    "Next": "2449526353749510483",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are now a %PCRank in the %Faction. Welcome, sister %PCName. I am one of several Masters you can go to get your duties and if you perform well, advancement in the %Faction is not out of the question.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "PCRaiseRank",
+      "ModDisposition 5"
+    ]
+  },
+  "2449526353749510483": {
+    "Prev": "20387168602971829199",
+    "Next": "16828257892525722321",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are now a %PCRank in the %Faction. Welcome, brother %PCName. I am one of several Masters you can go to get your duties and if you perform well, advancement in the %Faction is not out of the question.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "PCRaiseRank",
+      "ModDisposition 5"
+    ]
+  },
+  "16828257892525722321": {
+    "Prev": "2449526353749510483",
+    "Next": "259773258536220260",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Your fourfold duties are to: Faith, Family, Masters, and all that is good. Perform holy quests and bring luster to the Temple. Never transgress against your brothers or sisters -- in thought or deed -- as we are all one body. If you somehow fail to uphold these ideals, you must speak with a Master or the Patriarch to be cleansed of your wrongdoings. Still want to join?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, I am worthy\" 1 \"No\" 4"
+    ]
+  },
+  "259773258536220260": {
+    "Prev": "16828257892525722321",
+    "Next": "4756214621579618501",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Temple understands the failings in all of us. But your will to repent is admirable. You are now %PCName, the %PCRank. Do not forget the four again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "PCClearExpelled"
+    ]
+  },
+  "4756214621579618501": {
+    "Prev": "259773258536220260",
+    "Next": "27979233641117932546",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hmmm. The choice is, of course, yours to make %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "27979233641117932546": {
+    "Prev": "4756214621579618501",
+    "Next": "2165230551159431977",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You claim to fulfill the false prophecies of the 'Incarnate' and the 'Nerevarine,' but you are really an agent in the pay of the Imperial Intelligence Service. You are an outlaw and a fraud. Yet you have the nerve to ask to join the Temple. Go away.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B8_MeetVivec",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "2165230551159431977": {
+    "Prev": "27979233641117932546",
+    "Next": "11604232702047821458",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Leave now. You are nothing to the Temple.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ExpTemple",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "goodbye"
+    ]
+  },
+  "11604232702047821458": {
+    "Prev": "2165230551159431977",
+    "Next": "1481013823654411721",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled from the Temple. If you tarnish the fourfold duties just once, we think of it as a lesson. With atonement, you can be a member again. Do you wish to atone?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, please forgive me\" 3 \"No\" 4"
+    ]
+  },
+  "1481013823654411721": {
+    "Prev": "11604232702047821458",
+    "Next": "738119648426720221",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are already a member of the Temple, %PCRank %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "738119648426720221": {
+    "Prev": "1481013823654411721",
+    "Next": "1170621141403218567",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have a promising look. Perhaps we could use you. Do you wish to join? Or shall you hear our doctrine first?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "RankRequirement",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Join the Temple\" 1 \"Hear the doctrine\" 2"
+    ]
+  },
+  "1170621141403218567": {
+    "Prev": "738119648426720221",
+    "Next": "1467018080350512134",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm afraid our standards are a bit beyond your reach. But the Temple does thank you for your interest.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1467018080350512134": {
+    "Prev": "1170621141403218567",
+    "Next": "1815625659876515747",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "Gnisis, Temple",
+    "PlayerFaction": "",
+    "Text": "I'm sorry, but we have only a small chapel here in Gnisis. Speak with Tuls Valen in the Ald'ruhn Temple to the south.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1815625659876515747": {
+    "Prev": "1467018080350512134",
+    "Next": "126415088200024412",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "Sadrith Mora",
+    "PlayerFaction": "",
+    "Text": "I'm sorry, but we have only a small chapel here in Sadrith Mora. Speak with Tharer Rotheloth at the Temple in Molag Mar, or with Endryn Llethan at the High Fane in Vivec.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "126415088200024412": {
+    "Prev": "1815625659876515747",
+    "Next": "1468197422790624076",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "Molag Mar, Temple",
+    "PlayerFaction": "",
+    "Text": "Speak with Tharer Rotheloth here at the Temple.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1468197422790624076": {
+    "Prev": "126415088200024412",
+    "Next": "11765232302511322898",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "Balmora, Temple",
+    "PlayerFaction": "",
+    "Text": "Speak with Feldrelo Sadri here at the Temple.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "11765232302511322898": {
+    "Prev": "1468197422790624076",
+    "Next": "7124107132610810470",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "Ald-ruhn, Temple",
+    "PlayerFaction": "",
+    "Text": "Speak with Tuls Valen here at the Temple.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "7124107132610810470": {
+    "Prev": "11765232302511322898",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "Vivec",
+    "PlayerFaction": "",
+    "Text": "Speak with Endryn Llethan at the High Fane or the Archcanon, Tholer Saryoni.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

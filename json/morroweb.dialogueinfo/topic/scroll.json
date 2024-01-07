@@ -1,0 +1,224 @@
+{
+  "19201121931238411117": {
+    "Prev": "",
+    "Next": "1682848571679112884",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bivale teneran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You gave me the scroll already, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_IndEsp3",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1682848571679112884": {
+    "Prev": "19201121931238411117",
+    "Next": "3085427701255731121",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bivale teneran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, as I expected. Tell Nileno Dorvayn that I received the scroll and understood the message. Why not take this outfit? A present for my efficient courier.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HH_IndEsp3 50",
+      "Player->RemoveItem \"bk_OrdersForBivaleTeneran\" 1",
+      "Player->AddItem exquisite_shirt_01 1",
+      "Player->AddItem extravagant_pants_02 1"
+    ]
+  },
+  "3085427701255731121": {
+    "Prev": "1682848571679112884",
+    "Next": "1953219243185614527",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bivale teneran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sorry. I must have mistaken you for someone else. What are you hear for? A new shirt? How about this one?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "1953219243185614527": {
+    "Prev": "3085427701255731121",
+    "Next": "218821016228347935",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bivale teneran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Well, are you going to give me the scroll or not?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_ordersforbivaleteneran",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_IndEsp3",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give her the scroll.\" 1 \"Keep the scroll.\" 2"
+    ]
+  },
+  "218821016228347935": {
+    "Prev": "1953219243185614527",
+    "Next": "28004125902240221273",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled from House Hlaalu. You must make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "28004125902240221273": {
+    "Prev": "218821016228347935",
+    "Next": "80442377842543662",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You delivered new orders to Bivale Teneran already. I don't want to use the same messenger more than once.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_IndEsp3",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "80442377842543662": {
+    "Prev": "28004125902240221273",
+    "Next": "2170917326114682948",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you delivered the orders to Bivale Teneran?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_IndEsp3",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2170917326114682948": {
+    "Prev": "80442377842543662",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, you need to deliver the scroll to Bivale Teneran.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_IndEsp2",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  }
+}

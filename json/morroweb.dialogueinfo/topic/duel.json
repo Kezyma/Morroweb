@@ -1,0 +1,625 @@
+{
+  "327502899077143011": {
+    "Prev": "",
+    "Next": "27770303882968912309",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The duel is an honorable tradition dating back at least to the founding of Resdayn. Each party to the duel makes an agreement as to the compensation that will be given to the winner. The loser is legally bound to this agreement. Most duels are fought until one party admits defeat or falls in battle. The duel to the death is less common and only ends when one party is dead. The winner of a duel may take what he wants of the loser's possessions, but some consider this dishonorable.",
+    "Filters": [],
+    "Script": []
+  },
+  "27770303882968912309": {
+    "Prev": "327502899077143011",
+    "Next": "7995124232821531426",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Varus Vatinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec, Arena Pit",
+    "PlayerFaction": "",
+    "Text": "I'm waiting, %PCName. Let's end this.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Grandmaster",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "7995124232821531426": {
+    "Prev": "27770303882968912309",
+    "Next": "12471230961806416009",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Varus Vatinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll be there. Will you?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Grandmaster",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "12471230961806416009": {
+    "Prev": "7995124232821531426",
+    "Next": "190581597535485955",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Varus Vatinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'd rather die than lose my position as a Knight of the Imperial Dragon. Meet me in the Arena in Vivec for a duel to the death.",
+    "Filters": [],
+    "Script": [
+      "Journal IL_Grandmaster 10"
+    ]
+  },
+  "190581597535485955": {
+    "Prev": "12471230961806416009",
+    "Next": "3035720553113522639",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard you were expelled, %PCName. You must make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "3035720553113522639": {
+    "Prev": "190581597535485955",
+    "Next": "209151149415932062",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, if Rothis Nethan is already dead, the duel cannot take place.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "rothis nethan",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "HR_CowardDisgrace",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HR_CowardDisgrace 200"
+    ]
+  },
+  "209151149415932062": {
+    "Prev": "3035720553113522639",
+    "Next": "18120256382914624502",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, if Brethas Deras is already dead, the duel cannot take place.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "brethas deras",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "HR_CowardDisgrace",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HR_CowardDisgrace 200"
+    ]
+  },
+  "18120256382914624502": {
+    "Prev": "209151149415932062",
+    "Next": "101011560431457346",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I hope you will never shame House Redoran by failing to appear for a duel.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_CowardDisgrace",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "101011560431457346": {
+    "Prev": "18120256382914624502",
+    "Next": "95851680446241313",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The duel is over and House Redoran's honor is saved.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_CowardDisgrace",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal HR_CowardDisgrace 100",
+      "ModPCFacRep 5 \"Redoran\"",
+      "ModDisposition 10",
+      "\"Brethas Deras\"->Disable",
+      "\"Rothis Nethan\"->Disable"
+    ]
+  },
+  "95851680446241313": {
+    "Prev": "101011560431457346",
+    "Next": "10237313881527310050",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So you were able to convince Rothis Nethan at last. I hope he will appear for the duel this time. Meet him in the arena and watch the outcome of this duel.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_CowardDisgrace",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "10237313881527310050": {
+    "Prev": "95851680446241313",
+    "Next": "106011049153032576",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I believe Rothis Nethan is hiding out at the Flowers of Gold Cornerclub in the Redoran Waistworks here in Vivec. Go talk to him, and make him realize how this has cost the honor of House Redoran.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_RedasTomb",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HR_CowardDisgrace 10"
+    ]
+  },
+  "106011049153032576": {
+    "Prev": "10237313881527310050",
+    "Next": "56261333619038337",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "brethas deras",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I won. But at least Rothis Nethan showed up and proved he had some courage.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_CowardDisgrace",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "56261333619038337": {
+    "Prev": "106011049153032576",
+    "Next": "18672191031871420101",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "brethas deras",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You can tell Rothis Nethan that I'll be there. He just better show up this time.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_CowardDisgrace",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "18672191031871420101": {
+    "Prev": "56261333619038337",
+    "Next": "2128323491113229949",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "brethas deras",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Redorans sure talk a lot about honor, but when it comes time to test it, they fail.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_CowardDisgrace",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "2128323491113229949": {
+    "Prev": "18672191031871420101",
+    "Next": "191420102087831537",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rothis nethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I won the duel! I still can't believe it. Perhaps the Tribunal favored me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_CowardDisgrace",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "191420102087831537": {
+    "Prev": "2128323491113229949",
+    "Next": "18423031934574329",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rothis nethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll be at the Arena to fight Brethas Deras. Just meet me there. I'll show up this time. Trust me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_CowardDisgrace",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "18423031934574329": {
+    "Prev": "191420102087831537",
+    "Next": "241005640352012881",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rothis nethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Okay. Meet me in the Arena. I'll be there this time.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HR_CowardDisgrace 50",
+      "Player->RemoveItem \"p_restore_health_s\" 10",
+      "AddItem \"p_restore_health_s\" 10"
+    ]
+  },
+  "241005640352012881": {
+    "Prev": "18423031934574329",
+    "Next": "2614955922320027123",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rothis nethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm not fighting any duels without some way of evening the odds.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "2614955922320027123": {
+    "Prev": "241005640352012881",
+    "Next": "2234039252561018129",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rothis nethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Okay, I'll meet Breras Deras in the Arena... But you'll have to help me out. Bring me 10 standard potions of healing. That should give me a fair chance against Brethas Deras. Do you have the potions?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "p_restore_health_s",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_CowardDisgrace",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here they are.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "2234039252561018129": {
+    "Prev": "2614955922320027123",
+    "Next": "233113134954779666",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rothis nethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Okay, I'll meet Breras Deras in the Arena... But you'll have to help me out. Bring me 10 standard potions of healing. That should give me a fair chance against Brethas Deras. I think Relms Gilvilo has these potions over at the Redoran Canton Temple.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_CowardDisgrace",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "233113134954779666": {
+    "Prev": "2234039252561018129",
+    "Next": "15185129392877915861",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rothis nethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm a scholar, not a warrior. Why should I risk my life in this silly duel?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_CowardDisgrace",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "15185129392877915861": {
+    "Prev": "233113134954779666",
+    "Next": "2904468371238530135",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "garding",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You won, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BeroSupport",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "2904468371238530135": {
+    "Prev": "15185129392877915861",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "garding",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well. Meet me in the Arena here in Vivec.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BeroSupport",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  }
+}

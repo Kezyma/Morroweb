@@ -1,0 +1,121 @@
+{
+  "1559631362757128817": {
+    "Prev": "",
+    "Next": "165673581115367045",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aeta wave-breaker",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "They've still got my jewels. Perhaps I'll get them back one day.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_BanditVictim",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MV_BanditVictim",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "165673581115367045": {
+    "Prev": "1559631362757128817",
+    "Next": "1995922121184619591",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aeta wave-breaker",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You will? Excellent. I believe their hideout is somewhere east of Caldera, although none of the local authorities has been able to find them. No great surprise there.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_BanditVictim\" 30"
+    ]
+  },
+  "1995922121184619591": {
+    "Prev": "165673581115367045",
+    "Next": "23322234183080623390",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aeta wave-breaker",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well! I'm sorry you're too busy to help out someone in need. Goodbye to you, then!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_BanditVictim\" 40",
+      "Goodbye"
+    ]
+  },
+  "23322234183080623390": {
+    "Prev": "1995922121184619591",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aeta wave-breaker",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, just a few hours ago I was robbed. I'm certain it was the group led by the Khajiit, Dro'zhirr. They stole all of my jewelry, but most importantly, they got two family heirlooms of mine. They've been in my family for years. If you can return them to me, I'd gladly pay your their weight in gold.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_BanditVictim",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_BanditVictim\" 20",
+      "Choice \"I'll get your jewels back.\" 1 \"I don't have time to run errands for you now.\" 2"
+    ]
+  }
+}

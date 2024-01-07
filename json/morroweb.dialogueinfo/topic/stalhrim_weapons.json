@@ -1,0 +1,807 @@
+{
+  "582528791829010781": {
+    "Prev": "",
+    "Next": "6431276253248726999",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Let me make it clear that there's only enough Stalhrim on this island for a certain number of rewards. I'm not going to keep track of it all for you; it's up to you whether you want weapons or Stalhrim armor, and what types. Now, let's discuss Stalhrim weapons.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_8a",
+        "Value": 50.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "weaponwarning",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "set \"Carnius Magius\".weaponwarning to 1"
+    ]
+  },
+  "6431276253248726999": {
+    "Prev": "582528791829010781",
+    "Next": "5167149452365259",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well. Here you go.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "player->additem \"BM ice mace\" 1 ",
+      "set \"Carnius Magius\".Stalhrimgiven to ( \"Carnius Magius\".Stalhrimgiven - 2 )"
+    ]
+  },
+  "5167149452365259": {
+    "Prev": "6431276253248726999",
+    "Next": "1248461962905530068",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well. Here you go.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "player->additem \"BM ice longsword\" 1 ",
+      "set \"Carnius Magius\".Stalhrimgiven to ( \"Carnius Magius\".Stalhrimgiven - 2 )"
+    ]
+  },
+  "1248461962905530068": {
+    "Prev": "5167149452365259",
+    "Next": "2591629491315104787",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well. Here you go.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "player->additem \"BM ice dagger\" 1 ",
+      "set \"Carnius Magius\".Stalhrimgiven to ( \"Carnius Magius\".Stalhrimgiven - 2 )"
+    ]
+  },
+  "2591629491315104787": {
+    "Prev": "1248461962905530068",
+    "Next": "900847722160227203",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well. Here you go.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->additem \"BM ice war axe\" 1 ",
+      "set \"Carnius Magius\".Stalhrimgiven to ( \"Carnius Magius\".Stalhrimgiven - 2 )"
+    ]
+  },
+  "900847722160227203": {
+    "Prev": "2591629491315104787",
+    "Next": "1973430735196923071",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've given me enough Stalhrim that you deserve a reward. What weapon would you like?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_8a",
+        "Value": 50.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "Stalhrimgiven",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Stalhrim War Axe\" 1 \"Stalhrim Dagger\" 2 \"Stalhrim Longsword\" 3 \"Stalhrim Mace\" 4 \"Nevermind\" 5"
+    ]
+  },
+  "1973430735196923071": {
+    "Prev": "900847722160227203",
+    "Next": "19584140238819085",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You haven't turned over enough Stalhrim to warrant my giving you a reward, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_8a",
+        "Value": 50.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Stalhrimgiven",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "19584140238819085": {
+    "Prev": "1973430735196923071",
+    "Next": "124894535130144186",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hidar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here's your mace, %PCName. Use it well.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "s_mace",
+        "Value": 1.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "localdaysPassed",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "player->additem \"BM ice mace\" 1",
+      "set s_mace to 0",
+      "set busy to 0",
+      "set localdayspassed to 0"
+    ]
+  },
+  "124894535130144186": {
+    "Prev": "19584140238819085",
+    "Next": "2348199922283916408",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hidar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Your mace isn't ready yet. I need more time to finish it.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "s_mace",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2348199922283916408": {
+    "Prev": "124894535130144186",
+    "Next": "172942822114926153",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hidar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here's your longsword, %PCName. Use it well.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "s_sword",
+        "Value": 1.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "localdaysPassed",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "player->additem \"BM ice longsword\" 1",
+      "set s_sword to 0",
+      "set busy to 0",
+      "set localdayspassed to 0"
+    ]
+  },
+  "172942822114926153": {
+    "Prev": "2348199922283916408",
+    "Next": "155864789201384145",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hidar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Your longsword isn't ready yet. I need more time to finish it.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "s_sword",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "155864789201384145": {
+    "Prev": "172942822114926153",
+    "Next": "2710181242281415707",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hidar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here's your dagger, %PCName. Use it well.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "s_dagger",
+        "Value": 1.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "localdaysPassed",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "player->additem \"BM ice dagger\" 1",
+      "set s_dagger to 0",
+      "set busy to 0",
+      "set localdayspassed to 0"
+    ]
+  },
+  "2710181242281415707": {
+    "Prev": "155864789201384145",
+    "Next": "24550196091271817215",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hidar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Your dagger isn't ready yet. I need more time to finish it.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "s_dagger",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "24550196091271817215": {
+    "Prev": "2710181242281415707",
+    "Next": "26781019436630147",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hidar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here's your war axe, %PCName. Use it well.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "s_waraxe",
+        "Value": 1.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "localdaysPassed",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "player->additem \"BM ice war axe\" 1",
+      "set s_waraxe to 0",
+      "set busy to 0",
+      "set localdayspassed to 0"
+    ]
+  },
+  "26781019436630147": {
+    "Prev": "24550196091271817215",
+    "Next": "5350253781749717292",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hidar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Your war axe isn't ready yet. I need more time to finish it.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "s_waraxe",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "5350253781749717292": {
+    "Prev": "26781019436630147",
+    "Next": "189502546285199736",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hidar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll be here if you change your mind.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": []
+  },
+  "189502546285199736": {
+    "Prev": "5350253781749717292",
+    "Next": "4212243272010916286",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hidar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll get started on a mace for you. Come back in two days, and it'll be ready.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_raw_Stalhrim_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"ingred_raw_stalhrim_01\" 1",
+      "set busy to 1",
+      "set s_mace to 1",
+      "Goodbye"
+    ]
+  },
+  "4212243272010916286": {
+    "Prev": "189502546285199736",
+    "Next": "2538828452173131963",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hidar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't have enough raw Stalhrim for me to forge you a Mace.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "ingred_raw_Stalhrim_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2538828452173131963": {
+    "Prev": "4212243272010916286",
+    "Next": "2593121710279032492",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hidar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll get started on a longsword for you. Come back in two days, and it'll be ready.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_raw_Stalhrim_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"ingred_raw_stalhrim_01\" 1",
+      "set busy to 1",
+      "set s_sword to 1",
+      "Goodbye"
+    ]
+  },
+  "2593121710279032492": {
+    "Prev": "2538828452173131963",
+    "Next": "1871215926228976053",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hidar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't have enough raw Stalhrim for me to forge you a Longsword.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "ingred_raw_Stalhrim_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1871215926228976053": {
+    "Prev": "2593121710279032492",
+    "Next": "2658724819237525583",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hidar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll get started on a dagger for you. Come back in two days, and it'll be ready.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_raw_Stalhrim_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"ingred_raw_stalhrim_01\" 1",
+      "set busy to 1",
+      "set s_dagger to 1",
+      "Goodbye"
+    ]
+  },
+  "2658724819237525583": {
+    "Prev": "1871215926228976053",
+    "Next": "429325366611031150",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hidar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't have enough raw Stalhrim for me to forge you a Dagger.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "ingred_raw_Stalhrim_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "429325366611031150": {
+    "Prev": "2658724819237525583",
+    "Next": "2449116841939919031",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hidar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll get started on a war axe for you. Come back in two days, and it'll be ready.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_raw_Stalhrim_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"ingred_raw_stalhrim_01\" 1",
+      "set busy to 1",
+      "set s_waraxe to 1",
+      "Goodbye"
+    ]
+  },
+  "2449116841939919031": {
+    "Prev": "429325366611031150",
+    "Next": "1052431962138491563",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hidar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't have enough raw Stalhrim for me to forge you a War Axe.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "ingred_raw_Stalhrim_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1052431962138491563": {
+    "Prev": "2449116841939919031",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hidar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can forge certain weapons for you, but you have to provide the Stalhrim. What would you like me to create for you?",
+    "Filters": [],
+    "Script": [
+      "Choice: \"Stalhrim War Axe\" 2 \"Stalhrim Dagger\" 3 \"Stalhrim Longsword\" 4 \"Stalhrim Mace\" 5 \"Nevermind\" 6"
+    ]
+  }
+}

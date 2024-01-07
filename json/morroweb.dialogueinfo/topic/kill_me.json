@@ -1,0 +1,185 @@
+{
+  "2791431008204537983": {
+    "Prev": "",
+    "Next": "7473264871113928057",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tongue_toad",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Don't worry about me, %PCName. Just report back to the Fighter's Guild. If I must, I'll *swim* back to our home. I have friends in the Twin Lamps who can help.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameRace",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_TongueToad",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "7473264871113928057": {
+    "Prev": "2791431008204537983",
+    "Next": "149441267059456025",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tongue_toad",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Don't worry about me, soft-skin. Report back to the Fighters Guild. If I have to, I'll just *swim* to the mainland.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_TongueToad",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "149441267059456025": {
+    "Prev": "7473264871113928057",
+    "Next": "23967208972677224599",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tongue_toad",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What are you doing?!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "23967208972677224599": {
+    "Prev": "149441267059456025",
+    "Next": "11710244592898014375",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tongue_toad",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you, %PCName. I will leave soon. May Stendarr watch over you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal FG_TongueToad 70"
+    ]
+  },
+  "11710244592898014375": {
+    "Prev": "23967208972677224599",
+    "Next": "645112923178351647",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tongue_toad",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What if I were to leave town? Would you let me go and report that I have fled?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Choice \"Let him leave town\" 3 \"Just kill him\" 1"
+    ]
+  },
+  "645112923178351647": {
+    "Prev": "11710244592898014375",
+    "Next": "23107196442914627529",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tongue_toad",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "The Fighters Guild licks the boots of the Camonna Tong. You wouldn't kill a brother thief, would you? Would you let me leave town and tell the Fighters Guild that I fled?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Just kill him\" 1 \"Let him leave town\" 3"
+    ]
+  },
+  "23107196442914627529": {
+    "Prev": "645112923178351647",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tongue_toad",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What? Why would they want me dead?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Just kill him\" 1 \"Talk\" 4"
+    ]
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "3178932552617118048": {
+    "Prev": "",
+    "Next": "250507164541925610",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gaea artoria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Up to you. I'll be here if you need me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": []
+  },
+  "250507164541925610": {
+    "Prev": "3178932552617118048",
+    "Next": "484311056140511865",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gaea artoria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sounds good. Let's go get 'em. Saenus will have to run those other errands that Captain Carius had for us to do. I'm ready for some action.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Smugglers 35",
+      "set artoriachosen to 1",
+      "\"saenus lusius\"->Disable",
+      "AiFollow Player 0 0 0 0 0 0"
+    ]
+  },
+  "484311056140511865": {
+    "Prev": "250507164541925610",
+    "Next": "3736213661007417010",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gaea artoria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yeah, Cap'n said something about some smugglers. Wanna go crack some skulls?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Smugglers",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Choice \"I would like you to work with me.\" 3 \"I am not sure with whom I will work.\" 4"
+    ]
+  },
+  "3736213661007417010": {
+    "Prev": "484311056140511865",
+    "Next": "1379215723152159737",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "saenus lusius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As you wish. If you change your mind, please let me know.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "1379215723152159737": {
+    "Prev": "3736213661007417010",
+    "Next": "29269206844150370",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "saenus lusius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent. Gaea Artoria will have to perform the other tasks that Captain Carius had for me today, but no matter. Let us find these scoundrels!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Smugglers 30",
+      "set luciuschosen to 1",
+      "\"gaea artoria\"->Disable",
+      "AiFollow Player 0 0 0 0 0 0"
+    ]
+  },
+  "29269206844150370": {
+    "Prev": "1379215723152159737",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "saenus lusius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah yes, this smuggling ring. Captain Carius mentioned something about that. I would be glad to help. Though I'm admittedly not the most handy with my blade, I believe I can help guide you through this conundrum.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Smugglers",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Choice \"I would like you to work with me.\" 1 \"I am not sure with whom I will work.\" 2"
+    ]
+  }
+}

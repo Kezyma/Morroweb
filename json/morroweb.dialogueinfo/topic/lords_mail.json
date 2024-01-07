@@ -1,0 +1,747 @@
+{
+  "8731305225273977": {
+    "Prev": "",
+    "Next": "29998172922353830025",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Varus Vatinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled. Join the Imperial Legion again. Then you can return the Lord's Mail with honor.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "29998172922353830025": {
+    "Prev": "8731305225273977",
+    "Next": "432918529193293218",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Varus Vatinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have returned the Lords Mail and found Chrysamere.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_KnightShield",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "432918529193293218": {
+    "Prev": "29998172922353830025",
+    "Next": "6618179852210128456",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Varus Vatinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have returned the Lord's Mail. Now you must find Chrysamere.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_KnightShield",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "6618179852210128456": {
+    "Prev": "432918529193293218",
+    "Next": "544121157646525481",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Varus Vatinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, this is the legendary Lord's Mail, %PCRank. As reward, you are welcome in our Order here. Take this armor reserved for the Order of Ebonheart. I have another task for you. I want you to find Chrysamere.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"IL_KnightShield\" 50",
+      "ModPCFacRep 5 \"Imperial Legion\"",
+      "AddItem \"lords_cuirass_unique\" 1",
+      "Player->RemoveItem \"lords_cuirass_unique\" 1",
+      "Player->Additem \"silver_dukesguard_cuirass\" 1"
+    ]
+  },
+  "17130173011493914825": {
+    "Prev": "544121157646525481",
+    "Next": "294106160221822345",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Varus Vatinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then it is my duty to take the Lord's Mail from you!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "294106160221822345": {
+    "Prev": "17130173011493914825",
+    "Next": "3246322653208635335",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Varus Vatinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What? You are dangerously close to treason, %PCName. I will ask you once more: Will you give me the Lord's Mail?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give him the Lord's Mail.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "3246322653208635335": {
+    "Prev": "294106160221822345",
+    "Next": "187897543699123537",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Varus Vatinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have found the Lord's Mail! Well done, %PCRank. Give it to me and I will make sure it is well cared for.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "lords_cuirass_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give him the Lord's Mail.\" 1 \"Nevermind.\" 3"
+    ]
+  },
+  "187897543699123537": {
+    "Prev": "3246322653208635335",
+    "Next": "15110249272105531728",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Varus Vatinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That cuirass is important to us, %PCRank. Find it quickly.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_KnightShield",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "15110249272105531728": {
+    "Prev": "187897543699123537",
+    "Next": "14924170732116317254",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "Varus Vatinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "The Lord's Mail is a cuirass, sometimes called the Armor of Morihaus. It has been kept in a Shrine on the lower level of the Imperial Commission here, but was recently stolen. Take this key. It will allow you entrance to the Shrine.",
+    "Filters": [],
+    "Script": [
+      "Journal \"IL_KnightShield\" 10",
+      "Player->AddItem \"key_ebon_tomb\" 1",
+      "RemoveItem \"key_ebon_tomb\" 1"
+    ]
+  },
+  "14924170732116317254": {
+    "Prev": "15110249272105531728",
+    "Next": "1300129912980619548",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Furius Acilius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Lord's Mail? You see me wearing it, don't you? And it's mine now. Bastards kicked me out of the Legion...and for what? Idiots, all of them. I'm surprised the fools even knew it was gone. But it's mine now. And that's how it will stay.",
+    "Filters": [],
+    "Script": [
+      "Journal \"IL_KnightShield\" 30",
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "1300129912980619548": {
+    "Prev": "14924170732116317254",
+    "Next": "622117941882424916",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Legion",
+    "SpeakerCell": "Ebonheart",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "It's good to see the Lord's Mail in good hands again.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "lords_cuirass_unique",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "622117941882424916": {
+    "Prev": "1300129912980619548",
+    "Next": "26805235351392553",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Legion",
+    "SpeakerCell": "Ebonheart",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "I'm glad you returned the Lord's Mail, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_KnightShield",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "26805235351392553": {
+    "Prev": "622117941882424916",
+    "Next": "2443617506215076705",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ebonheart",
+    "PlayerFaction": "",
+    "Text": "Yes, I heard it was found.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_KnightShield",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2443617506215076705": {
+    "Prev": "26805235351392553",
+    "Next": "31959230201741413535",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Duke's Guard_tomb",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, it has gone missing. I can assure you that no one got past us. We've been right here. I suspect foul play, or evil magicka. Whoever has it, got in some other way.",
+    "Filters": [],
+    "Script": []
+  },
+  "31959230201741413535": {
+    "Prev": "2443617506215076705",
+    "Next": "16615164001889021508",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Duke's Guard_tomb2",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, it has gone missing. I can assure you that no one got past us. We've been right here. I suspect foul play, or evil magicka. Whoever has it, got in some other way.",
+    "Filters": [],
+    "Script": []
+  },
+  "16615164001889021508": {
+    "Prev": "31959230201741413535",
+    "Next": "21102296461689323779",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rufinus Alleius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have hunch, yes. Furius Acilius, who was banished from the Legion some time ago. He spoke of the armor before his leave, and of secret caves below the castle. Motive and opportunity; he seemed to have both. Ask about him at the Imperial Guard Garrison, he used to stay there.",
+    "Filters": [],
+    "Script": []
+  },
+  "21102296461689323779": {
+    "Prev": "16615164001889021508",
+    "Next": "2361519532602122759",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ebonheart",
+    "PlayerFaction": "",
+    "Text": "Taken from the Imperial Commission here, right? You're a friend, so if I were you, I'd talk to Rufinus there. He keeps his ears open.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2361519532602122759": {
+    "Prev": "21102296461689323779",
+    "Next": "199938182054010031",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Legion",
+    "SpeakerCell": "Ebonheart",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "Yes, the Lord's Mail. Quite a wondrous piece of armor. It's a tragedy it was taken.",
+    "Filters": [],
+    "Script": []
+  },
+  "544121157646525481": {
+    "Prev": "6618179852210128456",
+    "Next": "17130173011493914825",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't have the Lord's Mail with you? Then come back with it, and we'll settle the deal.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "lords_cuirass_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "199938182054010031": {
+    "Prev": "2361519532602122759",
+    "Next": "25215268712721719082",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What?  How is it that you have this?  This was part of the museum's collection!  GUARDS!",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "lordsmail",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "lords_cuirass_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "SetPCCrimeLevel 190000",
+      "Set PCThief to 1",
+      "Goodbye"
+    ]
+  },
+  "25215268712721719082": {
+    "Prev": "199938182054010031",
+    "Next": "145223634963910099",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, thank you for allowing us to add it to our collection.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "lordsmail",
+        "Value": 2.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "lords_cuirass_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "145223634963910099": {
+    "Prev": "25215268712721719082",
+    "Next": "128597572810620812",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you so much.  This will be a wonderful addition to the Museum.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "lords_cuirass_unique",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"lords_cuirass_unique\" 1",
+      "set MuseumDonations to MuseumDonations + 1",
+      "set lordsmail to 2",
+      "\"lords_cuirass_unique_x\"->Enable",
+      "moddisposition 5"
+    ]
+  },
+  "128597572810620812": {
+    "Prev": "145223634963910099",
+    "Next": "1868219647366818581",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you so much.  This should be adequate payment.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "lords_cuirass_unique",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"lords_cuirass_unique\" 1",
+      "player->additem \"gold_001\" 30000",
+      "set lordsmail to 2",
+      "\"lords_cuirass_unique_x\"->Enable"
+    ]
+  },
+  "1868219647366818581": {
+    "Prev": "128597572810620812",
+    "Next": "30489209851973314983",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't have the Lord's Mail with you? Then come back with it, and we'll settle the deal.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "lords_cuirass_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "30489209851973314983": {
+    "Prev": "1868219647366818581",
+    "Next": "26226171391658512896",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sorry you feel that way.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "26226171391658512896": {
+    "Prev": "30489209851973314983",
+    "Next": "253431602312982495",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, this is quite a find. Do you wish to part with it? I can offer you 30000 gold if you choose to sell it.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "lordsmail",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_Blade",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Choice \"Sell the item.\" 4 \"Keep the item.\" 5 \"Donate the item.\" 6"
+    ]
+  },
+  "253431602312982495": {
+    "Prev": "26226171391658512896",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, this is quite a find. Do you wish to part with it? I can offer you 30000 gold if you choose to sell it.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "lordsmail",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Sell the item.\" 4 \"Keep the item.\" 5"
+    ]
+  }
+}

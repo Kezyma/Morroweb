@@ -1,0 +1,257 @@
+{
+  "274721996724567284": {
+    "Prev": "",
+    "Next": "3181365002294221408",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuveso beleth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My son is dead. I have nothing to say to you.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "deval beleth",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "3181365002294221408": {
+    "Prev": "274721996724567284",
+    "Next": "14282287001458832721",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuveso beleth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You were expelled from House Redoran. You need to make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "14282287001458832721": {
+    "Prev": "3181365002294221408",
+    "Next": "31579256291980919993",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuveso beleth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for keeping my son safe on his pilgrimage.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_KoalCave",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "31579256291980919993": {
+    "Prev": "14282287001458832721",
+    "Next": "19706204992249420672",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuveso beleth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for keeping my son safe on his pilgrimage. Please take this sword with my gratitude.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_KoalCave",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal HR_KoalCave 100",
+      "ModPCFacRep 5 \"Redoran\"",
+      "ModDisposition 10",
+      "Player->AddItem \"Steel Firesword\" 1"
+    ]
+  },
+  "19706204992249420672": {
+    "Prev": "31579256291980919993",
+    "Next": "27431280362312416029",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuveso beleth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Talk to my son, Deval Beleth, and escort him to the Koal Cave, a famous pilgrimage site south of Gnisis.",
+    "Filters": [],
+    "Script": [
+      "Journal HR_KoalCave 10"
+    ]
+  },
+  "27431280362312416029": {
+    "Prev": "19706204992249420672",
+    "Next": "1078313115303924643",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "deval beleth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for taking me to the Koal Cave, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_KoalCave",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1078313115303924643": {
+    "Prev": "27431280362312416029",
+    "Next": "32435277573201314330",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "deval beleth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Let me stay here awhile. I will travel back to Ald'ruhn with another pilgrim.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_KoalCave",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "32435277573201314330": {
+    "Prev": "1078313115303924643",
+    "Next": "192047750232949576",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "deval beleth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Koal Cave is south of Gnisis. Cross the river, the Ouada Samsi, and head southwest towards the coast.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_KoalCave",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Koal Cave Entrance\""
+    ]
+  },
+  "192047750232949576": {
+    "Prev": "32435277573201314330",
+    "Next": "1205014970468028476",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fonus rathryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We are here. Thank you for your help.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_PoorPilgrim",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1205014970468028476": {
+    "Prev": "192047750232949576",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fonus rathryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Koal Cave is south of Gnisis. If we travel west and a bit south, we can arrive there. If you have a map, I can mark the location for you.",
+    "Filters": [],
+    "Script": [
+      "ShowMap \"Koal Cave Entrance\""
+    ]
+  }
+}

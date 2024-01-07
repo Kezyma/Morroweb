@@ -1,0 +1,137 @@
+{
+  "3262299253108012587": {
+    "Prev": "",
+    "Next": "264121530229865298",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "divayth fyr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for your gift.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_3_CorprusCure",
+        "Value": 15.0
+      }
+    ],
+    "Script": []
+  },
+  "264121530229865298": {
+    "Prev": "3262299253108012587",
+    "Next": "2106143222751712899",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "divayth fyr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A gift? For me? How thoughtful. And shrewd. I suppose you know I am a collector. And that such a gift is bound to please me. I congratulate you on your diplomatic skills. So, why have you tried to butter me up? Come to consult the great Divayth Fyr? You have the divine disease? Want to plunder the dungeon? Or leer at my daughters?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "misc_dwrv_artifact50",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem misc_dwrv_artifact50 1",
+      "Journal \"A2_3_CorprusCure\" 15",
+      "SetDisposition 100"
+    ]
+  },
+  "2106143222751712899": {
+    "Prev": "264121530229865298",
+    "Next": "12699311651998919274",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "divayth fyr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you trying to provoke me? Surely you know I prize and collect such things. It is rude to stimulate my appetites by displaying such things. And I don't have to be polite to rude people.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "misc_dwrv_artifact50",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"A2_3_CorprusCure\" 12",
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "12699311651998919274": {
+    "Prev": "2106143222751712899",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "divayth fyr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, yes. I know. You have an interesting Dwemer piece. So what?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "misc_dwrv_artifact50",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_3_CorprusCure",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Offer the Dwemer artifact as a gift.\" 1 \"Politely show him the piece, then put it away.\" 2"
+    ]
+  }
+}

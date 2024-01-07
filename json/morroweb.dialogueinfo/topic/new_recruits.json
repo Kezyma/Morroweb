@@ -1,0 +1,82 @@
+{
+  "516321964126616464": {
+    "Prev": "",
+    "Next": "190736351703321855",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris hler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That matter is taken care of.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_KillGoblins",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "190736351703321855": {
+    "Prev": "516321964126616464",
+    "Next": "12366207102559928084",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris hler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As I said, a goblin army.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_KillGoblins",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "12366207102559928084": {
+    "Prev": "190736351703321855",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris hler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A standing army is nothing new in the city, though it is largely unnecessary. Mournhold is protected by her walls from the outside, and by our Lady Almalexia from within. None would dare mount an attack here. Still, tradition dictates that the king maintain an army. We believe that Helseth is raising quite a different sort of army...a goblin army.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_KillGoblins",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal TR_KillGoblins 10"
+    ]
+  }
+}

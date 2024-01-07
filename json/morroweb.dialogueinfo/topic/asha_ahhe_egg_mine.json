@@ -1,0 +1,247 @@
+{
+  "2804729228296053667": {
+    "Prev": "",
+    "Next": "4556129062403225260",
+    "Type": "Topic",
+    "Disposition": 80,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Asha-Ahhe Egg Mine",
+    "PlayerFaction": "",
+    "Text": "I SAID there was something down there, didn't I? Well, I'm glad you skinned that witch good. I'll sure feel a lot safer in here, thanks to you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC17_Witch",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Thelsa Dral",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "4556129062403225260": {
+    "Prev": "2804729228296053667",
+    "Next": "3192631547294206576",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Asha-Ahhe Egg Mine",
+    "PlayerFaction": "",
+    "Text": "I SAID there was something down there, didn't I? Well, I'm glad you skinned that witch good. I'll sure feel a lot safer in here, thanks to you. And here. Take these kwama eggs. They're fresh. And good for you, too.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC17_Witch",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Thelsa Dral",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "modDisposition 20",
+      "player->additem food_kwama_egg_02 4"
+    ]
+  },
+  "3192631547294206576": {
+    "Prev": "4556129062403225260",
+    "Next": "2547519871868326192",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Asha-Ahhe Egg Mine",
+    "PlayerFaction": "",
+    "Text": "There's something down there. Something evil. You hear voices, and there's nobody there. There are things moving in the dark, but when you shine the light, there's nothing there. I won't go down by the lake any more. There's something down there, and I want no part of it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC17_Witch",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Thelsa Dral",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2547519871868326192": {
+    "Prev": "3192631547294206576",
+    "Next": "6099139692768926046",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Khuul",
+    "PlayerFaction": "",
+    "Text": "So. There really was a witch down there. So the rumors were true. And you killed her? Good riddance. And good for you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC17_Witch",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Thelsa Dral",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "6099139692768926046": {
+    "Prev": "2547519871868326192",
+    "Next": "13759124492738115654",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Khuul",
+    "PlayerFaction": "",
+    "Text": "So. There really was a witch down there. So the rumors were true. And you killed her? Good riddance. And good for you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC17_Witch",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Thelsa Dral",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "modDisposition 10"
+    ]
+  },
+  "13759124492738115654": {
+    "Prev": "6099139692768926046",
+    "Next": "1653226130202002395",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Khuul",
+    "PlayerFaction": "",
+    "Text": "You hear rumors. Miners saying the mine is cursed. Mysterious voices. Ghosts. Maybe it's true. Maybe not. The mine entrance is south of Khuul, near an outcast Ashlander yurt. Be careful. Outcast outlanders are savage raiders and outlaws, and likely to attack travelers.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC17_Witch",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Thelsa Dral",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1653226130202002395": {
+    "Prev": "13759124492738115654",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Kaye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The mine is east of the ruins of Ashalmawia, and just south of the village of Khuul.",
+    "Filters": [],
+    "Script": [
+      "ShowMap Khuul",
+      "ShowMap Ashalmawia"
+    ]
+  }
+}

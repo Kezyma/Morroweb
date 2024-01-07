@@ -1,0 +1,66 @@
+{
+  "278797579233024208": {
+    "Prev": "",
+    "Next": "1860927287954315624",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, I don't know what else to call it. You should probably have a smith look at it, though.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_Blade",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1860927287954315624": {
+    "Prev": "278797579233024208",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Smith",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hmmm...an odd construction to be sure. Let me see.... As I thought. These two pieces aren't supposed to be attached. Looks like a regular Dwemer shield with this other piece attached. Hope you didn't pay too much for that shield, friend. It's nothing special as far as I can see. The other piece is interesting, though. Dwemer in origin, but unlike anything I've seen before.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_Blade",
+        "Value": 50.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "dwemer_shield_battle_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "player->RemoveItem \"dwemer_shield_battle_unique\" 1",
+      "player->AddItem \"dwemer_shield\" 1",
+      "player->AddItem \"BLADEPIECE_03\" 1",
+      "Journal TR_Blade 50"
+    ]
+  }
+}

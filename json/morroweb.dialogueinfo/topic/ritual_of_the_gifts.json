@@ -1,0 +1,91 @@
+{
+  "23332210912852511276": {
+    "Prev": "",
+    "Next": "158141250221976763",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "korst wind-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can tell that the Ritual is completed. The Oneness once again flows through the land. Can you hear it in the trees? Do you feel the humming of the living land? It is a good thing you have done here, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Stones",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "158141250221976763": {
+    "Prev": "23332210912852511276",
+    "Next": "393426861271606581",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "korst wind-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You may return to me once it is completed. I will aid you in any way I can. I see a light in you, %PCName. I believe you can be of value to our people. Good luck to you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Stones",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Stones",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "393426861271606581": {
+    "Prev": "158141250221976763",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "korst wind-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It would be too much for any not of the Skaal to remember. Here, take this. It will explain the rituals and guide you on your way. This book may be of some use to you as well. If you are to remain with the Skaal, you should understand our beliefs.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Stones",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Stones 50",
+      "Player->AddItem bk_BM_Aevar 1",
+      "Player->AddItem bk_BM_StoneMap 1"
+    ]
+  }
+}

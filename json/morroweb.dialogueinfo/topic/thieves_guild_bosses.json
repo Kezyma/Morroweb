@@ -1,0 +1,205 @@
+{
+  "1872422616927220482": {
+    "Prev": "",
+    "Next": "40884123695628290",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sjoring hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled, %PCName. You must make amends before I'll discuss Guild matters with you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "40884123695628290": {
+    "Prev": "1872422616927220482",
+    "Next": "2940914149935422219",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "sjoring hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "The small guild bosses are dead, but the Master Thief still lives.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_KillBosses",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2940914149935422219": {
+    "Prev": "40884123695628290",
+    "Next": "10883256021598227631",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "sjoring hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "What? You already killed the bosses of the Thieves Guild? You deserve the rank of %NextPCRank even more than I thought. Congratulations, %PCName, I'm making you my second in command. Now we need to take care of the Master Thief himself.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "big helende",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "habasi",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "aengoth",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_KillBosses",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "PCRaiseRank",
+      "Journal FG_KillBosses 100",
+      "ModPCFacRep 15 \"Fighters Guild\"",
+      "ModDisposition 25"
+    ]
+  },
+  "10883256021598227631": {
+    "Prev": "2940914149935422219",
+    "Next": "246682058236051251",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "sjoring hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Good work, %PCName. I'm making you my second in command. Now our allies want us to take care of the Master Thief himself.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "big helende",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "habasi",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "aengoth",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_KillBosses",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "PCRaiseRank",
+      "Journal FG_KillBosses 100",
+      "ModPCFacRep 15 \"Fighters Guild\"",
+      "ModDisposition 15"
+    ]
+  },
+  "246682058236051251": {
+    "Prev": "10883256021598227631",
+    "Next": "2775271151102611424",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "sjoring hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "As I told you, in Sadrith Mora, kill Helende at Dirty Muriel's Cornerclub. Feel free to kill any other thieves there. In Balmora, the Thieves Guild there is the South Wall tavern. Kill Habasi the Khajiit. Then go to The Rat in the Pot in Ald'ruhn and kill Aengoth. When your work is done, come see me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_KillBosses",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "2775271151102611424": {
+    "Prev": "246682058236051251",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "sjoring hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "In Sadrith Mora, kill Helende at Dirty Muriel's Cornerclub. Feel free to kill any other thieves there. In Balmora, the Thieves Guild there is the South Wall tavern. Kill Habasi the Khajiit. Then go to The Rat in the Pot in Ald'ruhn and kill Aengoth. When the Thieves Guild bosses are dead, talk to me again. Here's some gold to deal with the guards.",
+    "Filters": [],
+    "Script": [
+      "Player->AddItem Gold_001 5000",
+      "Journal FG_KillBosses 10"
+    ]
+  }
+}

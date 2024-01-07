@@ -1,0 +1,441 @@
+{
+  "960712326231912442": {
+    "Prev": "",
+    "Next": "312172411613036584",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Speak with Llerar Mandas. He is the father of Arethan Mandas.",
+    "Filters": [],
+    "Script": []
+  },
+  "312172411613036584": {
+    "Prev": "960712326231912442",
+    "Next": "303623957312006576",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "llerar mandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My granddaughter is dead, and you are to blame.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "delyna mandas",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -20",
+      "Goodbye"
+    ]
+  },
+  "303623957312006576": {
+    "Prev": "312172411613036584",
+    "Next": "313123618118671746",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "llerar mandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can't prove anything, but I believe you are responsible for my son's death. I have nothing to say to you.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "arethan mandas",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -20",
+      "Goodbye"
+    ]
+  },
+  "313123618118671746": {
+    "Prev": "303623957312006576",
+    "Next": "1563230434265494961",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "llerar mandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for bringing my son back to his senses.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_MadMilk",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "1563230434265494961": {
+    "Prev": "313123618118671746",
+    "Next": "3630250442125712494",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "llerar mandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I heard my son had gone mad. I fear his madness was caused when his daughter, Delyna Mandas, was captured.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_MadMilk",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "3630250442125712494": {
+    "Prev": "1563230434265494961",
+    "Next": "3204228298582620934",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "delyna mandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I know that my father was mad... but I can't forgive you for killing him. Please leave.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "arethan mandas",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 60 30 10 0 0 0 0 0 0",
+      "Set doOnce to 1",
+      "ModDisposition -75",
+      "Goodbye"
+    ]
+  },
+  "3204228298582620934": {
+    "Prev": "3630250442125712494",
+    "Next": "13995244992596128827",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "delyna mandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for delivering the locket to my father.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_MadMilk",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "13995244992596128827": {
+    "Prev": "3204228298582620934",
+    "Next": "430315279577012399",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "delyna mandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Take the locket to him so that he will know that I am safe. Since our manor was destroyed by Corprus monsters, I do not know where my father is staying. His old friend Athyn Sarethi in Ald'ruhn should know.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_RansomMandas",
+        "Value": 90.0
+      }
+    ],
+    "Script": []
+  },
+  "430315279577012399": {
+    "Prev": "13995244992596128827",
+    "Next": "1926246191801826861",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "delyna mandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I want you to take my locket to him. Let him know that I am safe.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_RansomMandas",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "1926246191801826861": {
+    "Prev": "430315279577012399",
+    "Next": "18449137651122414208",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "delyna mandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard my father went mad with grief when I was captured. I did not know how bad things were. I will see him as soon as I can. If we travel together away from here, I will give you a locket to deliver to him.",
+    "Filters": [],
+    "Script": []
+  },
+  "18449137651122414208": {
+    "Prev": "1926246191801826861",
+    "Next": "13446218752116128453",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Arethan Mandas no longer troubles the travelers to Maar Gan. I will visit him when I can. Perhaps Delyna and some of his friends can keep him from Sheogorath's grasp.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_MadMilk",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "13446218752116128453": {
+    "Prev": "18449137651122414208",
+    "Next": "59169665234742575",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Arethan Mandas no longer troubles the travelers to Maar Gan.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_MadMilk",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "59169665234742575": {
+    "Prev": "13446218752116128453",
+    "Next": "14485278413252712632",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "From what you say, perhaps Arethan has not totally regained his senses, but his guards have stopped demanding tribute from travelers. I did not believe it could be done. I am proud of you this day, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_MadMilk",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal HR_MadMilk 110",
+      "ModPCFacRep 10 \"Redoran\"",
+      "ModDisposition 20"
+    ]
+  },
+  "14485278413252712632": {
+    "Prev": "59169665234742575",
+    "Next": "111953247520498920",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Mad Lord is no more. While I would rather not see an old friend die, he was probably beyond the aid of even the best Temple healers. I cannot fault you for not finding a way to cure him.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "arethan mandas",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_MadMilk",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HR_MadMilk 100",
+      "ModPCFacRep 5 \"Redoran\"",
+      "ModDisposition 5"
+    ]
+  },
+  "111953247520498920": {
+    "Prev": "14485278413252712632",
+    "Next": "2852529902886128917",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I would prefer that Arethan Mandas be cured of his madness, rather than killed. You might want to go to Ebonheart and speak with Llerar Mandas, Arethan's father.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Shurinbaal",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HR_MadMilk 10",
+      "ShowMap \"Maar Gan\"",
+      "ShowMap \"Ebonheart\""
+    ]
+  },
+  "2852529902886128917": {
+    "Prev": "111953247520498920",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You can find him in the cavern of Milk. On the Ald'ruhn-Caldera Road, west of Ald'ruhn, two crossroads marked by signposts are very close to one another. To reach Milk, head west from the 'Gnisis' sign on the westmost signpost, and watch right for a north-branching path to Milk. The Mad Lord has a few loyal followers and some outlaws have joined his \"estate.\" They will protect Arethan Mandas with their lives.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Shurinbaal",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  }
+}

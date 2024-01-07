@@ -1,0 +1,66 @@
+{
+  "152821685159616940": {
+    "Prev": "",
+    "Next": "309174525291904929",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nibani maesa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have told you all I know. Go. Think on what I've told you. And do what must be done.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 60.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "309174525291904929": {
+    "Prev": "152821685159616940",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nibani maesa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are not the Nerevarine. You are one who may become the Nerevarine. It is a puzzle, and a hard one. But you have found some of the pieces, and you may find more. Do you choose to be the Nerevarine? Then seek the lost prophecies among the Dissident priests of the Temple. Find the lost prophecies, bring them to me, and I will be your guide. And take these copies of the Stranger and the Seven Visions. Now. I have told you all I know. Go. Think on what I've told you. And do what must be done.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 45.0
+      }
+    ],
+    "Script": [
+      "Journal \"A2_1_MeetSulMatuul\" 60",
+      "Player->AddItem \"bk_A2_1_SevenVisions\" 1",
+      "Player->AddItem \"bk_A2_1_TheStranger\" 1",
+      "moddisposition 10"
+    ]
+  }
+}

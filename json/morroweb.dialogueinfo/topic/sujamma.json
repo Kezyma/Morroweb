@@ -1,0 +1,310 @@
+{
+  "5147196212838221077": {
+    "Prev": "",
+    "Next": "12608017184523465",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lustidrike",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Fine. You're the guest. Whatever you want.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "12608017184523465": {
+    "Prev": "5147196212838221077",
+    "Next": "31107208172548216548",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lustidrike",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sorry, pal. You've had enough. Go get some exercise or something.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcIntelligence",
+        "Compare": "Less",
+        "Id": "",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "31107208172548216548": {
+    "Prev": "12608017184523465",
+    "Next": "30983284565264243",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lustidrike",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sure. Here ya go....",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Cast Lustidrike_Cocktail Player",
+      "Goodbye"
+    ]
+  },
+  "30983284565264243": {
+    "Prev": "31107208172548216548",
+    "Next": "32620184503217024550",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lustidrike",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Free drinks, f'lah. It's on the house. Only you gotta drink it here. Don't want you drinking and flying out there.",
+    "Filters": [],
+    "Script": [
+      "Choice \"Drink a mug of sujamma.\" 1 \"Decline.\" 2"
+    ]
+  },
+  "32620184503217024550": {
+    "Prev": "30983284565264243",
+    "Next": "1173828402961619074",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nelacar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We have all the sujamma we need for now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_DuniraiSupply",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1173828402961619074": {
+    "Prev": "32620184503217024550",
+    "Next": "1304111561233932196",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nelacar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good, the miners will be happy to have some fresh sujamma. Personally, I cannot understand why anyone would drink this foul stuff. I prefer Valenwood Wine myself.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_DuniraiSupply 50",
+      "Player->RemoveItem Potion_Local_Liquor_01 20",
+      "AddItem Potion_Local_Liquor_01 20",
+      "ModDisposition 10"
+    ]
+  },
+  "1304111561233932196": {
+    "Prev": "1173828402961619074",
+    "Next": "12186127903207729714",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nelacar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you want to sell that liquor, you should go elsewhere. We're supplied by the Fighters Guild.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "12186127903207729714": {
+    "Prev": "1304111561233932196",
+    "Next": "3190830075182711833",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nelacar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So do you have the sujamma?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_DuniraiSupply",
+        "Value": 10.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "potion_local_liquor_01",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Choice Yes 1 No 2"
+    ]
+  },
+  "3190830075182711833": {
+    "Prev": "12186127903207729714",
+    "Next": "24784194301716821918",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Trader Service",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The local Dunmer liquor, sujamma, is extremely potent, and indulgence results in elevated spirits and diminished mental faculties. The local Dunmer liquor, sujamma, is extremely potent, and indulgence results in elevated spirits and diminished mental faculties. Has a kick like a guar -- very strong, and just as stupid.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "24784194301716821918": {
+    "Prev": "3190830075182711833",
+    "Next": "1487117122712126324",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Trader",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The local Dunmer liquor, sujamma, is extremely potent, and indulgence results in elevated spirits and diminished mental faculties. The local Dunmer liquor, sujamma, is extremely potent, and indulgence results in elevated spirits and diminished mental faculties. Has a kick like a guar -- very strong, and just as stupid.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1487117122712126324": {
+    "Prev": "24784194301716821918",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Publican",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The local Dunmer liquor, sujamma, is extremely potent, and indulgence results in elevated spirits and diminished mental faculties. Has a kick like a guar -- very strong, and just as stupid.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

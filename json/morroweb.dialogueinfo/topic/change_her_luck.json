@@ -1,0 +1,180 @@
+{
+  "1600124741954018392": {
+    "Prev": "",
+    "Next": "3188110543824626258",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "balen andrano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "They caught you? This is terrible! Well, at least they don't know I was involved.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_Bone",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Bone\" 70"
+    ]
+  },
+  "3188110543824626258": {
+    "Prev": "1600124741954018392",
+    "Next": "10631322421040914",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "balen andrano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've done it? Excellent! I'm sure to get more business now. Thank you, friend. Here's your payment, as promised. It will allow others to sleep soundly, when it suits you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_Bone",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Bone\" 60",
+      "RemoveItem \"sleep amulet\" 1",
+      "Player->AddItem \"sleep amulet\" 1"
+    ]
+  },
+  "10631322421040914": {
+    "Prev": "3188110543824626258",
+    "Next": "19137596875425415",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "balen andrano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've got to do something. Her success is killing my business.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_Bone",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Bone",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "19137596875425415": {
+    "Prev": "10631322421040914",
+    "Next": "9978313482967729044",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "balen andrano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, if it weren't for my bad luck, I wouldn't have any luck at all. Perhaps someone else will take up this task for me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Bone\" 30"
+    ]
+  },
+  "9978313482967729044": {
+    "Prev": "19137596875425415",
+    "Next": "26332456098521435",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "balen andrano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I appreciate your help. The bone must be placed in a chest near where she sleeps. Then, while she rests, the bone should work its magic and bring her some trouble. Maybe then I'll start getting some business.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Bone\" 20",
+      "Player->AddItem \"misc_dwarfbone_unique\" 1",
+      "StartScript boneScript"
+    ]
+  },
+  "26332456098521435": {
+    "Prev": "9978313482967729044",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "balen andrano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, I think I may have a way, if you're interested in helping. I recently came across an object; some say it has some magical properties. It's a bone from some long-dead dwarf. If you can place it in a certain place in Jeanne's shop, it should bring her nothing but misery.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Bone",
+        "Value": 15.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Bone\" 15",
+      "Choice \"I can help you.\" 1 \"I'm sorry. I cannot help.\" 2"
+    ]
+  }
+}

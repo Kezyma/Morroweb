@@ -1,0 +1,318 @@
+{
+  "27694147892032929299": {
+    "Prev": "",
+    "Next": "11071315654314171",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "11071315654314171": {
+    "Prev": "27694147892032929299",
+    "Next": "3375216751381822279",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Morag Tong executes justice on murderers when the law cannot or will not.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritVendu",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3375216751381822279": {
+    "Prev": "11071315654314171",
+    "Next": "8913202573267231606",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So Ethal Seloth and Idroso Vendu are already dead? And you think you are better than those two murderers? By law and tradition I must give you credit for this Writ, but I am not required to give you the payment.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "idroso vendu",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "ethal seloth",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MT_WritVendu",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal MT_WritVendu 100",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition -10"
+    ]
+  },
+  "8913202573267231606": {
+    "Prev": "3375216751381822279",
+    "Next": "2944832506200417839",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard how to brought justice to Ethal Seloth and Idroso Vendu. You deserve the payment and honor of this Writ.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MT_WritVendu",
+        "Value": 90.0
+      }
+    ],
+    "Script": [
+      "Journal MT_WritVendu 110",
+      "Player->AddItem Gold_001 1000",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition 10"
+    ]
+  },
+  "2944832506200417839": {
+    "Prev": "8913202573267231606",
+    "Next": "42299391175325156",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Both targets are not dead, %PCName. You have not finished the Writ.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MT_WritVendu",
+        "Value": 85.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -2"
+    ]
+  },
+  "42299391175325156": {
+    "Prev": "2944832506200417839",
+    "Next": "28720175451455117129",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard how to brought justice to Ethal Seloth and Idroso Vendu. You deserve the payment and honor of this Writ.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MT_WritVendu",
+        "Value": 80.0
+      }
+    ],
+    "Script": [
+      "Journal MT_WritVendu 100",
+      "Player->AddItem Gold_001 1000",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition 5"
+    ]
+  },
+  "28720175451455117129": {
+    "Prev": "42299391175325156",
+    "Next": "41978485568630530",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Both targets are not dead, %PCName. You have not finished the Writ.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MT_WritVendu",
+        "Value": 75.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -2"
+    ]
+  },
+  "41978485568630530": {
+    "Prev": "28720175451455117129",
+    "Next": "131352538641520126",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have given this Writ to you already, %PCName.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "writ_vendu",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritVendu",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "131352538641520126": {
+    "Prev": "41978485568630530",
+    "Next": "161592696347051243",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have given this Writ to you already, %PCName. As you know, Writs are issued only once. Your official paperwork will exonerate you from your deeds when you are confronted by the authorities - so guard it well. If you have lost it, you will have to suffer punishment for your crimes. This can be costly... very costly. But members of the %Faction must have immaculate reputations.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "writ_vendu",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritVendu",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "161592696347051243": {
+    "Prev": "131352538641520126",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You must execute not one, but two: Ethal Seloth and Idroso Vendu. They are murderers, but they are also Telvanni. The Duke will do nothing. The Morag Tong is being paid well by their victim's families to execute justice. Look for them in the temporary housing of the Telvanni Plaza here in Vivec. Swiftness and accuracy to you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritYasalmibaal",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritSaren",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MT_WritVendu 10",
+      "Player->AddItem \"writ_vendu\" 1"
+    ]
+  }
+}

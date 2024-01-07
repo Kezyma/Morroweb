@@ -1,0 +1,198 @@
+{
+  "210836392522520572": {
+    "Prev": "",
+    "Next": "281154378687221331",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard you were expelled, %PCName. You need to make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "281154378687221331": {
+    "Prev": "210836392522520572",
+    "Next": "10084316391314629090",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Dagoth Tanis is dead.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_DagothTanis",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "10084316391314629090": {
+    "Prev": "281154378687221331",
+    "Next": "2937221880291901628",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. It is a shame that Irer Nervion died, but Dagoth Tanis is dead, and you have returned his ancestor ring. Do you have an ancestor ring of your own? Although you are an outlander, I will give you one of my own family's ancestor rings. May Almalexia show you and your ancestors mercy.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "Expensive_Ring_01_HRDT",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem Expensive_Ring_01_HRDT 1",
+      "Player->AddItem \"Ancestor's Ring\" 1",
+      "Journal HR_DagothTanis 100",
+      "ModPCFacRep 10 \"Redoran\"",
+      "ModDisposition 20"
+    ]
+  },
+  "2937221880291901628": {
+    "Prev": "10084316391314629090",
+    "Next": "15502229270685413",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I do not see his ancestor's ring. Are you sure you did not misplace it?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "15502229270685413": {
+    "Prev": "2937221880291901628",
+    "Next": "30217207392335810237",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That is a shame. I suppose we will never know what happened to him. Still, Dagoth Tanis is dead, and that is a cause for celebration.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal HR_DagothTanis 100",
+      "ModPCFacRep 5 \"Redoran\"",
+      "ModDisposition 10"
+    ]
+  },
+  "30217207392335810237": {
+    "Prev": "15502229270685413",
+    "Next": "1494729842903330463",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have slain Dagoth Tanis? Did you find Irer Nervion? Or do you have his ancestor ring?",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "dagoth tanis",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Dagoth Tanis is dead and I have the ring.\" 1 \"Dagoth Tanis is dead, but I did not find the ring.\" 2"
+    ]
+  },
+  "1494729842903330463": {
+    "Prev": "30217207392335810237",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The stronghold of Falasmaryon is just northeast of Maar Gan, across the Foyada Bani-Dad. You can get into the Foyada east of Maar Gan. Go there and slay Dagoth Tanis. We sent the Buoyant Armiger, Irer Nervion, to Falasmaryon, but he has not returned. If he is dead, bring back his ancestor ring, so that I can return it to his family.",
+    "Filters": [],
+    "Script": [
+      "ShowMap \"Falasmaryon\"",
+      "Journal HR_DagothTanis 10"
+    ]
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "313271168178215236": {
+    "Prev": "",
+    "Next": "320571091710017889",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Lalatia Varian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I think you have been visited by an aspect of Tiber Septim. Surely this is a sign of a great doom laid upon you by the gods.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC30_Imperial_veteran",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "320571091710017889": {
+    "Prev": "313271168178215236",
+    "Next": "3179511753647627021",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Lalatia Varian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A weird tale. And you say you have been marked by good fortune -- by 'the luck of the emperor' -- since you received the coin from the old veteran? Tell me -- did the face of the old veteran resemble the face on the coin? Did anyone else ever see this old man? I hesitate to suggest it. But I think you have been visited by an aspect of Tiber Septim. Surely this is a sign of a great doom laid upon you by the gods.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC30_Imperial_veteran",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal IC30_Imperial_veteran 10",
+      "player->modReputation 2"
+    ]
+  },
+  "3179511753647627021": {
+    "Prev": "320571091710017889",
+    "Next": "1079820975877017577",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "wulf",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Wulf. That's me.",
+    "Filters": [],
+    "Script": []
+  },
+  "1079820975877017577": {
+    "Prev": "3179511753647627021",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ghostgate",
+    "PlayerFaction": "",
+    "Text": "Old Imperial fellow? Legion veteran? Named Wulf? No. Nobody like that up here that I remember. Don't remember any old legion veterans here at all. Not in a VERY long time. I could be wrong, but I don't think so.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC30_Imperial_veteran",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

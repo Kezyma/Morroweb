@@ -1,0 +1,270 @@
+{
+  "8824108712253426672": {
+    "Prev": "",
+    "Next": "191771211717274791",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "191771211717274791": {
+    "Prev": "8824108712253426672",
+    "Next": "1035630611202623949",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Writ for Brilnosu Llarys has already been executed.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritBrilnosu",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1035630611202623949": {
+    "Prev": "191771211717274791",
+    "Next": "20802310122905011178",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That is an interesting story, %PCName, but the fact remains that Brilnosu Llarys is already dead and the credit for this Writ must go to you.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "brilnosu llarys",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MT_WritBrilnosu",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritMavon",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritBelvayn",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MT_WritBrilnosu 100",
+      "ModPCFacRep 5 \"Morag Tong\""
+    ]
+  },
+  "20802310122905011178": {
+    "Prev": "1035630611202623949",
+    "Next": "5179314627399244",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard that you executed Brilnosu Llarys. The honor and payment are yours.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MT_WritBrilnosu",
+        "Value": 90.0
+      }
+    ],
+    "Script": [
+      "Journal MT_WritBrilnosu 100",
+      "Player->AddItem Gold_001 1000",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition 10"
+    ]
+  },
+  "5179314627399244": {
+    "Prev": "20802310122905011178",
+    "Next": "1506818170402327348",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard that you executed Brilnosu Llarys. The honor and payment are yours.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MT_WritBrilnosu",
+        "Value": 80.0
+      }
+    ],
+    "Script": [
+      "Journal MT_WritBrilnosu 100",
+      "Player->AddItem Gold_001 1000",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition 5"
+    ]
+  },
+  "1506818170402327348": {
+    "Prev": "5179314627399244",
+    "Next": "73521917105635526",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have given this Writ to you already, %PCName.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "writ_brilnosu",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritBrilnosu",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "73521917105635526": {
+    "Prev": "1506818170402327348",
+    "Next": "2606590042028417982",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have given this Writ to you already, %PCName. As you know, Writs are issued only once. Your official paperwork will exonerate you from your deeds when you are confronted by the authorities - so guard it well. If you have lost it, you will have to suffer punishment for your crimes. This can be costly... very costly. But members of the %Faction must have immaculate reputations.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "writ_brilnosu",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritBrilnosu",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "2606590042028417982": {
+    "Prev": "73521917105635526",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This Writ is for Brilnosu Llarys who consorts with Daedra and outlaws. She is hiding at the Dunmer stronghold of Hlormaren which is on the coast west of Balmora, north of Hla Oad. I will mark this on your map. Go now, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritMavon",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritBelvayn",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MT_WritBrilnosu 10",
+      "Player->AddItem \"writ_brilnosu\" 1",
+      "ShowMap \"Hlormaren\"",
+      "ShowMap \"Hla Oad\""
+    ]
+  }
+}

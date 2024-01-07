@@ -1,0 +1,359 @@
+{
+  "1861996842107814811": {
+    "Prev": "",
+    "Next": "92675220259412680",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hession",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for your assistance.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Bouncer",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "92675220259412680": {
+    "Prev": "1861996842107814811",
+    "Next": "234315643133312879",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hession",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for the assistance, but I really don't appreciate having my patrons KILLED on premises, no matter how drunk they are.  I'll take that idiot Orc, Grub, over you any day of the week. At least you got Galms to stop hustling, so I suppose you're worth something after all.  Here, take these wages for your work.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "HessDeath",
+        "Value": 1.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "HessKnown",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Bouncer_Galms",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_Bouncer\" 130",
+      "ModDisposition - 30",
+      "player->AddItem \"Gold_001\" 300"
+    ]
+  },
+  "234315643133312879": {
+    "Prev": "92675220259412680",
+    "Next": "1091313253198571778",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hession",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for the assistance, but I really don't appreciate having my patrons KILLED on premises, no matter how drunk they are. I'll take that idiot Orc, Grub, over you any day of the week. Here, take these wages and get out of my sight.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "HessDeath",
+        "Value": 1.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "HessKnown",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Bouncer",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_Bouncer\" 130",
+      "ModDisposition - 30",
+      "player->AddItem \"Gold_001\" 100"
+    ]
+  },
+  "1091313253198571778": {
+    "Prev": "234315643133312879",
+    "Next": "2308555682290125724",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hession",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for the assistance, but I really don't appreciate having my patrons KILLED on premises, no matter how drunk they are.  I'll take that idiot Orc, Grub, over you any day of the week. At least you got Galms to stop hustling, so I suppose you're worth something after all.  Here, take these wages for your work.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "HessKnown",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Bouncer",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Bouncer_Galms",
+        "Value": 50.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "denegor",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_Bouncer\" 120",
+      "player->AddItem \"Gold_001\" 300"
+    ]
+  },
+  "2308555682290125724": {
+    "Prev": "1091313253198571778",
+    "Next": "7253154481398616761",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hession",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Fantastic. You took care of a drunk and got a hustler to stop hustling. Grub couldn't have done it better himself. Here's your payment. And thank you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "HessKnown",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Bouncer",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Bouncer_Galms",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_Bouncer\" 120",
+      "player->AddItem \"Gold_001\" 1000"
+    ]
+  },
+  "7253154481398616761": {
+    "Prev": "2308555682290125724",
+    "Next": "2998724306678324417",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hession",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Great, although I still have a bad feeling about things. Oh, well, here's your payment. Thanks a lot for your help, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "HessKnown",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Bouncer",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_Bouncer\" 110",
+      "player->AddItem \"Gold_001\" 500"
+    ]
+  },
+  "2998724306678324417": {
+    "Prev": "7253154481398616761",
+    "Next": "858728290410820488",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hession",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Look, you still haven't taken care of that drunk.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "HessKnown",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "858728290410820488": {
+    "Prev": "2998724306678324417",
+    "Next": "597868222416527103",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hession",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, let me know when you are.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "597868222416527103": {
+    "Prev": "858728290410820488",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hession",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, you know, the drunks and the vagrants and the ne'er-do-wells. Did you find them all and take care of them?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Yes, I've taken care of everything.\" 1 \"No, I'm not quite done yet.\" 2"
+    ]
+  }
+}

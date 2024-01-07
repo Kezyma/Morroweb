@@ -1,0 +1,4590 @@
+{
+  "28358841968027303": {
+    "Prev": "",
+    "Next": "1729913769476329813",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "chargen captain",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You know your duties. Take that package to Caius Cosades in Balmora.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "A1_1_FindSpymaster",
+        "Value": 12.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_1_FindSpymaster",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1729913769476329813": {
+    "Prev": "28358841968027303",
+    "Next": "17937179782332230459",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "chargen captain",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This package came with the news of your arrival. You are to take it to Caius Cosades, in the town of Balmora. Go to the South Wall Cornerclub, and ask for Caius Cosades -- they'll know where to find him. Serve him as you would serve the Emperor himself. I also have a letter for you, and a disbursal to your name.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "A1_1_FindSpymaster",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal, \"A1_1_FindSpymaster\", 1",
+      "player->AddItem, \"bk_A1_1_DirectionsCaiusCosades\", 1",
+      "player->AddItem,  \"bk_a1_1_caiuspackage\", 1",
+      "player->Additem, \"Gold_001\", 87",
+      "addtopic \"Caius Cosades\"",
+      "Addtopic \"South Wall\"",
+      "addtopic \"specific place\"",
+      "addtopic \"someone in particular\"",
+      "addtopic \"services\"",
+      "addtopic \"my trade\"",
+      "addtopic \"little secret\"",
+      "addtopic \"latest rumors\"",
+      "addtopic \"little advice\""
+    ]
+  },
+  "17937179782332230459": {
+    "Prev": "1729913769476329813",
+    "Next": "210385542530924589",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have broken the noble's code and have been expelled. Until you make amends, I cannot discuss duties with you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "210385542530924589": {
+    "Prev": "17937179782332230459",
+    "Next": "40549300124732275",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I cannot give you duties unless you join House Redoran.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "40549300124732275": {
+    "Prev": "210385542530924589",
+    "Next": "3071232399314903054",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't have any more duties for you. If you want to advance in House Redoran, you will need one of the Councilors to sponsor you. Talk to each of them, and see if any are willing to sponsor an outlander. You might also want to speak with Faral Retheran in Vivec. She may have more duties for you as well.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_GuardSarethi",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3071232399314903054": {
+    "Prev": "40549300124732275",
+    "Next": "10744240782657723616",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 3,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Serjo Athyn Sarethi, a councilor of House Redoran, believes his life is in danger. He is in Sarethi Manor under Skar. I need someone to guard Athyn Sarethi.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_GuardGuarHerds",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "10744240782657723616": {
+    "Prev": "3071232399314903054",
+    "Next": "23842240963192316566",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I don't have duties for anyone under the rank of Lawman. You should pay more attention to your advancement in House Redoran. If you need more duties, try asking Tuveso Beleth here in the council hall or Faral Retheran in Vivec. Theldyn Virith in Ald Velothi might have something else for you to do.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_GuardGuarHerds",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FoundersHelm",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "23842240963192316566": {
+    "Prev": "10744240782657723616",
+    "Next": "2022786072039829140",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Drulene Falen needs help with her guar herds again. Sounds like trouble with bandits.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FoundersHelm",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2022786072039829140": {
+    "Prev": "23842240963192316566",
+    "Next": "302282965540839548",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Like I said, go talk to Alvis Teri at the Eight Plates in Balmora. Get the Founder's Helm back from him, but do not murder him.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FoundersHelm",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "302282965540839548": {
+    "Prev": "2022786072039829140",
+    "Next": "2073414532732426400",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "A Hlaalu guard stole a Founder's Helm from one of our tombs. Would you be willing to recover this Founder's Helm from the godless Hlaalu?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FindDalobar",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Courier",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2073414532732426400": {
+    "Prev": "302282965540839548",
+    "Next": "30051117202506019436",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "A Redoran trader has gone missing. I need someone to help find Mathis Dalobar.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Courier",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "30051117202506019436": {
+    "Prev": "2073414532732426400",
+    "Next": "6525111911556514201",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I need someone to deliver a Cure Disease potion.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_MudcrabNest",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "6525111911556514201": {
+    "Prev": "30051117202506019436",
+    "Next": "15923165961803926568",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Drulene Falen has asked for our help. She says her guar herds have been having trouble with hostile mudcrabs.",
+    "Filters": [],
+    "Script": []
+  },
+  "15923165961803926568": {
+    "Prev": "6525111911556514201",
+    "Next": "3139322128391429781",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have broken our rules and betrayed our trust. Until you make amends, I cannot discuss duties with you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "3139322128391429781": {
+    "Prev": "15923165961803926568",
+    "Next": "31490634401216",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I cannot give duties to anyone who has not joined House Redoran. Speak with Neminda if you wish to join.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "31490634401216": {
+    "Prev": "3139322128391429781",
+    "Next": "13848608238057368",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "You are now %PCRank of House Redoran. May the Tribunal guide you to use your position wisely.",
+    "Filters": [],
+    "Script": []
+  },
+  "13848608238057368": {
+    "Prev": "31490634401216",
+    "Next": "3264025540281619986",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 8,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "You defeated Bolvyn Venim in an honorable duel. You have proven yourself worthy of the title of %NextPCRank. Congratulations, %PCName, %NextPCRank of House Redoran.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B5_VenimHort",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "PCRaiseRank"
+    ]
+  },
+  "3264025540281619986": {
+    "Prev": "13848608238057368",
+    "Next": "42726710987518585",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 8,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "You have won the support of all the Councilors save one, Archmaster Bolvyn Venim. He will never allow an outlander to become Archmaster of House Redoran. The only way to win the leadership of House Redoran for yourself is to challenge Bolvyn Venim to a duel.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Stronghold",
+        "Value": 200.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ArobarKidnap",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_CalderaDisrupt",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "42726710987518585": {
+    "Prev": "3264025540281619986",
+    "Next": "1975635751737631429",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I will have more duties for you when you are a Councilor of House Redoran. Have you checked what you need for advancement? Perhaps you should speak with Faral Retheran in Vivec. I heard that he was looking for someone to do a few tasks for him.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Stronghold",
+        "Value": 200.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ArobarKidnap",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_CalderaDisrupt",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1975635751737631429": {
+    "Prev": "42726710987518585",
+    "Next": "12006133752972016106",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "To become a Councilor yourself, you must win the support of the remaining Councilors: Miner Arobar and Garisa Llethri. You must also hire a garrison for your stronghold.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Stronghold",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_MorvaynManor",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_OldFlame",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "12006133752972016106": {
+    "Prev": "1975635751737631429",
+    "Next": "27759162131210123700",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I will have more duties for you when you are a House Father. You should check what you need for advancement. Have you spoken with Tuveso Beleth? She is a smith in the Redoran Council Hall. I think she may have some duties for you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Stronghold",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_MorvaynManor",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_OldFlame",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "27759162131210123700": {
+    "Prev": "12006133752972016106",
+    "Next": "327319471486016137",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 6,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "In order to advance further in House Redoran, you must earn the support of at least two of the Councilmen. I would start by speaking with Mistress Brara Morvayn and Hlaren Ramoran. You must also build a stronghold.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_MadMilk",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Shurinbaal",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "327319471486016137": {
+    "Prev": "27759162131210123700",
+    "Next": "32710193792988428951",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 3,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Unfortunately, I have no duties for one of your rank. You may be ready for advancement. If you need more duties, speak with Faral Retheran in Vivec or Theldyn Virith in Ald Velothi.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_MadMilk",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Shurinbaal",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "32710193792988428951": {
+    "Prev": "327319471486016137",
+    "Next": "31124246251162310327",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 3,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Arethan Mandas, once a great noble of House Redoran, now claims to be the Lord of West Gash and is demanding tribute from travelers on the road to Maar Gan. I need someone to stop the Mad Lord Arethan Mandas.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Shurinbaal",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "31124246251162310327": {
+    "Prev": "32710193792988428951",
+    "Next": "313688206680526677",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 3,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I believe there are smugglers operating near the coast in the cave of Shurinbaal.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_HonorChallenge",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "313688206680526677": {
+    "Prev": "31124246251162310327",
+    "Next": "557590692673531687",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 3,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Ondres Nerano, a Hlaalu Noble, claims that Archmagister Bolvyn Venim is guilty of certain indiscretions with the wife of another councilor. While I do not approve of all the Archmaster does, as a Councilman of House Redoran I cannot let this accusation stand. I want you to stop Ondres Nerano's slanders.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ClearSarethi",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "557590692673531687": {
+    "Prev": "313688206680526677",
+    "Next": "26941316341337412462",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 3,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "You have rescued my son, and I am grateful, but there is another favor I would ask of you. Varvur Sarethi has been accused of the foul murder of Bralen Carvaren.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "varvurMoved",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_RescueSarethi",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_GuardSarethi",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "26941316341337412462": {
+    "Prev": "557590692673531687",
+    "Next": "1261227399314079722",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 3,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "You have rescued my son, and I am grateful, but I need some time to consider what to do next. Leave me for a day or two and I will give you more duties.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_RescueSarethi",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_GuardSarethi",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1261227399314079722": {
+    "Prev": "26941316341337412462",
+    "Next": "9403221542514316032",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 3,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I would consider sponsoring an outlander. I have done so before, when the circumstances warranted it. Archmaster Bolvyn Venim holds my son hostage for a crime I know he did not commit. If you want me as your sponsor, you must rescue my son, Varvur Sarethi, and return him to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_GuardSarethi",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "9403221542514316032": {
+    "Prev": "1261227399314079722",
+    "Next": "348123788122877325",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Report back to Neminda. Perhaps when things have calmed down I will have some duties for you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_GuardSarethi",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HR_GuardSarethi",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "348123788122877325": {
+    "Prev": "9403221542514316032",
+    "Next": "72941030471572245",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I have no duties for one of your rank. Speak with me again when you have proven yourself in House Redoran.",
+    "Filters": [],
+    "Script": []
+  },
+  "72941030471572245": {
+    "Prev": "348123788122877325",
+    "Next": "2725711742295982858",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuveso beleth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard you were expelled for breaking our rules. I cannot speak to you about this until you make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2725711742295982858": {
+    "Prev": "72941030471572245",
+    "Next": "1419215962675619149",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 8,
+    "SpeakerId": "tuveso beleth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Yes, %PCRank?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_BillCollect",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1419215962675619149": {
+    "Prev": "2725711742295982858",
+    "Next": "2093511141743331542",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuveso beleth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "You have done everything I would ask and more.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_BillCollect",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2093511141743331542": {
+    "Prev": "1419215962675619149",
+    "Next": "188272210010114996",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuveso beleth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "You have done everything I would ask.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "giras indaram",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_KoalCave",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "188272210010114996": {
+    "Prev": "2093511141743331542",
+    "Next": "18236135821707522383",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuveso beleth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Giras Indaram owes me for several repairs to his armor. I have asked him to pay the debt, but he refuses. I cannot seek redress from a Councilman, since Giras' brothers are among the most respected Buoyant Armigers. I need someone to make Giras Indaram pay his armor repair debts.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_KoalCave",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "18236135821707522383": {
+    "Prev": "188272210010114996",
+    "Next": "251855314403011227",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuveso beleth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "My son, Deval Beleth, wants to make the Ruddy Man Pilgrimage. I want to let him go, but he is young and needs someone to escort him to the Koal Cave.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "deval beleth",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "251855314403011227": {
+    "Prev": "18236135821707522383",
+    "Next": "278612141121837673",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuveso beleth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't have any work for an outlander.",
+    "Filters": [],
+    "Script": []
+  },
+  "278612141121837673": {
+    "Prev": "251855314403011227",
+    "Next": "1282332470702522696",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have no time for those who have betrayed House Redoran.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ExpRedoran",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1282332470702522696": {
+    "Prev": "278612141121837673",
+    "Next": "2024180991865824980",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You broke our rules and have been expelled. You must make amends before I can give you duties.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2024180991865824980": {
+    "Prev": "1282332470702522696",
+    "Next": "1983636712435112284",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "You are the %PCRank now, and I should not be giving you duties.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_AttackRethan",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1983636712435112284": {
+    "Prev": "2024180991865824980",
+    "Next": "1542414802601017586",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have performed all the duties I have, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_AttackRethan",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1542414802601017586": {
+    "Prev": "1983636712435112284",
+    "Next": "85505330202053551",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 6,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "The Hlaalu have also been expanding, and at a more alarming rate. Go to Rethan Manor and kill the new Hlaalu Lord Raynasa Rethan.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_AttackUvirith",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "85505330202053551": {
+    "Prev": "1542414802601017586",
+    "Next": "22597674029035",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 6,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "The Telvanni have begun expanding all over Vvardenfell. This must be stopped. Go to the new Telvanni stronghold of Tel Uvirith and kill the Telvanni Sorcerer Reynel Uvirith.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_DagothTanis",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Stronghold",
+        "Value": 200.0
+      }
+    ],
+    "Script": []
+  },
+  "22597674029035": {
+    "Prev": "85505330202053551",
+    "Next": "2864222003214338764",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 6,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Before I give you more duties, you must build a stronghold and expand your stronghold.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_DagothTanis",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2864222003214338764": {
+    "Prev": "22597674029035",
+    "Next": "285766392810625159",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 6,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "The abandoned stronghold of Falasmaryon in Maar Gan has been taken over by a creature known as Dagoth Tanis.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_CowardDisgrace",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "285766392810625159": {
+    "Prev": "2864222003214338764",
+    "Next": "2369014829158617836",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I do not have any duties for you, %PCRank. Speak with me again when you are a Brother in House Redoran.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_CowardDisgrace",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2369014829158617836": {
+    "Prev": "285766392810625159",
+    "Next": "564053211407626175",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Rothis Nethan failed to appear for a duel of honor with Brethas Deras, a Hlaalu noble. This has shamed House Redoran. Track down the craven Rothis Nethan here in the Redoran Canton and persuade him to attend the duel.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_RedasTomb",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "564053211407626175": {
+    "Prev": "2369014829158617836",
+    "Next": "299811150295725409",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "The last of the Redas family line has bequeathed the family's belongings to House Redoran. I need someone to recover the family treasures from the Redas Tomb.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_HlaanoSlanders",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "299811150295725409": {
+    "Prev": "564053211407626175",
+    "Next": "913343381496114565",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The son of a Hlaalu noble has slandered House Redoran. Find Meril Hlaano in Balmora and demand that he withdraw the slander.",
+    "Filters": [],
+    "Script": []
+  },
+  "913343381496114565": {
+    "Prev": "299811150295725409",
+    "Next": "1827319765188725174",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You broke the rules and have been expelled from House Redoran. Make amends, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1827319765188725174": {
+    "Prev": "913343381496114565",
+    "Next": "273043113257221473",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 8,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "What can I do for you, %PCRank?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_LostBanner",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "273043113257221473": {
+    "Prev": "1827319765188725174",
+    "Next": "3098265283247113720",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I have no more duties for you. Speak with Councilman Athyn Sarethi or the House Redoran Steward, Faral Retheran in Vivec.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_LostBanner",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3098265283247113720": {
+    "Prev": "273043113257221473",
+    "Next": "30783300002594330030",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Several Redoran soldiers were sent to the derelict stronghold of Andasreth. They have not returned. I need someone to find out what happened in Andasreth.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FindGiladren",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "30783300002594330030": {
+    "Prev": "3098265283247113720",
+    "Next": "2776325685739324037",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Another pilgrim has gone missing. I want you to find out what happened to Beden Giladren.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FindTharen",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2776325685739324037": {
+    "Prev": "30783300002594330030",
+    "Next": "29951234141340724767",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "One of our Pilgrims left here some weeks ago on the Ruddy Man Pilgrimage. I have not heard from him. Find out what happened to the Pilgrim Fedris Tharen.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_SixthHouseBase",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "29951234141340724767": {
+    "Prev": "2776325685739324037",
+    "Next": "4241268122340621869",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I am concerned about the ash statue you showed me. Varvur Sarethi must have acquired it from somewhere in town. I want you to find out where Varvur Sarethi got the ash statue.",
+    "Filters": [],
+    "Script": []
+  },
+  "4241268122340621869": {
+    "Prev": "29951234141340724767",
+    "Next": "2164224722866717849",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You must join House Redoran before I can give you duties. If you want Temple duties, speak with the Temple Steward, Tuls Valen.",
+    "Filters": [],
+    "Script": []
+  },
+  "2164224722866717849": {
+    "Prev": "4241268122340621869",
+    "Next": "48022448533506878",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "House Redoran gave you two chances and you failed us. I have no duties for such as you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ExpRedoran",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "48022448533506878": {
+    "Prev": "2164224722866717849",
+    "Next": "4403263073208014571",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've broken our rules and have been expelled from House Redoran. I can't give you duties unless you make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "4403263073208014571": {
+    "Prev": "48022448533506878",
+    "Next": "3134422263370111746",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can't give you duties unless you join House Redoran. I suggest talking to Neminda in Ald'ruhn. She's the one who usually signs up new Hirelings.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "3134422263370111746": {
+    "Prev": "4403263073208014571",
+    "Next": "1555232617174101846",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 8,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I can't give duties to you, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_CultElimination",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1555232617174101846": {
+    "Prev": "3134422263370111746",
+    "Next": "80889583137865536",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 6,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I have no more duties for you. Speak with Faral Retheran in the Redoran Treasury in Vivec or with Athyn Sarethi.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_CultElimination",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "80889583137865536": {
+    "Prev": "1555232617174101846",
+    "Next": "4695178732374011148",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 6,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I have some duties for you, but this is a tough one. We need someone to slay the cultists in Ashalmawia.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ShishiReport",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "4695178732374011148": {
+    "Prev": "80889583137865536",
+    "Next": "4912242302262814988",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I don't have any more duties for you. Like I said, it's quiet here in Ald Velothi. Check with Neminda in Ald'ruhn or Faral Retheran in Vivec.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ShishiReport",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "4912242302262814988": {
+    "Prev": "4695178732374011148",
+    "Next": "2912127910325824124",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "House Redoran sent a party to destroy the Telvanni base Shishi. They were supposed to report back to me, but they have not done so. I need someone to find out what's going and bring me the Shishi report.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Kagouti",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2912127910325824124": {
+    "Prev": "4912242302262814988",
+    "Next": "1468532248237487192",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I heard there's been another problem along the Gnisis-Ald'ruhn caravan track. Kagouti have been attacking travelers between Ald'ruhn and Gnisis. I need someone to find this kagouti den.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_AshimanuMine",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1468532248237487192": {
+    "Prev": "2912127910325824124",
+    "Next": "6789287051808314937",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "A diseased shalk got into an egg mine on the trade route to Ald'ruhn. I need someone to kill the shalk in the Ashimanu Mine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FoundersHelm",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_OldBlueFin",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "6789287051808314937": {
+    "Prev": "1468532248237487192",
+    "Next": "37649369345219135",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I don't have any more duties right now. Things are usually quiet here in Ald Velothi. Something might turn up. Why not do a few more duties for Neminda and check back with me?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_OldBlueFin",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "37649369345219135": {
+    "Prev": "6789287051808314937",
+    "Next": "18246313902218522866",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Thank you for asking, %PCName. Normally things are pretty quiet in Ald Velothi, but Old Blue Fin is back and up to his old tricks. It's time someone got rid of Old Blue Fin for good.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Courier",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "18246313902218522866": {
+    "Prev": "37649369345219135",
+    "Next": "2949213658255959173",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Not right now, %PCName. Maybe in a few days. Make sure you tell Neminda that you delivered the potion.",
+    "Filters": [],
+    "Script": []
+  },
+  "2949213658255959173": {
+    "Prev": "18246313902218522866",
+    "Next": "23468122041298415210",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, of course. You've been expelled. These things take time. I believe that eventually everyone will forget about how you broke our rules.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "23468122041298415210": {
+    "Prev": "2949213658255959173",
+    "Next": "2467018687869122152",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you still a member of the guild? Once Trebonius gives the authorization, we can discuss guild matters again.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "2467018687869122152": {
+    "Prev": "23468122041298415210",
+    "Next": "2347272232989712094",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Were you expelled? Or did you clear that up already? You ought to make amends with Guildmaster Trebonius just to be sure.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "2347272232989712094": {
+    "Prev": "2467018687869122152",
+    "Next": "41295659805015760",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled, %PCName. If you want to make amends, you should speak with Guildmaster Trebonius.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "41295659805015760": {
+    "Prev": "2347272232989712094",
+    "Next": "11397245391654831041",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Would you like to join the Mages Guild?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "11397245391654831041": {
+    "Prev": "41295659805015760",
+    "Next": "112723472388727447",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "More duties for you? Hm... Let me think about it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Telvanni",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "112723472388727447": {
+    "Prev": "11397245391654831041",
+    "Next": "22853115302059515129",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Yes, since you found out about the Dwarves, perhaps you could help with our other little problem: House Telvanni.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Dwarves",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "C3_DestroyDagoth",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "22853115302059515129": {
+    "Prev": "112723472388727447",
+    "Next": "43954461769727259",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, you solved our little Dwarven mystery quite easily, I'm sure. Once these recent troubles have passed, I may have more duties for you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Dwarves",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "43954461769727259": {
+    "Prev": "22853115302059515129",
+    "Next": "2797322333266853427",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What was it I asked you to do? Oh, yes, find out about the disappearance of the Dwarves. Why not talk to Edwinna in our Ald'ruhn branch? The two of you should get along famously.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Dwarves",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "2797322333266853427": {
+    "Prev": "43954461769727259",
+    "Next": "301673209613747805",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hmm... Duties, you say? Yes, there are several things the Mages Guild needs done. Let's see. Hmm... Find out about the disappearance of the Dwarves. Yes, that's an excellent task for you, %PCRank.",
+    "Filters": [],
+    "Script": [
+      "Journal MG_Dwarves 10",
+      "AddTopic \"Trebonius\"",
+      "addtopic \"egg of time\"",
+      "addtopic \"divine metaphysics\""
+    ]
+  },
+  "301673209613747805": {
+    "Prev": "2797322333266853427",
+    "Next": "1887020857204123439",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Why, it would be inappropriate for me to give you orders, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Bethamez",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1887020857204123439": {
+    "Prev": "301673209613747805",
+    "Next": "1457861921632929975",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 8,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "It's a shame the Mages Guild isn't led by someone with your devotion to Scholarship. Perhaps if you speak with Trebonius, you can make him listen to reason.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Bethamez",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MG_Guildmaster 10"
+    ]
+  },
+  "1457861921632929975": {
+    "Prev": "1887020857204123439",
+    "Next": "30178266722829931232",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I do not have any more duties for you. Perhaps you should speak with the guild stewards in Balmora or Sadrith Mora.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Bethamez",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "30178266722829931232": {
+    "Prev": "1457861921632929975",
+    "Next": "466324689261952175",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I have heard that the miners in the Gnisis Eggmine broke into the ruins of Bethamez.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Mzuleft",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "466324689261952175": {
+    "Prev": "30178266722829931232",
+    "Next": "6140107332087832721",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I want you to find some Dwemer plans or blueprints.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Excavation",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Science",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "6140107332087832721": {
+    "Prev": "466324689261952175",
+    "Next": "2849465291170026695",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Yes, I was wondering if you might check up on one of my colleagues in the Dwemer ruin of Nchuleftingth. The last excavation report is long overdue...",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Science",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2849465291170026695": {
+    "Prev": "6140107332087832721",
+    "Next": "3369108002181729435",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I'm so glad you asked, %PCRank. At this delicate phase of my research, I need to study a Dwemer Tube.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_ReturnBook",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3369108002181729435": {
+    "Prev": "2849465291170026695",
+    "Next": "2575827094424910401",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I have no duties for you now, but speak with me again when you have earned the rank of Conjurer.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_ReturnBook",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2575827094424910401": {
+    "Prev": "3369108002181729435",
+    "Next": "11208207263195012062",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Yes, %PCName, I have finished my study of Chimarvamidium.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Apprentice",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "11208207263195012062": {
+    "Prev": "2575827094424910401",
+    "Next": "17540310193040726930",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I have been distracted from my studies by several reports from Maar Gan. Apparently there is some sort of disturbance at Huleen's hut.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_StealBook",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "17540310193040726930": {
+    "Prev": "11208207263195012062",
+    "Next": "159220191805528908",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Sirilonwe in the Mages Guild in Vivec has somehow acquired a copy of Chimarvamidium.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Potion",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "159220191805528908": {
+    "Prev": "17540310193040726930",
+    "Next": "2847734082225514753",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I have been waiting for *ages* to get a Detect Creatures potion from Skink-in-Tree's-Shade in Sadrith Mora.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_NchuleftBook",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2847734082225514753": {
+    "Prev": "159220191805528908",
+    "Next": "5607331638714571",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Yes, %PCRank, there is something you could do for me. I am looking for a copy of the rare Dwarven book Chronicles of Nchuleft.",
+    "Filters": [],
+    "Script": []
+  },
+  "5607331638714571": {
+    "Prev": "2847734082225514753",
+    "Next": "9362134531191426702",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "What do you wish of me, %PCRank?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_VampireCure",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "9362134531191426702": {
+    "Prev": "5607331638714571",
+    "Next": "258201875962211950",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 8,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Take the letter to Trebonius in Vivec.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "givenLetter",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "258201875962211950": {
+    "Prev": "9362134531191426702",
+    "Next": "58442776905715651",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 8,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I am honored to have worked with you, %PCName, and I have one more task. Take this letter to Arch-Mage Trebonius in Vivec.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_VampireCure",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MG_Guildmaster 20",
+      "Player->AddItem \"bk_ocato_recommendation\" 1",
+      "Set givenLetter to 1"
+    ]
+  },
+  "58442776905715651": {
+    "Prev": "258201875962211950",
+    "Next": "24674296041353425806",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Find out what you need for advancement and speak with me again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_VampireCure",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "24674296041353425806": {
+    "Prev": "58442776905715651",
+    "Next": "996315521168817067",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I have another task for you, %PCRank, but it is a difficult one. I believe there is another book on Vampires, Galur Rithari's papers.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_SoulGem2",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "996315521168817067": {
+    "Prev": "24674296041353425806",
+    "Next": "2514016285198113868",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I am concerned about the continuing problems with these strange Ash creatures. Perhaps if I had a soul of one of these creatures to study... Would you bring me the soul of an Ash Ghoul?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_KillNecro1",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2514016285198113868": {
+    "Prev": "996315521168817067",
+    "Next": "22247158973054319524",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I do not have duties for you now. Speak with me again when you have the rank of Wizard.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_KillNecro1",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "22247158973054319524": {
+    "Prev": "2514016285198113868",
+    "Next": "155811962082013249",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "When any mage turns to Necromancy, it casts a pale shadow over the whole guild.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_WiseWoman",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "155811962082013249": {
+    "Prev": "22247158973054319524",
+    "Next": "518326561283886621",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "You may be able to assist me, %PCName. I would like to speak with one of the Wise Women of the Ashlanders. Perhaps you could arrange a meeting.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_VampVol2",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "518326561283886621": {
+    "Prev": "155811962082013249",
+    "Next": "21487203631540314392",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I am looking for a rare book, Vampires of Vvardenfell.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_EscortScholar1",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "21487203631540314392": {
+    "Prev": "518326561283886621",
+    "Next": "1879227031375413561",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I need someone to escort the scholar Tenyeminwe.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Potion",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1879227031375413561": {
+    "Prev": "21487203631540314392",
+    "Next": "13030265523172521200",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "For now, just deliver the potion back to Edwinna in Ald'ruhn.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Potion",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "13030265523172521200": {
+    "Prev": "1879227031375413561",
+    "Next": "221412592288155059",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I may have duties for you later, %PCName. Right now I am busy making a Detect Creatures potion for Edwinna in Ald'ruhn.",
+    "Filters": [],
+    "Script": []
+  },
+  "221412592288155059": {
+    "Prev": "13030265523172521200",
+    "Next": "2599312566271294492",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Of course, %PCRank, whatever you say.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_SpyCatch",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2599312566271294492": {
+    "Prev": "221412592288155059",
+    "Next": "2140577593079311095",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 2,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "You have completed all the duties I have. Have you spoken with Edwinna in Ald'ruhn or Skink in Sadrith Mora?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_SpyCatch",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2140577593079311095": {
+    "Prev": "2599312566271294492",
+    "Next": "4809295512037720930",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 2,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I believe the Mages Guild has been infiltrated by a Telvanni spy.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_KillNecro2",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "4809295512037720930": {
+    "Prev": "2140577593079311095",
+    "Next": "85628342963020403",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 2,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I believe Tashpi Ashibael in Maar Gan has been practicing Necromancy.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_EscortScholar2",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "85628342963020403": {
+    "Prev": "4809295512037720930",
+    "Next": "20738173711112513020",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 2,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "The scholar Itermerel needs an escort to Pelagiad... But I want Itermerel's notes.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_StopCompetition",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "20738173711112513020": {
+    "Prev": "85628342963020403",
+    "Next": "25546219352335011233",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 2,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "An Argonian at the South Wall Cornerclub is offering training in Restoration without the sanction of the Guild. I want someone to stop his unsanctioned training.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_PayDues",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_JoinUs",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "25546219352335011233": {
+    "Prev": "20738173711112513020",
+    "Next": "108410125782612181",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 2,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I need someone to convince an ex-Telvanni to join us. While you're there, you can collect Manwe's guild dues.",
+    "Filters": [],
+    "Script": []
+  },
+  "108410125782612181": {
+    "Prev": "25546219352335011233",
+    "Next": "8815193872095518737",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I don't have any duties for a %PCRank... But you may be ready for advancement.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "RankRequirement",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "8815193872095518737": {
+    "Prev": "108410125782612181",
+    "Next": "61526702184014481",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I don't have any duties for a %PCRank. Speak with me again when you have proven yourself. In the meantime, speak with Ajira. I believe she may have some small tasks for you.",
+    "Filters": [],
+    "Script": []
+  },
+  "61526702184014481": {
+    "Prev": "8815193872095518737",
+    "Next": "16904325532021818427",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ajira has duties for you, yes, but first you must speak with Ranis Athrys and join the Mages Guild.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "16904325532021818427": {
+    "Prev": "61526702184014481",
+    "Next": "30524119021564022102",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ajira hears broke the rules and were expelled. Ajira cannot talk to you of duties.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "30524119021564022102": {
+    "Prev": "16904325532021818427",
+    "Next": "3696567475216468",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ajira has told you her secrets. What can Ajira do for friend %PCName?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_WarlocksRing",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3696567475216468": {
+    "Prev": "30524119021564022102",
+    "Next": "25152716866532525",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 6,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Ajira will tell friend %PCName another secret. Ajira also knows about the Warlock's Ring.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_StaffMagnus",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "25152716866532525": {
+    "Prev": "3696567475216468",
+    "Next": "12952263732722719692",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 6,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Ajira has no duties for friend %PCName, but she is ready to tell you a secret. Ajira knows all about the Staff of Magnus.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_StolenReport",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "12952263732722719692": {
+    "Prev": "25152716866532525",
+    "Next": "2219728847161718649",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Ajira knows many secrets, but they are not yet for friend %PCName. Speak with Ajira again when you are a Warlock. Ranis Athrys here may have duties for you, but Ajira does not like Ranis much. Maybe you should speak with Ajira's good friend Edwinna Elbert at the Guild of Mages in Ald'ruhn?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_StolenReport",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2219728847161718649": {
+    "Prev": "12952263732722719692",
+    "Next": "31535256745725028",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Ajira must find her stolen reports!",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "doOnce",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Flowers",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "31535256745725028": {
+    "Prev": "2219728847161718649",
+    "Next": "1833615801749422119",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Ajira is very sorry. Ajira has much work to do on these reports so Ajira can win her bet with Galbedir. Maybe you could fetch a new ceramic bowl for Ajira?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Flowers",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1833615801749422119": {
+    "Prev": "31535256745725028",
+    "Next": "1370428080207893688",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Ajira must now study local flowers.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Sabotage",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1370428080207893688": {
+    "Prev": "1833615801749422119",
+    "Next": "1479817701996308",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Has %PCName done what Ajira asks with the fake soul gem?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Sabotage",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "1479817701996308": {
+    "Prev": "1370428080207893688",
+    "Next": "866180402770723651",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Yes, Ajira has more duties for %PCName. Ajira made a bet with Galbedir...",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_BCShrooms",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "866180402770723651": {
+    "Prev": "1479817701996308",
+    "Next": "2443309481099132366",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Yes, Ajira has duties for you. Before Ajira can be a Journeyman in the Mages Guild, Ajira must study local mushrooms.",
+    "Filters": [],
+    "Script": []
+  },
+  "2443309481099132366": {
+    "Prev": "866180402770723651",
+    "Next": "37584883038624175",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "Vivec, Guild of Mages",
+    "PlayerFaction": "Mages Guild",
+    "Text": "You could speak with Arch-Mage Trebonius, but between you and me, you might want to ask the guild stewards in Ald'ruhn, Balmora, and Sadrith Mora instead.",
+    "Filters": [],
+    "Script": []
+  },
+  "37584883038624175": {
+    "Prev": "2443309481099132366",
+    "Next": "384430228345812174",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 2,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "Balmora, Guild of Mages",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Speak with Ajira or Ranis Athrys. They can give you duties.",
+    "Filters": [
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "ajira",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "ranis athrys",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "384430228345812174": {
+    "Prev": "37584883038624175",
+    "Next": "2536032712248909748",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "Balmora, Guild of Mages",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Speak with Ajira.",
+    "Filters": [
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "ajira",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2536032712248909748": {
+    "Prev": "384430228345812174",
+    "Next": "13268193331204927497",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "Sadrith Mora, Wolverine Hall",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Talk to Skink-in-Tree's-Shade",
+    "Filters": [],
+    "Script": []
+  },
+  "13268193331204927497": {
+    "Prev": "2536032712248909748",
+    "Next": "21839532197622897",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "Ald-ruhn, Guild of Mages",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Speak with Edwinna. She's the guild steward here.",
+    "Filters": [],
+    "Script": []
+  },
+  "21839532197622897": {
+    "Prev": "13268193331204927497",
+    "Next": "121381271745971393",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have failed the Temple. I have nothing to say to you.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "ExpTemple",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "121381271745971393": {
+    "Prev": "21839532197622897",
+    "Next": "2154428172139971663",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have broken our rules and have been expelled. If you make amends, I can speak with you about your duties.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2154428172139971663": {
+    "Prev": "121381271745971393",
+    "Next": "1151151071937623156",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "What can I do for you, %PCRank?",
+    "Filters": [],
+    "Script": []
+  },
+  "1151151071937623156": {
+    "Prev": "2154428172139971663",
+    "Next": "32263171852856715239",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have heard that you claim to be the Nerevarine. I am not sure what to think about this, but I do not trust you, and I will not give you any duties.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B8_MeetVivec",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "32263171852856715239": {
+    "Prev": "1151151071937623156",
+    "Next": "29851225101441531345",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I cannot give you duties if you do not join the Temple.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "29851225101441531345": {
+    "Prev": "32263171852856715239",
+    "Next": "1058810547208135983",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Before I give you any other duties, you should prove your faith by making the Pilgrimages of the Seven Graces.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TT_SevenGraces",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1058810547208135983": {
+    "Prev": "29851225101441531345",
+    "Next": "2042718435325457034",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tholer saryoni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are the Archcanon now, %PCName. I will retire from the politics of the Temple and devote the rest of my life to writing.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_Assarnibibi",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "PCRaiseRank"
+    ]
+  },
+  "2042718435325457034": {
+    "Prev": "1058810547208135983",
+    "Next": "1737211599267764273",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 8,
+    "SpeakerId": "tholer saryoni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "You have completed the Pilgrimages of the Four Corners. Now you should know the enemies of the Temple. I ask only one more thing. You must recover the Ebony Mail.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_DagonFel",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_AldSotha",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_BalUr",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_AldDaedroth",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1737211599267764273": {
+    "Prev": "2042718435325457034",
+    "Next": "234912026478963047",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "tholer saryoni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "First you must advance to the rank of %NextPCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_DagonFel",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_AldSotha",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_BalUr",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_AldDaedroth",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "234912026478963047": {
+    "Prev": "1737211599267764273",
+    "Next": "104011181937304444",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "tholer saryoni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "I am old and will soon retire. You are one of the most promising %PCRanks. If you want to replace me as Archcanon of the Temple, you must complete the Pilgrimages of the Four Corners.",
+    "Filters": [],
+    "Script": []
+  },
+  "104011181937304444": {
+    "Prev": "234912026478963047",
+    "Next": "134178603177567156",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tholer saryoni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I do not have any duties for you at this time, %PCRank. Speak with me again when you have earned the rank of Diviner.",
+    "Filters": [],
+    "Script": []
+  },
+  "134178603177567156": {
+    "Prev": "104011181937304444",
+    "Next": "1898685711897722123",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have no more duties for you. Speak with Uvoo Llaren in Ghostgate or Endryn Llethan in Vivec. Thank you for all you have done.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_Hassour",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal \"TT_MaarGan\" 110"
+    ]
+  },
+  "1898685711897722123": {
+    "Prev": "134178603177567156",
+    "Next": "4578113391906210120",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 6,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "A dark cult is practicing the foulest of arts only a few hours from here in the cavern of Hassour.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_MaarGan",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "4578113391906210120": {
+    "Prev": "1898685711897722123",
+    "Next": "927315892463416137",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Speak with me again when you have proven yourself in the Temple. I have one more thing to ask of you, but you are not ready. Until then, speak with Uvoo Llaren in Ghostgate or Endryn Llethan in Vivec.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_MaarGan",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_Compassion",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_FalseIncarnate",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "927315892463416137": {
+    "Prev": "4578113391906210120",
+    "Next": "1927114635208003098",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "To demonstrate your faith, you must make the Pilgrimage to Maar Gan.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_FalseIncarnate",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1927114635208003098": {
+    "Prev": "927315892463416137",
+    "Next": "24378227272461513387",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A man in Suran named Elvil Vidron is a False Incarnate.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_Compassion",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "24378227272461513387": {
+    "Prev": "1927114635208003098",
+    "Next": "7451976886182725",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "To belong to the Temple is to practice compassion.",
+    "Filters": [],
+    "Script": []
+  },
+  "7451976886182725": {
+    "Prev": "24378227272461513387",
+    "Next": "255878137908313714",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "Speak with Archcanon Tholer Saryoni.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_StAralor",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "TT_DagonFel",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "255878137908313714": {
+    "Prev": "7451976886182725",
+    "Next": "30315937116285256",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "Yes, %PCRank. I believe Archcanon Saryoni wishes to speak with you. Here is the key to his rooms, behind the locked door here.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_StAralor",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal TT_DagonFel 1",
+      "Player->AddItem \"key_archcanon_private\" 1"
+    ]
+  },
+  "30315937116285256": {
+    "Prev": "255878137908313714",
+    "Next": "581128778186054718",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have no more duties for you. Thank you for all you have done, %PCRank %PCName. Speak with Tuls Valen in Ald'ruhn or Tharer Rotheloth in Molag Mar if you seek more duties.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_StAralor",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "581128778186054718": {
+    "Prev": "30315937116285256",
+    "Next": "182988728210013082",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There is a foul cult operating under the St. Delyn Canton here in Vivec. Their meeting place is known as Ihinipalit.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_RilmsShoes",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "182988728210013082": {
+    "Prev": "581128778186054718",
+    "Next": "1204330962313544360",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 5,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "A precious relic of the Temple, the Shoes of St. Rilms, has been lost.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_SanctusShrine",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1204330962313544360": {
+    "Prev": "182988728210013082",
+    "Next": "1899412737145098819",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Speak with me again when you are a Curate in the Temple. Until then, you may ask Tharer Rotheloth in Molag Mar or Tuls Valen at the Ald'ruhn Temple.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_SanctusShrine",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1899412737145098819": {
+    "Prev": "1204330962313544360",
+    "Next": "11116221791966312945",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "To prove that you have patience and wisdom you must make the Pilgrimage to the Sanctus Shrine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_DiseaseCarrier",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "11116221791966312945": {
+    "Prev": "1899412737145098819",
+    "Next": "762732331068230192",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A holy woman here in Vivec is spreading the Divine Disease to others. Someone must convince Tanusea Veloth to leave Vivec City.",
+    "Filters": [],
+    "Script": []
+  },
+  "762732331068230192": {
+    "Prev": "11116221791966312945",
+    "Next": "24787310652644526361",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharer rotheloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have no more duties for you. Try speaking with Tuls Valen in Ald'ruhn or Uvoo Llaren in Ghostgate.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_GalomDeus",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "24787310652644526361": {
+    "Prev": "762732331068230192",
+    "Next": "530030808311353060",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 5,
+    "SpeakerId": "tharer rotheloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "Another duty of the Temple is to cleanse Vvardenfell of vampires. We have heard of a vampire lair known as Galom Daeus.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_Mawia",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "530030808311353060": {
+    "Prev": "24787310652644526361",
+    "Next": "1867717951272543449",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharer rotheloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Speak with me again when you have gained the rank of Curate. I will have more duties for you then. Until then, you could ask Tuls Valen at the Ald'ruhn Temple, or Endryn Llethan at the High Fane in Vivec.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_CuringTouch",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_MountKand",
+        "Value": 110.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_Mawia",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1867717951272543449": {
+    "Prev": "530030808311353060",
+    "Next": "3166028114633116257",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharer rotheloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "One duty of the Temple is to bring justice to Necromancers wherever we may find them. We have heard of a Necromancer known as Delvam Andarys.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_MountKand",
+        "Value": 110.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_CuringTouch",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3166028114633116257": {
+    "Prev": "1867717951272543449",
+    "Next": "27047142271220331569",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharer rotheloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "To prove that you are wise and brave, you must make the Pilgrimage to Mount Kand.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_CuringTouch",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "27047142271220331569": {
+    "Prev": "3166028114633116257",
+    "Next": "468713038296028112",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharer rotheloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A villager in Tel Mora has fallen ill, but there is no Temple in Tel Mora where she can go for healing. Go to Tel Mora and cure Lette.",
+    "Filters": [],
+    "Script": []
+  },
+  "468713038296028112": {
+    "Prev": "27047142271220331569",
+    "Next": "374743461145918264",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "I have no more duties for you. Speak with Endryn Llethan in Vivec or Tharer Rotheloth in Molag Mar.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_LlothisCrosier",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "374743461145918264": {
+    "Prev": "468713038296028112",
+    "Next": "1210029891936418998",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "You have found all the Temple relics I know of save one: Bring me the Crosier of St. Llothis.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_FelmsCleaver",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1210029891936418998": {
+    "Prev": "374743461145918264",
+    "Next": "11209130521442615760",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "Another sacred relic which has been lost to the Temple is the Cleaver of St. Felms.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_HairShirt",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "11209130521442615760": {
+    "Prev": "1210029891936418998",
+    "Next": "3584130857737979",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "Many sacred relics of the Temple have been lost to the Sixth House. I want you to recover a relic that I believe is in Lost Kogoruhn.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_SupplyMonk",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3584130857737979": {
+    "Prev": "11209130521442615760",
+    "Next": "13358898650224221",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "I need someone to bring the hermit Sendas Sathis food and drink.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_MinistryHeathen",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "13358898650224221": {
+    "Prev": "3584130857737979",
+    "Next": "265475493118325661",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 5,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "The outcast Ashlander Assantus Hansar has fallen ill.",
+    "Filters": [],
+    "Script": []
+  },
+  "265475493118325661": {
+    "Prev": "13358898650224221",
+    "Next": "252869918238779866",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have no duties for anyone under the rank of Curate. Speak with Tharer Rotheloth in Molag Mar, Tuls Valen at the Ald'ruhn Temple, or Endryn Llethan at the High Fane in Vivec.",
+    "Filters": [],
+    "Script": []
+  },
+  "252869918238779866": {
+    "Prev": "265475493118325661",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "feldrelo sadri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I do not have any duties for you. Perhaps you could speak with Endryn Llethan in Ald'ruhn or Tharer Rotheloth in Molag Mar.",
+    "Filters": [],
+    "Script": []
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "29538163692531722502": {
+    "Prev": "",
+    "Next": "3071122502250459764",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "korst wind-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We must wait and see. I only pray to the All-Maker that we are not all a part of this plan.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_WildHunt",
+        "Value": 15.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_WildHunt",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3071122502250459764": {
+    "Prev": "29538163692531722502",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "korst wind-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There is little to be done until he lets it be known to us. Certainly it will not be long. I fear for our people, Blodskaal. There is little I can do to protect them in these times. I have only to pray to the All-Maker that he watches over us and keeps us from the Hunter's grasp.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_WildHunt",
+        "Value": 15.0
+      }
+    ],
+    "Script": [
+      "StartScript wildhuntStartScript",
+      "Journal BM_WildHunt 15"
+    ]
+  }
+}

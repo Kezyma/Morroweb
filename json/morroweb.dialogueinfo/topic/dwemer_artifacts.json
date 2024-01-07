@@ -1,0 +1,667 @@
+{
+  "3263126373777822635": {
+    "Prev": "",
+    "Next": "3112512971438213564",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hasphat antabolis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Weapons, armor, housewares, coins, and other items of Dwemer design are often found in Dwemer ruins. They are prized by historians and antiquarians, and very valuable. The Emperor, however, has declared all newly discovered Dwemer artifacts to be possessions of the Crown, and forbids their trade or sale. Now smuggling Dwemer artifacts is treason, but smugglers will still risk execution for such a profitable crime.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_2_AntabolisInformant",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "3112512971438213564": {
+    "Prev": "3263126373777822635",
+    "Next": "1911025251312228169",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "In their denial of both phenomena and noumena, the Dwemer found comfort in the creation of Animunculi, which in their operation, combined two incompatible principles, thus denying both. In the first Dwemer ruin I studied, quite by chance in my wandering youth, someone had activated the Animunculi guardians and I was unable to make a proper study of them. Since then, I have, on occasion, found ruins, especially here in Vvardenfell, where the Animunculi are still active.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_SpyBaladas",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal HT_SpyBaladas 61"
+    ]
+  },
+  "1911025251312228169": {
+    "Prev": "3112512971438213564",
+    "Next": "2612777662828831020",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "If you seek the artifacts of the Dwemer, visit one of the Dwemer ruins.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_SpyBaladas",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal HT_SpyBaladas 60"
+    ]
+  },
+  "2612777662828831020": {
+    "Prev": "1911025251312228169",
+    "Next": "2928961812277113889",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mallam ryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Yes, this is one of the three questions I want you to ask Baladas Demnevanni.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "HT_SpyBaladas",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HT_SpyBaladas",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2928961812277113889": {
+    "Prev": "2612777662828831020",
+    "Next": "2655711563833725418",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Habasi hears you broke our agreement. Habasi does not want to speak with you now.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2655711563833725418": {
+    "Prev": "2928961812277113889",
+    "Next": "1178827732781011393",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "You brought the artifacts to your good friend Habasi.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_OverduePayments",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1178827732781011393": {
+    "Prev": "2655711563833725418",
+    "Next": "1325328534240305774",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Habasi looks. Yes, a Dwemer tube, a Dwemer bowl, a Dwemer goblet. All here. You have done Habasi a favor and Habasi does you a favor. Habasi gives you some tools.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_OverduePayments 100",
+      "Player->RemoveItem misc_dwrv_artifact60 1",
+      "Player->RemoveItem misc_dwrv_goblet00 1",
+      "Player->RemoveItem misc_dwrv_bowl00 1",
+      "Player->AddItem Pick_Master 2",
+      "Player->AddItem Probe_Journeyman_01 2",
+      "Player->AddItem Repair_Journeyman_01 1",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "1325328534240305774": {
+    "Prev": "1178827732781011393",
+    "Next": "7368138471054730439",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Get them from Ra'Zhid before Ra'Zhid sells them.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "7368138471054730439": {
+    "Prev": "1325328534240305774",
+    "Next": "223815512493222338",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "You have Ra'Zhid's Dwemer artifacts?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_dwrv_artifact60",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_dwrv_bowl00",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_dwrv_goblet00",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_OverduePayments",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here they are\" 1 \"No, nevermind\" 2"
+    ]
+  },
+  "223815512493222338": {
+    "Prev": "7368138471054730439",
+    "Next": "25967322452727227524",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "No, Ra'Zhid is a liar. Ra'Zhid has the Dwemer artifacts. Habasi knows this. If you kill Ra'Zhid, Habasi thinks less of you, but that is all. If you steal from Ra'Zhid, Habasi thinks you are clever. Go back to Hla Oad, find the Dwemer goblet, bowl, and tube, and bring them all to Habasi.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_OverduePayments",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Journal TG_OverduePayments 50"
+    ]
+  },
+  "25967322452727227524": {
+    "Prev": "223815512493222338",
+    "Next": "22868983018850449",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "No, Ra'Zhid is a liar, like all Khajiti men. Ra'Zhid has the Dwemer artifacts. Habasi knows this. If you kill Ra'Zhid, Habasi thinks less of you, but that is all. If you steal from Ra'Zhid, Habasi thinks you are clever. Go back to Hla Oad, find the Dwemer goblet, bowl, and tube, and bring them all to Habasi.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_OverduePayments",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Journal TG_OverduePayments 50"
+    ]
+  },
+  "22868983018850449": {
+    "Prev": "25967322452727227524",
+    "Next": "186065066243399448",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Go to Fatleg's Drop Off in Hla Oad. If Ra'Zhid won't give you the Dwemer artifacts, find them, and return them to Habasi. You must bring Habasi a Dwarven goblet, a Dwarven bowl, and a Dwemer tube.",
+    "Filters": [],
+    "Script": [
+      "Journal TG_OverduePayments 10"
+    ]
+  },
+  "186065066243399448": {
+    "Prev": "22868983018850449",
+    "Next": "2032240142386719995",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ra'zhid",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So you know who's who around here. Ra'Zhid does not have the Dwemer artifacts. Understand? Run along, kitten.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem misc_dwrv_artifact60 1",
+      "AddItem misc_dwrv_artifact60 1",
+      "Player->RemoveItem misc_dwrv_goblet00 1",
+      "AddItem misc_dwrv_goblet00 1",
+      "Player->RemoveItem misc_dwrv_bowl00 1",
+      "AddItem misc_dwrv_bowl00 1"
+    ]
+  },
+  "2032240142386719995": {
+    "Prev": "186065066243399448",
+    "Next": "2920626030746112878",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ra'zhid",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ra'Zhid teaches you a lesson.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "2920626030746112878": {
+    "Prev": "2032240142386719995",
+    "Next": "180167512227784148",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ra'zhid",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ra'Zhid sees that you've been sniffing around. Will you give those artifacts back to Ra'Zhid, or will Ra'Zhid kill you?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_dwrv_artifact60",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_dwrv_bowl00",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_dwrv_goblet00",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give him the artifacts\" 1 \"Keep the artifacts\" 2"
+    ]
+  },
+  "180167512227784148": {
+    "Prev": "2920626030746112878",
+    "Next": "2794019488239862828",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ra'zhid",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What Dwemer artifacts?",
+    "Filters": [],
+    "Script": []
+  },
+  "2794019488239862828": {
+    "Prev": "180167512227784148",
+    "Next": "210561776243114158",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mebestian ence",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Where did you get that?! It's illegal to have Dwemer artifacts. Get out of here before I summon the authorities.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "misc_dwrv_artifact50",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BrotherBragor",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "210561776243114158": {
+    "Prev": "2794019488239862828",
+    "Next": "166087851215241700",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mebestian ence",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I resent your implications. I am an honest merchant.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BrotherBragor",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "166087851215241700": {
+    "Prev": "210561776243114158",
+    "Next": "4732196832773417472",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Khajiit",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Hla Oad",
+    "PlayerFaction": "",
+    "Text": "%Name hears that Ra'Zhid had Dwemer artifacts. %Name tells you because %Name does not like Ra'Zhid.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "4732196832773417472": {
+    "Prev": "166087851215241700",
+    "Next": "2760747682152631446",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Hla Oad, Fatleg's Drop Off",
+    "PlayerFaction": "",
+    "Text": "I don't know anything about that.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2760747682152631446": {
+    "Prev": "4732196832773417472",
+    "Next": "7960125311936721429",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Hla Oad",
+    "PlayerFaction": "",
+    "Text": "I heard Ra'Zhid over at FatLeg's Drop Off was looking for a buyer.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "7960125311936721429": {
+    "Prev": "2760747682152631446",
+    "Next": "30087211412896015428",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "artisa arelas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Artifacts salvaged from Dwemer ruins are valuable, but protected under Imperial law, and trade in such artifacts is illegal. Most valuable are Dwarven weapons and armor, both for their superb craftsmanship, and for their value to collectors and scholars.",
+    "Filters": [],
+    "Script": []
+  },
+  "30087211412896015428": {
+    "Prev": "7960125311936721429",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Savant",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Artifacts salvaged from Dwemer ruins are valuable, but protected under Imperial law, and trade in such artifacts is illegal. Most valuable are Dwarven weapons and armor, both for their superb craftsmanship, and for their value to collectors and scholars.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

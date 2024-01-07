@@ -1,0 +1,178 @@
+{
+  "225827405257578924": {
+    "Prev": "",
+    "Next": "2051465141513032668",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "thormoor gray-wave",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As punishment for my incompetence, the seer laid a powerful curse upon me.  I am exhausted, but can't sleep no matter what I try.  Potions, magicka, nothing works.  The truth is, I haven't slept at all in six months.  %PCName, if you happen to run into the seer, maybe you could convince him to lift the curse?  His name is Geilir the Mumbling, and he lives by himself in a dwelling here on Solstheim.  Do this for me, and I will share with you the most valuable secret I learned when I was a ship captain.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_CursedCaptain",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_CursedCaptain",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal BM_CursedCaptain 30"
+    ]
+  },
+  "2051465141513032668": {
+    "Prev": "225827405257578924",
+    "Next": "1355113557655728228",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "geilir the mumbling",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, it's true.  I cursed Thormoor Gray-Wave with eternal wakefulness.  He couldn't stay awake and carry out his duties, and now my entire family is dead as a result!  So I made sure Thormoor would never fall asleep again.  Fitting punishment, don't you think?  Sorry, but there's nothing you could do to make me reverse my curse.  Nothing, that....  Well, maybe there is one thing.  If you were to return my only friend, I would be most grateful...grateful enough to lift Thormoor's curse....",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_CursedCaptain",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_SadSeer",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_CursedCaptain",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_SadSeer",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "1355113557655728228": {
+    "Prev": "2051465141513032668",
+    "Next": "22813145269358705",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "thormoor gray-wave",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I suffer this malady no longer, thanks to you.  The curse has been lifted, and I may sleep once more.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_CursedCaptain",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "22813145269358705": {
+    "Prev": "1355113557655728228",
+    "Next": "623513199740527164",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "geilir the mumbling",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I didn't think I would ever feel the need to relieve Thormoor Gray-Wave's misery, but you did me a great service by returning Oddfrid White-Lip.  As a show of thanks, I will now remove Thormoor's curse.  [Geilir begins making several odd hand gestures, and mumbles under his breath.]  There!  Thormoor's curse has been lifted!  He will now find the sleep I have denied him for so many months.  I...I hope he finds peace.  He'll sleep, but even I can't stop a guilty man's nightmares.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_SadSeer",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_CursedCaptain",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Journal BM_CursedCaptain 40"
+    ]
+  },
+  "623513199740527164": {
+    "Prev": "22813145269358705",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "geilir the mumbling",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thormoor's curse has already been removed.  He will be able to sleep now, for as long as he likes.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_SadSeer",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_CursedCaptain",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  }
+}

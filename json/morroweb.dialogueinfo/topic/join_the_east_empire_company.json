@@ -1,0 +1,174 @@
+{
+  "32681283711537029546": {
+    "Prev": "",
+    "Next": "1235330461088413493",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You're already working for the East Empire Company. Is this an attempt at humor? I'm not amused.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "moddisposition -1"
+    ]
+  },
+  "1235330461088413493": {
+    "Prev": "32681283711537029546",
+    "Next": "322838711831330428",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well, then. You are now an %NextPCRank in the East Empire Company, %PCName. I'll make it clear to you now that I am the one in charge; see me when you're ready for an assignment or want a promotion.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "PCRaiseRank",
+      "ModDisposition 5"
+    ]
+  },
+  "322838711831330428": {
+    "Prev": "1235330461088413493",
+    "Next": "21291254781734316216",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The East Empire Company is a business at heart. Applicants should have a winning personality, and a strong will. Those with the ability to speak eloquently and barter shrewdly are most valuable. Given the hostile environments the Company often ventures into, applicants should have a keen sense of security. Finally, all applicants should be trained in the time-honored virtues of long blades and medium armor, as has been customary for the Company for generations.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Choice \"Okay, I'm in.\" 1 \"No, sorry.\" 4"
+    ]
+  },
+  "21291254781734316216": {
+    "Prev": "322838711831330428",
+    "Next": "213599299468411207",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Makes little difference to me. Others can be found to do the job.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": []
+  },
+  "213599299468411207": {
+    "Prev": "21291254781734316216",
+    "Next": "19412122383160624641",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Your interest is commendable, and we can certainly use the manual labor, if nothing else. As with all business, make sure you understand the requirements before agreeing to anything. So, are you willing?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "RankRequirement",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, hire me!\" 1 \"What are the requirements?\" 2"
+    ]
+  },
+  "19412122383160624641": {
+    "Prev": "213599299468411207",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "At a closer glance, it seems you'd be of little use to me. You certainly don't meet the requirements.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

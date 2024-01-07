@@ -1,0 +1,673 @@
+{
+  "22177255061131127667": {
+    "Prev": "",
+    "Next": "20296190472462631138",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "House Telvanni is one of the three Dunmer Great Houses on Vvardenfell. Their nobles are thousand-year-old wizards. Telvanni are supposed to hate politics, foreigners, and just about everything else, but the Vvardenfell Telvanni are apparently more ambitious and adventurous than most. I don't know much about them, but they do hire Western mercenaries, and some even rise to higher ranks. Talk to Telvanni councilors if you want to be become a Telvanni retainer.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_1_FindSpymaster",
+        "Value": 14.0
+      }
+    ],
+    "Script": []
+  },
+  "20296190472462631138": {
+    "Prev": "22177255061131127667",
+    "Next": "208473319161721731",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sul-matuul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The khans of the Great Houses are called 'councilors.' The khans of House Telvanni meet in a very strange place, I'm told. They call it 'Sadrith Mora,' which means 'forest of the mushrooms' in our tongue. I have heard the Telvanni live in giant mushrooms. I'm sure it is a very bad place. But you must go and find their councilors and persuade them to name you Hortator.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "208473319161721731": {
+    "Prev": "20296190472462631138",
+    "Next": "149583057249028990",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Thanks to you, things will be much more peaceful for the Mages Guild here on Vvardenfell. Perhaps there's hope for the Empire after all.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_KillTelvanni",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MG_KillTelvanni 100"
+    ]
+  },
+  "149583057249028990": {
+    "Prev": "208473319161721731",
+    "Next": "25623103982660214250",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Ah, so all the Telvanni Councilors are dead? That is good news indeed, %PCRank. I've feared for my life working here on this island with all those Telvanni around. Now that they're gone, I don't need this amulet or this staff. They're yours now, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "aryon",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "dratha",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "gothren",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "neloth",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "therana",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_KillTelvanni",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal MG_KillTelvanni 100",
+      "RemoveItem necromancers_amulet_uniq 1",
+      "Player->AddItem necromancers_amulet_uniq 1",
+      "RemoveItem ebony_staff_trebonius 1",
+      "Player->AddItem ebony_staff_trebonius 1",
+      "ModPCFacRep 20 \"Mages Guild\"",
+      "ModDisposition 25"
+    ]
+  },
+  "25623103982660214250": {
+    "Prev": "149583057249028990",
+    "Next": "260122322925243696",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "It's not a difficult task for a %PCRank. Just find all the Telvanni Councilors: Master Aryon, Mistress Dratha, Master Gothren, Master Neloth, and Mistress Therana. Then kill them all. Simple, really.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_KillTelvanni",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "260122322925243696": {
+    "Prev": "25623103982660214250",
+    "Next": "1372630516203504528",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Yes, House Telvanni simply does not get along well with the Mages Guild. I do not think that we can resolve this conflict peacefully. Therefore, I request that you kill the Councilors of House Telvanni: Master Aryon, Mistress Dratha, Master Gothren, Master Neloth, and Mistress Therana.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "C3_DestroyDagoth",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Dwarves",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MG_KillTelvanni 10"
+    ]
+  },
+  "1372630516203504528": {
+    "Prev": "260122322925243696",
+    "Next": "1879277768809430",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "You belong to House Telvanni, do you not? Where do your true loyalties lie? House Telvanni opposes our every effort at modernizing the way magic is practiced here in Vvardenfell.",
+    "Filters": [],
+    "Script": []
+  },
+  "1879277768809430": {
+    "Prev": "1372630516203504528",
+    "Next": "3150519672119583740",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "They are the enemy, %PCRank. They oppose everything the Mages Guild stands for.",
+    "Filters": [],
+    "Script": []
+  },
+  "3150519672119583740": {
+    "Prev": "1879277768809430",
+    "Next": "31682165302830223632",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "therana",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's a funny sort of house, with all those glowing blue crystals all over it. Did I ever tell you about when I was a little girl? I always liked going to the house. That's where everyone keeps their toys. Are you listening to me? You'd better be. Yes, that's better. No need to do that. I'd offer you something, but I'm all out of kwama eggs.",
+    "Filters": [],
+    "Script": []
+  },
+  "31682165302830223632": {
+    "Prev": "3150519672119583740",
+    "Next": "58706134123472745",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "artisa arelas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "House Telvanni is one of the three Dunmer Great Houses with holdings on Vvardenfell. The Telvanni wizard-lords have traditionally isolated themselves, pursuing wisdom and mastery in solitude. But certain ambitious wizards-lords, their retainers, and clients have entered whole-heartily into the competition to control and exploit Vvardenfell's land and resources, building towers and bases all along the eastern coast. The Telvanni think that wisdom confers power, and power confers right.",
+    "Filters": [],
+    "Script": []
+  },
+  "58706134123472745": {
+    "Prev": "31682165302830223632",
+    "Next": "30138170812589112567",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Female",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am Master Aryon. I have heard of you, %PCName. Might you want to join House Telvanni? No one here will stop you from looking into any line of inquiry, nor do we force you to share your secrets like those in the Mages Guild.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "RankRequirement",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "30138170812589112567": {
+    "Prev": "58706134123472745",
+    "Next": "1433551521727325746",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Female",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am Mistress %Name, one of the Councilors of House Telvanni. If you want to learn about House Telvanni, speak with my Mouth in the Telvanni Council House in Sadrith Mora.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "RankRequirement",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "1433551521727325746": {
+    "Prev": "30138170812589112567",
+    "Next": "2059275391891629231",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am Master %Name, one of the Councilors of House Telvanni. If you want to learn about House Telvanni, speak with my Mouth in the Telvanni Council House in Sadrith Mora.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "RankRequirement",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "2059275391891629231": {
+    "Prev": "1433551521727325746",
+    "Next": "220613116545212842",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "House Telvanni is one of the Great Houses. We value talent, knowledge, and initiative. Perhaps you would like to join House Telvanni?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "RankRequirement",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "220613116545212842": {
+    "Prev": "2059275391891629231",
+    "Next": "27724258861367611014",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "House Telvanni is one of the Great Houses. We value talent, knowledge, and initiative. Perhaps you would like to join House Telvanni?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "RankRequirement",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "27724258861367611014": {
+    "Prev": "220613116545212842",
+    "Next": "32579729133721148",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We don't care about politics. We don't care what other think. We just want to be left alone. And our wizard-lords and their mercenaries make sure no one bothers us.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 50.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "32579729133721148": {
+    "Prev": "27724258861367611014",
+    "Next": "30261230653266426853",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We live comfortably. Our wizard-lords keep us secure, and otherwise leave us alone. All we want is to be left in peace to do as we wish.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "30261230653266426853": {
+    "Prev": "32579729133721148",
+    "Next": "136721834510224857",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Savant",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "House Telvanni is one of the three Dunmer Great Houses with holdings on Vvardenfell. The Telvanni wizard-lords have traditionally isolated themselves, pursuing wisdom and mastery in solitude. But certain ambitious wizards-lords, their retainers, and clients have entered whole-heartily into the competition to control and exploit Vvardenfell's land and resources, building towers and bases all along the eastern coast. The Telvanni think that wisdom confers power, and power confers right.",
+    "Filters": [
+      {
+        "Type": "NotFaction",
+        "Func": "NotFaction",
+        "Compare": "Equal",
+        "Id": "Telvanni",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "136721834510224857": {
+    "Prev": "30261230653266426853",
+    "Next": "4802266721863511496",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Noble",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Telvanni think that wisdom confers power, and power confers right.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 25.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "4802266721863511496": {
+    "Prev": "136721834510224857",
+    "Next": "3064830113189626130",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Noble",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Telvanni wizard-lords have traditionally isolated themselves, pursuing wisdom and mastery in solitude. But certain ambitious wizards-lords have joined the competition to control and exploit Vvardenfell's land and resources, building towers and bases all along the eastern coast.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 50.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "3064830113189626130": {
+    "Prev": "4802266721863511496",
+    "Next": "564307531046217252",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Noble",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "House Telvanni is one of the three Dunmer Great Houses with holdings on Vvardenfell.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "564307531046217252": {
+    "Prev": "3064830113189626130",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "Vivec, Guild of Mages",
+    "PlayerFaction": "",
+    "Text": "Trebonius asked you to kill the Telvanni Council? I wouldn't even try to do that if I were you. Even if you were successful, there's no telling how the Telvanni would respond.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_KillTelvanni",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  }
+}

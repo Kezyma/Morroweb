@@ -1,0 +1,68 @@
+{
+  "9397279062618732489": {
+    "Prev": "",
+    "Next": "22900249262481225255",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Savant",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The security discipline involves defeating locks and traps designed to prevent access to locations and containers. This skill is essential for agents and thieves alike.",
+    "Filters": [
+      {
+        "Type": "NotRace",
+        "Func": "NotRace",
+        "Compare": "Equal",
+        "Id": "Dark Elf",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "22900249262481225255": {
+    "Prev": "9397279062618732489",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hecerinde",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "I have some knowledge of this. Of what use is that to you?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BalmoraDefenses",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TG_BalmoraDefenses",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  }
+}

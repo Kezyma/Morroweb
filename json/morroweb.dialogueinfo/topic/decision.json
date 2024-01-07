@@ -1,0 +1,698 @@
+{
+  "11146105952944117950": {
+    "Prev": "",
+    "Next": "86047710823723219",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've already taken care of it, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_4",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "86047710823723219": {
+    "Prev": "11146105952944117950",
+    "Next": "96263195263629694",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've already taken care of it, %PCRank. Just let me know when the construction is nearly done.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_4",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "96263195263629694": {
+    "Prev": "86047710823723219",
+    "Next": "56254389373526511",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What? Fine, fine. That's fine. I honestly don't care. Just make sure there are no problems. I don't want to be bothered with this again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_4",
+        "Value": 30.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->additem \"gold_001\" 300",
+      "Journal CO_4 50",
+      "ModPCFacRep 12 \"East Empire Company\"",
+      "StartScript ColonyServTimer",
+      "Goodbye"
+    ]
+  },
+  "56254389373526511": {
+    "Prev": "96263195263629694",
+    "Next": "889721290232449743",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Fine, fine. I'll see to it that work starts soon. Now, go find something to keep you occupied for a while. I have other things to attend to, and it will take a few days for the construction to finish.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Journal CO_4 60",
+      "Set ColonyService to 1",
+      "StartScript ColonyServTimer",
+      "ModPCFacRep 12 \"East Empire Company\""
+    ]
+  },
+  "889721290232449743": {
+    "Prev": "56254389373526511",
+    "Next": "21586104741568321653",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well. A trader it is. I'll make sure the money is provided so construction starts soon. That's all for now, %PCRank. It'll take a few days for the construction; come back and see me when it's done.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Journal CO_4 70",
+      "Set ColonyService to 2",
+      "StartScript ColonyServTimer",
+      "ModPCFacRep 12 \"East Empire Company\""
+    ]
+  },
+  "21586104741568321653": {
+    "Prev": "889721290232449743",
+    "Next": "16742146962583030910",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What do you mean, you haven't decided yet? If you haven't made a decision, why are you even discussing it with me?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": [
+      "moddisposition -2"
+    ]
+  },
+  "16742146962583030910": {
+    "Prev": "21586104741568321653",
+    "Next": "720711278267008473",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Let's get this over with, so I can allocate the funds and move on to something more important. What's it going to be?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_4",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Choice: \"The Smith.\" 4 \"The Trader\" 5 \"I haven't decided yet.\" 6"
+    ]
+  },
+  "720711278267008473": {
+    "Prev": "16742146962583030910",
+    "Next": "236992181557384073",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You heard me, %PCRank. A smith or a trader. I don't care how you do it. Ask the colonists, decide on your own, pick one out of a hat. Just come back and let me know what it's going to be.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal CO_4 20"
+    ]
+  },
+  "236992181557384073": {
+    "Prev": "720711278267008473",
+    "Next": "16628216081311221303",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A good choice, %PCName. The addition will benefit our colony, I'm sure.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_4",
+        "Value": 50.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "16628216081311221303": {
+    "Prev": "236992181557384073",
+    "Next": "2454423943185026638",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The decision's been made, %PCName. Has Carnius been informed yet?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_4",
+        "Value": 30.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2454423943185026638": {
+    "Prev": "16628216081311221303",
+    "Next": "22801268022147514621",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Indeed, a smith would be useful to us. Are you certain that's how we should invest? Once we've started construction, you can't afford to change your mind.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Yes, I'm sure.\" 4 \"No, wait.\" 3"
+    ]
+  },
+  "22801268022147514621": {
+    "Prev": "2454423943185026638",
+    "Next": "174283007633669992",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A trader, eh? Well, we can certainly build that, though it will take some time. Are you absolutely sure that's what we should build? Once we invest the money in it, we can't change the plans.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Yes, I'm sure.\" 5 \"No, wait.\" 3"
+    ]
+  },
+  "174283007633669992": {
+    "Prev": "22801268022147514621",
+    "Next": "1803322310157231343",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Not quite sure yet, eh? Not to worry, %PCName. Think it over some more.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "1803322310157231343": {
+    "Prev": "174283007633669992",
+    "Next": "16143168111777121901",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well. I'll make sure the work starts promptly. Carnius needs to be informed, regardless of whether or not he cares. We can't do anything without the utmost regard for procedure; we don't want to give him an edge.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal CO_4 30",
+      "Set ColonyService to 1"
+    ]
+  },
+  "16143168111777121901": {
+    "Prev": "1803322310157231343",
+    "Next": "2370917710697717552",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So be it. I'll get the men started on construction; you take the news to Carnius. I doubt he'll care, but Stendarr forbid he doesn't know every little detail of what goes on here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal CO_4 40",
+      "Set ColonyService to 2"
+    ]
+  },
+  "2370917710697717552": {
+    "Prev": "16143168111777121901",
+    "Next": "496318281606632531",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So, what do you think, %PCName? Which should it be - the smith, or the trader?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_4",
+        "Value": 20.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice: \"The Smith.\" 1 \"The Trader.\" 2 \"I haven't decided yet.\" 3"
+    ]
+  },
+  "496318281606632531": {
+    "Prev": "2370917710697717552",
+    "Next": "22569293201341118213",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Raven Rock is expanding nicely, despite the heavy ore quotas Carnius has insisted on. It's time we build something other than housing, and the funds are available to build either a smithy or a trader's outpost. I'm having a difficult time deciding which would suit us better, and I'd value your opinion. Take some time and think it over, talk to the workers if you like, and come back when you've made up your mind.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal CO_4 20"
+    ]
+  },
+  "22569293201341118213": {
+    "Prev": "496318281606632531",
+    "Next": "2271225090289238960",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Apronia Alfena",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It was decided already, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_4",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "2271225090289238960": {
+    "Prev": "22569293201341118213",
+    "Next": "13192231823251321529",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Apronia Alfena",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You're asking me? Well, gee. It's nice to know that you think I'm important! I think it would be great if there were a place where I could go shopping and buy some nice new clothes. Maybe something that isn't wool, you know? I'm a very big fan of wool, of course, but after a while it gets a little itchy, and starts to smell.",
+    "Filters": [],
+    "Script": []
+  },
+  "13192231823251321529": {
+    "Prev": "2271225090289238960",
+    "Next": "900831520812711737",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Sabinus Oranius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It was decided already, %PCName. Aren't there better things to talk about?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_4",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "900831520812711737": {
+    "Prev": "13192231823251321529",
+    "Next": "14484957969117787",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Sabinus Oranius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hmm, tough question. I think I'd rather see a trader here; maybe that way, more people would be interested in stopping by. Then maybe some of them might want to stay, and that would make the work load lighter for all of us.",
+    "Filters": [],
+    "Script": []
+  },
+  "14484957969117787": {
+    "Prev": "900831520812711737",
+    "Next": "808313025319232635",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gamin Girith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I hear it's been taken care of already. Doesn't matter what I think now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_4",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "808313025319232635": {
+    "Prev": "14484957969117787",
+    "Next": "1755218373699030290",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gamin Girith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, if you ask me, we need a Smith here. If the equipment breaks down, we could just get it fixed here, instead of shipping it off to the mainland. But that's just my opinion.",
+    "Filters": [],
+    "Script": []
+  },
+  "1755218373699030290": {
+    "Prev": "808313025319232635",
+    "Next": "529289882307825066",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gidar Verothan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's already been decided; there's nothing to talk about.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_4",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "529289882307825066": {
+    "Prev": "1755218373699030290",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gidar Verothan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hmm. I don't know that I really care either way, to be honest. I guess I'd have to say a Trader would be better to have, since I could buy all sorts of things there.",
+    "Filters": [],
+    "Script": []
+  }
+}

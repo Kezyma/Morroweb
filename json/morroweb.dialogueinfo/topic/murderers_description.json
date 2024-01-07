@@ -1,0 +1,309 @@
+{
+  "28522295582749318395": {
+    "Prev": "",
+    "Next": "12972233252543320682",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uryne nirith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You killed Nine-Toes. He was not the murderer.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "nine_toes",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Retaliation",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "12972233252543320682": {
+    "Prev": "28522295582749318395",
+    "Next": "1403113085206715758",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uryne nirith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You found Ralen Hlaalo's murderer. I am sure you killed the right one.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "thanelen velas",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Retaliation",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1403113085206715758": {
+    "Prev": "12972233252543320682",
+    "Next": "17526149933175317577",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uryne nirith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Dunmer who murdered Ralen Hlaalo was young with red hair in a tall row over his head as is fashionable these days. He wore bonemold armor and wielded a Dwemer War Axe. I do not know more than that. I am sorry. I wish you luck.",
+    "Filters": [],
+    "Script": [
+      "Journal HH_Retaliation 50"
+    ]
+  },
+  "17526149933175317577": {
+    "Prev": "1403113085206715758",
+    "Next": "5099280924703443",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "thanelen velas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Just a coincidence, I assure you. Nine-Toes is the real murderer.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HH_Retaliation",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "5099280924703443": {
+    "Prev": "17526149933175317577",
+    "Next": "17838616529388421",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nine_toes",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "See? Now you know I am innocent.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HH_Retaliation",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "17838616529388421": {
+    "Prev": "5099280924703443",
+    "Next": "2830442713314981",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Balmora, Council Club",
+    "PlayerFaction": "",
+    "Text": "Why, no. I don't know anyone like that. Everyone here at the Council Club thinks that Nine-Toes murdered Ralen Hlaalo.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HH_Retaliation",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2830442713314981": {
+    "Prev": "17838616529388421",
+    "Next": "16847192888244229",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Balmora",
+    "PlayerFaction": "",
+    "Text": "That could be Thanelen Velas at the Council Club over by the Silt Strider.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HH_Retaliation",
+        "Value": 100.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HH_Retaliation 60"
+    ]
+  },
+  "16847192888244229": {
+    "Prev": "2830442713314981",
+    "Next": "16672167983165910426",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Imperial",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Balmora",
+    "PlayerFaction": "",
+    "Text": "Hmm... I believe Thanelen Velas over at the Council Club might fit that description.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HH_Retaliation",
+        "Value": 100.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "nolore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HH_Retaliation 60"
+    ]
+  },
+  "16672167983165910426": {
+    "Prev": "16847192888244229",
+    "Next": "125841119448226631",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Khajiit",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Balmora",
+    "PlayerFaction": "",
+    "Text": "%Name thinks %Name saw someone like that over at the Council Club, just across from the Silt Strider.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HH_Retaliation",
+        "Value": 100.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "125841119448226631": {
+    "Prev": "16672167983165910426",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Balmora",
+    "PlayerFaction": "",
+    "Text": "I don't know anyone like that.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HH_Retaliation",
+        "Value": 100.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "nolore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

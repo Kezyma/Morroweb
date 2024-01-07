@@ -1,0 +1,743 @@
+{
+  "219716448172803785": {
+    "Prev": "",
+    "Next": "1849223053741517954",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "detritus caria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for all your hard work, Champion of Clutter.  My collection has never looked livelier.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_ClutterCollector",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1849223053741517954": {
+    "Prev": "219716448172803785",
+    "Next": "2762918054156128776",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "detritus caria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Amazing! I can't believe I'm actually holding the definitive collection of Dwarven clutter in my hands. You have done well, %PCName. I hereby confer upon you the title of Champion of Clutter for all time. And here is your reward.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 11.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_dwrv_bowl00",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_dwrv_mug00",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_dwrv_pitcher00",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_dwrv_goblet00",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_dwrv_goblet10",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_ClutterCollector\" 50",
+      "Player->RemoveItem \"misc_dwrv_goblet00\" 1",
+      "Player->RemoveItem \"misc_dwrv_goblet10\" 1",
+      "Player->RemoveItem \"misc_dwrv_bowl00\" 1",
+      "Player->RemoveItem \"misc_dwrv_mug00\" 1",
+      "Player->RemoveItem \"misc_dwrv_pitcher00\" 1",
+      "Player->AddItem \"Gold_001\" 2000",
+      "ModDisposition 10"
+    ]
+  },
+  "2762918054156128776": {
+    "Prev": "1849223053741517954",
+    "Next": "68071485488743883",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "detritus caria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Really, Champion, you shouldn't lie like that. You raise my hopes only to dash them a second later. Go find the Dwemer table set, and don't come back until you have it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 11.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "68071485488743883": {
+    "Prev": "2762918054156128776",
+    "Next": "7535100162774119370",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "detritus caria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah, I knew it would take you time. This is a quest truly befitting the one and only Champion of Clutter!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 12.0
+      }
+    ],
+    "Script": []
+  },
+  "7535100162774119370": {
+    "Prev": "68071485488743883",
+    "Next": "13852148291418117742",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "detritus caria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you managed to find the Dwemer items yet, %PCName?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_ClutterCollector",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here you are.\" 11 \"No, not yet.\" 12"
+    ]
+  },
+  "13852148291418117742": {
+    "Prev": "7535100162774119370",
+    "Next": "27104147583052630056",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "detritus caria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Fabulous! I have searched far and wide for a complete set of Dwemer tableware, to no avail. I am not skilled enough to search through the dwarven ruins themselves, but you can, my Champion. The complete set includes two goblets -- one slightly larger than the other -- a pitcher, a tankard, and a large bowl. Bring these to me, and I will pay you handsomely.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 9.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_ClutterCollector\" 40",
+      "ModDisposition 10"
+    ]
+  },
+  "27104147583052630056": {
+    "Prev": "13852148291418117742",
+    "Next": "691696042860417454",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "detritus caria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, that's truly a pity. I must hereby abolish your title of Champion of Clutter. Please leave me now.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_ClutterCollector\" 80",
+      "Goodbye"
+    ]
+  },
+  "691696042860417454": {
+    "Prev": "27104147583052630056",
+    "Next": "15496186461595510994",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "detritus caria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My collection is almost complete, but I require one more set of extremely rare objects. Are you up to the challenge, my Champion?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_ClutterCollector",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, I am.\" 9 \"No, I'm not.\" 10"
+    ]
+  },
+  "15496186461595510994": {
+    "Prev": "691696042860417454",
+    "Next": "11274169952653532675",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "detritus caria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent! Thank you so much, %PCName. You are truly the Champion of Clutter. Accept this as my reward. Come back again and I may have more work for you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 7.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_com_silverware_fork",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_com_silverware_knife",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_com_silverware_spoon",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_com_metal_plate_03",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_de_pot_redware_04",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_ClutterCollector\" 30",
+      "Player->RemoveItem \"misc_de_pot_redware_04\" 1",
+      "Player->RemoveItem \"misc_com_silverware_fork\" 1",
+      "Player->RemoveItem \"misc_com_silverware_knife\" 1",
+      "Player->RemoveItem misc_com_silverware_spoon 1",
+      "Player->RemoveItem \"misc_com_metal_plate_03\" 1",
+      "Player->AddItem \"Gold_001\" 500",
+      "ModDisposition 10"
+    ]
+  },
+  "11274169952653532675": {
+    "Prev": "15496186461595510994",
+    "Next": "32245151052184517800",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "detritus caria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This is behavior unbecoming of the Champion of Clutter, %PCName. Please don't lie to me any further, and get the items to me as soon as you can.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 7.0
+      }
+    ],
+    "Script": []
+  },
+  "32245151052184517800": {
+    "Prev": "11274169952653532675",
+    "Next": "1841318292286747994",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "detritus caria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Please hurry. I simply cannot wait to sit on my bed and gaze with gratification upon my completed collections.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 8.0
+      }
+    ],
+    "Script": []
+  },
+  "1841318292286747994": {
+    "Prev": "32245151052184517800",
+    "Next": "13688126821680415841",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "detritus caria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you have the items I requested, %PCName?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_ClutterCollector",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here they are.\" 7 \"No, I don't.\" 8"
+    ]
+  },
+  "13688126821680415841": {
+    "Prev": "1841318292286747994",
+    "Next": "2942493341947127057",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "detritus caria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Wonderful! If you'll look on the shelf in the back corner, you'll notice the glaring absence of a particular redware pot. The pot is tall, with vertical lines going down its side, and is shaped much like the adjacent blue glass pot. I also require a complete set of Imperial silverware -- that's fork, knife, and spoon. Finally, I require a common metal plate. The plate is yellow in color and features a picture of the sun in the center. Find these for me, Champion, and I will reward you well.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_ClutterCollector\" 20",
+      "ModDisposition 10"
+    ]
+  },
+  "2942493341947127057": {
+    "Prev": "13688126821680415841",
+    "Next": "15015308283270532678",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "detritus caria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, that's truly a pity. I must hereby abonlish your title of Champion of Clutter. Please leave me now.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_ClutterCollector\" 90",
+      "ModDisposition -20",
+      "Goodbye"
+    ]
+  },
+  "15015308283270532678": {
+    "Prev": "2942493341947127057",
+    "Next": "4187652432496126",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "detritus caria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My collection is looking better thanks to your efforts, but it is still incomplete. I have another task for you, if you're interested.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_ClutterCollector",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, I'm interested.\" 5 \"No thanks. Once was enough.\" 6"
+    ]
+  },
+  "4187652432496126": {
+    "Prev": "15015308283270532678",
+    "Next": "304271784263553317",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "detritus caria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh how wonderful! This is exactly what I wanted. Thank you so much, %PCName. I hereby christen you the Champion of Clutter! Take this money as a token of my appreciation. Come back again and I may have more work for you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_clothbolt_02",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_imp_silverware_pitcher",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_ClutterCollector\" 10",
+      "Player->RemoveItem \"misc_clothbolt_02\" 1",
+      "Player->RemoveItem \"misc_imp_silverware_pitcher\" 1",
+      "Player->AddItem \"Gold_001\" 300",
+      "ModDisposition 10"
+    ]
+  },
+  "304271784263553317": {
+    "Prev": "4187652432496126",
+    "Next": "1125777901054427463",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "detritus caria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Why do you lie to me %PCName? I'm just a simple collector of clutter looking for my Champion. Come back again when you have the cloth and pitcher.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "1125777901054427463": {
+    "Prev": "304271784263553317",
+    "Next": "14002186871846929153",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "detritus caria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, please get them to me as soon as possible. this matter is of the highest urgency. Remember, the fabric is burgundy and has a diamond pattern on the side, and the pitcher is silver.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": []
+  },
+  "14002186871846929153": {
+    "Prev": "1125777901054427463",
+    "Next": "2140267893026529544",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "detritus caria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you have the bolt of fabric and the pitcher I asked you for, %PCName?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_ClutterCollector",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here you are.\" 3 \"No, not yet.\" 4"
+    ]
+  },
+  "2140267893026529544": {
+    "Prev": "14002186871846929153",
+    "Next": "29562822124522031",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "detritus caria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't know if I'll ever fill out my collection now. I'm far too busy finding the perfect arrangement for my limeware to go out and acquire new items.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_ClutterCollector",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "29562822124522031": {
+    "Prev": "2140267893026529544",
+    "Next": "14527600662120339",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "detritus caria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Fabulous! I require two items for my Imperial collection at the moment. The first is a bolt of Imperial rat hair fabric. It is easy to recognize by its burgundy color and diamond pattern on the side. The second is a brushed silver pitcher. Please return when you have these two items.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_ClutterCollector\" 1",
+      "ModDisposition 10"
+    ]
+  },
+  "14527600662120339": {
+    "Prev": "29562822124522031",
+    "Next": "15631744188042457",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "detritus caria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, that's truly a pity. I suppose I shall have to remain my own Champion of Clutter for now.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_ClutterCollector\" 100",
+      "ModDisposition -10"
+    ]
+  },
+  "15631744188042457": {
+    "Prev": "14527600662120339",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "detritus caria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "While my shelves full of Morrowind's clutter are impressive, they are not yet definitive. I am looking to recruit a brave and stalwart adventurer to become my Champion of Clutter, venturing into the world and seeking the items I need to complete my collections. Are you interested? Of course, I will reward you well.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MS_ClutterCollector",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"I'd be happy to help.\" 1 \"I've got more important work than chasing after utensils.\" 2"
+    ]
+  }
+}

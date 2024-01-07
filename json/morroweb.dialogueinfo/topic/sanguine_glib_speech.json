@@ -1,0 +1,191 @@
+{
+  "72222734127024936": {
+    "Prev": "",
+    "Next": "127472892159423017",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "You have returned the Amulet of Sanguine Glib Speech.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_S_GlibSpeech",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "127472892159423017": {
+    "Prev": "72222734127024936",
+    "Next": "25647174842010328702",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "With this amulet, you have returned all the Threads of the Webspinner to the Morag Tong. You will be blessed by Mephala's skill.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "ThreadsWebspinner",
+        "Value": 25.0
+      }
+    ],
+    "Script": [
+      "Journal MT_S_GlibSpeech 100",
+      "Player->RemoveItem SanguineAmuletGlibSpeech 1",
+      "Player->AddSpell SkillMephala_SP",
+      "Set ThreadsWebspinner to ThreadsWebspinner + 1",
+      "ModPCFacRep 25 \"Morag Tong\"",
+      "ModDisposition 25"
+    ]
+  },
+  "25647174842010328702": {
+    "Prev": "127472892159423017",
+    "Next": "1164457141155029561",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "So the Threads return to us one by one.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MT_S_GlibSpeech 100",
+      "Player->RemoveItem SanguineAmuletGlibSpeech 1",
+      "Set ThreadsWebspinner to ThreadsWebspinner + 1",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition 10"
+    ]
+  },
+  "1164457141155029561": {
+    "Prev": "25647174842010328702",
+    "Next": "207411625832510539",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "So your true loyalties shine through. Rest assured that the Morag Tong will have all the Threads of the Webspinner very soon.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "207411625832510539": {
+    "Prev": "1164457141155029561",
+    "Next": "2977472682592913993",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "You have been expelled from the Morag Tong... But I see you have one of the Threads of the Webspinner. Will you return this Thread?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sanguineamuletglibspeech",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is\" 1 \"No\" 2"
+    ]
+  },
+  "2977472682592913993": {
+    "Prev": "207411625832510539",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "So you have found the Amulet of Sanguine Glib Speech. Is it time for this Amulet to be reunited with its brothers in Mephala's service?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sanguineamuletglibspeech",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is\" 1 \"No\" 2"
+    ]
+  }
+}

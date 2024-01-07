@@ -1,0 +1,446 @@
+{
+  "8928285342519022": {
+    "Prev": "",
+    "Next": "22619316682420711487",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ajira hears you are expelled. Ajira was told to say you should make amends with the Arch-Mage, but Ajira tells you that the wizards here have many things to do and many things on their minds. Soon Ranis Athrys will forget you are expelled and then Ajira can speak with you again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "22619316682420711487": {
+    "Prev": "8928285342519022",
+    "Next": "32078146102290132692",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 6,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Ajira knows you have found the Staff of Magnus. Now Ajira might tell you her other secret.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_StaffMagnus",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "32078146102290132692": {
+    "Prev": "22619316682420711487",
+    "Next": "6828163781448012332",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 6,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Ajira knows you have found the Staff of Magnus. Now Ajira might tell you her other secret.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "staff_magnus_unique",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_StaffMagnus",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal MG_StaffMagnus 100",
+      "Player->ModReputation 1"
+    ]
+  },
+  "6828163781448012332": {
+    "Prev": "32078146102290132692",
+    "Next": "16579644373552990",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 6,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Have you found the Staff of Magnus? Ajira does not want it for herself. Just bring it to Ajira and let Ajira see it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_StaffMagnus",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "16579644373552990": {
+    "Prev": "6828163781448012332",
+    "Next": "5835301272052314486",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 6,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Ajira knows the Staff of Magnus is in Assu. It is a cave on the slopes of Mount Kand just northwest of Molag Mar.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_StolenReport",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MG_StaffMagnus 10"
+    ]
+  },
+  "5835301272052314486": {
+    "Prev": "16579644373552990",
+    "Next": "276061280022672315",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't have the Staff of Magnus with you? Then come back with it, and we'll settle the deal.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "staff_magnus_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "276061280022672315": {
+    "Prev": "5835301272052314486",
+    "Next": "4759262131563617077",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What?  How is it that you have this?  This was part of the museum's collection!  GUARDS!",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "staffmagnus",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "staff_magnus_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "SetPCCrimeLevel 120000",
+      "Set PCThief to 1",
+      "Goodbye"
+    ]
+  },
+  "4759262131563617077": {
+    "Prev": "276061280022672315",
+    "Next": "3016127439222823013",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, thank you for allowing us to add it to our collection.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "staffmagnus",
+        "Value": 2.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "staff_magnus_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "3016127439222823013": {
+    "Prev": "4759262131563617077",
+    "Next": "317139216182319173",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do take good care of it, then.  That staff is one of the most prized artifacts in all of Tamriel.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "317139216182319173": {
+    "Prev": "3016127439222823013",
+    "Next": "11358108702981723542",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Quite an addition for our collection.  It is one of the oldest artifacts in all of Tamriel, to my knowledge.  Thank you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "staff_magnus_unique",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "set staffmagnus to 2",
+      "player->removeitem \"staff_magnus_unique\" 1",
+      "set MuseumDonations to MuseumDonations + 1",
+      "\"staff_magnus_unique_x\"->Enable",
+      "moddisposition 5"
+    ]
+  },
+  "11358108702981723542": {
+    "Prev": "317139216182319173",
+    "Next": "2349517515313386007",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Quite an addition for our collection.  It is one of the oldest artifacts in all of Tamriel, to my knowledge.  Thank you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "staff_magnus_unique",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "set staffmagnus to 2",
+      "player->removeitem \"staff_magnus_unique\" 1",
+      "player->additem \"gold_001\" 30000",
+      "\"staff_magnus_unique_x\"->Enable"
+    ]
+  },
+  "2349517515313386007": {
+    "Prev": "11358108702981723542",
+    "Next": "572723979410527496",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't have the Staff of Magnus with you? Then come back with it, and we'll settle the deal.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "staff_magnus_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "572723979410527496": {
+    "Prev": "2349517515313386007",
+    "Next": "2634526682162565792",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Staff of Magnus.  Quite a prize, indeed.  Are you willing to part with it? I can offer you 30000 gold in exchange for it.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "staffmagnus",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_Blade",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Sell the item.\" 1 \"Keep the item.\" 2 \"Donate the item.\" 3"
+    ]
+  },
+  "2634526682162565792": {
+    "Prev": "572723979410527496",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Staff of Magnus.  Quite a prize, indeed.  Are you willing to part with it? I can offer you 30000 gold in exchange for it.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "staffmagnus",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Sell the item.\" 1 \"Keep the item.\" 2"
+    ]
+  }
+}

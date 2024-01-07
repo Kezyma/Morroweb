@@ -1,0 +1,313 @@
+{
+  "9896327551850022158": {
+    "Prev": "",
+    "Next": "12934243098927089",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Lalatia Varian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have done well. Keep the ring safe, and use it to the glory of the Nine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC25_JonHawker",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "12934243098927089": {
+    "Prev": "9896327551850022158",
+    "Next": "1621797703272931133",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Lalatia Varian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have done well, and it is clear to me that you were meant to keep the ring for yourself, to keep it safe, and to use it in the service of the Nine. Congratulations. Speak to me again when you are ready to undertake another of the Oracle's Quests.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC25_JonHawker",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ring_wind_unique",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC25_JonHawker_free",
+        "Value": 5.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal IC25_JonHawker 50",
+      "ModPCFacRep, 10, \"Imperial Cult\"",
+      "player->modReputation 1",
+      "modDisposition 10",
+      "Goodbye"
+    ]
+  },
+  "1621797703272931133": {
+    "Prev": "12934243098927089",
+    "Next": "186405935283923376",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Lalatia Varian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "How strange. And these tokens of Zenithar -- they bear remarkable enchantments, strikingly appropriate to the god they honor. I wonder... might you have been tested by an avatar of the god Zenithar himself? Strange. Very strange. But you have done well, and it is clear to me that you were meant to keep the ring for yourself, to keep it safe, and to use it in the service of the Nine. Congratulations. Speak to me again when you are ready to undertake another of the Oracle's Quests.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC25_JonHawker",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ring_wind_unique",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC25_JonHawker_free",
+        "Value": 5.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal IC25_JonHawker 50",
+      "ModPCFacRep, 10, \"Imperial Cult\"",
+      "player->modReputation 2",
+      "modDisposition 10"
+    ]
+  },
+  "186405935283923376": {
+    "Prev": "1621797703272931133",
+    "Next": "17084184652631026127",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Lalatia Varian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So you have found the Ring of the Wind in darkness, and brought it out?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC25_JonHawker",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ring_wind_unique",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC25_JonHawker_free",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Choice \"Mention your rescue of Jon Hawker and your reward.\" 2 \"Say nothing about Jon Hawker.\" 3"
+    ]
+  },
+  "17084184652631026127": {
+    "Prev": "186405935283923376",
+    "Next": "25464265042993915866",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Lalatia Varian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have done well, and it is clear to me that you were meant to keep the ring for yourself, to keep it safe, and to use it in the service of the Nine. Congratulations. Speak to me again when you are ready to undertake another of the Oracle's Quests.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC25_JonHawker",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ring_wind_unique",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal IC25_JonHawker 50",
+      "ModPCFacRep, 10, \"Imperial Cult\"",
+      "player->modReputation 1",
+      "modDisposition 10",
+      "Goodbye"
+    ]
+  },
+  "25464265042993915866": {
+    "Prev": "17084184652631026127",
+    "Next": "18440295322599226346",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Lalatia Varian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So you have found the Ring of the Wind in darkness, and brought it out?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC25_JonHawker",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ring_wind_unique",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  },
+  "18440295322599226346": {
+    "Prev": "25464265042993915866",
+    "Next": "1404550722132628406",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Lalatia Varian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "When you have found the Ring of the Wind, bring it to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC25_JonHawker",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1404550722132628406": {
+    "Prev": "18440295322599226346",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Lalatia Varian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have seen a Ring in Darkness. I have seen the Ring of the Wind, a legendary treasure of Elsweyr, sacred to Kynareth. I have seen the wind upon a dark elf's hand. I have seen fire gleam upon a Dwarf's face. I have seen darkness on a ring of water. I have heard no name whispered in the mouth of stone. Seek the Ring in Darkness, and bring it to me. Speak with a Dunmer savant and Dunmer scout to discover the meaning of this vision. Take these gifts. May they make your journey easier.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC24_OracleQuest",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->additem sc_divineintervention 2",
+      "player->additem sc_vigor 2",
+      "player->additem sc_vitality 2",
+      "Journal IC25_JonHawker 1"
+    ]
+  }
+}

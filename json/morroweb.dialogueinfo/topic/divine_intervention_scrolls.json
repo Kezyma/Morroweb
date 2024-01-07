@@ -1,0 +1,146 @@
+{
+  "3162020397223455243": {
+    "Prev": "",
+    "Next": "29046164932916014389",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mehra milo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Holamayan Monastery",
+    "PlayerFaction": "",
+    "Text": "Of course, normally I only use Almsivi Intervention scrolls. But for my escape from the Ministry of Truth, a Divine Intervention scroll was just what I needed.",
+    "Filters": [],
+    "Script": []
+  },
+  "29046164932916014389": {
+    "Prev": "3162020397223455243",
+    "Next": "133612291843529903",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mehra milo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have the scroll. I'll meet you at Holamayan. Goodbye, and good luck.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_4_MiloGone",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "133612291843529903": {
+    "Prev": "29046164932916014389",
+    "Next": "1345913876324724030",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mehra milo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "When you get out of here, look for a woman named Blatta Hateria on the East Docks of Ebonheart. Tell her I sent you, and that you want to 'go fishing.' She'll bring you to Holamayan by boat. I'll meet you there, and we'll get the lost prophecies from Gilvas Barelo, the leader of the Dissident priests. And magic conceals the Holamayan entrance -- speak to Vevrana Aryon, a monk at the dock at Holamayan, about the hidden entrance.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"A2_4_MiloGone\" 20",
+      "moddisposition 40",
+      "Player->RemoveItem \"sc_divineintervention\" 1",
+      "ShowMap Holamayan",
+      "StartScript MoveMehra"
+    ]
+  },
+  "1345913876324724030": {
+    "Prev": "133612291843529903",
+    "Next": "15942158561727328187",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mehra milo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll need one Divine Intervention scroll myself for my escape plan. Getting out will be a lot faster and safer for you if you have one, but if you haven't got one for yourself, maybe you can find some other way out. Now, listen. Here's my plan. Give me a Divine Intervention scroll. I'll meet you at the secret Dissident priests monastery at Holamayan. For safety, we'll travel separately....",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sc_divineintervention",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_4_MiloGone",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  },
+  "15942158561727328187": {
+    "Prev": "1345913876324724030",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mehra milo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I left a note for you that told you I needed Divine Intervention scrolls. I need at least one for my escape plan. If you haven't got one, you'll have to go get me one.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_4_MiloGone",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "sc_divineintervention",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  }
+}

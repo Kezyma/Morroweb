@@ -1,0 +1,222 @@
+{
+  "701879142185118698": {
+    "Prev": "",
+    "Next": "2478714652731015772",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "You have already brought me Dahrk Mezalf's ring.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_DahrkMezalf",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2478714652731015772": {
+    "Prev": "701879142185118698",
+    "Next": "19901258042385310256",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Yes, this is the ring I was looking for. Since you have brought me the books and this ring, please take this storm ring with my gratitude.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "centurion_shock_baladas",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "ring_dahrkmezalf_uniq",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HT_DahrkMezalf 100",
+      "Player->RemoveItem Ring_DahrkMezalf_uniq 1",
+      "Player->AddItem \"Ring of Lightning Storm\" 1",
+      "AddItem Ring_DahrkMezalf_uniq 1",
+      "ModPCFacRep 10 \"Telvanni\"",
+      "ModDisposition 15",
+      "Player->ModReputation 1"
+    ]
+  },
+  "19901258042385310256": {
+    "Prev": "2478714652731015772",
+    "Next": "1662622508108695041",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Yes, this is the ring I was looking for. As a reward, I will order my centurion to assist you. You will find it waiting outside. I have made some improvements to this one. You may also find this storm ring to be of some minor use.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "ring_dahrkmezalf_uniq",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HT_DahrkMezalf 100",
+      "Player->RemoveItem Ring_DahrkMezalf_uniq 1",
+      "AddItem Ring_DahrkMezalf_uniq 1",
+      "Player->AddItem \"Ring of Lightning Storm\" 1",
+      "ModPCFacRep 10 \"Telvanni\"",
+      "ModDisposition 20",
+      "\"centurion_shock_baladas\"->AIFollow Player 0 0 0 0 0",
+      "Player->ModReputation 1"
+    ]
+  },
+  "1662622508108695041": {
+    "Prev": "19901258042385310256",
+    "Next": "30915189453039517729",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "No, you do not have the ring. You will find the ring. You will give it to me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "30915189453039517729": {
+    "Prev": "1662622508108695041",
+    "Next": "699716065128635551",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "If you bring me the ring, I will reward you. Until you have it, do not remind me of your laziness.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "699716065128635551": {
+    "Prev": "30915189453039517729",
+    "Next": "12988184232230918156",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Did you find the Ring of Dahrk Mezalf?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_DahrkMezalf",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "12988184232230918156": {
+    "Prev": "699716065128635551",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Mezalf is sometimes referred to as \"Mezalf Bthungthumz.\" Perhaps he was from the Dwemer village of Bthungthumz. Go to Maar Gan. Head east past the silt strider, then go north towards the Foyada. Follow the Foyada Bani-Dad to the northwest until you see what remains of Bthungthumz on the right. If you find the ring, bring it to me.",
+    "Filters": [],
+    "Script": [
+      "Journal HT_DahrkMezalf 10"
+    ]
+  }
+}

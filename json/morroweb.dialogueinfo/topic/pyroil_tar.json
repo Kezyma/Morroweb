@@ -1,0 +1,124 @@
+{
+  "2628730370191808922": {
+    "Prev": "",
+    "Next": "6255121491114572",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dwarven ghost_radac",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've used the tar on the blade, you moron! What do they teach you kids nowadays??? See if you can follow these instructions: Turn around. Place left foot forward. Place right foot forward. Now repeat these steps until you're out of my damn sight!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Blade",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "6255121491114572": {
+    "Prev": "2628730370191808922",
+    "Next": "20800164032569316370",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dwarven ghost_radac",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, you've got the tar, but where's the blade? I could just apply it to your hands, but I figure you'd cause yourself some serious injury. Get the damn blade, you daft child!",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "pyroil_tar_unique",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "nerevarblade_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "20800164032569316370": {
+    "Prev": "6255121491114572",
+    "Next": "25793282365458262",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dwarven ghost_radac",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah...that's the stuff. Here, I'll do this. There. There's your sword. Not a bad looking blade, actually. Good luck to you, youngster. Now leave this old dwarf alone. Go!",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "pyroil_tar_unique",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "nerevarblade_01",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_Blade",
+        "Value": 80.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem nerevarblade_01 1",
+      "Player->RemoveItem pyroil_tar_unique 1",
+      "Player->AddItem nerevarblade_01_flame 1",
+      "Journal TR_Blade 80"
+    ]
+  },
+  "25793282365458262": {
+    "Prev": "20800164032569316370",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dwarven ghost_radac",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Just a little something to apply to that blade of yours. Fine looking blade, by the way. Should give you that \"fiery blade\" effect that everyone has always been so fond of.",
+    "Filters": [],
+    "Script": []
+  }
+}

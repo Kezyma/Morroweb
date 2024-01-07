@@ -1,0 +1,308 @@
+{
+  "3103267973128916632": {
+    "Prev": "",
+    "Next": "278420003126820238",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galyn arvel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So, you know the Twin Lamps. We could use your aid in our struggle against slavery.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_TwinLamps1",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "278420003126820238": {
+    "Prev": "3103267973128916632",
+    "Next": "264327967365330698",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Twin Lamps? They...uh...brighten the way, oh most kind, wonderful and helpful friend. Your eyes are like twin lamps of hope, my gracious savior! Yes, that is it!",
+    "Filters": [],
+    "Script": []
+  },
+  "264327967365330698": {
+    "Prev": "278420003126820238",
+    "Next": "29441273042461020174",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "jobasha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are a friend of abolitionists and a friend of Jobasha.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_JobashaAbolitionist",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "29441273042461020174": {
+    "Prev": "264327967365330698",
+    "Next": "1940228560120810761",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "jobasha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Jobasha knows you have freed many slaves, and Jobasha is grateful. Please take these rare books as a gift from Jobasha. Da aqqa dween.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "FreedSlavesCounter",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Journal MS_JobashaAbolitionist 100",
+      "Player->AddItem BookSkill_Armorer1 1",
+      "Player->AddItem BookSkill_Acrobatics1 1",
+      "Player->AddItem BookSkill_Marksman4 1",
+      "ModDisposition 25"
+    ]
+  },
+  "1940228560120810761": {
+    "Prev": "29441273042461020174",
+    "Next": "2740821146999130854",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "jobasha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "They are a brotherhood of fellow abolitionists. If %Name asks, \"Have you seen the Twin Lamps?\" You say, \"They light the way to freedom.\"",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "FreedSlavesCounter",
+        "Value": 15.0
+      }
+    ],
+    "Script": [
+      "Journal HH_TwinLamps1 5"
+    ]
+  },
+  "2740821146999130854": {
+    "Prev": "1940228560120810761",
+    "Next": "5438249832411011415",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "jobasha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Khajiit in Morrowind suffer. Some talk, some act. Which are you?",
+    "Filters": [],
+    "Script": []
+  },
+  "5438249832411011415": {
+    "Prev": "2740821146999130854",
+    "Next": "9933310511522421752",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "jobasha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Why would Jobasha know of these things?",
+    "Filters": [],
+    "Script": []
+  },
+  "9933310511522421752": {
+    "Prev": "5438249832411011415",
+    "Next": "11533968133135718",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hides_his_foot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I thank you, %PCRace. You have truly led me to freedom.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_TwinLamps3",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "11533968133135718": {
+    "Prev": "9933310511522421752",
+    "Next": "2961415681797421261",
+    "Type": "Topic",
+    "Disposition": 90,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You do not know? %Name was sure... But you should be a member. If %Name asks, \"Have you seen the Twin Lamps?\" You say, \"They light the way to freedom.\"",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "FreedSlavesCounter",
+        "Value": 20.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "slaveStatus",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HH_TwinLamps1 5"
+    ]
+  },
+  "2961415681797421261": {
+    "Prev": "11533968133135718",
+    "Next": "2501625006567432759",
+    "Type": "Topic",
+    "Disposition": 90,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I thought you were a member. You have freed many slaves, so I will tell you this. If you are asked, \"Have you seen the Twin Lamps?\" You say, \"They light the way to freedom.\"",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "FreedSlavesCounter",
+        "Value": 20.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "slaveStatus",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HH_TwinLamps1 5"
+    ]
+  },
+  "2501625006567432759": {
+    "Prev": "2961415681797421261",
+    "Next": "297163233524214268",
+    "Type": "Topic",
+    "Disposition": 90,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Khajiit",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "%Name knows only rumors. They help slaves escape. They take us back to Elsweyr.",
+    "Filters": [],
+    "Script": []
+  },
+  "297163233524214268": {
+    "Prev": "2501625006567432759",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 90,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I do not know if they really exist. It is said they help slaves like us escape. Until you arrived, I did not believe I would ever see Argonia again.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "slaveStatus",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

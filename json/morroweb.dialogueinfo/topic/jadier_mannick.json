@@ -1,0 +1,165 @@
+{
+  "82913059060309922": {
+    "Prev": "",
+    "Next": "1763912569203847298",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already purchased him. I trust there was nothing wrong with the sale?",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "jadierBought",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1763912569203847298": {
+    "Prev": "82913059060309922",
+    "Next": "100781054114564566",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Alas, I cannot not offer him to you. I heard that Jadier Mannick died recently.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "jadier mannick",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "100781054114564566": {
+    "Prev": "1763912569203847298",
+    "Next": "16212155803018311111",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well. Jadier Mannick is now yours. I will give the orders to have him removed from the slave pit. You can find him just inside.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 1000.0
+      }
+    ],
+    "Script": [
+      "Set jadierBought to 1",
+      "Player->RemoveItem Gold_001 1000",
+      "AddItem Gold_001 1000",
+      "\"jadier mannick\"->PositionCell 1030 -2660 180 180 \"Tel Aruhn, Underground\"",
+      "Set \"jadier mannick\".slaveStatus to 2"
+    ]
+  },
+  "16212155803018311111": {
+    "Prev": "100781054114564566",
+    "Next": "1138218748223143540",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sorry but you don't have enough gold to afford my fine slaves.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1138218748223143540": {
+    "Prev": "16212155803018311111",
+    "Next": "536523139115938165",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Come back when you change your mind.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "536523139115938165": {
+    "Prev": "1138218748223143540",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are looking for a Breton? I am pleased. I thought I might never get rid of this one. He'll make a fine slave, I'm sure. It's just that Bretons are not as hard working as Orcs or Argonians. He is the same price as the others. 1000 drakes.",
+    "Filters": [],
+    "Script": [
+      "Choice \"Buy the slave.\" 1 \"Nevermind.\" 2"
+    ]
+  }
+}

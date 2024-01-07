@@ -1,0 +1,85 @@
+{
+  "2186419384304659958": {
+    "Prev": "",
+    "Next": "287852786910279005",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hisin deep-raed",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I need no spell now, friend! I'll eat that witches eyes in my soup!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_ParalyzedBarbarian",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "287852786910279005": {
+    "Prev": "2186419384304659958",
+    "Next": "887017512825419136",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hisin deep-raed",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well done, %PCName! For a magic-user, you have a great deal of honor! Take this, my family's helm, Icecap. It was worn by my father, and his father, and by his father before him. It will protect you from the coldest of nights. Wear it with honor. Now, I must go kill that witch. I shall plant her head on a stake for all to see!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_ParalyzedBarbarian",
+        "Value": 65.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_ParalyzedBarbarian\" 100",
+      "RemoveItem \"Icecap_unique\" 1",
+      "Player->AddItem \"Icecap_unique\" 1",
+      "Journal \"MV_ParalyzedBarbarian\" 110"
+    ]
+  },
+  "887017512825419136": {
+    "Prev": "287852786910279005",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hisin deep-raed",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go ahead! Cast your spell! Hisin Deep-Raed fears nothing.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_ParalyzedBarbarian",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  }
+}

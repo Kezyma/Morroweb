@@ -1,0 +1,252 @@
+{
+  "9124216623008227045": {
+    "Prev": "",
+    "Next": "24958107202895421525",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been kicked out of the Guild, %PCName. Better make amends, or no one's going to talk to you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "24958107202895421525": {
+    "Prev": "9124216623008227045",
+    "Next": "141097491317022",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "You already gave me the Devil Tanto.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_LootAldruhnMG",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "141097491317022": {
+    "Prev": "24958107202895421525",
+    "Next": "28856310618014347",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, this is just what I wanted. You can keep anything else you found.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_LootAldruhnMG 100",
+      "Player->RemoveItem Devil_Tanto_TGAMG 1",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 10",
+      "StartScript TG_LootMG2"
+    ]
+  },
+  "28856310618014347": {
+    "Prev": "141097491317022",
+    "Next": "377377382008329747",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well what's keeping you? You're not going to let some apprentice get in the way, are you?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "377377382008329747": {
+    "Prev": "28856310618014347",
+    "Next": "1915621505869127485",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Damn. Seems like the Mages Guild always knows when we're planning something. Did you get the Devil Tanto?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is\" 1 \"No, not yet\" 2"
+    ]
+  },
+  "1915621505869127485": {
+    "Prev": "377377382008329747",
+    "Next": "2185528502307216796",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Good. I guess the Mages Guild didn't know about our plans this time. So did you get the Devil Tanto?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is\" 1 \"No, not yet\" 2"
+    ]
+  },
+  "2185528502307216796": {
+    "Prev": "1915621505869127485",
+    "Next": "274911854222974960",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Did you run into any trouble?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "devil_tanto_tgamg",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, there was a guard\" 3 \"No\" 4"
+    ]
+  },
+  "274911854222974960": {
+    "Prev": "2185528502307216796",
+    "Next": "2013624711243725845",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Like I said, my source in the Mages Guild says they'll all be gone for a while. Go in there and take whatever you want, but be sure to bring me Anareren's Devil Tanto.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_LootAldruhnMG",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "2013624711243725845": {
+    "Prev": "274911854222974960",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Like I said, my source in the Mages Guild says they'll all be gone for a while. Go in there and take whatever you want, but be sure to bring me Anareren's Devil Tanto.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TG_LootAldruhnMG",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal TG_LootAldruhnMG 10",
+      "StartScript TG_LootMG",
+      "\"chest_small_02_anararen\"->AddItem \"devil_tanto_tgamg\" 1"
+    ]
+  }
+}

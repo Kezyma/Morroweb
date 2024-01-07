@@ -1,0 +1,228 @@
+{
+  "23581140912466830200": {
+    "Prev": "",
+    "Next": "905232419206199259",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vanjirra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've already given you your reward. Thank you again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_TraderMissed",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "905232419206199259": {
+    "Prev": "23581140912466830200",
+    "Next": "19440298672556929048",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vanjirra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, I suppose I could give you something for your troubles. Please take this as a token of my appreciation.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_TraderMissed",
+        "Value": 90.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "paur maston",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_TraderMissed",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "RemoveItem \"Gold_001\" 50",
+      "Player->AddItem \"Gold_001\" 50",
+      "Journal \"MV_TraderMissed\" 130",
+      "Goodbye"
+    ]
+  },
+  "19440298672556929048": {
+    "Prev": "905232419206199259",
+    "Next": "2682140073167513072",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vanjirra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Certainly! Thank you for helping Paur to get here safely. I hope you'll find this adequate compensation.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_TraderMissed",
+        "Value": 95.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "paur maston",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "RemoveItem \"Light Amulet\" 1",
+      "Player->AddItem \"Light Amulet\" 1",
+      "Journal \"MV_TraderMissed\" 100"
+    ]
+  },
+  "2682140073167513072": {
+    "Prev": "19440298672556929048",
+    "Next": "24896255492698126446",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "paur maston",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I believe Vanjirra has already given you your reward. I wish I had more to offer you for your help.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_TraderMissed",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "24896255492698126446": {
+    "Prev": "2682140073167513072",
+    "Next": "711510121206185842",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "paur maston",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh...well, like I told you, I don't have much. But, since Vanjirra doesn't seem to be around, I'll give you what I can. I certainly hope she's not in any trouble.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_TraderMissed",
+        "Value": 95.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "vanjirra",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "711510121206185842": {
+    "Prev": "24896255492698126446",
+    "Next": "150503257514473567",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "paur maston",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, like I said, I have very little for you. But when we meet up with Vanjirra in Molag Mar, she should have plenty to compensate you for your services.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_TraderMissed",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_TraderMissed",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "150503257514473567": {
+    "Prev": "711510121206185842",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "paur maston",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You certainly deserve it. If you speak with Vanjirra, I'm sure she'll give you the reward you're due. Thank you again for your help.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_TraderMissed",
+        "Value": 95.0
+      }
+    ],
+    "Script": []
+  }
+}

@@ -1,0 +1,322 @@
+{
+  "39813040109528715": {
+    "Prev": "",
+    "Next": "305672815442696816",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "You have won the duel against Bolvyn Venim. You are now the %PCRank of House Redoran. May Vivec guide you to glory.",
+    "Filters": [],
+    "Script": []
+  },
+  "305672815442696816": {
+    "Prev": "39813040109528715",
+    "Next": "1710992772194726269",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have won the duel against Bolvyn Venim. You are now Hortator of House Redoran.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B5_RedoranHort",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1710992772194726269": {
+    "Prev": "305672815442696816",
+    "Next": "145453286162132540",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have slain Bolvyn Venim, the rightful head of House Redoran. How can the people trust you now?",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "bolvyn venim",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HR_Archmaster",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "145453286162132540": {
+    "Prev": "1710992772194726269",
+    "Next": "27137308752017710760",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If any other counselor were killed or murdered, the other counselors would refuse to name you Hortator. But Venim is tyrannical and unjust, and if he were to die in a duel or a fair fight, no councilor could find dishonor in it. I guarantee it. In fact, if Venim dies an honorable death, I promise I will continue to plead your case with the other councilors.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B5_SarethiHort",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal B5_SarethiHort 25"
+    ]
+  },
+  "27137308752017710760": {
+    "Prev": "145453286162132540",
+    "Next": "3120519854316802780",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You must be careful not to harm Bolvyn Venim in any way. If you were to kill Bolvyn Venim now, the other councilors would turn against you. Once you have rescued my son, I will tell you a way that we might deal with Bolvyn Venim, but for now, just rescue my son, Varvur Sarethi.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B5_SarethiHort",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal B5_SarethiHort 25"
+    ]
+  },
+  "3120519854316802780": {
+    "Prev": "27137308752017710760",
+    "Next": "1255317684236406166",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 8,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "While we often disagree on the Council, he is the best general House Redoran has known for many generations. Bolvyn Venim brought House Redoran back from the brink of defeat... Alas, no man is perfect. He kidnapped my son. He is harsh on his servants. There are other crimes I am honor-bound to keep secret. I believe you would make a better Archmaster. You temper your strength with mercy.",
+    "Filters": [],
+    "Script": []
+  },
+  "1255317684236406166": {
+    "Prev": "3120519854316802780",
+    "Next": "3006014076172726813",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He is a strong leader, and has done great things for House Redoran. How can I explain the hold he has over the hearts of the Redoran people? He brought us back from certain defeat. He moved the council here to Vvardenfell and took our share of the frontier lands. He is a natural leader, born to rule. One only wishes he was just and fair as well as strong.",
+    "Filters": [],
+    "Script": []
+  },
+  "3006014076172726813": {
+    "Prev": "1255317684236406166",
+    "Next": "11420239501058427491",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "varvur sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He is the one who had me secretly arrested. I think he was going to use me against my father. I'd stay away from him if I were you.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "bolvyn venim",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "11420239501058427491": {
+    "Prev": "3006014076172726813",
+    "Next": "115411112107706999",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ald-ruhn, Venim Manor Entrance",
+    "PlayerFaction": "",
+    "Text": "Go through the door opposite the entrance, then up the stairs and to the left.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "bolvyn venim",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "115411112107706999": {
+    "Prev": "11420239501058427491",
+    "Next": "2068060782657523182",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ald-ruhn, Venim Manor Right Wing",
+    "PlayerFaction": "",
+    "Text": "Go under the stairs and up the ramp to the second level. Head southeast and go through the door.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "bolvyn venim",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2068060782657523182": {
+    "Prev": "115411112107706999",
+    "Next": "1554361403151928724",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ald-ruhn, Venim Manor Guard Quarters",
+    "PlayerFaction": "",
+    "Text": "You're in the wrong place if you want to see him. Get out of here before I get suspicious.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "bolvyn venim",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1554361403151928724": {
+    "Prev": "2068060782657523182",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ald-ruhn, Venim Manor Private Quarters",
+    "PlayerFaction": "",
+    "Text": "He is right over there.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "bolvyn venim",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "bolvyn venim",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

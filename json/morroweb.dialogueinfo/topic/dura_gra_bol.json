@@ -1,0 +1,264 @@
+{
+  "56015168105932404": {
+    "Prev": "",
+    "Next": "707086312421931867",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dura gra-bol",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yeah, what? You're wasting my time.",
+    "Filters": [],
+    "Script": []
+  },
+  "707086312421931867": {
+    "Prev": "56015168105932404",
+    "Next": "622229347284449845",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "You've already killed Dura gra-Bol. If you have questions about any other contract, ask them.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "dura gra-bol",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "622229347284449845": {
+    "Prev": "707086312421931867",
+    "Next": "26042105572811029665",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "It seems straightforward to me. Dura gra-Bol really is wanted for murder.",
+    "Filters": [],
+    "Script": []
+  },
+  "26042105572811029665": {
+    "Prev": "622229347284449845",
+    "Next": "18053319961634615767",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled from the Fighters Guild. Until you make amends, I cannot discuss contracts with you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "18053319961634615767": {
+    "Prev": "26042105572811029665",
+    "Next": "27281154712155116942",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I don't have any more bounty contracts right now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_OrcBounty",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "27281154712155116942": {
+    "Prev": "18053319961634615767",
+    "Next": "1315817146980114093",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already killed Dura gra-Bol? Well, then, these 250 septims are yours.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_OrcBounty",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "dura gra-bol",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_OrcBounty 100",
+      "Player->AddItem Gold_001 250",
+      "ModPCFacRep 5 \"Fighters Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "1315817146980114093": {
+    "Prev": "27281154712155116942",
+    "Next": "22810386257729208",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I heard that Dura gra-Bol is dead. Here's your 250 septims.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_OrcBounty",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "dura gra-bol",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_OrcBounty 100",
+      "Player->AddItem Gold_001 250",
+      "ModPCFacRep 5 \"Fighters Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "22810386257729208": {
+    "Prev": "1315817146980114093",
+    "Next": "26697146411173217957",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "This Orc is an outlaw, living openly in a house here in Balmora. I have a contract here that says 250 septims are yours if you bring her to justice.",
+    "Filters": [],
+    "Script": [
+      "Journal FG_OrcBounty 10"
+    ]
+  },
+  "26697146411173217957": {
+    "Prev": "22810386257729208",
+    "Next": "173965674313098995",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Balmora",
+    "PlayerFaction": "",
+    "Text": "I think he lives by the river, on the east side of town.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "nolore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "173965674313098995": {
+    "Prev": "26697146411173217957",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Balmora",
+    "PlayerFaction": "",
+    "Text": "He lives in town somewhere. Look around, you lazy fetcher.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "nolore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

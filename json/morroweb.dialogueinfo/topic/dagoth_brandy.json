@@ -1,0 +1,103 @@
+{
+  "2558428123181963399": {
+    "Prev": "",
+    "Next": "260026297523526316",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dagoth endus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Whenever you're ready, then? You're the challenger, and I am your host. So honor demands that you deliver the first blow.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "C2_Sunder",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "260026297523526316": {
+    "Prev": "2558428123181963399",
+    "Next": "1077130385364227457",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dagoth endus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? Pity. But then, a pity to waste it on a coward like you. I'm done talking. I await you first blow, challenger.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "1077130385364227457": {
+    "Prev": "260026297523526316",
+    "Next": "1365141253254118128",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dagoth endus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then I drink to your health. Bottoms up....",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->additem \"potion_Ancient_brandy\" 1",
+      "Journal \"C2_Sunder\" 1"
+    ]
+  },
+  "1365141253254118128": {
+    "Prev": "1077130385364227457",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dagoth endus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is a rare nectar beyond compare, distilled ages before your ancestor's ancestors. And a fitting toast to our challenge. Would you like to sample it?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Yes, give me some.\" 1 \"No, thank you.\" 2"
+    ]
+  }
+}

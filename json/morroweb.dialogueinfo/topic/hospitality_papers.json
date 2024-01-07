@@ -1,0 +1,225 @@
+{
+  "326358024121223181": {
+    "Prev": "",
+    "Next": "15866309532730625261",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see you already have your papers. Good.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Hospitality_Papers",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "15866309532730625261": {
+    "Prev": "326358024121223181",
+    "Next": "13194126731042028920",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you. And here are your papers. They permit you to travel in town and speak to and conduct business with citizens, tradesmen, and publicans anywhere in Sadrith Mora. Of course, we hope you will stay with us here at the Gateway Inn. Travelers of all professions, factions, and professions are welcomed and made comfortable here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"gold_001\" 25",
+      "player->additem \"bk_Hospitality_Papers\" 1",
+      "Journal \"Hospitality_Papers\" 50"
+    ]
+  },
+  "13194126731042028920": {
+    "Prev": "15866309532730625261",
+    "Next": "16937286552559714346",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then another time. But I caution you. Do not travel in town and speak to and conduct business with citizens, tradesmen, and publicans anywhere in Sadrith Mora until you have Hospitality Papers. Disrespect for the laws of the Telvanni Council will not make you a welcome guest of House Telvanni.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal \"Hospitality_Papers\" 1"
+    ]
+  },
+  "16937286552559714346": {
+    "Prev": "13194126731042028920",
+    "Next": "2383926591909813679",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then another time. But I caution you. Do not travel in town and speak to and conduct business with citizens, tradesmen, and publicans anywhere in Sadrith Mora until you have Hospitality Papers. Disrespect for the laws of the Telvanni Council will not make you a welcome guest of House Telvanni.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"Hospitality_Papers\" 1"
+    ]
+  },
+  "2383926591909813679": {
+    "Prev": "16937286552559714346",
+    "Next": "693920689290419680",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've told you must have these papers. Will you not purchase these Hospitality Papers, and comply with our laws?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "Gold_001",
+        "Value": 25.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Hospitality_Papers",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"I don't have 25 gold.\" 2 \"Not at the moment, thank you.\" 3"
+    ]
+  },
+  "693920689290419680": {
+    "Prev": "2383926591909813679",
+    "Next": "297834839313865098",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've told you must have these papers. Will you not purchase these Hospitality Papers, and comply with our laws?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Hospitality_Papers",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      " Choice \"Yes, I'll purchase the papers.\" 1 \"Not at the moment, thank you.\" 3"
+    ]
+  },
+  "297834839313865098": {
+    "Prev": "693920689290419680",
+    "Next": "3013649882822521546",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "According to the Collective Articles of the Council of the Great House Telvanni, out-house and outlander guests in Sadrith Mora may not travel in town or speak to or conduct business with citizens, tradesmen, or publicans unless they have Hospitality Papers. This is for the comfort and safety of our guests. As Prefect of Hospitality for Sadrith Mora, I can provide you with these papers for 25 gold. Would you care to purchase these Hospitality Papers?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "Gold_001",
+        "Value": 25.0
+      }
+    ],
+    "Script": [
+      "Choice \"I don't have 25 gold.\" 2 \"Not at the moment, thank you.\" 3"
+    ]
+  },
+  "3013649882822521546": {
+    "Prev": "297834839313865098",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "According to the Collective Articles of the Council of the Great House Telvanni, out-house and outlander guests in Sadrith Mora may not travel in town or speak to or conduct business with citizens, tradesmen, or publicans unless they have Hospitality Papers. This is for the comfort and safety of our guests. As Prefect of Hospitality for Sadrith Mora, I can provide you with these papers for 25 gold. Would you care to purchase these Hospitality Papers?",
+    "Filters": [],
+    "Script": [
+      " Choice \"Yes, I'll purchase the papers.\" 1 \"Not at the moment, thank you.\" 3"
+    ]
+  }
+}

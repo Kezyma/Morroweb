@@ -1,0 +1,557 @@
+{
+  "48559331434528926": {
+    "Prev": "",
+    "Next": "218692149495794048",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Geon Auline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have done me a great service, %PCName.  I finally have the full set.  Aren't they beautiful?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_EstateSale",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "218692149495794048": {
+    "Prev": "48559331434528926",
+    "Next": "17524192531849014250",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Geon Auline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent!  Here's what I can tell you.  Arnsa Thendas has recently been widowed.  Her husband, Sandas, was a local nobleman, but amassed quite a bit of debt during his waning years.  His death has left the widow with quite a financial burden.  As such, she may be willing to part with the dagger for money.  If you can find another way to get it from her, by all means take advantage of it.  I will compensate you adequately, I promise you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MS_EstateSale 20"
+    ]
+  },
+  "17524192531849014250": {
+    "Prev": "218692149495794048",
+    "Next": "1624527493102516439",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Geon Auline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's....disappointing.  Perhaps I can try some other method to acquire the dagger, then.  Ah, well.  I appreciate you listening to the story, at any rate.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal MS_EstateSale 90"
+    ]
+  },
+  "1624527493102516439": {
+    "Prev": "17524192531849014250",
+    "Next": "1944028779412524154",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Geon Auline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Fantastic!  I don't need to know the details of how you got it.  In fact, I'd rather not know.  Here is your payment; I think you'll find it's a bit more than the dagger is actually worth.  I do appreciate what you've done for me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "silver dagger_droth_unique",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"silver dagger_droth_unique\" 1",
+      "player->additem \"gold_001\" 800",
+      "moddisposition 20",
+      "Journal MS_EstateSale 70",
+      "StartScript DrothPost"
+    ]
+  },
+  "1944028779412524154": {
+    "Prev": "1624527493102516439",
+    "Next": "1346147121435427780",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Geon Auline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, where is it?  I do appreciate a good sense of humor, but this is not a subject I'm inclined to joke about.  Please bring me the dagger as soon as you have it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "silver dagger_droth_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1346147121435427780": {
+    "Prev": "1944028779412524154",
+    "Next": "8845319642464032097",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Geon Auline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What?  What can you possibly want it for, especially knowing how important it is to me?  Please reconsider this course of action.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "moddisposition -20"
+    ]
+  },
+  "8845319642464032097": {
+    "Prev": "1346147121435427780",
+    "Next": "30557132192023217677",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Geon Auline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You did WHAT?  What could you possibly have been thinking?  This makes a mess of everything.  Why not just stab me in the back with it, instead?  That'd have been less painful for me.  Get out of my sight.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "silver dagger_droth_unique",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "Droth_var",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MS_EstateSale 60",
+      "moddisposition -40",
+      "Goodbye"
+    ]
+  },
+  "30557132192023217677": {
+    "Prev": "8845319642464032097",
+    "Next": "16450114842995430902",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Geon Auline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very funny.  I see that you've got it there.  Now let's stop these shenanigans.  Just hand it over.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "silver dagger_droth_unique",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Here's the the dagger.\" 3 \"I'm keeping the dagger.\" 4"
+    ]
+  },
+  "16450114842995430902": {
+    "Prev": "30557132192023217677",
+    "Next": "58612572397432227",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Geon Auline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "PLEASE don't joke like that, %PCName. I couldn't bear the thought of that beautiful dagger sitting in some dusty shop someplace.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "58612572397432227": {
+    "Prev": "16450114842995430902",
+    "Next": "2580326396803122628",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Geon Auline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Wonderful!  I know that she had been planning an Estate Sale to auction off some of her husbands' things.  He died a short while ago, and left her with some rather large debts.  The Thendas manor is here in the Residential District... perhaps the Droth Dagger is still there.  A shame about her death, really.  I will, however, pay you should you be able to get it for me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": [
+      "Journal MS_EstateSale 20"
+    ]
+  },
+  "2580326396803122628": {
+    "Prev": "58612572397432227",
+    "Next": "2388145121444024191",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Geon Auline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, let me know when you have it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 7.0
+      }
+    ],
+    "Script": []
+  },
+  "2388145121444024191": {
+    "Prev": "2580326396803122628",
+    "Next": "1356822394660930084",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Geon Auline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, %PCName?  Have you managed to acquire the dagger?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_EstateSale",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Here's the dagger.\" 3 \"I'm keeping the dagger.\" 4 \"I sold the dagger.\" 5 \"I haven't got the dagger yet.\" 7"
+    ]
+  },
+  "1356822394660930084": {
+    "Prev": "2388145121444024191",
+    "Next": "396017539366711941",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Geon Auline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Just come back here once you've gotten it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_EstateSale",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "396017539366711941": {
+    "Prev": "1356822394660930084",
+    "Next": "28087323991298431366",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Geon Auline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's one of several made by artisans during the 2nd Age.  They were crafted for a group of Dunmer nobles, each bearing a mark of the owner.  Of course, it takes a trained eye to distinguish one from a normal dagger...  I've acquired all but the Droth Dagger, and have recently been made aware that the widow Arnsa Thendas is in possession of one.  Would you be wiling to help me retrieve it?",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Arnsa Thendas",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, I'll help.\" 1 \"I'm sorry, but I'd rather not get involved.\" 2"
+    ]
+  },
+  "28087323991298431366": {
+    "Prev": "396017539366711941",
+    "Next": "15458228431919924557",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Geon Auline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's one of several made by artisans towards the end of the Second Age.  They were crafted for a group of Dunmer nobles, each bearing a mark of the owner.  Of course, it takes a trained eye to distinguish one from a normal dagger...  I've acquired all but the Droth Dagger, and have recently been made aware that the widow Arnsa Thendas was in possession of one, shortly before her untimely death.  Can you help me find out what happened to it?",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Arnsa Thendas",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, I'll help.\" 6 \"I'm sorry, but I'd rather not get involved.\" 2"
+    ]
+  },
+  "15458228431919924557": {
+    "Prev": "28087323991298431366",
+    "Next": "7397271541473914529",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Arnsa Thendas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's not up for discussion anymore, %PCRace. I'm sorry.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_EstateSale",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "7397271541473914529": {
+    "Prev": "15458228431919924557",
+    "Next": "2507616805120864199",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Arnsa Thendas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's yours now. Do with it what you will.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_EstateSale",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2507616805120864199": {
+    "Prev": "7397271541473914529",
+    "Next": "194271541311322110",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Arnsa Thendas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's yours now. Do with it what you will.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_EstateSale",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "194271541311322110": {
+    "Prev": "2507616805120864199",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Arnsa Thendas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's a horrid-looking thing. I don't know where Sandas got it, and I don't want to know. I'm hoping that someone buys it in the Estate Sale.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "MS_EstateSale",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  }
+}

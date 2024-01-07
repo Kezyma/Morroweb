@@ -1,0 +1,321 @@
+{
+  "1949622479627313789": {
+    "Prev": "",
+    "Next": "694422155254333697",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "domalen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It has important information in it. Something must be done.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_False",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "694422155254333697": {
+    "Prev": "1949622479627313789",
+    "Next": "11153592941811631",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "domalen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm just going to hand these out until Belan stops paying me. I've got nothing against Frernis, but she's not paying the bills.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_False",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_False",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "11153592941811631": {
+    "Prev": "694422155254333697",
+    "Next": "1118229790656822287",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "domalen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Look, I don't have to tell you a thing. Get out of my way.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -20",
+      "ModFight 20"
+    ]
+  },
+  "1118229790656822287": {
+    "Prev": "11153592941811631",
+    "Next": "24238160622494210432",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "domalen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Listen, friend, times have been tough for me and mine. So, when Belan offered me some gold to hand these out for her, I jumped at the chance. Gotta make ends meet, you know? Belan makes the leaflets. I just distribute them.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_False\" 30",
+      "AddTopic \"Belan makes the leaflets\""
+    ]
+  },
+  "24238160622494210432": {
+    "Prev": "1118229790656822287",
+    "Next": "2560811796220048067",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "domalen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What about it?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_False",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Choice \"These are all lies. Frernis is an honest woman.\" 1 \"Tell me where these leaflets are from!\" 2"
+    ]
+  },
+  "2560811796220048067": {
+    "Prev": "24238160622494210432",
+    "Next": "1195617057827228440",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "domalen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You got your leaflet, didn't you? Important stuff.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_False",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "1195617057827228440": {
+    "Prev": "2560811796220048067",
+    "Next": "24422142501754031782",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aurane frernis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A leaflet? What's this? This is ridiculous! It's all lies! Why...someone must pay for this. Tell you what, %PCName, if you can find out who is behind this slander, I'll reward you well. Ask whoever gave you this leaflet what's going on. This is an outrage!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_False",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_False\" 20"
+    ]
+  },
+  "24422142501754031782": {
+    "Prev": "1195617057827228440",
+    "Next": "31379166163056415285",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galuro belan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've said all there is to say about that.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_False",
+        "Value": 55.0
+      }
+    ],
+    "Script": []
+  },
+  "31379166163056415285": {
+    "Prev": "24422142501754031782",
+    "Next": "1371871181177229401",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galuro belan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? This is going to ruin me! My reputation will be destroyed! I hope you're happy with yourself. You'll likely put me out of business.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_False\" 56",
+      "Goodbye"
+    ]
+  },
+  "1371871181177229401": {
+    "Prev": "31379166163056415285",
+    "Next": "1257214170202691606",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galuro belan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent. I appreciate your help. Make sure you don't mention this, though. It could really cause problems for me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_False\" 55",
+      "Player->AddItem \"Gold_001\" 100"
+    ]
+  },
+  "1257214170202691606": {
+    "Prev": "1371871181177229401",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galuro belan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sure I don't know what you're talking about...what makes you think.... All right. I admit it. Business has been slow, though. And that Rernis gets a lot of the business around here. Tell you what: I'll pay you 100 drakes to keep this to yourself. What do you say?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_False",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "EB_False",
+        "Value": 35.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_False\" 50",
+      "Choice \"I'll keep your secret.\" 3 \"I will expose your lies.\" 4"
+    ]
+  }
+}

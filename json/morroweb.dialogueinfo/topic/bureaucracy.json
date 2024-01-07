@@ -1,0 +1,121 @@
+{
+  "22373205602026027035": {
+    "Prev": "",
+    "Next": "5662230712990115962",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mevure hlen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I really want to learn more about how they're setting the prices.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_TradeSpy",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "EB_TradeSpy",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "5662230712990115962": {
+    "Prev": "22373205602026027035",
+    "Next": "17877397124430647",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mevure hlen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can't say I blame you. There's something strange going on there, and it might not be wise to get mixed up in it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_TradeSpy\" 40"
+    ]
+  },
+  "17877397124430647": {
+    "Prev": "5662230712990115962",
+    "Next": "2224711222298521084",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mevure hlen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, there is something you might be able to provide for me. I'd like to know who is setting the prices for the Company. I know much of the pricing goes through J'Zhirr in Ebonheart. If you can find some information on this for me, I'd greatly appreciate it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_TradeSpy\" 30",
+      "com_chest_02_jzhirr->additem \"bk_letterfromllaalam2\" 1"
+    ]
+  },
+  "2224711222298521084": {
+    "Prev": "17877397124430647",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mevure hlen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's ridiculous. Their ships are searched by the Duke's men, and are often held in customs for weeks at a time. Of course, the Company's boats aren't subject to the same scrutiny. I don't know what part the Duke is playing in this, but I'd certainly like to find out.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_TradeSpy",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_TradeSpy\" 20",
+      "Choice \"Perhaps I can help you.\" 1 \"I won't get involved in this.\" 2"
+    ]
+  }
+}

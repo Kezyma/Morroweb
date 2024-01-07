@@ -1,0 +1,320 @@
+{
+  "313852664655001203": {
+    "Prev": "",
+    "Next": "247698252299479832",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "You have been expelled.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "C3_DestroyDagoth",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "247698252299479832": {
+    "Prev": "313852664655001203",
+    "Next": "7274274631860609",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "The Writ on Mistress Therana has been executed.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritTherana",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "C3_DestroyDagoth",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "7274274631860609": {
+    "Prev": "247698252299479832",
+    "Next": "2789416162641318477",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "Mistress Therana is already dead? Our Hlaalu client will be pleased. As %PCRank, you deserve the full payment.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "therana",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MT_WritTherana",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "C3_DestroyDagoth",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MT_WritTherana 100",
+      "Player->AddItem Gold_001 10000",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition 10"
+    ]
+  },
+  "2789416162641318477": {
+    "Prev": "7274274631860609",
+    "Next": "147277169554925860",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "You have honorably executed Mistress Therana, a most dangerous foe. I am impressed, %PCRank. Please accept the payment for this Writ.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritTherana",
+        "Value": 80.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "C3_DestroyDagoth",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal MT_WritTherana 100",
+      "Player->AddItem Gold_001 10000",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition 20"
+    ]
+  },
+  "147277169554925860": {
+    "Prev": "2789416162641318477",
+    "Next": "32462209701798021522",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have given this Writ to you already, %PCName.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "writ_therana",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritTherana",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "32462209701798021522": {
+    "Prev": "147277169554925860",
+    "Next": "2648132871790518611",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have given this Writ to you already, %PCName. As you know, Writs are issued only once. Your official paperwork will exonerate you from your deeds when you are confronted by the authorities - so guard it well. If you have lost it, you will have to suffer punishment for your crimes. This can be costly... very costly. But members of the %Faction must have immaculate reputations.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "writ_therana",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritTherana",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "2648132871790518611": {
+    "Prev": "32462209701798021522",
+    "Next": "2660710564261635495",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "Mistress Therana is a dangerous and unstable Telvanni wizard. She lives in the Tower of Tel Branora. Take this Writ and end her insanity.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "C3_DestroyDagoth",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritBemis",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritBrilnosu",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritNavil",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MT_WritTherana 10",
+      "Player->AddItem \"writ_therana\" 1",
+      "ShowMap \"Tel Branora\""
+    ]
+  },
+  "2660710564261635495": {
+    "Prev": "2648132871790518611",
+    "Next": "396022123252623382",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "She has not aged well and becomes more eccentric every year. Her tower is in Tel Branora, which on Azura's Coast far to the southeast.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "therana",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "396022123252623382": {
+    "Prev": "2660710564261635495",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "felisa ulessen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "She is my patron in House Telvanni, and I am her Mouth. She can be... difficult at times. Be very careful if you must speak with her.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "therana",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

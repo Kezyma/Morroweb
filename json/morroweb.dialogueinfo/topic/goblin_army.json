@@ -1,0 +1,275 @@
+{
+  "2500830211850214846": {
+    "Prev": "",
+    "Next": "487528561775030244",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris hler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "From all accounts, we won't have to worry about that any longer.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_KillGoblins",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "487528561775030244": {
+    "Prev": "2500830211850214846",
+    "Next": "88712870631227777",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris hler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've killed the warchiefs and their Altmer trainers? And you live to tell the tale...interesting. And surprising. Perhaps I've underestimated you, %PCName. Rest assured, it won't happen again. Take this as a token of our Lady's appreciation. Well done.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_KillGoblins",
+        "Value": 50.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "armion",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "yarnar",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_KillGoblins",
+        "Value": 100.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "goblin_warchief1",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "goblin_warchief2",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem gold_001 15000",
+      "Journal TR_KillGoblins 100"
+    ]
+  },
+  "88712870631227777": {
+    "Prev": "487528561775030244",
+    "Next": "2412610774113751494",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris hler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The warchiefs dead, along with one of the Altmer trainers. Not bad work...for you. Shame you didn't get the other one. It shows a bit of mettle, I suppose. The Lady will be pleased. Take this, and her gratitude.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_KillGoblins",
+        "Value": 50.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "yarnar",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_KillGoblins",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem gold_001 10000",
+      "Journal TR_KillGoblins 100"
+    ]
+  },
+  "2412610774113751494": {
+    "Prev": "88712870631227777",
+    "Next": "499418722108683701",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris hler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The warchiefs dead, along with one of the Altmer trainers. Not bad work...for you. Shame you didn't get the other one. It shows a bit of mettle, I suppose. The Lady will be pleased. Take this, and her gratitude.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_KillGoblins",
+        "Value": 50.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "armion",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_KillGoblins",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem gold_001 10000",
+      "Journal TR_KillGoblins 100"
+    ]
+  },
+  "499418722108683701": {
+    "Prev": "2412610774113751494",
+    "Next": "2814825192245124034",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris hler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've gotten rid of the goblin warchiefs? Excellent. I'm certain the army itself will scatter over the next few weeks. Our Lady will be pleased. A shame you weren't able to find the Altmer training them, but what can one expect from such as you.... Still, the Lady would wish for you to be rewarded. Take this.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_KillGoblins",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_KillGoblins",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem gold_001 5000",
+      "Journal TR_KillGoblins 100"
+    ]
+  },
+  "2814825192245124034": {
+    "Prev": "499418722108683701",
+    "Next": "3152315133273668049",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris hler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've not completed your task yet? Perhaps you are worthless, after all. Speak to me when you've actually accomplished something.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_KillGoblins",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_KillGoblins",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "3152315133273668049": {
+    "Prev": "2814825192245124034",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris hler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Foul, vicious creatures. No wonder Helseth has chosen them to be his footsoldiers. I know that the goblins are being trained nearby, though not where, exactly. Ask around the city about goblins. Someone will know. I wish for you to find the location of goblin training area. When you do, kill the warchiefs--there should be two. Sever the head of this army, and the rest will shatter like a scrib. You might rid the city of their two Altmer trainers, as well. Complete this task, and the Lady will be pleased.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "TR_KillGoblins",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal TR_KillGoblins 20"
+    ]
+  }
+}

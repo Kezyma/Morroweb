@@ -1,0 +1,321 @@
+{
+  "191304562205788": {
+    "Prev": "21415172682913914434",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Lalatia Varian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Evil Archmage Almion Celmo of the Summerset Isles created the blade for a warrior, Thurgnarr Assi, who was to assassinate a king. The assassination failed, Thurgnarr Assi was slain, Almion Celmo was imprisoned, and the Ice Blade fell into the hands of a series of malefactors. The weapon is a claymore enchanted to cause frost damage, and is rumored to pass from owner to owner of its own volition.",
+    "Filters": [],
+    "Script": []
+  },
+  "7072316452306422316": {
+    "Prev": "",
+    "Next": "1591210140138271985",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What?  How is it that you have this?  This was part of the museum's collection!  GUARDS!",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "iceblade",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "claymore_iceblade_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "SetPCCrimeLevel 100000",
+      "Set PCThief to 1",
+      "Goodbye"
+    ]
+  },
+  "1591210140138271985": {
+    "Prev": "7072316452306422316",
+    "Next": "274221403269647718",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, thank you for allowing us to add it to our collection.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "iceblade",
+        "Value": 2.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "claymore_iceblade_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "274221403269647718": {
+    "Prev": "1591210140138271985",
+    "Next": "2247223941848930002",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I personally don't believe the rumors that the blade chooses who wields it, and I think it will be quite safe here in our display case.  Thank you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "claymore_iceblade_unique",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "set iceblade to 2",
+      "player->removeitem \"claymore_iceblade_unique\" 1",
+      "set MuseumDonations to MuseumDonations + 1",
+      "\"claymore_iceblade_unique_x\"->Enable"
+    ]
+  },
+  "2247223941848930002": {
+    "Prev": "274221403269647718",
+    "Next": "46457291234615217",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I personally don't believe the rumors that the blade chooses who wields it, and I think it will be quite safe here in our display case.  Thank you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "claymore_iceblade_unique",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "set iceblade to 2",
+      "player->removeitem \"claymore_iceblade_unique\" 1",
+      "player->additem \"gold_001\" 30000",
+      "\"claymore_iceblade_unique_x\"->Enable"
+    ]
+  },
+  "46457291234615217": {
+    "Prev": "2247223941848930002",
+    "Next": "140315531016222265",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't have the Ice Blade of the Monarch with you? Then come back with it, and we'll settle the deal.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "claymore_iceblade_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "140315531016222265": {
+    "Prev": "46457291234615217",
+    "Next": "303403252776353821",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't have the Ice Blade of the Monarch with you? Then come back with it, and we'll settle the deal.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "claymore_iceblade_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "303403252776353821": {
+    "Prev": "140315531016222265",
+    "Next": "1637423502208768062",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well, %PCName.  But do keep an eye on it -- they say the blade passes from owner to owner of its own accord.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "1637423502208768062": {
+    "Prev": "303403252776353821",
+    "Next": "21415172682913914434",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah, the Ice Blade.  Often have I heard tales of it...  one wonders what might have become of it, had the assassination succeeded.  Well, no matter.  Do you wish to sell it? Or maybe donate it? I can offer you 30000 gold if you choose to sell.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "iceblade",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_Blade",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Sell the item.\" 1 \"Keep the item.\" 2 \"Donate the item.\" 3"
+    ]
+  },
+  "21415172682913914434": {
+    "Prev": "1637423502208768062",
+    "Next": "191304562205788",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah, the Ice Blade.  Often have I heard tales of it...  one wonders what might have become of it, had the assassination succeeded.  Well, no matter.  Do you wish to sell it? I'm prepared to offer you 30000 gold for it.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "iceblade",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Sell the item.\" 1 \"Keep the item.\" 2"
+    ]
+  }
+}

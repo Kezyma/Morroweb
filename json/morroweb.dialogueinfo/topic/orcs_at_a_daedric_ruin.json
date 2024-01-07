@@ -1,0 +1,263 @@
+{
+  "3424284351505723033": {
+    "Prev": "",
+    "Next": "20236901688267200",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Vedam Dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have prevented the Barbarian Burub gra-Bamog from becoming a threat to Vvardenfell and for that you have my gratitude.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_AlofsFarm",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "20236901688267200": {
+    "Prev": "3424284351505723033",
+    "Next": "5057204923192519674",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Vedam Dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have no reason to hate Orcs. In fact, I admire King Gortwog for his political skill. In the case of the Orcs at Alof's farm, however, I've heard that the leader is the Barbarian Burub gra-Bamog. She is wanted for murder, theft, and banditry. If Burub is gathering forces in Ashunartes, I want someone to put a stop to it.",
+    "Filters": [],
+    "Script": []
+  },
+  "5057204923192519674": {
+    "Prev": "20236901688267200",
+    "Next": "1092511116141117629",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alof the easterner",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm glad you got rid of those Orcs, %PCName. You better report back to Eydis Fire-Eye before she decides to keep the contract money for herself.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "burub gra-bamog",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_AlofsFarm 50"
+    ]
+  },
+  "1092511116141117629": {
+    "Prev": "5057204923192519674",
+    "Next": "2434116231228025753",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alof the easterner",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Orcs come from what the local Dunmer call Ashunartes. It's a Daedric ruin northeast of here and just west of an old Dunmer stronghold. I heard these Orcs are led by the Barbarian Burub gra-Bamog. If you kill the leader, the rest of them might leave us farmers in peace.",
+    "Filters": [],
+    "Script": [
+      "Journal FG_AlofsFarm 30"
+    ]
+  },
+  "2434116231228025753": {
+    "Prev": "1092511116141117629",
+    "Next": "25848321311334010551",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled from the Fighters Guild. Until you make amends, I cannot discuss contracts with you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "25848321311334010551": {
+    "Prev": "2434116231228025753",
+    "Next": "992166221107817690",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You made the Fighters Guild look good for the Duke, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_AlofsFarm",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "992166221107817690": {
+    "Prev": "25848321311334010551",
+    "Next": "17551309881956830497",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you already killed those Orcs, why did I get this contract? Well, rules are rules. Here's the 500 septims, your share of what the Duke paid.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_AlofsFarm",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "burub gra-bamog",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_AlofsFarm 100",
+      "ModPCFacRep 10 \"Fighters Guild\"",
+      "ModDisposition 10",
+      "Player->AddItem Gold_001 500"
+    ]
+  },
+  "17551309881956830497": {
+    "Prev": "992166221107817690",
+    "Next": "149368167362757",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Alof says the Orcs are gone. Here's 500 septims for the Duke's contract.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "burub gra-bamog",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_AlofsFarm 100",
+      "ModPCFacRep 10 \"Fighters Guild\"",
+      "ModDisposition 10",
+      "Player->AddItem Gold_001 500"
+    ]
+  },
+  "149368167362757": {
+    "Prev": "17551309881956830497",
+    "Next": "3247855861755325863",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Duke Vedam Dren himself gave us a contract to take care of the problem. Go to Alof's Farm northeast of Pelagiad.... What do you mean Alof is dead? What were you thinking, %PCRank? Well, the contract still needs to be filled. Apparently, our only source of information is dead, so you'll just have to search the area until you figure out which orcs to get rid of. Check for any ruins nearby; it'd be a good place for them to hide out.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "alof the easterner",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal FG_AlofsFarm 15"
+    ]
+  },
+  "3247855861755325863": {
+    "Prev": "149368167362757",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Duke Vedam Dren himself gave us a contract to take care of the problem. Go to Alof's Farm northeast of Pelagiad and just north of the Arvel Plantation. Alof can tell you where the Orcs are and what needs to be done.",
+    "Filters": [],
+    "Script": [
+      "Journal FG_AlofsFarm 10"
+    ]
+  }
+}

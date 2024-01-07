@@ -1,0 +1,245 @@
+{
+  "2219610615148336049": {
+    "Prev": "",
+    "Next": "2659933602796310952",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you still a member of the guild? Once Trebonius gives the authorization, we can discuss guild matters again.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "2659933602796310952": {
+    "Prev": "2219610615148336049",
+    "Next": "20016151042065924294",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Were you expelled? Or did you clear that up already? You ought to make amends with Guildmaster Trebonius just to be sure.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "20016151042065924294": {
+    "Prev": "2659933602796310952",
+    "Next": "3368246471914520209",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled, %PCName. If you want to make amends, you should speak with Guildmaster Trebonius.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "3368246471914520209": {
+    "Prev": "20016151042065924294",
+    "Next": "21250289262982410476",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Someday your work in Dwemer archeology may surpass even myself or Hasphat Antabolis.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Bethamez",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "21250289262982410476": {
+    "Prev": "3368246471914520209",
+    "Next": "31548320891603631323",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This is truly remarkable, %PCName. These plans are very similar. Perhaps with both of them in my possession, I can discover their secrets. It's a shame Arch-Mage Trebonius doesn't share your dedication to scholarship.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "misc_dwrv_artifact20",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal MG_Bethamez 100",
+      "Player->RemoveItem misc_dwrv_artifact20 1",
+      "ModPCFacRep 15 \"Mages Guild\"",
+      "ModDisposition 20",
+      "Player->ModReputation 1"
+    ]
+  },
+  "31548320891603631323": {
+    "Prev": "21250289262982410476",
+    "Next": "21468316642817213028",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, where are they? Didn't you bring the plans with you?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "21468316642817213028": {
+    "Prev": "31548320891603631323",
+    "Next": "1136124880337525897",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I understand the temptations of scholarship, but this is not the time to joke around.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "1136124880337525897": {
+    "Prev": "21468316642817213028",
+    "Next": "5884172392413729123",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Have you found any more Dwemer plans or blueprints?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Bethamez",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here they are.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "5884172392413729123": {
+    "Prev": "1136124880337525897",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Officially, the Gnisis eggmine was closed because of blight, but I heard that miners broke into the lost Dwemer ruin of Bethamez. I have also heard that they found Dwemer plans similar to the blueprints you brought me before. Go to the Gnisis eggmine and bring back any plans or blueprints you find.",
+    "Filters": [],
+    "Script": [
+      "Journal MG_Bethamez 10"
+    ]
+  }
+}

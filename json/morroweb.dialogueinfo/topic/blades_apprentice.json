@@ -1,0 +1,76 @@
+{
+  "18103192121783923995": {
+    "Prev": "",
+    "Next": "32212141051164821657",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Those were the good old days, eh? Believe it or not, I was an Apprentice once, too. But that was a LOONG time ago.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "32212141051164821657": {
+    "Prev": "18103192121783923995",
+    "Next": "1010328727326818700",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. Congratulations. Just get on with it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_4_MuzgobInformant",
+        "Value": 55.0
+      }
+    ],
+    "Script": []
+  },
+  "1010328727326818700": {
+    "Prev": "32212141051164821657",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm promoting you to Apprentice Rank, effective immediately. And here's a little present -- two spell scrolls. The Divine Intervention will recall you to the nearest Imperial shrine, and the Almsivi Intervention will recall you the nearest Temple. They come in handy for a quick getaway. No, no, %PCName. No thanks needed. You're doing great work. Now, get out of here and let me read.",
+    "Filters": [],
+    "Script": [
+      "Player->AddItem, \"sc_divineintervention\", 1",
+      "Player->AddItem, \"sc_almsiviintervention\", 1",
+      "Journal A1_4_MuzgobInformant 55"
+    ]
+  }
+}

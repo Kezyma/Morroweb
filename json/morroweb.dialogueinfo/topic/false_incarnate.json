@@ -1,0 +1,584 @@
+{
+  "9395619710993525": {
+    "Prev": "",
+    "Next": "473725358266963269",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have heard that YOU are a False Incarnate. I am not yet convinced, but I no longer trust you. Like Elvil Vidron, if your claim is true, you must prove it to Archcanon Saryoni in Vivec.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B8_MeetVivec",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "473725358266963269": {
+    "Prev": "9395619710993525",
+    "Next": "2878448875288597",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled from the Temple.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2878448875288597": {
+    "Prev": "473725358266963269",
+    "Next": "44099801306459979",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You put an end to the heresies of the False Incarnate.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_FalseIncarnate",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "44099801306459979": {
+    "Prev": "2878448875288597",
+    "Next": "29734213442724123767",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Elvil Vidron is already dead? That is unfortunate. I wish we could have saved him.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "elvil vidron",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TT_FalseIncarnate",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TT_FalseIncarnate 100",
+      "ModPCFacRep 5 \"Temple\"",
+      "ModDisposition 10"
+    ]
+  },
+  "29734213442724123767": {
+    "Prev": "44099801306459979",
+    "Next": "2740730168508410302",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am sorry that you had to kill Elvil Vidron. Perhaps this will discourage others from making heretical claims.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_FalseIncarnate",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Journal TT_FalseIncarnate 100",
+      "ModPCFacRep 5 \"Temple\"",
+      "ModDisposition 10"
+    ]
+  },
+  "2740730168508410302": {
+    "Prev": "29734213442724123767",
+    "Next": "9522118712685313498",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Elvil Vidron will do penance for his errors, but I am glad you did not kill him. Please accept these potions of healing in reward for your wisdom in this matter. Are you ready for additional duties?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_FalseIncarnate",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal TT_FalseIncarnate 100",
+      "Player->AddItem \"p_restore_health_e\" 3",
+      "ModPCFacRep 5 \"Temple\"",
+      "ModDisposition 10"
+    ]
+  },
+  "9522118712685313498": {
+    "Prev": "2740730168508410302",
+    "Next": "28513173801072011314",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Elvil Vidron in Suran claims to be the Nerevarine and makes prophecies of doom. Clearly he is a heretic. Convince him that he is mistaken or, if all else fails, prove it by killing him. If he is the true Nerevarine, he is protected by prophesy and cannot die.",
+    "Filters": [],
+    "Script": [
+      "Journal TT_FalseIncarnate 10"
+    ]
+  },
+  "28513173801072011314": {
+    "Prev": "9522118712685313498",
+    "Next": "13928406931728625",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Elvil Vidron in Suran claims to be the Nerevarine and makes prophecies of doom. We cannot have two Nerevarines. Go to him and prove to him that you are the true Incarnate.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B8_MeetVivec",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal TT_FalseIncarnate 10"
+    ]
+  },
+  "13928406931728625": {
+    "Prev": "28513173801072011314",
+    "Next": "2322237471579918257",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sharn gra-muzgob",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Temple refers to any demented impostor who claims to be the Nerevarine as \"the False Incarnate\". The Temple treats such persons as insane, and Ordinators pursue and imprison them \"for their own protection.\" The Temple has reported that the most recent False Incarnate, a girl child named Peakstar, has died, but they've produced no body, and skeptics are suspicious of Temple claims.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_4_MuzgobInformant",
+        "Value": 15.0
+      }
+    ],
+    "Script": []
+  },
+  "2322237471579918257": {
+    "Prev": "13928406931728625",
+    "Next": "2334490831858019154",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "elvil vidron",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, Nerevar. I see clearly now. I shall repent at the Temple and preach in your name.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_FalseIncarnate",
+        "Value": 55.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2334490831858019154": {
+    "Prev": "2322237471579918257",
+    "Next": "2943523480103622571",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "elvil vidron",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have seen the error of my ways, %PCName. Your wisdom has guided me through this most disturbing time.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_FalseIncarnate",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2943523480103622571": {
+    "Prev": "2334490831858019154",
+    "Next": "26600176262558618889",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "elvil vidron",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I pity you, unbeliever. You will be swept away like ash before the storm.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5",
+      "Goodbye"
+    ]
+  },
+  "26600176262558618889": {
+    "Prev": "2943523480103622571",
+    "Next": "1315815681109111762",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "elvil vidron",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You cannot harm me, pawn of the Temple! Leave before I prove the truth of my prophecies on your flesh!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "ModFight 10",
+      "Goodbye"
+    ]
+  },
+  "1315815681109111762": {
+    "Prev": "26600176262558618889",
+    "Next": "3147028438808011979",
+    "Type": "Topic",
+    "Disposition": 65,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "elvil vidron",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Who then, if not myself? There must be a meaning to these dreams. Perhaps you are right... Your words have guided me. I will seek penance for my sins. Forgive me and thank you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition 15",
+      "SetFight 0",
+      "StopCombat",
+      "Journal TT_FalseIncarnate 50",
+      "Goodbye"
+    ]
+  },
+  "3147028438808011979": {
+    "Prev": "1315815681109111762",
+    "Next": "161778139520817330",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "elvil vidron",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Who then, if not myself? The dreams are unyielding! Every day, every night!  I must be the one.... I must... No, your words are not convincing enough.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5",
+      "Goodbye"
+    ]
+  },
+  "161778139520817330": {
+    "Prev": "3147028438808011979",
+    "Next": "98417052332465",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "elvil vidron",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Who then, if not myself? You?! Before you make such claims, you must find a way to convince me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5",
+      "Goodbye"
+    ]
+  },
+  "98417052332465": {
+    "Prev": "161778139520817330",
+    "Next": "1189627307603725440",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "elvil vidron",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You... The vision... The Moon-and-Star! It was you, not I. Forgive me, Nerevar, forgive! I meant only to prepare the way.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal TT_Compassion 55"
+    ]
+  },
+  "1189627307603725440": {
+    "Prev": "98417052332465",
+    "Next": "1294929929145704464",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "elvil vidron",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You disbelieve? I know my destiny. And you will have a hard time proving otherwise. I have seen the message in the dream. Have you not also experienced the waking dream?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "moon_and_star",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_FalseIncarnate",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"I don't know what you're talking about.\" 1 \"Yes. But you are not the one I envisioned.\" 2 \"Show him the Moon-and-Star ring\" 3"
+    ]
+  },
+  "1294929929145704464": {
+    "Prev": "1189627307603725440",
+    "Next": "54798713897229548",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "elvil vidron",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You disbelieve? I know my destiny. And you will have a hard time proving otherwise. I have seen the message in the dream. Have you not also experienced the waking dream?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_FalseIncarnate",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"I don't know what you're talking about.\" 1 \"Yes. But you are not the one I envisioned.\" 2"
+    ]
+  },
+  "54798713897229548": {
+    "Prev": "1294929929145704464",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "huleeya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "In the past, some have claimed to be the reincarnated Nerevar. The most recent is known as Peakstar, a figure of legend among the Wastes tribes for the last 30 years. The Temple says these false Incarnates disprove the prophecies, since the false Incarnates fail and come to nothing, but the mystical Nerevarine cult glorifies rather than shrinks from contradictions, citing the appearance of \"failed Incarnates\" as certain proof of Nerevar's coming rebirth.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_7HuleeyaInformant",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  }
+}

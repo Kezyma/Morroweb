@@ -1,0 +1,126 @@
+{
+  "1120918765240257898": {
+    "Prev": "",
+    "Next": "2745310044221392380",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharsten heart-fang",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That matter has been settled.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Trial",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2745310044221392380": {
+    "Prev": "1120918765240257898",
+    "Next": "843615193150388469",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharsten heart-fang",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "To the wolves then! You have shown mercy, %PCName, allowing him to die with this honor. Perhaps you have some wisdom after all. Lead the prisoner outside that he may accept his sentence. The shamen will summon the Caenlorn to perform their function. But first, accept this token. It is unlikely, but perhaps you, too, can be more like the wolves we revere.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "\"rigmor halfhand\"->sethello 0",
+      "Player->AddItem \"BM Wolf Helmet_heartfang\" 1",
+      "\"engar ice-mane\"->ModDisposition 40",
+      "\"risi ice-mane\"->ModDisposition 40",
+      "BM_wolf_caenlorn1->Enable",
+      "BM_wolf_caenlorn2->Enable",
+      "BM_wolf_caenlorn3->Enable",
+      "Journal BM_Trial 105",
+      "Goodbye"
+    ]
+  },
+  "843615193150388469": {
+    "Prev": "2745310044221392380",
+    "Next": "1787327048204436044",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharsten heart-fang",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then he shall be exiled. Halfhand may never again return to the Skaal village, and he shall be dead to the Skaal forever. It is a cruel choice you have made, %PCName, but perhaps it is wise. Here, accept this token. It is unlikely, but perhaps you, too, can be more like the wolves we revere.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "\"rigmor halfhand\"->AiWander 0 0 0 0 0 0",
+      "Player->AddItem \"BM Wolf Helmet_heartfang\" 1",
+      "\"engar ice-mane\"->ModDisposition 40",
+      "\"risi ice-mane\"->ModDisposition 40",
+      "Journal BM_Trial 100",
+      "Goodbye"
+    ]
+  },
+  "1787327048204436044": {
+    "Prev": "843615193150388469",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharsten heart-fang",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Halfhand must be exiled permanently from the Skaal, or he must be fed to the ceremonial wolves. Which do you choose?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Trial",
+        "Value": 80.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Trial 80",
+      "Choice \"I choose exile.\" 1 \"Feed him to the wolves.\" 2"
+    ]
+  }
+}

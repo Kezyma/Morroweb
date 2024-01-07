@@ -1,0 +1,273 @@
+{
+  "301206470309124948": {
+    "Prev": "",
+    "Next": "2463537441079428065",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "House Redoran does not tolerate traitors. Make amends, %PCName, if you still can.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2463537441079428065": {
+    "Prev": "301206470309124948",
+    "Next": "9950264823186126056",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have already been adopted by House Redoran, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "9950264823186126056": {
+    "Prev": "2463537441079428065",
+    "Next": "2250155891410418152",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are a fraud. You hide behind the false prophecies of the 'Incarnate' and the 'Nerevarine,' but Berel Sala, Captain of the Watch, says you are an agent in the pay of the Imperial Intelligence Service. You are an outlaw without honor, and cannot hope to be admitted to House Redoran. Go away.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B5_SarethiHort",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "2250155891410418152": {
+    "Prev": "9950264823186126056",
+    "Next": "2416015606243707519",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "You have already been adopted by House Hlaalu. We cannot accept members of other Great Houses.",
+    "Filters": [],
+    "Script": []
+  },
+  "2416015606243707519": {
+    "Prev": "2250155891410418152",
+    "Next": "254380901708629639",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "You have already been adopted by House Telvanni. We cannot accept members of other Great Houses.",
+    "Filters": [],
+    "Script": []
+  },
+  "254380901708629639": {
+    "Prev": "2416015606243707519",
+    "Next": "2867339301622328493",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "House Redoran only accepts the best and more honorable warriors. Unfortunately, you do not meet our requirements.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "RankRequirement",
+        "Compare": "Less",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "2867339301622328493": {
+    "Prev": "254380901708629639",
+    "Next": "11940141231877526804",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do not steal from your kin, strike your kin unprovoked, or murder your kin. Do not break your word. Honor your superiors and do your duty to your House. Respect the teachings of the Tribunal. Defend your House, your People, and your Honor. If you fail in these things, you will be cast out. If you fail twice, you will be cast out with no chance of regaining your honor.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Join House Redoran.\" 2 \"Nevermind.\" 3"
+    ]
+  },
+  "11940141231877526804": {
+    "Prev": "2867339301622328493",
+    "Next": "26999160593007611872",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So be it. You are now %NextPCRank %PCName in House Redoran. I will inform our trainers. Make use of them. If you truly wish to serve House Redoran, I can give you duties to perform. You may also check with me for advancement.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "PCJoinFaction \"Redoran\""
+    ]
+  },
+  "26999160593007611872": {
+    "Prev": "11940141231877526804",
+    "Next": "571631012022329261",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then what can I do for you?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "571631012022329261": {
+    "Prev": "26999160593007611872",
+    "Next": "173316557168907346",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you sure you want to join House Redoran? Remember that you cannot join any other Great House once you have made an oath to us.",
+    "Filters": [],
+    "Script": [
+      "Choice \"Yes, I want to join.\" 2 \"Hear the rules of House Redoran.\" 1 \"Nevermind.\" 3"
+    ]
+  },
+  "173316557168907346": {
+    "Prev": "571631012022329261",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "House Redoran is the greatest of the Great Houses. We are true and noble warriors, the hereditary defenders of Morrowind. Are you sure you wish to become a member? Or would you like to hear our rules?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Join House Redoran.\" 4 \"Hear the rules of House Redoran.\" 1 \"Nevermind.\" 3"
+    ]
+  }
+}

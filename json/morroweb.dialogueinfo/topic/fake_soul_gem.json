@@ -1,0 +1,120 @@
+{
+  "12548449179833790": {
+    "Prev": "",
+    "Next": "22427136292098827401",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Yes, Ajira thanks you again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Sabotage",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "22427136292098827401": {
+    "Prev": "12548449179833790",
+    "Next": "170417393123681890",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "You have put the gem in the desk as Ajira asked? Ajira thanks you.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "gemInDesk",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Sabotage",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal MG_Sabotage 100",
+      "ModPCFacRep 5 \"Mages Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "170417393123681890": {
+    "Prev": "22427136292098827401",
+    "Next": "4976244511819622984",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Take the fake soul gem Ajira gave you and put it in Galbedir's desk upstairs. Hurry before Galbedir returns.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Sabotage",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "4976244511819622984": {
+    "Prev": "170417393123681890",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Ajira has made a fake soul gem. Take it and put it in Galbedir's desk upstairs. Galbedir should be coming downstairs to talk with Marayn Dren, so no one will see you do this thing.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_BCShrooms",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MG_Sabotage 10",
+      "Player->AddItem \"misc_fakesoulgem\" 1"
+    ]
+  }
+}

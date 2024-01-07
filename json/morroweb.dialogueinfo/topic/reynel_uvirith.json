@@ -1,0 +1,320 @@
+{
+  "266561672256245168": {
+    "Prev": "",
+    "Next": "2197103111653825211",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've broken the rules of House Hlaalu, sweetie. It brings tears to my eyes when I think about your disloyalty. Maybe you can make amends and make everything better.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2197103111653825211": {
+    "Prev": "266561672256245168",
+    "Next": "1297652841365019667",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There are now fewer troubles for House Hlaalu.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_DestroyTelUvirith",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1297652841365019667": {
+    "Prev": "2197103111653825211",
+    "Next": "24478263372015328779",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you already killed Reynel Uvirith, you are learning to anticipate my needs, dumpling. Here's 1000 drakes from House Hlaalu. Buy something pretty for Uncle Crassius.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "reynel uvirith",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "HH_DestroyTelUvirith",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HH_DestroyTelUvirith 100",
+      "Player->AddItem Gold_001 1000",
+      "ModPCFacRep 10 \"Hlaalu\"",
+      "ModDisposition 10",
+      "Player->ModReputation 1"
+    ]
+  },
+  "24478263372015328779": {
+    "Prev": "1297652841365019667",
+    "Next": "1304331594307123541",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard that Reynel Uvirith was dead. I am so proud of you, dumpling. Please take another thousand drakes from House Hlaalu.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "reynel uvirith",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_DestroyTelUvirith",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HH_DestroyTelUvirith 100",
+      "Player->AddItem Gold_001 1000",
+      "ModPCFacRep 10 \"Hlaalu\"",
+      "ModDisposition 10",
+      "Player->ModReputation 1"
+    ]
+  },
+  "1304331594307123541": {
+    "Prev": "24478263372015328779",
+    "Next": "2381106252700324344",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Telvanni Stronghold of Tel Uvirith is built on Uvirith's Grave due west of Tel Fyr and northwest of the Erabenimsun camp. I'll mark these on your map. Don't be subtle, sweetie. Make sure House Telvanni gets the message.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BeroSupport",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HH_DestroyTelUvirith 10",
+      "ShowMap \"Tel Fyr\"",
+      "ShowMap \"Uvirith's Grave\"",
+      "ShowMap \"Erabenimsun Camp\""
+    ]
+  },
+  "2381106252700324344": {
+    "Prev": "1304331594307123541",
+    "Next": "3641191622702416576",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled from House Redoran. Make amends if you can.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "3641191622702416576": {
+    "Prev": "2381106252700324344",
+    "Next": "256493383420023212",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Reynel Uvirith is dead. Tel Uvirith will not be a threat unless some other Telvanni moves in.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_AttackUvirith",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "256493383420023212": {
+    "Prev": "3641191622702416576",
+    "Next": "293218665326541429",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Reynel Uvirith is already dead? You understand the politics of the situation well, %PCName. Maybe even the Telvanni will think twice about expanding illegally.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "reynel uvirith",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "HR_AttackUvirith",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HR_AttackUvirith 100",
+      "ModPCFacRep 10 \"Redoran\"",
+      "ModDisposition 10",
+      "Player->ModReputation 1"
+    ]
+  },
+  "293218665326541429": {
+    "Prev": "256493383420023212",
+    "Next": "1952022849918511967",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Yes, Reynel Uvirith is dead. This will send those Telvanni a message.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "reynel uvirith",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_AttackUvirith",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HR_AttackUvirith 100",
+      "ModPCFacRep 10 \"Redoran\"",
+      "ModDisposition 10",
+      "Player->ModReputation 1"
+    ]
+  },
+  "1952022849918511967": {
+    "Prev": "293218665326541429",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "The so-called \"Tel Uvirith\" is built on Uvirith's grave, which can be found west of Tel Fyr and northwest of the Erabenimsun camp. Go there and make sure the Telvanni understand that we will not tolerate this illegal expansion.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_DagothTanis",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HR_AttackUvirith 10",
+      "ShowMap \"Uvirith's Grave\""
+    ]
+  }
+}

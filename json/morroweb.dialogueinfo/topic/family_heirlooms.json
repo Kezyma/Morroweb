@@ -1,0 +1,404 @@
+{
+  "13699262521609031449": {
+    "Prev": "",
+    "Next": "13029261261931418583",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dro'zhirr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Dro'zhirr thinks you owe him some money, friend. You'd better get that to me soon. Dro'zhirr knows those jewels were worth at least 150 septims. Now, go get my money!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_BanditVictim",
+        "Value": 110.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "Gold_001",
+        "Value": 150.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "expensive_amulet_aeta",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "expensive_ring_aeta",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "13029261261931418583": {
+    "Prev": "13699262521609031449",
+    "Next": "12874167382123131938",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dro'zhirr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ahhh...she made good on her promise then! Nice dealing with you, %PCName. Perhaps we can do business again sometime.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_BanditVictim",
+        "Value": 110.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 150.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "expensive_amulet_aeta",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "expensive_ring_aeta",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_BanditVictim\" 120",
+      "AddItem \"Gold_001\" 150",
+      "Player->RemoveItem \"Gold_001\" 150",
+      "Goodbye"
+    ]
+  },
+  "12874167382123131938": {
+    "Prev": "13029261261931418583",
+    "Next": "117012109166621226",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dro'zhirr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I thought you were going to return those things to the Nord woman? You'd better get going, or Dro'zhirr will have to take the jewels back from you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_BanditVictim",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "117012109166621226": {
+    "Prev": "12874167382123131938",
+    "Next": "25411176202983810436",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dro'zhirr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Heirlooms? Hah! Dro'zhirr has found plenty of heirlooms. They just seem to fall into his pockets! In fact, Dro'zhirr just found a few new pieces earlier today. Took them from some Nord woman. Cried like a baby, she did. \"Oh, my precious jewelry!\"",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_BanditVictim",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_BanditVictim",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "25411176202983810436": {
+    "Prev": "117012109166621226",
+    "Next": "36289612230810856",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aeta wave-breaker",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've found them! I'm so relieved. Here, please take this gold as payment. I was able to keep it hidden when the outlaws robbed me, and I'd be glad for you to have it. Thank you again!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_BanditVictim",
+        "Value": 10.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "expensive_amulet_aeta",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "expensive_ring_aeta",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_BanditVictim\" 105",
+      "Player->RemoveItem \"expensive_amulet_aeta\" 1",
+      "Player->RemoveItem \"expensive_ring_aeta\" 1",
+      "AddItem \"expensive_amulet_aeta\" 1",
+      "AddItem \"expensive_ring_aeta\" 1",
+      "RemoveItem \"Gold_001\" 300",
+      "Player->AddItem \"Gold_001\" 300",
+      "Goodbye"
+    ]
+  },
+  "36289612230810856": {
+    "Prev": "25411176202983810436",
+    "Next": "2542930563131077074",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aeta wave-breaker",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've found them! I'm so relieved. Here, please take this gold as payment. I was able to keep it hidden when the outlaws robbed me, and I'd be glad for you to have it. Thank you again!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_BanditVictim",
+        "Value": 30.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "expensive_amulet_aeta",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "expensive_ring_aeta",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "NotEqual",
+        "Id": "MV_BanditVictim",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_BanditVictim\" 100",
+      "RemoveItem \"Gold_001\" 300",
+      "Player->AddItem \"Gold_001\" 300",
+      "Player->RemoveItem \"expensive_amulet_aeta\" 1",
+      "Player->RemoveItem \"expensive_ring_aeta\" 1",
+      "AddItem \"expensive_amulet_aeta\" 1",
+      "AddItem \"expensive_ring_aeta\" 1",
+      "Goodbye"
+    ]
+  },
+  "2542930563131077074": {
+    "Prev": "36289612230810856",
+    "Next": "208336131591419275",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aeta wave-breaker",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've found them! I'm so relieved. Here, please take this gold as payment. I was able to keep it hidden when the outlaws robbed me, and I'd be glad for you to have it. Thank you again!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_BanditVictim",
+        "Value": 50.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "expensive_amulet_aeta",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "expensive_ring_aeta",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_BanditVictim\" 110",
+      "RemoveItem \"Gold_001\" 300",
+      "Player->RemoveItem \"expensive_amulet_aeta\" 1",
+      "Player->RemoveItem \"expensive_ring_aeta\" 1",
+      "AddItem \"expensive_amulet_aeta\" 1",
+      "AddItem \"expensive_ring_aeta\" 1",
+      "Player->AddItem \"Gold_001\" 300",
+      "Goodbye"
+    ]
+  },
+  "208336131591419275": {
+    "Prev": "2542930563131077074",
+    "Next": "18805279852651516009",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aeta wave-breaker",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you can retrieve them for me, I'd be eternally grateful.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_BanditVictim",
+        "Value": 25.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_BanditVictim",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "18805279852651516009": {
+    "Prev": "208336131591419275",
+    "Next": "1095648453241622360",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aeta wave-breaker",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, it was a ring and an amulet. They're both inscribed, so it shouldn't be tough to tell which ones are mine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_BanditVictim",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_BanditVictim\" 25"
+    ]
+  },
+  "1095648453241622360": {
+    "Prev": "18805279852651516009",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aeta wave-breaker",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's good to have my jewelry back.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_BanditVictim",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  }
+}

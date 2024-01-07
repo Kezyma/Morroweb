@@ -1,0 +1,56 @@
+{
+  "28009251562031024030": {
+    "Prev": "",
+    "Next": "19521152372291710481",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mevure hlen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, they are. Of course, since we only have one supplier, they set all the prices. The East Empire Company has a stranglehold on all of the imports to Vivec, so we are forced to pay whatever prices they set. While some other shipments of goods come into the ports at Ebonheart, they get held up by so much bureaucracy, it simply isn't profitable for them to ship here.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_TradeSpy",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_TradeSpy\" 10"
+    ]
+  },
+  "19521152372291710481": {
+    "Prev": "28009251562031024030",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "J'zhirr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A bit high? J'zhirr does not understand what you mean. All of our prices are set legally. They are, of course, confidential, and kept in a safe place.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_TradeSpy",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  }
+}

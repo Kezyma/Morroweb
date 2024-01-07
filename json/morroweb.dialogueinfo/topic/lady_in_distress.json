@@ -1,0 +1,193 @@
+{
+  "12161210882806818215": {
+    "Prev": "",
+    "Next": "10718714332459322",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "synette jeline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I simply must get my ring back.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_LostRing",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MV_LostRing",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "10718714332459322": {
+    "Prev": "12161210882806818215",
+    "Next": "2111824053142022912",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "synette jeline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, thank you! When I finish dancing this evening, perhaps we can get together and ... discuss your reward.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MV_LostRing 20",
+      "set doneHighSign to 1"
+    ]
+  },
+  "2111824053142022912": {
+    "Prev": "10718714332459322",
+    "Next": "46087484445213878",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "synette jeline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, thank you!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MV_LostRing 20",
+      "set doneHighSign to 1"
+    ]
+  },
+  "46087484445213878": {
+    "Prev": "2111824053142022912",
+    "Next": "596317461978117401",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "synette jeline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hmmm. Well, thanks anyway. I understand you are busy.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal MV_LostRing 30"
+    ]
+  },
+  "596317461978117401": {
+    "Prev": "46087484445213878",
+    "Next": "72512298825893521",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "synette jeline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, I dropped my ring and I can't seem to find it. I think it must have rolled down into this pool here, but I can't go in to get it because I am expected in Gnisis shortly. You see, I'm...a private dancer...and I can't very well smell like icky muckwater now can I? Would you please get it for me? The water's not very deep, and I'd be very grateful and in your debt.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"It would be my pleasure.\" 1 \"I can't help you.\" 2",
+      "Journal MV_LostRing 10"
+    ]
+  },
+  "72512298825893521": {
+    "Prev": "596317461978117401",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "synette jeline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, I dropped my ring and I can't seem to find it. I think it must have rolled down into this pool here, but I can't go in to get it because I am expected at the keep shortly. You see, I'm a...dancer...and I can't very well smell like muckwater now can I? Would you please get it for me? I'd be forever in your debt.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Sure.\" 1 \"Sorry, tough luck.\" 2",
+      "Journal MV_LostRing 10"
+    ]
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "828715951384012138": {
+    "Prev": "",
+    "Next": "378148362883618147",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "You have returned the Glove of Sanguine Swiftblade, one of the 27 Threads of the Webspinner.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_S_Swiftblade",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "378148362883618147": {
+    "Prev": "828715951384012138",
+    "Next": "290953272132517159",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "With the return of the Glove of Sanguine Swiftblade, all the Threads of Webspinner have been returned to the Morag Tong. Mephala will bless you with a portion of her skills.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "ThreadsWebspinner",
+        "Value": 25.0
+      }
+    ],
+    "Script": [
+      "Journal MT_S_Swiftblade 100",
+      "Player->RemoveItem SanguineRGloveSwiftblade 1",
+      "Player->AddSpell SkillMephala_SP",
+      "Set ThreadsWebspinner to ThreadsWebspinner + 1",
+      "ModPCFacRep 25 \"Morag Tong\"",
+      "ModDisposition 25"
+    ]
+  },
+  "290953272132517159": {
+    "Prev": "378148362883618147",
+    "Next": "30630224821256923463",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "The Glove of Sanguine Swiftblade will take its place with the rest of the Threads of the Webspinner. Soon all these Threads will be returned to us by the machinations of Mephala, for all Threads lead to her black hands.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MT_S_Swiftblade 100",
+      "Player->RemoveItem SanguineRGloveSwiftblade 1",
+      "Set ThreadsWebspinner to ThreadsWebspinner + 1",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition 10"
+    ]
+  },
+  "30630224821256923463": {
+    "Prev": "290953272132517159",
+    "Next": "453812343147971309",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "So you do not truly care for our cause.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "453812343147971309": {
+    "Prev": "30630224821256923463",
+    "Next": "10531282653014606",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "Even though you have been expelled, you have the Glove of Sanguine Swiftblade one of the Threads of the Webspinner. Return the glove to me so that it may once again be dedicated to Mephala's service.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sanguinergloveswiftblade",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Here it is\" 1 \"Keep it\" 2"
+    ]
+  },
+  "10531282653014606": {
+    "Prev": "453812343147971309",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "You have the Glove of Sanguine Swiftblade one of the Threads of the Webspinner. Return the glove to me so that it may once again be dedicated to Mephala's service.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sanguinergloveswiftblade",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Here it is\" 1 \"Keep it\" 2"
+    ]
+  }
+}

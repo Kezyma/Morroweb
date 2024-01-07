@@ -1,0 +1,369 @@
+{
+  "4497303693079322389": {
+    "Prev": "",
+    "Next": "12225234971625420728",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled from House Redoran. Make amends and perhaps we can speak again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "12225234971625420728": {
+    "Prev": "4497303693079322389",
+    "Next": "2751125923349604",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "By murdering Alvis Teri you have shamed House Redoran. You will be expelled for this, and I will not give you any more duties.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "murderedAlvisTeri",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FoundersHelm",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "PCExpell \"Redoran\"",
+      "Set ExpRedoran to 1",
+      "ModDisposition -10"
+    ]
+  },
+  "2751125923349604": {
+    "Prev": "12225234971625420728",
+    "Next": "204892144858615534",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "You have recovered the Founder's Helm.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FoundersHelm",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "204892144858615534": {
+    "Prev": "2751125923349604",
+    "Next": "204322854114484887",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you, %PCName. You handled Alvis Teri well and did not shame House Redoran.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem Bonemold_Founders_Helm 1",
+      "ModDisposition 5",
+      "ModPCFacRep 5 Redoran",
+      "Journal HR_FoundersHelm 100",
+      "Player->ModReputation 1"
+    ]
+  },
+  "204322854114484887": {
+    "Prev": "204892144858615534",
+    "Next": "26982204639176965",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I had higher expectations of you, %PCName. The Founder's Helm does not belong to you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "26982204639176965": {
+    "Prev": "204322854114484887",
+    "Next": "1422899051651327353",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Good work, %PCName. You have recovered the Founder's Helm and have not brought shame upon House Redoran. Will you give me the Helm now?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bonemold_founders_helm",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FoundersHelm",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes\" 1 \"No\" 2"
+    ]
+  },
+  "1422899051651327353": {
+    "Prev": "26982204639176965",
+    "Next": "7637288681435527682",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Like I said, get the Founder's Helm from Alvis Teri. Do whatever you must to get the helm back, but do not murder Alvis Teri, for that would shame House Redoran.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FoundersHelm",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "7637288681435527682": {
+    "Prev": "1422899051651327353",
+    "Next": "22310236883224415224",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Alvis Teri stole a Founder's Helm from the Uveran Ancestral Tomb. He boasts of this feat at the Eight Plates Inn in Balmora and wears the Helm openly. Confront him and demand the Helm. Slay him if necessary, but do not shame House Redoran by murdering him.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Courier",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FindDalobar",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HR_FoundersHelm 10"
+    ]
+  },
+  "22310236883224415224": {
+    "Prev": "7637288681435527682",
+    "Next": "27798215811479714359",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alvis teri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I gave you the helm so just shut up about it. Go away.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FoundersHelm",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "27798215811479714359": {
+    "Prev": "22310236883224415224",
+    "Next": "1379208962960222606",
+    "Type": "Topic",
+    "Disposition": 75,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alvis teri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Fine. Take the stupid helm. But you're a momma's boy and so is your stupid Founder.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "\"Alvis Teri\"->RemoveItem Bonemold_Founders_Helm 1",
+      "Player->AddItem Bonemold_Founders_Helm 1",
+      "Journal HR_FoundersHelm 50"
+    ]
+  },
+  "1379208962960222606": {
+    "Prev": "27798215811479714359",
+    "Next": "21216156192437416722",
+    "Type": "Topic",
+    "Disposition": 75,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alvis teri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Fine. Take the stupid helm. Just like the Redorans to send a girl to do a man's job.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "\"Alvis Teri\"->RemoveItem Bonemold_Founders_Helm 1",
+      "Player->AddItem Bonemold_Founders_Helm 1",
+      "Journal HR_FoundersHelm 50"
+    ]
+  },
+  "21216156192437416722": {
+    "Prev": "1379208962960222606",
+    "Next": "16951265192546817007",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alvis teri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I stole it fair and square.",
+    "Filters": [],
+    "Script": []
+  },
+  "16951265192546817007": {
+    "Prev": "21216156192437416722",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alvis teri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I don't think so. I like the way it fits.",
+    "Filters": [],
+    "Script": []
+  }
+}

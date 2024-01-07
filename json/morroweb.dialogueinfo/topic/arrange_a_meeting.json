@@ -1,0 +1,659 @@
+{
+  "5298125431180425445": {
+    "Prev": "",
+    "Next": "3198413546229838089",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "minabibi assardarainat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am here, %PCName. Skink and I have much to learn from each other.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_WiseWoman",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "3198413546229838089": {
+    "Prev": "5298125431180425445",
+    "Next": "777760291389413298",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "minabibi assardarainat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As I promised, I am here, %PCName. I did not promise any reward, but Skink asked me to give this to you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_WiseWoman",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MG_WiseWoman 110",
+      "Player->AddItem \"ancestor's ring\" 1"
+    ]
+  },
+  "777760291389413298": {
+    "Prev": "3198413546229838089",
+    "Next": "587689581868813667",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "minabibi assardarainat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The spirit of Kanit Ashurnisammis is resting. I have more duties here to prevent Kanit's spirit from returning. Speak once more with Wise Woman Sinnammu Mirpal. Tell her that Kanit Ashurnisammis is at rest. Perhaps then she will allow me to meet Skink-in-Tree's-Shade.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_WiseWoman",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "ancestor_mg_wisewoman",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MG_WiseWoman 70"
+    ]
+  },
+  "587689581868813667": {
+    "Prev": "777760291389413298",
+    "Next": "13510216552649118339",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "minabibi assardarainat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Send the spirit of Kanit Ashurnisammis to its final rest, and then we can talk of meetings.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_WiseWoman",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "13510216552649118339": {
+    "Prev": "587689581868813667",
+    "Next": "51076969956112563",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "minabibi assardarainat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I will speak with Skink-in-Tree's-Shade. But you must help me also. Sinnammu sent me here as a punishment. She asked me to calm an angry ancestor, but my charms will not calm him, and I am not strong enough fight it. Find the spirit of Kanit Ashurnisammis and send it to its final rest.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_WiseWoman",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal MG_WiseWoman 40"
+    ]
+  },
+  "51076969956112563": {
+    "Prev": "13510216552649118339",
+    "Next": "86942004312424254",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinnammu mirpal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No, I have sent my apprentice. That is all I will do for your Argonian.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_WiseWoman",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "86942004312424254": {
+    "Prev": "51076969956112563",
+    "Next": "890925185785318981",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinnammu mirpal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will send my apprentice, Minabibi, to speak with this Argonian.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_WiseWoman",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "890925185785318981": {
+    "Prev": "86942004312424254",
+    "Next": "392521375428414295",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinnammu mirpal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I know you speak the truth, %PCName. I do not need such as her for an apprentice. I will send her to talk with this Argonian.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MG_WiseWoman 80",
+      "ModDisposition 20",
+      "\"Minabibi Assardarainat\"->PositionCell 217 846 74 190 \"Sadrith Mora, Wolverine Hall: Mage's Guild\""
+    ]
+  },
+  "392521375428414295": {
+    "Prev": "890925185785318981",
+    "Next": "9941279751769730014",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinnammu mirpal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So be it. I will send my apprentice to talk with this Skink, but I do so for the honor of the Ahemmusa. She will soon see the error of the foreigners' ways and return to us. She will make a fine Wise Woman when my duties are done.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal MG_WiseWoman 80",
+      "ModDisposition -10",
+      "\"Minabibi Assardarainat\"->PositionCell 217 846 74 190 \"Sadrith Mora, Wolverine Hall: Mage's Guild\""
+    ]
+  },
+  "9941279751769730014": {
+    "Prev": "392521375428414295",
+    "Next": "17487252923134815764",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinnammu mirpal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I know the spirit of Kanit Ashurnisammis is at rest. Before I send my apprentice to this Skink, I will ask a question. Did you pacify the spirit, or did Minabibi pacify the spirit?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_WiseWoman",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Choice \"I did.\" 1 \"Minabibi did.\" 2"
+    ]
+  },
+  "17487252923134815764": {
+    "Prev": "9941279751769730014",
+    "Next": "1699953722518328587",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinnammu mirpal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will not meet with this Argonian. I might send my apprentice, Minabibi, for it is time she saw how you foreigners live and left her childish notions behind her. She is in the Favel Tomb.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_WiseWoman",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal MG_WiseWoman 30"
+    ]
+  },
+  "1699953722518328587": {
+    "Prev": "17487252923134815764",
+    "Next": "175115564241811593",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "kaushad",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Will this Argonian make the Telvanni deal with us fairly? Will this Argonian make the Empire give us better prices so that we can feed our people? Will this Argonian give us a place on the Council? Will this Argonian kill the blighted creatures and the outlaws that plague out village? Then we have no time for this Argonian.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_WiseWoman",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal MG_WiseWoman 28"
+    ]
+  },
+  "175115564241811593": {
+    "Prev": "1699953722518328587",
+    "Next": "855915489890532096",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sonummu zabamat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Speak with Ashkhan Kaushad. I will meet with this Argonian only if the Ashkhan speaks it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_WiseWoman",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal MG_WiseWoman 27"
+    ]
+  },
+  "855915489890532096": {
+    "Prev": "175115564241811593",
+    "Next": "311615399939819566",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "manirai",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am too busy to meet this Argonian.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "NotEqual",
+        "Id": "PCRace",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_WiseWoman",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal MG_WiseWoman 26"
+    ]
+  },
+  "311615399939819566": {
+    "Prev": "855915489890532096",
+    "Next": "3025832412143820982",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "manirai",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am too busy to meet with animals.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_WiseWoman",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal MG_WiseWoman 26"
+    ]
+  },
+  "3025832412143820982": {
+    "Prev": "311615399939819566",
+    "Next": "18358113672639716828",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nibani maesa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Urshilaku will never meet with an Argonian Sorcerer. You may be Nerevarine, but your judgement is clouded by your Outlander past, or you would not ask such questions.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_WiseWoman",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal MG_WiseWoman 25"
+    ]
+  },
+  "18358113672639716828": {
+    "Prev": "3025832412143820982",
+    "Next": "2844133711727116111",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nibani maesa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Urshilaku will never meet with an Argonian Sorcerer.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_WiseWoman",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal MG_WiseWoman 25"
+    ]
+  },
+  "2844133711727116111": {
+    "Prev": "18358113672639716828",
+    "Next": "931832367131021901",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have not yet had word from Arch-Mage Trebonius in Vivec. Until then, I must consider you expelled.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "931832367131021901": {
+    "Prev": "2844133711727116111",
+    "Next": "53477085949629571",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You were still expelled from the Mages Guild last I heard. Be patient. The Guild does not move quickly here in Vvardenfell.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "53477085949629571": {
+    "Prev": "931832367131021901",
+    "Next": "24025323462159116859",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I cannot discuss these matters with you. You have been expelled.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "24025323462159116859": {
+    "Prev": "53477085949629571",
+    "Next": "30748285641736118460",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Yes, Minabibi will stay here with me for a time.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_WiseWoman",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "30748285641736118460": {
+    "Prev": "24025323462159116859",
+    "Next": "2901513671322467390",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Ah, thank you %PCName. Minabibi has already answered many of my questions.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_WiseWoman",
+        "Value": 80.0
+      }
+    ],
+    "Script": [
+      "Journal MG_WiseWoman 100",
+      "ModPCFacRep 5 \"Mages Guild\"",
+      "ModDisposition 10",
+      "Player->ModReputation 2"
+    ]
+  },
+  "2901513671322467390": {
+    "Prev": "30748285641736118460",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Speak with the Wise Women of the Ashlander tribes. From what I've heard, I doubt the Erabenimsun or the Urshilaku would agree. The Zainab might agree, but I would speak with the Ahemmusa first.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_VampVol2",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MG_WiseWoman 10"
+    ]
+  }
+}

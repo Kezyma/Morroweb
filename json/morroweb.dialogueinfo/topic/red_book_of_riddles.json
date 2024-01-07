@@ -1,0 +1,207 @@
+{
+  "127152164169027149": {
+    "Prev": "",
+    "Next": "590012767721920831",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "codus callonus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard about your duel with Salyn Sarethi. Don't be ashamed. The Buoyant Armigers are going to accuse the Legions of all sorts of things no matter what we do.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Courtesy",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "590012767721920831": {
+    "Prev": "127152164169027149",
+    "Next": "164839426662520933",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "codus callonus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard how easily you beat Salyn Sarethi. I'll be sure and mention that the next time I hear a Buoyant Armiger insulting the Legions.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Courtesy",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "164839426662520933": {
+    "Prev": "590012767721920831",
+    "Next": "8871169302538713302",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "codus callonus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I already gave you my copy. Use it well.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "redBookRiddles",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "8871169302538713302": {
+    "Prev": "164839426662520933",
+    "Next": "454555511745417906",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "codus callonus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ha! I've always wanted to see someone beat Salyn Sarethi at his own game. Tell you what, I'll give you my copy for free.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Set redBookRiddles to 1",
+      "Player->AddItem \"bk_RedBookOfRiddles\" 1"
+    ]
+  },
+  "454555511745417906": {
+    "Prev": "8871169302538713302",
+    "Next": "2541829011215425826",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "codus callonus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, then, would you like to buy something?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "2541829011215425826": {
+    "Prev": "454555511745417906",
+    "Next": "3137212769203353130",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "codus callonus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I have a copy... Why do you ask?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Courtesy",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"I must have a duel of wits with Salyn Sarethi.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "3137212769203353130": {
+    "Prev": "2541829011215425826",
+    "Next": "30654139202106129354",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Did you find the book useful?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Courtesy",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "30654139202106129354": {
+    "Prev": "3137212769203353130",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I believe a former Champion in the Legions, Codus Callonus, has a copy. His bookstore is in Ald'ruhn.",
+    "Filters": [],
+    "Script": []
+  }
+}

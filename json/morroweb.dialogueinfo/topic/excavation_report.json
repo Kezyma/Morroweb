@@ -1,0 +1,575 @@
+{
+  "14032886546498492": {
+    "Prev": "",
+    "Next": "24829289771589024867",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "senilias cadiusus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I won't be late with the next excavation report.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Excavation",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "24829289771589024867": {
+    "Prev": "14032886546498492",
+    "Next": "5265303912430023992",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "senilias cadiusus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You found the report? Deliver it to Edwinna Elbert in Ald'ruhn. I will continue my work here. Now that the lower levels are open, perhaps we can make more discoveries here. In honor of our deceased colleague, Anes Vendu.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_seniliasreport",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal MG_Excavation 50"
+    ]
+  },
+  "5265303912430023992": {
+    "Prev": "24829289771589024867",
+    "Next": "68234782428430887",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "senilias cadiusus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Anes Vendu took the excavation report with him, and I can't figure out how to get to the lower levels.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Excavation",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "68234782428430887": {
+    "Prev": "5265303912430023992",
+    "Next": "25979115299133141",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "senilias cadiusus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I don't exactly have an excavation report for her. Tell Edwinna everything is fine. We've just had a few... setbacks. Our native guide, Anes Vendu, is missing.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Excavation",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal MG_Excavation 20"
+    ]
+  },
+  "25979115299133141": {
+    "Prev": "68234782428430887",
+    "Next": "19987263022513624581",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "senilias cadiusus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The excavation report is overdue. We've had a few... setbacks. Our native guide, Anes Vendu, is missing.",
+    "Filters": [],
+    "Script": [
+      "Journal MG_Excavation 20"
+    ]
+  },
+  "19987263022513624581": {
+    "Prev": "25979115299133141",
+    "Next": "3145932620134025821",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "pania cadiusus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you must talk about this boring excavation business, you should talk to my father Senilias.",
+    "Filters": [],
+    "Script": []
+  },
+  "3145932620134025821": {
+    "Prev": "19987263022513624581",
+    "Next": "23253169992016813717",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you still a member of the guild? Once Trebonius gives the authorization, we can discuss guild matters again.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "23253169992016813717": {
+    "Prev": "3145932620134025821",
+    "Next": "902830921296417413",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Were you expelled? Or did you clear that up already? You ought to make amends with Guildmaster Trebonius just to be sure.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "902830921296417413": {
+    "Prev": "23253169992016813717",
+    "Next": "2309630041298235789",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled, %PCName. If you want to make amends, you should speak with Guildmaster Trebonius.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2309630041298235789": {
+    "Prev": "902830921296417413",
+    "Next": "1177621921130922476",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Senilias is dead? I am sorry to hear that, %PCName. I will have to change my entire plan of research.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "senilias cadiusus",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Excavation",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "1177621921130922476": {
+    "Prev": "2309630041298235789",
+    "Next": "32543111241368922417",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "The latest excavation report was right on schedule.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Mzuleft",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "32543111241368922417": {
+    "Prev": "1177621921130922476",
+    "Next": "12336187021888230010",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "This is interesting... The excavation report mentions another Dwemer ruin, Mzuleft. Would you go there and look for some blueprints?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Excavation",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "12336187021888230010": {
+    "Prev": "32543111241368922417",
+    "Next": "29532253753116316689",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you have such a keen interest in scholarship, perhaps you'd like to join the Mages Guild.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Excavation",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "29532253753116316689": {
+    "Prev": "12336187021888230010",
+    "Next": "130047342226573905",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have the excavation report already, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Excavation",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "130047342226573905": {
+    "Prev": "29532253753116316689",
+    "Next": "185881565044513357",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you, %PCName. This report will be helpful, I'm sure.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_seniliasreport",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal MG_Excavation 100",
+      "Player->RemoveItem \"bk_SeniliasReport\" 1",
+      "AddItem \"bk_SeniliasReport\" 1",
+      "ModPCFacRep 10 \"Mages Guild\"",
+      "ModDisposition 10",
+      "Player->ModReputation 1"
+    ]
+  },
+  "185881565044513357": {
+    "Prev": "130047342226573905",
+    "Next": "1318441542521318181",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, where is it? I don't see any excavation report.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1318441542521318181": {
+    "Prev": "185881565044513357",
+    "Next": "22009162631120830251",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I need that report, %PCName. I cannot work with all these meaningless delays.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "22009162631120830251": {
+    "Prev": "1318441542521318181",
+    "Next": "129581008042489873",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Did you get the excavation report? Do you have it with you?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Excavation",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "129581008042489873": {
+    "Prev": "22009162631120830251",
+    "Next": "6479357058595817",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "He doesn't have a report for me? Why not? What kind of setbacks? This sounds suspicious, %PCName. I absolutely must have that excavation report. Go back to Nchuleftingth and find out what is really going on.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Excavation",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "ShowMap Nchuleftingth"
+    ]
+  },
+  "6479357058595817": {
+    "Prev": "129581008042489873",
+    "Next": "27079209383092919100",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Go to Nchuleftingth and talk with Senilias Cadiusus. Find out why he hasn't delivered his excavation report.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Excavation",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "ShowMap Nchuleftingth"
+    ]
+  },
+  "27079209383092919100": {
+    "Prev": "6479357058595817",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "One of my colleagues, Senilias Cadiusus, is engaged in official Imperial research in Nchuleftingth. He was supposed to give me an excavation report every month, but has not sent one this month. Go to Nchuleftingth and find out what is going on.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Science",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MG_Excavation 10",
+      "ShowMap Nchuleftingth"
+    ]
+  }
+}

@@ -1,0 +1,378 @@
+{
+  "13016238062411718801": {
+    "Prev": "",
+    "Next": "18152138871553111085",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "assaba-bentus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am here as I promised. Do not worry about me. No witch-woman can hold a real warrior for long.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescueHermit",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "18152138871553111085": {
+    "Prev": "13016238062411718801",
+    "Next": "2398977363820583",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "assaba-bentus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, we travel together to the Mabrigash camp.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescueHermit",
+        "Value": 25.0
+      }
+    ],
+    "Script": []
+  },
+  "2398977363820583": {
+    "Prev": "18152138871553111085",
+    "Next": "70511544391142831",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "assaba-bentus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will show you that I am not afraid of any witch-woman. I will follow you to the mabrigash camp.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal IL_RescueHermit 25",
+      "AiFollow Player 0 85344 -3536 640 0",
+      "Goodbye"
+    ]
+  },
+  "70511544391142831": {
+    "Prev": "2398977363820583",
+    "Next": "2204152213177024290",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "assaba-bentus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Your words move me. I will show you how a real warrior deals with these witch-women. I will follow you to the mabrigash camp.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal IL_RescueHermit 25",
+      "AiFollow Player 0 85344 -3536 640 0",
+      "Goodbye"
+    ]
+  },
+  "2204152213177024290": {
+    "Prev": "70511544391142831",
+    "Next": "2293719125970827121",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "assaba-bentus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am a hunter of the Erabinimsun. I have proven my bravery many times against the war-loving Erabinimsun who think all the peace-lovers are cowards.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Choice \"So you ARE afraid.\" 1 \"Nevermind.\" 6"
+    ]
+  },
+  "2293719125970827121": {
+    "Prev": "2204152213177024290",
+    "Next": "24518149913020223724",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "assaba-bentus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Mimanu tried her charms on me. I let her think they were working and escaped the next morning.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Choice \"Then you can enjoy her charms and escape again.\" 2 \"Nevermind.\" 6"
+    ]
+  },
+  "24518149913020223724": {
+    "Prev": "2293719125970827121",
+    "Next": "53117600474428084",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "assaba-bentus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then what do you want, outlander?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": []
+  },
+  "53117600474428084": {
+    "Prev": "24518149913020223724",
+    "Next": "576925922481230387",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "assaba-bentus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What? You want me to go live with the witch-women? Do you think I am a fool like Jocien? Do you think I would fall for their charms?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "IL_RescueHermit",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Choice \"Are you afraid of a few women?\" 4 \"Are you sure you can resist their charms?\" 5 \"Nevermind.\" 6"
+    ]
+  },
+  "576925922481230387": {
+    "Prev": "53117600474428084",
+    "Next": "21431945678929255",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Erabenimsun Camp",
+    "PlayerFaction": "",
+    "Text": "The wise-woman who left us, and our rules. She steals a man's vital essence to make herself a powerful sorcerer. Her camp is to the west, along the lava. She has others with her and I would stay away. It'll be hard to find the camp in this landscape anyway.",
+    "Filters": [],
+    "Script": []
+  },
+  "21431945678929255": {
+    "Prev": "576925922481230387",
+    "Next": "1750676562642721708",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "artisa arelas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A mabrigash is an Ashlander witch-warrior, a renegade wise woman who has forsaken the established rules of behavior for an Ashlander woman to become a master of dark magic and the weapons of war. By secret rituals the mabrigash steals a man's vital essence and makes herself a powerful sorcerer and warrior. The manifestation of her dark power is called a 'ghost snake' that paralyzes and drains a victim's vitality.",
+    "Filters": [],
+    "Script": []
+  },
+  "1750676562642721708": {
+    "Prev": "21431945678929255",
+    "Next": "5048304081133917538",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Savant",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A mabrigash is an Ashlander witch-warrior, a renegade wise woman who has forsaken the established rules of behavior for an Ashlander woman to become a master of dark magic and the weapons of war. By secret rituals the mabrigash steals a man's vital essence and makes herself a powerful sorcerer and warrior. The manifestation of her dark power is called a 'ghost snake' that paralyzes and drains a victim's vitality.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "5048304081133917538": {
+    "Prev": "1750676562642721708",
+    "Next": "185765862889827659",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Scout",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The manifestation of the mabrigash's dark power is called a 'ghost snake' that paralyzes and drains a victim's vitality.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 33.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "185765862889827659": {
+    "Prev": "5048304081133917538",
+    "Next": "61477696696217308",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Scout",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "By secret rituals the mabrigash steals a man's vital essence and makes herself a powerful sorcerer and warrior.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 66.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "61477696696217308": {
+    "Prev": "185765862889827659",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Scout",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A mabrigash is an Ashlander witch-warrior, a renegade wise woman who has forsaken the established rules of behavior for an Ashlander woman to become a master of dark magic and the weapons of war.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

@@ -1,0 +1,539 @@
+{
+  "21619199473197426476": {
+    "Prev": "",
+    "Next": "14927152532648817997",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "manwe",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have already given you the dues you claim I owe. What more do you want of me?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_PayDues",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -3"
+    ]
+  },
+  "14927152532648817997": {
+    "Prev": "21619199473197426476",
+    "Next": "3183338626561254",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "manwe",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here. Take the gold and leave me to my work. I would advise that you leave here now. We are engaged in very serious research here and if you disturb my colleagues, they may not be very understanding.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MG_PayDues 50",
+      "Player->AddItem Gold_001 2000",
+      "RemoveItem Gold_001 2000"
+    ]
+  },
+  "3183338626561254": {
+    "Prev": "14927152532648817997",
+    "Next": "1912939382230810016",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "manwe",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Your lack of civility is astonishing. Are you sure your ancestors have no Cyrodiil blood?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Function",
+        "Func": "SameRace",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1912939382230810016": {
+    "Prev": "3183338626561254",
+    "Next": "243031030209198541",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "manwe",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I should have expected such discourteous behavior from one of the lower races.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "243031030209198541": {
+    "Prev": "1912939382230810016",
+    "Next": "1575816178192723028",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "manwe",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Will you leave me alone if I give you the 2000 septims? I cannot leave my research unattended.",
+    "Filters": [],
+    "Script": [
+      "Choice \"Yes.\" 1 \"No.\" 2"
+    ]
+  },
+  "1575816178192723028": {
+    "Prev": "243031030209198541",
+    "Next": "32562187111284224375",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "manwe",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I left the Mages Guild and dedicated my life to studying the adaptive responses of quaternary variations in Oblivion streams. If Ranis Athrys wants the dues that much, why don't you just pay them yourself? I am unconcerned with such petty financial matters.",
+    "Filters": [],
+    "Script": [
+      "Journal MG_PayDues 40"
+    ]
+  },
+  "32562187111284224375": {
+    "Prev": "1575816178192723028",
+    "Next": "30482104332862610215",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have not had word that you were in good standing again. If you persist in this behavior, I will be forced to make a formal complaint to Arch-Mage Trebonius.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "30482104332862610215": {
+    "Prev": "32562187111284224375",
+    "Next": "934732062485717848",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You were expelled some time ago. Do not expect me to help you now.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "934732062485717848": {
+    "Prev": "30482104332862610215",
+    "Next": "16586257162452527940",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled. I can't say I am surprised. There are so few truly dedicated to our cause here in Vvardenfell.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "16586257162452527940": {
+    "Prev": "934732062485717848",
+    "Next": "177783598283630258",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll let you know if anyone else hasn't paid their dues. Once word of this gets around, I shouldn't have any more trouble from these less dedicated wizards.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "manwe",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_PayDues",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "177783598283630258": {
+    "Prev": "16586257162452527940",
+    "Next": "2761815316271922463",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll let you know if anyone else hasn't paid their dues.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_PayDues",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2761815316271922463": {
+    "Prev": "177783598283630258",
+    "Next": "128565411267027790",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You killed Manwe? Hmm... The lost income is unfortunate, but perhaps it will serve as a lesson to others.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "manwe",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_JoinUs",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MG_PayDues 100",
+      "ModPCFacRep 5 \"Mages Guild\"",
+      "ModDisposition 5"
+    ]
+  },
+  "128565411267027790": {
+    "Prev": "2761815316271922463",
+    "Next": "5554327322441623692",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You killed Manwe? Hmm... The lost income is unfortunate, but perhaps it will serve as a lesson to others. What happened with Llarar Bereloth? Did you convince him to join us or not?",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "manwe",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal MG_PayDues 100",
+      "ModPCFacRep 5 \"Mages Guild\"",
+      "ModDisposition 5"
+    ]
+  },
+  "5554327322441623692": {
+    "Prev": "128565411267027790",
+    "Next": "26207289852195416322",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good work, %PCName. You are the first %PCRank to get Manwe to pay her dues. I knew I could rely on you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_JoinUs",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MG_PayDues 100",
+      "Player->RemoveItem Gold_001 1000",
+      "ModDisposition 15",
+      "ModPCFacRep 5 \"Mages Guild\""
+    ]
+  },
+  "26207289852195416322": {
+    "Prev": "5554327322441623692",
+    "Next": "216047938293154011",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good work, %PCName. You are the first %PCRank to get Manwe to pay her dues. I knew I could rely on you. Did you also convince Llarar Bereloth to join us?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MG_PayDues 100",
+      "Player->RemoveItem Gold_001 1000",
+      "ModDisposition 15",
+      "ModPCFacRep 5 \"Mages Guild\""
+    ]
+  },
+  "216047938293154011": {
+    "Prev": "26207289852195416322",
+    "Next": "16847177657230130",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then go back to Manwe and get the dues from her. If you can't convince her, kill her. Don't come back here again until you get some results.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "16847177657230130": {
+    "Prev": "216047938293154011",
+    "Next": "1366544201128732001",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you have the 2000 septims that Manwe owes?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_PayDues",
+        "Value": 30.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 2000.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes.\" 1 \"No.\" 2"
+    ]
+  },
+  "1366544201128732001": {
+    "Prev": "16847177657230130",
+    "Next": "8733205942846520537",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've already told you what I want done. Find Manwe in Punabi and get the dues she owes us.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_PayDues",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "8733205942846520537": {
+    "Prev": "1366544201128732001",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 2,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Manwe has failed to pay her dues for several years, and she now owes us over 2000 septims. Allegedly she is researching something in Punabi, near Llarar Bereloth in Sulipund. If you can convince her to pay the dues, I will split them with you. Otherwise, kill her.",
+    "Filters": [],
+    "Script": [
+      "Journal MG_PayDues 10"
+    ]
+  }
+}

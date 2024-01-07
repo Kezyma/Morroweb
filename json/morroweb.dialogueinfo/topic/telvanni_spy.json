@@ -1,0 +1,543 @@
+{
+  "179287683539217233": {
+    "Prev": "",
+    "Next": "24899101441471519574",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Telvanni spies? Yes, I suspect there is at least one. I do not know who or where. While Sadrith Mora may be the obvious target, I would try looking in Vivec. That's where Guild decisions are actually made.",
+    "Filters": [],
+    "Script": []
+  },
+  "24899101441471519574": {
+    "Prev": "179287683539217233",
+    "Next": "11442133941023827714",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Well, you're the Arch-Mage now. If you want to know who the spy is, talk to one of my best advisors, Tiram Gadar. He'll help root the spy out. I'm sure of it.",
+    "Filters": [],
+    "Script": []
+  },
+  "11442133941023827714": {
+    "Prev": "24899101441471519574",
+    "Next": "5756250402517129741",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Because I'm the Archmage of Vvardenfell, of course. I'd know if there was a spy in my guild.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "tiram gadar",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "5756250402517129741": {
+    "Prev": "11442133941023827714",
+    "Next": "115163031731528582",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What?! Frankly, I don't believe you. Tiram Gadar is my most trusted advisor. And I've given you his impeccable credentials. Ranis Athrys might believe such baseless accusations, but I am far more sophisticated.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5",
+      "Goodbye"
+    ]
+  },
+  "115163031731528582": {
+    "Prev": "5756250402517129741",
+    "Next": "311632119734017396",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What? I thought she hated the Telvanni after what they did to her parents... But I have heard she was trying to intimidate rogue Telvanni to join the Guild. Tiram Gadar mentioned that the Dunmer are quite upset over some of her actions. I will have her expelled immediately.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal MG_SpyCatch 110",
+      "\"ranis athrys\"->Disable",
+      "ModPCFacRep 5 \"Mages Guild\"",
+      "Player->ModReputation 1"
+    ]
+  },
+  "311632119734017396": {
+    "Prev": "115163031731528582",
+    "Next": "224147073209767754",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "It seems you found the spy, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_SpyCatch",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "224147073209767754": {
+    "Prev": "311632119734017396",
+    "Next": "2898730559460948",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Why, no, %PCName. There are no Telvanni spies here. And I would know if there were.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "itermerel",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "tashpi ashibael",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_SpyCatch",
+        "Value": 80.0
+      }
+    ],
+    "Script": [
+      "Choice \"Truth: Tiram Gadar is a Telvanni spy.\" 1 \"Lie: Ranis Athrys is a Telvanni spy.\" 2"
+    ]
+  },
+  "2898730559460948": {
+    "Prev": "224147073209767754",
+    "Next": "1610102231687517643",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Why, no, %PCName. There are no Telvanni spies here. And I would know if there were. I'm the Archmage after all. Tiram Gadar, my Dunmer advisor, keeps an eye out for spies and that sort of thing.",
+    "Filters": [],
+    "Script": []
+  },
+  "1610102231687517643": {
+    "Prev": "2898730559460948",
+    "Next": "1714319054833723876",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tiram gadar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Telvanni spy? Not that I know of. I am a special advisor to Arch-Mage Trebonius on Dunmer Issues. You can check my credentials with Trebonius himself.",
+    "Filters": [],
+    "Script": []
+  },
+  "1714319054833723876": {
+    "Prev": "1610102231687517643",
+    "Next": "7229659289087195",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "movis darys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No, I am not a Telvanni spy. Unless you have proof, you should not make such accusations.",
+    "Filters": [],
+    "Script": []
+  },
+  "7229659289087195": {
+    "Prev": "1714319054833723876",
+    "Next": "209038287244027155",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have not had word that you were in good standing again. If you persist in this behavior, I will be forced to make a formal complaint.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "209038287244027155": {
+    "Prev": "7229659289087195",
+    "Next": "2002727492209428797",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You were expelled some time ago. Do not expect me to help you now.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "2002727492209428797": {
+    "Prev": "209038287244027155",
+    "Next": "720014160313315302",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled. I can't say I am surprised. There are so few truly dedicated to our cause here in Vvardenfell.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "720014160313315302": {
+    "Prev": "2002727492209428797",
+    "Next": "325873048222706211",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have the situation under control, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_SpyCatch",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "325873048222706211": {
+    "Prev": "720014160313315302",
+    "Next": "2172128038153332370",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, this is exactly the kind of proof I was looking for. Excellent work, %PCName. It's a shame that the guild is run by a scuttlehead with no sense or ambition like Trebonius. These credentials are the worst forgery I've seen in years. Even Ocato's name is misspelled. Please take these scrolls and this dagger for helping the guild.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_tiramgadarscredentials",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_SpyCatch",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal MG_SpyCatch 100",
+      "Player->RemoveItem \"bk_tiramgadarscredentials\" 1",
+      "Player->AddItem \"sc_summongoldensaint\" 2",
+      "Player->AddItem \"daedric dagger_soultrap\" 1",
+      "ModPCFacRep 5 \"Mages Guild\"",
+      "ModDisposition 15",
+      "\"tiram gadar\"->disable",
+      "Player->ModReputation 1"
+    ]
+  },
+  "2172128038153332370": {
+    "Prev": "325873048222706211",
+    "Next": "6641320912711730266",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Look for a spy in the Mages Guilds in Ald'ruhn, Vivec, and Sadrith Mora. When you find the spy, report back to me. It is not necessary to take any action against the spy.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_SpyCatch",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "6641320912711730266": {
+    "Prev": "2172128038153332370",
+    "Next": "78089826767330390",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go to the Guild halls in Ald'ruhn, Vivec, and Sadrith Mora. I'm sure there's a spy. When you find the spy, do not take any action. Report back to me.",
+    "Filters": [],
+    "Script": [
+      "Journal MG_SpyCatch 10"
+    ]
+  },
+  "78089826767330390": {
+    "Prev": "6641320912711730266",
+    "Next": "44072507191333341",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "Vivec, Guild of Mages",
+    "PlayerFaction": "",
+    "Text": "Talk to Trebonius.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "trebonius artorius",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "44072507191333341": {
+    "Prev": "78089826767330390",
+    "Next": "27666319671180113291",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Khajiit",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ranis is right about this one. Telvanni spies are everywhere.",
+    "Filters": [],
+    "Script": []
+  },
+  "27666319671180113291": {
+    "Prev": "44072507191333341",
+    "Next": "3249931226303674502",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Battlemage",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "How would I know who the Telvanni spy is? What are you suggesting?",
+    "Filters": [],
+    "Script": []
+  },
+  "3249931226303674502": {
+    "Prev": "27666319671180113291",
+    "Next": "3091115675227713991",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Mage",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Mages Guild is very strict with its admissions rules. We would never accept a Telvanni spy.",
+    "Filters": [],
+    "Script": []
+  },
+  "3091115675227713991": {
+    "Prev": "3249931226303674502",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't know of any spies in the Mages Guild.",
+    "Filters": [],
+    "Script": []
+  }
+}

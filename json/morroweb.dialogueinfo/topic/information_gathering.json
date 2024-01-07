@@ -1,0 +1,166 @@
+{
+  "1169290472039916356": {
+    "Prev": "",
+    "Next": "2410209952981819284",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Bolrin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ahhh...you've gotten the list! This will prove most advantageous. Business is all about having even a little advantage over your competitors. You have done well. Take this as a reward. And mention this to no one.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_clientlist",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_Clients",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Clients",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Player->removeitem \"bk_clientlist\" 1",
+      "AddItem \"bk_clientlist\" 1",
+      "Journal \"EB_Clients\" 50",
+      "Player->additem \"gold_001\" 700"
+    ]
+  },
+  "2410209952981819284": {
+    "Prev": "1169290472039916356",
+    "Next": "28924198451092816944",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Bolrin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We must take advantage of every opportunity we can.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_Clients",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "EB_Clients",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "28924198451092816944": {
+    "Prev": "2410209952981819284",
+    "Next": "75616167195688800",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Bolrin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hmmm...a pity. Perhaps you are not the person I thought you to be. This conversation, of course, never took place. You understand, I'm sure.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Clients\" 40"
+    ]
+  },
+  "75616167195688800": {
+    "Prev": "28924198451092816944",
+    "Next": "9339268071503329448",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Bolrin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's the attitude we like here at the Company. Go quickly and quietly. No one should know the details of your business. And if you are discovered, the Company will deny all knowledge of your existence. Good luck.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Clients\" 30",
+      "\"bk_clientlist\"->enable"
+    ]
+  },
+  "9339268071503329448": {
+    "Prev": "75616167195688800",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Bolrin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There is a Telvanni enchanter in Vivec--Audenian Valius. I believe you helped him with a nasty little rat problem. Shame, that was. He has a rather exclusive clientele, and he sells very exclusive products at quite a large profit. It would be of interest to the Company to know who his clients are, and to know what items they require. If you can bring me a list of these clients and items, I would be most appreciative.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Clients",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Clients\" 20",
+      "Choice \"I will help you get the list.\" 1 \"I cannot help you.\" 2"
+    ]
+  }
+}

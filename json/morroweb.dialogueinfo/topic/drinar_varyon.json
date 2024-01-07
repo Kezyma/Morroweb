@@ -1,0 +1,471 @@
+{
+  "1004011286151823232": {
+    "Prev": "",
+    "Next": "302724868906427195",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drinar varyon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The one and only.",
+    "Filters": [],
+    "Script": []
+  },
+  "302724868906427195": {
+    "Prev": "1004011286151823232",
+    "Next": "1211832190306292853",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled, but maybe you can join the Imperial Legion again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1211832190306292853": {
+    "Prev": "302724868906427195",
+    "Next": "2698723240231396707",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I haven't heard any more yet, %PCName. Give it time.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Smuggler",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2698723240231396707": {
+    "Prev": "1211832190306292853",
+    "Next": "129963086726015259",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Drinar is dead and there is nothing more to say.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Smuggler",
+        "Value": 200.0
+      }
+    ],
+    "Script": []
+  },
+  "129963086726015259": {
+    "Prev": "2698723240231396707",
+    "Next": "32226176311314830510",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Drinar Varyon is dead? I did not wish him dead. I was hoping we could use him to find out who was behind the whole operation. But I thank you for your honesty.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "drinar varyon",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal IL_Smuggler 200",
+      "ModPCFacRep 5 \"Imperial Legion\"",
+      "ModDisposition 5"
+    ]
+  },
+  "32226176311314830510": {
+    "Prev": "129963086726015259",
+    "Next": "60811821444791118",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This along with the word of a member of the Legions should be enough to convict him. I will let you know when we catch him.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal IL_Smuggler 100",
+      "Player->RemoveItem misc_dwrv_artifact_ILS 1",
+      "ModPCFacRep 5 \"Imperial Legion\"",
+      "ModDisposition 10"
+    ]
+  },
+  "60811821444791118": {
+    "Prev": "32226176311314830510",
+    "Next": "2620557812221520762",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go to his home in Ald'ruhn and bring me any Dwemer artifacts you find.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "2620557812221520762": {
+    "Prev": "60811821444791118",
+    "Next": "1445911535144414564",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You seem amused... Do you already have proof that Drinar Varyon is a smuggler?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_dwrv_artifact_ils",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "IL_Smuggler",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "1445911535144414564": {
+    "Prev": "2620557812221520762",
+    "Next": "1276329144286092223",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you found any evidence in Drinar Varyon's home?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_dwrv_artifact_ils",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Smuggler",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "1276329144286092223": {
+    "Prev": "1445911535144414564",
+    "Next": "12616278852323931077",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "I believe Drinar Varyon is a smuggler. I hate to ask you to break the law, but we need evidence to convict him. Go to his place in Ald'Ruhn and bring me any Dwemer artifacts you find inside.",
+    "Filters": [],
+    "Script": [
+      "Journal IL_Smuggler 10"
+    ]
+  },
+  "12616278852323931077": {
+    "Prev": "1276329144286092223",
+    "Next": "92408628291676207",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ald-ruhn",
+    "PlayerFaction": "",
+    "Text": "Have you heard? Drinar Varyon was found dead in his hut!",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "drinar varyon",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "92408628291676207": {
+    "Prev": "12616278852323931077",
+    "Next": "995322232068319228",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ald-ruhn",
+    "PlayerFaction": "",
+    "Text": "Drinar Varyon was arrested for smuggling. He's on his way to a jail on the mainland.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EbonyDelivery",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "995322232068319228": {
+    "Prev": "92408628291676207",
+    "Next": "1586720851137931484",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ald-ruhn, The Rat In The Pot",
+    "PlayerFaction": "",
+    "Text": "Keep it quiet, but he's a smuggler. Works with his sister, Dovrosi Varyon on the coast.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1586720851137931484": {
+    "Prev": "995322232068319228",
+    "Next": "2942622304569615876",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "High Elf",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ald-ruhn",
+    "PlayerFaction": "",
+    "Text": "Yes, I am aware of him. Wealthy family. Or so he claims. His place is on the west side, across from the Ald Skar Inn.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2942622304569615876": {
+    "Prev": "1586720851137931484",
+    "Next": "14209220633232012956",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ald-ruhn",
+    "PlayerFaction": "",
+    "Text": "He likes his pots. That's all I can say. His place is on the west side of town, across from the Ald Skar Inn. The one with the cart out front.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "14209220633232012956": {
+    "Prev": "2942622304569615876",
+    "Next": "1735010699284074763",
+    "Type": "Topic",
+    "Disposition": 20,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ald-ruhn",
+    "PlayerFaction": "",
+    "Text": "He likes his pots. That's all I can say.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1735010699284074763": {
+    "Prev": "14209220633232012956",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 20,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ald-ruhn",
+    "PlayerFaction": "",
+    "Text": "He's new in town. Claims to be studying native pottery.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

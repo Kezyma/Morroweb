@@ -1,0 +1,168 @@
+{
+  "1076820732157431706": {
+    "Prev": "",
+    "Next": "313774185293056124",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "korst wind-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There is nothing more to say about the creature.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Draugr",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "313774185293056124": {
+    "Prev": "1076820732157431706",
+    "Next": "1914988672101923",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "korst wind-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The creature is defeated, and from what you say, there was more to be found in those caves. You have done well, %PCName. Return now to the Skaal village. I will meet you there in a while. There are matters I must attend to.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Draugr",
+        "Value": 85.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "AeslipTalk",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Draugr 100",
+      "\"Tharsten Heart-Fang\"->PositionCell -35 -473 -248 0 \"Skaal Village, The Greathall\""
+    ]
+  },
+  "1914988672101923": {
+    "Prev": "313774185293056124",
+    "Next": "3183517687201253504",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "korst wind-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So he is defeated. It seems there was more to that creature than any of us had imagined. You have done well, %PCName. I, for one, would be proud to call you Skaal. Return now to the Skaal village. I will meet you there in a while. There are matters I must attend to.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Draugr",
+        "Value": 85.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "AeslipTalk",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Draugr 100",
+      "\"Tharsten Heart-Fang\"->PositionCell -35 -473 -248 0 \"Skaal Village, The Greathall\""
+    ]
+  },
+  "3183517687201253504": {
+    "Prev": "1914988672101923",
+    "Next": "2661814100341231315",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "korst wind-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are to kill Aesliip, my friend. Beware, though.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Draugr",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Draugr",
+        "Value": 90.0
+      }
+    ],
+    "Script": []
+  },
+  "2661814100341231315": {
+    "Prev": "3183517687201253504",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "korst wind-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "From what I have read in the histories, Aesliip was once a powerful mage who delved in necromancy. As a result of these dark magics, he was made a draugr, but he retains much of his immense power. You are to kill this creature, and perhaps end this madness. Take care with this task, %PCName. This situation seems odd to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Draugr",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Draugr",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Draugr 50"
+    ]
+  }
+}

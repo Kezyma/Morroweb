@@ -1,0 +1,768 @@
+{
+  "31321322362777327434": {
+    "Prev": "",
+    "Next": "1209127929138019572",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "thoronor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What? Edras didn't make it? Oh, my. I, I...I don't know what to say. He did love the outdoors, though, and it seems only fitting that he meet his end here. Such a kind, gentle soul to meet such a bitter end. I'll miss my friend greatly. Well, %PCName, I thank you for your time, even if it turned out so poorly. Please, take this. It was...Edras'. I must go now...it just seems pointless to continue my journey without my dear friend. Goodbye.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_StrayedPilgrim",
+        "Value": 100.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "edras oril",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_StrayedPilgrim\" 110",
+      "Player->AddItem \"BookSkill_Speechcraft3\" 1",
+      "RemoveItem \"BookSkill_Speechcraft3\" 1",
+      "Goodbye"
+    ]
+  },
+  "1209127929138019572": {
+    "Prev": "31321322362777327434",
+    "Next": "2338596852561320415",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "thoronor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you so much. I can't tell you how much this means to me. I'm afraid I don't have much to give you as a reward, but this amulet may help you in your travels. It's helped the two of us out on a number of occasions. Take care!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_StrayedPilgrim",
+        "Value": 90.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "edras oril",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_StrayedPilgrim\" 100",
+      "Player->AddItem \"Amulet of Slowfalling\" 1",
+      "RemoveItem \"Amulet of Slowfalling\" 1",
+      "Goodbye"
+    ]
+  },
+  "2338596852561320415": {
+    "Prev": "1209127929138019572",
+    "Next": "289536152443426838",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "thoronor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My friend, Edras Oril, is missing, and I fear he's in trouble. He has such a tendency to wander off. He's quite the scholar, but not quite as worldly-wise as I am.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_StrayedPilgrim",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_StrayedPilgrim",
+        "Value": 90.0
+      }
+    ],
+    "Script": []
+  },
+  "289536152443426838": {
+    "Prev": "2338596852561320415",
+    "Next": "299135174570124598",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "thoronor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you! Oh, thank you. Truly, I fear for his life.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_StrayedPilgrim\" 20"
+    ]
+  },
+  "299135174570124598": {
+    "Prev": "289536152443426838",
+    "Next": "16937111981711427434",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "thoronor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? Well, I'm sure you're a very busy person. He'll be fine, no doubt...as will I. I mean, I'm sure I'll be able to find him. Or he'll make his way back here. Oh, dear...I fear I'll never see him again! Well, thank you for your time. Don't worry about me....",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_StrayedPilgrim\" 21"
+    ]
+  },
+  "16937111981711427434": {
+    "Prev": "299135174570124598",
+    "Next": "28756282991358614509",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "thoronor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, my friend Edras Oril and I were traveling to Vivec, and he heard a strange animal sound nearby. He's sort of an amateur naturalist, and he felt compelled to seek out what was making the noises. That was hours ago, and I'm afraid something terrible has happened to him. If you could find him, and bring him back safely, I'd really appreciate it. I'd go myself, but I'm really more of a scholar, as is he. That's why we were traveling together--a little safety in numbers, you know. Can you help?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_StrayedPilgrim",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_StrayedPilgrim\" 10",
+      "Choice \"I'll try and find your friend.\" 1 \"I've not got time for that now.\" 2"
+    ]
+  },
+  "28756282991358614509": {
+    "Prev": "16937111981711427434",
+    "Next": "3178719032449412014",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edras oril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thoronor is dead? That can't be! Well, I have no reason to go on. Good day.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "thoronor",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal MV_StrayedPilgrim 115",
+      "AiWander 128 0 0 0 0 0 0",
+      "Goodbye"
+    ]
+  },
+  "3178719032449412014": {
+    "Prev": "28756282991358614509",
+    "Next": "1499628033784910528",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edras oril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've gotten rid of them? Excellent! Well, let's head back to Thoronor then, shall we?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_StrayedPilgrim",
+        "Value": 40.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "kagouti_mating",
+        "Value": 2.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_StrayedPilgrim",
+        "Value": 90.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "NotEqual",
+        "Id": "MV_StrayedPilgrim",
+        "Value": 48.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "NotEqual",
+        "Id": "MV_StrayedPilgrim",
+        "Value": 45.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_StrayedPilgrim\" 30",
+      "\"Edras Oril\"->AiFollow Player 0 0 0 0 0 0 0",
+      "Goodbye"
+    ]
+  },
+  "1499628033784910528": {
+    "Prev": "3178719032449412014",
+    "Next": "535518496471122057",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edras oril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah...you've met Thoronor! Yes, he and I became separated when I went off to investigate some sounds I heard. Of course, it turned out to be a pack of kagouti that trapped me here. But, I see you've taken care of them. Did you notice any distinctive sounds they may have made when you were battling them? They have the most fascinating vocalizations. But, enough of that for now. Shall we go back and meet Thoronor?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_StrayedPilgrim",
+        "Value": 30.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "kagouti_mating",
+        "Value": 2.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_StrayedPilgrim",
+        "Value": 90.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "NotEqual",
+        "Id": "MV_StrayedPilgrim",
+        "Value": 45.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_StrayedPilgrim\" 30",
+      "\"Edras Oril\"->AiFollow Player 0 0 0 0 0 0 0",
+      "Goodbye"
+    ]
+  },
+  "535518496471122057": {
+    "Prev": "1499628033784910528",
+    "Next": "295288997707431674",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edras oril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You'll get rid of them? Excellent! Although, they're such marvelous beasts. Quite interesting, you know.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_StrayedPilgrim\" 25",
+      "Goodbye"
+    ]
+  },
+  "295288997707431674": {
+    "Prev": "535518496471122057",
+    "Next": "7136147272822017942",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edras oril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Fantastic! Let's go. Did you happen to notice anything interesting about the kagouti while you were slaying them? Any distinctive colorations...mating calls? No? Ah, well....",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_StrayedPilgrim\" 45",
+      "\"Edras Oril\"->AiFollow Player 0 0 0 0 0 0"
+    ]
+  },
+  "7136147272822017942": {
+    "Prev": "295288997707431674",
+    "Next": "224272097152391867",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edras oril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh. Well. Um...I suppose I'll find a way out of here. In the meantime, I can just take notes on their behaviors. Fascinating. I hope to publish a volume when I'm done. Well, assuming I get out of here. No matter. Good luck to you!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 11.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_StrayedPilgrim\" 29",
+      "Goodbye"
+    ]
+  },
+  "224272097152391867": {
+    "Prev": "7136147272822017942",
+    "Next": "79046832460917711",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edras oril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh. Well. Um...I suppose I'll find a way out of here. In the meantime, I can just take notes on their behaviors. Fascinating. I hope to publish a volume when I'm done. Well, assuming I get out of here. No matter. Good luck to you!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_StrayedPilgrim\" 26",
+      "Goodbye"
+    ]
+  },
+  "79046832460917711": {
+    "Prev": "224272097152391867",
+    "Next": "275292650848561429",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edras oril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Why, thank you! If you can do that, perhaps I'll be able to sneak by. And, if I got close enough, it would really give me a chance to examine the distinctive markings on the beasts.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 7.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "275292650848561429": {
+    "Prev": "79046832460917711",
+    "Next": "1144016090711112952",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edras oril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You'll get rid of them? Excellent! Although, they're such marvelous beasts. Quite interesting, you know.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 8.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_StrayedPilgrim\" 25",
+      "Goodbye"
+    ]
+  },
+  "1144016090711112952": {
+    "Prev": "275292650848561429",
+    "Next": "135131621158403060",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edras oril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh. Well. Um...I suppose I'll find a way out of here. In the meantime, I can just take notes on their behaviors. Fascinating. I hope to publish a volume when I'm done. Well, assuming I get out of here. No matter. Good luck to you!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 9.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_StrayedPilgrim\" 26",
+      "Goodbye"
+    ]
+  },
+  "135131621158403060": {
+    "Prev": "1144016090711112952",
+    "Next": "31925154032203339",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edras oril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, nothing comes to mind right away...I was hoping you had a way. I just fear those kagouti will attack me again if they see me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Choice \"Perhaps I can cast a spell on you so they can't see you.\" 7 \"Nothing comes to mind. I'll try and get rid of the kagouti for you.\" 8 \"I'm sorry. I cannot help you.\" 9"
+    ]
+  },
+  "31925154032203339": {
+    "Prev": "135131621158403060",
+    "Next": "7822251157217262",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edras oril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, let's get back to him as soon as we can.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_StrayedPilgrim",
+        "Value": 45.0
+      }
+    ],
+    "Script": []
+  },
+  "7822251157217262": {
+    "Prev": "31925154032203339",
+    "Next": "1785523218103341654",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edras oril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, let's get back to him as soon as we can.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_StrayedPilgrim",
+        "Value": 28.0
+      }
+    ],
+    "Script": []
+  },
+  "1785523218103341654": {
+    "Prev": "7822251157217262",
+    "Next": "5607194882299732557",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edras oril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've met Thoronor, then? I don't dare try and go back while they're still prowling the area. Perhaps you can take care of them, or find another way for us to get back?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_StrayedPilgrim",
+        "Value": 30.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Less",
+        "Id": "kagouti_mating",
+        "Value": 2.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_StrayedPilgrim",
+        "Value": 90.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_StrayedPilgrim\" 40",
+      "Choice \"I'll get rid of the kagouti.\" 3 \"I don't have time for this. You're on your own.\" 4 \"Another way? Such as?\" 5"
+    ]
+  },
+  "5607194882299732557": {
+    "Prev": "1785523218103341654",
+    "Next": "309281444390279649",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edras oril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I became separated from my friend Thoronor when I went off to investigate some sounds I heard. It turns out it was a pack of wild kagouti near here, and they trapped me here. Since they can't see me right now, might you lead me back to Thoronor?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_StrayedPilgrim",
+        "Value": 24.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "inviso",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_StrayedPilgrim\" 24",
+      "Choice \"I don't have time for this. You're on your own.\" 11 \"Follow me.\" 10"
+    ]
+  },
+  "309281444390279649": {
+    "Prev": "5607194882299732557",
+    "Next": "288441615265463765",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edras oril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I became separated from my friend Thoronor when I went off to investigate some sounds I heard. It turns out it was a pack of wild kagouti near here, and they trapped me here. You've killed them? Excellent! Can you lead me back to Thoronor?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_StrayedPilgrim",
+        "Value": 24.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "kagouti_mating",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_StrayedPilgrim\" 24",
+      "Choice \"I don't have time for this. You're on your own.\" 4 \"Follow me.\" 10"
+    ]
+  },
+  "288441615265463765": {
+    "Prev": "309281444390279649",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edras oril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I became separated from my friend Thoronor when I went off to investigate some sounds I heard. It turns out it was a pack of wild kagouti near here, and they trapped me here. You haven't seen them? Oh, dear, I don't dare try and go back while they're still prowling the area. Perhaps you can take care of them, or find another way for us to get back?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_StrayedPilgrim",
+        "Value": 24.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Less",
+        "Id": "kagouti_mating",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_StrayedPilgrim\" 24",
+      "Choice \"I'll get rid of the kagouti.\" 3 \"I don't have time for this. You're on your own.\" 4 \"Another way? Such as?\" 5"
+    ]
+  }
+}

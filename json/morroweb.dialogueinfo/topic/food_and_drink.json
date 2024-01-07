@@ -1,0 +1,344 @@
+{
+  "3266896602387426065": {
+    "Prev": "",
+    "Next": "278772356180906548",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sendus sathis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have what I need, thank you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_SupplyMonk",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "278772356180906548": {
+    "Prev": "3266896602387426065",
+    "Next": "4688322651241129817",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sendus sathis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Kwama eggs again? Well, I should be thankful the Temple supports an old hermit like me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TT_SupplyMonk 50",
+      "Player->RemoveItem Food_Kwama_Egg_01 4",
+      "Player->RemoveItem Potion_Local_Brew_01 4"
+    ]
+  },
+  "4688322651241129817": {
+    "Prev": "278772356180906548",
+    "Next": "13884246931374919739",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sendus sathis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah, well someone will be here soon.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "13884246931374919739": {
+    "Prev": "4688322651241129817",
+    "Next": "29537168612352426558",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sendus sathis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You're here to deliver my food and drink?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "food_kwama_egg_01",
+        "Value": 4.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Potion_Local_Brew_01",
+        "Value": 4.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_SupplyMonk",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is\" 1 \"No, nevermind\" 2"
+    ]
+  },
+  "29537168612352426558": {
+    "Prev": "13884246931374919739",
+    "Next": "1046744451118312190",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sendus sathis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Food and drink? Do you have it with you?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_SupplyMonk",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "1046744451118312190": {
+    "Prev": "29537168612352426558",
+    "Next": "2488528464211283414",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you the one who claims to be the Nerevarine? You should speak with Archcanon Saryoni. Before these rumors are put to rest, I cannot give you duties.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B8_MeetVivec",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2488528464211283414": {
+    "Prev": "1046744451118312190",
+    "Next": "2202199062692829220",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled from the Temple.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2202199062692829220": {
+    "Prev": "2488528464211283414",
+    "Next": "1034024289119524812",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sendas Sathis should have enough supplies at the moment.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_SupplyMonk",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1034024289119524812": {
+    "Prev": "2202199062692829220",
+    "Next": "63342103598924386",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sendas Sathis is dead? This is terrible news. Perhaps you can find some other duties.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "sendus sathis",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TT_SupplyMonk 200"
+    ]
+  },
+  "63342103598924386": {
+    "Prev": "1034024289119524812",
+    "Next": "10312138623191928370",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You delivered the food and drink? Good.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_SupplyMonk",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal TT_SupplyMonk 100",
+      "ModPCFacRep 5 \"Temple\"",
+      "ModDisposition 10"
+    ]
+  },
+  "10312138623191928370": {
+    "Prev": "63342103598924386",
+    "Next": "32444294913061111513",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I gave you the food and drink you need. Four kwama eggs and four bottles of Mazte. Take them to Sendas Sathis.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_SupplyMonk",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "32444294913061111513": {
+    "Prev": "10312138623191928370",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Take this food and drink to Sendas Sathis. He's a hermit who lives on Shuran Island between Sheogorad and Vvardenfell. Take a boat to Dagon Fel and then go towards Rotheran. Shuran Island is just west of Rotheran. I will mark this stronghold on your map.",
+    "Filters": [],
+    "Script": [
+      "Journal TT_SupplyMonk 10",
+      "Player->AddItem Food_Kwama_Egg_01 4",
+      "Player->AddItem Potion_Local_Brew_01 4",
+      "ShowMap \"Rotheran\""
+    ]
+  }
+}

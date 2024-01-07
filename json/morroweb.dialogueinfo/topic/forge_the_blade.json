@@ -1,0 +1,330 @@
+{
+  "21502324831334826970": {
+    "Prev": "",
+    "Next": "3206328599255428959",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The blade is reforged! Our time has almost arrived. There is but one obstacle that stands in our way, though it pains me to believe it is so. Sotha Sil. I cannot count the times I have fought by the Magician's side. It was he who stood with me the day I fought in Mournhold and banished Mehrunes Dagon to the depths of Oblivion. It was Sotha Sil who was able to delve the mysteries of Kagrenac's tools, and raise me to my rightful station. Now, though, the Tinkerer has become unstable.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "nerevarblade_01_flame",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TR_Blade 100"
+    ]
+  },
+  "3206328599255428959": {
+    "Prev": "21502324831334826970",
+    "Next": "59032294228994519",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The blade is whole, but the fire does not burn! Speak to the one who forged the blade, and find out why it does not burn!",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "nerevarblade_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "59032294228994519": {
+    "Prev": "3206328599255428959",
+    "Next": "628913996192910527",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The best weaponsmiths in all of Tamriel reside in my city. When you have recovered the pieces of the blade, seek out the finest among these craftsmen, and press him into our service.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Blade",
+        "Value": 10.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "nerevarblade_01",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "nerevarblade_01_flame",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "628913996192910527": {
+    "Prev": "59032294228994519",
+    "Next": "579216669543731025",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yagak gro-gluk",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I made your blade for you. Damn good work, too! Now leave me alone.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Blade",
+        "Value": 65.0
+      }
+    ],
+    "Script": []
+  },
+  "579216669543731025": {
+    "Prev": "628913996192910527",
+    "Next": "11884171657186227",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yagak gro-gluk",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here's your blade. And before you ask, I don't know why it doesn't burn. I'm a smith, not an enchanter. You want Dwemer enchantments on this thing, talk to a Dwemer.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_Blade",
+        "Value": 65.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "bladefix",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem \"nerevarblade_01\" 1",
+      "Journal TR_Blade 65"
+    ]
+  },
+  "11884171657186227": {
+    "Prev": "579216669543731025",
+    "Next": "223891965526824559",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yagak gro-gluk",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I said two days!",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "bladefix",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "223891965526824559": {
+    "Prev": "11884171657186227",
+    "Next": "6273184242861115138",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yagak gro-gluk",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've got some interesting pieces there. I can work with this. Make the best blade you've ever seen...not that I figure you'd know a daikatana from a butter knife. Come back in two days' time, and I'll have your blade. Now leave me alone.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bladepiece_01",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bladepiece_02",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bladepiece_03",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem \"bladepiece_01\" 1",
+      "Player->RemoveItem \"bladepiece_02\" 1",
+      "Player->RemoveItem \"bladepiece_03\" 1",
+      "Startscript bladefixScript",
+      "set bladefix to 1",
+      "Journal TR_Blade 60"
+    ]
+  },
+  "6273184242861115138": {
+    "Prev": "223891965526824559",
+    "Next": "2173123499291346282",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yagak gro-gluk",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can make any blade you want. Don't care whose it was to start with, or who this Nerevar is. Bring me the pieces, and I'll put it together better than it was before. To work with that kind of material, I'll work for free, but I'll need the pieces first. Now go away.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "bladepiece_03",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "nerevarblade_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2173123499291346282": {
+    "Prev": "6273184242861115138",
+    "Next": "23475141241039618978",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yagak gro-gluk",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can make any blade you want. Don't care whose it was to start with, or who this Nerevar is. Bring me the pieces, and I'll put it together better than it was before. To work with that kind of material, I'll work for free, but I'll need the pieces first. Now go away.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "bladepiece_02",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "nerevarblade_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "23475141241039618978": {
+    "Prev": "2173123499291346282",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yagak gro-gluk",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can make any blade you want. Don't care whose it was to start with, or who this Nerevar is. Bring me the pieces, and I'll put it together better than it was before. To work with that kind of material, I'll work for free, but I'll need the pieces first. Now go away.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "bladepiece_01",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "nerevarblade_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

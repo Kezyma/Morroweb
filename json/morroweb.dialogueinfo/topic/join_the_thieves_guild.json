@@ -1,0 +1,548 @@
+{
+  "5275104151157219106": {
+    "Prev": "",
+    "Next": "292531804432634565",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are now a %PCRank in the Thieves Guild. Welcome, sister %PCName. Talk to me when you want some odd jobs to do and when you think you're ready for advancement. If you have a price on your head, there are those you can talk to as well.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "PCJoinFaction \"Thieves Guild\"",
+      "ModDisposition 5"
+    ]
+  },
+  "292531804432634565": {
+    "Prev": "5275104151157219106",
+    "Next": "2498952861388531122",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are now a %PCRank in the Thieves Guild. Welcome, brother %PCName. Talk to me when you want some odd jobs to do and when you think you're ready for advancement. If you have a price on your head, there are those you can talk to as well.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "PCJoinFaction \"Thieves Guild\"",
+      "ModDisposition 5"
+    ]
+  },
+  "2498952861388531122": {
+    "Prev": "292531804432634565",
+    "Next": "2255723662294042287",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Just remember there *is* honor among thieves. Do not steal from a brother thief. Everyone else is a mark. Do not attack a brother thief. Do what you will to everyone else. If you have a price on your head, we have ways of taking care of it. If you break these rules, you must speak with one of the Masterminds here in Vvardenfell to regain your good standing. Think you can handle it?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes.\" 1 \"No, nevermind.\" 4"
+    ]
+  },
+  "2255723662294042287": {
+    "Prev": "2498952861388531122",
+    "Next": "2082524636989628815",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hmmm. Whatever you say, chum. But we'll keep our eyes on you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "2082524636989628815": {
+    "Prev": "2255723662294042287",
+    "Next": "2791429210669120524",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Got any friends here? Thought not.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ExpThievesGuild",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -20",
+      "goodbye"
+    ]
+  },
+  "2791429210669120524": {
+    "Prev": "2082524636989628815",
+    "Next": "3222514357912418028",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You really screwed the netch this time, but I may be able to pull some strings... If you make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "moddisposition -10"
+    ]
+  },
+  "3222514357912418028": {
+    "Prev": "2791429210669120524",
+    "Next": "2739375643256517662",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You're already a %PCRank in the Thieves Guild, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2739375643256517662": {
+    "Prev": "3222514357912418028",
+    "Next": "87143819197936888",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You look like you may have some skill... You want to join? Or maybe you want to know what we're all about.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "RankRequirement",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yeah, yeah lemme in.\" 1 \"Hear the rules.\" 2"
+    ]
+  },
+  "87143819197936888": {
+    "Prev": "2739375643256517662",
+    "Next": "1207973371095927775",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We have our standards, %PCRace, and you do not meet them.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1207973371095927775": {
+    "Prev": "87143819197936888",
+    "Next": "190293224615110637",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Don't you already belong, sister %PCName?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "190293224615110637": {
+    "Prev": "1207973371095927775",
+    "Next": "28722210552542225114",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Don't you already belong, brother %PCName?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "28722210552542225114": {
+    "Prev": "190293224615110637",
+    "Next": "1012427822486532450",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Sadrith Mora, Dirty Muriel's Cornerclub",
+    "PlayerFaction": "",
+    "Text": "You want Big Helende. She runs this place. Can't miss her.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1012427822486532450": {
+    "Prev": "28722210552542225114",
+    "Next": "14086255392457720151",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "Sadrith Mora",
+    "PlayerFaction": "",
+    "Text": "Alright, you want to go to Dirty Muriel's and talk with Big Helende. She'll tell you what's what.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "14086255392457720151": {
+    "Prev": "1012427822486532450",
+    "Next": "2809290792622916185",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ald-ruhn, The Rat In The Pot",
+    "PlayerFaction": "",
+    "Text": "Aengoth the Jeweler is the mer you want.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2809290792622916185": {
+    "Prev": "14086255392457720151",
+    "Next": "1513217763048120821",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "Ald-ruhn",
+    "PlayerFaction": "",
+    "Text": "Oh, no Thieves Guild here in Ald'ruhn, no ser. But maybe you should check for yourself over at the Rat in the Pot.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1513217763048120821": {
+    "Prev": "2809290792622916185",
+    "Next": "1537992043127627951",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Balmora, South Wall Cornerclub",
+    "PlayerFaction": "",
+    "Text": "Talk to Sugar-Lips.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1537992043127627951": {
+    "Prev": "1513217763048120821",
+    "Next": "29105304272092326474",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "Pelagiad, Halfway Tavern",
+    "PlayerFaction": "",
+    "Text": "Tell you what. Why not visit the South Wall Cornerclub in Balmora? Spend some time there, ask around. If people like what they see, maybe you'll learn something.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "29105304272092326474": {
+    "Prev": "1537992043127627951",
+    "Next": "21008195143051312326",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "Balmora",
+    "PlayerFaction": "",
+    "Text": "Hm. Maybe we could use you. Why not visit the South Wall Cornerclub? Spend some time there, ask around. Maybe you'll learn something.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "21008195143051312326": {
+    "Prev": "29105304272092326474",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "Vivec",
+    "PlayerFaction": "",
+    "Text": "Maybe we could use you. Talk to Gentleman Jim Stacey in Simine Fralinie's shop?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "RankRequirement",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "13207225571882512973": {
+    "Prev": "",
+    "Next": "12696157262032525905",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, the Karstangz-Bcharn is creating the weather just as I had hoped. And it will remain this way until I am satisfied these people have learned a lesson.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_ShowPower",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "12696157262032525905": {
+    "Prev": "13207225571882512973",
+    "Next": "6980231973744701",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see you have activated the Karstangz-Bcharn.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_ShowPower",
+        "Value": 80.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "MournWeather",
+        "Value": 8.0
+      }
+    ],
+    "Script": []
+  },
+  "6980231973744701": {
+    "Prev": "12696157262032525905",
+    "Next": "16142421669897694",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have not yet created ashstorms, %PCName, and my patience wears thin. This needs to be handled, and quickly.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_ShowPower",
+        "Value": 80.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "NotEqual",
+        "Id": "MournWeather",
+        "Value": 8.0
+      }
+    ],
+    "Script": []
+  },
+  "16142421669897694": {
+    "Prev": "6980231973744701",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's correct. While these storms may be common on the island of Vvardenfell, they do not occur here, so far removed from the Red Mountain. Now, though, they will, and these heretics will understand the power of the Tribunal. The power of Almalexia! Take this, and use it to activate the machine. You will have to divine its workings on your own, %PCName, but I believe you are up to the task.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_ShowPower",
+        "Value": 80.0
+      }
+    ],
+    "Script": [
+      "Journal TR_ShowPower 80",
+      "Player->AddItem \"misc_dwrv_weather\" 1"
+    ]
+  }
+}

@@ -1,0 +1,433 @@
+{
+  "175503264520211981": {
+    "Prev": "",
+    "Next": "13490304352239822540",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tanusea veloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Tower of Tel Fyr, Hall of Fyr",
+    "PlayerFaction": "",
+    "Text": "Yes, I left Vivec City as you asked. I have been treated well. Divayth Fyr has been studying me, and I have been trying to teach him the ways of the Temple. If it is the will of the Tribunal, perhaps he will find a cure... Or perhaps I can convince him of the truth in the Tribunal's teachings.",
+    "Filters": [],
+    "Script": []
+  },
+  "13490304352239822540": {
+    "Prev": "175503264520211981",
+    "Next": "1898827038256910530",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tanusea veloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will go to the Corprusarium. Give me time. I am an old woman.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_DiseaseCarrier",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1898827038256910530": {
+    "Prev": "13490304352239822540",
+    "Next": "9821130301886527157",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tanusea veloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Enough. You do not need to quote from your copy of \"Saryoni's Sermons.\" I will do as you ask and go to the Corprusarium.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_SaryonisSermons",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TT_DiseaseCarrier 50",
+      "StartScript TeleportTanusea"
+    ]
+  },
+  "9821130301886527157": {
+    "Prev": "1898827038256910530",
+    "Next": "11340284251448516640",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tanusea veloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have heard others make these claims. Why should I believe you? Am I disfigured? Do I look as if I have Corprus? If you were more pious, perhaps I would listen to you. I doubt you have even read \"Saryoni's Sermons.\"",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TT_DiseaseCarrier 30"
+    ]
+  },
+  "11340284251448516640": {
+    "Prev": "9821130301886527157",
+    "Next": "15897255482452217102",
+    "Type": "Topic",
+    "Disposition": 80,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tanusea veloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I believe you are a decent %PCRace at heart. I will go to the Corprusarium because you have asked me so kindly.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal TT_DiseaseCarrier 50",
+      "StartScript TeleportTanusea"
+    ]
+  },
+  "15897255482452217102": {
+    "Prev": "11340284251448516640",
+    "Next": "25173218991436117213",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tanusea veloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I believe my place is here in Vivec City. You have not yet persuaded me otherwise.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "25173218991436117213": {
+    "Prev": "15897255482452217102",
+    "Next": "133008502190907681",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tanusea veloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I believe my place is here in Vivec City. I will not leave just because some stranger with bad manners asks me to.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "133008502190907681": {
+    "Prev": "25173218991436117213",
+    "Next": "667998672161430433",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tanusea veloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Why should I leave?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_SaryonisSermons",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Quote from Saryoni's Sermons.\" 1 \"Do this as a favor for me.\" 2"
+    ]
+  },
+  "667998672161430433": {
+    "Prev": "133008502190907681",
+    "Next": "10905264511648131095",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tanusea veloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Why should I leave?",
+    "Filters": [],
+    "Script": [
+      "Choice \"You have the Divine Disease.\" 1 \"Do this as a favor for me.\" 2"
+    ]
+  },
+  "10905264511648131095": {
+    "Prev": "667998672161430433",
+    "Next": "1862227200342726623",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have heard that you are a False Incarnate. I am not yet convinced, but I no longer trust you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B8_MeetVivec",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1862227200342726623": {
+    "Prev": "10905264511648131095",
+    "Next": "14973127592660832663",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled from the Temple.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "14973127592660832663": {
+    "Prev": "1862227200342726623",
+    "Next": "23796243423267521194",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Tanusea Veloth is no longer with us.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TT_DiseaseCarrier",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "23796243423267521194": {
+    "Prev": "14973127592660832663",
+    "Next": "2571219538167074711",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Tanusea Veloth will be leaving Vivec City.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_DiseaseCarrier",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2571219538167074711": {
+    "Prev": "23796243423267521194",
+    "Next": "135719251536112201",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am glad you were able to convince Tanusea Veloth to leave. She will be cared for in the Corprusarium and will no longer spread the disease. Since you may have been exposed to a blight disease, please take these potions. Are you ready for further duties?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_DiseaseCarrier",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal TT_DiseaseCarrier 100",
+      "Player->AddItem P_Cure_Blight_S 2",
+      "ModPCFacRep 5 \"Temple\"",
+      "ModDisposition 10"
+    ]
+  },
+  "135719251536112201": {
+    "Prev": "2571219538167074711",
+    "Next": "24430171603270027182",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I wish you had brought me better news. If Tanusea Veloth is dead, she will not spread the disease any longer. But with her death, we have lost one of the Temple's most faithful. Please stay with me for a moment of silence.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "tanusea veloth",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TT_DiseaseCarrier 110",
+      "ModPCFacRep 5 \"Temple\"",
+      "Goodbye"
+    ]
+  },
+  "24430171603270027182": {
+    "Prev": "135719251536112201",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "endryn llethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Tanusea Veloth is a holy Pilgrim and well loved by the people. Do not kill her unless there is no other way. Try and convince her to go to the Corprusarium before she spreads the Divine Disease to others. She is very devout and would be most easily impressed by some show of your devotion to the Temple's teachings.",
+    "Filters": [],
+    "Script": [
+      "Journal TT_DiseaseCarrier 10"
+    ]
+  }
+}

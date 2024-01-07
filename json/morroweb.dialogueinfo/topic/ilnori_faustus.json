@@ -1,0 +1,105 @@
+{
+  "22994285112239929504": {
+    "Prev": "",
+    "Next": "600439262278919734",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bols indalen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Damn that cockered, scrib-sucking son-of-a-Hammerfell-whore. The idiot got himself killed. No loss, you'll say, and I won't argue with you, but it leaves me without an apprentice. If you find any able-bodied young person looking for work, let them know I need a new apprentice.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "ilnori_faustus",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MS_JobHunt",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_JobHunt\" 10"
+    ]
+  },
+  "600439262278919734": {
+    "Prev": "22994285112239929504",
+    "Next": "19612315831551812427",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bols indalen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Damn that cockered, scrib-sucking son-of-a-Hammerfell-whore. He left me just a few hours ago without so much as a wave goodbye. Just walked out the door. Well, good riddance, I suppose, but I still need an apprentice. If you find any able-bodied young person looking for work, let them know I need a new apprentice.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "change",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MS_JobHunt",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_JobHunt\" 10"
+    ]
+  },
+  "19612315831551812427": {
+    "Prev": "600439262278919734",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bols indalen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Aye, he's my apprentice, and the last Imperial apprentice I'll ever be forced into taking, that's for sure. He doesn't do a lick of work, preferring to sit around cleaning those damned fingernails of his and telling me what a bloody oaf I am. I doubt he'll be around much longer to bother me. He seems drawn to death like a lodestone.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "change",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Less",
+        "Id": "ilnori_faustus",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  }
+}

@@ -1,0 +1,371 @@
+{
+  "23534166261371318466": {
+    "Prev": "",
+    "Next": "24042188102382818527",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have not yet had word from Arch-Mage Trebonius in Vivec. Until then, I must consider you expelled.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "24042188102382818527": {
+    "Prev": "23534166261371318466",
+    "Next": "111031638113605723",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You were still expelled from the Mages Guild last I heard. Be patient. The Guild does not move quickly here in Vvardenfell.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "111031638113605723": {
+    "Prev": "24042188102382818527",
+    "Next": "160522884592727406",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I cannot discuss these matters with you. You have been expelled.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "160522884592727406": {
+    "Prev": "111031638113605723",
+    "Next": "175953201983853105",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I thank you for the book, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_VampVol2",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "175953201983853105": {
+    "Prev": "160522884592727406",
+    "Next": "272586348200106962",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, this is exactly what I was looking for... And it is in good condition, too. I hope 1000 septims will cover your expenses.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_vampiresofvvardenfell2",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal MG_VampVol2 100",
+      "Player->RemoveItem bk_vampiresofvvardenfell2 1",
+      "Additem bk_vampiresofvvardenfell2 1",
+      "Player->AddItem Gold_001 1000",
+      "ModPCFacRep 5 \"Mages Guild\"",
+      "ModDisposition 15"
+    ]
+  },
+  "272586348200106962": {
+    "Prev": "175953201983853105",
+    "Next": "22905199071625420923",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh? You have a copy? Bring it to me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "22905199071625420923": {
+    "Prev": "272586348200106962",
+    "Next": "1818924963110396422",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do not be discouraged. I fear it may take weeks or even months to find a copy.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "1818924963110396422": {
+    "Prev": "22905199071625420923",
+    "Next": "1360912725265552437",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Have you found the second volume yet?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_VampVol2",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "1360912725265552437": {
+    "Prev": "1818924963110396422",
+    "Next": "1025827335179053914",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "There are two books in this series. The first is common in Morrowind. Most rare booksellers have a copy. The second volume is rare. If you can find a copy of volume two, I would be grateful. You might try a rare bookseller.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_EscortScholar1",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MG_VampVol2 10"
+    ]
+  },
+  "1025827335179053914": {
+    "Prev": "1360912725265552437",
+    "Next": "2416267231408013694",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "jobasha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is a rare book. The Temple does not like this book, and could punish poor Jobasha if they knew...",
+    "Filters": [],
+    "Script": []
+  },
+  "2416267231408013694": {
+    "Prev": "1025827335179053914",
+    "Next": "950688301031019526",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ordinator wander",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec",
+    "PlayerFaction": "",
+    "Text": "We have many book in the Hall of Justice, but our library is closed to foreigners.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_VampVol2",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MG_VampVol2",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "950688301031019526": {
+    "Prev": "2416267231408013694",
+    "Next": "1018916464320806716",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ordinator stationary",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec",
+    "PlayerFaction": "",
+    "Text": "We have many book in the Hall of Justice, but our library is closed to foreigners.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_VampVol2",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MG_VampVol2",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1018916464320806716": {
+    "Prev": "950688301031019526",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Bookseller",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You might find a copy at Jobasha's Rare Books in Vivec.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_VampVol2",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MG_VampVol2",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  }
+}

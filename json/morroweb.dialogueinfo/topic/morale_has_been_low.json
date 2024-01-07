@@ -1,0 +1,470 @@
+{
+  "66293721572322754": {
+    "Prev": "",
+    "Next": "4868223811899330771",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There's nothing more to say about it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 200.0
+      }
+    ],
+    "Script": []
+  },
+  "4868223811899330771": {
+    "Prev": "66293721572322754",
+    "Next": "12677268512366423106",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Never mind. I've been informed that one of my priests has been killed. With things like this happening at the fort, I can't worry about a small morale problem. Even though you may have suspected his involvement, it doesn't matter now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Morale",
+        "Value": 100.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "antonius nuncius",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "FoundBooze",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Morale 200"
+    ]
+  },
+  "12677268512366423106": {
+    "Prev": "4868223811899330771",
+    "Next": "799111303131328968",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Never mind. I've been informed that one of my priests has been killed. With things like this happening at the fort, I can't worry about a small morale problem.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Morale",
+        "Value": 100.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "antonius nuncius",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Morale 200"
+    ]
+  },
+  "799111303131328968": {
+    "Prev": "12677268512366423106",
+    "Next": "272134451427525287",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "antonius nuncius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Seems you've taken care of that.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "272134451427525287": {
+    "Prev": "799111303131328968",
+    "Next": "298946415428528028",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "antonius nuncius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't want to talk about that further.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 90.0
+      }
+    ],
+    "Script": []
+  },
+  "298946415428528028": {
+    "Prev": "272134451427525287",
+    "Next": "1579411515234192862",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "antonius nuncius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It has, but that's all I know. Why should I know any more? I'm just a priest.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 70.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Morale",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "1579411515234192862": {
+    "Prev": "298946415428528028",
+    "Next": "25484325302217725866",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "antonius nuncius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I know it has. These soldiers lead a difficult existence on this island. It's cold, wet, dangerous, and far from home. The men here are denied all luxuries. This place is just damned awful!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Morale",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "25484325302217725866": {
+    "Prev": "1579411515234192862",
+    "Next": "26577323112283225245",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I believe that business is complete. Thank you for your help.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "26577323112283225245": {
+    "Prev": "25484325302217725866",
+    "Next": "275995980103416424",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You say that the shipment had merely been misplaced and this was all a big miscommunication? That's ridiculous. I expected better of my men, and myself. Especially of myself. Thank you for your help, %PCName. Take these--there are diseases on this island we have never encountered. I would hate to see you take ill. Now, though, there is more fort business to discuss.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Morale",
+        "Value": 93.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem p_cure_common_s 3",
+      "Journal BM_Morale 110"
+    ]
+  },
+  "275995980103416424": {
+    "Prev": "26577323112283225245",
+    "Next": "1998260872053919600",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You say that Antonius Nuncius started this whole thing because he wanted to go home? The twit! I could have had him reassigned, had he just asked me. Now, though, I think he might do his best work here, saving the souls of my men. With the new abundance of liquor at the fort, someone will have to deliver their salvation. Thank you for your help, %PCName. Take these. There are diseases on this island that we have never encountered before. And the weapon may serve you well. Now, on to more fort business.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Morale",
+        "Value": 95.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem p_cure_common_s 3",
+      "Player->AddItem \"silver sparkblade\" 1",
+      "Journal BM_Morale 100"
+    ]
+  },
+  "1998260872053919600": {
+    "Prev": "275995980103416424",
+    "Next": "184624948122014033",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If there's reason to suspect Antonius Nuncius, find the proof. If you feel you have it, confront the man himself. Then report to me. Let's do this right, %PCname.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 60.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Morale",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "184624948122014033": {
+    "Prev": "1998260872053919600",
+    "Next": "3214093892553428763",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. Please investigate the matter further and report to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Morale",
+        "Value": 55.0
+      }
+    ],
+    "Script": []
+  },
+  "3214093892553428763": {
+    "Prev": "184624948122014033",
+    "Next": "13048107453018319515",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hmmm...I imagined that the lack of alcohol might have some effects on the morale, but I didn't ever actually ban it. Personally, I didn't even care about the alcohol; it was the priest, Antonius Nuncius, who was worried about the effect it was having on the men. I disagreed, but the question became moot: our shipments stopped coming in months ago. Speak with the soldiers a bit more, and see if you can find out who the source of this discontent is.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Morale",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Morale 50"
+    ]
+  },
+  "13048107453018319515": {
+    "Prev": "3214093892553428763",
+    "Next": "167471798754637703",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As I said, it troubles me. I wish for these soldiers to be the most excellent in the Empire, and I believe that one among them is poisoning the minds of the others. Perhaps it is a reflection on my leadership that this has occurred, but regardless it must end soon.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "167471798754637703": {
+    "Prev": "13048107453018319515",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very low. This is not normal. My instinct tells me that there is one among my troops who is fanning the fires of this discontent, and I wish to know who it is. They will never let me know who the culprit is...as their commanding officer, I must regretfully keep some distance between these fine soldiers and myself. They may be willing to speak with you, though. See if you can't gain their trust. If you learn anything, report to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Morale",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Morale 20"
+    ]
+  }
+}

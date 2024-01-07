@@ -1,0 +1,125 @@
+{
+  "23944174911317027201": {
+    "Prev": "",
+    "Next": "1774643442223216683",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nelos onmar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, just tell her you have a note from Nelos. I think she'll be happy with it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "MV_VictimRomance",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_VictimRomance",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1774643442223216683": {
+    "Prev": "23944174911317027201",
+    "Next": "2829522118217825567",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "maurrie aurmine",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He gave you a letter to give to me? Wonderful! Thank you so! I knew that he cared. You know, you didn't have to do all of this for me, and I really appreciate it. You're clearly a wonderful person. You should visit my friend Emusette Bracques in Tel Aruhn. She's a wonderful person, and I think the two of you would get along famously.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_VictimRomance",
+        "Value": 60.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_notefromnelos",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_VictimRomance\" 105",
+      "AddTopic \"Maurrie Aurmine\"",
+      "AddItem \"bk_notefromnelos\" 1",
+      "Player->RemoveItem \"bk_notefromnelos\" 1"
+    ]
+  },
+  "2829522118217825567": {
+    "Prev": "1774643442223216683",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "maurrie aurmine",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He gave you a letter to give to me? Wonderful! Thank you so! I knew that he cared. You know, you didn't have to do all of this for me, and I really appreciate it. You're clearly a wonderful person. You should visit my friend Barnand Erelie in Tel Branora. He's a wonderful person, and I think the two of you would get along famously.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_VictimRomance",
+        "Value": 60.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_notefromnelos",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_VictimRomance\" 100",
+      "AddTopic \"Maurrie Aurmine\"",
+      "AddItem \"bk_notefromnelos\" 1",
+      "Player->RemoveItem \"bk_notefromnelos\" 1"
+    ]
+  }
+}

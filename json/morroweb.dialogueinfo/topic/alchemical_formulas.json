@@ -1,0 +1,375 @@
+{
+  "29217236801865024924": {
+    "Prev": "",
+    "Next": "2928966541733525844",
+    "Type": "Topic",
+    "Disposition": 75,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aurane frernis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I like you, %PCName, but I would never reveal my secrets.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HH_IndEsp1",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2928966541733525844": {
+    "Prev": "29217236801865024924",
+    "Next": "91672090011637838",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aurane frernis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Those are secret. I will not reveal them to you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HH_IndEsp1",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "91672090011637838": {
+    "Prev": "2928966541733525844",
+    "Next": "8482122883265823976",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled from House Hlaalu. You must make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "8482122883265823976": {
+    "Prev": "91672090011637838",
+    "Next": "16433110821500729598",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's too late now. What's done is done.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_IndEsp1",
+        "Value": 200.0
+      }
+    ],
+    "Script": []
+  },
+  "16433110821500729598": {
+    "Prev": "8482122883265823976",
+    "Next": "13262233511688727387",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have already shown me the formulas.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_IndEsp1",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "13262233511688727387": {
+    "Prev": "16433110821500729598",
+    "Next": "26010153641561725387",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You were not supposed to kill Aurane Frernis. While it does remove the competition, House Hlaalu will lose honor. This may even provoke the Duke or the Empire. Try and do business as I say, %PCRank. Don't speculate until you can handle yourself.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "aurane frernis",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Journal HH_IndEsp1 200"
+    ]
+  },
+  "26010153641561725387": {
+    "Prev": "13262233511688727387",
+    "Next": "2047413617178820585",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, excellent. You can keep the formulas. I will make a copy and deliver it to the loyal Hlaalu alchemists in Vivec.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_AuraneFrernis1",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HH_IndEsp1 100",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 15",
+      "\"Aurane Frernis\"->ModDisposition -25"
+    ]
+  },
+  "2047413617178820585": {
+    "Prev": "26010153641561725387",
+    "Next": "2684042372824732212",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, excellent. You can keep the formulas. I will make a copy and deliver it to the loyal Hlaalu alchemists in Vivec.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_auranefrernis2",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HH_IndEsp1 100",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 15",
+      "\"Aurane Frernis\"->ModDisposition -25"
+    ]
+  },
+  "2684042372824732212": {
+    "Prev": "2047413617178820585",
+    "Next": "193582034246342796",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, excellent. You can keep the formulas. I will make a copy and deliver it to the loyal Hlaalu alchemists in Vivec.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_auranefrernis3",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HH_IndEsp1 100",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 15",
+      "\"Aurane Frernis\"->ModDisposition -25"
+    ]
+  },
+  "193582034246342796": {
+    "Prev": "2684042372824732212",
+    "Next": "28645106652677128444",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, bring them here. I am losing my patience.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "28645106652677128444": {
+    "Prev": "193582034246342796",
+    "Next": "3215613152428731487",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go back to her shop in Vivec and bring me the formulas.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "3215613152428731487": {
+    "Prev": "28645106652677128444",
+    "Next": "1959269981540221952",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you have the formulas from Aurane Frernis?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_IndEsp1",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here they are.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "1959269981540221952": {
+    "Prev": "3215613152428731487",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Go to Vivec, to the shop of Aurane Frernis. Find some of her notes or formulas and bring them back to me. While you're there, you might want to pay a visit to Edryno Arethi.",
+    "Filters": [],
+    "Script": [
+      "Journal HH_IndEsp1 10"
+    ]
+  }
+}

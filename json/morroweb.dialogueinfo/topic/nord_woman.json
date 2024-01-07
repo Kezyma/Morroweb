@@ -1,0 +1,108 @@
+{
+  "12081556374155920": {
+    "Prev": "",
+    "Next": "3190416226829188",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dro'zhirr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Dro'zhirr is done talking about her.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_BanditVictim",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "3190416226829188": {
+    "Prev": "12081556374155920",
+    "Next": "30730297309815675",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dro'zhirr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hmmm...an interesting bargain. If the woman pays you what she says, that would be a great deal better than what Dro'zhirr can get for them from our associates. Sounds like a fair deal, friend. Make sure you come back with my share, though. Dro'zhirr has friends who wouldn't be happy to know he's been cheated.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_BanditVictim\" 50",
+      "RemoveItem \"expensive_amulet_aeta\" 1",
+      "RemoveItem \"expensive_ring_aeta\" 1",
+      "Player->AddItem \"expensive_amulet_aeta\" 1",
+      "Player->AddItem \"expensive_ring_aeta\" 1"
+    ]
+  },
+  "30730297309815675": {
+    "Prev": "3190416226829188",
+    "Next": "1333416029989022865",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dro'zhirr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Nothing else to say? Then as far as I'm concerned, you're just another victim, trespassing on my property. You'd better leave. Now.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -20"
+    ]
+  },
+  "1333416029989022865": {
+    "Prev": "30730297309815675",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dro'zhirr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've met her, huh? What has that got to do with me? Dro'zhirr is in this for the cash, not for some ridiculous sentiment. No more to say to you, unless you've got a better offer.",
+    "Filters": [],
+    "Script": [
+      "Choice \"I'll bring them back to her, then give you half of what she pays me.\" 1 \"I just want the jewels.\" 2"
+    ]
+  }
+}

@@ -1,0 +1,522 @@
+{
+  "26664254912191115086": {
+    "Prev": "",
+    "Next": "228402215596730435",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ajira hears you are expelled. Ajira was told to say you should make amends with the Arch-Mage, but Ajira tells you that the wizards here have many things to do and many things on their minds. Soon Ranis Athrys will forget you are expelled and then Ajira can speak with you again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "228402215596730435": {
+    "Prev": "26664254912191115086",
+    "Next": "7300276011471223511",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Ajira remembers all the good things you have done for her.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_StolenReport",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "7300276011471223511": {
+    "Prev": "228402215596730435",
+    "Next": "10368301582352631937",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, these are the reports Ajira needs. Ajira thanks you, %PCName. Ajira is your friend always. Ajira worked very hard on these potions for you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_Ajira1",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_Ajira2",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal MG_StolenReport 100",
+      "Player->RemoveItem \"bk_Ajira1\" 1",
+      "Player->RemoveItem \"bk_Ajira2\" 1",
+      "Player->AddItem p_fire_shield_e 1",
+      "Player->AddItem p_frost_shield_e 1",
+      "Player->AddItem \"p_lightning shield_e\" 1",
+      "Player->AddItem p_spell_absorption_e 2",
+      "ModPCFacRep 5 \"Mages Guild\"",
+      "ModDisposition 10",
+      "Player->ModReputation 1"
+    ]
+  },
+  "10368301582352631937": {
+    "Prev": "7300276011471223511",
+    "Next": "21969299862194611299",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ajira sees you have only one report. Ajira must have both her reports to be a Journeyman.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_Ajira2",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "21969299862194611299": {
+    "Prev": "10368301582352631937",
+    "Next": "20081266752179610195",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ajira sees you have only one report. Ajira must have both her reports to be a Journeyman.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_Ajira1",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "20081266752179610195": {
+    "Prev": "21969299862194611299",
+    "Next": "23785184912757320359",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ajira does not see the reports. Bring the reports to Ajira.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "23785184912757320359": {
+    "Prev": "20081266752179610195",
+    "Next": "21708303161485031644",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ajira asks you to keep looking, then. They cannot be far from here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "21708303161485031644": {
+    "Prev": "23785184912757320359",
+    "Next": "2878922371139488232",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Have you found Ajira's reports?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_StolenReport",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here they are.\" 1 \"No, not yet\" 2"
+    ]
+  },
+  "2878922371139488232": {
+    "Prev": "21708303161485031644",
+    "Next": "564531341690610714",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Ajira needs your help very badly. Galbedir stole Ajira's reports on the properties of local mushrooms and flowers. Ajira knows Galbedir did not leave the Mages Guild, so the reports must be nearby.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Flowers",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MG_StolenReport 10"
+    ]
+  },
+  "564531341690610714": {
+    "Prev": "2878922371139488232",
+    "Next": "1356145981950525701",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galbedir",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "You helped Ajira, but I cannot blame you. I know now how a %PCRace thinks. I should have made you a better offer.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_StolenReport",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1356145981950525701": {
+    "Prev": "564531341690610714",
+    "Next": "919112032716124046",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galbedir",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Yes, I stole the reports. I'm quite proud of it, actually. I hid the first one under a dresser in the bedrooms, and I hid the second one among the sacks of ingredients. Since Ajira needs you to collect her ingredients for her, she will never find them.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_StolenReport",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "919112032716124046": {
+    "Prev": "1356145981950525701",
+    "Next": "319505223265624",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galbedir",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Of course not. Are you suggesting that I would steal something from a fellow guild member?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_StolenReport",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "319505223265624": {
+    "Prev": "919112032716124046",
+    "Next": "1861862461279028492",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "masalinie merian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'd only tell someone I trusted... I saw Galbedir come in and take the reports. She put one of them under the dresser in the bedrooms just outside the door. I don't know what she did with the other one.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_StolenReport",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MG_StolenReport",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1861862461279028492": {
+    "Prev": "319505223265624",
+    "Next": "26897324471604913765",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "masalinie merian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, no! Don't ask me. I didn't see a thing.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_StolenReport",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MG_StolenReport",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "26897324471604913765": {
+    "Prev": "1861862461279028492",
+    "Next": "3237816021532827332",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's an unfortunate situation. Back when I was an Apprentice here, we had to find our own reports when a jealous rival stole them. But I suppose you want to know where the scroll is. I can't say for sure, but I saw Galbedir rummaging about among those sacks and barrels across from the stairway earlier.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_StolenReport",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MG_StolenReport",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3237816021532827332": {
+    "Prev": "26897324471604913765",
+    "Next": "24344121001908210328",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's an unfortunate situation. Back when I was an Apprentice here, we had to find our own reports when a jealous rival stole them.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_StolenReport",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MG_StolenReport",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "24344121001908210328": {
+    "Prev": "3237816021532827332",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "marayn dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I saw Galbedir carrying a scroll up to her desk, but I didn't think anything of it at the time.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_StolenReport",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MG_StolenReport",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  }
+}

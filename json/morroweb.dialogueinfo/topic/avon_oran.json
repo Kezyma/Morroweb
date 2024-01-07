@@ -1,0 +1,68 @@
+{
+  "16572181562887730963": {
+    "Prev": "",
+    "Next": "37073067225224471",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He's a good leader. Most leaders take their positions for granted and neglect the duties they have to the people. Serjo Avon Oran is a better man than that. He takes his duties to the town of Suran very seriously. Look for him there and speak to him about the bandits in Suran.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "FG_SuranBandits",
+        "Value": 30.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "avon oran",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "37073067225224471": {
+    "Prev": "16572181562887730963",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Suran",
+    "PlayerFaction": "",
+    "Text": "He's the governor of Suran. Keeps business working by staying out of it. If you want to see him, he lives in the large manor west of the Temple.",
+    "Filters": [
+      {
+        "Type": "NotCell",
+        "Func": "NotCell",
+        "Compare": "Equal",
+        "Id": "Suran, Oran Manor",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

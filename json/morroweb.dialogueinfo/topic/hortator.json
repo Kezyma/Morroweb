@@ -1,0 +1,77 @@
+{
+  "31873192271755619515": {
+    "Prev": "",
+    "Next": "14275283801331826815",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ghost_npc_peakstar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You must go before the Councilors of the Great Houses and satisfy them, for only the Councils of the Great Houses can name you 'Hortator.' I do not know the settled people of the Great Houses, and can offer you no counsel.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "14275283801331826815": {
+    "Prev": "31873192271755619515",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nibani maesa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "When a greater enemy threatens, the Great Houses put aside their quarrels and choose a Hortator, a single war leader to lead all the Houses. Only a Great House council can name a Hortator, and all councils must agree. Speak with the Redoran councilors, Hlaalu councilors, and Telvanni councilors. Prove to them that Dagoth Ur threatens. When you are named Redoran Hortator, Hlaalu Hortator, and Telvanni Hortator, only then will you be the Hortator named in prophecy.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B5_RedoranHort",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B7_TelvanniHort",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B6_HlaaluHort",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal \"A2_6_Incarnate\" 62"
+    ]
+  }
+}

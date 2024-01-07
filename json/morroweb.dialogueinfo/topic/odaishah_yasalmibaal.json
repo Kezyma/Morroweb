@@ -1,0 +1,240 @@
+{
+  "22344219741010228833": {
+    "Prev": "",
+    "Next": "29244102862295226906",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "29244102862295226906": {
+    "Prev": "22344219741010228833",
+    "Next": "91455312159821334",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have executed this Writ already, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritYasalmibaal",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "91455312159821334": {
+    "Prev": "29244102862295226906",
+    "Next": "185655039131626073",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Odaishah Yasalmibaal is dead by your hand!? I had not yet given you the proper contract... It is not healthy for you to anticipate the Morag Tong. Still, the credit is yours by law and tradition.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "odaishah yasalmibaal",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MT_WritYasalmibaal",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal MT_WritYasalmibaal 100",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition -10"
+    ]
+  },
+  "185655039131626073": {
+    "Prev": "91455312159821334",
+    "Next": "11860236751078012199",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I hear that Odaishah Yasalmibaal is dead. Good. Here is your payment for this Writ.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MT_WritYasalmibaal",
+        "Value": 90.0
+      }
+    ],
+    "Script": [
+      "Journal MT_WritYasalmibaal 110",
+      "Player->AddItem Gold_001 500",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition 5"
+    ]
+  },
+  "11860236751078012199": {
+    "Prev": "185655039131626073",
+    "Next": "3437256922383926087",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I hear that Odaishah Yasalmibaal is dead. Good. Here is your payment for this Writ.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MT_WritYasalmibaal",
+        "Value": 80.0
+      }
+    ],
+    "Script": [
+      "Journal MT_WritYasalmibaal 100",
+      "Player->AddItem Gold_001 500",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition 5"
+    ]
+  },
+  "3437256922383926087": {
+    "Prev": "11860236751078012199",
+    "Next": "118018732272413197",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have given this Writ to you already, %PCName.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "writ_yasalmibaal",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritYasalmibaal",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "118018732272413197": {
+    "Prev": "3437256922383926087",
+    "Next": "29811176652328127737",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have given this Writ to you already, %PCName. As you know, Writs are issued only once. Your official paperwork will exonerate you from your deeds when you are confronted by the authorities - so guard it well. If you have lost it, you will have to suffer punishment for your crimes. This can be costly... very costly. But members of the %Faction must have immaculate reputations.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "writ_yasalmibaal",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritYasalmibaal",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "29811176652328127737": {
+    "Prev": "118018732272413197",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "An honorable Writ has been issued by a noble of House Telvanni for the Ashlander Odaishah Yasalmibaal. It will more trouble tracking him down that killing him. Take a boat from Sadrith Mora to Tel Aruhn. Swim southwest until you reach the coast. Odaishah has built his yurt right on the coast near the end of a small peninsula.",
+    "Filters": [],
+    "Script": [
+      "Journal MT_WritYasalmibaal 10",
+      "Player->AddItem \"writ_yasalmibaal\" 1"
+    ]
+  }
+}

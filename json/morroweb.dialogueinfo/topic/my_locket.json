@@ -1,0 +1,75 @@
+{
+  "23432722159812806": {
+    "Prev": "",
+    "Next": "6086255182550620740",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "delyna mandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Take the locket to my father, Arethan Mandas.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_RansomMandas",
+        "Value": 90.0
+      }
+    ],
+    "Script": []
+  },
+  "6086255182550620740": {
+    "Prev": "23432722159812806",
+    "Next": "3146559451411011020",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "delyna mandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am safe, but I have duties that cannot be ignored. I will go visit my father when I can. In the meantime, please take this locket to my Father. I do not know where he is now, but perhaps his old friend Athyn Sarethi in Ald'ruhn can tell you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_RansomMandas",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal HR_RansomMandas 90",
+      "Player->AddItem \"expensive_amulet_delyna\" 1"
+    ]
+  },
+  "3146559451411011020": {
+    "Prev": "6086255182550620740",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "delyna mandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I will give it to you so that you can prove to my father, Arethan Mandas, that I am safe. But first I must *be* safe. Let's travel together and escape this tower.",
+    "Filters": [],
+    "Script": []
+  }
+}

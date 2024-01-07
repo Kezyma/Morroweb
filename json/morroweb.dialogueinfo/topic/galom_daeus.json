@@ -1,0 +1,266 @@
+{
+  "7666164872754228936": {
+    "Prev": "",
+    "Next": "180694396889728168",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharer rotheloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have heard that you claim to be the Incarnate. I do not know the truth of the matter, but for now I will not give you duties.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B8_MeetVivec",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "180694396889728168": {
+    "Prev": "7666164872754228936",
+    "Next": "3068428102672472",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharer rotheloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled from the Temple.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "3068428102672472": {
+    "Prev": "180694396889728168",
+    "Next": "2863029731126512228",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharer rotheloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have slain Raxle Berne. Galom Daeus is no longer a plague waiting to strike out upon the land.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_GalomDeus",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2863029731126512228": {
+    "Prev": "3068428102672472",
+    "Next": "1785191852189913577",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharer rotheloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Raxle Berne is dead. He shall no longer plague the lands of Vvardenfell. You have earned great honor with the Temple.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "raxle berne",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_GalomDeus",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal TT_GalomDeus 100",
+      "ModPCFacRep 10 \"Temple\"",
+      "ModDisposition 20",
+      "Player->ModReputation 1"
+    ]
+  },
+  "1785191852189913577": {
+    "Prev": "2863029731126512228",
+    "Next": "2497822719503815954",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharer rotheloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Raxle Berne is already dead? By your own hands? Then you deserve the traditional garb of the Temple's vampire hunters. I salute you, %PCRank %PCName.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "raxle berne",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TT_GalomDeus",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TT_GalomDeus 100",
+      "Player->AddItem \"Warden's Ring\" 1",
+      "Player->AddItem \"Saint's Shield\" 1",
+      "Player->AddItem \"daedric warhammer_ttgd\" 1",
+      "ModPCFacRep 10 \"Temple\"",
+      "ModDisposition 20",
+      "Player->ModReputation 1"
+    ]
+  },
+  "2497822719503815954": {
+    "Prev": "1785191852189913577",
+    "Next": "188544289117314102",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharer rotheloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have given you the garb of one of the Temple's vampire hunters. When you are ready, slay Raxle Berne in the Dunmer stronghold of Galom Daeus.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_GalomDeus",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "188544289117314102": {
+    "Prev": "2497822719503815954",
+    "Next": "67671964516100523",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharer rotheloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Please take the holy implements of the Temple's greatest vampire hunters. When you are ready, the elder vampire Raxle Berne hides from the light in the Dwemer ruin of Galom Daeus. I will mark Uvirith's Grave on your map. From there go south until you reach a river of lava. Follow that river to the west until it ends. Galom Daeus lies ahead of you across another pool of lava.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 15.0
+      }
+    ],
+    "Script": [
+      "Journal TT_GalomDeus 10",
+      "Player->AddItem \"Warden's Ring\" 1",
+      "Player->AddItem \"daedric warhammer_ttgd\" 1",
+      "Player->AddItem \"belt of balyna's soothing balm\" 1",
+      "ShowMap \"Uvirith's Grave\""
+    ]
+  },
+  "67671964516100523": {
+    "Prev": "188544289117314102",
+    "Next": "1178218661898227202",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharer rotheloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Please take the holy implements of the Temple's greatest vampire hunters. You might want to fight against some of Vvardenfell's lesser evils before you take on this challenge, but you have done well in the Temple so far. When you feel you are ready, the elder vampire Raxle Berne hides from the light in the Dwemer ruin of Galom Daeus. I will mark Uvirith's Grave on your map. From there go south until you reach a river of lava. Follow that river to the west until it ends. Galom Daeus lies ahead of you.",
+    "Filters": [],
+    "Script": [
+      "Journal TT_GalomDeus 10",
+      "Player->AddItem \"Warden's Ring\" 1",
+      "Player->AddItem \"daedric warhammer_ttgd\" 1",
+      "Player->AddItem \"belt of balyna's soothing balm\" 1",
+      "ShowMap \"Uvirith's Grave\""
+    ]
+  },
+  "1178218661898227202": {
+    "Prev": "67671964516100523",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "llunela hleran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "To get to Galom Daeus, go south from your stronghold until you reach a river of lava. Follow that river to the west until it ends. You will see another pool of lava ahead of you. Galom Daeus lies beyond that pool.",
+    "Filters": [],
+    "Script": []
+  }
+}

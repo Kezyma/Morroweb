@@ -1,0 +1,165 @@
+{
+  "529914144800926279": {
+    "Prev": "",
+    "Next": "469425784153432952",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rabinna",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes...he was my master. But now I must deliver the payment.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_SlaveMule",
+        "Value": 65.0
+      }
+    ],
+    "Script": []
+  },
+  "469425784153432952": {
+    "Prev": "529914144800926279",
+    "Next": "25379293351898920414",
+    "Type": "Topic",
+    "Disposition": 20,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rabinna",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "[Rabinna is too frightened to speak to you.]",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_SlaveMule",
+        "Value": 65.0
+      }
+    ],
+    "Script": []
+  },
+  "25379293351898920414": {
+    "Prev": "469425784153432952",
+    "Next": "5892164704025339",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vorar helas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Tell him I'd be willing to business with him again some time.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_SlaveMule",
+        "Value": 108.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_SlaveMule",
+        "Value": 115.0
+      }
+    ],
+    "Script": []
+  },
+  "5892164704025339": {
+    "Prev": "25379293351898920414",
+    "Next": "215733096575319625",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vorar helas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, this slave was his final payment to me...or rather what she was carrying. All that moon sugar he had her swallow will fetch me a good price. Thank you for your help in delivering the shipment. Here, take this.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_SlaveMule",
+        "Value": 102.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_SlaveMule\" 103",
+      "AddItem \"Ingred_Moon_Sugar_01\" 20",
+      "Rabinna->RemoveItem \"Ingred_Moon_Sugar_01\" 20",
+      "RemoveItem \"Ring of Medusa's Gaze\" 1",
+      "RemoveItem \"Gold_001\" 400",
+      "Player->AddItem \"Ring of Medusa's Gaze\" 1",
+      "Player->AddItem \"Gold_001\" 400",
+      "Journal \"MV_SlaveMule\" 108",
+      "Goodbye"
+    ]
+  },
+  "215733096575319625": {
+    "Prev": "5892164704025339",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vorar helas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The slave died on the way? Damn. Did you get the shipment from her? The moon sugar she was carrying in her was worth a fortune. I can't abide someone else taking Vorar's moon sugar.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "Rabinna",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "MV_SlaveMule",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_SlaveMule",
+        "Value": 103.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_SlaveMule\" 103"
+    ]
+  }
+}

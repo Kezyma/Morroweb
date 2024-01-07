@@ -1,0 +1,161 @@
+{
+  "427228952896820789": {
+    "Prev": "",
+    "Next": "43142177162243714",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ulfgar the unending",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You honor me with this decision!  Songs will be written of our glorious battle!  It is true that in my heart I wish to be defeated, so that I may enter Sovngarde.  But know, this %PCName.  I will fight, and fight valiantly, as I have all my life.  You will probably die by my hand.  I will grant no quarter, no mercy, and I expect no less from you.  Go now. Prepare for battle.  When you are ready, return here.  We will speak one last time, and then engage in armed combat!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal BM_BrodirGrove 60",
+      "Goodbye"
+    ]
+  },
+  "43142177162243714": {
+    "Prev": "427228952896820789",
+    "Next": "28357324331720217418",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ulfgar the unending",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh.  I see.  I thought I sensed honor in you, %PCName.  It is why I offered you this chance at glory.  Perhaps I was wrong about you....  If you have a change of heart, return to me and we will fight valiantly to the death.  And don't worry. I'm not going to ambush you.  In order to enter Sovngarde I must die in valiant combat.  I will not lower myself to cowardice and deceit as Grimkell did.  Now leave me, %PCName.  I have much to consider.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal BM_BrodirGrove 50",
+      "Goodbye"
+    ]
+  },
+  "28357324331720217418": {
+    "Prev": "43142177162243714",
+    "Next": "14503199851187811627",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ulfgar the unending",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "New theories, you say?  Let me see the book you speak of.  Hmmm.... Could this be?  Is it possible the entrance to Sovngarde lie right before me all along?  It makes so much sense!  %PCName, you've done it!  You've found the way to Sovngarde!  All I need to do is die valiantly in combat!  But how....  I know!  You, %PCName!  You must help me!  You must defeat me in armed combat and send my soul to Sovngarde!  Tell me, will you honor me with a fight to the death?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal BM_BrodirGrove 40",
+      "player->removeitem \"bk_sovngarde\" 1",
+      "additem \"bk_sovngarde\" 1",
+      "Choice \"Sorry, Ulfgar, I can't help you.\" 2 \"I'll help you, Ulfgar.  I will do everything in my power to defeat you in armed combat.\" 3"
+    ]
+  },
+  "14503199851187811627": {
+    "Prev": "28357324331720217418",
+    "Next": "105981973125481769",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ulfgar the unending",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Don't you understand?  For five hundred years, I have searched for the entrance to Sovngarde!  I have been all across the Empire and back, but I cannot find it!  Once, my friends and I served Ysgramor, and counted ourselves among his \"Five Hundred Companions.\"  We helped drive the Elves out of Skyrim!  We earned our place in Sovngarde!  If, in your travels, you discover the entrance to Sovngarde, let me know, and I will be forever in your debt.  I have tried...and failed.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_BrodirGrove",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "bk_Sovngarde",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal BM_BrodirGrove 20"
+    ]
+  },
+  "105981973125481769": {
+    "Prev": "14503199851187811627",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ulfgar the unending",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Don't you understand?  For five hundred years, I have searched for the entrance to Sovngarde!  I have been all across the Empire and back, but I cannot find it!  Once, my friends and I served Ysgramor, and counted ourselves among his \"Five Hundred Companions.\"  We helped drive the Elves out of Skyrim!  We earned our place in Sovngarde!  If, in your travels, you discover the entrance to Sovngarde, let me know, and I will be forever in your debt.  I have tried...and failed.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_BrodirGrove",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_Sovngarde",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Actually, Ulfgar, I came upon this book.  It's called 'Sovngarde -- A Reexamination,' and seems to offer new theories on how one may enter Sovngarde.  I think it may have the answers you seek.\" 1"
+    ]
+  }
+}

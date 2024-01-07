@@ -1,0 +1,217 @@
+{
+  "323935311797628253": {
+    "Prev": "",
+    "Next": "866190213220526108",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ahnia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What is it you want, %PCRace?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_ScrollSales",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "866190213220526108": {
+    "Prev": "323935311797628253",
+    "Next": "23178191041217228903",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Look, I didn't want anything to do with her.  She forced me into it. I swear!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_ScrollSales",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "23178191041217228903": {
+    "Prev": "866190213220526108",
+    "Next": "98105796263814848",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Okay, okay.... don't hurt me!  She's the one who's been giving me scrolls to sell.  She gave me this stolen book too, but no one can read it, so no one would buy it from me.  Just take it, and leave me alone.  I swear it wasn't my idea... but it's not like the book will do you any good, anyway. From what I hear, the guy who owned it is dead.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_ScrollSales",
+        "Value": 50.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Elbert Nermarc",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MS_ScrollSales 60",
+      "removeitem \"bk_nermarcnotes\" 1",
+      "player->additem \"bk_nermarcnotes\" 1"
+    ]
+  },
+  "98105796263814848": {
+    "Prev": "23178191041217228903",
+    "Next": "2750517570258688883",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Okay, okay.... don't hurt me!  She's the one who's been giving me scrolls to sell.  She gave me this stolen book too, but no one can read it, so no one would buy it from me.  Just take it, and leave me alone.  I swear it wasn't my idea...",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_ScrollSales",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal MS_ScrollSales 60",
+      "removeitem \"bk_nermarcnotes\" 1",
+      "player->additem \"bk_nermarcnotes\" 1"
+    ]
+  },
+  "2750517570258688883": {
+    "Prev": "98105796263814848",
+    "Next": "46596349303625335",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You did what? She's dead? Great. There goes my business. Look, I don't want any trouble. She gave me the scrolls, and she gave me this stolen book. Just take it, and leave me alone.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_ScrollSales",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Journal MS_ScrollSales 60",
+      "removeitem \"bk_nermarcnotes\" 1",
+      "player->additem \"bk_nermarcnotes\" 1"
+    ]
+  },
+  "46596349303625335": {
+    "Prev": "2750517570258688883",
+    "Next": "105685401251218947",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Look, I don't think we should talk any more about it.  Let's just forget the whole thing, okay?  Pretend I never said a word.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_ScrollSales",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "105685401251218947": {
+    "Prev": "46596349303625335",
+    "Next": "309361847591039442",
+    "Type": "Topic",
+    "Disposition": 85,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Okay, okay.  She's a Khajiit.  An entrepreneur of sorts.  She'll meet me in the sewers beneath here from time to time, and have things for me to sell.  I try not to ask too many questions, you know?  She carries a pretty sharp knife.  So I just do business, like I always do.  There's no harm in it, right?  It's not like it's hurting anyone.",
+    "Filters": [],
+    "Script": [
+      "Journal MS_ScrollSales 30",
+      "StartScript \"ScrollSales\"",
+      "addtopic \"Ten-Tongues Weerhat\""
+    ]
+  },
+  "309361847591039442": {
+    "Prev": "105685401251218947",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ten-Tongues_Weerhat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sorry, who?  No, I didn't say Ahnia... you must have mis-heard me. Heh. Nope. Nothing to tell at all. Certainly not.",
+    "Filters": [],
+    "Script": []
+  }
+}

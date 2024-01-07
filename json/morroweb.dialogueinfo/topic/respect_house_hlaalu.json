@@ -1,0 +1,175 @@
+{
+  "1806116842145612265": {
+    "Prev": "",
+    "Next": "931856961938321820",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "velfred",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I already agreed, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_NordSmugglers",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "931856961938321820": {
+    "Prev": "1806116842145612265",
+    "Next": "1146118512848331603",
+    "Type": "Topic",
+    "Disposition": 75,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "velfred",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Alright. I'll pay House Hlaalu the proper respects. But you better carry out your side of the deal.",
+    "Filters": [],
+    "Script": [
+      "Journal HH_NordSmugglers 50"
+    ]
+  },
+  "1146118512848331603": {
+    "Prev": "931856961938321820",
+    "Next": "19177174521586917410",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "velfred",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Why should I? I already pay half my profits to the Empire.",
+    "Filters": [],
+    "Script": []
+  },
+  "19177174521586917410": {
+    "Prev": "1146118512848331603",
+    "Next": "7727270246082464",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "velfred",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Back off, %PCRace.",
+    "Filters": [],
+    "Script": []
+  },
+  "7727270246082464": {
+    "Prev": "19177174521586917410",
+    "Next": "6657221157174164",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "velfred",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This discussion is over.",
+    "Filters": [],
+    "Script": [
+      "SetFight 100",
+      "Goodbye"
+    ]
+  },
+  "6657221157174164": {
+    "Prev": "7727270246082464",
+    "Next": "1308926685173418231",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Perhaps YOU'RE the one who doesn't respect House Hlaalu. But if you make amends, Uncle Crassius will make it all better.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1308926685173418231": {
+    "Prev": "6657221157174164",
+    "Next": "181321343460673104",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "If anyone else needs convincing, I'll keep you in mind, dumpling.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_NordSmugglers",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "181321343460673104": {
+    "Prev": "1308926685173418231",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Yes, once you find Velfred, you'll need to convince him to show us more respect. If he gives you any trouble, don't hesitate to rough him up a little or even kill him.",
+    "Filters": [],
+    "Script": []
+  }
+}

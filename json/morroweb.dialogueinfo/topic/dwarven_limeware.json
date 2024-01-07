@@ -1,0 +1,521 @@
+{
+  "28841294413029625935": {
+    "Prev": "",
+    "Next": "249493202032721949",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alarvyne indalas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's good to finally get my hands on some good merchandise.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_Shipment",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "249493202032721949": {
+    "Prev": "28841294413029625935",
+    "Next": "215443041394626711",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alarvyne indalas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've gotten it! Well done, %PCName. I was beginning to think we'd never see this kind of merchandise again. As promised, here is your reward. I hope it wasn't too much trouble for you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_Shipment",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Shipment",
+        "Value": 40.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_lw_bowl",
+        "Value": 5.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_lw_cup",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Shipment\" 40",
+      "Player->RemoveItem \"misc_lw_bowl\" 5",
+      "Player->RemoveItem \"misc_lw_cup\" 5",
+      "AddItem \"misc_lw_bowl\" 5",
+      "AddItem \"misc_lw_cup\" 5",
+      "Player->AddItem \"Gold_001\" 1500"
+    ]
+  },
+  "215443041394626711": {
+    "Prev": "249493202032721949",
+    "Next": "18328210343169811341",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Bolrin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hmmm...I'm sure you were. Perhaps you'd better leave right now.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_lw_bowl",
+        "Value": 5.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_lw_cup",
+        "Value": 5.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Shipment",
+        "Value": 40.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Journal EB_Shipment 35",
+      "ModDisposition -10",
+      "ModFight 10"
+    ]
+  },
+  "18328210343169811341": {
+    "Prev": "215443041394626711",
+    "Next": "3896279642778817723",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Bolrin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You were able to take this from one of our ships? I'll have the guards' heads for this! It's good you are an honest person, %PCName, and it is good that I know about the holes in my security at the docks. Here, take this as a reward. I would suggest you stay off my ships in the future.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_lw_bowl",
+        "Value": 5.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_lw_cup",
+        "Value": 5.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Shipment",
+        "Value": 40.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Shipment\" 50",
+      "Player->RemoveItem \"misc_lw_bowl\" 5",
+      "Player->RemoveItem \"misc_lw_cup\" 5",
+      "AddItem \"misc_lw_bowl\" 5",
+      "AddItem \"misc_lw_cup\" 5",
+      "Player->AddItem \"Gold_001\" 500"
+    ]
+  },
+  "3896279642778817723": {
+    "Prev": "18328210343169811341",
+    "Next": "275628341705728341",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alarvyne indalas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I would be good to get my hands on that shipment. Let me know when you get the pieces.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_Shipment",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "EB_Shipment",
+        "Value": 30.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "misc_lw_bowl",
+        "Value": 5.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "misc_lw_cup",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "275628341705728341": {
+    "Prev": "3896279642778817723",
+    "Next": "7590303962039429024",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alarvyne indalas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You got the bowls, but where are the cups? Come back when you have it all.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_Shipment",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "EB_Shipment",
+        "Value": 30.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_lw_bowl",
+        "Value": 5.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "misc_lw_cup",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "7590303962039429024": {
+    "Prev": "275628341705728341",
+    "Next": "21063259111914917915",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alarvyne indalas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You got the cups, but where are the bowls? Come back when you have everything.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_Shipment",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "EB_Shipment",
+        "Value": 30.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "misc_lw_bowl",
+        "Value": 5.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_lw_cup",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "21063259111914917915": {
+    "Prev": "7590303962039429024",
+    "Next": "32753167563088719719",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alarvyne indalas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, I suppose I shouldn't have expected your help.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Shipment\" 30"
+    ]
+  },
+  "32753167563088719719": {
+    "Prev": "21063259111914917915",
+    "Next": "13414303251953815124",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alarvyne indalas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent. You can find the limeware aboard the Chun-Ook, docked in Ebonheart. It is likely to be very well guarded, so take care. There should be at least ten pieces of it...bowls and cups, I believe. Anything else you find -- flasks, plates, or platters -- is probably fake, so leave it behind.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Shipment\" 20"
+    ]
+  },
+  "13414303251953815124": {
+    "Prev": "32753167563088719719",
+    "Next": "141663227849129654",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alarvyne indalas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It didn't used to be as much of a problem, but Bolryn at the East Empire Company has been manipulating the prices; I'm sure of it. And he won't give most of us a license to sell the stuff. Actually, I know for a fact that there's a shipment of limeware being held up on a ship in Ebonheart. If you'd be willing to...recover it for me...I would be willing to reward you very generously. Perhaps 1,500 drakes?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_Shipment",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Shipment\" 10",
+      "Choice \"I'll get the limeware for you.\" 1 \"I can't help you.\" 2"
+    ]
+  },
+  "141663227849129654": {
+    "Prev": "13414303251953815124",
+    "Next": "547432752123113499",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Bolrin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A shipment of limeware? I know nothing about it. There are strict regulations on that kind of material entering Vvardenfell. You'd have to show me some proof for me to believe that.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "misc_lw_cup",
+        "Value": 5.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Shipment",
+        "Value": 35.0
+      }
+    ],
+    "Script": []
+  },
+  "547432752123113499": {
+    "Prev": "141663227849129654",
+    "Next": "25898318151220821495",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Bolrin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A shipment of limeware? I know nothing about it. There are strict regulations on that kind of material entering Vvardenfell. You'd have to show me some proof for me to believe that.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "misc_lw_bowl",
+        "Value": 5.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Shipment",
+        "Value": 35.0
+      }
+    ],
+    "Script": []
+  },
+  "25898318151220821495": {
+    "Prev": "547432752123113499",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Bolrin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You say that the limeware you have was on one of my ships? And you managed to get on board to steal it? What are we to do about this?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_lw_bowl",
+        "Value": 5.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_lw_cup",
+        "Value": 5.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Shipment",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Choice \"You should be more careful with your security. Take your limeware.\" 3 \"I must be mistaken.\" 4"
+    ]
+  }
+}

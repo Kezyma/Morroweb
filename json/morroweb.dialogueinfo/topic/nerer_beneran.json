@@ -1,0 +1,179 @@
+{
+  "1277218841429332127": {
+    "Prev": "",
+    "Next": "11207138091711711602",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Regretably, you broke the rules of the Fighters Guild and you have been expelled. First make amends, and then I can speak with you about this again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "11207138091711711602": {
+    "Prev": "1277218841429332127",
+    "Next": "20380242501853911216",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "House Redoran offered their thanks to the Fighters Guild for bringing Nerer to justice.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_BeneranBounty",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "20380242501853911216": {
+    "Prev": "11207138091711711602",
+    "Next": "191217264158619624",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Well, if you've already brought Nerer Beneran to justice, %PCName, you have my gratitude and the gratitude of House Redoran. Here's your share of the Bounty.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_BeneranBounty",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "nerer beneran",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModPCFacRep 5 \"Fighters Guild\"",
+      "ModPCFacRep 5 \"Redoran\"",
+      "ModDisposition 10",
+      "Player->AddItem Gold_001 500",
+      "Journal FG_BeneranBounty 100"
+    ]
+  },
+  "191217264158619624": {
+    "Prev": "20380242501853911216",
+    "Next": "17581244982911615223",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Good work. Nerer Beneran has been brought to justice. Here's your share of the bounty, %PCName.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "nerer beneran",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModPCFacRep 5 \"Fighters Guild\"",
+      "ModPCFacRep 5 \"Redoran\"",
+      "ModDisposition 10",
+      "Player->AddItem Gold_001 500",
+      "Journal FG_BeneranBounty 100"
+    ]
+  },
+  "17581244982911615223": {
+    "Prev": "191217264158619624",
+    "Next": "2064631212418219601",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Like I said, go to the outlaw refuge Sargon and bring Nerer Beneran to justice.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_BeneranBounty",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "2064631212418219601": {
+    "Prev": "17581244982911615223",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Nerer Beneran was a member of House Redoran. He is now the leader of an outlaw band in Sargon which is north of Maar Gan. Find Nerer Beneran and bring him to justice.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_Vas",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal FG_BeneranBounty 10"
+    ]
+  }
+}

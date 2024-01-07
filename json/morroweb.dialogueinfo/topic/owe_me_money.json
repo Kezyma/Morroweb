@@ -1,0 +1,318 @@
+{
+  "58116666271127724": {
+    "Prev": "",
+    "Next": "582119794288556",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drathas nerus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Get out of my sight, %PCRace.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_BarbarianBook",
+        "Value": 110.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "582119794288556": {
+    "Prev": "58116666271127724",
+    "Next": "2160018469323218417",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drathas nerus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "All right, he can go.  Alam, remove his bracers.  Dilborn, never show your face to me again, or I'll slice it off with a rusty spoon, you hear me?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 1000.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_BarbarianBook\" 110",
+      "player->removeitem gold_001 1000",
+      "additem gold_001 1000",
+      "dilborn->RemoveItem \"slave_bracer_left\" 1",
+      "dilborn->RemoveItem \"slave_bracer_right\"1",
+      "thrud->AiWander 0,0,0,0,0",
+      "\"alam merys\"->AiTravel 40, -6187, 782, 0",
+      "\"melur savil\"->AiTravel -413, -6189, 782, 0",
+      "Goodbye"
+    ]
+  },
+  "2160018469323218417": {
+    "Prev": "582119794288556",
+    "Next": "10085130271548314146",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drathas nerus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't have the cash, %PCRace. Bring it to me when you do. Dilborn doesn't move unless I have the money in my hands.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "Gold_001",
+        "Value": 1000.0
+      }
+    ],
+    "Script": []
+  },
+  "10085130271548314146": {
+    "Prev": "2160018469323218417",
+    "Next": "17589248173044824100",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drathas nerus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "All right, he can go. Alam, remove his bracers. Dilborn, never show your face to me again, or I'll slice it off with a rusty spoon, you hear me?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 3000.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_BarbarianBook\" 110",
+      "dilborn->RemoveItem \"slave_bracer_left\" 1",
+      "dilborn->RemoveItem \"slave_bracer_right\" 1",
+      "player->removeitem gold_001 3000",
+      "additem gold_001 3000",
+      "thrud->AiWander 0,0,0,0,0",
+      "\"alam merys\"->AiTravel 40, -6187, 782, 0",
+      "\"melur savil\"->AiTravel -413, -6189, 782, 0",
+      "Goodbye"
+    ]
+  },
+  "17589248173044824100": {
+    "Prev": "10085130271548314146",
+    "Next": "3424132652208025920",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drathas nerus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't have the cash, %PCRace. Bring it to me when you do. Dilborn doesn't move unless I have the money in my hands.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "Gold_001",
+        "Value": 3000.0
+      }
+    ],
+    "Script": []
+  },
+  "3424132652208025920": {
+    "Prev": "17589248173044824100",
+    "Next": "20598309892040931970",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drathas nerus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "How unfortunate. Boys, go ahead and get rid of that naked Breton monkey. I'll take care of the hero and his witless man-child over here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "set \"alam merys\".attack to 1",
+      "set \"melur savil\".attack to 1",
+      "set dilborn.attacked to 1",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "20598309892040931970": {
+    "Prev": "3424132652208025920",
+    "Next": "12702298852038222342",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drathas nerus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You can pay me 1,000 septims, or go away and stop annoying me. What will it be?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_BarbarianBook",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Choice \"Okay, here's the money.\" 4 \"Forget it. Let him go now.\" 3"
+    ]
+  },
+  "12702298852038222342": {
+    "Prev": "20598309892040931970",
+    "Next": "46111725143574533",
+    "Type": "Topic",
+    "Disposition": 80,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drathas nerus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well... I hesitate to set a precedent... but only because I can't abide his constant whining, I'll reduce his ransom to the inconsequential sum of 1,000 septims. Now, are you going to pay for little Dilborn or not?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_BarbarianBook\" 40",
+      "Choice \"Okay, here's the money.\" 4 \"Forget it. Let him go now.\" 3"
+    ]
+  },
+  "46111725143574533": {
+    "Prev": "12702298852038222342",
+    "Next": "3066034622170814595",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drathas nerus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Not for you, my little %PCRace friend. If they owe me money, even my closest associates have trouble persuading me to back off a debt.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "3066034622170814595": {
+    "Prev": "46111725143574533",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drathas nerus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's right, %PCRace. We indulge in a bit of gambling down here from time to time, away from the prying eyes of the guards, you know? Dilborn is one of our best customers. He currently owes... if my memory serves me right...  yes, Dilborn owes me the sum total of 3,000 septims. And he's not leaving here until he pays his debts.",
+    "Filters": [],
+    "Script": [
+      "Journal \"MS_BarbarianBook\" 30",
+      "Choice \"Could you lower his ransom at all?\" 1 \"Hold on, I can pay his ransom.\" 2 \"Let him go now or feel my wrath.\" 3"
+    ]
+  }
+}

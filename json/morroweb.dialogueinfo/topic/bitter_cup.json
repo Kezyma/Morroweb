@@ -1,0 +1,476 @@
+{
+  "1012332167164624965": {
+    "Prev": "",
+    "Next": "571622831199792296",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled, %PCName. Make amends and speak with me again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "571622831199792296": {
+    "Prev": "1012332167164624965",
+    "Next": "16578980663722852",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There's nothing more we can do about this.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_BitterBribe",
+        "Value": 120.0
+      }
+    ],
+    "Script": []
+  },
+  "16578980663722852": {
+    "Prev": "571622831199792296",
+    "Next": "13021215577055203",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Let's not bring that one up again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_BitterBribe",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "13021215577055203": {
+    "Prev": "16578980663722852",
+    "Next": "633952621839018214",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Eydis Fire-Eye has the Bitter Cup now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_BitterBribe",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "633952621839018214": {
+    "Prev": "13021215577055203",
+    "Next": "81581064827739327",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Eydis Fire-Eye is dead? That is a problem. Well, she can't hurt us now, but neither can she help us. We'll have to move on to other jobs.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "eydis fire-eye",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TG_BitterBribe",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal TG_BitterBribe 120"
+    ]
+  },
+  "81581064827739327": {
+    "Prev": "633952621839018214",
+    "Next": "25741119422478130116",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So Eydis took the Bitter Cup. Good. She's likely to betray us, too, but only if she thinks we think she won't. Anyway, I found some good lockpicks the other day and thought you might could find a use for them.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BitterBribe",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal TG_BitterBribe 100",
+      "Player->AddItem Pick_Grandmaster 1",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "25741119422478130116": {
+    "Prev": "81581064827739327",
+    "Next": "14744287973221728391",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have the Bitter Cup. You need to take it to Eydis Fire-Eye. She's in the Fighters Guild in Balmora.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "artifact_bittercup_01",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BitterBribe",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "14744287973221728391": {
+    "Prev": "25741119422478130116",
+    "Next": "2860023908295722419",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. Now please go get it. Time is of the essence.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_BitterBribe",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -2"
+    ]
+  },
+  "2860023908295722419": {
+    "Prev": "14744287973221728391",
+    "Next": "14173313601480630406",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Fool! You used it?! Well, I can't say as I blame you. Scratch one bribery attempt, though. But things might still work to our advantage.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_BitterBribe",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Journal TG_BitterBribe 110",
+      "ModDisposition -5"
+    ]
+  },
+  "14173313601480630406": {
+    "Prev": "2860023908295722419",
+    "Next": "158212426355315409",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Fool! You used it?! Well, I can't say as I blame you. Scratch one bribery attempt, though. But things might still work to our advantage.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_BitterBribe",
+        "Value": 25.0
+      }
+    ],
+    "Script": [
+      "Journal TG_BitterBribe 110",
+      "ModDisposition -5"
+    ]
+  },
+  "158212426355315409": {
+    "Prev": "14173313601480630406",
+    "Next": "204069051240527734",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Where's the Bitter Cup? You didn't succumb to its power, did you?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_BitterBribe",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "choice \"No way. Not me.\" 1 \"Yeah. I blew it.\" 2"
+    ]
+  },
+  "204069051240527734": {
+    "Prev": "158212426355315409",
+    "Next": "8383215591806511210",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Percius Mercius told us that Eydis Fire-Eye worships Clavicus Vile. Perhaps she would betray Sjoring Hard-Heart for the Bitter Cup, an artifact sacred to Clavicus Vile. The Bitter Cup was lost in the ruins of Ald Redaynia, which is on an island north of the Urshilaku Camp.",
+    "Filters": [],
+    "Script": [
+      "Journal TG_BitterBribe 10"
+    ]
+  },
+  "8383215591806511210": {
+    "Prev": "204069051240527734",
+    "Next": "30272251543206015838",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, you gave me the Bitter Cup. I have not forgotten.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BitterBribe",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "30272251543206015838": {
+    "Prev": "8383215591806511210",
+    "Next": "62822159696622307",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So be it. I take this Bitter Cup and pledge to support you against Sjoring Hard-Heart. I never liked the way the Camonna Tong was using an Imperial Guild to destroy another Imperial Guild. Tell the Master Thief to contact me when he's ready.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_BitterBribe 50",
+      "Player->RemoveItem Artifact_bittercup_01 1"
+    ]
+  },
+  "62822159696622307": {
+    "Prev": "30272251543206015838",
+    "Next": "21232238463232921194",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I know that some gifts of Clavicus Vile can be hard to part with. If you change your mind, you know where to find me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "21232238463232921194": {
+    "Prev": "62822159696622307",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So you think you can bribe me to betray Sjoring Hard-Heart? Well, you might be right. If you give me the Bitter Cup, I'll pledge my support to the Thieves Guild.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "artifact_bittercup_01",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BitterBribe",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give her the cup\" 1 \"Keep the cup\" 2"
+    ]
+  }
+}

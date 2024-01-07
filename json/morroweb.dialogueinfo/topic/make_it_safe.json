@@ -1,0 +1,82 @@
+{
+  "19490137733140524327": {
+    "Prev": "",
+    "Next": "877220269297527221",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinnammu mirpal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. Ald Daedroth is indeed a safe refuge for the Ahemmusa. Thank you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B2_AhemmusaSafe",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "877220269297527221": {
+    "Prev": "19490137733140524327",
+    "Next": "361921234262745713",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinnammu mirpal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you made Ald Daedroth safe for the Ahemmusa? Have you dealt with the priest Hlireni Indavel? Are there cultists or creatures of Sheogorath to threaten us? Are there any other dangers that may cause us harm? Remember... to make sure it is safe, I must accompany you to Ald Daedroth, and see for myself. If I die on my journey, it is not safe... and you shall not be named Ahemmusa Nerevarine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B2_AhemmusaSafe",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "361921234262745713": {
+    "Prev": "877220269297527221",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinnammu mirpal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "First you will go to Ald Daedroth. You will make it safe for the Ahemmusa. You are the hero. You decide what must be done. We are not traders, to haggle over the meaning of 'safe.' We are not a warlike people. We are not strong with warriors and witch-wizards. Make Ald Daedroth safe for us. Then, when I accompany you to Ald Daedroth, then you and I will judge whether it is safe.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal \"B2_AhemmusaSafe\" 5"
+    ]
+  }
+}

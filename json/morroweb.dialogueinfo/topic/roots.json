@@ -1,0 +1,393 @@
+{
+  "1776163539928504": {
+    "Prev": "",
+    "Next": "1735418096925517202",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Unel Lloran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's all taken care of, thanks to you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_10",
+        "Value": 90.0
+      }
+    ],
+    "Script": []
+  },
+  "1735418096925517202": {
+    "Prev": "1776163539928504",
+    "Next": "191892387187424388",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Unel Lloran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, let me know when you've got them. We can't proceed until we do something about this.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": []
+  },
+  "191892387187424388": {
+    "Prev": "1735418096925517202",
+    "Next": "844824782145703920",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Unel Lloran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Great. I'll take these and see what I can do. There's nothing more that you can do right now; why don't you let the boss know things are taken care of?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_bittergreen_petals_01",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"ingred_bittergreen_petals_01\" 5",
+      "Journal CO_10 90"
+    ]
+  },
+  "844824782145703920": {
+    "Prev": "191892387187424388",
+    "Next": "19374164552037116266",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Unel Lloran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll need more than what you have. Make sure you've got at least five of them, or it won't be enough to have an effect.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_bittergreen_petals_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "19374164552037116266": {
+    "Prev": "844824782145703920",
+    "Next": "2006314273109265781",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Unel Lloran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Where are they? I don't see any.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "ingred_bittergreen_petals_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2006314273109265781": {
+    "Prev": "19374164552037116266",
+    "Next": "194158002950424681",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Unel Lloran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you have the bittergreen petals?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_10",
+        "Value": 80.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Yes\" 3 \"No\" 4"
+    ]
+  },
+  "194158002950424681": {
+    "Prev": "2006314273109265781",
+    "Next": "303556925189985846",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Unel Lloran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, if this is the right place, maybe there's something I can do about it. If these roots are drinking from this pool of water, we can try poisoning the water to weaken them. If they're weakened, the trees might fall. But I'd need some bittergreen petals.... Can you get some for me? I'll need at least five of them. I doubt you'll find any on Solstheim, but you can probably dredge them up someplace more civilized.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_10",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal CO_10 80"
+    ]
+  },
+  "303556925189985846": {
+    "Prev": "194158002950424681",
+    "Next": "399829728828224501",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Unel Lloran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You just take me to wherever they are. I'll figure out how to handle it once we get there.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_10",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "399829728828224501": {
+    "Prev": "303556925189985846",
+    "Next": "541317710237612514",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Unel Lloran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? I think that might be what we're looking for, though. And if I could see them, perhaps I could figure a way out of this mess.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "541317710237612514": {
+    "Prev": "399829728828224501",
+    "Next": "31393301591415323540",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Unel Lloran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Okay! Now we're getting somewhere. Lead on, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AIFollow Player 0 0 0 0",
+      "Journal CO_10 60"
+    ]
+  },
+  "31393301591415323540": {
+    "Prev": "541317710237612514",
+    "Next": "22366204961944321805",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Unel Lloran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Really? That sounds like what I'm looking for. Can you take me to see them?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_10",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Let's go\" 1 \"No\" 2"
+    ]
+  },
+  "22366204961944321805": {
+    "Prev": "31393301591415323540",
+    "Next": "7225833110156795",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "East Empire Company",
+    "SpeakerCell": "Raven Rock, Mine",
+    "PlayerFaction": "",
+    "Text": "Yep, that whole shaft was full of them, so we just left it alone. Too much work.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_10",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "7225833110156795": {
+    "Prev": "22366204961944321805",
+    "Next": "727820753545330200",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "East Empire Company",
+    "SpeakerCell": "Raven Rock, Mine",
+    "PlayerFaction": "",
+    "Text": "Roots? We had a real problem with those. Had a whole passage in the mine blocked off by 'em, and we just couldn't seem to hack through all of them. Decided it wasn't worth the effort, so we gave up on it. You can see for yourself; they're down at the bottom, off of that northern passage.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_10",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Journal CO_10 50"
+    ]
+  },
+  "727820753545330200": {
+    "Prev": "7225833110156795",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Unel Lloran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "They've got to be way underground; too far down for us to dig to. They're probably as tough as the trees themselves, so anyone that ran into them would know it. I'd ask the workers in the mine about it, but... well, you know. It's dark down there.",
+    "Filters": [],
+    "Script": []
+  }
+}

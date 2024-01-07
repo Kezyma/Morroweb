@@ -1,0 +1,191 @@
+{
+  "668823785139426766": {
+    "Prev": "",
+    "Next": "327162818482521907",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "You have returned the Belt of Sanguine Impaling Thrust.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_S_Impaling",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "327162818482521907": {
+    "Prev": "668823785139426766",
+    "Next": "25977201352954931710",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "With this belt, you have returned all the Threads of the Webspinner to the Morag Tong. You will be blessed by Mephala's skill.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "ThreadsWebspinner",
+        "Value": 25.0
+      }
+    ],
+    "Script": [
+      "Journal MT_S_Impaling 100",
+      "Player->RemoveItem SanguineBeltImpaling 1",
+      "Player->AddSpell SkillMephala_SP",
+      "Set ThreadsWebspinner to ThreadsWebspinner + 1",
+      "ModPCFacRep 25 \"Morag Tong\"",
+      "ModDisposition 25"
+    ]
+  },
+  "25977201352954931710": {
+    "Prev": "327162818482521907",
+    "Next": "3098231183155554214",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "The Threads of the Webspinner return to us one by one.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MT_S_Impaling 100",
+      "Player->RemoveItem SanguineBeltImpaling 1",
+      "Set ThreadsWebspinner to ThreadsWebspinner + 1",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition 10"
+    ]
+  },
+  "3098231183155554214": {
+    "Prev": "25977201352954931710",
+    "Next": "244782590612424749",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "How can I trust you if you will not do this one simple favor in Mephala's dark name?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "244782590612424749": {
+    "Prev": "3098231183155554214",
+    "Next": "17464242211199125163",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "You have been expelled from the Morag Tong... But I see you have one of the Threads of the Webspinner. Will you return this Thread?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sanguinebeltimpaling",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is\" 1 \"No\" 2"
+    ]
+  },
+  "17464242211199125163": {
+    "Prev": "244782590612424749",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "You have in your possession the Belt of Sanguine Impaling Thrust, one of Mephala's Threads. Will you deliver the belt back to the service of the Morag Tong?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sanguinebeltimpaling",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is\" 1 \"No\" 2"
+    ]
+  }
+}

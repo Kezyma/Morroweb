@@ -1,0 +1,376 @@
+{
+  "317283189297553682": {
+    "Prev": "",
+    "Next": "29192195712933023503",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Synnolian Tunifus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Muck is a damp, fibrous slime from the muckspunge plant. It has cure common disease properties. Other common and easily obtained substances with the cure common disease property include chokeweed and green lichen. Oddly enough, gravedust also has this beneficial property.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC2_Muck",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "29192195712933023503": {
+    "Prev": "317283189297553682",
+    "Next": "402447319941534",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raven omayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Good. Here, take these hundred drakes for your trouble. I already have enough gravedust and green lichen to finish these potions of cure disease. It would be so much easier if everyone could cure themselves... You CAN do that, can't you?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "ingred_muck_01",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Journal HT_Muck 100",
+      "Player->RemoveItem Ingred_Muck_01 5",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 10",
+      "Choice \"Yes, of course.\" 3 \"No. Could you teach me?\" 4"
+    ]
+  },
+  "402447319941534": {
+    "Prev": "29192195712933023503",
+    "Next": "64082811816570276",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raven omayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Do not try my patience with lies and stories, %PCName. Bring me five portions of muck.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "64082811816570276": {
+    "Prev": "402447319941534",
+    "Next": "11014158491572615962",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raven omayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Then go get them.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "11014158491572615962": {
+    "Prev": "64082811816570276",
+    "Next": "1862229845255621758",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raven omayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. Perhaps you are not totally hopeless. If you do not want any more chores, go about your business.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "1862229845255621758": {
+    "Prev": "11014158491572615962",
+    "Next": "371718422364932397",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raven omayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, very well. [Raven instructs you in the spell.] There. Now if you do not wish for more chores, go about your business.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Player->AddSpell \"cure common disease\""
+    ]
+  },
+  "371718422364932397": {
+    "Prev": "1862229845255621758",
+    "Next": "4445103832368417351",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raven omayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "You already brought me five portions of muck.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_Muck",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "4445103832368417351": {
+    "Prev": "371718422364932397",
+    "Next": "31773183631688524119",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raven omayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Do you have the five portions of muck?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_Muck",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here they are.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "31773183631688524119": {
+    "Prev": "4445103832368417351",
+    "Next": "213420615857117002",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raven omayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Yes, I am looking for five portions of muck. Many alchemists sell it and you can gather it yourself from muckspunge. Once you have five portions of muck, bring them to me.",
+    "Filters": [],
+    "Script": [
+      "Journal HT_Muck 10"
+    ]
+  },
+  "213420615857117002": {
+    "Prev": "31773183631688524119",
+    "Next": "110973153244938996",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Sadrith Mora",
+    "PlayerFaction": "",
+    "Text": "You're looking for muck? Ask Anis Seloth here in town. Her shop is on the north side of town, next to Fara's Hole in the Wall.",
+    "Filters": [
+      {
+        "Type": "NotCell",
+        "Func": "NotCell",
+        "Compare": "Equal",
+        "Id": "Sadrith Mora, Anis Seloth: Alchemist",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_Muck",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HT_Muck",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "110973153244938996": {
+    "Prev": "213420615857117002",
+    "Next": "2204032282606613668",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Farmer",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You can find muck just about anywhere there are muckspunge pools. Muckspunge is kinda brown and grows taller and fatter than me. Believe me, you can't miss it.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2204032282606613668": {
+    "Prev": "110973153244938996",
+    "Next": "4571261492154128191",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tendris vedran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Muck is the damp, fibrous slime from crushed muckspunge plants that grow in the West Gash and on Azura's Coast. Unless properly prepared in the native manner, it is mildly toxic.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "4571261492154128191": {
+    "Prev": "2204032282606613668",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "anarenen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Muck is the damp, fibrous slime from crushed muckspunge plants that grow in the West Gash and on Azura's Coast. Unless properly prepared in the native manner, it is mildly toxic.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

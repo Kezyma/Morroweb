@@ -1,0 +1,74 @@
+{
+  "1245030434536711698": {
+    "Prev": "",
+    "Next": "311454704584212432",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Synnolian Tunifus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The mine is a short distance southwest of Balmora, in the bluffs west of the Odai River. The old suspension bridge across the Odai is just southeast of the mine entrance. A path leads through a break in the mountains from the Pelagiad-Balmora road, but the turnoff isn't marked. It may be easiest to go all the way to Balmora, then head south from the gate near the strider port, climb over the ridge, keeping the river on your left. Watch for the fire of the mining camp at the entrance.",
+    "Filters": [],
+    "Script": []
+  },
+  "311454704584212432": {
+    "Prev": "1245030434536711698",
+    "Next": "3009916962322256274",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I already told you how to get there. And I don't like repeating myself.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_Egg_Poachers",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "3009916962322256274": {
+    "Prev": "311454704584212432",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The mine is a short distance southwest of Balmora, in the bluffs west of the Odai River. The old suspension bridge across the Odai is just southeast of the mine entrance. Follow the river south of Balmora until you see the bridge overhead. You're not afraid of a little swim, are you?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "FG_Egg_Poachers",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal FG_Egg_Poachers 10"
+    ]
+  }
+}

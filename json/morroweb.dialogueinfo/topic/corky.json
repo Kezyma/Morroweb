@@ -1,0 +1,179 @@
+{
+  "2407225043312036645": {
+    "Prev": "",
+    "Next": "187951460920413072",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "llovyn andus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can't forgive someone who can just kill a guar like that.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "guar_llovyn_unique",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_RentCollector",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "187951460920413072": {
+    "Prev": "2407225043312036645",
+    "Next": "109725487887331732",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "llovyn andus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I call him that 'cause he likes to eat corkbulb.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_RentCollector",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "109725487887331732": {
+    "Prev": "187951460920413072",
+    "Next": "24861003013209710",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drulene falen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He's doing fine, %PCName.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "guar_llovyn_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "24861003013209710": {
+    "Prev": "109725487887331732",
+    "Next": "24613114336792985",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drulene falen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "All right. Here's your money. Come here, Corky!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem Gold_001 200",
+      "ModDisposition 10",
+      "\"guar_llovyn_unique\"->AiWander 1024 0 60 20 10 0 0 0 0 0 0",
+      "Set corkyFollow to 2"
+    ]
+  },
+  "24613114336792985": {
+    "Prev": "24861003013209710",
+    "Next": "3128027972622610355",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drulene falen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, if you change your mind, you know where to find me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "3128027972622610355": {
+    "Prev": "24613114336792985",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drulene falen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Corky, huh? He's too old to butcher, but he looks like he was a fine guar in his youth. I might could use him as a stud. Would you take 200 drakes for him?",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "corkyFollow",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "guar_llovyn_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, that's a fair price.\" 1 \"No, nevermind.\" 2"
+    ]
+  }
+}

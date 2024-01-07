@@ -1,0 +1,221 @@
+{
+  "619426221163612816": {
+    "Prev": "",
+    "Next": "4550251006961644",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "pemenie",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've offended me for the last time.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_TraderAbandoned",
+        "Value": 70.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "pemannoy",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "4550251006961644": {
+    "Prev": "619426221163612816",
+    "Next": "332611849223094322",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "pemenie",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's quite enough from you, %PCRace, I'll take my leave of you now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_TraderAbandoned",
+        "Value": 60.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "pemannoy",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_TraderAbandoned\" 70",
+      "ModDisposition -10",
+      "set pemannoy to 3",
+      "AiWander 0,0,0,60,30,10,0,0,0,0,0,0"
+    ]
+  },
+  "332611849223094322": {
+    "Prev": "4550251006961644",
+    "Next": "3234527739451724238",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "pemenie",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As I've told you, it must have been someone else they were thinking of. This conversation is quickly becoming tiresome.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "pemannoy",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_TraderAbandoned",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_TraderAbandoned\" 60",
+      "ModDisposition -10",
+      "set pemannoy to 2"
+    ]
+  },
+  "3234527739451724238": {
+    "Prev": "332611849223094322",
+    "Next": "312058211465427363",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "pemenie",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A bounty? On my head? Preposterous! It must be a case of mistaken identity. I can't imagine why anyone would want to arrest me. I've always been an honest trader.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_TraderAbandoned",
+        "Value": 40.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "pemannoy",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_TraderAbandoned\" 50",
+      "ModDisposition -10",
+      "set pemannoy to 1"
+    ]
+  },
+  "312058211465427363": {
+    "Prev": "3234527739451724238",
+    "Next": "31194280763126725939",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Caldera",
+    "PlayerFaction": "",
+    "Text": "There's a price on her head, though I don't know how much. People don't take kindly to being sold shoddy goods.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "pemenie",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal MV_TraderAbandoned 40"
+    ]
+  },
+  "31194280763126725939": {
+    "Prev": "312058211465427363",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Gnaar Mok",
+    "PlayerFaction": "",
+    "Text": "There's a price on her head, though I don't know how much. People don't take kindly to being sold shoddy goods.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "pemenie",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal MV_TraderAbandoned 40"
+    ]
+  }
+}

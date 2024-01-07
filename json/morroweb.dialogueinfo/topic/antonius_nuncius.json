@@ -1,0 +1,415 @@
+{
+  "41399997211571207": {
+    "Prev": "",
+    "Next": "3263298962334226403",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Antonius Nuncius is dead, and you believe he was involved with the morale being low? This is a tragedy. I can't have these things happening at my fort.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "antonius nuncius",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Morale",
+        "Value": 90.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "FoundBooze",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Morale 200"
+    ]
+  },
+  "3263298962334226403": {
+    "Prev": "41399997211571207",
+    "Next": "205643024825809391",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Antonius Nuncius is dead? This is terrible! I can't have these things happening under my command. Forget the search for the cause of the low morale. There are more important things to attend to, obviously.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "antonius nuncius",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Morale",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Morale 200"
+    ]
+  },
+  "205643024825809391": {
+    "Prev": "3263298962334226403",
+    "Next": "156928752302332071",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've spoken to Nuncius, have you not? One of our priests. I don't think he's happy to be stationed here, but such is his lot in life.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Morale",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "156928752302332071": {
+    "Prev": "205643024825809391",
+    "Next": "24676220132188027272",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sure I'll be able to find a great number of duties for Nuncius to perform. He'll be quite busy now. What was he thinking? Well...we'll whip him into shape.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Morale",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "24676220132188027272": {
+    "Prev": "156928752302332071",
+    "Next": "2962819762298454097",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you believe he is connected with this low morale here at the fort, find some proof. If you think you have proof, confront him. Let's see how he reacts to it.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "FoundBooze",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2962819762298454097": {
+    "Prev": "24676220132188027272",
+    "Next": "10793232013014732474",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He's one of our priests here. Not a bad one. Seems a bright enough fellow, if he would only apply himself a bit more.",
+    "Filters": [],
+    "Script": []
+  },
+  "10793232013014732474": {
+    "Prev": "2962819762298454097",
+    "Next": "572968142160912679",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "antonius nuncius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am Antonius Nuncius.",
+    "Filters": [],
+    "Script": []
+  },
+  "572968142160912679": {
+    "Prev": "10793232013014732474",
+    "Next": "3125208702376328995",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "I heard Nuncius is dead. That's not going to sit well with the officers.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "antonius nuncius",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "3125208702376328995": {
+    "Prev": "572968142160912679",
+    "Next": "7347102023202032633",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth, Armory",
+    "PlayerFaction": "",
+    "Text": "I've got nothing more to say about him. Go talk to him if you want. Or wait for him in his office--it's upstairs.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "7347102023202032633": {
+    "Prev": "3125208702376328995",
+    "Next": "1546783332767126382",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "I've got nothing more to say about him. Go talk to him if you want. Or wait for him in his office--it's in the Armory.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "1546783332767126382": {
+    "Prev": "7347102023202032633",
+    "Next": "153381104116595378",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth, Armory",
+    "PlayerFaction": "",
+    "Text": "The priest? He's not bad, I guess, for a priest. You'll find him at the Imperial Cult Shrine here at the fort, though he keeps an office upstairs here. Could be in either place. Seems to understand us soldiers pretty well. He was telling me just the other day how it seemed unfair that the Captain had cut us off from the drink. He figures that's one of our few pleasures on this dungheap of an island.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Morale",
+        "Value": 60.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Morale 60"
+    ]
+  },
+  "153381104116595378": {
+    "Prev": "1546783332767126382",
+    "Next": "1328825032579711216",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth, Imperial Cult Shrine",
+    "PlayerFaction": "",
+    "Text": "The priest? He's not bad, I guess, for a priest. You'll find him here in the Imperial Cult Shrine here at the fort, though he keeps an office upstairs from the Armory. Seems to understand us soldiers pretty well. He was telling me just the other day how it seemed unfair that the Captain had cut us off from the drink. He figures that's one of our few pleasures on this dungheap of an island.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Morale",
+        "Value": 60.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Morale 60"
+    ]
+  },
+  "1328825032579711216": {
+    "Prev": "153381104116595378",
+    "Next": "47035141501612270",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "The priest? He's not bad, I guess, for a priest. You'll find him at the Imperial Cult Shrine here at the fort, though he keeps an office upstairs from the Armory. Could be in either place. Seems to understand us soldiers pretty well. He was telling me just the other day how it seemed unfair that the Captain had cut us off from the drink. He figures that's one of our few pleasures on this dungheap of an island.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Morale",
+        "Value": 60.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Morale 60"
+    ]
+  },
+  "47035141501612270": {
+    "Prev": "1328825032579711216",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Solstheim",
+    "PlayerFaction": "",
+    "Text": "Antonius WHOcius? Never heard of him.",
+    "Filters": [],
+    "Script": []
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "21375104401520320939": {
+    "Prev": "",
+    "Next": "1510463241152012269",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Regretably, you broke the rules of the Fighters Guild and you have been expelled. First clear your name, and then I can speak with you about this again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1510463241152012269": {
+    "Prev": "21375104401520320939",
+    "Next": "22856209292233315718",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sure the Nord sailors that travel along the north coast of Vvardenfell are grateful to you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_BeneranBounty",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "22856209292233315718": {
+    "Prev": "1510463241152012269",
+    "Next": "29089101551222532221",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You might want to ask around Maar Gan. I've heard this outlaw refuge is on an island and well-hidden.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "FG_BeneranBounty",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "29089101551222532221": {
+    "Prev": "22856209292233315718",
+    "Next": "24441161152667522631",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Scout",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Maar Gan",
+    "PlayerFaction": "",
+    "Text": "It's almost due north of here, but you'll need a way get across the sea. It's on an island, and it's a long walk with a long swim after it. You know where Vas is? Well, it's a bit southwest of there. Like I said, it's a long way to go. I suppose you could travel west from Dagon Fel, but it's a long trip from there as well.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "FG_BeneranBounty",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal FG_BeneranBounty 50",
+      "ShowMap Vas"
+    ]
+  },
+  "24441161152667522631": {
+    "Prev": "29089101551222532221",
+    "Next": "1162966682928225468",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Maar Gan",
+    "PlayerFaction": "",
+    "Text": "Can't think of why you'd want to go to that place. I'm not sure where it is, but check with Bugdurash gra-Gashel or Nuleno Tedas. They both know the land around here well. Check for them at the outpost, or maybe at the tradehouse.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "FG_BeneranBounty",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1162966682928225468": {
+    "Prev": "24441161152667522631",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Maar Gan",
+    "PlayerFaction": "",
+    "Text": "Why would you want to go there? Well, it's your business.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "FG_BeneranBounty",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "973130202787116653": {
+    "Prev": "",
+    "Next": "27159167713090320511",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled, but maybe you can join the Imperial Legion again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "27159167713090320511": {
+    "Prev": "973130202787116653",
+    "Next": "1868846411179214852",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled from the Legions, %PCName. You need to make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1868846411179214852": {
+    "Prev": "27159167713090320511",
+    "Next": "74418434463915089",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Joncis is dead? That is unfortunate. He was not the best of us, but he was kind and honest.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "joncis dalomax",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "IL_RescueKnight",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal IL_RescueKnight 200"
+    ]
+  },
+  "74418434463915089": {
+    "Prev": "1868846411179214852",
+    "Next": "23465184211118414331",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I told you to rescue him, not kill him. This is inexcusable. Joncis would never murder a fellow Knight. I will see that you are expelled for this.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "joncis dalomax",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -25",
+      "PCExpell \"Imperial Legion\""
+    ]
+  },
+  "23465184211118414331": {
+    "Prev": "74418434463915089",
+    "Next": "18031287202092918345",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am glad you rescued him.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescueKnight",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "18031287202092918345": {
+    "Prev": "23465184211118414331",
+    "Next": "28455296191979011517",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am glad to hear that Joncis is safe. You have my gratitude, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescueKnight",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal IL_RescueKnight 100",
+      "ModPCFacRep 5 \"Imperial Legion\"",
+      "ModDisposition 15",
+      "\"joncis dalomax\"->disable"
+    ]
+  },
+  "28455296191979011517": {
+    "Prev": "18031287202092918345",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Joncis is being held in Ashurnibibi, a Daedric Ruin on an island northwest of Hla Oad. We cannot afford the ransom. Go there and rescue Joncis Dalomax if he still lives.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Smuggler",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal IL_RescueKnight 10"
+    ]
+  }
+}

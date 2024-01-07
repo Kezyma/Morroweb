@@ -1,0 +1,39 @@
+{
+  "8821218292437615716": {
+    "Prev": "",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "J'zhirr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah, he sent you with his delivery, did he? It is good you have brought it to J'Zhirr. Here, take this back to him. He will be expecting it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_Express",
+        "Value": 20.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_letterfromllaalam",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Express\" 40",
+      "Player->RemoveItem \"bk_letterfromllaalam\" 1",
+      "Player->AddItem \"bk_letterfromjzhirr\" 1"
+    ]
+  }
+}

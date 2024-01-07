@@ -1,0 +1,160 @@
+{
+  "875027284251271012": {
+    "Prev": "",
+    "Next": "237664615184822521",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinnammu mirpal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ahemmusa Camp",
+    "PlayerFaction": "",
+    "Text": "I have named you Ahemmusa Nerevarine, War Leader of the Ahemmusa, and Protector of the People. You have saved the Ahemmusa. Now we hope that you shall also fulfill the other Nerevarine prophecies.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B2_AhemmusaSafe",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "237664615184822521": {
+    "Prev": "875027284251271012",
+    "Next": "212441521742418353",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinnammu mirpal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have named you Ahemmusa Nerevarine, War Leader of the Ahemmusa, and Protector of the People. You have saved the Ahemmusa. Now we hope that you shall also fulfill the other Nerevarine prophecies. I can stay only briefly. Soon I must return to Ahemmusa camp and make preparations to relocate here.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B2_AhemmusaSafe",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "212441521742418353": {
+    "Prev": "237664615184822521",
+    "Next": "24256244912999028668",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinnammu mirpal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have made this place safe for the Ahemmusa. And so I name you Ahemmusa Nerevarine, War Leader of the Ahemmusa, and Protector of the People. I also give you the Madstone of the Ahemmusa, which shall be a sign to all Dunmer, that you are the Nerevarine, and that the Ahemmusa shall follow you, in all things, even unto death, until the Enemy is defeated, or until you are dead. Now, I can stay only briefly. Soon I must return to Ahemmusa camp and make preparations to relocate here.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B2_AhemmusaSafe",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Journal \"B2_AhemmusaSafe\" 50",
+      "AiWander 512 6 0 40 30 20 0 0 0 0 0 0",
+      "Player->AddItem \"Madstone\" 1",
+      "Player->ModReputation 1",
+      "modDisposition 10",
+      "StartScript MoveSinnammu"
+    ]
+  },
+  "24256244912999028668": {
+    "Prev": "212441521742418353",
+    "Next": "2540886782558121314",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "han-ammu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. You are Erabenimsun Nerevarine, Champion of the Erabenimsun, and Protector of the People, and so shall you be known to all the Ashlander tribes.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B4_KillWarLovers",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2540886782558121314": {
+    "Prev": "24256244912999028668",
+    "Next": "14191307252088611793",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "han-ammu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you, %PCName. I promise that, as ashkhan, I shall do my best to amend the dark reputation of the Erabenimsun. And as my first action as chief, I now name you Erabenimsun Nerevarine, Champion of the Erabenimsun, and Protector of the People. You must also go to wise woman Manirai and get from her the Seizing of the Erabenimsun, an enchanted heirloom of the tribe, which shall be a sign to all Dunmer that the Erabenimsun have named you Nerevarine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B4_KillWarLovers",
+        "Value": 35.0
+      }
+    ],
+    "Script": [
+      "Journal \"B4_KillWarLovers\" 50",
+      "Player->ModReputation 1"
+    ]
+  },
+  "14191307252088611793": {
+    "Prev": "2540886782558121314",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "han-ammu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am not the ashkhan. I cannot name you Nerevarine.",
+    "Filters": [],
+    "Script": []
+  }
+}

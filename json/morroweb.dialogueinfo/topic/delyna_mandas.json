@@ -1,0 +1,466 @@
+{
+  "2878968682501318113": {
+    "Prev": "",
+    "Next": "1917030057390231850",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arethan mandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, my daughter is safe. She's safe. I can think in better categories now. My guards will trouble you no more. Nor the travelers. I await a visitor. My daughter, Delyna, or my old friend, Athyn. I feel I will feel better soon.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_MadMilk",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "1917030057390231850": {
+    "Prev": "2878968682501318113",
+    "Next": "2617422643006531683",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arethan mandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "She's... safe. Safe. So safe. I must be there for her. I must. Thank you, %PCName. I will stop now. The attacks on the road. I knew it was wrong. But what could I do? My guards are loyal. Always looking out for me. Tell Athyn to visit.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HR_MadMilk 70",
+      "Player->RemoveItem \"expensive_amulet_delyna\" 1",
+      "AddItem \"expensive_amulet_delyna\" 1",
+      "Player->ModReputation 1"
+    ]
+  },
+  "2617422643006531683": {
+    "Prev": "1917030057390231850",
+    "Next": "1864929507199005132",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arethan mandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No, no, no. Not the pickles. Death's sickles. Tickles. Get out of my head, father.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "1864929507199005132": {
+    "Prev": "2617422643006531683",
+    "Next": "302991885596712703",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arethan mandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My daughter. Where is she? Her locket... is it? Is she? No! Must know! Can't bear to know!",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "expensive_amulet_delyna",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Your daughter is safe. Take her locket.\" 1 \"Can you hear me? Are you okay?\" 2"
+    ]
+  },
+  "302991885596712703": {
+    "Prev": "1864929507199005132",
+    "Next": "25900326722995530162",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is a shame that you had to kill Arethan Mandas, but at least Delyna is now safe.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "arethan mandas",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_RansomMandas",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "25900326722995530162": {
+    "Prev": "302991885596712703",
+    "Next": "27576198782418328001",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It was very kind of you to help Arethan Mandas by rescuing his daughter. Make sure you tell Llerar Mandas that his granddaughter is safe.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_MadMilk",
+        "Value": 90.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_RansomMandas",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "27576198782418328001": {
+    "Prev": "25900326722995530162",
+    "Next": "13996301827311915",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You rescued Delyna Mandas? Good. I hope this will help cure Arethan Mandas of his madness. Make sure you tell Llerar Mandas that his granddaughter is safe.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_RansomMandas",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "13996301827311915": {
+    "Prev": "27576198782418328001",
+    "Next": "13334219871584721598",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go speak with Llerar Mandas in the Grand Council Chambers in Ebonheart.. He can tell you more.",
+    "Filters": [],
+    "Script": []
+  },
+  "13334219871584721598": {
+    "Prev": "13996301827311915",
+    "Next": "9981111993088415742",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "llerar mandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard that Delyna was dead. I don't know if you did it or if that bastard in Tel Fyr did it. Either way, you'll get no help from me.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "delyna mandas",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "9981111993088415742": {
+    "Prev": "13334219871584721598",
+    "Next": "7893194543109516498",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "llerar mandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My granddaughter is safe for now, but I fear she will be in trouble again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_RansomMandas",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "7893194543109516498": {
+    "Prev": "9981111993088415742",
+    "Next": "104022639463003691",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "llerar mandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have rescued my granddaughter, and I am grateful. Please take this helm from all the Mandas family. Know that you have earned an ally in House Redoran.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_RansomMandas",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal HR_RansomMandas 100",
+      "ModDisposition 30",
+      "ModPCFacRep 5 \"Redoran\"",
+      "Player->AddItem Ebony_Closed_Helm 1"
+    ]
+  },
+  "104022639463003691": {
+    "Prev": "7893194543109516498",
+    "Next": "1994312694300195424",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "llerar mandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "She is being held captive in Tel Fyr. I do not want to lose another grandchild to the Telvanni. Please bring her back to me.",
+    "Filters": [],
+    "Script": [
+      "Journal HR_RansomMandas 20"
+    ]
+  },
+  "1994312694300195424": {
+    "Prev": "104022639463003691",
+    "Next": "581223212110921551",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "divayth fyr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So you managed to set her free? Why tell me about it?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_RansomMandas",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "581223212110921551": {
+    "Prev": "1994312694300195424",
+    "Next": "4488148011724013218",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "divayth fyr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So you found her? I will not interfere with your escape, but if she returns to my tower, I will not be held responsible.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_RansomMandas",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "4488148011724013218": {
+    "Prev": "581223212110921551",
+    "Next": "14033111333047916626",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "divayth fyr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Delyna Mandas? I do not recall her name. Many people try to steal from my tower or spy on me or enter the Corprusarium. I cannot be expected to keep track of them all. If you want to look for her, go right ahead.",
+    "Filters": [],
+    "Script": [
+      "Journal HR_RansomMandas 30"
+    ]
+  },
+  "14033111333047916626": {
+    "Prev": "4488148011724013218",
+    "Next": "211041870785954169",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Tower of Tel Fyr, Onyx Hall",
+    "PlayerFaction": "",
+    "Text": "You will need to speak with Divayth Fyr about her.",
+    "Filters": [
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "delyna mandas",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HR_RansomMandas",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "211041870785954169": {
+    "Prev": "14033111333047916626",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Tower of Tel Fyr, Hall of Fyr",
+    "PlayerFaction": "",
+    "Text": "You will need to speak with Divayth Fyr about her.",
+    "Filters": [
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "delyna mandas",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HR_RansomMandas",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "2188411447268774056": {
+    "Prev": "",
+    "Next": "32759257106118391",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "assantushansar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have cured me, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_MinistryHeathen",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "32759257106118391": {
+    "Prev": "2188411447268774056",
+    "Next": "786781362014924543",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "assantushansar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then go away.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "786781362014924543": {
+    "Prev": "32759257106118391",
+    "Next": "266388080399910889",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "assantushansar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you a potion or will you cure me with a spell?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Choice \"I shall use a spell.\", 3, \"I offer you this potion.\", 4"
+    ]
+  },
+  "266388080399910889": {
+    "Prev": "786781362014924543",
+    "Next": "3222975013028217360",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "assantushansar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go ahead.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "3222975013028217360": {
+    "Prev": "266388080399910889",
+    "Next": "93317260727926727",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "assantushansar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thanks. <drinks>",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "p_cure_common_s",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem \"p_cure_common_s\" 1",
+      "RemoveSpell \"droops\"",
+      "Moddisposition 20",
+      "Goodbye"
+    ]
+  },
+  "93317260727926727": {
+    "Prev": "3222975013028217360",
+    "Next": "703250352059519093",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "assantushansar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What potion? You are mocking me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "ModFight 10",
+      "Goodbye"
+    ]
+  },
+  "703250352059519093": {
+    "Prev": "93317260727926727",
+    "Next": "177318650666414432",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "assantushansar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, but I am outcast. The Wise Women will not cure me.",
+    "Filters": [],
+    "Script": [
+      "Choice \"Not my problem.\", 1, \"May I try to cure you?\", 2"
+    ]
+  },
+  "177318650666414432": {
+    "Prev": "703250352059519093",
+    "Next": "14648475210684080",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "maela kaushad",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Droops is a serious common disease that affects a victim's strength. Symptoms include weak and flaccid muscle tissues. It may be contracted from all forms and stages of kwama.",
+    "Filters": [],
+    "Script": []
+  },
+  "14648475210684080": {
+    "Prev": "177318650666414432",
+    "Next": "2582821838293230459",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "artisa arelas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Droops is a serious common disease that affects a victim's strength. Symptoms include weak and flaccid muscle tissues. It may be contracted from all forms and stages of kwama.",
+    "Filters": [],
+    "Script": []
+  },
+  "2582821838293230459": {
+    "Prev": "14648475210684080",
+    "Next": "5228245061319112791",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tendris vedran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Droops is a serious common disease that affects a victim's strength. Symptoms include weak and flaccid muscle tissues. It may be contracted from all forms and stages of kwama.",
+    "Filters": [],
+    "Script": []
+  },
+  "5228245061319112791": {
+    "Prev": "2582821838293230459",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ygfa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Droops is a serious common disease that affects a victim's strength. Symptoms include weak and flaccid muscle tissues. It may be contracted from all forms and stages of kwama.",
+    "Filters": [],
+    "Script": []
+  }
+}

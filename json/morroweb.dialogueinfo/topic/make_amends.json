@@ -1,0 +1,1306 @@
+{
+  "19987832851214774": {
+    "Prev": "",
+    "Next": "32516213342529012875",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No, you have shown that you have no honor at all.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpThievesGuild",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "32516213342529012875": {
+    "Prev": "19987832851214774",
+    "Next": "1934296102242532319",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Alright, but you've been warned before, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpThievesGuild",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem Gold_001 10000",
+      "PCClearExpelled",
+      "Set ExpThievesGuild to ExpThievesGuild + 1"
+    ]
+  },
+  "1934296102242532319": {
+    "Prev": "32516213342529012875",
+    "Next": "231882382698622131",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Okay, now we're on the level. You've been warned before. Don't attack a brother thief. Don't steal from members of the Guild. There's plenty of marks out there to steal from.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpThievesGuild",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem Gold_001 5000",
+      "PCClearExpelled",
+      "Set ExpThievesGuild to ExpThievesGuild + 1"
+    ]
+  },
+  "231882382698622131": {
+    "Prev": "1934296102242532319",
+    "Next": "13558325493119217288",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Okay, now we're on the level. Be more careful about who you're dealing with from now on.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem Gold_001 1000",
+      "PCClearExpelled",
+      "Set ExpThievesGuild to ExpThievesGuild + 1"
+    ]
+  },
+  "13558325493119217288": {
+    "Prev": "231882382698622131",
+    "Next": "21319213902505423217",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Come back when you are ready to pay.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "21319213902505423217": {
+    "Prev": "13558325493119217288",
+    "Next": "15582267831029918182",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have broken the honor among thieves. You've shown nothing but disrespect for the Thieves Guild, so it is not surprising that you come here with less than 10,000 septims. Come back when you're serious.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "Gold_001",
+        "Value": 10000.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpThievesGuild",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "15582267831029918182": {
+    "Prev": "21319213902505423217",
+    "Next": "3805109504882185",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have broken the honor among thieves. Are you sure you really want to be in the Thieves Guild? For this many offenses, you must pay 10,000 septims to make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpThievesGuild",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Choice \"Pay it\" 1 \"Nevermind\" 2"
+    ]
+  },
+  "3805109504882185": {
+    "Prev": "15582267831029918182",
+    "Next": "2547910443323663622",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have broken the honor among thieves again. And you don't have enough gold to make amends. Come back with at least 5000 septims and we'll talk.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "Gold_001",
+        "Value": 5000.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpThievesGuild",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2547910443323663622": {
+    "Prev": "3805109504882185",
+    "Next": "6033183602306931632",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have broken the honor among thieves. You don't seem to learn your lesson. You must pay 5000 septims to make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpThievesGuild",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Pay it\" 1 \"Nevermind\" 2"
+    ]
+  },
+  "6033183602306931632": {
+    "Prev": "2547910443323663622",
+    "Next": "25008450318337230",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have broken the honor among thieves. You must make amends, but you are not prepared. Come back with at least 1000 septims and we'll talk.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "Gold_001",
+        "Value": 1000.0
+      }
+    ],
+    "Script": []
+  },
+  "25008450318337230": {
+    "Prev": "6033183602306931632",
+    "Next": "271324816566017278",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have broken the honor among thieves. You must make amends. As this was your first offense, you must pay 1000 septims for crimes against your fellow thieves.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Pay it\" 1 \"Nevermind\" 2"
+    ]
+  },
+  "271324816566017278": {
+    "Prev": "25008450318337230",
+    "Next": "927732543108374428",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You should speak with one of the Stewards: Sugar-Lips Habasi, Aengoth the Jeweler, Big Helende, or Gentleman Jim Stacey.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "927732543108374428": {
+    "Prev": "271324816566017278",
+    "Next": "2041273931338914783",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will personally revoke the writ. You are reinstated in the %Faction as %PCName, the %PCRank. I do not need to remind you the consequences of failing a second time.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "PCClearExpelled",
+      "Set ExpMoragTong to 1"
+    ]
+  },
+  "2041273931338914783": {
+    "Prev": "927732543108374428",
+    "Next": "137014233828513376",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You were unwise to have contacted me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "moddisposition -50",
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "137014233828513376": {
+    "Prev": "2041273931338914783",
+    "Next": "103529874438814500",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Your actions of late have not gone unnoticed. There is currently a writ against you. I can have it rescinded, but I must have your word that this was an isolated incident and nothing of the sort will ever happen again. Do I have your word?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, Master. You have my word.\" 1 \"No.\" 2"
+    ]
+  },
+  "103529874438814500": {
+    "Prev": "137014233828513376",
+    "Next": "80805255194823102",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You should speak with one of the Masters of the Morag Tong. They may allow you to clear your name.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "80805255194823102": {
+    "Prev": "103529874438814500",
+    "Next": "22733183511497630614",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, any day now the Mages Guild will review all those expelled from the ranks. If your case comes up, I will put in a good word for you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "22733183511497630614": {
+    "Prev": "80805255194823102",
+    "Next": "3104294602319818203",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It has been a few days since your unfortunate behavior began. But I still believe you will soon be a member in good standing once more. Perhaps in another week.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "3104294602319818203": {
+    "Prev": "22733183511497630614",
+    "Next": "27343371632434578",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, of course, %PCName. We value your membership as much as any %PCRank. Reflect on your failures. Time heals all things. In a week or two you will be a %PCRank in good standing. I am certain of it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "27343371632434578": {
+    "Prev": "3104294602319818203",
+    "Next": "295059502199987659",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, yes, there was some trouble with you and a member of the Guild... You might want to speak with Archmage Trebonius in Vivec.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "295059502199987659": {
+    "Prev": "27343371632434578",
+    "Next": "1663413204985113408",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well. I will use this gold to patch up your reputation, %PCName. You are now a member of House Hlaalu in good standing.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem Gold_001 500",
+      "PCClearExpelled"
+    ]
+  },
+  "1663413204985113408": {
+    "Prev": "295059502199987659",
+    "Next": "8062202352124210914",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you take me for a fool? You don't have 500 gold.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "8062202352124210914": {
+    "Prev": "1663413204985113408",
+    "Next": "407127062734219045",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll be here when you change your mind.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "407127062734219045": {
+    "Prev": "8062202352124210914",
+    "Next": "3242232213108514040",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, you've been expelled. I might could have you reinstated for a small consideration... Say 500 gold?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Pay 500 gold.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "3242232213108514040": {
+    "Prev": "407127062734219045",
+    "Next": "217853089931466267",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Uncle Crassius will take care of everything. You're back in good standing.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem Gold_001 500",
+      "PCClearExpelled"
+    ]
+  },
+  "217853089931466267": {
+    "Prev": "3242232213108514040",
+    "Next": "109151125391286498",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You know I'd love to, but you just don't have 500 gold. I wish I could give you a discount, but there's nothing I can do.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "109151125391286498": {
+    "Prev": "217853089931466267",
+    "Next": "11998138891212818356",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Let me know if you change your mind, pudding.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "11998138891212818356": {
+    "Prev": "109151125391286498",
+    "Next": "1771225051122512165",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, you've been expelled, sweetie, but a small consideration of 500 gold will make everything all better.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Pay 500 gold.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "1771225051122512165": {
+    "Prev": "11998138891212818356",
+    "Next": "3259423527185311303",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Hlaalu",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Speak with Crassius Curio or Nileno Dorvayn. They have enough influence to clear your name.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "3259423527185311303": {
+    "Prev": "1771225051122512165",
+    "Next": "657519974970431696",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have broken our rules. What makes you think anyone can trust you?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ExpRedoran",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "657519974970431696": {
+    "Prev": "3259423527185311303",
+    "Next": "1809225353236338266",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You broke our rules, but this is forgivable. Once. If you break our rules again, even my influence will not allow you to regain your rank in House Redoran.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "PCClearExpelled",
+      "Set ExpRedoran to 1"
+    ]
+  },
+  "1809225353236338266": {
+    "Prev": "657519974970431696",
+    "Next": "75531922138218073",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have broken our rules. Nothing you say or do will let you join House Redoran again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ExpRedoran",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "75531922138218073": {
+    "Prev": "1809225353236338266",
+    "Next": "2948626824892725700",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, you have broken the rules of House Redoran. I will forgive this one time, but if you break our rules again, you will be an enemy of House Redoran.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "PCClearExpelled",
+      "Set ExpRedoran to 1"
+    ]
+  },
+  "2948626824892725700": {
+    "Prev": "75531922138218073",
+    "Next": "32497265161072522680",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Redoran",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Speak with Neminda or Athyn Sarethi. They can clear your name.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "32497265161072522680": {
+    "Prev": "2948626824892725700",
+    "Next": "31357159722355624329",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Of course, I understand. No need to explain, %PCRank. You will be reinstated in House Telvanni at your current rank.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "therana",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "PCClearExpelled"
+    ]
+  },
+  "31357159722355624329": {
+    "Prev": "32497265161072522680",
+    "Next": "191153171265434993",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Speak with a Mouth or one of the Councilors.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "therana",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "191153171265434993": {
+    "Prev": "31357159722355624329",
+    "Next": "2478234083220022543",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have broken our rules twice. How can we trust you? No, you may not make amends, %PCName. You are not of the fellowship.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ExpTemple",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2478234083220022543": {
+    "Prev": "191153171265434993",
+    "Next": "1192018350245643829",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Temple welcomes everyone into its fellowship, but not all are able to complete their journey. You broke our rules, but you have great potential, and I will forgive you this once offense. But nothing like this must ever occur again. If it does, the Temple will have no use for your potential.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "PCClearExpelled",
+      "Set ExpTemple to 1"
+    ]
+  },
+  "1192018350245643829": {
+    "Prev": "2478234083220022543",
+    "Next": "21952133663269727933",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You must speak with a Master of the Temple to clear your name.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "21952133663269727933": {
+    "Prev": "1192018350245643829",
+    "Next": "169214992578629842",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 6,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Fighters Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Alright. You'll have your old rank in the Fighters Guild in just a moment... But if you screw up again, there's nothing I can do for you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "PCClearExpelled",
+      "Set ExpFightersGuild to 1"
+    ]
+  },
+  "169214992578629842": {
+    "Prev": "21952133663269727933",
+    "Next": "17796307692827726707",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 6,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Fighters Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Fine, then. We don't need any %PCRace like you in the Fighters Guild.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5",
+      "Goodbye"
+    ]
+  },
+  "17796307692827726707": {
+    "Prev": "169214992578629842",
+    "Next": "1102299932260711640",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 6,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Fighters Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What? You screwed up twice, %PCName. It's too late to make amends now. Get out of my sight or you'll be sorry.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ExpFightersGuild",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "1102299932260711640": {
+    "Prev": "17796307692827726707",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 6,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Fighters Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's right. You've been expelled. If you apologize for your actions, I'll give you one more chance.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"I am sorry for what I did...\" 1 \"Nevermind.\" 2"
+    ]
+  }
+}

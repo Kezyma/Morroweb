@@ -1,0 +1,482 @@
+{
+  "216758011210416924": {
+    "Prev": "",
+    "Next": "87013918158985279",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "saprius entius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Speaking.",
+    "Filters": [],
+    "Script": []
+  },
+  "87013918158985279": {
+    "Prev": "216758011210416924",
+    "Next": "7765101289506544",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled, but maybe you can join the Imperial Legion again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "7765101289506544": {
+    "Prev": "87013918158985279",
+    "Next": "150358888333516568",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You murdered Saprius Entius, %PCName. I haven't forgotten that.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "saprius entius",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_ProtectEntius",
+        "Value": 200.0
+      }
+    ],
+    "Script": []
+  },
+  "150358888333516568": {
+    "Prev": "7765101289506544",
+    "Next": "34958201576927545",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Saprius Entius was a murderer, true. But you cannot just take justice in your own hands. I have no choice but to expel you from the Legions.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "saprius entius",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_ProtectEntius",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal IL_ProtectEntius 200",
+      "PCExpell \"Imperial Legion\""
+    ]
+  },
+  "34958201576927545": {
+    "Prev": "150358888333516568",
+    "Next": "20815453503610801",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sorry to hear about that, %PCName. I ordered you to bring me Saprius Entius alive, and you've failed me.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "saprius entius",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "20815453503610801": {
+    "Prev": "34958201576927545",
+    "Next": "26284166342149728175",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I got him out of Vivec. He will stand trial in Cyrodiil, but I have not heard any more word about his case. I'm not surprised with all the unrest in Cyrodiil City.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "daysPassed",
+        "Value": 5.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_ProtectEntius",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "26284166342149728175": {
+    "Prev": "20815453503610801",
+    "Next": "5304159542364922173",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He's safe for now. In a few days he'll be on his way to Cyrodiil.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_ProtectEntius",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "5304159542364922173": {
+    "Prev": "26284166342149728175",
+    "Next": "32720690111676953",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm glad you both got here safely. I'll find a way to get him out of the city. This helm was my father's when he served in the Legions. He had it enchanted and gave it to me. Now I'm giving it to you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_ProtectEntius",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal IL_ProtectEntius 100",
+      "Player->AddItem Imperial_Helm_Frald_uniq 1",
+      "ModPCFacRep 5 \"Imperial Legion\"",
+      "ModDisposition 10",
+      "StartScript FraldCounter"
+    ]
+  },
+  "32720690111676953": {
+    "Prev": "5304159542364922173",
+    "Next": "370620822444110286",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Saprius Entius is hiding someone in Vivec. Find him and bring him here. We protect our own, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_ProtectEntius",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "370620822444110286": {
+    "Prev": "32720690111676953",
+    "Next": "267079422751512202",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He is a fellow Knight of the Order of Ebonheart. Alas, he is also a murderer. I know a way to get him to the mainland where he will be tried with Imperial justice. The Ordinators are too prejudiced to give him a fair trial. I believe he is hiding somewhere in Vivec City. Find him before the Ordinators do and bring him back to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_FalseOrdinator",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal IL_ProtectEntius 10",
+      "\"Saprius Entius\"->Enable"
+    ]
+  },
+  "267079422751512202": {
+    "Prev": "370620822444110286",
+    "Next": "35701927369659900",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "Vivec, Arena",
+    "PlayerFaction": "",
+    "Text": "We're looking for him as well. I don't think I like your line of questioning.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_ProtectEntius",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IL_ProtectEntius",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "moddisposition -5"
+    ]
+  },
+  "35701927369659900": {
+    "Prev": "267079422751512202",
+    "Next": "2015010130224906519",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Khajiit",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec",
+    "PlayerFaction": "",
+    "Text": "%Name saw such a man near the Arena. %Name does not know where he hides now.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_ProtectEntius",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IL_ProtectEntius",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2015010130224906519": {
+    "Prev": "35701927369659900",
+    "Next": "1644410936113497819",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec, Arena",
+    "PlayerFaction": "",
+    "Text": "I heard someone in the Legions was hiding in one of the storerooms on the Canal level.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_ProtectEntius",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IL_ProtectEntius",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1644410936113497819": {
+    "Prev": "2015010130224906519",
+    "Next": "138487712899320581",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec, Arena",
+    "PlayerFaction": "",
+    "Text": "There were some Ordinators here asking the same question. I'll tell you what I told them: I don't know anything about it. That's all I'm saying. For now.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_ProtectEntius",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IL_ProtectEntius",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "138487712899320581": {
+    "Prev": "1644410936113497819",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec",
+    "PlayerFaction": "",
+    "Text": "I did see one of your kind over by the Arena.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_ProtectEntius",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IL_ProtectEntius",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  }
+}

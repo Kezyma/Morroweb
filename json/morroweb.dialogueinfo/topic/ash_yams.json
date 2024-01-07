@@ -1,0 +1,200 @@
+{
+  "1648513801401415620": {
+    "Prev": "",
+    "Next": "20678115821225727170",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "therana",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No thank you. I already have some.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_AurielBow",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "20678115821225727170": {
+    "Prev": "1648513801401415620",
+    "Next": "14190191401857128286",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "therana",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here, take these old things and leave me alone.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HT_AurielBow 100",
+      "Player->RemoveItem ebony_bow_auriel 1",
+      "AddItem ebony_bow_auriel 1",
+      "Player->AddItem Daedric_Cuirass_HTAB 1",
+      "Player->AddItem Daedric_Greaves_HTAB 1",
+      "Goodbye"
+    ]
+  },
+  "14190191401857128286": {
+    "Prev": "20678115821225727170",
+    "Next": "17970190830628951",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "therana",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Let's pretend I paid you to go away. Here, take this sack of drakes and take that horrible stench with you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem ebony_bow_auriel 1",
+      "AddItem ebony_bow_auriel 1",
+      "Player->AddItem Gold_001 11111",
+      "Journal HT_AurielBow 100",
+      "Goodbye"
+    ]
+  },
+  "17970190830628951": {
+    "Prev": "14190191401857128286",
+    "Next": "29925260163065619395",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "therana",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, dear. This bow smells like ash yams. This isn't any good to me at all. I hate ash yams. If I gave you a little present would you go away and promise never to bring me any ash yams ever again?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes.\" 1 \"No.\" 2"
+    ]
+  },
+  "29925260163065619395": {
+    "Prev": "17970190830628951",
+    "Next": "2480723834968212158",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "therana",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then I will have to clear out that horrible ash yam smell myself.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "StartCombat Player",
+      "SetDisposition 0",
+      "Goodbye"
+    ]
+  },
+  "2480723834968212158": {
+    "Prev": "29925260163065619395",
+    "Next": "169215412511425645",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "therana",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I *smell* ash yams but I don't *see* ash yams. Are you lying to me?! I don't like people who lie to me... But if you give me the bow, I might let you go.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "ebony_bow_auriel",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give her Auriel's bow.\" 3 \"Keep Auriel's bow.\" 4"
+    ]
+  },
+  "169215412511425645": {
+    "Prev": "2480723834968212158",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "therana",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ash yams have the strongest smell in Ghostgate near Ralyn Othravel.",
+    "Filters": [],
+    "Script": [
+      "Journal HT_AurielBow 10"
+    ]
+  }
+}

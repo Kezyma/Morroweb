@@ -1,0 +1,203 @@
+{
+  "7420184962950923882": {
+    "Prev": "",
+    "Next": "1991218937946728143",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "avon oran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "You brought the bandits to justice, and for that I am grateful.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_SuranBandits",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1991218937946728143": {
+    "Prev": "7420184962950923882",
+    "Next": "3025810739246149279",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "avon oran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "You have brought justice to Daldur Sarys and his bandits. House Hlaalu thanks you, %PCName. Here is the bounty money we agreed on.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "daldur sarys",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_SuranBandits 100",
+      "ModPCFacRep 5 \"Fighters Guild\"",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 20",
+      "Player->AddItem Gold_001 1000"
+    ]
+  },
+  "3025810739246149279": {
+    "Prev": "1991218937946728143",
+    "Next": "3002462667846489",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "avon oran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "The bandits have been attacking from Saturan which is northeast of here, just over the mountains. Kill Daldur Sarys and the raids will end. When you have killed him, report directly to me, and I will give you 1,000 gold in bounty.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_BeneranBounty",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal FG_SuranBandits 30"
+    ]
+  },
+  "3002462667846489": {
+    "Prev": "3025810739246149279",
+    "Next": "1322216635833813904",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Regretably, you broke the rules of the Fighters Guild and you have been expelled. First make amends, and then I can speak with you about this again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1322216635833813904": {
+    "Prev": "3002462667846489",
+    "Next": "286002297927618676",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Avon Oran is dead? That's terrible. Well, there's no contract to be had, then. I have other orders for you when you're ready.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "avon oran",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "FG_SuranBandits",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal FG_SuranBandits 110"
+    ]
+  },
+  "286002297927618676": {
+    "Prev": "1322216635833813904",
+    "Next": "2079521272787732564",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Serjo Avon Oran spoke highly of your work. Every contract like this helps keep the old reputation of the Fighters Guild.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_SuranBandits",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2079521272787732564": {
+    "Prev": "286002297927618676",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Go to Suran and talk with Serjo Avon Oran. He can tell you more about what is going on.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_BeneranBounty",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal FG_SuranBandits 10"
+    ]
+  }
+}

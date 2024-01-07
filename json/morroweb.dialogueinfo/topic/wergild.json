@@ -1,0 +1,325 @@
+{
+  "9634118372773615656": {
+    "Prev": "",
+    "Next": "131538025407411938",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "kolfinna",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have brought me Pinetear!  You have my eternal thanks, %PCName.  I have been compensated for my husband's murder, as is our custom.  As a token of my gratitude, I welcome you into my family and home. Rest in my bed whenever you feel weary, and take this key.  It will unlock my husband's chest, there in the corner.  Everything it contains is now yours.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Retribution",
+        "Value": 10.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "ingred_emerald_pinetear",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Retribution 100",
+      "player->removeitem \"ingred_emerald_pinetear\" 1",
+      "\"kolfinna\"->additem \"ingred_emerald_pinetear\" 1",
+      "\"kolfinna\"->removeitem \"key_gustav_chest\" 1 ",
+      "Player->AddItem \"key_gustav_chest\" 1",
+      "moddisposition 100"
+    ]
+  },
+  "131538025407411938": {
+    "Prev": "9634118372773615656",
+    "Next": "317088242943423486",
+    "Type": "Topic",
+    "Disposition": 90,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sigvatr the strong",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes! Yes, I killed him!  He would have slit my throat!  Or so I thought.  But what if I was wrong?  What if I murdered Gustav in cold blood?  My friend...oh my friend!  Here, take the gem! Give it to Kolfinna, and may it ease her pain.  My suffering, my guilt, will never end!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Retribution",
+        "Value": 10.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "LessEqual",
+        "Id": "ingred_emerald_pinetear",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "\"sigvatr the strong\"->removeitem \"ingred_emerald_pinetear\" 1 ",
+      "Player->AddItem \"ingred_emerald_pinetear\" 1",
+      "Journal \"BM_Retribution\" 50",
+      "Goodbye"
+    ]
+  },
+  "317088242943423486": {
+    "Prev": "131538025407411938",
+    "Next": "1011923862110321634",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sigvatr the strong",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Gustav and I argued.  We drank too much.  It was something foolish...petty. But then he reached for his blade. I saw him! I was defending myself!  Kolfinna will have no wergild, for I only did what was necessary.  I thought Gustav was my friend, but when I saw the knife....   Go now!  I will speak no more of this!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Retribution",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "1011923862110321634": {
+    "Prev": "317088242943423486",
+    "Next": "187952496459064857",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "kolfinna",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you're going to help me, please hurry.  I won't be able to rest until my husband's life has been compensated for.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Retribution",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Retribution",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "187952496459064857": {
+    "Prev": "1011923862110321634",
+    "Next": "7783138021837624430",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "kolfinna",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, I see.  So be it, then.  My husband lies dead, and I shall live the rest of my life poor and alone.  Maybe some day I will have the wergild that is my right, if someone is brave enough to claim it.  Good day,  %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"BM_Retribution\" 20",
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "7783138021837624430": {
+    "Prev": "187952496459064857",
+    "Next": "81324022650926818",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "kolfinna",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "May Mara smile on you, %PCName.  Sigvatr the Strong is known to hunt near a formation of standing stones called the Altar of Thrond.  It is northwest of here, and just west of the Harstrad River.  But be careful! Sigvatr wields a powerful magic hammer called Rammekald.  It can freeze a foe where he stands.  It...it is the weapon that killed my sweet Gustav.  Go now, and when you have Pinetear, bring it to me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"BM_Retribution\" 30"
+    ]
+  },
+  "81324022650926818": {
+    "Prev": "7783138021837624430",
+    "Next": "11245268202398215569",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "kolfinna",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Wergild is the traditional Nord rite of retribution.  When a life is taken, that life must be accounted for.  My Gustav is irreplaceable, but there must be compensation for his murder.   I do not wish Sigvatr dead.  I only want his family heirloom, the gem Pinetear.  Pinetear is rather small, and not very valuable, but it means much to Sigvatr.  If I were to gain possession of Pinetear,  it would serve as fitting payment for Gustav's death.  Will you help me extract wergild from Sigvatr the Strong?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Retribution",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal \"BM_Retribution\" 10",
+      "Choice \"You will have your retribution, Kolfinna. I will bring you the gem Pinetear.\" 1 \"I'm sorry, Kolfinna, but no.  Your family matter does not concern me.\" 2"
+    ]
+  },
+  "11245268202398215569": {
+    "Prev": "81324022650926818",
+    "Next": "1752417610938032402",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sigvatr the strong",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Kolfinna will get nothing from me, understand?  I did what I had to do. She wasn't there, and neither were you.  I...I had no choice.  Now leave me be!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Retribution",
+        "Value": 10.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "ingred_emerald_pinetear",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"BM_Retribution\" 40",
+      "Goodbye"
+    ]
+  },
+  "1752417610938032402": {
+    "Prev": "11245268202398215569",
+    "Next": "1453428141004211904",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "kolfinna",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thanks to you, the right of wergild has been paid.  Pinetear is mine, and Gustav's spirit will rest well now, knowing that I have received compensation for his death.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Retribution",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1453428141004211904": {
+    "Prev": "1752417610938032402",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sigvatr the strong",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Kolfinna will get nothing from me, understand?  I did what I had to do. She wasn't there, and neither were you.  I...I had no choice.  Now leave me be!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Retribution",
+        "Value": 10.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "ingred_emerald_pinetear",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  }
+}

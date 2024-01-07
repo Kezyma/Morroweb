@@ -1,0 +1,191 @@
+{
+  "905225522281931281": {
+    "Prev": "",
+    "Next": "310313571241262418",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Adraria committed no crime. There was no reason to kill her.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "adraria vandacia",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "310313571241262418": {
+    "Prev": "905225522281931281",
+    "Next": "3206536571481817120",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Adraria Vandacia is an Imperial tax agent. I don't know why Lorbumol gro-Aglakh would give you a bounty on her. I can only suggest that you disobey orders and do not kill her. If you decide not to kill her, you will likely get no further orders from Lorbumol. He is cruel, petty, and single-minded.",
+    "Filters": [],
+    "Script": [
+      "Journal FG_SilenceTaxGirl 50"
+    ]
+  },
+  "3206536571481817120": {
+    "Prev": "310313571241262418",
+    "Next": "2739422849229063414",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled, and I don't have to talk to you about any contracts.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2739422849229063414": {
+    "Prev": "3206536571481817120",
+    "Next": "257141186027216693",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Keep following orders and you'll be %PCName the %NextPCRank soon.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_SilenceTaxgirl",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "257141186027216693": {
+    "Prev": "2739422849229063414",
+    "Next": "604202253078327746",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "You killed her already? Good work. These 500 septims are yours.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_SilenceTaxgirl",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "adraria vandacia",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_SilenceTaxgirl 100",
+      "ModPCFacRep 10 \"Fighters Guild\"",
+      "ModDisposition 20",
+      "Player->AddItem Gold_001 500"
+    ]
+  },
+  "604202253078327746": {
+    "Prev": "257141186027216693",
+    "Next": "23381200092502722414",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Good work. Here's the 500 septims. I got more orders for you.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "adraria vandacia",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_SilenceTaxgirl 100",
+      "ModPCFacRep 10 \"Fighters Guild\"",
+      "ModDisposition 20",
+      "Player->AddItem Gold_001 500"
+    ]
+  },
+  "23381200092502722414": {
+    "Prev": "604202253078327746",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I have a bounty contract for 500 septims for Adraria Vandacia. She's at one of the Census and Excise buildings in Seyda Neen. There might be some guards around, so watch out.",
+    "Filters": [],
+    "Script": [
+      "Journal FG_SilenceTaxgirl 10"
+    ]
+  }
+}

@@ -1,0 +1,4119 @@
+{
+  "1627714415913516768": {
+    "Prev": "311882790128006716",
+    "Next": "3230111137262605603",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Habasi hears you broke our agreement. Habasi does not want to speak with you now.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "3230111137262605603": {
+    "Prev": "1627714415913516768",
+    "Next": "1566418242350324181",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falura llervu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It was quite a journey, wasn't it?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 47.0
+      }
+    ],
+    "Script": []
+  },
+  "1566418242350324181": {
+    "Prev": "3230111137262605603",
+    "Next": "1985028150171727364",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falura llervu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well, then. I will wait here for now.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 45.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B3_ZainabBride",
+        "Value": 47.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 40 30 20 0 0 0 0 0 0",
+      "Goodbye"
+    ]
+  },
+  "1985028150171727364": {
+    "Prev": "1566418242350324181",
+    "Next": "13254119051640113484",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falura llervu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well, %PCName. Now you and I will travel together. When we have arrived in the ashkhan's yurt at Zainab camp, we will speak further about my new bridegroom.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 45.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B3_ZainabBride",
+        "Value": 47.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "AiFollowCell Player \"Zainab Camp, Ashkhan's Yurt\" 0 -33 366 -252 0",
+      "Goodbye"
+    ]
+  },
+  "13254119051640113484": {
+    "Prev": "1985028150171727364",
+    "Next": "35796573207898805",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falura llervu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you ready now for me to accompany you to Zainab camp?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 45.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B3_ZainabBride",
+        "Value": 47.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "followNow",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice, \"Yes, please accompany me to Zainab camp.\" 5, \"No, you should wait here for now.\" 6"
+    ]
+  },
+  "35796573207898805": {
+    "Prev": "13254119051640113484",
+    "Next": "2382831711380321030",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falura llervu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well, then. I will wait here for now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 45.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B3_ZainabBride",
+        "Value": 47.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 40 30 20 0 0 0 0 0 0",
+      "Goodbye"
+    ]
+  },
+  "2382831711380321030": {
+    "Prev": "35796573207898805",
+    "Next": "3226218431914823096",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falura llervu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well, %PCName. Now you and I will travel together. When we have arrived in the ashkhan's yurt at Zainab camp, we will speak further about my new bridegroom.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 45.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B3_ZainabBride",
+        "Value": 47.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "AiFollowCell Player \"Zainab Camp, Ashkhan's Yurt\" 0 -33 366 -252 0",
+      "Goodbye"
+    ]
+  },
+  "3226218431914823096": {
+    "Prev": "2382831711380321030",
+    "Next": "6609142221955829827",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falura llervu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We travel together to Zainab camp. When we arrive there, we will speak further about my new bridegroom. Do you wish me to continue accompanying you?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 45.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B3_ZainabBride",
+        "Value": 47.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "followNow",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice, \"Yes, please continue with me to Zainab camp.\" 3, \"No, you should wait here for now.\" 4"
+    ]
+  },
+  "6609142221955829827": {
+    "Prev": "3226218431914823096",
+    "Next": "354021163010821605",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falura llervu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well, %PCName. Now you and I will travel together. When we have arrived in the ashkhan's yurt at Zainab camp, we will speak further about my new bridegroom.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 45.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B3_ZainabBride",
+        "Value": 47.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AiFollowCell Player \"Zainab Camp, Ashkhan's Yurt\" 0 -33 366 -252 0",
+      "Goodbye"
+    ]
+  },
+  "354021163010821605": {
+    "Prev": "6609142221955829827",
+    "Next": "1536914300137817921",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falura llervu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well, then. I will wait here for now. When you are ready, come to me, and I will travel together with you to Zainab camp to meet my new bridegroom.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B3_ZainabBride",
+        "Value": 47.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "1536914300137817921": {
+    "Prev": "354021163010821605",
+    "Next": "2691292701868521581",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falura llervu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "But, first, didn't you have some presents for me?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B3_ZainabBride",
+        "Value": 47.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2691292701868521581": {
+    "Prev": "1536914300137817921",
+    "Next": "27780318791387024597",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falura llervu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are we ready to travel together to Zainab camp? Do not worry if we must cross water, for I am an excellent swimmer. But take care to protect me from wild beasts and bandits, for I have not learned any of the arts of war. I do know a few spells, but they the spells of a household slave, and will probably be of little use if we are in danger. So. Shall we go now?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B3_ZainabBride",
+        "Value": 47.0
+      }
+    ],
+    "Script": [
+      "Choice, \"Yes, please accompany me to Zainab camp.\" 1, \"No, you should wait here for now.\" 2"
+    ]
+  },
+  "27780318791387024597": {
+    "Prev": "2691292701868521581",
+    "Next": "1183240911993821101",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "huleeya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Perhaps some day, yes. For example, I would greatly wish to see the Ashlands and their peoples with my own eyes. But at present, my duties to the Morag Tong do not permit me to travel.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_7HuleeyaInformant",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "1183240911993821101": {
+    "Prev": "27780318791387024597",
+    "Next": "11390266152058014181",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "huleeya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well, then. I will wait here for now.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "AiWander 128 6 0 40 30 20 0 0 0 0 0 0"
+    ]
+  },
+  "11390266152058014181": {
+    "Prev": "1183240911993821101",
+    "Next": "23461218033190417363",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "huleeya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you, %PCName. I will follow you to Jobasha's Rare Books, and we will speak further there.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_7HuleeyaInformant",
+        "Value": 15.0
+      }
+    ],
+    "Script": [
+      "AiFollowCell, Player, \"Vivec, Jobasha's Rare Books\", 0, 42, -120, -138 0",
+      "Journal, \"A1_7HuleeyaInformant\", 18",
+      "Goodbye"
+    ]
+  },
+  "23461218033190417363": {
+    "Prev": "11390266152058014181",
+    "Next": "2010323127278002946",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "huleeya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you, %PCName. I will follow you to Jobasha's Rare Books, and we will speak further there.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AiFollowCell, Player, \"Vivec, Jobasha's Rare Books\", 0, 42, -120, -138 0",
+      "Journal, \"A1_7HuleeyaInformant\", 18",
+      "\"Favel Gobor\"->ModFight 40",
+      "\"Urven Davor\"->ModFight 40",
+      "\"Ethys Savil\"->ModFight 40",
+      "\"Favel Gobor\"->StartCombat Player",
+      "\"Urven Davor\"->StartCombat Player",
+      "\"Ethys Savil\"->StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "2010323127278002946": {
+    "Prev": "23461218033190417363",
+    "Next": "178631673225958934",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "huleeya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Will you travel together with me to Jobasha's Rare Books? We leave the door to the Foreign Quarter Waistworks, turn right, west, continue down the hall and across the atrium on the same level, then follow the opposite corridor west on the other side of the atrium all the way to Jobasha's door.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "urven davor",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "ethys savil",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "favel gobor",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_V_VivecInformants",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice, \"Yes, please follow me to Jobasha's Rare Books.\", 1, \"No, you should wait here for now.\", 2"
+    ]
+  },
+  "178631673225958934": {
+    "Prev": "2010323127278002946",
+    "Next": "3323316951368928779",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "huleeya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Will you travel together with me to Jobasha's Rare Books? We leave the door to the Foreign Quarter Waistworks, turn right, west, continue down the hall and across the atrium on the same level, then follow the opposite corridor west on the other side of the atrium all the way to Jobasha's door. I must warn you: unless these troublesome fools are persuaded to behave like civilized beings, there may be fighting and killing if we try to travel together.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_V_VivecInformants",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice, \"Yes, please follow me to Jobasha's Rare Books.\", 1, \"No, you should wait here for now.\", 2"
+    ]
+  },
+  "3323316951368928779": {
+    "Prev": "178631673225958934",
+    "Next": "12984269792024714940",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "itermerel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have no interest in seeing the rest of Vvardenfell, but I appreciate your offer.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_EscortScholar2",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "12984269792024714940": {
+    "Prev": "3323316951368928779",
+    "Next": "3148917781602626876",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "itermerel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Lead the way to the Halfway Tavern in Pelagiad, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AiFollowCell Player \"Pelagiad, Halfway Tavern\" 0 240 -250 0 0",
+      "Journal MG_EscortScholar2 50"
+    ]
+  },
+  "3148917781602626876": {
+    "Prev": "12984269792024714940",
+    "Next": "1439323809325864819",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "itermerel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will wait for you here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 60 40 20 0 0 0 0 0 0"
+    ]
+  },
+  "1439323809325864819": {
+    "Prev": "3148917781602626876",
+    "Next": "3064612252858131527",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "itermerel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want me to wait here?",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "followNow",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Follow me.\" 1 \"Wait here.\" 2"
+    ]
+  },
+  "3064612252858131527": {
+    "Prev": "1439323809325864819",
+    "Next": "29503274223246327451",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "itermerel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want me to follow you?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Follow me.\" 1 \"Wait here.\" 2"
+    ]
+  },
+  "29503274223246327451": {
+    "Prev": "3064612252858131527",
+    "Next": "1623231102222405384",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tenyeminwe",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Now I can return to Summerset Isle. I've had enough of these Telvanni.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_EscortScholar1",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "1623231102222405384": {
+    "Prev": "29503274223246327451",
+    "Next": "74518841203442282",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tenyeminwe",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for taking me to the Elf-Skerring. I was keeping these scrolls just in case something unfortunate happened. Since I have arrived safely, I feel you deserve them.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_EscortScholar1",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal MG_EscortScholar1 80",
+      "RemoveItem sc_summonflameatronach 1",
+      "RemoveItem sc_summonfrostatronach 1",
+      "Player->AddItem sc_summonflameatronach 1",
+      "Player->AddItem sc_summonfrostatronach 1"
+    ]
+  },
+  "74518841203442282": {
+    "Prev": "1623231102222405384",
+    "Next": "25012416194811829",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tenyeminwe",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well. Take me to the Elf-Skerring at the Telvanni docks, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AiFollow Player 0 142145 37470 205 0",
+      "Journal MG_EscortScholar1 30"
+    ]
+  },
+  "25012416194811829": {
+    "Prev": "74518841203442282",
+    "Next": "9107208102074010578",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tenyeminwe",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will wait for you here. Please hurry, %PCName. I do not feel safe here in Sadrith Mora.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "AiWander 128 6 0 40 30 20 0 0 0 0 0 0"
+    ]
+  },
+  "9107208102074010578": {
+    "Prev": "25012416194811829",
+    "Next": "1651129701143646435",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tenyeminwe",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want me to wait here?",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "followNow",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Follow me.\" 1 \"Wait here.\" 2"
+    ]
+  },
+  "1651129701143646435": {
+    "Prev": "9107208102074010578",
+    "Next": "183023550110328347",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tenyeminwe",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want me to follow you?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Follow me.\" 1 \"Wait here.\" 2"
+    ]
+  },
+  "183023550110328347": {
+    "Prev": "1651129701143646435",
+    "Next": "8439249722771914374",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "deval beleth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for helping me in my pilgrimage to the Koal Cave. I will stay here awhile and travel back to Ald'ruhn with another pilgrim.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_KoalCave",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "8439249722771914374": {
+    "Prev": "183023550110328347",
+    "Next": "1348515950573018551",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "deval beleth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Take me to the Koal Cave, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AiFollow Player 0 0 0 0 0",
+      "Journal HR_KoalCave 50"
+    ]
+  },
+  "1348515950573018551": {
+    "Prev": "8439249722771914374",
+    "Next": "4093251013160023960",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "deval beleth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Whatever you say. I will wait here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "AiWander 128 6 0 40 30 20 0 0 0 0 0 0"
+    ]
+  },
+  "4093251013160023960": {
+    "Prev": "1348515950573018551",
+    "Next": "23911266152119914918",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "deval beleth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want me to wait here?",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "followNow",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_KoalCave",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Follow me\" 1 \"Wait here\" 2"
+    ]
+  },
+  "23911266152119914918": {
+    "Prev": "4093251013160023960",
+    "Next": "3035517853861815618",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "deval beleth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want me to follow you to the Koal Cave?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_KoalCave",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Follow me\" 1 \"Wait here\" 2"
+    ]
+  },
+  "3035517853861815618": {
+    "Prev": "23911266152119914918",
+    "Next": "2042024395235434948",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "varvur sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sorry, but I must stay here in Sarethi Manor until I am feeling better.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_RescueSarethi",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "2042024395235434948": {
+    "Prev": "3035517853861815618",
+    "Next": "47893024350906253",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "varvur sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Take me to my father in Sarethi Manor.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AiFollow Player 0 0 0 0 0",
+      "Journal HR_RescueSarethi 50"
+    ]
+  },
+  "47893024350906253": {
+    "Prev": "2042024395235434948",
+    "Next": "3225931509322028529",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "varvur sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll wait right here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 6 0 40 40 100 0 0 0 0 0 0"
+    ]
+  },
+  "3225931509322028529": {
+    "Prev": "47893024350906253",
+    "Next": "31126280372782626968",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "varvur sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want me to wait here?",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "followNow",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Follow me\" 1 \"Wait here\" 2"
+    ]
+  },
+  "31126280372782626968": {
+    "Prev": "3225931509322028529",
+    "Next": "18972989517597347",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "varvur sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Shall we travel back to my father, Athyn Sarethi?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Follow me\" 1 \"Wait here\" 2"
+    ]
+  },
+  "18972989517597347": {
+    "Prev": "31126280372782626968",
+    "Next": "6691265682082915941",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "teres arothan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for guiding me back to Novor Drethan.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_DissaplaMine",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "6691265682082915941": {
+    "Prev": "18972989517597347",
+    "Next": "285625330315418394",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "teres arothan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Guide me back to Novor Drethan so he knows I'm safe.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AiFollow Player 0 0 0 0 0",
+      "Journal FG_DissaplaMine 50"
+    ]
+  },
+  "285625330315418394": {
+    "Prev": "6691265682082915941",
+    "Next": "20471149702765414293",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "teres arothan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will wait for you here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "AiWander 128 6 0 40 30 20 0 0 0 0 0 0"
+    ]
+  },
+  "20471149702765414293": {
+    "Prev": "285625330315418394",
+    "Next": "303056792971023918",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "teres arothan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want me to wait here?",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "followNow",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Follow me\" 1 \"Wait here\" 2"
+    ]
+  },
+  "303056792971023918": {
+    "Prev": "20471149702765414293",
+    "Next": "6456284481728923111",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "teres arothan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you ready to guide me back to Novor Drethan?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Follow me\" 1 \"Wait here\" 2"
+    ]
+  },
+  "6456284481728923111": {
+    "Prev": "303056792971023918",
+    "Next": "9473587057001458",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sondaale of shimmerene",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you, %PCName, but I can make my own way from here.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_Telasero",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "9473587057001458": {
+    "Prev": "6456284481728923111",
+    "Next": "3186080982378213358",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sondaale of shimmerene",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Get me out of here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AiFollow Player 0 0 0 0 0",
+      "Journal FG_Telasero 50"
+    ]
+  },
+  "3186080982378213358": {
+    "Prev": "9473587057001458",
+    "Next": "317879906115849179",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sondaale of shimmerene",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will wait here until you think it is safe.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "AiWander 128 6 0 40 30 20 0 0 0 0 0 0"
+    ]
+  },
+  "317879906115849179": {
+    "Prev": "3186080982378213358",
+    "Next": "9087203292266728231",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sondaale of shimmerene",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want me to wait here?",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "followNow",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Follow me\" 1 \"Wait here\" 2"
+    ]
+  },
+  "9087203292266728231": {
+    "Prev": "317879906115849179",
+    "Next": "9509103641617322860",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sondaale of shimmerene",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Can you guide me back outside?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Follow me\" 1 \"Wait here\" 2"
+    ]
+  },
+  "9509103641617322860": {
+    "Prev": "9087203292266728231",
+    "Next": "2686832383110910524",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tarvyn faren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Not right now, I need to sell my goods here in Pelagiad. Thanks to you, everyone will know the name Tarvyn Faren as a trader who can reach his customers even with all the troubles for House Hlaalu.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EscortMerchant",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "2686832383110910524": {
+    "Prev": "9509103641617322860",
+    "Next": "2643027222215926988",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tarvyn faren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Take me to the Halfway Tavern in Pelagiad.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HH_EscortMerchant 50",
+      "AiFollow Player 0 0 0 0 0"
+    ]
+  },
+  "2643027222215926988": {
+    "Prev": "2686832383110910524",
+    "Next": "219122411367810847",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tarvyn faren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Okay. I will stay here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 40 30 20 0 0 0 0 0 0"
+    ]
+  },
+  "219122411367810847": {
+    "Prev": "2643027222215926988",
+    "Next": "9012220871253825033",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tarvyn faren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want me to wait here?",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "followNow",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Follow me.\" 1 \"Wait here.\" 2"
+    ]
+  },
+  "9012220871253825033": {
+    "Prev": "219122411367810847",
+    "Next": "3715320742321919715",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tarvyn faren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Should I keep following you to the Halfway Tavern in Pelagiad?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Follow me.\" 1 \"Wait here.\" 2"
+    ]
+  },
+  "3715320742321919715": {
+    "Prev": "9012220871253825033",
+    "Next": "2043112900154498985",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vedelea othril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "I will not leave unless the Telvanni necromancer is dead. Find Milyn Faram and kill him before he does something terrible.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "milyn faram",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2043112900154498985": {
+    "Prev": "3715320742321919715",
+    "Next": "2984768891227327165",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vedelea othril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "No, but thank you. I must stay here to help secure Odirniran.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Odirniran",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "2984768891227327165": {
+    "Prev": "2043112900154498985",
+    "Next": "23233264252354326619",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vedelea othril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Take me to my sister, Remasa Othril.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HH_Odirniran 50",
+      "AiFollow Player 0 0 0 0 0"
+    ]
+  },
+  "23233264252354326619": {
+    "Prev": "2984768891227327165",
+    "Next": "238811564256368047",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vedelea othril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Whatever you say. I will stay here until it's safe.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 6 0 40 30 20 0 0 0 0 0 0"
+    ]
+  },
+  "238811564256368047": {
+    "Prev": "23233264252354326619",
+    "Next": "23300242451191923190",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vedelea othril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Do you want me to wait here?",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "followNow",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Follow me.\" 1 \"Wait here.\" 2"
+    ]
+  },
+  "23300242451191923190": {
+    "Prev": "238811564256368047",
+    "Next": "114010849325979619",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vedelea othril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Shall we travel together to Remasa Othril? She must still be here in Odirniran.",
+    "Filters": [],
+    "Script": [
+      "Choice \"Follow me.\" 1 \"Wait here.\" 2"
+    ]
+  },
+  "114010849325979619": {
+    "Prev": "23300242451191923190",
+    "Next": "1098584716415213",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mathis dalobar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Not right now, I have alot of work to do here. But thanks for getting me out of that tomb.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FindDalobar",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "1098584716415213": {
+    "Prev": "114010849325979619",
+    "Next": "2153913622318016588",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mathis dalobar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Take me to the Maar Gan shrine.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AiFollow Player 0 0 0 0 0",
+      "Journal HR_FindDalobar 50"
+    ]
+  },
+  "2153913622318016588": {
+    "Prev": "1098584716415213",
+    "Next": "7552258662719223130",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mathis dalobar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Okay. I'll stay right here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 40 30 20 0 0 0 0 0 0"
+    ]
+  },
+  "7552258662719223130": {
+    "Prev": "2153913622318016588",
+    "Next": "362019832423011140",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mathis dalobar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want me to wait here?",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "followNow",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Follow me\" 1 \"Wait here\" 2"
+    ]
+  },
+  "362019832423011140": {
+    "Prev": "7552258662719223130",
+    "Next": "1296970001038322361",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mathis dalobar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Can we travel together to Maar Gan?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Follow me\" 1 \"Wait here\" 2"
+    ]
+  },
+  "1296970001038322361": {
+    "Prev": "362019832423011140",
+    "Next": "31929212771069814158",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dandsa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can find my own way back to Gnaar Mok. It's not a long swim once I've had a chance to rest a bit.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Damsel",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "31929212771069814158": {
+    "Prev": "1296970001038322361",
+    "Next": "18867793580671089",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dandsa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Get me outside this cave, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal IL_Damsel 50",
+      "AiFollow Player 0 -52384 23184 16 0"
+    ]
+  },
+  "18867793580671089": {
+    "Prev": "31929212771069814158",
+    "Next": "272392803327388159",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dandsa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Okay. I'll stay right here until you come and get me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 60 30 10 0 0 0 0 0 0"
+    ]
+  },
+  "272392803327388159": {
+    "Prev": "18867793580671089",
+    "Next": "20630731799031343",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dandsa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want me to wait here?",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "followNow",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Follow me\" 1 \"Wait here\" 2"
+    ]
+  },
+  "20630731799031343": {
+    "Prev": "272392803327388159",
+    "Next": "329142301511915266",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dandsa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want me to follow you back outside this cave?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Follow me\" 1 \"Wait here\" 2"
+    ]
+  },
+  "329142301511915266": {
+    "Prev": "20630731799031343",
+    "Next": "91475302620620366",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "madura seran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No, but thank you. I will rest here and continue my pilgrimage when I can.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescuePilgrim",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "91475302620620366": {
+    "Prev": "329142301511915266",
+    "Next": "478057122101314892",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "madura seran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Lead me to the Ald Velothi Outpost.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescuePilgrim",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Journal IL_RescuePilgrim 50",
+      "AiFollowCell, Player, \"Ald Velothi, Outpost\", 0, 775, -539, -99, 0"
+    ]
+  },
+  "478057122101314892": {
+    "Prev": "91475302620620366",
+    "Next": "31048145453256523695",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "madura seran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Lead me to the Ald Velothi Outpost.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal IL_RescuePilgrim 50",
+      "AiFollowCell, Player, \"Ald Velothi, Outpost\", 0, 775, -539, -99, 0 ",
+      "\"abassel asserbassalit\"->SetFight 100",
+      "\"rawia ashirbibi\"->SetFight 100",
+      "\"kund assarnibani\"->SetFight 100",
+      "\"abassel asserbassalit\"->StartCombat Player",
+      "\"rawia ashirbibi\"->StartCombat Player",
+      "\"kund assarnibani\"->StartCombat Player"
+    ]
+  },
+  "31048145453256523695": {
+    "Prev": "478057122101314892",
+    "Next": "8358278053261011575",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "madura seran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Okay. I'll stay right here until you come and get me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 40 20 10 0 0 0 0 0 0"
+    ]
+  },
+  "8358278053261011575": {
+    "Prev": "31048145453256523695",
+    "Next": "18988219601446514284",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "madura seran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want me to wait here?",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "followNow",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Follow me.\" 1 \"Wait here.\" 2"
+    ]
+  },
+  "18988219601446514284": {
+    "Prev": "8358278053261011575",
+    "Next": "5140669844524802",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "madura seran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want me to follow you?",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "abassel asserbassalit",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Follow me.\" 1 \"Wait here.\" 2"
+    ]
+  },
+  "5140669844524802": {
+    "Prev": "18988219601446514284",
+    "Next": "18759323652624525743",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "madura seran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want me to follow you?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescuePilgrim",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Choice \"Follow me.\" 1 \"Wait here.\" 2"
+    ]
+  },
+  "18759323652624525743": {
+    "Prev": "5140669844524802",
+    "Next": "252421912230514163",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "madura seran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want me to follow you? Abassel will try and kill me if I leave.",
+    "Filters": [],
+    "Script": [
+      "Choice \"Follow me.\" 1 \"Wait here.\" 2"
+    ]
+  },
+  "252421912230514163": {
+    "Prev": "18759323652624525743",
+    "Next": "11773104651570218359",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "saprius entius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm staying here until Frald the White says it's safe.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_ProtectEntius",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "11773104651570218359": {
+    "Prev": "252421912230514163",
+    "Next": "243218961920130935",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "saprius entius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll follow you to Frald the White. Try and avoid the guards.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal IL_ProtectEntius 50",
+      "AiFollowCell Player \"Ebonheart, Hawkmoth Legion Garrison\" 0 1040 2544 -288 0"
+    ]
+  },
+  "243218961920130935": {
+    "Prev": "11773104651570218359",
+    "Next": "10220982869522556",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "saprius entius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll stay here until you think it's safe.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 60 30 10 0 0 0 0 0 0"
+    ]
+  },
+  "10220982869522556": {
+    "Prev": "243218961920130935",
+    "Next": "105082617822640163",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "saprius entius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want me to wait here?",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "followNow",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Follow me\" 1 \"Wait here\" 2"
+    ]
+  },
+  "105082617822640163": {
+    "Prev": "10220982869522556",
+    "Next": "1258920092236577165",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "saprius entius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want me to follow you back to Ebonheart?",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "followNow",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Follow me\" 1 \"Wait here\" 2"
+    ]
+  },
+  "1258920092236577165": {
+    "Prev": "105082617822640163",
+    "Next": "3250722142527710766",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hides_his_foot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Perhaps, but not today. I must travel with Sterdecan until he passes me on to another. If all goes well, I will see my homeland again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_TwinLamps3",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "3250722142527710766": {
+    "Prev": "1258920092236577165",
+    "Next": "16891238512691666",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hides_his_foot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will follow you. I must get to Sterdecan's Farm.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HH_TwinLamps3 50",
+      "AiFollow Player 0 34770 -38050 680 0"
+    ]
+  },
+  "16891238512691666": {
+    "Prev": "3250722142527710766",
+    "Next": "682614364110283712",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hides_his_foot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will stay here until you tell me it is safe to go on.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 60 30 10 0 0 0 0 0 0"
+    ]
+  },
+  "682614364110283712": {
+    "Prev": "16891238512691666",
+    "Next": "1246856681164115499",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hides_his_foot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want me to wait here?",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "followNow",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Follow me.\" 1 \"Wait here.\" 2"
+    ]
+  },
+  "1246856681164115499": {
+    "Prev": "682614364110283712",
+    "Next": "7453196859731347",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hides_his_foot",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Shall I follow you now?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Follow me.\" 1 \"Wait here.\" 2"
+    ]
+  },
+  "7453196859731347": {
+    "Prev": "1246856681164115499",
+    "Next": "21225215522144511604",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nevrasa dralor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent. Let's keep going.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "\"Nevrasa Dralor\"->AiFollow Player 0,14879,-34134,925,0",
+      "Goodbye"
+    ]
+  },
+  "21225215522144511604": {
+    "Prev": "7453196859731347",
+    "Next": "14794179231106114941",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nevrasa dralor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll wait here then.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 60 30 10 0 0 0 0 0 0",
+      "Goodbye"
+    ]
+  },
+  "14794179231106114941": {
+    "Prev": "21225215522144511604",
+    "Next": "87311827950332871",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nevrasa dralor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Should I continue to follow you to the Fields of Kummu?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_WanderingPilgrim",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Choice \"No, wait here.\" 1 \"Yes, let's keep going.\" 2"
+    ]
+  },
+  "87311827950332871": {
+    "Prev": "14794179231106114941",
+    "Next": "23051347573027433",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rabinna",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Rabinna will follow.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_SlaveMule",
+        "Value": 112.0
+      }
+    ],
+    "Script": [
+      "\"Rabinna\"->AiFollowCell  Player \"Ebonheart, Argonian Mission\" 0 22 19 5 0"
+    ]
+  },
+  "23051347573027433": {
+    "Prev": "87311827950332871",
+    "Next": "1221315136394013378",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rabinna",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Rabinna will follow.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_SlaveMule",
+        "Value": 95.0
+      }
+    ],
+    "Script": [
+      "\"Rabinna\"->AiFollowCell  Player \"Ebonheart, Argonian Mission\" 0 22 19 5 0"
+    ]
+  },
+  "1221315136394013378": {
+    "Prev": "23051347573027433",
+    "Next": "461884422941920145",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rabinna",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As you wish.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 60 30 10 0 0 0 0 0 0",
+      "Goodbye"
+    ]
+  },
+  "461884422941920145": {
+    "Prev": "1221315136394013378",
+    "Next": "16666233901946831342",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rabinna",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Lead me where you will.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_SlaveMule",
+        "Value": 112.0
+      }
+    ],
+    "Script": [
+      "Choice \"Wait here.\" 1 \"Follow me.\" 2"
+    ]
+  },
+  "16666233901946831342": {
+    "Prev": "461884422941920145",
+    "Next": "14658326922789722315",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rabinna",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Lead me where you will.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_SlaveMule",
+        "Value": 95.0
+      }
+    ],
+    "Script": [
+      "Choice \"Wait here.\" 1 \"Follow me.\" 2"
+    ]
+  },
+  "14658326922789722315": {
+    "Prev": "16666233901946831342",
+    "Next": "63751901886132503",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "malexa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Please. Let's find my husband.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_CultistVictim",
+        "Value": 50.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "\"Malexa\"->AiFollow Player 0, -57520,125104,1124, 0",
+      "Goodbye"
+    ]
+  },
+  "63751901886132503": {
+    "Prev": "14658326922789722315",
+    "Next": "133827980219148669",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "malexa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll wait here for you. But hurry!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_CultistVictim",
+        "Value": 50.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 60 30 10 0 0 0 0 0 0",
+      "Goodbye"
+    ]
+  },
+  "133827980219148669": {
+    "Prev": "63751901886132503",
+    "Next": "2660818383257230121",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "malexa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I must find my beloved Sason.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_CultistVictim",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Wait here. I'll return for you.\" 1 \"Let's get moving.\" 2"
+    ]
+  },
+  "2660818383257230121": {
+    "Prev": "133827980219148669",
+    "Next": "2574524558130411159",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Please, we've got to get to that place. Please hurry.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "AiFollow Player 0,35350,-37899,-673,0",
+      "Goodbye"
+    ]
+  },
+  "2574524558130411159": {
+    "Prev": "2660818383257230121",
+    "Next": "13347299732378215248",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, powerful one. I, the poor slave, will wait here for you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 60 30 10 0 0 0 0 0 0",
+      "Goodbye"
+    ]
+  },
+  "13347299732378215248": {
+    "Prev": "2574524558130411159",
+    "Next": "7546294012327227086",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Shall we continue on? I must get to freedom.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_FakeSlave",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MV_FakeSlave",
+        "Value": 45.0
+      }
+    ],
+    "Script": [
+      "Choice \"No. Wait here.\" 1 \"Yes, let's get moving.\" 2"
+    ]
+  },
+  "7546294012327227086": {
+    "Prev": "13347299732378215248",
+    "Next": "178312907675010500",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "teris raledran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent. Let's be on our way.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "\"Teris Raledran\"->AiFollow Player 0,0,0,0,0",
+      "Goodbye"
+    ]
+  },
+  "178312907675010500": {
+    "Prev": "7546294012327227086",
+    "Next": "12809295372320820842",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "teris raledran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you think it's wise. I'll wait here for you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 60 30 10 0 0 0 0 0 0",
+      "Goodbye"
+    ]
+  },
+  "12809295372320820842": {
+    "Prev": "178312907675010500",
+    "Next": "16809297531399320127",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "teris raledran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Shall we continue on?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_RichTrader",
+        "Value": 80.0
+      }
+    ],
+    "Script": [
+      "Choice \"You should wait here.\" 1 \"Yes, let's go.\" 2"
+    ]
+  },
+  "16809297531399320127": {
+    "Prev": "12809295372320820842",
+    "Next": "254096044339517071",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "teris raledran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Shall we continue on?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_RichTrader",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Choice \"You should wait here.\" 1 \"Yes, let's go.\" 2"
+    ]
+  },
+  "254096044339517071": {
+    "Prev": "16809297531399320127",
+    "Next": "1167022926628917554",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "delyna mandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you, %PCName. I have duties I must attend to, and then I must find a way to reach my father. Until then, please deliver my locket to my father, Arethan Mandas.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_RansomMandas",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "1167022926628917554": {
+    "Prev": "254096044339517071",
+    "Next": "9598138081850730297",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "delyna mandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well. We will try and escape. Take me outside this tower, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HR_RansomMandas 50",
+      "AiFollow Player 0 0 0 0 0"
+    ]
+  },
+  "9598138081850730297": {
+    "Prev": "1167022926628917554",
+    "Next": "5256231592833727221",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "delyna mandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will wait for you here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 60 30 10 0 0 0 0 0 0"
+    ]
+  },
+  "5256231592833727221": {
+    "Prev": "9598138081850730297",
+    "Next": "24127252215345590",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "delyna mandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want me to wait here?",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "followNow",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"No, keep folllowing me.\" 1 \"Yes, wait here.\" 2"
+    ]
+  },
+  "24127252215345590": {
+    "Prev": "5256231592833727221",
+    "Next": "83678322445122562",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "delyna mandas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Shall we try and escape?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Yes, folllow me.\" 1 \"No, wait here.\" 2"
+    ]
+  },
+  "83678322445122562": {
+    "Prev": "24127252215345590",
+    "Next": "7564184892099431787",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nartise arobar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for rescuing me. I will take a ship back to Ald'ruhn. I am sure my father, Miner Arobar, will reward you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ArobarKidnap",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "7564184892099431787": {
+    "Prev": "83678322445122562",
+    "Next": "16721250622073629515",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nartise arobar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Take me to the Telvanni docks, %PCName. Once I'm near a ship out of here, I'll feel alot safer.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HR_ArobarKidnap 50",
+      "AiFollow Player 0 142145 37470 205 0"
+    ]
+  },
+  "16721250622073629515": {
+    "Prev": "7564184892099431787",
+    "Next": "2004991511984523450",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nartise arobar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I shall wait for you here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 60 30 10 0 0 0 0 0 0"
+    ]
+  },
+  "2004991511984523450": {
+    "Prev": "16721250622073629515",
+    "Next": "23359297413114422156",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nartise arobar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We must get to the Telvanni docks. Only then will I feel safe.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "followNow",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Follow me.\" 1 \"Wait here.\" 2"
+    ]
+  },
+  "23359297413114422156": {
+    "Prev": "2004991511984523450",
+    "Next": "15458161542176411478",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nartise arobar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, get me out of here. My father, Miner Arobar, will reward you.",
+    "Filters": [],
+    "Script": [
+      "Choice \"Follow me.\" 1 \"Wait here.\" 2"
+    ]
+  },
+  "15458161542176411478": {
+    "Prev": "23359297413114422156",
+    "Next": "18048274422048718606",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "j_saddha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "%Name is safe now. %Name thanks %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_TwinLamps1",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "18048274422048718606": {
+    "Prev": "15458161542176411478",
+    "Next": "10928310201780424000",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "j_saddha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "%Name follows %PCName. Watch out for the slavehunters.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HH_TwinLamps1 50",
+      "AiFollow Player 0 0 0 0 0"
+    ]
+  },
+  "10928310201780424000": {
+    "Prev": "18048274422048718606",
+    "Next": "2207218177182389231",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "j_saddha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "%Name waits for %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 60 30 10 0 0 0 0 0 0"
+    ]
+  },
+  "2207218177182389231": {
+    "Prev": "10928310201780424000",
+    "Next": "1047323760231364115",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "j_saddha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are there slavehunters near? Should %Name wait?",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "followNow",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"No, keep following me.\" 1 \"Yes, wait here a moment.\" 2"
+    ]
+  },
+  "1047323760231364115": {
+    "Prev": "2207218177182389231",
+    "Next": "59272914791898546",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "j_saddha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If slavehunters are there, they see %Name and kill %Name. You sure you want %Name to follow %PCName?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Yes, follow me.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "59272914791898546": {
+    "Prev": "1047323760231364115",
+    "Next": "155892467090174998",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "assaba-bentus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am here at the Mabrigash camp. We have no reason to travel together.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescueHermit",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "155892467090174998": {
+    "Prev": "59272914791898546",
+    "Next": "3028275243231930558",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "assaba-bentus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I shall follow you to the Mabrigash camp.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AiFollow Player 0 85344 -3536 640 0"
+    ]
+  },
+  "3028275243231930558": {
+    "Prev": "155892467090174998",
+    "Next": "1231114153109727918",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "assaba-bentus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will wait here. But do not test my patience.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 60 30 10 0 0 0 0 0 0"
+    ]
+  },
+  "1231114153109727918": {
+    "Prev": "3028275243231930558",
+    "Next": "1748425214119776640",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "assaba-bentus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, we travel to the Mabrigash camp.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "followNow",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Keep following.\" 1 \"Wait here a moment.\" 2"
+    ]
+  },
+  "1748425214119776640": {
+    "Prev": "1231114153109727918",
+    "Next": "17887102541567525512",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "assaba-bentus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We should resume our travels?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescueHermit",
+        "Value": 25.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, follow me.\" 1 \"No, nevermind.\" 2"
+    ]
+  },
+  "10200169763196329114": {
+    "Prev": "",
+    "Next": "18372162080003293",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "urvel dulni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Really? Excellent! I mean...I wouldn't want to get in the way. You understand. I'll guard your back from here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "\"urvel dulni\"->AIWander 0 0 0 0 0 0"
+    ]
+  },
+  "18372162080003293": {
+    "Prev": "10200169763196329114",
+    "Next": "2091021750732311715",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "urvel dulni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh...if you insist. I mean, if you're completely sure....",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "\"urvel dulni\"->AIFollow Player 0 0 0 0 0 0"
+    ]
+  },
+  "2091021750732311715": {
+    "Prev": "18372162080003293",
+    "Next": "1627714415913516768",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "urvel dulni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want me to stay with you? I'd be willing to wait here. I m-mean, it's up to you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_ShrineDead",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_ShrineDead",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Choice \"Stay with me.\" 1 \"Wait here.\" 2"
+    ]
+  },
+  "311145106599129747": {
+    "Prev": "",
+    "Next": "851395041425131174",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gaea artoria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I better stay here.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Smugglers",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "851395041425131174": {
+    "Prev": "311145106599129747",
+    "Next": "32657478285029329",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gaea artoria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Not a bright choice, if you ask me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "artoriachosen",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 0 0 0"
+    ]
+  },
+  "32657478285029329": {
+    "Prev": "851395041425131174",
+    "Next": "2702731522608629266",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gaea artoria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good plan.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "artoriachosen",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AiFollow Player 0 0 0 0 0 0 0"
+    ]
+  },
+  "2702731522608629266": {
+    "Prev": "32657478285029329",
+    "Next": "26239323941534219976",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gaea artoria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You want that we keep going together? Probably a good idea.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Smugglers",
+        "Value": 10.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "artoriachosen",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, we should.\" 1 \"No. Wait here.\" 2"
+    ]
+  },
+  "26239323941534219976": {
+    "Prev": "2702731522608629266",
+    "Next": "2164101872666029089",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "saenus lusius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is best if I remain here.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Smugglers",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2164101872666029089": {
+    "Prev": "26239323941534219976",
+    "Next": "27540163621719911279",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "saenus lusius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you insist.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "luciuschosen",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 0 0 0"
+    ]
+  },
+  "27540163621719911279": {
+    "Prev": "2164101872666029089",
+    "Next": "311882790128006716",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "saenus lusius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "luciuschosen",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AiFollow Player 0 0 0 0 0 0 0"
+    ]
+  },
+  "311882790128006716": {
+    "Prev": "27540163621719911279",
+    "Next": "1627714415913516768",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "saenus lusius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We should continue to travel together, should we not?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Smugglers",
+        "Value": 10.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "luciuschosen",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, we should.\" 1 \"No. Wait here.\" 2"
+    ]
+  },
+  "17887102541567525512": {
+    "Prev": "1748425214119776640",
+    "Next": "1269411373317084",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mirisa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am already safe and sound here at the shrine, %PCClass, but thank you for your concern.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Missionary",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1269411373317084": {
+    "Prev": "17887102541567525512",
+    "Next": "16110247942360124941",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mirisa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Let's go, %PCName!  You lead on, and I'll follow you back to the Imperial Cult Shrine at Fort Frostmoth!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AiFollow Player 0 0 0 0 0",
+      "Journal BM_Missionary 60"
+    ]
+  },
+  "16110247942360124941": {
+    "Prev": "1269411373317084",
+    "Next": "101781612376816312",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mirisa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "All right, %PCName.  I'll wait right here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 40 30 20 0 0 0 0 0 0"
+    ]
+  },
+  "101781612376816312": {
+    "Prev": "16110247942360124941",
+    "Next": "6045309411483418683",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mirisa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want me to wait here, %PCName?",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "followNow",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Follow me.\" 1 \"Wait here.\" 2"
+    ]
+  },
+  "6045309411483418683": {
+    "Prev": "101781612376816312",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mirisa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Will you escort me back to the Imperial Cult Shrine at Fort Frostmoth?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Follow me.\" 1 \"Wait here.\" 2"
+    ]
+  }
+}

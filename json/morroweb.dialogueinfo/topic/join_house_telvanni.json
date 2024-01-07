@@ -1,0 +1,447 @@
+{
+  "8133100723020318688": {
+    "Prev": "",
+    "Next": "301358887217114138",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "therana",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Join with the house? No thank you. I prefer to be in the house, not of the house.",
+    "Filters": [],
+    "Script": []
+  },
+  "301358887217114138": {
+    "Prev": "8133100723020318688",
+    "Next": "938314983150524849",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "Sadrith Mora, Telvanni Council House",
+    "PlayerFaction": "",
+    "Text": "Oh, you've been expelled? Nothing to fear. I will take care of this for you. What else did you want?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "PCClearExpelled"
+    ]
+  },
+  "938314983150524849": {
+    "Prev": "301358887217114138",
+    "Next": "66412384717816339",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "Sadrith Mora, Telvanni Council House",
+    "PlayerFaction": "",
+    "Text": "You are already a member of House Telvanni, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "66412384717816339": {
+    "Prev": "938314983150524849",
+    "Next": "10300177263078510013",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "Sadrith Mora, Telvanni Council House",
+    "PlayerFaction": "",
+    "Text": "You are now a member of House Telvanni. Welcome, %PCRank %PCName. When you are ready, speak with me about your chores and your advancement in House Telvanni.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "PCJoinFaction \"Telvanni\""
+    ]
+  },
+  "10300177263078510013": {
+    "Prev": "66412384717816339",
+    "Next": "30405255552619713673",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "Sadrith Mora, Telvanni Council House",
+    "PlayerFaction": "",
+    "Text": "Are you certain? Remember that once you join, you cannot join any other Great House. Perhaps you would like to hear our rules?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, I want to join.\" 1 \"No, nevermind.\" 3 \"Hear the rules of House Telvanni.\" 4"
+    ]
+  },
+  "30405255552619713673": {
+    "Prev": "10300177263078510013",
+    "Next": "2798319645206439151",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "Sadrith Mora, Telvanni Council House",
+    "PlayerFaction": "",
+    "Text": "If you change your mind, House Telvanni will welcome you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "2798319645206439151": {
+    "Prev": "30405255552619713673",
+    "Next": "21226244741216515056",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "Sadrith Mora, Telvanni Council House",
+    "PlayerFaction": "",
+    "Text": "We trust all members of House Telvanni to use their own judgement. If you steal from another Telvanni, but still live, then clearly you deserve whatever you stole. Murdering your opponents by magic or treachery is the traditional way of settling disputes. If you win, then clearly your argument has more merit. You may be expelled as in any other Great House, but most Telvanni will not care or even know about it. Does this appeal to you?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, I am eager to join.\" 1 \"No, nevermind.\" 3"
+    ]
+  },
+  "21226244741216515056": {
+    "Prev": "2798319645206439151",
+    "Next": "10687175821385616052",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "Sadrith Mora, Telvanni Council House",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Of course you wish to join our Great House. But you already belong to House Hlaalu. We cannot allow you to join.",
+    "Filters": [],
+    "Script": []
+  },
+  "10687175821385616052": {
+    "Prev": "21226244741216515056",
+    "Next": "3227626127705516778",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "Sadrith Mora, Telvanni Council House",
+    "PlayerFaction": "Redoran",
+    "Text": "Of course you wish to join our Great House. But you already belong to House Redoran. We cannot allow you to join.",
+    "Filters": [],
+    "Script": []
+  },
+  "3227626127705516778": {
+    "Prev": "10687175821385616052",
+    "Next": "89714850197875326",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "Sadrith Mora, Telvanni Council House",
+    "PlayerFaction": "",
+    "Text": "I have heard you were expelled. But it is a simple matter to correct. Reflect on your misdeeds and speak with me again when you are ready.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "PCClearExpelled",
+      "Goodbye"
+    ]
+  },
+  "89714850197875326": {
+    "Prev": "3227626127705516778",
+    "Next": "1439712201918822713",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "Sadrith Mora, Telvanni Council House",
+    "PlayerFaction": "",
+    "Text": "You have already joined House Telvanni. Your decision is not reversible.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1439712201918822713": {
+    "Prev": "89714850197875326",
+    "Next": "1824988641169625693",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Speak with my Mouth at the Telvanni Council House in Sadrith Mora.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1824988641169625693": {
+    "Prev": "1439712201918822713",
+    "Next": "21822175281023014429",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "Sadrith Mora, Telvanni Council House",
+    "PlayerFaction": "",
+    "Text": "Yes, you may be a worthy candidate. Would you like to join?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "RankRequirement",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, I want to join.\" 2 \"No, nevermind.\" 3"
+    ]
+  },
+  "21822175281023014429": {
+    "Prev": "1824988641169625693",
+    "Next": "2435311565480812037",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "Sadrith Mora, Telvanni Council House",
+    "PlayerFaction": "",
+    "Text": "I regret to inform you that you do not meet our high standards. If you passed even the minimum requirements, perhaps we would reconsider.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2435311565480812037": {
+    "Prev": "21822175281023014429",
+    "Next": "1329424998300063402",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "Sadrith Mora, Telvanni Council House",
+    "PlayerFaction": "",
+    "Text": "You must speak with one of the Mouths.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1329424998300063402": {
+    "Prev": "2435311565480812037",
+    "Next": "27239211021810691",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "Sadrith Mora",
+    "PlayerFaction": "",
+    "Text": "Speak with the Mouths in the Telvanni Council Hall.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "27239211021810691": {
+    "Prev": "1329424998300063402",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go to Sadrith Mora and speak with the Mouths in the Telvanni Council Hall.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

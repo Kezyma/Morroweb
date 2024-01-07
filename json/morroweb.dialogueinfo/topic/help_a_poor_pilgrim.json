@@ -1,0 +1,212 @@
+{
+  "1014823998936411752": {
+    "Prev": "",
+    "Next": "106626729589614645",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fonus rathryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for your help.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_PoorPilgrim",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "106626729589614645": {
+    "Prev": "1014823998936411752",
+    "Next": "18841244891597816788",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fonus rathryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I need to get there as soon as possible.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_PoorPilgrim",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "NotEqual",
+        "Id": "MV_PoorPilgrim",
+        "Value": 23.0
+      }
+    ],
+    "Script": []
+  },
+  "18841244891597816788": {
+    "Prev": "106626729589614645",
+    "Next": "309231431952022127",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fonus rathryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent! Let us be on our way then. It's on the western shore, so we must hurry.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_PoorPilgrim",
+        "Value": 23.0
+      }
+    ],
+    "Script": [
+      "journal \"MV_PoorPilgrim\" 24",
+      "\"Fonus Rathryon\"->AiFollow, Player, 0 0 0 0 0 0"
+    ]
+  },
+  "309231431952022127": {
+    "Prev": "18841244891597816788",
+    "Next": "2844820962548420459",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fonus rathryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent! Let us be on our way then. It's on the western shore, so we must hurry.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "journal \"MV_PoorPilgrim\" 20",
+      "\"Fonus Rathryon\"->AiFollow, Player, 0 0 0 0 0 0"
+    ]
+  },
+  "2844820962548420459": {
+    "Prev": "309231431952022127",
+    "Next": "17999150131453115356",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fonus rathryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? Well, maybe I'll find someone else who'll be able to help me out.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "journal \"MV_PoorPilgrim\" 23",
+      "Goodbye"
+    ]
+  },
+  "17999150131453115356": {
+    "Prev": "2844820962548420459",
+    "Next": "2672126521573514293",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fonus rathryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I still need to get to Koal Cave. Are you sure you won't help me?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_PoorPilgrim",
+        "Value": 23.0
+      }
+    ],
+    "Script": [
+      "Choice \"I can escort you to Koal Cave.\" 1 \"I'm sorry. I cannot help you.\" 2"
+    ]
+  },
+  "2672126521573514293": {
+    "Prev": "17999150131453115356",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fonus rathryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've been trying to get to Ruddy Man, but I've lost my way. If you would be so kind as to help, I can pay you 150 septims upon our arrival. I need to get there rather quickly, though. I'm on a pilgrimage, and there are others I must meet there. I must be at Ruddy Man, in Koal Cave, within two days. Can you help?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_PoorPilgrim",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "journal \"MV_PoorPilgrim\" 10",
+      "Choice \"I can escort you to Koal Cave.\" 1 \"I'm sorry. I cannot help you.\" 2"
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "1915457372872124847": {
+    "Prev": "",
+    "Next": "19737113301854929492",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Buoyant Armiger",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ghostgate",
+    "PlayerFaction": "",
+    "Text": "All our intelligence is old. No one has ventured far inside the fence for years. Sixth House creatures have become more numerous and powerful, and the most powerful can conjure powerful daedra. Until recently, we've been able to clear routes and keep them clean with raids, but no longer. There are no safe refuges or services inside the fence; you must return here to rest and heal. I'm sorry. That's all we can tell you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "C0_Act_C_Expo",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "19737113301854929492": {
+    "Prev": "1915457372872124847",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Buoyant Armiger",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ghostgate",
+    "PlayerFaction": "",
+    "Text": "All our intelligence is old. No one has ventured far inside the fence for years. This map shows the locations of the citadels of the various ash vampires. Sixth House creatures have become more numerous and powerful, and the most powerful can conjure powerful daedra. Until recently, we've been able to clear routes and keep them clean with raids, but no longer. There are no safe refuges or services inside the fence; you must return here to rest and heal.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B8_MeetVivec",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "player->additem \"bk_red_mountain_map\" 1",
+      "Journal C0_Act_C_Expo 1"
+    ]
+  }
+}

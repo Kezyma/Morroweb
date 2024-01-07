@@ -1,0 +1,165 @@
+{
+  "82913059060309922": {
+    "Prev": "",
+    "Next": "1763912569203847298",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already purchased Davina. I hope you are satisfied with her work.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "davinaBought",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1763912569203847298": {
+    "Prev": "82913059060309922",
+    "Next": "100781054114564566",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I just heard that Davina met with a small accident while waiting for sale. I'm afraid she is no longer available.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "davina",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "100781054114564566": {
+    "Prev": "1763912569203847298",
+    "Next": "16212155803018311111",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Davina is now yours. I will have her brought forth from the slavepit. She should be waiting just inside.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 1000.0
+      }
+    ],
+    "Script": [
+      "Set davinaBought to 1",
+      "Player->RemoveItem Gold_001 1000",
+      "AddItem Gold_001 1000",
+      "\"Davina\"->PositionCell 1030 -2660 180 180 \"Tel Aruhn, Underground\"",
+      "Set \"Davina\".slaveStatus to 2"
+    ]
+  },
+  "16212155803018311111": {
+    "Prev": "100781054114564566",
+    "Next": "1138218748223143540",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sorry but you don't have enough gold to afford my fine slaves.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1138218748223143540": {
+    "Prev": "16212155803018311111",
+    "Next": "536523139115938165",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Come back when you change your mind.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "536523139115938165": {
+    "Prev": "1138218748223143540",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Redguards make fine servants. Especially Redguard women. They are just as hardy as the men, but less rebellious. She is 1000 drakes just like the others.",
+    "Filters": [],
+    "Script": [
+      "Choice \"Buy the slave.\" 1 \"Nevermind.\" 2"
+    ]
+  }
+}

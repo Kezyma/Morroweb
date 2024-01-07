@@ -1,0 +1,381 @@
+{
+  "89222114916371662": {
+    "Prev": "",
+    "Next": "2650027256273228486",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ahnassi has just one care she wants to share. Ahnassi hopes her VERY special friend will stay close to Ahnassi and never go away. Ahnassi worries, because Ahnassi looks forward to seeing you so much.... But Ahnassi understands. And Ahnassi is very busy, too. So Ahnassi is happy when she is busy, and happy when she sees you, and that is enough happiness for anyone.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "2650027256273228486": {
+    "Prev": "89222114916371662",
+    "Next": "2423826292815514708",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We mustn't keep meeting here in this old cornerclub. At Ahnassi's house, Ahnassi can show her VERY special friend some good, old-fashioned Khajiit hospitality. It's the house here in Pelagiad, across the street from the Halfway, by the fort wall, off the street, with the stone fences nearby. Here. You'll need the key. If you come by the Halfway again, and I'm not here, I'll be at the house.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 75.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->additem \"key_Ahnassi\" 1",
+      "Journal Romance_Ahnassi 80",
+      "\"J'Dhannar\"->disable",
+      "StartScript MoveAhnassi",
+      "modDisposition 10"
+    ]
+  },
+  "2423826292815514708": {
+    "Prev": "2650027256273228486",
+    "Next": "91719850162218439",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A friend tells Ahnassi that J'Dhannar has left Vivec to return to Elsweyr. She says that he looks well, and that he has stopped using sugar. Ahnassi is not sorry that she is free of her bond with J'Dhannar, but Ahnassi is very happy that he seems to be better. Ahnassi is VERY grateful to her VERY special friend. And Ahnassi hopes that her VERY special friend will come visit her at Ahnassi's house here in Pelagiad.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 75.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  },
+  "91719850162218439": {
+    "Prev": "2423826292815514708",
+    "Next": "16123263381688426896",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ahnassi understands all too well. Ahnassi has tried, and failed. Ahnassi thanks her true and good friend anyway, thanks for sharing her care. For what are friends for, but to share each others cares?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 45.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "16123263381688426896": {
+    "Prev": "91719850162218439",
+    "Next": "205919661329221389",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ahnassi understands all too well. Ahnassi has tried, and failed. Cure skooma addict? It can't be done. But Ahnassi sees something in her true and good friend, something that says the things that can't be done might be done. And it gives Ahnassi hope. Ahnassi's mate is called J'Dhannar, and he lives where he can in St. Olms Canton. Please find him, and persuade him to give up the sugar.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 45.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal Romance_Ahnassi 65",
+      "addtopic \"cure skooma addict\""
+    ]
+  },
+  "205919661329221389": {
+    "Prev": "16123263381688426896",
+    "Next": "208792841818980",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "After you are so good to Ahnassi, Ahnassi is ashamed to ask. And Ahnassi feels strange telling her good friend this thing. But Ahnassi has a mate. Once Ahnassi loves him very much. But now, this mate is a slave to skooma. Ahnassi no longer loves him, but once one has been in your blood, there is shared blood forever. Ahnassi begs him to abandon the skooma, but he will not. Ahnassi knows not what to do. Can you help Ahnassi? Can you persuade this foolish mate to give up his skooma?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 45.0
+      }
+    ],
+    "Script": [
+      "Choice \"I don't know, but I will try.\" 1 \"I'm sorry, but I don't think I can succeed where you have failed.\" 2"
+    ]
+  },
+  "208792841818980": {
+    "Prev": "205919661329221389",
+    "Next": "27780212171067528311",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ahnassi thanks you again and again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 45.0
+      }
+    ],
+    "Script": []
+  },
+  "27780212171067528311": {
+    "Prev": "208792841818980",
+    "Next": "15039161481941710809",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ahnassi is safe? This bad person is no more? If you get a price on your head for helping Ahnassi, Ahnassi calls in all her favors, gets this fixed. Promise. Ahnassi thanks you with her hands, her lips, her heart. You are not just a new friend, %PCName. You are a good friend, and true friend. Now Ahnassi can share a gift, a special gift she has found for her true and good friend.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 40.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "daren adryn",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal Romance_Ahnassi 45",
+      "SetPCCrimeLevel 0",
+      "modDisposition 20"
+    ]
+  },
+  "15039161481941710809": {
+    "Prev": "27780212171067528311",
+    "Next": "675710523272372743",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ahnassi is worried and afraid, new friend, but Ahnassi understands, must be patient. New friend %PCName says he will take care of the bad person for Ahnassi, and Ahnassi knows he will keep his word.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "675710523272372743": {
+    "Prev": "15039161481941710809",
+    "Next": "16065291001071126082",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are kind to listen, %PCName. Ahnassi thanks you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 30.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal Romance_Ahnassi 33"
+    ]
+  },
+  "16065291001071126082": {
+    "Prev": "675710523272372743",
+    "Next": "36152103399286957",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are too kind, %PCName. Ahnassi knows she places great burden on new friend, but Ahnassi cannot fight, cannot shed blood, she has sworn such an oath. Ahnassi tries to be good, but Ahnassi thinks now she is in great danger. This bad person, Daren Adryn, a Dark Elf, he is Camonna Tong bigwig in Gnaar Mok. He is found at Nadene Rotheran's Shack. Ahnassi is so ashamed that she asks a life, a very great gift, from her new friend, but Ahnassi has no one else.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 30.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal Romance_Ahnassi 40",
+      "\"Daren Adryn\"->enable",
+      "addtopic ahnassi"
+    ]
+  },
+  "36152103399286957": {
+    "Prev": "16065291001071126082",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Forgive Ahnassi. Ahnassi is so ashamed, to ask her new friend to share such a care. But Ahnassi is afraid, very afraid. This dustman, bad person, he frightens Ahnassi. He comes, tells Ahnassi there is no more Thieves Guild, there is just Camonna Tong, and Ahnassi will join Camonna Tong, and be 'protected.' Otherwise, unless Ahnassi is 'protected', Ahnassi might get hurt. This dustman, he talks quiet, but very mean. Ahnassi is so sorry, sorry to trouble her new friend. But Ahnassi is scared.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Choice \"Offer to take care of the bad person for Ahnassi.\" 1 \"Express concern, but make no commitment.\" 2"
+    ]
+  }
+}

@@ -1,0 +1,312 @@
+{
+  "1415222945102534996": {
+    "Prev": "",
+    "Next": "1134621824134899520",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fevyn ralen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't want to see that little brat again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_Invisible",
+        "Value": 70.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "NotEqual",
+        "Id": "EB_Invisible",
+        "Value": 80.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "NotEqual",
+        "Id": "EB_Invisible",
+        "Value": 90.0
+      }
+    ],
+    "Script": []
+  },
+  "1134621824134899520": {
+    "Prev": "1415222945102534996",
+    "Next": "13827143292579016616",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fevyn ralen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard his father gave you the money to pay his debt. Return when you actually have it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_Invisible",
+        "Value": 90.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "Gold_001",
+        "Value": 400.0
+      }
+    ],
+    "Script": []
+  },
+  "13827143292579016616": {
+    "Prev": "1134621824134899520",
+    "Next": "53866192621123505",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fevyn ralen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's good that his father is paying off the debt. Makes sense, I suppose. Well, I'll remove the spell. From all I've heard, his father is an honest man, and I've no problem with him.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_Invisible",
+        "Value": 90.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 400.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Invisible\" 100",
+      "Player->RemoveItem \"Gold_001\" 400",
+      "AddItem \"Gold_001\" 400",
+      "\"Cassius Olcinius\"->RemoveSpell \"chameleon_100_unique\""
+    ]
+  },
+  "53866192621123505": {
+    "Prev": "13827143292579016616",
+    "Next": "259167841963830948",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fevyn ralen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, he should. He's an idiot. A harmless idiot, but an idiot nonetheless.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Invisible\" 80"
+    ]
+  },
+  "259167841963830948": {
+    "Prev": "53866192621123505",
+    "Next": "1922214682341318268",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fevyn ralen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You want to pay the debt? Fine with me. I'll remove the spell. But I don't want to see the little fool back here again any time soon.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 400.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Invisible\" 70",
+      "\"Cassius Olcinius\"->RemoveSpell \"chameleon_100_unique\"",
+      "Player->RemoveItem \"Gold_001\" 400",
+      "AddItem \"Gold_001\" 400"
+    ]
+  },
+  "1922214682341318268": {
+    "Prev": "259167841963830948",
+    "Next": "192622284101972085",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fevyn ralen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He still owes me 400 septims. I haven't even charged interest on the debt, because I don't believe the little fool would understand what it meant. You can pay the debt yourself, if you wish.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 400.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Invisible",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Choice \"I'll pay the debt for him.\" 1 \"He should learn to pay his own debts.\" 2"
+    ]
+  },
+  "192622284101972085": {
+    "Prev": "1922214682341318268",
+    "Next": "185240441343718954",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fevyn ralen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He still owes me 400 septims. I haven't even charged interest on the debt, because I don't believe the little fool would understand what it meant.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "Gold_001",
+        "Value": 400.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Invisible",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Choice \"He should learn to pay his own debts.\" 2"
+    ]
+  },
+  "185240441343718954": {
+    "Prev": "192622284101972085",
+    "Next": "6607131942262019218",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lucretinaus olcinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A debt to that wizard? Foolish boy. The number of times I've heard about stupid things Cassius Olcinius has done would turn your head.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_Invisible",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "6607131942262019218": {
+    "Prev": "185240441343718954",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lucretinaus olcinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Cassius did what??? What??? Oh, that foolish boy. Still, he's mine, and I do love him. Here, take this money and repay his debt for me. It amazes me what young people will do sometimes.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Invisible",
+        "Value": 90.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "NotEqual",
+        "Id": "EB_Invisible",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Invisible\" 90",
+      "Player->AddItem \"Gold_001\" 400",
+      "RemoveItem \"Gold_001\" 400"
+    ]
+  }
+}

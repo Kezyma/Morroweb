@@ -1,0 +1,361 @@
+{
+  "22114153821637422948": {
+    "Prev": "",
+    "Next": "215926180705322733",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled. I cannot discuss business with you unless you make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "215926180705322733": {
+    "Prev": "22114153821637422948",
+    "Next": "1318212078173735783",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There's been alot of merchants around here killed recently. I hope the guards catch whoever is responsible.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_GuardMerchant",
+        "Value": 200.0
+      }
+    ],
+    "Script": []
+  },
+  "1318212078173735783": {
+    "Prev": "215926180705322733",
+    "Next": "46509113264814047",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I doubt the thieves will return soon.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_GuardMerchant",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "46509113264814047": {
+    "Prev": "1318212078173735783",
+    "Next": "11167198081240130098",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ralen Tilvur is dead? I suppose the thief killed him, then. I may have other business for you.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "ralen tilvur",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "HH_GuardMerchant",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HH_GuardMerchant 200"
+    ]
+  },
+  "11167198081240130098": {
+    "Prev": "46509113264814047",
+    "Next": "114013482512832344",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard of Ralen Tilvur's death. I believe you are the one that killed him. I do not believe we have any more business to discuss.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "ralen tilvur",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_GuardMerchant",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "114013482512832344": {
+    "Prev": "11167198081240130098",
+    "Next": "2972026294916613493",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for protecting Ralen Tilvur. Take these 1000 drakes as a reward from House Hlaalu.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "drarel andus",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_GuardMerchant",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal HH_GuardMerchant 100",
+      "Player->AddItem Gold_001 1000",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 10",
+      "Player->ModReputation 1"
+    ]
+  },
+  "2972026294916613493": {
+    "Prev": "114013482512832344",
+    "Next": "32448320552425730362",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ralen Tilvur told me that you let the thief escape. Perhaps you are not as loyal to House Hlaalu as I thought.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_GuardMerchant",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "\"Drarel Andus\"->Disable"
+    ]
+  },
+  "32448320552425730362": {
+    "Prev": "2972026294916613493",
+    "Next": "454720291152571840",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As I said, thieves have broken into his shop three nights in a row. I suspect they will try again tonight. His shop is in the Plaza of the Foreign Quarter here in Vivec. Go there and kill any thieves that arrive.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_SunkenTreasure",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HH_GuardMerchant 10"
+    ]
+  },
+  "454720291152571840": {
+    "Prev": "32448320552425730362",
+    "Next": "24036187181628124891",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ralen tilvur",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's me.",
+    "Filters": [],
+    "Script": []
+  },
+  "24036187181628124891": {
+    "Prev": "454720291152571840",
+    "Next": "2909521669412311605",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drarel andus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He's a fool, %PCRace. Stand aside and let me get on with my work.",
+    "Filters": [],
+    "Script": []
+  },
+  "2909521669412311605": {
+    "Prev": "24036187181628124891",
+    "Next": "8099158541905817591",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec, Foreign Quarter Plaza",
+    "PlayerFaction": "",
+    "Text": "His shop is on the southeast side of the plaza.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "8099158541905817591": {
+    "Prev": "2909521669412311605",
+    "Next": "1319364376321310",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec, Foreign Quarter",
+    "PlayerFaction": "",
+    "Text": "His shop is in the Plaza here in the Foreign Quarter.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1319364376321310": {
+    "Prev": "8099158541905817591",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec",
+    "PlayerFaction": "",
+    "Text": "You'll find his shop in the Plaza of the Foreign Quarter.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "97479321293336398": {
+    "Prev": "",
+    "Next": "22085548745848909",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Nerile Andaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's good that you dealt with her before she could spread her pestilence across our city.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_CrimsonPlague",
+        "Value": 170.0
+      }
+    ],
+    "Script": []
+  },
+  "22085548745848909": {
+    "Prev": "97479321293336398",
+    "Next": "1352109022775416257",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Nerile Andaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The old sorceress' plans have been thwarted.  She won't trouble us again, thanks to you, %PCName. And with the spread of the disease on the decline, I think I can finally take a break from work. There isn't much I can offer you, %PCName, but I shall grant you some small amount of healing power. I hope that you will not often find occasion to use it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_CrimsonPlague",
+        "Value": 150.0
+      }
+    ],
+    "Script": [
+      "player->addspell \"grace of almsivi\"",
+      "Journal MS_CrimsonPlague 170"
+    ]
+  },
+  "1352109022775416257": {
+    "Prev": "22085548745848909",
+    "Next": "2443018671281705114",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Nerile Andaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've heard enough about her to be scared.  A powerful sorceress, condemned for studying and practicing forbidden magics.  I knew she was laid to rest somewhere under Mournhold many years ago, but I don't think anyone knew she had the power to cheat death itself!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_CrimsonPlague",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "2443018671281705114": {
+    "Prev": "1352109022775416257",
+    "Next": "1286566482956031220",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Shunari Eye-Fly",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Gedna Relvel is dead this time, yes? And there is no more treasure to be found? Then Shunari has no reason to stay. %PCName should go tell Nerile Andaren that lich is gone. Shunari will not forget what %PCName has done, though her path may not cross %PCName's again. Farewell.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_CrimsonPlague",
+        "Value": 150.0
+      }
+    ],
+    "Script": [
+      "Journal MS_CrimsonPlague 160",
+      "Goodbye"
+    ]
+  },
+  "1286566482956031220": {
+    "Prev": "2443018671281705114",
+    "Next": "2927739391859813349",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Shunari Eye-Fly",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Shunari has not seen anyone leave the tomb since %PCName arrived last.  Shunari thinks Gedna Relvel must still be in there. Shunari also thinks %PCName should be looking for her, rather than out here talking.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_CrimsonPlague",
+        "Value": 130.0
+      }
+    ],
+    "Script": []
+  },
+  "2927739391859813349": {
+    "Prev": "1286566482956031220",
+    "Next": "226671492878046162",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Shunari Eye-Fly",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Shunari is scared once she catches bad disease, and wants only to get away from evil lich. So Shunari does not see how secret passage in tomb works. But Shunari will tell %PCName what she has seen of it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_CrimsonPlague",
+        "Value": 120.0
+      }
+    ],
+    "Script": []
+  },
+  "226671492878046162": {
+    "Prev": "2927739391859813349",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Shunari Eye-Fly",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Shunari has said that she watched %PCName open tomb. Shunari has often wondered what treasure lays in tomb, but door is too heavy. Shunari cannot open it. So when %PCName leaves, Shunari goes in for a look. She finds corpse in coffin, but corpse gets up and attacks! Poor Shunari can do nothing to fight it. It says it is Gedna Relvel, and has come to spread Crimson Plague to all of Mournhold. Even though Shunari feels ill, she comes to find %PCName for help!",
+    "Filters": [],
+    "Script": []
+  }
+}

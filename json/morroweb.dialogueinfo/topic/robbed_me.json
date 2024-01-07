@@ -1,0 +1,121 @@
+{
+  "423029444475312945": {
+    "Prev": "",
+    "Next": "20763273143961623",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athanden girith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It was those damned Ashlanders, I tell you. Took my guar hides! I'll teach them to steal Athanden Girith's guar hides!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_OutcastAshlanders",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_OutcastAshlanders",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "20763273143961623": {
+    "Prev": "423029444475312945",
+    "Next": "28434250861022425021",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athanden girith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent. Go get those bastard Ashlanders. I promise, when you get those hides back to me, Berwen will be very generous. She has a stake in this trade, after all, and we can't let an unwarranted attack on a guar hide trader ruin business.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_OutcastAshlanders\" 30"
+    ]
+  },
+  "28434250861022425021": {
+    "Prev": "20763273143961623",
+    "Next": "48797672435519363",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athanden girith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Figures. No one left in this world willing to help an honest trader.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_OutcastAshlanders\" 40"
+    ]
+  },
+  "48797672435519363": {
+    "Prev": "28434250861022425021",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athanden girith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, the bastard n'wahs nearly killed me, and they took my entire shipment of guar hides. It's easy to tell they're mine; they have my damn mark on them! Look, if you can help me get those hides back, and kill the fetchers who stole them, I promise you an excellent reward. Although I have nothing left since I was attacked, my friend Berwen in Tel Mora will be most generous, I promise you. What do you say?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MV_OutcastAshlanders",
+        "Value": 25.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_OutcastAshlanders\" 20",
+      "AddTopic \"Girith's guar hides\"",
+      "Choice \"I'll see if I can find your hides for you.\" 1 \"I'm sorry. You'll have to find them yourself.\" 2"
+    ]
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "475290221420416518": {
+    "Prev": "",
+    "Next": "5867207951338617451",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Apronia Alfena",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, don't be silly. You've already brought me here; where else would we go? I think I've seen quite enough of the woods, thank you, and one can only look at snow and rocks and dirt for so long before one decides she's seen enough to last her the rest of her life. Of course, I'm desperately trying to politely tell you that I'm not going anywhere else on the island; you do understand that, don't you?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_3b",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "5867207951338617451": {
+    "Prev": "475290221420416518",
+    "Next": "256023045298251598",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Apronia Alfena",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Okay, let's go then. I really do want to get warm and dry, and I'm hoping you're taking me someplace where I can do that. I figure you must be from either the colony or the fort, and either one of those options is fine. I mean, where else could you have come from? Some strange little hut in the woods? Ha ha - that sure would be odd, wouldn't it! What kind of person just lives in the woods all alone? Oh, sorry. Are we going now?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "AiFollow Player 0 0 0 0 0"
+    ]
+  },
+  "256023045298251598": {
+    "Prev": "5867207951338617451",
+    "Next": "22559162171115612093",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Apronia Alfena",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Wait here? You mean right here? Because, I mean, if I have to wait for a long time, I might get even colder. Or, if I have to wait for a really long time, I might have to... well, you know... I mean, a person can only hold out for so long, right? And I'd hate to think that you were going to leave me here for that long, but maybe you need to. I don't know; I'm no wilderness, forest expert type. So I'll just wait here, I guess, and you tell me when I can go with you, okay?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 10 10 10 0 0 0 0 0 0"
+    ]
+  },
+  "22559162171115612093": {
+    "Prev": "256023045298251598",
+    "Next": "315296961007521657",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Apronia Alfena",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Is something wrong? Do I need to wait here or something? I really hope you don't leave me alone, because it's so cold, and I'm just sure there are even worse things than those horrible monsters back at the ship, and I just don't know what I'd do all by myself, and I just really, really need someone to keep me company and talk to me. So what is it?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_3b",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Nevermind. Follow me.\" 3 \"Wait here.\" 4"
+    ]
+  },
+  "315296961007521657": {
+    "Prev": "22559162171115612093",
+    "Next": "2932959192816324968",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Apronia Alfena",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, thank you! There isn't even any food left to survive on - most of the supplies are gone... Well, I guess you should just take me to whomever your boss is. I mean, I hope you're not offended that I'm assuming that you're not the boss; it's just that people that tend to be bosses of things don't usually wander around the countryside looking for people to help. They send other people out to do those sort of things, don't they? Hey, how come we're not going anywhere yet?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AiFollow Player 0 0 0 0 0",
+      "Journal CO_3b 10",
+      "Goodbye"
+    ]
+  },
+  "2932959192816324968": {
+    "Prev": "315296961007521657",
+    "Next": "2804185343276318359",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Apronia Alfena",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What? You must be joking. You're seriously going to leave me out here? But I'll die!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "2804185343276318359": {
+    "Prev": "2932959192816324968",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Apronia Alfena",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, you just can't leave me. No one would be that heartless. I'd freeze to death out here! I don't know what I was thinking, hitching a ride on a supply ship in the first place. Who appoints a Wood Elf captain of a ship? I should've known better. And then that horrible crash.... And now they're all dead, and the supplies are ruined, and I just want to get warm. Oh, please take me with you...",
+    "Filters": [],
+    "Script": [
+      "Choice: \"Follow me.\" 1 \"I'm sorry, I can't take you anywhere.\" 2"
+    ]
+  }
+}

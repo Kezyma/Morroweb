@@ -1,0 +1,152 @@
+{
+  "265731538651344893": {
+    "Prev": "",
+    "Next": "24136205242319227690",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "antonius nuncius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you. Thank you so much. Look, take this key. You'll find all of the misplaced liquor in the closet. The troops will be happy to have it again. I'm sure they'll be more than happy to talk to you. Just don't tell them what I did.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Morale 93",
+      "ModDisposition 30",
+      "Player->AddItem key_nuncius 1"
+    ]
+  },
+  "24136205242319227690": {
+    "Prev": "265731538651344893",
+    "Next": "362532767723326978",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "antonius nuncius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm finished. I'll never leave this island now. At least not alive. Carius will have my head! What have you done? I hope you're happy, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Morale 95",
+      "ModDisposition -30"
+    ]
+  },
+  "362532767723326978": {
+    "Prev": "24136205242319227690",
+    "Next": "10342124991279419428",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "antonius nuncius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, I have no idea.... You've been in my desk? My desk? You've been in there? Why...that's an outrage! Stolen liquor? I have no idea.... All right. Perhaps I have been hiding the alcohol. It was for their own good! And...I had hoped that if the soldiers got fed up and revolted, I'd be able to justify going home to my superiors. Look, I don't want any trouble from you.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "FoundBooze",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Morale",
+        "Value": 90.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Morale 90",
+      "Choice \"I'll need to report this to Carius.\" 1 \"Your secret is safe with me.\" 2"
+    ]
+  },
+  "10342124991279419428": {
+    "Prev": "362532767723326978",
+    "Next": "677637451945419460",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "antonius nuncius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I think we've said all there is to say about that.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 90.0
+      }
+    ],
+    "Script": []
+  },
+  "677637451945419460": {
+    "Prev": "10342124991279419428",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "antonius nuncius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, I have no idea why. I am but a simple priest, forced to serve these pathetic soldiers on this terrible frozen excuse for an island. It's not my concern why the alcohol hasn't arrived. You have no proof I've done anything wrong. Stop asking me these questions!",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "FoundBooze",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Morale 70",
+      "Goodbye"
+    ]
+  }
+}

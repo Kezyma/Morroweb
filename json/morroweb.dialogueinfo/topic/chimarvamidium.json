@@ -1,0 +1,599 @@
+{
+  "20608132533194415424": {
+    "Prev": "",
+    "Next": "10816281271963926775",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you still a member of the guild? Once Trebonius gives the authorization, we can discuss guild matters again.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "10816281271963926775": {
+    "Prev": "20608132533194415424",
+    "Next": "301628958197732380",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Were you expelled? Or did you clear that up already? You ought to make amends with Guildmaster Trebonius just to be sure.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "301628958197732380": {
+    "Prev": "10816281271963926775",
+    "Next": "2562925961188227134",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled, %PCName. If you want to make amends, you should speak with Guildmaster Trebonius.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2562925961188227134": {
+    "Prev": "301628958197732380",
+    "Next": "7967257031745615915",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "While Chimarvamidium was not as useful as I'd hoped, I do appreciate your efforts.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_ReturnBook",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "7967257031745615915": {
+    "Prev": "2562925961188227134",
+    "Next": "9005325072360828695",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "The book has been returned? Good work, %PCRank. Once I know the locations of some Dwemer ruins, I will be asking you to travel to some dangerous places. These amulets will help you return to safety.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_ReturnBook",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Journal MG_ReturnBook 100",
+      "Player->AddItem \"amulet of almsivi intervention\" 1",
+      "Player->AddItem \"amulet of divine intervention\" 1",
+      "ModDisposition 10",
+      "ModPCFacRep 5 \"Mages Guild\"",
+      "Player->ModReputation 1"
+    ]
+  },
+  "9005325072360828695": {
+    "Prev": "7967257031745615915",
+    "Next": "3116585172347815368",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "The book has been returned? Good work, %PCRank. Once I know the locations of some Dwemer ruins, I will be asking you to travel to some dangerous places. These amulets will help you return to safety.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "bookInBox",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_ReturnBook",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal MG_ReturnBook 100",
+      "Player->AddItem \"amulet of almsivi intervention\" 1",
+      "Player->AddItem \"amulet of divine intervention\" 1",
+      "ModDisposition 10",
+      "ModPCFacRep 5 \"Mages Guild\"",
+      "Player->ModReputation 1"
+    ]
+  },
+  "3116585172347815368": {
+    "Prev": "9005325072360828695",
+    "Next": "3226130213217323029",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Like I said, take Chimarvamidium back to the Mages Guild in Vivec. Make sure you put it back exactly where you found it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_ReturnBook",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "3226130213217323029": {
+    "Prev": "3116585172347815368",
+    "Next": "3142786131015527436",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Can you believe this isn't about a Dwemer construct at all? This book was completely useless. In any case, I need you to return the book before Sirilonwe suspects anything. Return the book to wherever you found it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Apprentice",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem \"BookSkill_Heavy Armor3\" 1",
+      "Journal MG_ReturnBook 10"
+    ]
+  },
+  "3142786131015527436": {
+    "Prev": "3226130213217323029",
+    "Next": "5490629691824586",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I have not had a chance to study the book. Have patience, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_StealBook",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "5490629691824586": {
+    "Prev": "3142786131015527436",
+    "Next": "19536233231307613985",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Thank you, %PCName. I will return the book to you soon, but in the meantime, I have more duties for you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem \"BookSkill_Heavy Armor3\" 1",
+      "Set bookInBox to 0",
+      "Journal MG_StealBook 100",
+      "ModPCFacRep 5 \"Mages Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "19536233231307613985": {
+    "Prev": "5490629691824586",
+    "Next": "9879185852540730290",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "That is very disappointing, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "9879185852540730290": {
+    "Prev": "19536233231307613985",
+    "Next": "5804296551948310830",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "You have a copy of Chimarvamidium? Will you let me borrow the book?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "BookSkill_Heavy Armor3",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give her the book.\" 1 \"Keep the book.\" 2"
+    ]
+  },
+  "5804296551948310830": {
+    "Prev": "9879185852540730290",
+    "Next": "31812295352530630784",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Just go to the Mages Guild in Vivec, find the book Chimarvamidium, and return it to me. I'm certain that Sirilonwe has a copy, though she may claim otherwise.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_StealBook",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "31812295352530630784": {
+    "Prev": "5804296551948310830",
+    "Next": "1652913482890628649",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you, %PCName. Sirilonwe probably keeps the book near her in the Mages Guild in Vivec. Do whatever it takes to get the book and then return it to me. If you're caught stealing, of course, it is a crime against the guild, so be careful. And take these scrolls just in case.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal MG_StealBook 10",
+      "Player->AddItem sc_ondusisunhinging 2"
+    ]
+  },
+  "1652913482890628649": {
+    "Prev": "31812295352530630784",
+    "Next": "1856324162712123337",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Don't think of it as breaking your oath to the Guild, %PCName. It is just a small favor. For the advancement of the art and science of magic. If you're caught, of course, you will have to accept the consequences.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": []
+  },
+  "1856324162712123337": {
+    "Prev": "1652913482890628649",
+    "Next": "4493228852761410466",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "It is the sixth volume of Marobar Sul's \"Ancient Tales of the Dwemer.\" Most of the \"Ancient Tales\" are not truly Dwemer in origin, but this one may be an exception. It deals with some sort of golem or centurion. Would you be willing to \"borrow\" this book for me?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Potion",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes.\" 3 \"No.\" 4"
+    ]
+  },
+  "4493228852761410466": {
+    "Prev": "1856324162712123337",
+    "Next": "22591291781434814289",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sirilonwe",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Thank you. I won't forget this. Just a suggestion... Keep quiet about this book, %PCName. Some members of the Mages Guild can be very jealous.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_ReturnBook",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem \"BookSkill_Heavy Armor3\" 1",
+      "AddItem \"BookSkill_Heavy Armor3\" 1",
+      "Journal MG_ReturnBook 30",
+      "ModDisposition 20"
+    ]
+  },
+  "22591291781434814289": {
+    "Prev": "4493228852761410466",
+    "Next": "123721910514845403",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sirilonwe",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Thank you. I won't forget this. Just a suggestion... Keep quiet about this book, %PCName. Some members of the Mages Guild can be very jealous.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem \"BookSkill_Heavy Armor3\" 1",
+      "AddItem \"BookSkill_Heavy Armor3\" 1",
+      "ModDisposition 20"
+    ]
+  },
+  "123721910514845403": {
+    "Prev": "22591291781434814289",
+    "Next": "436019758954820477",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sirilonwe",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "That is most unfortunate, %PCRank. I thought you would be willing to assist a fellow Guild member.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "436019758954820477": {
+    "Prev": "123721910514845403",
+    "Next": "85223887638232106",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sirilonwe",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "How did you... I mean where did you get a copy of Chimarvamidium? I've been looking for this book. Perhaps you'd be willing to part with it?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "BookSkill_Heavy Armor3",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give her the book.\" 1 \"Keep the book.\" 2"
+    ]
+  },
+  "85223887638232106": {
+    "Prev": "436019758954820477",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sirilonwe",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Why, I've never heard of such a book...",
+    "Filters": [],
+    "Script": []
+  }
+}

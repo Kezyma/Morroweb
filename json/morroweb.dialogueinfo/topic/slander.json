@@ -1,0 +1,623 @@
+{
+  "1398821163861526653": {
+    "Prev": "",
+    "Next": "343022925183914544",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "meril hlaano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I said I was sorry already. Just leave me alone.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_HlaanoSlanders",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "343022925183914544": {
+    "Prev": "1398821163861526653",
+    "Next": "24947188951810428436",
+    "Type": "Topic",
+    "Disposition": 75,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "meril hlaano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Okay, okay. I, Meril Hlaano, withdraw the statements I made against House Redoran. There. I said it. Happy?",
+    "Filters": [],
+    "Script": [
+      "Journal HR_HlaanoSlanders 50"
+    ]
+  },
+  "24947188951810428436": {
+    "Prev": "343022925183914544",
+    "Next": "994280566571240",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "meril hlaano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Don't make me mad, %PCName, or I'll say what I think of you, too.",
+    "Filters": [],
+    "Script": []
+  },
+  "994280566571240": {
+    "Prev": "24947188951810428436",
+    "Next": "11620320892692418139",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "meril hlaano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Make me.",
+    "Filters": [],
+    "Script": []
+  },
+  "11620320892692418139": {
+    "Prev": "994280566571240",
+    "Next": "1635836611303026771",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The matter is closed.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_HlaanoSlanders",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1635836611303026771": {
+    "Prev": "11620320892692418139",
+    "Next": "12197115281836728675",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "By killing Meril Hlaano, you have certainly prevented him from continuing his slanders, but this action has cost House Redoran much honor. But I must not blame you as you are an outlander and you cannot understand such things.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "meril hlaano",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_HlaanoSlanders",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HR_HlaanoSlanders 100",
+      "ModDisposition -15"
+    ]
+  },
+  "12197115281836728675": {
+    "Prev": "1635836611303026771",
+    "Next": "155052801931297952",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Meril Hlaano has withdrawn his slanderous statements against our House. Please accept this shield as a reward.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_HlaanoSlanders",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal HR_HlaanoSlanders 100",
+      "Player->AddItem \"holy_shield\" 1",
+      "ModPCFacRep 5 \"Redoran\"",
+      "ModDisposition 15"
+    ]
+  },
+  "155052801931297952": {
+    "Prev": "12197115281836728675",
+    "Next": "2146310886277721543",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You can find Meril Hlaano at the Eight Plates in Balmora. Speak with him and make him withdraw the slander.",
+    "Filters": [],
+    "Script": [
+      "Journal HR_HlaanoSlanders 10"
+    ]
+  },
+  "2146310886277721543": {
+    "Prev": "155052801931297952",
+    "Next": "181328359263694524",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ondres nerano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I *said* I withdrew my statements. What else do you want?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_HonorChallenge",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "181328359263694524": {
+    "Prev": "2146310886277721543",
+    "Next": "12092319042069429268",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ondres nerano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Alright, we'll duel right here, right now. When you're ready, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HR_HonorChallenge 50",
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "12092319042069429268": {
+    "Prev": "181328359263694524",
+    "Next": "1937149461134930686",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ondres nerano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So it's true what they say about Redorans and about Bolvyn Venim.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "1937149461134930686": {
+    "Prev": "12092319042069429268",
+    "Next": "1194632962615118789",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ondres nerano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Slander? I told the truth about Bolvyn Venim. I guess you Redorans are too dumb to know what the truth is. If you want a duel over this, you got one.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_HonorChallenge",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Challenge him to a duel.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "1194632962615118789": {
+    "Prev": "1937149461134930686",
+    "Next": "950317873019828685",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have cost House Redoran honor by murdering Ondres Nerano, but we cannot change the past.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_HonorChallenge",
+        "Value": 200.0
+      }
+    ],
+    "Script": []
+  },
+  "950317873019828685": {
+    "Prev": "1194632962615118789",
+    "Next": "21964327787444276",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "The honor of House Redoran has been defended.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_HonorChallenge",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "21964327787444276": {
+    "Prev": "950317873019828685",
+    "Next": "11911311711573818698",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have murdered Ondres Nerano. You should have challenged him to a duel or provoked him. House Redoran will lose honor over this.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "duelOndresNerano",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal HR_HonorChallenge 200",
+      "ModDisposition -20"
+    ]
+  },
+  "11911311711573818698": {
+    "Prev": "21964327787444276",
+    "Next": "600369532483928811",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "You have defeated Ondres Nerano in a duel and defended the honor of your House.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_HonorChallenge",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal HR_HonorChallenge 100",
+      "ModPCFacRep 5 \"Redoran\"",
+      "ModDisposition 10"
+    ]
+  },
+  "600369532483928811": {
+    "Prev": "11911311711573818698",
+    "Next": "312892593055916967",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "The slander is being spread by Ondres Nerano. Track him down, and demand that he withdraw his slander. If he refuses, challenge him to a duel, but do not shame House Redoran by murdering him.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ClearSarethi",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HR_HonorChallenge 10"
+    ]
+  },
+  "312892593055916967": {
+    "Prev": "600369532483928811",
+    "Next": "5955146221090326843",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled, but maybe you can join the Imperial Legion again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "5955146221090326843": {
+    "Prev": "312892593055916967",
+    "Next": "878817419318133681",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already silenced Suryn Athones' slanders.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_FalseOrdinator",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "878817419318133681": {
+    "Prev": "5955146221090326843",
+    "Next": "181646371379631072",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've already killed Suryn Athones? How did you get involved with him? No, nevermind, clearly it's not important. Suryn has been silenced and that is that.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "suryn athones",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "IL_FalseOrdinator",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal IL_FalseOrdinator 100",
+      "ModPCFacRep 5 \"Imperial Legion\"",
+      "ModDisposition 10"
+    ]
+  },
+  "181646371379631072": {
+    "Prev": "878817419318133681",
+    "Next": "31271189752450227846",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So you found Suryn Athones and silenced him. Good. We want good relations with the Ordinators, but we can't tolerate slanders on our character.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "suryn athones",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_FalseOrdinator",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal IL_FalseOrdinator 100",
+      "ModPCFacRep 5 \"Imperial Legion\"",
+      "ModDisposition 10"
+    ]
+  },
+  "31271189752450227846": {
+    "Prev": "181646371379631072",
+    "Next": "5177267951377612659",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The slanders are being spread by Suryn Athones, an Ordinator at the Justice Offices in Vivec. Find him and silence his lying mouth with blood.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_TraitorWarrior",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal IL_FalseOrdinator 10"
+    ]
+  },
+  "5177267951377612659": {
+    "Prev": "31271189752450227846",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "suryn athones",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I spoke nothing but the truth. The Legion is just a mob of blunt-eared apes playing at being soldiers. Is it just your cowardice? Or the incompetence of your so-called Knights? Or is it just the way you smell?",
+    "Filters": [],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  }
+}

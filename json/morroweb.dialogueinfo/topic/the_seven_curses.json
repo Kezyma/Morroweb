@@ -1,0 +1,100 @@
+{
+  "26247323472996427214": {
+    "Prev": "",
+    "Next": "17130149481805813704",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gilvas barelo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Your copy of 'The Seven Curses' bears our guesses at interpreting the verses. In short form: Seven curses come from House Dagoth, or House Dwemer, or both. Fire and ash come from Red Mountain. Flesh is corprus. Ghosts, Seed, and Despair are unclear, but Curse-of-Dreams seems to refer to recent cases of soul sickness and Sleeper attacks in the towns.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_4_MiloGone",
+        "Value": 20.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"A2_4_MiloGone\" 30"
+    ]
+  },
+  "17130149481805813704": {
+    "Prev": "26247323472996427214",
+    "Next": "32192118222595624495",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gilvas barelo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "first curse, Curse-of-Fire\r\nsecond curse, Curse-of-Ash\r\nthird curse, Curse-of-Flesh\r\nfourth curse, Curse-of-Ghosts\r\nfifth curse, Curse-of-Seed\r\nsixth curse, Curse-of-Despair\r\nseventh curse, Curse-of-Dreams",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_4_MiloGone",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 2"
+    ]
+  },
+  "32192118222595624495": {
+    "Prev": "17130149481805813704",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gilvas barelo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "'The Seven Curses' reads as follows:\r\n\r\nthrough the doors of the unmourned house\r\nwhere scoffers scoff and schemers scheme\r\nfrom the halls of the oath-breaking house\r\nrings seven curses of gods blasphemed",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_4_MiloGone",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  }
+}

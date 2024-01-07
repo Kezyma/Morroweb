@@ -1,0 +1,266 @@
+{
+  "1698565951222721717": {
+    "Prev": "",
+    "Next": "2015697153014029347",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Satyana",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, you've given me the amulet. I am grateful to you. Feel free to explore the tomb.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_ArenimTomb",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2015697153014029347": {
+    "Prev": "1698565951222721717",
+    "Next": "36933351045422429",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Satyana",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This is where my father was buried. I hope the amulet is still here...",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "doOnce",
+        "Value": 3.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_ArenimTomb",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "36933351045422429": {
+    "Prev": "2015697153014029347",
+    "Next": "296572716543528917",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Satyana",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've found the key. Now let's make our way around to my father's tomb.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "key_Arenim",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_ArenimTomb",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "296572716543528917": {
+    "Prev": "36933351045422429",
+    "Next": "761024125796120488",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Satyana",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I think we're near the key... Once we have the key, we can find my father's amulet.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "doOnce",
+        "Value": 2.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_ArenimTomb",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "761024125796120488": {
+    "Prev": "296572716543528917",
+    "Next": "12655234102398319080",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Satyana",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, it's around here somewhere.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "doOnce",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_ArenimTomb",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "12655234102398319080": {
+    "Prev": "761024125796120488",
+    "Next": "1307855232072227075",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Satyana",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, %PCName?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_ArenimTomb",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1307855232072227075": {
+    "Prev": "12655234102398319080",
+    "Next": "29892152921233410952",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Satyana",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. I'm glad you decided to help. You'll need a key to get into my father's tomb. I can't open the door myself. I think my father had a friend buried in here. Maybe his body has a key. I'll stick nearby and help out when I can.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MS_ArenimTomb 50",
+      "AiFollow Player 0 0 0 0 0"
+    ]
+  },
+  "29892152921233410952": {
+    "Prev": "1307855232072227075",
+    "Next": "111736342204431679",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Satyana",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sorry, but I can't let anyone stand in my way.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal MS_ArenimTomb 110",
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "111736342204431679": {
+    "Prev": "29892152921233410952",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Satyana",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, my father, Augustus Arenim. He was buried here many years ago, when I was but a child. There are only a few of my family left. I thought I'd try and recover a part of my inheritance. I'd only just arrived when I heard someone. Are you willing to help me out?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Yes, I'll help you find your father's amulet.\" 1 \"Find it yourself.\" 2"
+    ]
+  }
+}

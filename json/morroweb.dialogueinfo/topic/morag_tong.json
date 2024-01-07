@@ -1,0 +1,558 @@
+{
+  "6355199152927027935": {
+    "Prev": "",
+    "Next": "174371419272359025",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Morag Tong is a guild of executioners and assassins, completely legal, and guided by a strict code of conduct. It's an ancient Dunmer society, steeped in  tradition, but I know and respect a few Westerners who belong to the Morag Tong. They are nothing like the Dark Brotherhood. I have no idea how to join them.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_1_FindSpymaster",
+        "Value": 14.0
+      }
+    ],
+    "Script": []
+  },
+  "174371419272359025": {
+    "Prev": "6355199152927027935",
+    "Next": "13761208141103731031",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What can I do for you, brother?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "13761208141103731031": {
+    "Prev": "174371419272359025",
+    "Next": "812889902870914474",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What can I do for you, sister?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "812889902870914474": {
+    "Prev": "13761208141103731031",
+    "Next": "61998298165115129",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "huleeya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am only a low-ranking member. But pauper and commoner do not suffer from war here as they do in the West, thanks to the honored traditions of House War and the Morag Tong. I am an Argonian, yet they treat me with respect. If you are curious, find a copy of \"The Black Glove.\" But please... do not mistake us for the Dark Brotherhood! The Dark Brotherhood is a perversion of ancient Dunmer traditions. They have sold their honor for profit, and are no more than a league of murderers-for-hire.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_V_VivecInformants",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "61998298165115129": {
+    "Prev": "812889902870914474",
+    "Next": "20853211632188221626",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Morag Tong is the ancient traditional assassins guild of the Dunmer. We provide three varieties of execution: public, private, and House War. We only recruit candidates of proven skill and honor, and only Grandmaster Eno Hlaalu in Vivec can authorize new members to join the Morag Tong.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "20853211632188221626": {
+    "Prev": "61998298165115129",
+    "Next": "7675162242993210857",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Assassin",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The uninformed associate the Morag Tong with the Dark Brotherhood, a Western assassins guild. But the Morag Tong is the sworn enemy of the Dark Brotherhood, and they couldn't be more different in practice or principle.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 25.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "7675162242993210857": {
+    "Prev": "20853211632188221626",
+    "Next": "18760185912240831745",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Noble",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The uninformed associate the Morag Tong with the Dark Brotherhood, a Western assassins guild. But the Morag Tong is the sworn enemy of the Dark Brotherhood, and they couldn't be more different in practice or principle.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 25.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "18760185912240831745": {
+    "Prev": "7675162242993210857",
+    "Next": "15944258109985949",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Agent",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The uninformed associate the Morag Tong with the Dark Brotherhood, a Western assassins guild. But the Morag Tong is the sworn enemy of the Dark Brotherhood, and they couldn't be more different in practice or principle.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 25.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "15944258109985949": {
+    "Prev": "18760185912240831745",
+    "Next": "27714143203180521012",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Noble",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Morag Tong only accepts legally approved contracts called 'writs,' but rumor hints at the execution of secret extralegal 'grey writs.'",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 50.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "27714143203180521012": {
+    "Prev": "15944258109985949",
+    "Next": "1446748261077814141",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Assassin",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Morag Tong only accepts legally approved contracts called 'writs.' Some Assassins are not quite so noble.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 50.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1446748261077814141": {
+    "Prev": "27714143203180521012",
+    "Next": "6448282103172722102",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Agent",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Morag Tong only accepts legally approved contracts called 'writs.'",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 50.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "6448282103172722102": {
+    "Prev": "1446748261077814141",
+    "Next": "303562728261414957",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Noble",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Guided by ancient traditions and rigid codes of conduct, the Morag Tong only recruits candidates of proven skill and honor.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 75.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "303562728261414957": {
+    "Prev": "6448282103172722102",
+    "Next": "126226756967815701",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Assassin",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Guided by ancient traditions and rigid codes of conduct, the Morag Tong only recruits candidates of proven skill and honor.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 75.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "126226756967815701": {
+    "Prev": "303562728261414957",
+    "Next": "1389883520805611",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Agent",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Guided by ancient traditions and rigid codes of conduct, the Morag Tong only recruits candidates of proven skill and honor.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 75.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1389883520805611": {
+    "Prev": "126226756967815701",
+    "Next": "32230108502425828335",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Assassin",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Morag Tong is an assassins guild sanctioned by the Empire to provide three varieties of execution: public executions, private executions, and House Wars executions.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "32230108502425828335": {
+    "Prev": "1389883520805611",
+    "Next": "19232186722628031469",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Noble",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Morag Tong is an assassins guild sanctioned by the Empire to provide three varieties of execution: public executions, private executions, and House Wars executions.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "19232186722628031469": {
+    "Prev": "32230108502425828335",
+    "Next": "20731179282108415012",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Agent",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Morag Tong is an assassins guild sanctioned by the Empire to provide three varieties of execution: public executions, private executions, and House Wars executions.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "20731179282108415012": {
+    "Prev": "19232186722628031469",
+    "Next": "2317021167200696362",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "artisa arelas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Morag Tong is an assassins guild sanctioned by the Empire to provide three varieties of execution: public executions, private executions, and House Wars executions. Constrained by ancient traditions and rigid codes of conduct, the Morag Tong only recruits candidates of proven skill and honor. Morag Tong only accepts legally approved contracts called 'writs,' but rumor hints at the execution of secret extralegal 'grey writs.' The Morag Tong is the sworn enemy of the Dark Brotherhood.",
+    "Filters": [],
+    "Script": []
+  },
+  "2317021167200696362": {
+    "Prev": "20731179282108415012",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Savant",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Morag Tong is an assassins guild sanctioned by the Empire to provide three varieties of execution: public executions, private executions, and House Wars executions. Constrained by ancient traditions and rigid codes of conduct, the Morag Tong only recruits candidates of proven skill and honor. Morag Tong only accepts legally approved contracts called 'writs,' but rumor hints at the execution of secret extralegal 'grey writs.' The Morag Tong is the sworn enemy of the Dark Brotherhood.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

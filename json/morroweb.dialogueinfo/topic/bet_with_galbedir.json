@@ -1,0 +1,257 @@
+{
+  "1321911584322527982": {
+    "Prev": "",
+    "Next": "28406110011775631288",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ajira hears you are expelled. Ajira was told to say you should make amends with the Arch-Mage, but Ajira tells you that the wizards here have many things to do and many things on their minds. Soon Ranis Athrys will forget you are expelled and Ajira can speak with you again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "28406110011775631288": {
+    "Prev": "1321911584322527982",
+    "Next": "23328247495332087",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ajira won the bet. Ajira does not forget your help.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "doOnce",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_StolenReport",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "23328247495332087": {
+    "Prev": "28406110011775631288",
+    "Next": "970052703132825174",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Now Ajira will win the bet with Galbedir.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Sabotage",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "970052703132825174": {
+    "Prev": "23328247495332087",
+    "Next": "2889210143552431652",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Ajira made a bet with Galbedir that Ajira would be a Journeyman before Galbedir. Now Ajira must study these mushrooms and write a report. Ajira wants you to give Galbedir a fake soul gem.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_BCShrooms",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2889210143552431652": {
+    "Prev": "970052703132825174",
+    "Next": "789385102520224219",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galbedir",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I have won the bet. I know where Ajira's stolen reports are. This should prove once and for all that the Bosmer are better thieves than the Khajiit.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_StolenReport",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MG_StolenReport",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "789385102520224219": {
+    "Prev": "2889210143552431652",
+    "Next": "758617185296643526",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galbedir",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you been helping Ajira with the bet? Go ahead. I have many tricks of my own. Even you and Ajira together can't stop me from winning.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MG_StolenReport",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "758617185296643526": {
+    "Prev": "789385102520224219",
+    "Next": "29042100451123317474",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I know all about their bet. I did the same things when I was an apprentice. You might as well do what Ajira asks.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MG_Sabotage",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "29042100451123317474": {
+    "Prev": "758617185296643526",
+    "Next": "323123321157259513",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "Balmora, Guild of Mages",
+    "PlayerFaction": "",
+    "Text": "They've been at each other's throats since they got here over which one is a better mage and whether Khajiit are better thieves than Bosmer.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "Random100",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MG_StolenReport",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "323123321157259513": {
+    "Prev": "29042100451123317474",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "Balmora, Guild of Mages",
+    "PlayerFaction": "",
+    "Text": "It doesn't surprise me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MG_StolenReport",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  }
+}

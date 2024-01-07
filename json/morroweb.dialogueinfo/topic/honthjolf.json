@@ -1,0 +1,156 @@
+{
+  "26206171821649832387": {
+    "Prev": "",
+    "Next": "12971163431110427628",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled, but maybe you can join the Imperial Legion again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "12971163431110427628": {
+    "Prev": "26206171821649832387",
+    "Next": "13256133222837523490",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The traitor is dead.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_TraitorWarrior",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "13256133222837523490": {
+    "Prev": "12971163431110427628",
+    "Next": "266821685363619849",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you already killed Honthjolf? The sooner the better, I suppose. You must have an adventurous spirit to travel to a place like Aharnabi on your own.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "honthjolf",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "IL_TraitorWarrior",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal IL_TraitorWarrior 100",
+      "ModPCFacRep 5 \"Imperial Legion\"",
+      "ModDisposition 10"
+    ]
+  },
+  "266821685363619849": {
+    "Prev": "13256133222837523490",
+    "Next": "17800272171933632584",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So Honthjolf is dead. It is always sad when someone betrays the Legions, but we cannot allow such traitors to live.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "honthjolf",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_TraitorWarrior",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal IL_TraitorWarrior 100",
+      "ModPCFacRep 5 \"Imperial Legion\"",
+      "ModDisposition 10"
+    ]
+  },
+  "17800272171933632584": {
+    "Prev": "266821685363619849",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Honthjolf was once a member of the Order of Ebonheart. He turned our backs on us and works as a guard for Llarusea Andrethi in Aharnabi, a foul den of sorcerers and Daedra worshippers on the far southeast corner of Azura's coast, near the Shrine of Azura. Find the traitor and kill him.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Courtesy",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal IL_TraitorWarrior 10"
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "18759188692296626240": {
+    "Prev": "",
+    "Next": "132381979266658957",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "thavere vedrano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you again for returning it to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_DeadTaxman",
+        "Value": 90.0
+      }
+    ],
+    "Script": []
+  },
+  "132381979266658957": {
+    "Prev": "18759188692296626240",
+    "Next": "3209814101783622441",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "thavere vedrano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, you've found the ring I gave him. Thank you so much, %PCName. It's good to have something to remember him by, though I'll never see him again. Here, take this. He usually traveled with a couple when he was doing his job, but he didn't this last time. If only he had....",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "exquisite_ring_processus",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_DeadTaxman\" 90",
+      "RemoveItem \"P_Restore_Health_S\" 2",
+      "Player->AddItem \"P_Restore_Health_S\" 2",
+      "Player->RemoveItem \"exquisite_ring_processus\" 1",
+      "AddItem \"exquisite_ring_processus\" 1"
+    ]
+  },
+  "3209814101783622441": {
+    "Prev": "132381979266658957",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "thavere vedrano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I gave him the ring many months ago, and it was dear to him. I would like it to remember him by.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_DeadTaxman",
+        "Value": 90.0
+      }
+    ],
+    "Script": []
+  }
+}

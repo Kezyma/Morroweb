@@ -1,0 +1,117 @@
+{
+  "419319963337319915": {
+    "Prev": "",
+    "Next": "10721140832037030122",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "heifnir",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Zallay Subaddamael? I know that name. I believe that is an Ashlander who lives in Aharasaplit Camp on the southwest coast of the island.",
+    "Filters": [],
+    "Script": []
+  },
+  "10721140832037030122": {
+    "Prev": "419319963337319915",
+    "Next": "1984834862350528967",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hjoldir",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Zallay Subaddamael? I know that name. I believe that is an Ashlander who lives in Aharasaplit Camp on the southwest coast of the island.",
+    "Filters": [],
+    "Script": []
+  },
+  "1984834862350528967": {
+    "Prev": "10721140832037030122",
+    "Next": "2268221571399924405",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Dagon Fel",
+    "PlayerFaction": "",
+    "Text": "Zallay Subaddamael? I know that name. I believe that is an Ashlander who lives in Aharasaplit Camp on the southwest coast of the island.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2268221571399924405": {
+    "Prev": "1984834862350528967",
+    "Next": "234474573173624647",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "kurapli",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you bring me news of personal vengeance for the death of my husband?",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "zallay subaddamael",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_Kurapli_Zallay",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "234474573173624647": {
+    "Prev": "2268221571399924405",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "kurapli",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This outcast murdered my husband. I have heard that he has taken refuge in a place called Aharasaplit on the island of Sheogorad, the large island north of Vvardenfell. You might find information about Zallay Subaddamael or Aharasaplit camp in the fishing village of Dagon Fel on Sheogorad island.",
+    "Filters": [],
+    "Script": [
+      "Journal \"A2_1_Kurapli_Zallay\" 10"
+    ]
+  }
+}

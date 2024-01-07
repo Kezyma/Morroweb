@@ -1,0 +1,66 @@
+{
+  "3533493114919234": {
+    "Prev": "",
+    "Next": "8014268033164926233",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "kaushad",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. They are quite splendid aren't they. Of course... they were a gift. I wear them out of courtesy, %PCName. Not out of vanity. I am not a vain man.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 4.0
+      }
+    ],
+    "Script": []
+  },
+  "8014268033164926233": {
+    "Prev": "3533493114919234",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "kaushad",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you. These remarkable shoes are... very fancy. Too fancy for a simple Ashlander like myself, But I thank you very much for the gift. It was very thoughtful.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "exquisite_shoes_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem exquisite_shoes_01 1",
+      "additem exquisite_shoes_01 1",
+      "journal B3_ZainabBride 4",
+      "ModDisposition 40"
+    ]
+  }
+}

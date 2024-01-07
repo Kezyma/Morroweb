@@ -1,0 +1,696 @@
+{
+  "7600226825306505": {
+    "Prev": "",
+    "Next": "250603092653151409",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dorisa darvel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I might have one I could sell you. I have been trying to make copies of this rare book. If I don't have one at the moment, try Jobasha's Rare Books in Vivec.",
+    "Filters": [],
+    "Script": []
+  },
+  "250603092653151409": {
+    "Prev": "7600226825306505",
+    "Next": "2951510500150015041",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "You already brought me a copy of Chronicles of Nchuleft.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_ChroniclesNchuleft",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2951510500150015041": {
+    "Prev": "250603092653151409",
+    "Next": "66238650311922029",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Good. I will not forget this, %PCName. As you have brought me all three books. Please accept these trinkets of mine. I no longer have any use for them.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_ChroniclesNchuleft",
+        "Value": 1.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "givenReward",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_DwemerLaw",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_FireAndFaith",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HT_ChroniclesNchuleft 100",
+      "Journal HT_DwemerLaw 120",
+      "Player->RemoveItem \"bk_ChroniclesNchuleft\" 1",
+      "AddItem \"bk_ChroniclesNchuleft\" 1",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 10",
+      "Set givenReward to 1",
+      "Player->AddItem \"ondusi's key\" 1",
+      "Player->AddItem \"amulet of admonition\" 1",
+      "Player->AddItem \"second barrier belt\" 1",
+      "Player->AddItem \"common_shoes_02_surefeet\" 1"
+    ]
+  },
+  "66238650311922029": {
+    "Prev": "2951510500150015041",
+    "Next": "17883164021678426602",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Good. I will not forget this, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_ChroniclesNchuleft",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HT_ChroniclesNchuleft 100",
+      "Player->RemoveItem \"bk_ChroniclesNchuleft\" 1",
+      "AddItem \"bk_ChroniclesNchuleft\" 1",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 10"
+    ]
+  },
+  "17883164021678426602": {
+    "Prev": "66238650311922029",
+    "Next": "2338627563162067478",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "I do not want to play games with you, %PCName. Bring me a copy of Chronicles of Nchuleft. Do not try to trick me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "2338627563162067478": {
+    "Prev": "17883164021678426602",
+    "Next": "21657126292392918147",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "I know it may be difficult to find this book. You could try the Dwemer ruin of Nchuleft itself, which is supposed to be somewhere between Vos and the Ghostfence.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "21657126292392918147": {
+    "Prev": "2338627563162067478",
+    "Next": "289922690152114837",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Have you found a copy of Chronicles of Nchuleft?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_DwemerLaw",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is\" 1 \"No, not yet\" 2"
+    ]
+  },
+  "289922690152114837": {
+    "Prev": "21657126292392918147",
+    "Next": "2077122939923615",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "\"Chronicles of Nchuleft\" is very rare. There are probably still copies of the book in the Dwemer ruin of Nchuleft. Otherwise, you could try asking booksellers where one might find a copy.",
+    "Filters": [],
+    "Script": [
+      "Journal HT_DwemerLaw 5"
+    ]
+  },
+  "2077122939923615": {
+    "Prev": "289922690152114837",
+    "Next": "21549239941139516581",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you still a member of the guild? Once Trebonius gives the authorization, we can discuss guild matters again.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "21549239941139516581": {
+    "Prev": "2077122939923615",
+    "Next": "8829232071668230231",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Were you expelled? Or did you clear that up already? You ought to make amends with Guildmaster Trebonius just to be sure.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "8829232071668230231": {
+    "Prev": "21549239941139516581",
+    "Next": "21806256833173112664",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled, %PCName. If you want to make amends, you should speak with Guildmaster Trebonius.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "21806256833173112664": {
+    "Prev": "8829232071668230231",
+    "Next": "2641885042222313163",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Chronicles of Nchuleft has been invaluable in my research.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_NchuleftBook",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2641885042222313163": {
+    "Prev": "21806256833173112664",
+    "Next": "5202153131904230638",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I'm impressed, %PCRank. I hope you are always this efficient.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal MG_NchuleftBook 100",
+      "Player->RemoveItem \"bk_ChroniclesNchuleft\" 1",
+      "ModPCFacRep 5 \"Mages Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "5202153131904230638": {
+    "Prev": "2641885042222313163",
+    "Next": "681413927109812574",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I thought we had an agreement, %PCName. Apparently your word cannot be trusted.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "681413927109812574": {
+    "Prev": "5202153131904230638",
+    "Next": "946247231264014642",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "What? You already have a copy of Chronicles of Nchuleft? I am impressed with your scholarship, %PCName. Are you willing to part with the book?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_ChroniclesNchuleft",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MG_NchuleftBook",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give her the book.\" 3 \"Keep the book.\" 4"
+    ]
+  },
+  "946247231264014642": {
+    "Prev": "681413927109812574",
+    "Next": "16493505187536318",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "You actually found a copy? Excellent, now give the book to me.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_ChroniclesNchuleft",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give her the book.\" 3 \"Keep the book.\" 4"
+    ]
+  },
+  "16493505187536318": {
+    "Prev": "946247231264014642",
+    "Next": "1786816122756313471",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I simply *must* have this book for my research. Use the gold I gave you to find a copy. Maybe one of the booksellers has one.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_NchuleftBook",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "1786816122756313471": {
+    "Prev": "16493505187536318",
+    "Next": "30876280701898211538",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent. Here's 250 septims to cover your expenses. Time is of the essence.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem Gold_001 250",
+      "Journal MG_NchuleftBook 10"
+    ]
+  },
+  "30876280701898211538": {
+    "Prev": "1786816122756313471",
+    "Next": "2946918012419552",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I guess I'll have to get Bribanne Erien to do it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "2946918012419552": {
+    "Prev": "30876280701898211538",
+    "Next": "26081231041180118731",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "It is a rare Dwarven tome. None of the Mages Guild branches have a copy, and it is simply *essential* to my research. Would you be willing to find a copy for me?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Yes.\" 1 \"No.\" 2"
+    ]
+  },
+  "26081231041180118731": {
+    "Prev": "2946918012419552",
+    "Next": "221858775371129315",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "jobasha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, Jobasha knows the Chronicles of Nchuleft. Perhaps Jobasha has a copy...",
+    "Filters": [],
+    "Script": []
+  },
+  "221858775371129315": {
+    "Prev": "26081231041180118731",
+    "Next": "183046666343215",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Khajiit",
+    "SpeakerClass": "Bookseller",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "%Name owns no copies of Chronicles of Nchuleft. Speak with Jobasha in Vivec. Jobasha has many rare books.",
+    "Filters": [],
+    "Script": []
+  },
+  "183046666343215": {
+    "Prev": "221858775371129315",
+    "Next": "113033264784513703",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Bookseller",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec",
+    "PlayerFaction": "",
+    "Text": "Try Jobasha's Rare Books in the Market Canton.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "113033264784513703": {
+    "Prev": "183046666343215",
+    "Next": "2861191472954228655",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec, Guild of Mages",
+    "PlayerFaction": "",
+    "Text": "Try Jobasha's Rare Books in the Market Canton.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2861191472954228655": {
+    "Prev": "113033264784513703",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Bookseller",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Chronicles of Nchuleft? It is a very rare book, but you might find a copy in Vivec.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

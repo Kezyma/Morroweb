@@ -1,0 +1,722 @@
+{
+  "20034229462474820018": {
+    "Prev": "",
+    "Next": "149376357307638799",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rovone arvel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am grateful to you for making me aware of Odral Helvi's deceptions.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "givenOrders",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "149376357307638799": {
+    "Prev": "20034229462474820018",
+    "Next": "296202473253148930",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rovone arvel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So Odral Helvi wants to take my lands by forgery since he failed to take them by force... Take these 500 drakes for informing me of this matter.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HH_BankFraud 65",
+      "Player->RemoveItem \"bk_TreasuryOrders\" 1",
+      "AddItem bk_TreasuryOrders 1",
+      "Player->AddItem Gold_001 500",
+      "ModDisposition 20",
+      "Set givenOrders to 1"
+    ]
+  },
+  "296202473253148930": {
+    "Prev": "149376357307638799",
+    "Next": "180998021140214117",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rovone arvel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then why did you say you had sealed orders for me?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "180998021140214117": {
+    "Prev": "296202473253148930",
+    "Next": "1688298001994222040",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rovone arvel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Odral Helvi wanted to deliver sealed orders to the Treasury? Well, give them to me.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_treasuryorders",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Here they are.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "1688298001994222040": {
+    "Prev": "180998021140214117",
+    "Next": "271409436291014541",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baren alen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You gave me the orders already. Don't let yourself be troubled by it.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "givenOrders",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "271409436291014541": {
+    "Prev": "1688298001994222040",
+    "Next": "281932122229887588",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baren alen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "These orders are addressed to Ten... Hmm... Yes, this is very interesting, %PCName. Here, take these 500 drakes and forget about this matter.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HH_BankFraud 60",
+      "Player->RemoveItem \"bk_TreasuryOrders\" 1",
+      "AddItem bk_TreasuryOrders 1",
+      "Player->AddItem Gold_001 500",
+      "ModDisposition 10",
+      "Set givenOrders to 1"
+    ]
+  },
+  "281932122229887588": {
+    "Prev": "271409436291014541",
+    "Next": "242225785832711663",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baren alen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I thought you meant that you had sealed orders for me... Obviously I was mistaken.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "242225785832711663": {
+    "Prev": "281932122229887588",
+    "Next": "1921831447147899575",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baren alen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sealed orders? From Odral Helvi? Well, give them to me.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_treasuryorders",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Here they are.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "1921831447147899575": {
+    "Prev": "242225785832711663",
+    "Next": "2750146521155725690",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've broken the rules of House Hlaalu, sweetie. It brings tears to my eyes when I think about your disloyalty. Maybe you can make amends and make everything better.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2750146521155725690": {
+    "Prev": "1921831447147899575",
+    "Next": "2125013205946413017",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've already given me the orders, pudding.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "givenOrders",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2125013205946413017": {
+    "Prev": "2750146521155725690",
+    "Next": "2739311365729922850",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good, good. Now we have some proof of Odral's corruption, but it takes time for the wheels of law to turn. I will make sure these orders are... edited, sealed, and delivered to Tenisi Lladri. For being a sweetie and keeping me informed, why not take this gift of 500 drakes? Buy yourself something pretty for Uncle Crassius.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HH_BankFraud 55",
+      "Player->RemoveItem \"bk_TreasuryOrders\" 1",
+      "AddItem bk_TreasuryOrders 1",
+      "Player->AddItem Gold_001 500",
+      "ModDisposition 15",
+      "Set givenOrders to 1"
+    ]
+  },
+  "2739311365729922850": {
+    "Prev": "2125013205946413017",
+    "Next": "135999282311726679",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, I wouldn't advise giving them to Tenisi Lladri. You don't know what you might get involved in. I wouldn't want anything to happen to you, dumpling.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "135999282311726679": {
+    "Prev": "2739311365729922850",
+    "Next": "2246649313111212287",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So he asked you to deliver orders to Tenisi Lladri instead of Baren Alen, the Treasury clerk? This is interesting. Give the orders to me instead, pudding, and I will take care of everything.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_treasuryorders",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Here they are.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "2246649313111212287": {
+    "Prev": "135999282311726679",
+    "Next": "22375172162712311",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tenisi lladri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already gave me the sealed orders.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "givenOrders",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "22375172162712311": {
+    "Prev": "2246649313111212287",
+    "Next": "16583268241678221964",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tenisi lladri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There orders are no longer sealed. It is not proper to read the private papers of your employer. I will be sure that Odral Helvi hears of this.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "UnsealedOdral1",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HH_BankFraud 50",
+      "Player->RemoveItem \"bk_TreasuryOrders\" 1",
+      "AddItem bk_TreasuryOrders 1",
+      "ModDisposition -10",
+      "Set givenOrders to 1"
+    ]
+  },
+  "16583268241678221964": {
+    "Prev": "22375172162712311",
+    "Next": "30066127203142116381",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tenisi lladri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, good. Here, take these 100 drakes as a courier's fee.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HH_BankFraud 50",
+      "Player->RemoveItem \"bk_TreasuryOrders\" 1",
+      "AddItem bk_TreasuryOrders 1",
+      "Player->AddItem Gold_001 100",
+      "ModDisposition 10",
+      "Set givenOrders to 1"
+    ]
+  },
+  "30066127203142116381": {
+    "Prev": "16583268241678221964",
+    "Next": "9502859172581137",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tenisi lladri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then why did you come here? Are you feeling well? There's a Temple here in Vivec.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "9502859172581137": {
+    "Prev": "30066127203142116381",
+    "Next": "2481256501198818341",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tenisi lladri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sealed orders? Well, you might as well give them to me.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_treasuryorders",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Here they are.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "2481256501198818341": {
+    "Prev": "9502859172581137",
+    "Next": "12738288473276418800",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't think so. You've been expelled. Until you make amends, I don't have to discuss business with you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "12738288473276418800": {
+    "Prev": "2481256501198818341",
+    "Next": "288462305170711990",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I do not have any more sealed orders for you to deliver.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BankFraud",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "288462305170711990": {
+    "Prev": "12738288473276418800",
+    "Next": "25341164732839914687",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You delivered them  to the wrong person. You were supposed to deliver the sealed orders to Tenisi Lladri. I am not sure whether to trust you with any more business or not.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BankFraud",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Journal HH_BankFraud 110",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition -30"
+    ]
+  },
+  "25341164732839914687": {
+    "Prev": "288462305170711990",
+    "Next": "25400190621218821537",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You should not have opened the orders, %PCName, but at least you delivered them to the right person. I might have more business to discuss with you.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "UnsealedOdral1",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "HH_BankFraud",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal HH_BankFraud 100",
+      "ModPCFacRep 5 \"Hlaalu\""
+    ]
+  },
+  "25400190621218821537": {
+    "Prev": "25341164732839914687",
+    "Next": "2062734593918822",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You delivered the orders? Good. I have more business to discuss with you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BankFraud",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal HH_BankFraud 100",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 15"
+    ]
+  },
+  "2062734593918822": {
+    "Prev": "25400190621218821537",
+    "Next": "1410730205592218439",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "I've already given you the orders. Take them to Tenisi Lladri at the Hlaalu Treasury in Vivec.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BankFraud",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "1410730205592218439": {
+    "Prev": "2062734593918822",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Take these sealed orders to the Hlaalu Treasury in Vivec. Deliver them to Tenisi Lladri, the assistant clerk. Whatever you do, do NOT deliver them to the head of the treasury, Baren Alen. Or to anyone else. This is a... trivial matter, and you don't have to trouble anyone but the assistant clerk.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BankFraud",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Journal HH_BankFraud 10",
+      "Player->AddItem \"bk_TreasuryOrders\" 1"
+    ]
+  }
+}

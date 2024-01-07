@@ -1,0 +1,278 @@
+{
+  "267524125218004717": {
+    "Prev": "",
+    "Next": "764412791127635506",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Calvus Horatius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well... not right now, actually. Because I'm working for you. Remember?",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "companion",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "764412791127635506": {
+    "Prev": "267524125218004717",
+    "Next": "180439746220217800",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Calvus Horatius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. Our contract is for 30 days. Here are the terms. I follow you everywhere, and fight when you fight. I'm always on duty. I follow or stay, at your command. And you'll keep me healthy and safe, if you want to get your money's worth. If you want to change the plan, just talk to me about it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "player->removeitem gold_001 250",
+      "additem gold_001 250",
+      "Set Contract_Calvus to 1",
+      "Journal Merc_Calvus 11",
+      "StartScript Contract_Calvus",
+      "Set Companion to 1",
+      "AIFollow Player 0 0 0 0"
+    ]
+  },
+  "180439746220217800": {
+    "Prev": "764412791127635506",
+    "Next": "30980199742317328246",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Calvus Horatius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. Our contract is for 30 days. Here are the terms. I follow you everywhere, and fight when you fight. I'm always on duty. I follow or stay, at your command. And you'll keep me healthy and safe, if you want to get your money's worth. If you want to change the plan, just talk to me about it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "player->removeitem gold_001 250",
+      "additem gold_001 250",
+      "Set Contract_Calvus to 1",
+      "Journal Merc_Calvus 1",
+      "StartScript Contract_Calvus",
+      "Set Companion to 1",
+      "AIFollow Player 0 0 0 0"
+    ]
+  },
+  "30980199742317328246": {
+    "Prev": "180439746220217800",
+    "Next": "29189294702201222667",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Calvus Horatius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You know where to find me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "29189294702201222667": {
+    "Prev": "30980199742317328246",
+    "Next": "952027324223343",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Calvus Horatius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Suit yourself.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "952027324223343": {
+    "Prev": "29189294702201222667",
+    "Next": "2873530613127328524",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Calvus Horatius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've worked for you, and liked the experience. Same terms as before -- keep me healthy, and you won't regret it. But I won't stand for any abuse. If my profit ever drops below zero, I quit immediately.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 250.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Merc_Calvus",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Sorry. Not interested.\" 1 \"Maybe some other time.\" 2 \"Sounds good. Here's your 250 gold.\" 4"
+    ]
+  },
+  "2873530613127328524": {
+    "Prev": "952027324223343",
+    "Next": "9697308142613316392",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Calvus Horatius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've worked for you, and liked the experience. Same terms as before -- keep me healthy, and you won't regret it. But I won't stand for any abuse. If my profit ever drops below zero, I quit immediately.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "Gold_001",
+        "Value": 250.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Merc_Calvus",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Sorry. Not interested.\" 1 \"Maybe some other time.\" 2"
+    ]
+  },
+  "9697308142613316392": {
+    "Prev": "2873530613127328524",
+    "Next": "2032313422113616643",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Calvus Horatius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "For 250 gold I'll serve as bodyguard and companion for 30 days. I'm strong, and I don't mind heavy loads. I'm healthy, and quick to heal. Heal me if you can --keep me healthy, and you'll get your money's worth. But I won't stand for any abuse. I work for profit. I've got my own gear and gold. If you ever leave me with less Profit than my own gear and gold, then I quit immediately, and never work for you again.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 250.0
+      }
+    ],
+    "Script": [
+      "Choice \"Sorry. Not interested.\" 1 \"Maybe some other time.\" 2 \"Sounds good. Here's your 250 gold.\" 3"
+    ]
+  },
+  "2032313422113616643": {
+    "Prev": "9697308142613316392",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Calvus Horatius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "For 250 gold I'll serve as bodyguard and companion for 30 days. I'm strong, and I don't mind heavy loads. I'm healthy, and quick to heal. Heal me if you can --keep me healthy, and you'll get your money's worth. But I won't stand for any abuse. I work for profit. I've got my own gear and gold. If you ever leave me with less Profit than my own gear and gold, then I quit immediately, and never work for you again.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "Gold_001",
+        "Value": 250.0
+      }
+    ],
+    "Script": [
+      "Choice \"Sorry. Not interested.\" 1 \"Maybe some other time.\" 2"
+    ]
+  }
+}

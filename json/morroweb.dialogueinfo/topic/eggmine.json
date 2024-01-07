@@ -1,0 +1,637 @@
+{
+  "283462747889115515": {
+    "Prev": "",
+    "Next": "858424895866212212",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled, but maybe you can join the Imperial Legion again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "858424895866212212": {
+    "Prev": "283462747889115515",
+    "Next": "315361691150317028",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The kwama queen is dead, and there's nothing you can do about it now. Sometimes a kwama colony can recover from losing its queen, and sometimes not. We'll have to wait and see.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "kwama queen_gnisis",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_GnisisBlight",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "315361691150317028": {
+    "Prev": "858424895866212212",
+    "Next": "2921118939086233",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The kwama queen has been cured. Now some of the miners can return to work.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_GnisisBlight",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2921118939086233": {
+    "Prev": "315361691150317028",
+    "Next": "30851325871572318753",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The kwama queen is dead? Usually they don't die from the Blight so quickly. What will the town do now?",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "kwama queen_gnisis",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "IL_GnisisBlight",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal IL_GnisisBlight 200"
+    ]
+  },
+  "30851325871572318753": {
+    "Prev": "2921118939086233",
+    "Next": "7303132632473122520",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You killed the kwama queen? Why did you do that? This is an egg-mining town. It was the only industry here. What a typical Gnisis mess this is.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "kwama queen_gnisis",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "IL_GnisisBlight",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -20",
+      "Journal IL_GnisisBlight 200"
+    ]
+  },
+  "7303132632473122520": {
+    "Prev": "30851325871572318753",
+    "Next": "182467701648219357",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. Now the miners can go back to work. We'll still have to put guards in the lower parts of the eggmine, but at least the villagers can get their eggs. Take these 100 drakes as a reward.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_GnisisBlight",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal IL_GnisisBlight 100",
+      "ModPCFacRep 5 \"Imperial Legion\"",
+      "ModDisposition 10",
+      "player->additem, gold_001, 100"
+    ]
+  },
+  "182467701648219357": {
+    "Prev": "7303132632473122520",
+    "Next": "319172085131721040",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm not sure I believe you. You better go back down in the mines and make sure.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "319172085131721040": {
+    "Prev": "182467701648219357",
+    "Next": "2274233642686924931",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, what are you waiting for? You have your orders.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "2274233642686924931": {
+    "Prev": "319172085131721040",
+    "Next": "2157213177221565784",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So has the kwama queen been cured?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_GnisisBlight",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, sir.\" 1 \"No, sir.\" 2"
+    ]
+  },
+  "2157213177221565784": {
+    "Prev": "2274233642686924931",
+    "Next": "84148041264816424",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The eggmine was closed recently because of the risk of spreading the blight, but the miners here need the eggmine to support their families. Find the blighted kwama queen and cure her. Either cast a cure blight spell on her, or speak with Hetman Abelmawia who has scrolls of cure blight.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_WidowLand",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal IL_GnisisBlight 10"
+    ]
+  },
+  "84148041264816424": {
+    "Prev": "2157213177221565784",
+    "Next": "242357371371129",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vatollia apo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I already gave you the key, now get lost before they see us talking.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "state",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "moddisposition -1"
+    ]
+  },
+  "242357371371129": {
+    "Prev": "84148041264816424",
+    "Next": "100731452942808465",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vatollia apo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah, you have a miner's pick. I'll let you in so you can work. They're still working on the north side I think. Anyway, here's the key.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "state",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "miner's pick",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->additem, \"key_gnisis_eggmine\", 1",
+      "removeitem, \"key_gnisis_eggmine\", 1",
+      "set state to 1"
+    ]
+  },
+  "100731452942808465": {
+    "Prev": "242357371371129",
+    "Next": "1726018107211329572",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vatollia apo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "Since you're in the Legion, here's the key. Be careful.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "state",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "player->additem, \"key_gnisis_eggmine\", 1",
+      "removeitem, \"key_gnisis_eggmine\", 1",
+      "set state to 1"
+    ]
+  },
+  "1726018107211329572": {
+    "Prev": "100731452942808465",
+    "Next": "2798112707103412868",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vatollia apo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm not supposed to let anyone in. But, you're not so bad. Here, take the key, but don't tell Darius I gave it to you.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "state",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "player->additem, \"key_gnisis_eggmine\", 1",
+      "removeitem, \"key_gnisis_eggmine\", 1",
+      "set state to 1"
+    ]
+  },
+  "2798112707103412868": {
+    "Prev": "1726018107211329572",
+    "Next": "2164817197323514562",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vatollia apo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's locked and yes, I have the key. If I liked you more, maybe I'd let you in.",
+    "Filters": [],
+    "Script": []
+  },
+  "2164817197323514562": {
+    "Prev": "2798112707103412868",
+    "Next": "22309283892847315000",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vatollia apo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's locked. Yes, I have the key. No you can't have it. I don't care who you are. Darius says no one goes in but the workers.",
+    "Filters": [],
+    "Script": []
+  },
+  "22309283892847315000": {
+    "Prev": "2164817197323514562",
+    "Next": "2640017668176376199",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Gnisis",
+    "PlayerFaction": "",
+    "Text": "Hey, you're the one who cured the Queen, right? The entire town is thankful.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "IL_GnisisBlight",
+        "Value": 100.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2640017668176376199": {
+    "Prev": "22309283892847315000",
+    "Next": "86935143102841393",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Gnisis",
+    "PlayerFaction": "",
+    "Text": "Hey, you're the one who cured the Queen, right? The entire town is thankful.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "IL_GnisisBlight",
+        "Value": 100.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "moddisposition 10"
+    ]
+  },
+  "86935143102841393": {
+    "Prev": "2640017668176376199",
+    "Next": "445429046262157992",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Gnisis, Underground Stream",
+    "PlayerFaction": "",
+    "Text": "It's above this cavern.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "445429046262157992": {
+    "Prev": "86935143102841393",
+    "Next": "2200024487283532241",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Gnisis, Lower Eggmine",
+    "PlayerFaction": "",
+    "Text": "Yes, you're in the lower part of it.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2200024487283532241": {
+    "Prev": "445429046262157992",
+    "Next": "37997802202538316",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Gnisis, Eggmine",
+    "PlayerFaction": "",
+    "Text": "That's where you are.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "37997802202538316": {
+    "Prev": "2200024487283532241",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Gnisis",
+    "PlayerFaction": "",
+    "Text": "It's up on the hill, on the east side of town. Careful in there, the kwama queen has been blighted. They're only letting miners in.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

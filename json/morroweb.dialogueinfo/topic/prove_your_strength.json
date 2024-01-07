@@ -1,0 +1,59 @@
+{
+  "32258278733275029945": {
+    "Prev": "",
+    "Next": "12121272521404025336",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharsten heart-fang",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I wish for you to travel to Lake Fjalding. I will mark it on your map. Seek out Korst Wind-Eye, who has traveled there already. He will give you further instructions. Look for him on the northern shore of the lake.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Draugr",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Draugr 20",
+      "\"korst wind-eye\"->PositionCell -158513 195175 90 0 \"Solstheim, Lake Fjalding\""
+    ]
+  },
+  "12121272521404025336": {
+    "Prev": "32258278733275029945",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "korst wind-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Heart-Fang has sent you here to show your strength, your ability to survive in the harshest of conditions. Beneath that lake there are a series of ice caves. In one of those caves, you will find Aesliip, a Draugr Lord. Heart-Fang believes he is the one responsible for the disturbance on the lake.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Draugr",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Draugr 40"
+    ]
+  }
+}

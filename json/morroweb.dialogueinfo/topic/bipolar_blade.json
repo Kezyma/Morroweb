@@ -1,0 +1,311 @@
+{
+  "20673223402256129057": {
+    "Prev": "",
+    "Next": "3110230687468526775",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What? How is it that you have this? It belongs to the museum! GUARDS!",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "bipolarblade",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "Bipolar Blade",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "SetPCCrimeLevel 20000",
+      "Set PCThief to 1",
+      "Goodbye"
+    ]
+  },
+  "3110230687468526775": {
+    "Prev": "20673223402256129057",
+    "Next": "1480423888124583667",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, it's quite an...interesting... piece. I'm glad that it's on display.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "bipolarblade",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "1480423888124583667": {
+    "Prev": "3110230687468526775",
+    "Next": "7906306902369311051",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You're quite sure, are you? Very well. Somehow, I think we will get by without it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "7906306902369311051": {
+    "Prev": "1480423888124583667",
+    "Next": "9609155962620717147",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well. It will take up a place in our collection. Likely a place towards the back. Thank you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "Bipolar Blade",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "set bipolarblade to 2",
+      "player->removeitem \"bipolar blade\" 1",
+      "player->additem \"gold_001\" 20000",
+      "\"bipolar blade_x\"->enable"
+    ]
+  },
+  "9609155962620717147": {
+    "Prev": "7906306902369311051",
+    "Next": "171884055467810687",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well. It will take up a place in our collection. Likely a place towards the back. Thank you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "Bipolar Blade",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "set bipolarblade to 2",
+      "player->removeitem \"bipolar blade\" 1",
+      "set MuseumDonations to MuseumDonations + 1",
+      "\"bipolar blade_x\"->enable",
+      "moddisposition 5"
+    ]
+  },
+  "171884055467810687": {
+    "Prev": "9609155962620717147",
+    "Next": "2821324170301423443",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You do not have the blade with you? Return with it, and we can settle the matter.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "Bipolar Blade",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2821324170301423443": {
+    "Prev": "171884055467810687",
+    "Next": "2821616131900621344",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You do not have the blade with you? Return with it, and we can settle the matter.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "Bipolar Blade",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2821616131900621344": {
+    "Prev": "2821324170301423443",
+    "Next": "2667422636598917395",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Legend has it that a nobleman sank his fortune into creating a blade of supreme power. Two smiths on opposite ends of Tamriel created each half of the blade, unaware of the other, with the hope that no one man, save the owner of the blade, would know its true power. Unfortunately, the smiths were not given enough instruction, and created halves with enchantments that completely negated each other. Do you wish to part with it, %PCName? I can offer you 20000 for it.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "bipolarblade",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Bipolar Blade",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_Blade",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Sell the item.\" 1 \"Keep the item.\" 2 \"Donate the item.\" 3"
+    ]
+  },
+  "2667422636598917395": {
+    "Prev": "2821616131900621344",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Legend has it that a nobleman sank his fortune into creating a blade of supreme power. Two smiths on opposite ends of Tamriel created each half of the blade, unaware of the other, with the hope that no one man, save the owner of the blade, would know its true power. Unfortunately, the smiths were not given enough instruction, and created halves with enchantments that completely negated each other. Do you wish to part with it, %PCName? I can offer you 20000 for it.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "bipolarblade",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Bipolar Blade",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Sell the item.\" 1 \"Keep the item.\" 2"
+    ]
+  }
+}

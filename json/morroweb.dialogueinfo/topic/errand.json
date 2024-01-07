@@ -1,0 +1,128 @@
+{
+  "92501845924729422": {
+    "Prev": "",
+    "Next": "2369241622602432340",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sharn gra-muzgob",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, yes. You've completed the errand, and I'm quite satisfied.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_4_MuzgobInformant",
+        "Value": 15.0
+      }
+    ],
+    "Script": []
+  },
+  "2369241622602432340": {
+    "Prev": "92501845924729422",
+    "Next": "16293234062747712419",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sharn gra-muzgob",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very good. I'll just take that skull from you. Perfect for what I have in mind. Thank you. Now. As I promised. I'll answer your questions on the Nerevarine cult. Go ahead.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_4_MuzgobInformant",
+        "Value": 10.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_Skull_Llevule",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem, \"misc_skull_llevule\", 1",
+      "Journal, \"A1_4_MuzgobInformant\", 15",
+      "Player->ModReputation 1",
+      "moddisposition 10"
+    ]
+  },
+  "16293234062747712419": {
+    "Prev": "2369241622602432340",
+    "Next": "288918185757411443",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sharn gra-muzgob",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "When you've completed the errand, then we can discuss the information Caius wants.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_4_MuzgobInformant",
+        "Value": 10.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "misc_Skull_Llevule",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "288918185757411443": {
+    "Prev": "16293234062747712419",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sharn gra-muzgob",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The errand, then, is very simple. I need the skull of Llevule Andrano. You'll find it in Andrano Ancestral Tomb. But take care not to upset the natives. The Dunmer have some peculiar primitive prejudices against necromancy, and take grave objection to unauthorized tomb visits.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_4_MuzgobInformant",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal, \"A1_4_MuzgobInformant\", 10",
+      "addtopic necromancers"
+    ]
+  }
+}

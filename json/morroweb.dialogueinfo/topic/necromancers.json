@@ -1,0 +1,136 @@
+{
+  "17281197101776017263": {
+    "Prev": "",
+    "Next": "1771327817254703194",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sharn gra-muzgob",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can teach you more necromancy spells. For a price, of course. And as long as you keep quite about this.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Sharn_Necro",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "1771327817254703194": {
+    "Prev": "17281197101776017263",
+    "Next": "99912527298624518",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sharn gra-muzgob",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As you wish. It's a simple matter, really. [Sharn takes you aside and teaches you how to summon a skeletal minion.] Now. Remember. You said you'd keep quiet about this.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal MG_Sharn_Necro 10",
+      "player->addspell \"summon skeletal minion\"",
+      "Goodbye"
+    ]
+  },
+  "99912527298624518": {
+    "Prev": "1771327817254703194",
+    "Next": "25411852328694634",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sharn gra-muzgob",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As you wish. It's a simple matter, really. [Sharn takes you aside and teaches you how to summon an ancestral ghost.] Now. Remember. You said you'd keep quiet about this.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MG_Sharn_Necro 10",
+      "player->addspell \"summon ancestral ghost\"",
+      "Goodbye"
+    ]
+  },
+  "25411852328694634": {
+    "Prev": "99912527298624518",
+    "Next": "132682185397187142",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sharn gra-muzgob",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Where did you get that? That's MY copy of Legions of the Dead. Oh, all right. I'm a necromancer. Look. I'll teach you a spell, but you'll have to keep your mouth shut about this. I can teach you the Summon Ancestral Ghost spell, or, if you prefer, I can teach you Summon Skeletal Minion.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_sharnslegionsofthedead",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Teach me a ghost summoning.\" 1 \"Teach me a skeleton summoning\" 2"
+    ]
+  },
+  "132682185397187142": {
+    "Prev": "25411852328694634",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sharn gra-muzgob",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No. Of course not. I can't teach you spells. I'm NOT a necromancer. No. Absolutely not. Not a necromancer.",
+    "Filters": [],
+    "Script": [
+      "Journal MG_Sharn_Necro 1"
+    ]
+  }
+}

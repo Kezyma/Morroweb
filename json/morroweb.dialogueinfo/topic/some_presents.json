@@ -1,0 +1,106 @@
+{
+  "605882651780015993": {
+    "Prev": "",
+    "Next": "1636083531084332247",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falura llervu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, sera! These clothes! They are divine! Such a perfume! Only the very rich can afford this! I shall do everything I can to please you and my new master... that is, my gracious lord and husband-to-be. Come! I am so excited, I cannot wait! Let us travel together to Zainab camp and meet this Zainab lord.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B3_ZainabBride",
+        "Value": 45.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "potion_t_bug_musk_01",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "exquisite_shirt_01",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "exquisite_shoes_01",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "exquisite_skirt_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"exquisite_shirt_01\" 1",
+      "player->removeitem \"exquisite_skirt_01\" 1",
+      "player->removeitem \"exquisite_shoes_01\" 1",
+      "player->removeitem \"Potion_T_Bug_musk_01\" 1",
+      "additem \"exquisite_shirt_01\" 1",
+      "additem \"exquisite_skirt_01\" 1",
+      "additem \"exquisite_shoes_01\" 1",
+      "additem \"Potion_T_Bug_musk_01\" 1",
+      "Journal \"B3_ZainabBride\" 45"
+    ]
+  },
+  "1636083531084332247": {
+    "Prev": "605882651780015993",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falura llervu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sure she said you had some presents for me. She said you would give them to me before we leave for Zainab camp to meet my bridegroom.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B3_ZainabBride",
+        "Value": 45.0
+      }
+    ],
+    "Script": []
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "638432023208531058": {
+    "Prev": "",
+    "Next": "30940161461026593",
+    "Type": "Topic",
+    "Disposition": 10,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "varona nelas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You can find her in Vivec. I care not for her.",
+    "Filters": [],
+    "Script": []
+  },
+  "30940161461026593": {
+    "Prev": "638432023208531058",
+    "Next": "69469186763521570",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes?",
+    "Filters": [],
+    "Script": []
+  },
+  "69469186763521570": {
+    "Prev": "30940161461026593",
+    "Next": "2847618298344023751",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have heard of her death. It is a sad thing.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "ilmeni dren",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2847618298344023751": {
+    "Prev": "69469186763521570",
+    "Next": "10590278472818118334",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Maybe she can use the money from the ring you brought her to help end slavery.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_GreedySlaver",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "10590278472818118334": {
+    "Prev": "2847618298344023751",
+    "Next": "775719462700816110",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ilmeni Dren lives here in Vivec in the St. Delyn Canalworks South-One. Be courteous with her, %PCName. The last thing we need right now is trouble with the Duke.",
+    "Filters": [],
+    "Script": []
+  },
+  "775719462700816110": {
+    "Prev": "10590278472818118334",
+    "Next": "3039924276601419113",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec, St. Delyn",
+    "PlayerFaction": "",
+    "Text": "Of course. She lives in South-One here in St. Delyn.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "3039924276601419113": {
+    "Prev": "775719462700816110",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec",
+    "PlayerFaction": "",
+    "Text": "I've heard the name. Try the St. Delyn canton.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

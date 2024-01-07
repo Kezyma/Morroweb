@@ -1,0 +1,475 @@
+{
+  "11976128375311294": {
+    "Prev": "",
+    "Next": "359015321527225653",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "359015321527225653": {
+    "Prev": "11976128375311294",
+    "Next": "13726912961919944",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Writ on Navil and Ranes Ienith has been executed.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritNavil",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "13726912961919944": {
+    "Prev": "359015321527225653",
+    "Next": "589526253142388710",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can see no reason why you would have already murdered these men. The Morag Tong are honorable assassins, not common thugs. Still, by law and tradition, I must give you credit for this Writ.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Ranes Ienith",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Navil Ienith",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MT_WritNavil",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal MT_WritNavil 100",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition -10"
+    ]
+  },
+  "589526253142388710": {
+    "Prev": "13726912961919944",
+    "Next": "6946236411524426740",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have honorably executed Orvas Dren's men. You deserve the credit and payment for this Writ.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MT_WritNavil",
+        "Value": 90.0
+      }
+    ],
+    "Script": [
+      "Journal MT_WritNavil 100",
+      "Player->AddItem Gold_001 2000",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition 15"
+    ]
+  },
+  "6946236411524426740": {
+    "Prev": "589526253142388710",
+    "Next": "1618631649565922998",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Both Navil and Ranes must be executed to claim this Writ's completion. Finish the job, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MT_WritNavil",
+        "Value": 85.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "1618631649565922998": {
+    "Prev": "6946236411524426740",
+    "Next": "168821895768815691",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have honorably executed Orvas Dren's men. You deserve the credit and payment for this Writ.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MT_WritNavil",
+        "Value": 80.0
+      }
+    ],
+    "Script": [
+      "Journal MT_WritNavil 100",
+      "Player->AddItem Gold_001 2000",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition 10"
+    ]
+  },
+  "168821895768815691": {
+    "Prev": "1618631649565922998",
+    "Next": "676612069113036632",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Both Navil and Ranes must be executed to claim this Writ's completion. Finish the job, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MT_WritNavil",
+        "Value": 75.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "676612069113036632": {
+    "Prev": "168821895768815691",
+    "Next": "2259124651784712259",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have given this Writ to you already, %PCName.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "writ_navil",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritNavil",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "2259124651784712259": {
+    "Prev": "676612069113036632",
+    "Next": "21638272831356111495",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have given this Writ to you already, %PCName. As you know, Writs are issued only once. Your official paperwork will exonerate you from your deeds when you are confronted by the authorities - so guard it well. If you have lost it, you will have to suffer punishment for your crimes. This can be costly... very costly. But members of the %Faction must have immaculate reputations.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "writ_navil",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritNavil",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "21638272831356111495": {
+    "Prev": "2259124651784712259",
+    "Next": "29768141622462619066",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This is a Writ for two of Orvas Dren's men, Navil Ienith and Ranes Ienith. Both must be executed. They may be found on the Dren Plantation, which is east of Pelagiad and west of Suran. Mephala be with you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritBrilnosu",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritBemis",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MT_WritNavil 10",
+      "Player->AddItem \"writ_navil\" 1",
+      "ShowMap \"Dren Plantation\""
+    ]
+  },
+  "29768141622462619066": {
+    "Prev": "21638272831356111495",
+    "Next": "6526168691989317690",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled, %PCName. Make amends and speak with me again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "6526168691989317690": {
+    "Prev": "29768141622462619066",
+    "Next": "2205032328325941687",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You killed Navil and Ranes Ienith.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_KillIenith",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2205032328325941687": {
+    "Prev": "6526168691989317690",
+    "Next": "454520132840124526",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "You've already killed Navil and Ranes Ienith? Good work, %PCName. Their deaths, along with the improved defenses at our Guild halls, will keep the Camonna Tong off our backs, but the Fighters Guild is still a problem. Oh, and I found a ring you might like.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Ranes Ienith",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Navil Ienith",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_KillIenith",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TG_KillIenith 100",
+      "Player->AddItem \"Ring of Shadow Form\" 1",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "454520132840124526": {
+    "Prev": "2205032328325941687",
+    "Next": "360515014277765678",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "So Navil and Ranes Ienith are dead. Good work, %PCName. Their deaths, along with the improved defenses at our Guild halls, will keep the Camonna Tong off our backs, but the Fighters Guild is still a problem. Oh, and I found a ring you might like.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Ranes Ienith",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Navil Ienith",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_KillIenith 100",
+      "Player->AddItem \"Ring of Shadow Form\" 1",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "360515014277765678": {
+    "Prev": "454520132840124526",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Navil and Ranes Ienith can be found on the Dren Plantation. The Thieves Guild won't be safe from the Camonna Tong until their best enforcers are dead. Kill them and report back to me.",
+    "Filters": [],
+    "Script": [
+      "Journal TG_KillIenith 10",
+      "ShowMap Dren Plantation"
+    ]
+  }
+}

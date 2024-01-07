@@ -1,0 +1,203 @@
+{
+  "165721352238421558": {
+    "Prev": "",
+    "Next": "234946453787912522",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been kicked out of the Guild, %PCName. Better make amends, or no one's going to talk to you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "234946453787912522": {
+    "Prev": "165721352238421558",
+    "Next": "25633151693140617565",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already brought me a Redoran Master Helm.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_MasterHelm",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "25633151693140617565": {
+    "Prev": "234946453787912522",
+    "Next": "269881975755487861",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good work. I hope our client appreciates this. Here. Take a little gold for your trouble.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_MasterHelm 100",
+      "Player->RemoveItem Redoran_Master_Helm 1",
+      "Player->AddItem Gold_001 1000",
+      "ModPCFacRep 5 \"Redoran\"",
+      "ModDisposition 10"
+    ]
+  },
+  "269881975755487861": {
+    "Prev": "25633151693140617565",
+    "Next": "4038236141108721305",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well get us a Redoran Master Helm, %PCName. I can't keep our clients waiting forever.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "4038236141108721305": {
+    "Prev": "269881975755487861",
+    "Next": "2121331106105496573",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "A client of ours wants a Redoran Master Helm, and I see you have one on you. Will you hand this over to the Guild, or get us another one?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "redoran_master_helm",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_MasterHelm",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TG_MasterHelm 10",
+      "Choice \"Yes, take the helm\" 1 \"I'll find you another helm\" 2"
+    ]
+  },
+  "2121331106105496573": {
+    "Prev": "4038236141108721305",
+    "Next": "914927503201548325",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Did you get a Redoran Master Helm?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "redoran_master_helm",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_MasterHelm",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is\" 1 \"No, not yet\" 2"
+    ]
+  },
+  "914927503201548325": {
+    "Prev": "2121331106105496573",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "A client of ours wants a Redoran Master Helm. Most of the Councilors in House Redoran have one, but they can be hard to find. I know Miner Arobar has one, probably in his bedroom. You'd have to check Arobar Manor here in Ald'ruhn, Under-Skar.",
+    "Filters": [],
+    "Script": [
+      "Journal TG_MasterHelm 10"
+    ]
+  }
+}

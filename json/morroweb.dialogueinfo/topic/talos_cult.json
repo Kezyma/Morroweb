@@ -1,0 +1,377 @@
+{
+  "126118892995413423": {
+    "Prev": "",
+    "Next": "5405197152750214635",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have ruined their treasonous plans, but now I wonder... If we cannot trust the Talos Cult, who can we trust?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_TalosTreason",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "5405197152750214635": {
+    "Prev": "126118892995413423",
+    "Next": "241075643250415316",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You brought me evidence of a terrible conspiracy against the Emperor. Find Oritius Maro and Arius Rulician and strike them down for their treason. Long live Uriel Septim!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_TalosTreason",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "241075643250415316": {
+    "Prev": "5405197152750214635",
+    "Next": "15011857252537036",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So you found a secret alter to Tiber Septim? It troubles me that the Talos Cult has been hiding its practices from me, but the worship of Tiber Septim is accepted throughout the Empire. I need proof of a conspiracy against the Emperor, %PCName, not just the existence of a shrine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_TalosTreason",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "15011857252537036": {
+    "Prev": "241075643250415316",
+    "Next": "142586567134932706",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So you spoke to Orius Maro. Did you find any evidence of a conspiracy? I'd try and get him to tell you the names of other Talos Cult members and then talk to them as well.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_TalosTreason",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "142586567134932706": {
+    "Prev": "15011857252537036",
+    "Next": "49469844955710400",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "They are a group that reveres Tiber Septim. It is not the group as a whole with whom I am concerned. It is rumors of a conspiracy within the membership that interests me. Talk to your fellow soldiers and see if you can find out more.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "IL_TalosTreason",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "49469844955710400": {
+    "Prev": "142586567134932706",
+    "Next": "2000889962314904",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "oritius maro",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I thought you might. Here, take this key. It will unlock the door to the shrine downstairs. Look in the storeroom for the door. While you are there, speak with Arius Rulician. He can tell you more.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"IL_TalosTreason\" 20",
+      "Player->AddItem \"key_oritius\" 1",
+      "RemoveItem \"key_oritius\" 1"
+    ]
+  },
+  "2000889962314904": {
+    "Prev": "49469844955710400",
+    "Next": "282837096228974394",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "oritius maro",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hmmm...a pity. I thought you might have potential. No matter. We needn't speak of this any further.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "282837096228974394": {
+    "Prev": "2000889962314904",
+    "Next": "11740312152878810494",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "oritius maro",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I like you, %PCName. Perhaps you could be of some use to us. Do you have interest in becoming a member of the Talos Cult?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IL_TalosTreason",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, please tell me more.\" 1 \"No, I'm not interested.\" 2"
+    ]
+  },
+  "11740312152878810494": {
+    "Prev": "282837096228974394",
+    "Next": "16659161031010627963",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "oritius maro",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have interest in the Talos Cult? I can understand why. But, I have nothing more to tell you about this now.",
+    "Filters": [],
+    "Script": []
+  },
+  "16659161031010627963": {
+    "Prev": "11740312152878810494",
+    "Next": "67035492232113243",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arius rulician",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ahhh...you have spoken to Oritius, then? Excellent. We are always interested in meeting those who sympathize with our cause. Feel free to look and around and hear of our plans.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "IL_TalosTreason",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal \"IL_TalosTreason\" 30",
+      "moddisposition 25"
+    ]
+  },
+  "67035492232113243": {
+    "Prev": "16659161031010627963",
+    "Next": "236542093342729705",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Talos Cult",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We are those who worship the true following of the Legions. Protecting the Glory of Tiber Septim, Talos, the Dragonborn.",
+    "Filters": [],
+    "Script": []
+  },
+  "236542093342729705": {
+    "Prev": "67035492232113243",
+    "Next": "9179891518605507",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "optio bologra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have concerns. I know of some members, Oritius Maro, for one. I've seen him coming and going from the storeroom. Something's up.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IL_TalosTreason",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "9179891518605507": {
+    "Prev": "236542093342729705",
+    "Next": "278483187644069786",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Legion",
+    "SpeakerCell": "Gnisis",
+    "PlayerFaction": "",
+    "Text": "Ok, ok. Look, I'm not into it, but I know someone who is, Oritius Maro. That's all I'm saying.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IL_TalosTreason",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "278483187644069786": {
+    "Prev": "9179891518605507",
+    "Next": "1923931485216168803",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Legion",
+    "SpeakerCell": "Gnisis",
+    "PlayerFaction": "",
+    "Text": "Don't know much about them, actually. I know they revere Tiber Septim, but there's nothing wrong with that. Not really of too much interest to me, though. They have many followers in the Legions.",
+    "Filters": [],
+    "Script": []
+  },
+  "1923931485216168803": {
+    "Prev": "278483187644069786",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Gnisis",
+    "PlayerFaction": "",
+    "Text": "They have some fringe members in the Legion. Talk to the troopers here in town. They're not telling everything they know.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

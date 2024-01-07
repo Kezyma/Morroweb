@@ -1,0 +1,84 @@
+{
+  "24534293452671821209": {
+    "Prev": "",
+    "Next": "15768297661664816899",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The enchanted ring called Moon-and-Star -- or One-Clan-Under-Moon-and-Star, as the Ashlanders call it -- was forged for the hero Nerevar by one of the Dwemer Sorcerer-Priest Kagrenac's smiths, and blessed by the Daedra Lord Azura. The ring gave Nerevar supernatural powers of persuasion and indisputable proof of identity, since any other who tried to wear the ring would be killed instantly.",
+    "Filters": [
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "therana",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "15768297661664816899": {
+    "Prev": "24534293452671821209",
+    "Next": "1561421557898423058",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sul-matuul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You wear the Moon-and-Star of Nerevar. The legend of Moon-and-Star is known to all loremasters. No man but Nerevar may wear that ring and live. This is a true sign. This is a miracle, a blessing of Azura, and no man may deny it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B1_UnifyUrshilaku",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"B1_UnifyUrshilaku\" 20"
+    ]
+  },
+  "1561421557898423058": {
+    "Prev": "15768297661664816899",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ghost_npc_peakstar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You bear the Moon-and-Star, the ring of Nerevar. None may deny; you ARE Nerevar Reborn, the prophesied Incarnate. The Temple will know you as an enemy. Ordinators will mark you for death, and the Tribunal Faithful of the Great Houses will hate and fear you. The doubters of the Tribes will test your strength and doubt your honor. You will be known. You must prepare, and be ready.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal \"A2_6_Incarnate\" 52"
+    ]
+  }
+}

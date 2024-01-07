@@ -1,0 +1,392 @@
+{
+  "1438532511728032079": {
+    "Prev": "",
+    "Next": "2696972732525213558",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "pierlette rostorard",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I think I have a few potions of Cure Blight for sale...",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_CureBlight",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "2696972732525213558": {
+    "Prev": "1438532511728032079",
+    "Next": "2391295331686232429",
+    "Type": "Topic",
+    "Disposition": 90,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "pierlette rostorard",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I like you, %PCName. I will let you have these potions for the good of House Telvanni. But just this once. You won't get any more free potions from me.",
+    "Filters": [],
+    "Script": [
+      "Player->AddItem p_cure_blight_s 3",
+      "Journal HT_CureBlight 40"
+    ]
+  },
+  "2391295331686232429": {
+    "Prev": "2696972732525213558",
+    "Next": "312806113114226720",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "pierlette rostorard",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I usually have potions of Cure Blight in stock...",
+    "Filters": [],
+    "Script": []
+  },
+  "312806113114226720": {
+    "Prev": "2391295331686232429",
+    "Next": "1492322365123723279",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "andil",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Now that the kwama queen has been cured, I hope there will be less need for my potions.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_MineCure",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1492322365123723279": {
+    "Prev": "312806113114226720",
+    "Next": "171061544681826985",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "andil",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already delivered more Cure Blight potions to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_CureBlight",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "171061544681826985": {
+    "Prev": "1492322365123723279",
+    "Next": "624385383000820071",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "andil",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. Thank you. This will help. I can spare a few other potions. Why not take these?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HT_CureBlight 50",
+      "Player->RemoveItem p_cure_blight_s 3",
+      "Player->AddItem p_restore_health_q 3",
+      "Player->AddItem p_restore_fatigue_q 3"
+    ]
+  },
+  "624385383000820071": {
+    "Prev": "171061544681826985",
+    "Next": "1609125633052928458",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "andil",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The people of Tel Vos are depending on you. It's not like Master Aryon to be so inefficient.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "1609125633052928458": {
+    "Prev": "624385383000820071",
+    "Next": "1746093022181020317",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "andil",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Did Master Aryon send you with more potions of cure blight?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "p_cure_blight_s",
+        "Value": 3.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_CureBlight",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here they are.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "1746093022181020317": {
+    "Prev": "1609125633052928458",
+    "Next": "20977197453234215883",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "andil",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We had problems with blight here in Tel Vos, and I am nearly out of cure blight potions.",
+    "Filters": [],
+    "Script": []
+  },
+  "20977197453234215883": {
+    "Prev": "1746093022181020317",
+    "Next": "2272717869240894064",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galos mathendis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already delivered some potions of Cure Blight to Andil.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_CureBlight",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2272717869240894064": {
+    "Prev": "20977197453234215883",
+    "Next": "2523050488600675",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galos mathendis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Andil notified me that he was satisfied with the potions you brought him. Please take these 500 drakes with thanks from my patron, Master Aryon.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_CureBlight",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal HT_CureBlight 100",
+      "Player->AddItem Gold_001 500",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 5"
+    ]
+  },
+  "2523050488600675": {
+    "Prev": "2272717869240894064",
+    "Next": "1845116731929925941",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galos mathendis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Andil in Tel Vos is the apothecary you should speak with. Get three potions of cure blight and deliver them to Andil. You'll have to buy them from one of the vendors. Andil does not accept homemade potions.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_FyrMessage",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HT_CureBlight 10"
+    ]
+  },
+  "1845116731929925941": {
+    "Prev": "2523050488600675",
+    "Next": "2137304871390318696",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm not a wizard. I don't know where you could learn the spell of cure blight. But I have gotten scrolls of cure blight from Hetman Abelmawia before. Perhaps he has some or knows where you can get some. Scrolls are more reliable anyway.",
+    "Filters": [],
+    "Script": []
+  },
+  "2137304871390318696": {
+    "Prev": "1845116731929925941",
+    "Next": "6173113052781921340",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hetman abelmawia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have scrolls of blight curing if you'd like to barter.",
+    "Filters": [],
+    "Script": []
+  },
+  "6173113052781921340": {
+    "Prev": "2137304871390318696",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Sadrith Mora",
+    "PlayerFaction": "",
+    "Text": "Hm. I believe Pierlette Rostorard carries potions of cure blight.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_CureBlight",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HT_CureBlight",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  }
+}

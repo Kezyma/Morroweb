@@ -1,0 +1,165 @@
+{
+  "5300197162815927331": {
+    "Prev": "",
+    "Next": "24674196292061129336",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alusaron",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've gotten it? Wonderful! I hope you didn't have to go through too much trouble. As I promised, I have a reward for you. Take this. It's one of the better pieces I've crafted recently.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_Deed",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "EB_Deed",
+        "Value": 40.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_contract_ralen",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Deed\" 50",
+      "Player->RemoveItem \"bk_contract_ralen\" 1",
+      "Player->AddItem \"firebite war axe\" 1",
+      "AddItem bk_contract_ralen 1"
+    ]
+  },
+  "24674196292061129336": {
+    "Prev": "5300197162815927331",
+    "Next": "613825782528379",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alusaron",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll get my hands on it, one way or another.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_Deed",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "EB_Deed",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "613825782528379": {
+    "Prev": "24674196292061129336",
+    "Next": "14986323301312031738",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alusaron",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? Well, that's a shame. I'm sure there's someone around who can help me out with this.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Deed\" 40"
+    ]
+  },
+  "14986323301312031738": {
+    "Prev": "613825782528379",
+    "Next": "217772183310916781",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alusaron",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent! I knew you were a person who understood a good deal when you heard one. He's probably got the contract locked up in his private quarters beneath his shop, but I don't think he's got it well guarded. Good luck!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Deed\" 30"
+    ]
+  },
+  "217772183310916781": {
+    "Prev": "14986323301312031738",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alusaron",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sure, I'd like that contract! Hmm...how would you like to help me out, friend? If you could steal that contract from Ralen Tilvur, he wouldn't be able to fill the order properly. Then, when his customer shows up to collect, I'll be ready with the proper order!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_Deed",
+        "Value": 15.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Deed\" 20",
+      "Choice \"I'll get that contract for you.\" 1 \"I can't help you.\" 2"
+    ]
+  }
+}

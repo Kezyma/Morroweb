@@ -1,0 +1,280 @@
+{
+  "2329523291386410325": {
+    "Prev": "",
+    "Next": "8158181401014224529",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you the one who claims to be the Nerevarine? You should speak with Archcanon Saryoni. Before these rumors are put to rest, I cannot give you duties.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B8_MeetVivec",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "8158181401014224529": {
+    "Prev": "2329523291386410325",
+    "Next": "31107134361014411289",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled from the Temple.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "31107134361014411289": {
+    "Prev": "8158181401014224529",
+    "Next": "20998201312318019454",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have entrusted the Cleaver of St. Felms into your care.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_FelmsCleaver",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "20998201312318019454": {
+    "Prev": "31107134361014411289",
+    "Next": "3008541991879026390",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "As the %PCRank, you have the right to take the Cleaver of St. Felms as long as you treat it with the proper care and respect.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_FelmsCleaver",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal TT_FelmsCleaver 110",
+      "RemoveItem CleaverStFelms 1",
+      "Player->AddItem CleaverStFelms 1"
+    ]
+  },
+  "3008541991879026390": {
+    "Prev": "20998201312318019454",
+    "Next": "25201251371378727023",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have already returned the Cleaver of St. Felms.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_FelmsCleaver",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "25201251371378727023": {
+    "Prev": "3008541991879026390",
+    "Next": "240229706131533919",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. I assure you I will be most careful with it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TT_FelmsCleaver 100",
+      "Player->RemoveItem CleaverStFelms 1",
+      "AddItem CleaverStFelms 1",
+      "ModPCFacRep 5 \"Temple\"",
+      "ModDisposition 15",
+      "Player->ModReputation 1"
+    ]
+  },
+  "240229706131533919": {
+    "Prev": "25201251371378727023",
+    "Next": "73442149229621351",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am disappointed by your loyalty. And by your lack of faith.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -20"
+    ]
+  },
+  "73442149229621351": {
+    "Prev": "240229706131533919",
+    "Next": "31378228401272131660",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Is that truly the Cleaver of St. Felms the Bold? Will you return it to the care of the Temple?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "cleaverstfelms",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give her the Cleaver.\" 1 \"Keep the Cleaver.\" 2"
+    ]
+  },
+  "31378228401272131660": {
+    "Prev": "73442149229621351",
+    "Next": "22754182092948811901",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 5,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "Mendel Eves carried the Cleaver of St. Felms the Bold. He was a brave and honorable Buoyant Armiger, but he fell fighting on the northeast slopes of Red Mountain in an Ash Vampire lair known as Tureynulal. Recover the Cleaver from the hands of our enemies and return it to the Temple.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 15.0
+      }
+    ],
+    "Script": [
+      "Journal TT_FelmsCleaver 10"
+    ]
+  },
+  "22754182092948811901": {
+    "Prev": "31378228401272131660",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 5,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "Mendel Eves carried the Cleaver of St. Felms the Bold. He was a brave and honorable Buoyant Armiger, but he fell fighting on the northeast slopes of Red Mountain in an Ash Vampire lair known as Tureynulal. I need someone to recover the Cleaver of St. Felms... But perhaps you are not yet ready for this task. Train your body and your mind, %PCName. When you feel you are ready, go to Tureynulal.",
+    "Filters": [],
+    "Script": [
+      "Journal TT_FelmsCleaver 10"
+    ]
+  }
+}

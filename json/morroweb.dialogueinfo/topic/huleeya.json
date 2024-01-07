@@ -1,0 +1,153 @@
+{
+  "3068424990761519691": {
+    "Prev": "",
+    "Next": "322652278294922767",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "huleeya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am in the service of the Morag Tong, a modest Thrall in rank, and by vocation and training an agent and executioner. In my private life, I am a student of history. There is little else to tell.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_V_VivecInformants",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "322652278294922767": {
+    "Prev": "3068424990761519691",
+    "Next": "3136693961028632509",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec, Foreign Quarter",
+    "PlayerFaction": "",
+    "Text": "Huleeya? The Argonian Morag Tong? Not many Argonians in the Morag Tong. I'd look for him at the Black Shalk Cornerclub in the Lower Waistworks of the Foreign Quarter. Or at Jobasha's Books, on the same level of the Lower Waistworks as the Black Shalk Cornerclub.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "3136693961028632509": {
+    "Prev": "322652278294922767",
+    "Next": "11702396139577409",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Huleeya is an Argonian and a Morag Tong assassin. You'll find him in Vivec, at the Black Shalk Cornerclub in the Lower Waistworks of the Foreign Quarter. In addition to his other skills, Huleeya is also known around Vivec City as a student of history and a lover of books and old things.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "A1_7HuleeyaInformant",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "11702396139577409": {
+    "Prev": "3136693961028632509",
+    "Next": "76804565267810442",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "jobasha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Huleeya was a good friend of Jobasha. And Jobasha hears you are the one who killed Huleeya.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "huleeya",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -20",
+      "Goodbye"
+    ]
+  },
+  "76804565267810442": {
+    "Prev": "11702396139577409",
+    "Next": "1602255221093612415",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "jobasha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Huleeya is here.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_7HuleeyaInformant",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "1602255221093612415": {
+    "Prev": "76804565267810442",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "jobasha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Huleeya is not here, %PCRace. Look for her in the Foreign Quarter.",
+    "Filters": [],
+    "Script": []
+  }
+}

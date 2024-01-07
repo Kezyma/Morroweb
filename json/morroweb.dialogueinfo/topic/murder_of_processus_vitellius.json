@@ -1,0 +1,690 @@
+{
+  "1616720351991631356": {
+    "Prev": "",
+    "Next": "30336310151096819196",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "chargen class",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Quite a shame. He was a good man, and a loyal servant to the Emperor.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_DeadTaxman",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "30336310151096819196": {
+    "Prev": "1616720351991631356",
+    "Next": "222445677129166576",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "chargen class",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Quite a shame. He was a good man, and a loyal servant to the Emperor.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_DeadTaxman",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "222445677129166576": {
+    "Prev": "30336310151096819196",
+    "Next": "2614031951113657720",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "chargen class",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard you had been asking around about his murder. I'm glad to see this matter brought to its completion. Here's your reward, %PCName. Good to see there are still some citizens who understand their loyalty to our Emperor.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "foryn gilnith",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_DeadTaxman",
+        "Value": 70.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_DeadTaxman",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_DeadTaxman\" 100",
+      "RemoveItem \"Gold_001\" 500",
+      "Player->AddItem \"Gold_001\" 500",
+      "Goodbye"
+    ]
+  },
+  "2614031951113657720": {
+    "Prev": "222445677129166576",
+    "Next": "25291171762992117179",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "chargen class",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hope you'll bring that murderer to justice soon.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_DeadTaxman",
+        "Value": 48.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_DeadTaxman",
+        "Value": 85.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "foryn gilnith",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "25291171762992117179": {
+    "Prev": "2614031951113657720",
+    "Next": "4145450230103435",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "chargen class",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Don't come back until you've recovered the Emperor's gold.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_DeadTaxman",
+        "Value": 45.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "Gold_001",
+        "Value": 200.0
+      }
+    ],
+    "Script": []
+  },
+  "4145450230103435": {
+    "Prev": "25291171762992117179",
+    "Next": "1932910257292029503",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "chargen class",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good to see you were able to recover the Emperor's coin. I appreciate that kind of honesty. Since you've proven trustworthy, here's something you might be interested in. I'd like to see the murderer of Processus punished. Killing an Emperor's tax collector is punishable by death. Find his murderer, bring him to justice, and the Census and Excise office will pay you 500 septims.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_DeadTaxman",
+        "Value": 45.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 200.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_DeadTaxman\" 46",
+      "Player->RemoveItem \"Gold_001\" 200",
+      "AddItem \"Gold_001\" 200",
+      "Journal \"MV_DeadTaxman\" 48"
+    ]
+  },
+  "1932910257292029503": {
+    "Prev": "4145450230103435",
+    "Next": "1023211710410632024",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "chargen class",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You did? How odd that he was murdered but not robbed. Your honesty is appreciated, I can tell you that. I won't forget this, %PCName. In fact, if you're looking for some money for yourself, I'd like to see the murderer of Processus punished. Killing an Emperor's tax collector is punishable by death. Find his murderer, bring him to justice, and the Census and Excise Office will pay you 500 septims.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_DeadTaxman\" 30",
+      "Player->RemoveItem \"Gold_001\" 200",
+      "AddItem \"Gold_001\" 200",
+      "Journal \"MV_DeadTaxman\" 48"
+    ]
+  },
+  "1023211710410632024": {
+    "Prev": "1932910257292029503",
+    "Next": "2415317921348916706",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "chargen class",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? It figures, I suppose. Well, thank you for letting me know what had happened.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_DeadTaxman\" 40"
+    ]
+  },
+  "2415317921348916706": {
+    "Prev": "1023211710410632024",
+    "Next": "4412256843171812107",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "chargen class",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've already spent it? That's not good to hear. That was Imperial tax money, after all. You'd do well to get that money back and return it to me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_DeadTaxman\" 45"
+    ]
+  },
+  "4412256843171812107": {
+    "Prev": "2415317921348916706",
+    "Next": "242392067944577534",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "chargen class",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Murdered? What a waste. Processus was a good man. I had been wondering why we hadn't heard from him in a few days. Still, these are dangerous times we live in, and these sorts of things will happen. Did you happen to find the tax money he'd collected? I hate to be so callous, but I do have a job to do.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_seydaneentaxrecord",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 200.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_DeadTaxman",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_DeadTaxman\" 20",
+      "Choice \"Yes, I found 200 septims on his body.\" 1 \"No, he didn't have anything on him.\" 2"
+    ]
+  },
+  "242392067944577534": {
+    "Prev": "4412256843171812107",
+    "Next": "2734215869117771702",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "chargen class",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Murdered? What a waste. Processus was a good man. I had been wondering why we hadn't heard from him in a few days. Still, these are dangerous times we live in, and these sorts of things will happen. Did you happen to find the tax money he'd collected? I hate to be so callous, but I do have a job to do.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_seydaneentaxrecord",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "Gold_001",
+        "Value": 200.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_DeadTaxman",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_DeadTaxman\" 20",
+      "Choice \"Yes, but I no longer have the money.\" 3 \"No, he didn't have anything on him.\" 2"
+    ]
+  },
+  "2734215869117771702": {
+    "Prev": "242392067944577534",
+    "Next": "22120232663078810153",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "chargen class",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Murdered you say? He has been missing for a while. I'll need proof of that before I begin an official inquiry, though.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "bk_seydaneentaxrecord",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_DeadTaxman",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "22120232663078810153": {
+    "Prev": "2734215869117771702",
+    "Next": "3110614074281018896",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "thavere vedrano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I still can't believe he's gone.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_DeadTaxman",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "3110614074281018896": {
+    "Prev": "22120232663078810153",
+    "Next": "11335257311729916544",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "thavere vedrano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Processus, murdered! No! Tell me it's not so. He was the gentlest man I've ever met. He and I had become so close in the past few months...I don't know what I will do without him. I've only seen him get angry once or twice; and never raised a hand to anyone. This is so sad.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_DeadTaxman",
+        "Value": 48.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MV_DeadTaxman",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "AddTopic \"Processus' Ring\""
+    ]
+  },
+  "11335257311729916544": {
+    "Prev": "3110614074281018896",
+    "Next": "215421237372325771",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "foryn gilnith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You're one of them, huh? Come to kill me? Well, give it your best shot, %PCRace. I've no problem spilling more of the blood of the Emperor's lackeys!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_DeadTaxman\" 85",
+      "SetFight 100",
+      "AddTopic \"Processus' Ring\"",
+      "Goodbye"
+    ]
+  },
+  "215421237372325771": {
+    "Prev": "11335257311729916544",
+    "Next": "321671945225437535",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "foryn gilnith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, it's the truth. They've all been gouging us for years. The whole office is corrupt, I tell you. Once of these days, they'll get exposed, I swear it! Here, though. This was his ring. Looks like his woman gave it to him. She should probably have it. She wasn't to blame in all this.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_DeadTaxman\" 80",
+      "RemoveItem \"Exquisite_Ring_Processus\" 1",
+      "Player->AddItem \"Exquisite_Ring_Processus\" 1",
+      "AddTopic \"Processus' Ring\""
+    ]
+  },
+  "321671945225437535": {
+    "Prev": "215421237372325771",
+    "Next": "14173191683162810366",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "foryn gilnith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That fetcher? You're damn right I did him in, and a good thing, too. He was skimming a load of money from all of us honest people; overcharging us on our taxes and keeping the difference for himself. He was always flaunting his money around, showing off his new clothes and jewels. So, I killed the bastard, and left his body out there to rot, with all his ill-begotten gold still on him.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_DeadTaxman",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_DeadTaxman\" 70",
+      "Choice \"I believe what you say. I'll say nothing to the authorities.\" 5 \"Sorry, that is no excuse for murder, and your punishment has been decided.\" 6"
+    ]
+  },
+  "14173191683162810366": {
+    "Prev": "321671945225437535",
+    "Next": "2182878901212026068",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Seyda Neen, Census and Excise Office",
+    "PlayerFaction": "",
+    "Text": "We heard. He was a good man, and his murder should be avenged.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_DeadTaxman",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MV_DeadTaxman",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "2182878901212026068": {
+    "Prev": "14173191683162810366",
+    "Next": "1181614601662221205",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Seyda Neen",
+    "PlayerFaction": "",
+    "Text": "Someone finally got him, huh? Well, it's no surprise, I suppose. No one likes a tax collector, especially one who flaunts his wealth while taking our hard-earned cash. Only one who could stomach him at all was Thavere over in the lighthouse. The two of them spent some time together. Shame, really. She seemed like a nice woman.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_DeadTaxman",
+        "Value": 48.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MV_DeadTaxman",
+        "Value": 70.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "thavere vedrano",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_DeadTaxman\" 50"
+    ]
+  },
+  "1181614601662221205": {
+    "Prev": "2182878901212026068",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Seyda Neen",
+    "PlayerFaction": "",
+    "Text": "Found his body, huh? Well, it's up to you what to do with that information. I suppose that Socucius Ergalla in the Census and Excise Office would be the one to tell, if that's your inclination.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_DeadTaxman",
+        "Value": 10.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "thavere vedrano",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  }
+}

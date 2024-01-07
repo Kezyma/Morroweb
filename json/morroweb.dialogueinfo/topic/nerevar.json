@@ -1,0 +1,368 @@
+{
+  "27372153532436318414": {
+    "Prev": "",
+    "Next": "31650111442429118517",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gilvas barelo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I hope you find the books useful.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_4_MiloGone_books",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "31650111442429118517": {
+    "Prev": "27372153532436318414",
+    "Next": "49158745923918975",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gilvas barelo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "By the way, here are a few books from our library you might find of interest. Each gives a very different impression of Nerevar.",
+    "Filters": [],
+    "Script": [
+      "Journal A2_4_MiloGone_books 1",
+      "player->additem bk_RealNerevar 1",
+      "player->additem bk_NerevarMoonandStar 1",
+      "player->additem bk_SaintNerevar 1",
+      "addtopic \"Moon-and-Star\""
+    ]
+  },
+  "49158745923918975": {
+    "Prev": "31650111442429118517",
+    "Next": "887518327246889287",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sharn gra-muzgob",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Nerevar is a First Age hero of the Dunmer people. He was a great general and leader. He helped form the First Council, and united the Dunmer Houses against foreign invaders aided by the traitors of House Dagoth. He triumphed over Morrowind's enemies at Red Mountain, but died in the battle.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_4_MuzgobInformant",
+        "Value": 15.0
+      }
+    ],
+    "Script": []
+  },
+  "887518327246889287": {
+    "Prev": "49158745923918975",
+    "Next": "30106872461394764",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The armies met at Red Mountain, a Dwemer stronghold. The Dwemer were defeated, and terrible sorceries were used, resulting in the utter extermination of House Dwemer, House Dagoth, and their allies. Nerevar died after the battle, and his ring was lost, but Nerevar's alliance survives in Morrowind's ruling political institution, the Grand Council.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "30106872461394764": {
+    "Prev": "887518327246889287",
+    "Next": "108277139825018460",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The ring was called Moon-and-Star, and it helped Nerevar unite the various clans into the First Council. Later, however, disputes over religion divided the Council, with House Dwemer and House Dagoth on one side and all the other Houses on the other. Dumac and Dagoth invited Orc and Nord clans as allies, and held northwest Morrowind, while Nerevar mustered the other Houses and nomad tribes and marched to meet the Dwemer-Dagoth-Westerner forces.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 2"
+    ]
+  },
+  "108277139825018460": {
+    "Prev": "30106872461394764",
+    "Next": "3046820477194124551",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "When the Dunmer followed Veloth to Morrowind, they were many warring clans, with no law or leader in common. One Dunmer warlord, Nerevar, had the ambition to rule all the Dunmer. In that time, House Dwemer were great enchanters, so Nerevar went in secret to a Dwemer smith and asked for an enchanted ring that would help him. The ring gave its wearer great powers of persuasion; for safety, it was enchanted to instantly kill anyone who wore it except Nerevar.",
+    "Filters": [
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "therana",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  },
+  "3046820477194124551": {
+    "Prev": "108277139825018460",
+    "Next": "1346229569436726904",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Ashlanders",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Though many Dunmer, Tribesman and Houseman, died at Red Mountain, the Dwemer were defeated and their evil magicks destroyed, and the outlanders driven from the land. But after this great victory, the power-hungry khans of the Great Houses slew Nerevar in secret, set themselves up as gods, and forgot Nerevar's promises to the Tribes. But Nerevar will come again and cast down the false gods, and by the power of his ring will make good his promises, honor the Spirits, and drive the outsiders from the land.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1346229569436726904": {
+    "Prev": "3046820477194124551",
+    "Next": "1952983194383711",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Ashlanders",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "In ancient days, the Deep Elves and a great host of outlanders from the West came stealing the land of the Dunmer. In that time, Nerevar was the great khan and warleader of the House People, but he honored the Ancient Spirits and the Tribal law, and became as one of us. So, when Nerevar pledged upon his great Ring of the Ancestors, One-Clan-Under-Moon-and-Star, to honor the ways of the Spirits and rights of the Land, all the Tribes joined the House People fighting a great battle at Red Mountain.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B1_UnifyUrshilaku",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B2_AhemmusaSafe",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B3_ZainabBride",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B4_KillWarLovers",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  },
+  "1952983194383711": {
+    "Prev": "1346229569436726904",
+    "Next": "166029005404325427",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "Savant",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Nerevar died not long after, but he lived to see the birth of the Temple, and to bless the unity of the Dunmer into the safekeeping of Almsivi, the Temple, and all its communion of saints.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "166029005404325427": {
+    "Prev": "1952983194383711",
+    "Next": "25713246571771514740",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "Savant",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ages ago, Nerevar was the greatest Dunmer general, First Councilor, and companion of Vivec, Almalexia, and Sotha Sil, who, with the power of the great Ring of the Ancestors, One-Clan-Under-Moon-and-Star, united the Dunmer Houses to confront the evil Dwemer, the treacherous House Dagoth, and their Western allies at Red Mountain. By Providence, the faithless Dwemer were utterly destroyed, and their allies and the traitor Dagoth Ur were defeated.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  },
+  "25713246571771514740": {
+    "Prev": "166029005404325427",
+    "Next": "13394287323155030344",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "artisa arelas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Nerevar died not long after, but he lived to see the birth of the Temple, and to bless the unity of the Dunmer into the safekeeping of Almsivi, the Temple, and all its communion of saints.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "13394287323155030344": {
+    "Prev": "25713246571771514740",
+    "Next": "1837713970119754289",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "artisa arelas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ages ago, Nerevar was the greatest Dunmer general, First Councilor, and companion of Vivec, Almalexia, and Sotha Sil, who, with the power of the great Ring of the Ancestors, One-Clan-Under-Moon-and-Star, united the Dunmer Houses to confront the evil Dwemer, the treacherous House Dagoth, and their Western allies at Red Mountain. By Providence, the faithless Dwemer were utterly destroyed, and their allies and the traitor Dagoth Ur were defeated.",
+    "Filters": [],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  },
+  "1837713970119754289": {
+    "Prev": "13394287323155030344",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Savant",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Nerevar was a legendary Dunmer general who, in ancient times, defeated the evil Dwarves, Nords, Orcs, and traitor Dunmer at the Battle of Red Mountain. Nerevar was also one of the founders of the First Council of Great Houses, and friend and companion of Vivec, Almalexia, and Sotha Sil, who later became the gods of the Tribunal Temple.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

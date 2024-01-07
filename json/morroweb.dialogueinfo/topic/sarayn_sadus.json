@@ -1,0 +1,256 @@
+{
+  "22040305282433819040": {
+    "Prev": "",
+    "Next": "11558235922482212761",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "11558235922482212761": {
+    "Prev": "22040305282433819040",
+    "Next": "221461612979341403",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have already executed the Writ on Sarayn Sadus.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritSadus",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "221461612979341403": {
+    "Prev": "11558235922482212761",
+    "Next": "2749329124257632103",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sarayn Sadus is already dead? You must learn more restraint, %PCName. I will give you credit for this Writ, but I do not believe it was honorably executed.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "sarayn sadus",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MT_WritSadus",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal MT_WritSadus 100",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition -10"
+    ]
+  },
+  "2749329124257632103": {
+    "Prev": "221461612979341403",
+    "Next": "13923849275898991",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have honorably executed the Writ on Sarayn Sadus. The payment and honor for this Writ is yours.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MT_WritSadus",
+        "Value": 90.0
+      }
+    ],
+    "Script": [
+      "Journal MT_WritSadus 110",
+      "Player->AddItem \"Gold_001\" 500",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition 10"
+    ]
+  },
+  "13923849275898991": {
+    "Prev": "2749329124257632103",
+    "Next": "767865922020029867",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have honorably executed the Writ on Sarayn Sadus. The payment and honor for this Writ is yours.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MT_WritSadus",
+        "Value": 80.0
+      }
+    ],
+    "Script": [
+      "Journal MT_WritSadus 100",
+      "Player->AddItem \"Gold_001\" 500",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition 5"
+    ]
+  },
+  "767865922020029867": {
+    "Prev": "13923849275898991",
+    "Next": "1752518252125627569",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have given this Writ to you already, %PCName.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "writ_sadus",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritSadus",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "1752518252125627569": {
+    "Prev": "767865922020029867",
+    "Next": "17339245161099829703",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have given this Writ to you already, %PCName. As you know, Writs are issued only once. Your official paperwork will exonerate you from your deeds when you are confronted by the authorities - so guard it well. If you have lost it, you will have to suffer punishment for your crimes. This can be costly... very costly. But members of the %Faction must have immaculate reputations.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "writ_sadus",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritSadus",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "17339245161099829703": {
+    "Prev": "1752518252125627569",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A Writ has been invoked on Sarayn Sadus. I assign it to you, %PCName. He is hiding with other outlaws in Zaintirari. This is near the hut where you honorably murdered Odaishah Yasalmibaal. I will mark the Erabenimsun Camp on your map. From there, head northwest until you reach a steampit surrounded by dead trees. Zaintirari is to the north of this pit, but hidden by rocks. Search well, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritYasalmibaal",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_WritSaren",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MT_WritSadus 10",
+      "Player->AddItem \"writ_sadus\" 1",
+      "ShowMap \"Erabenimsun Camp\""
+    ]
+  }
+}

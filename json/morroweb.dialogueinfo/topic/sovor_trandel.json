@@ -1,0 +1,212 @@
+{
+  "14843235153159213783": {
+    "Prev": "",
+    "Next": "26758248813219512283",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ondres nerano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will handle this personally. Here, take these 10 drakes as a reward for your honesty.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_ManorKey 70",
+      "Player->RemoveItem key_neranomanor 1",
+      "AddItem key_neranomanor 1",
+      "Player->AddItem Gold_001 10",
+      "ModDisposition 25",
+      "\"Sovor Trandel\"->Disable"
+    ]
+  },
+  "26758248813219512283": {
+    "Prev": "14843235153159213783",
+    "Next": "2557946932006426333",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ondres nerano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, if you had kept the key, perhaps I might have something to say about the matter.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "2557946932006426333": {
+    "Prev": "26758248813219512283",
+    "Next": "2238916999289337412",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ondres nerano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He did? Well, that is most interesting. And what did you do with the key?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Choice \"It's here. Take it.\" 1 \"I no longer have it.\" 2"
+    ]
+  },
+  "2238916999289337412": {
+    "Prev": "2557946932006426333",
+    "Next": "25761123232711720371",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ondres nerano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Of course, he's quite unremarkable. He lacks ambition.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": []
+  },
+  "25761123232711720371": {
+    "Prev": "2238916999289337412",
+    "Next": "3051529204792527691",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ondres nerano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, he works for me. Does odd jobs when he's not too lazy.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "key_neranomanor",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_ManorKey",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Sovor Trandel gave me the key to your manor.\" 3 \"I see. Thanks for your time.\" 4"
+    ]
+  },
+  "3051529204792527691": {
+    "Prev": "25761123232711720371",
+    "Next": "23290117562196027022",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ondres nerano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, he works for me. Does odd jobs when he's not too lazy, which is rare.",
+    "Filters": [],
+    "Script": []
+  },
+  "23290117562196027022": {
+    "Prev": "3051529204792527691",
+    "Next": "9605152162764523118",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Habasi did not mean for you to kill him. You must be more careful in the future.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "sovor trandel",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "9605152162764523118": {
+    "Prev": "23290117562196027022",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He spends all his time and gold at the Council Club over by the silt strider.",
+    "Filters": [],
+    "Script": []
+  }
+}

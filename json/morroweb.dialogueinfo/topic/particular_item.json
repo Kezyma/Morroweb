@@ -1,0 +1,285 @@
+{
+  "12751188301594012870": {
+    "Prev": "",
+    "Next": "26994291703271518820",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Arnsa Thendas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm afraid there isn't anything left, %PCName.  The Estate Sale went quite well, and everything was sold.  I'm sorry.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_EstateSale",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "26994291703271518820": {
+    "Prev": "12751188301594012870",
+    "Next": "414645092472315247",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Arnsa Thendas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That dagger was what you were looking for, wasn't it %PCName?  If there's anything else you're looking for, I'm afraid it'll have to wait until the auction.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_EstateSale",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "414645092472315247": {
+    "Prev": "26994291703271518820",
+    "Next": "21005255461518915930",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Arnsa Thendas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A Droth Dagger?  Yes, he did indeed have one.  Something he'd mentioned to you, I presume?  Well, you're certainly welcome to it.  I don't like weapons, to be honest.  Please take this, and think fondly of Sandas.  I'm sure he'd want you to have it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_EstateSale",
+        "Value": 35.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "Droth_var",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "silver dagger_droth_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "player->additem \"silver dagger_droth_unique\" 1",
+      "com_chest_02_thendas1->removeitem \"silver dagger_droth_unique\" 1",
+      "Journal MS_EstateSale 40",
+      "set Droth_var to 1"
+    ]
+  },
+  "21005255461518915930": {
+    "Prev": "414645092472315247",
+    "Next": "5220141162079420788",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Arnsa Thendas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A Droth Dagger?  Hmm.  I thought there was one in here someplace, but I don't know where it is.  I'd have to look around for it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_EstateSale",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "5220141162079420788": {
+    "Prev": "21005255461518915930",
+    "Next": "2448319650585511324",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Arnsa Thendas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well, then.  I'm glad to be rid of it.  Be on the lookout for Geon Auline, though.  He's a nasty little man who's been after it for some time now.  I ended up refusing to sell it to him out of spite.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "PcGold",
+        "Compare": "GreaterEqual",
+        "Id": "PCGold",
+        "Value": 600.0
+      }
+    ],
+    "Script": [
+      "set Droth_var to 1",
+      "player->removeitem \"gold_001\" 600",
+      "player->additem \"silver dagger_droth_unique\" 1",
+      "com_chest_02_thendas1->removeitem \"silver dagger_droth_unique\" 1",
+      "Journal MS_EstateSale 50"
+    ]
+  },
+  "2448319650585511324": {
+    "Prev": "5220141162079420788",
+    "Next": "16653203153155519674",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Arnsa Thendas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'd agree to the deal, but it looks like you don't have the money for it.  Come back when you do, and the dagger is yours.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "PcGold",
+        "Compare": "Less",
+        "Id": "PCGold",
+        "Value": 600.0
+      }
+    ],
+    "Script": []
+  },
+  "16653203153155519674": {
+    "Prev": "2448319650585511324",
+    "Next": "27341780087733755",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Arnsa Thendas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Suit yourself.  It'll sell in the auction, then, and I'll likely get even more for it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "27341780087733755": {
+    "Prev": "16653203153155519674",
+    "Next": "194883571290023464",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Arnsa Thendas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A Droth Dagger?  Well, that's quite a coincidence.  My husband did, in fact, own one.  A rare item, I've learned.  I honestly have no idea where he got it, and I frankly don't like the look of the thing.  You seem like a good sort, so I'll make you a deal.  I'd like to get rid of it, so I'll part with it for, say, 600 gold.  Interested?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_EstateSale",
+        "Value": 20.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "silver dagger_droth_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "StartScript GetPCGold",
+      "Choice: \"I accept your offer.\" 1 \"No, thank you.\" 2"
+    ]
+  },
+  "194883571290023464": {
+    "Prev": "27341780087733755",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Arnsa Thendas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A what?  A Droth Dagger, you say?  I think I recall seeing one.  I can't remember where I put it, though.  In one of these chests, maybe?..",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_EstateSale",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  }
+}

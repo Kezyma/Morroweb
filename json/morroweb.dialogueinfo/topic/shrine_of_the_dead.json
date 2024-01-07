@@ -1,0 +1,378 @@
+{
+  "3236514843323820106": {
+    "Prev": "",
+    "Next": "24139276561306830582",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "urvel dulni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It seems we've done our job. The Shrine is cleansed.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_ShrineDead",
+        "Value": 200.0
+      }
+    ],
+    "Script": []
+  },
+  "24139276561306830582": {
+    "Prev": "3236514843323820106",
+    "Next": "28116198232768322072",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "urvel dulni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It seems we've done our job. The Shrine is cleansed.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "TR_ShrineDead",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_ShrineDead",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "28116198232768322072": {
+    "Prev": "24139276561306830582",
+    "Next": "213124053002928270",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "urvel dulni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I-I'd rather not speak of it. I know what must be done, but the place frightens me to the core. I don't know why I was chosen, but Our Lady believes I must be the one to go, as the shrine must be cleansed.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_ShrineDead",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_ShrineDead",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "213124053002928270": {
+    "Prev": "28116198232768322072",
+    "Next": "10373127657056040",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gavas drin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There is nothing further to say about that.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_ShrineDead",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "10373127657056040": {
+    "Prev": "213124053002928270",
+    "Next": "1143028911208902181",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gavas drin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Interesting. You've performed your duty well, %PCName. The goddess is very pleased. Take this Blessed Spear as a gift from the Lady Almalexia. It is good that you have been of service to our Lady.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_ShrineDead",
+        "Value": 60.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "urvel dulni",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TR_ShrineDead 100",
+      "Player->AddItem \"ebony spear_blessed_unique\" 1",
+      "\"urvel dulni\"-> AiWander 0 0 0 0 0 0"
+    ]
+  },
+  "1143028911208902181": {
+    "Prev": "10373127657056040",
+    "Next": "2296544539794370",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gavas drin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Urvel Dulni is dead, and there is no one to cleanse the shrine. This is a disappointment.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "urvel dulni",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_ShrineDead",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Journal TR_ShrineDead 116"
+    ]
+  },
+  "2296544539794370": {
+    "Prev": "1143028911208902181",
+    "Next": "2463825686447028896",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gavas drin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You allowed Urvel Dulni to die? Fool...but at least you managed to get the Shrine cleansed. He wasn't the best of priests, anyway. You were to be of service to our Lady, not get one of her followers killed. But, the Lady demands you be rewarded for your troubles. Her wisdom be praised. Take this.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "urvel dulni",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ShrineCleanse",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TR_ShrineDead 115",
+      "Player->AddItem gold_001 5000"
+    ]
+  },
+  "2463825686447028896": {
+    "Prev": "2296544539794370",
+    "Next": "3614160783237518321",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gavas drin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You allowed Urvel Dulni to die? Fool! The Lady will not be pleased by this. And you did not get the Shrine cleansed. Pathetic. You were to be of service to our Lady, yet you have failed miserably. Pathetic and typical.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "urvel dulni",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ShrineCleanse",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TR_ShrineDead 110"
+    ]
+  },
+  "3614160783237518321": {
+    "Prev": "2463825686447028896",
+    "Next": "258756018263922673",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gavas drin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Take Urvel Dulni there and allow him to perform the ritual.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_ShrineDead",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_ShrineDead",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "258756018263922673": {
+    "Prev": "3614160783237518321",
+    "Next": "1979130085472818855",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gavas drin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As I said, it holds immense power to speak with the ancestors and harness their power. The Lady Almalexia wishes to use this power for the good of Morrowind. I realize that ancestor worship falls a bit...outside traditional Temple doctrine, but the Lady knows best, and her will is law. To find the Shrine, enter the sewers through the Temple basement. Then head east to the ruined Temple Gardens, and south to the Shrine of the Dead.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_ShrineDead",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Journal TR_ShrineDead 30"
+    ]
+  },
+  "1979130085472818855": {
+    "Prev": "258756018263922673",
+    "Next": "162721366946726310",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris hler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I know nothing about that shrine. Speak with Drin about it.",
+    "Filters": [],
+    "Script": []
+  },
+  "162721366946726310": {
+    "Prev": "1979130085472818855",
+    "Next": "2675616906217797153",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "barenziah",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Shrine of the Dead? An ancient shrine dedicated to ancestor worship, if I remember correctly. I can't imagine what the goddess would want with it. From what I understand, it was destroyed centuries ago.",
+    "Filters": [],
+    "Script": []
+  },
+  "2675616906217797153": {
+    "Prev": "162721366946726310",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "plitinius mero",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've read about the shrine. At one point, it was rumored to hold great power. It was used by the Dunmer to harness the power of their ancestors. Some said it could have been used to summon legions of the undead, but that's never been proven to be true. Either way, it could have been a very powerful tool, but it was buried at the end of the First Era, along with the rest of Mournhold.",
+    "Filters": [],
+    "Script": []
+  }
+}

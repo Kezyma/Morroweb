@@ -1,0 +1,90 @@
+{
+  "30608182281366221362": {
+    "Prev": "",
+    "Next": "24745743588027036",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "grand inquisitor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That is a very curious tale indeed. I've never heard of such a thing. But go ahead, as long as you're here. I'll give you my key, but you'll need to get the cell key from the desk in the prison.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "indoril helmet",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "indoril cuirass",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "indoril pauldron left",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "indoril pauldron right",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotRace",
+        "Func": "NotRace",
+        "Compare": "Equal",
+        "Id": "Argonian",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotRace",
+        "Func": "NotRace",
+        "Compare": "Equal",
+        "Id": "Khajiit",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "RemoveItem key_ministry_sectors 1",
+      "Player->AddItem key_ministry_sectors 1",
+      "Journal A2_4_MiloPrisonSafe 100",
+      "StartScript PrisonSafe"
+    ]
+  },
+  "24745743588027036": {
+    "Prev": "30608182281366221362",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "grand inquisitor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Am I supposed to believe such a tale? GUARDS! SEIZE HIM!",
+    "Filters": [],
+    "Script": [
+      "SetDisposition 0",
+      "SetFight 100",
+      "Goodbye"
+    ]
+  }
+}

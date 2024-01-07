@@ -1,0 +1,201 @@
+{
+  "440713500277001374": {
+    "Prev": "",
+    "Next": "701528240255274606",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "geilir the mumbling",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "All right then.  If you have a change of heart, let me know.  I barely escaped from the draugrs the first time I rescued Oddfrid from Kolbjorn Barrow.  I'm not sure I want to risk my life again, no matter how much I enjoy Oddfrid's company.  Leave me now, %PCClass.  As you can see, I have a lot of cleaning up to do.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal BM_SadSeer 20",
+      "Goodbye"
+    ]
+  },
+  "701528240255274606": {
+    "Prev": "440713500277001374",
+    "Next": "49258192596714542",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "geilir the mumbling",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent.  Of course, I knew you were going to help me.  I am a seer after all.  Now, Kolbjorn Barrow lies to the southeast of here, near the coast.  I need you to enter the barrow, find Oddfrid, and return her to me.  Do be careful, %PCClass.  The draugrs are fast, vicious and entirely without remorse.  Go now.  I will eagerly await your return.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal BM_SadSeer 30",
+      "Goodbye"
+    ]
+  },
+  "49258192596714542": {
+    "Prev": "701528240255274606",
+    "Next": "14622183191923031526",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "geilir the mumbling",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent.  Of course, I knew you were going to help me.  I am a seer after all.  Now, Kolbjorn Barrow lies to the southeast of here, near the coast.  I need you to enter the barrow, find Oddfrid, and return her to me.  Do be careful, %PCClass.  The draugrs are fast, vicious and entirely without remorse.  Go now.  I will eagerly await your return.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal BM_SadSeer 35",
+      "Goodbye"
+    ]
+  },
+  "14622183191923031526": {
+    "Prev": "49258192596714542",
+    "Next": "1690423295912415616",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "geilir the mumbling",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My entire family was lost at sea a few months ago, and now I am all alone. My only companion is Oddfrid White-Lip.  She talks to me.  She tells me things, tells me the future.  I rescued her from Kolbjorn Barrow many months ago.  But she's been kidnapped by a draugr who lives in Kolbjorn! %PCClass, will you go to the barrow and rescue Oddfrid White-Lip?  If you do, then Oddfrid will help me reveal your future!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_SadSeer",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_CursedCaptain",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_SadSeer",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Journal BM_SadSeer 10",
+      "Choice \"Sorry, but no.\" 1 \"I'll rescue Oddfrid for you, Geilir.\" 2"
+    ]
+  },
+  "1690423295912415616": {
+    "Prev": "14622183191923031526",
+    "Next": "2692228918321730200",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "geilir the mumbling",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "With my family gone, I am all alone, except for Oddfrid White-Lip.  She talks to me.  She tells me the future.  But she's been kidnapped by a draugr who lives in Kolbjorn! %PCClass, will you go to the barrow and rescue Oddfrid White-Lip?  If you do, then Oddfrid will help me reveal your future!  And, as a show of good faith, I'll also reverse Thormoor's curse!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_SadSeer",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_CursedCaptain",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_SadSeer",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Journal BM_SadSeer 10",
+      "Choice \"Sorry, but no.\" 1 \"I'll rescue Oddfrid for you, Geilir.\" 3"
+    ]
+  },
+  "2692228918321730200": {
+    "Prev": "1690423295912415616",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "geilir the mumbling",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oddfrid White-Lip is with me once again, thanks to you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_SadSeer",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  }
+}

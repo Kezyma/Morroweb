@@ -1,0 +1,769 @@
+{
+  "161071963925511592": {
+    "Prev": "",
+    "Next": "2984416372124716826",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm very disappointed in you, %PCName. You broke our rules, and I can't have one of your reputation in the Bal Molagmer. Make amends, and perhaps we can speak again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2984416372124716826": {
+    "Prev": "161071963925511592",
+    "Next": "2803374653936361",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "I'm disappointed in you, %PCName. You've been caught too many times. Tone down your act, pay off yours debts, then come see me again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcCrimeLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2803374653936361": {
+    "Prev": "2984416372124716826",
+    "Next": "45211215830543405",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Let us speak of this no more.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_GreedySlaver",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "45211215830543405": {
+    "Prev": "2803374653936361",
+    "Next": "1490827291559923344",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already delivered the ring.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_GreedySlaver",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1490827291559923344": {
+    "Prev": "45211215830543405",
+    "Next": "176449113107193551",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "So you delivered the ring. Good. I hope Ilmeni Dren puts it to good use.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_GreedySlaver",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_GreedySlaver 100",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "176449113107193551": {
+    "Prev": "1490827291559923344",
+    "Next": "139727119662819232",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I wanted you to deliver a slaver's ring to Ilmeni Dren, but you tell me she's dead. I don't like the sound of that, %PCName. Lets forget about this completely.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TG_SS_GreedySlaver",
+        "Value": 100.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "ilmeni dren",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_GreedySlaver 110"
+    ]
+  },
+  "139727119662819232": {
+    "Prev": "176449113107193551",
+    "Next": "842127711436028439",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Braillon is dead? I don't like the sound of this, %PCName. It wouldn't be good for us to be associated with this in any way. Let's forget about this completely.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TG_SS_GreedySlaver",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "brallion",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_GreedySlaver 120"
+    ]
+  },
+  "842127711436028439": {
+    "Prev": "139727119662819232",
+    "Next": "6823307032644721683",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "I see you have Brallion's Ring. Take it to Ilmeni Dren in the St. Delyn Canton here in Vivec.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "exquisite_ring_brallion",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_GreedySlaver",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TG_SS_GreedySlaver",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "6823307032644721683": {
+    "Prev": "842127711436028439",
+    "Next": "14244218413022716335",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Brallion has the ring, naturally. He's a slave trader in Sadrith Mora's Great Market. Steal the ring and then deliver it to Ilmeni Dren, a secret abolitionist and the daughter of Duke Vedam Dren.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TG_SS_GreedySlaver",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Enamor",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_GreedySlaver 10"
+    ]
+  },
+  "14244218413022716335": {
+    "Prev": "6823307032644721683",
+    "Next": "19262630242628553",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I sold the ring. Soon more slaves will be on their way back to Black Marsh or Elsweyr.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_GreedySlaver",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "19262630242628553": {
+    "Prev": "14244218413022716335",
+    "Next": "6222168421563525608",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_GreedySlaver",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "6222168421563525608": {
+    "Prev": "19262630242628553",
+    "Next": "1989235172324815862",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "How could I wear a ring like that when there is so much suffering in Tamriel? If you want my appreciation, there are better ways to earn it than fancy gifts.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "moddisposition -10"
+    ]
+  },
+  "1989235172324815862": {
+    "Prev": "6222168421563525608",
+    "Next": "4238270821071427189",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Bal Molagmer? I remember tales of them told to me when I was a child, and I have heard whisperings recently that they were returning. I accept this ring as a symbol of good faith.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "TGglove",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_GreedySlaver 55",
+      "Player->RemoveItem Exquisite_Ring_Brallion 1",
+      "ModDisposition 20"
+    ]
+  },
+  "4238270821071427189": {
+    "Prev": "1989235172324815862",
+    "Next": "21322256572068221919",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Bal Molagmer? What do you know of this, thief? I have heard of these noble bandits, but you show no sign of being one. Still, anything taken from a slaver is a good thing.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_GreedySlaver 50",
+      "Player->RemoveItem Exquisite_Ring_Brallion 1",
+      "ModDisposition 10"
+    ]
+  },
+  "21322256572068221919": {
+    "Prev": "4238270821071427189",
+    "Next": "45821865731554650",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This is for me? What are you suggesting?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Choice \"I stole it for you.\" 1 \"In the name of the Bal Molagmer, I return this to you.\" 2"
+    ]
+  },
+  "45821865731554650": {
+    "Prev": "21322256572068221919",
+    "Next": "10349110811129517153",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Keep it. I wouldn't wear that gaudy thing anyway.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": []
+  },
+  "10349110811129517153": {
+    "Prev": "45821865731554650",
+    "Next": "3357160322563329943",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What do I want with a slaver's ring?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "exquisite_ring_brallion",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_GreedySlaver",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"The ring is for you.\" 3 \"Never mind.\" 4"
+    ]
+  },
+  "3357160322563329943": {
+    "Prev": "10349110811129517153",
+    "Next": "7945315681663820847",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "brallion",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't have that ring anymore.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ringcount",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "7945315681663820847": {
+    "Prev": "3357160322563329943",
+    "Next": "3045432009145311948",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "brallion",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Five hundred you say? Well, you are a shrewd one at that. Sold!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 500.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"gold_001\" 500",
+      "Brallion->removeitem \"exquisite_ring_brallion\" 1",
+      "brallion->additem \"gold_001\" 500",
+      "player->additem \"exquisite_ring_brallion\" 1",
+      "journal TG_SS_GreedySlaver 30",
+      "moddisposition 10"
+    ]
+  },
+  "3045432009145311948": {
+    "Prev": "7945315681663820847",
+    "Next": "2090661832779612209",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "brallion",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have not the coin, braggart.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "Gold_001",
+        "Value": 500.0
+      }
+    ],
+    "Script": [
+      "moddisposition -10"
+    ]
+  },
+  "2090661832779612209": {
+    "Prev": "3045432009145311948",
+    "Next": "198875951187315187",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "brallion",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Five hundred you say? Ha! 800 is my standing price. Take it or leave it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Done.\" 3 \"Forget I asked.\" 2"
+    ]
+  },
+  "198875951187315187": {
+    "Prev": "2090661832779612209",
+    "Next": "714323452207912987",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "brallion",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Suit yourself.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "moddisposition -2"
+    ]
+  },
+  "714323452207912987": {
+    "Prev": "198875951187315187",
+    "Next": "108211599712468367",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "brallion",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "All right, then. It's yours. Pleasure doing business.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 800.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"gold_001\" 800",
+      "Brallion->removeitem \"exquisite_ring_brallion\" 1",
+      "brallion->additem \"gold_001\" 800",
+      "player->additem \"exquisite_ring_brallion\" 1",
+      "player->journal TG_SS_GreedySlaver 30",
+      "moddisposition 15"
+    ]
+  },
+  "108211599712468367": {
+    "Prev": "714323452207912987",
+    "Next": "27409124203229158",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "brallion",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Don't waste my time, braggart.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "Gold_001",
+        "Value": 800.0
+      }
+    ],
+    "Script": [
+      "moddisposition -15"
+    ]
+  },
+  "27409124203229158": {
+    "Prev": "108211599712468367",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "brallion",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Eh? You like it? One of my slaves tried to buy his freedom with it. Imagine! A slave with a jewel like this? He obviously stole it, so I relieved him of its burden. If it has caught your fancy, I could part with it for, say, 1000 coin?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Hmm. 500 and you have a deal.\" 1 \"Too rich for me.\" 2"
+    ]
+  }
+}

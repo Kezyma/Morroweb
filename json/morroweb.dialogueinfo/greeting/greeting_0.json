@@ -1,0 +1,1832 @@
+{
+  "1224319899288117550": {
+    "Prev": "875317795149451008",
+    "Next": "5532282632337618941",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Chun-Ook, Upper Level",
+    "PlayerFaction": "",
+    "Text": "You can't be in here, %PCRace. And I'm afraid I can't let you leave. The Company wouldn't like that at all.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Alarmed",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "5532282632337618941": {
+    "Prev": "1224319899288117550",
+    "Next": "227322281661726892",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Chun-Ook, Lower Level",
+    "PlayerFaction": "",
+    "Text": "You can't be in here, %PCRace. And I'm afraid I can't let you leave. The Company wouldn't like that at all.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Alarmed",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "227322281661726892": {
+    "Prev": "5532282632337618941",
+    "Next": "62342927712254319",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What are you doing! We'll let your actions go for now, but once you're released, stuff like that will get you arrested again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Alarmed",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "Global",
+        "Compare": "NotEqual",
+        "Id": "CharGenState",
+        "Value": -1.0
+      }
+    ],
+    "Script": [
+      "Goodbye",
+      "Setfight 10",
+      "PayFine",
+      "SetPCCrimeLevel 0"
+    ]
+  },
+  "62342927712254319": {
+    "Prev": "227322281661726892",
+    "Next": "1883316893198517213",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "agronian guy",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't want to talk about it.",
+    "Filters": [],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "1883316893198517213": {
+    "Prev": "62342927712254319",
+    "Next": "226226374475914643",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "phane rielle",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "I've heard you've got a price on your head, %PCRank. For a small fee, I can take care of that.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcCrimeLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "NotEqual",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "226226374475914643": {
+    "Prev": "1883316893198517213",
+    "Next": "1046442603030210731",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arantamo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "I've heard you've got a price on your head, %PCRank. For a small fee, I can take care of that.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcCrimeLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "NotEqual",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1046442603030210731": {
+    "Prev": "226226374475914643",
+    "Next": "67239647320757300",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tongue_toad",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "I've heard you've got a price on your head, %PCRank. For a small fee, I can take care of that.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcCrimeLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "NotEqual",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "67239647320757300": {
+    "Prev": "1046442603030210731",
+    "Next": "58028831233554797",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rissinia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "I've heard you've got a price on your head, %PCRank. For a small fee, I can take care of that.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcCrimeLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "NotEqual",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "58028831233554797": {
+    "Prev": "67239647320757300",
+    "Next": "1553958902285827759",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've earned a death warrant for your crimes, outlaw. May the gods have mercy upon your soul.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcCrimeLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 5000.0
+      }
+    ],
+    "Script": [
+      "SetDisposition 0",
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "1553958902285827759": {
+    "Prev": "58028831233554797",
+    "Next": "2768210666929210763",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I accept this gold in payment of the fines and compensation ordered by the court. And now you are free to go.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem Gold_001 CrimeGoldTurnIn",
+      "SetPCCrimeLevel 0",
+      "PayFine"
+    ]
+  },
+  "2768210666929210763": {
+    "Prev": "1553958902285827759",
+    "Next": "20172142971264027114",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I accept this gold in payment of the fines and compensation ordered by the court. And now you are free to go.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem Gold_001 GetPCCrimeLevel",
+      "SetPCCrimeLevel 0",
+      "PayFine"
+    ]
+  },
+  "20172142971264027114": {
+    "Prev": "2768210666929210763",
+    "Next": "17814103293101015617",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then you must serve a sentence of hard labor. Serve your time peaceably, and pay your debt to society.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "GotoJail",
+      "Goodbye"
+    ]
+  },
+  "17814103293101015617": {
+    "Prev": "20172142971264027114",
+    "Next": "1838726766581023787",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then pay with your blood, outlaw!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "1838726766581023787": {
+    "Prev": "17814103293101015617",
+    "Next": "1361519830289551916",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Your papers seem to be in order, but you still have outstanding issues. Pay your remaining fines, or come with me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "PCHasCrimeGold",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "MT_LegitKills",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "MT_NewCrimeLevel",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "StartScript BILL_MT_redeem_writs",
+      "Choice, \"Pay Gold.\", 1, \"Go to Jail.\", 2, \"Resist Arrest.\", 3"
+    ]
+  },
+  "1361519830289551916": {
+    "Prev": "1838726766581023787",
+    "Next": "17905262503039229735",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have no legitimate writs. Pay your fine, or come with me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "PCHasCrimeGold",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "MT_LegitKills",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "MT_NewCrimeLevel",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "StartScript BILL_MT_redeem_writs",
+      "Choice, \"Pay Gold.\", 1, \"Go to Jail.\", 2, \"Resist Arrest.\", 3"
+    ]
+  },
+  "17905262503039229735": {
+    "Prev": "1361519830289551916",
+    "Next": "26256743169515609",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Your papers seem to be in order, but you still have outstanding issues. Come with me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "MT_LegitKills",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "MT_NewCrimeLevel",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "StartScript BILL_MT_redeem_writs",
+      "Choice, \"Go to Jail.\", 2, \"Resist Arrest.\", 3"
+    ]
+  },
+  "26256743169515609": {
+    "Prev": "17905262503039229735",
+    "Next": "2506439369606872",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The writs are not legitimate. You must come with me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "MT_LegitKills",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "MT_NewCrimeLevel",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "StartScript BILL_MT_redeem_writs",
+      "Choice, \"Go to Jail.\", 2, \"Resist Arrest.\", 3"
+    ]
+  },
+  "2506439369606872": {
+    "Prev": "26256743169515609",
+    "Next": "7532245362007625229",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "All of your papers seem to be in order. You are free to go.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "MT_LegitKills",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "LessEqual",
+        "Id": "MT_NewCrimeLevel",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "StartScript BILL_MT_redeem_writs",
+      "PayFineThief",
+      "Goodbye"
+    ]
+  },
+  "7532245362007625229": {
+    "Prev": "2506439369606872",
+    "Next": "27638249131682119725",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Where did you get that! The armor you wear is sacred to our Order. You shall be punished with blood!",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "WearingOrdinatorUni",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Goodbye",
+      "SetFight 100",
+      "StartCombat player"
+    ]
+  },
+  "12105171323147159": {
+    "Prev": "21776189282283124423",
+    "Next": "1556426861203214287",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've committed a crime, vampire. Were you not an abomination, I might let you live. Prepare to die!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Alarmed",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "PCHasCrimeGold",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "1556426861203214287": {
+    "Prev": "10464318192407517480",
+    "Next": "196804487824232374",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "You violated the law, %PCName. Pay the court %PCCrimeLevel gold and surrender your stolen goods, or surrender your stolen goods and serve your sentence of hard labor. Deliver the gold immediately, or come with me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Alarmed",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "PCHasCrimeGold",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "StartScript BILL_MT_calc_legit_kills",
+      "Choice, \"Pay Gold.\", 1, \"Go to Jail.\", 2, \"Resist Arrest.\", 3, \"Present Writs\", 4"
+    ]
+  },
+  "196804487824232374": {
+    "Prev": "1556426861203214287",
+    "Next": "19191290671947220251",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You violated the law, %PCName. Pay the court %PCCrimeLevel gold and surrender your stolen goods, or surrender your stolen goods and serve your sentence of hard labor. Deliver the gold immediately, or come with me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Alarmed",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "PCHasCrimeGold",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "StartScript BILL_MT_calc_legit_kills",
+      "Choice, \"Pay Gold.\", 1, \"Go to Jail.\", 2, \"Resist Arrest.\", 3"
+    ]
+  },
+  "5642177972930817100": {
+    "Prev": "19191290671947220251",
+    "Next": "196287825728868",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "You violated the law, %PCName. Since you don't have the %PCCrimeLevel gold to pay the court, you must surrender your stolen goods and serve your sentence of punitive labor. Come with me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Alarmed",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "StartScript BILL_MT_calc_legit_kills",
+      "Choice,  \"Go to Jail.\", 2, \"Resist Arrest.\", 3, \"Present Writs\", 4"
+    ]
+  },
+  "196287825728868": {
+    "Prev": "5642177972930817100",
+    "Next": "192701535310983235",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You violated the law, %PCName. Since you don't have the %PCCrimeLevel gold to pay the court, you must surrender your stolen goods and serve your sentence of punitive labor. Come with me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Alarmed",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "StartScript BILL_MT_calc_legit_kills",
+      "Choice,  \"Go to Jail.\", 2, \"Resist Arrest.\", 3"
+    ]
+  },
+  "26842177092586711290": {
+    "Prev": "192701535310983235",
+    "Next": "28453202671042816107",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "You violated the law, %PCName. Since you turned yourself in voluntarily, I'll take that into consideration. Pay %CrimeGoldTurnIn gold to the court and surrender your stolen goods, or surrender your stolen goods and serve your sentence of hard labor. Deliver the gold immediately, or come with me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcCrimeLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "PCHasTurnIn",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "StartScript BILL_MT_calc_legit_kills",
+      "Choice, \"Pay Gold.\", 5, \"Go to Jail.\", 2, \"Resist Arrest.\", 3, \"Present Writs\", 4"
+    ]
+  },
+  "28453202671042816107": {
+    "Prev": "26842177092586711290",
+    "Next": "3221696071812632454",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You violated the law, %PCName. Since you turned yourself in voluntarily, I'll take that into consideration. Pay %CrimeGoldTurnIn gold to the court and surrender your stolen goods, or surrender your stolen goods and serve your sentence of hard labor. Deliver the gold immediately, or come with me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcCrimeLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "PCHasTurnIn",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "StartScript BILL_MT_calc_legit_kills",
+      "Choice, \"Pay Gold.\", 5, \"Go to Jail.\", 2, \"Resist Arrest.\", 3"
+    ]
+  },
+  "24093917276228210": {
+    "Prev": "3221696071812632454",
+    "Next": "3832139402051823602",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "You violated the law, %PCName. Since you turned yourself in voluntarily, I'll take that into consideration. But you don't have the %CrimeGoldTurnIn gold to pay the court, so you must surrender your stolen goods and serve your sentence at hard labor. Come with me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcCrimeLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "StartScript BILL_MT_calc_legit_kills",
+      "Choice, \"Go to Jail.\", 2, \"Resist Arrest.\", 3, \"Present Writs\", 4"
+    ]
+  },
+  "3832139402051823602": {
+    "Prev": "24093917276228210",
+    "Next": "7817111001232614388",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You violated the law, %PCName. Since you turned yourself in voluntarily, I'll take that into consideration. But you don't have the %CrimeGoldTurnIn gold to pay the court, so you must surrender your stolen goods and serve your sentence at hard labor. Come with me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcCrimeLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "StartScript BILL_MT_calc_legit_kills",
+      "Choice, \"Go to Jail.\", 2, \"Resist Arrest.\", 3"
+    ]
+  },
+  "2820158182898026047": {
+    "Prev": "",
+    "Next": "3053416069775816458",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rat_pack_rerlas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Squeak!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "AIFollow \"player\" 0 0 0 0"
+    ]
+  },
+  "3053416069775816458": {
+    "Prev": "2820158182898026047",
+    "Next": "1970915763165106390",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rat_pack_rerlas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Squeak!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 40 30 20 0 0 0 0 0 0"
+    ]
+  },
+  "1970915763165106390": {
+    "Prev": "3053416069775816458",
+    "Next": "21575208122898025542",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rat_pack_rerlas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Squeak?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Stay\" 1 \"Come\" 2"
+    ]
+  },
+  "21575208122898025542": {
+    "Prev": "1970915763165106390",
+    "Next": "2026826774301919649",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rat_rerlas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Squeak!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "AIFollow \"player\" 0 0 0 0"
+    ]
+  },
+  "2026826774301919649": {
+    "Prev": "21575208122898025542",
+    "Next": "31089205411193327763",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rat_rerlas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Squeak!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AiWander 0 0 0 40 30 20 0 0 0 0 0 0"
+    ]
+  },
+  "31089205411193327763": {
+    "Prev": "2026826774301919649",
+    "Next": "875317795149451008",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rat_rerlas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Squeak?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Stay\" 1 \"Come\" 2"
+    ]
+  },
+  "875317795149451008": {
+    "Prev": "31089205411193327763",
+    "Next": "1224319899288117550",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Royal Guard",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Halt!  The King suspected you might try something treacherous with his champion. He cannot allow this to continue. By order of His Royal Highness King Hlaalu Helseth, Duke of Mournhold, you are ordered to accompany me to the prison until His Highness deems you fit to engage in the agreed-upon contest.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "KarrodCheapShot",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "karrod",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Set KarrodCheapShot to 0",
+      "StartScript \"GoToJailWhenDone\"",
+      "Goodbye"
+    ]
+  },
+  "10464318192407517480": {
+    "Prev": "12105171323147159",
+    "Next": "1556426861203214287",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You violated the law, %PCName. Pay the court %PCCrimeLevel gold and surrender your stolen goods, or surrender your stolen goods and serve your sentence of hard labor. Deliver the gold immediately, or come with me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Alarmed",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "PCHasCrimeGold",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "StartScript BILL_MT_calc_legit_kills",
+      "Choice, \"Pay Gold.\", 1, \"Go to Jail.\", 2, \"Resist Arrest.\", 3, \"Present Writs\", 4"
+    ]
+  },
+  "19191290671947220251": {
+    "Prev": "196804487824232374",
+    "Next": "5642177972930817100",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You violated the law, %PCName. Since you don't have the %PCCrimeLevel gold to pay the court, you must surrender your stolen goods and serve your sentence of punitive labor. Come with me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Alarmed",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "StartScript BILL_MT_calc_legit_kills",
+      "Choice,  \"Go to Jail.\", 2, \"Resist Arrest.\", 3, \"Present Writs\", 4"
+    ]
+  },
+  "192701535310983235": {
+    "Prev": "196287825728868",
+    "Next": "26842177092586711290",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You violated the law, %PCName. Since you turned yourself in voluntarily, I'll take that into consideration. Pay %CrimeGoldTurnIn gold to the court and surrender your stolen goods, or surrender your stolen goods and serve your sentence of hard labor. Deliver the gold immediately, or come with me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcCrimeLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "PCHasTurnIn",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "StartScript BILL_MT_calc_legit_kills",
+      "Choice, \"Pay Gold.\", 5, \"Go to Jail.\", 2, \"Resist Arrest.\", 3, \"Present Writs\", 4"
+    ]
+  },
+  "3221696071812632454": {
+    "Prev": "28453202671042816107",
+    "Next": "24093917276228210",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You violated the law, %PCName. Since you turned yourself in voluntarily, I'll take that into consideration. But you don't have the %CrimeGoldTurnIn gold to pay the court, so you must surrender your stolen goods and serve your sentence at hard labor. Come with me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcCrimeLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR08_Hlaalu",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "StartScript BILL_MT_calc_legit_kills",
+      "Choice, \"Go to Jail.\", 2, \"Resist Arrest.\", 3, \"Present Writs\", 4"
+    ]
+  },
+  "7817111001232614388": {
+    "Prev": "3832139402051823602",
+    "Next": "16043312532573123088",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You say you've been attacked by assassins? From your description, and the look of that dart you found, it sounds like the work of the Dark Brotherhood. I'm not sure who you angered, but stay away from me. I suppose this should be officially reported, though. Speak to Apelles Matius in Ebonheart about this matter.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "DBAttack",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "ebony dart_db_unique",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "apelles matius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_DBAttack",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Journal TR_DBAttack 30",
+      "set DBAttack to -1"
+    ]
+  },
+  "16043312532573123088": {
+    "Prev": "7817111001232614388",
+    "Next": "",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You say you've been attacked by assassins? From your description, it sounds like the work of the Dark Brotherhood. I'm not sure who you angered, but stay away from me. I suppose this should be officially reported, though. Speak to Apelles Matius in Ebonheart about this matter.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "DBAttack",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "apelles matius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_DBAttack",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Journal TR_DBAttack 30",
+      "set DBAttack to -1"
+    ]
+  },
+  "27638249131682119725": {
+    "Prev": "7532245362007625229",
+    "Next": "2022623305278403449",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Skaal Village",
+    "PlayerFaction": "",
+    "Text": "I did not wish this upon you, Blodskaal, but you leave me little choice.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_SkaalAttack",
+        "Value": 100.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "PCHasCrimeGold",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 9.0
+      }
+    ],
+    "Script": [
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "2022623305278403449": {
+    "Prev": "27638249131682119725",
+    "Next": "14685265822458631302",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Skaal Village",
+    "PlayerFaction": "",
+    "Text": "I accept the gold for the Skaal people. It will be added to the coffers of the village. Take care, Blodskaal. Do not let this become a habit.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_SkaalAttack",
+        "Value": 100.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "PCHasCrimeGold",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 8.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem Gold_001 GetPCCrimeLevel",
+      "SetPCCrimeLevel 0",
+      "Goodbye"
+    ]
+  },
+  "14685265822458631302": {
+    "Prev": "2022623305278403449",
+    "Next": "169222124924501314",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Skaal Village",
+    "PlayerFaction": "",
+    "Text": "You have violated laws of the Skaal. Though you have been named Blodskaal, you are also known to be under the shadow of the beast. You must pay with your life.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcCrimeLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_SkaalAttack",
+        "Value": 100.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "PCKnownWerewolf",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "169222124924501314": {
+    "Prev": "14685265822458631302",
+    "Next": "4445282811792129285",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Skaal Village",
+    "PlayerFaction": "",
+    "Text": "You have violated laws of the Skaal. Though you have been named Blodskaal, you have no means to pay reparations to the Skaal. You must pay with your life.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcCrimeLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_SkaalAttack",
+        "Value": 100.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "PCHasCrimeGold",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "4445282811792129285": {
+    "Prev": "169222124924501314",
+    "Next": "6534313421794514813",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Skaal Village",
+    "PlayerFaction": "",
+    "Text": "You have violated laws of the Skaal. You have been named Blodskaal, so you are offered a choice: pay %PCCrimeLevel in reparations to the Skaal or pay with your life.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcCrimeLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_SkaalAttack",
+        "Value": 100.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "PCHasCrimeGold",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Pay reparations.\" 8 \"Resist arrest.\" 9"
+    ]
+  },
+  "6534313421794514813": {
+    "Prev": "4445282811792129285",
+    "Next": "7685828493065609",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Skaal Village",
+    "PlayerFaction": "",
+    "Text": "You have violated laws of the Skaal. As you are not of our people, you will pay for your crimes.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcCrimeLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "7685828493065609": {
+    "Prev": "6534313421794514813",
+    "Next": "314254978230829820",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Stop! You are a known criminal as well as a werewolf. Though you say you have cured yourself of this foul curse, you will spend some time in jail until that is certain.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Alarmed",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcCrimeLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "PCKnownWerewolf",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "PCWerewolf",
+        "Value": -1.0
+      }
+    ],
+    "Script": [
+      "Set PCKnownReset to 0",
+      "Choice \"Go to Jail\" 2"
+    ]
+  },
+  "314254978230829820": {
+    "Prev": "7685828493065609",
+    "Next": "4268234201271522767",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Stop! You are a known criminal as well as a werewolf. Though you say you have cured yourself of this foul curse, you will spend some time in jail until that is certain.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcCrimeLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "PCKnownReset",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "PCWerewolf",
+        "Value": -1.0
+      }
+    ],
+    "Script": [
+      "Set PCKnownReset to 0",
+      "Choice \"Go to Jail\" 2"
+    ]
+  },
+  "4268234201271522767": {
+    "Prev": "314254978230829820",
+    "Next": "21776189282283124423",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You! Criminal and obscene beast! There is no escape for you, foul creature!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Alarmed",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcCrimeLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "PCKnownWerewolf",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "PCWerewolf",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "21776189282283124423": {
+    "Prev": "4268234201271522767",
+    "Next": "12105171323147159",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You! Criminal and obscene beast! There is no escape for you, foul creature!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Alarmed",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "PCKnownWerewolf",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "PCWerewolf",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  }
+}

@@ -1,0 +1,387 @@
+{
+  "3783283641355114233": {
+    "Prev": "",
+    "Next": "2308117807299678510",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Murudius Flaeus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm Murudius Flaeus. You here to collect the debt money?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BuriedTreasure",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HH_BuriedTreasure",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2308117807299678510": {
+    "Prev": "3783283641355114233",
+    "Next": "21826260844581931",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled. I cannot discuss business with you unless you make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "21826260844581931": {
+    "Prev": "2308117807299678510",
+    "Next": "638821392390214347",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have already dealt with Murudius Flaeus, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BuriedTreasure",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "638821392390214347": {
+    "Prev": "21826260844581931",
+    "Next": "1196635922080128287",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, it's all here. I hope Murudius Flaeus wasn't too much trouble. You get to keep half of it, like we agreed.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 800.0
+      }
+    ],
+    "Script": [
+      "Journal HH_BuriedTreasure 100",
+      "Player->RemoveItem Gold_001 400",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 10"
+    ]
+  },
+  "1196635922080128287": {
+    "Prev": "638821392390214347",
+    "Next": "3197624615521522168",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Don't play games with me, %PCName, or I'll send someone to get the money from you the same way I sent you to get the money from Murudius.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "3197624615521522168": {
+    "Prev": "1196635922080128287",
+    "Next": "505916052155599000",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So you killed him? Good work, but I can't pay you if you didn't find the debt money.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal HH_BuriedTreasure 110",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 10"
+    ]
+  },
+  "505916052155599000": {
+    "Prev": "3197624615521522168",
+    "Next": "258344060939615357",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then do not waste my time. Go to Hla Oad and get Murudius Flaeus to pay the money.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "258344060939615357": {
+    "Prev": "505916052155599000",
+    "Next": "378622734273319645",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you have the 800 drakes that Murudius Flaeus owes one of our nobles?",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "Murudius Flaeus",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BuriedTreasure",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is.\" 1 \"Murudius Flaeus is dead.\" 2 \"No, not yet.\" 3"
+    ]
+  },
+  "378622734273319645": {
+    "Prev": "258344060939615357",
+    "Next": "2993731133949610328",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you have the 800 drakes that Murudius Flaeus owes one of our nobles?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BuriedTreasure",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is.\" 1 \"No, not yet.\" 3"
+    ]
+  },
+  "2993731133949610328": {
+    "Prev": "378622734273319645",
+    "Next": "1846842382114131132",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Murudius Flaeus owes a House Hlaalu noble over 800 drakes in gambling debts. He lives in Hla Oad. Go there and get the drakes from him. If he refuses to give you the money, you can kill him, but if you get the money, you can keep half of it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BankCourier",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HH_BuriedTreasure 10"
+    ]
+  },
+  "1846842382114131132": {
+    "Prev": "2993731133949610328",
+    "Next": "287619204836010322",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Hla Oad",
+    "PlayerFaction": "",
+    "Text": "He looks like he doesn't have any money, but he sure does spend it.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BuriedTreasure",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HH_BuriedTreasure",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "287619204836010322": {
+    "Prev": "1846842382114131132",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Hla Oad",
+    "PlayerFaction": "",
+    "Text": "He often goes swimming near Fadila's house. I wonder what he's doing out there?",
+    "Filters": [
+      {
+        "Type": "NotRace",
+        "Func": "NotRace",
+        "Compare": "Equal",
+        "Id": "Khajiit",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BuriedTreasure",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HH_BuriedTreasure",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  }
+}

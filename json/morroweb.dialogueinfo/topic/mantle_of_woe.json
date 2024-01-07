@@ -1,0 +1,246 @@
+{
+  "2348145473189215114": {
+    "Prev": "",
+    "Next": "27548157401229012753",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tymvaul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Evil, you say?  Self-righteous fool!  Spare me your sanctimonious lecturing!  There is no good in the world, save that which we give ourselves.  But enough talk.  I will show you the true meaning of power!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "goodbye"
+    ]
+  },
+  "27548157401229012753": {
+    "Prev": "2348145473189215114",
+    "Next": "17016266101307620871",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tymvaul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Father? My...father? Could it be that he still holds me dear to his heart? I...I only wanted to study magic, free from the laws of the Skaal. Necromancy was quick, and easy. The power it offers is so overwhelming. Here...take the Mantle of Woe! Destroy it! I have brought shame to my father. I will leave Solstheim, I will find a place to study magicka, true magicka. Tell my father his love has saved me. I will return to him some day, when I can truly make him proud.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "\"tymvaul\"->removeitem \"mantle of woe\" 1 ",
+      "Player->AddItem \"mantle of woe\" 1",
+      "journal bm_tymvaul 50",
+      "goodbye"
+    ]
+  },
+  "17016266101307620871": {
+    "Prev": "27548157401229012753",
+    "Next": "14667190841713830327",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tymvaul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Fool!  Such power cannot be shared!  I alone wear the Mantle of Woe!  I alone am master of the dead!  I shall slay you and add your corpse to my ranks!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "goodbye"
+    ]
+  },
+  "14667190841713830327": {
+    "Prev": "17016266101307620871",
+    "Next": "217457730552413909",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tymvaul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I think not, stranger!  You're finding me here was destiny.  I seek to raise an army of the dead, and I need as many fresh corpses as I can get!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "goodbye"
+    ]
+  },
+  "217457730552413909": {
+    "Prev": "14667190841713830327",
+    "Next": "19444244882328829481",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tymvaul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So, you seek the Mantle's power for your own?  A dark duel it shall be, then!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "goodbye"
+    ]
+  },
+  "19444244882328829481": {
+    "Prev": "217457730552413909",
+    "Next": "806130380249905604",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tymvaul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Mantle of Woe is now yours, %PCName. I urge you to destroy the robe, lest its dark power take hold over you as it did me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Tymvaul",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "806130380249905604": {
+    "Prev": "19444244882328829481",
+    "Next": "26351180222618218171",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tymvaul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Behold the vestments I now wear!  When I read the old stories I had to learn the truth.  Could it be that an item of such grand magicka lie so close at hand, in the caves beneath my very village?  I could contain my eagerness no longer, and jumped into the well.  I braved Rimhull's dangers, and at last my efforts were rewarded.  Soon the dead shall walk, and Tymvaul the Dark shall lead them!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Tymvaul",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Tymvaul",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Tymvaul 40",
+      "Choice \"You're insane! You must die, as all evil should!\" 1 \"I've been sent your father. Take off that robe, and end this madness. Your father loves you, Tymvaul, and only wants you to be happy.\" 2 \"Let me join with you, and together we shall bring death to the worms of Solstheim!\" 3 \"Your affairs are your own business, Tymvaul, and I will take my leave.\" 4 \"Such power must never be wielded by one so feeble!  The Mantle will be mine!\" 5"
+    ]
+  },
+  "26351180222618218171": {
+    "Prev": "806130380249905604",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tymvaul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Behold the vestments I now wear!  When I read the old stories I had to learn the truth.  Could it be that an item of such grand magicka lie so close at hand, in the caves beneath my very village?  I could contain my eagerness no longer, and jumped into the well.  I braved Rimhull's dangers, and at last my efforts were rewarded.  Soon the dead shall walk, and Tymvaul the Dark shall lead them!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Tymvaul",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Tymvaul",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Choice \"You're insane, Tymvaul.  You must die, as all evil should!\" 1 \"I too practice the dark arts.  Let me join with you, and together we shall bring death and fire to the worms of Solstheim!\" 3 \"Your affairs are your own business, Tymvaul.  I care not for the magic you've uncovered, and will take my leave.\" 4 \"Such power must never be wielded by one so feeble!  The Mantle will be mine!\" 5"
+    ]
+  }
+}

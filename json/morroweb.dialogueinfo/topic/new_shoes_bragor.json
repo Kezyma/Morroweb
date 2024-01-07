@@ -1,0 +1,512 @@
+{
+  "227611842223520733": {
+    "Prev": "",
+    "Next": "1026122811575222913",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Habasi hears you broke our agreement. Habasi does not want to speak with you now.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1026122811575222913": {
+    "Prev": "227611842223520733",
+    "Next": "30369157803065220973",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "There is no more to say about that.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_BrotherBragor",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "30369157803065220973": {
+    "Prev": "1026122811575222913",
+    "Next": "2909616194698711780",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Habasi wanted to help our brother escape from prison, but it seems the person who would be able to help us is dead. This is bad, %PCRank. If he tries to leave without help from the inside, they will kill him. We will have to move on to other jobs.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "shadbak gra-burbug",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TG_BrotherBragor",
+        "Value": 110.0
+      }
+    ],
+    "Script": [
+      "Journal TG_BrotherBragor 110"
+    ]
+  },
+  "2909616194698711780": {
+    "Prev": "30369157803065220973",
+    "Next": "2691820839186609562",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "New-Shoes is free.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BrotherBragor",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2691820839186609562": {
+    "Prev": "2909616194698711780",
+    "Next": "25073120681841930999",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "New-Shoes is free? Habasi knew you could do this thing. Take these 1000 drakes, less than what it would cost without your help.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BrotherBragor",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal TG_BrotherBragor 100",
+      "Player->AddItem Gold_001 1000",
+      "\"New_Shoes Bragor\"->Disable",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "25073120681841930999": {
+    "Prev": "2691820839186609562",
+    "Next": "11837134692712521710",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Habasi knows a way to free New-Shoes. Mebestien Ence in Pelagiad smuggles Dwemer items. Shadbak gra-Burbug takes bribes from Mebestien. Fetch a mysterious Dwemer device from Mebestien's shop and take it to Shadbak. Tell Shadbak to let New-Shoes go or you'll let everyone know Shadbak takes bribes.",
+    "Filters": [],
+    "Script": [
+      "Journal TG_BrotherBragor 10"
+    ]
+  },
+  "11837134692712521710": {
+    "Prev": "25073120681841930999",
+    "Next": "302335977201936792",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mebestian ence",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I know nothing of him! Get out of here before I summon the authorities.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_dwrv_artifact50",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "302335977201936792": {
+    "Prev": "11837134692712521710",
+    "Next": "2492720284228004467",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mebestian ence",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't know what you're talking about. I know nothing about some thief rotting away in Fort Pelagiad.",
+    "Filters": [],
+    "Script": []
+  },
+  "2492720284228004467": {
+    "Prev": "302335977201936792",
+    "Next": "363422560210256272",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "shadbak gra-burbug",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I said I'd let him go, didn't I?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BrotherBragor",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "363422560210256272": {
+    "Prev": "2492720284228004467",
+    "Next": "32385785175393228",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "shadbak gra-burbug",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Okay, you got me this time. I'll let him go. But it's not over between us, %PCName. I'll remember you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_BrotherBragor 50"
+    ]
+  },
+  "32385785175393228": {
+    "Prev": "363422560210256272",
+    "Next": "1181719587167217623",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "shadbak gra-burbug",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll teach you a lesson, thief!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "1181719587167217623": {
+    "Prev": "32385785175393228",
+    "Next": "585915009134598991",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "shadbak gra-burbug",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Because Mebestien pays me good money to keep it sec--",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Choice \"Let New-Shoes go, and I'll forget about it.\" 1"
+    ]
+  },
+  "585915009134598991": {
+    "Prev": "1181719587167217623",
+    "Next": "453524494177151622",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "shadbak gra-burbug",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Where did you get that Dwemer artifact? I bet you stole it from Mebestien, thief!",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_dwrv_artifact50",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BrotherBragor",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yeah, I stole it.\" 2 \"How did you know Mebestien had one?\" 4"
+    ]
+  },
+  "453524494177151622": {
+    "Prev": "585915009134598991",
+    "Next": "501210613186015295",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "shadbak gra-burbug",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "New-Shoes broke the law. He has to serve his time. There's nothing I can do.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BrotherBragor",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "501210613186015295": {
+    "Prev": "453524494177151622",
+    "Next": "292913001106999495",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "new_shoes bragor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hang on to those shoes for me, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BrotherBragor",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "292913001106999495": {
+    "Prev": "501210613186015295",
+    "Next": "1534193752982128744",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "new_shoes bragor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here you go. Take good care of them.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_BrotherBragor 70",
+      "RemoveItem exquisite_shoes_01 1",
+      "Player->AddItem exquisite_shoes_01 1"
+    ]
+  },
+  "1534193752982128744": {
+    "Prev": "292913001106999495",
+    "Next": "441513176180263268",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "new_shoes bragor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, okay then. Thanks, %PCName. I'll be out of here soon.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "441513176180263268": {
+    "Prev": "1534193752982128744",
+    "Next": "26444112722354812735",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "new_shoes bragor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Shadbak said she'd let me go as soon as the paperwork's done. I'll be sure to tell everyone what you did for me. Hey, you want these shoes? They've been nothing but trouble for me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BrotherBragor",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Sure, I'll take them\" 1 \"No thanks\" 2"
+    ]
+  },
+  "26444112722354812735": {
+    "Prev": "441513176180263268",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "new_shoes bragor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Can you get me out of here?",
+    "Filters": [],
+    "Script": []
+  }
+}

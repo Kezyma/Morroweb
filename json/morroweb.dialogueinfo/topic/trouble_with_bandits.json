@@ -1,0 +1,369 @@
+{
+  "530318411974930662": {
+    "Prev": "",
+    "Next": "623624438267174105",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drulene falen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I haven't had any more trouble with bandits or mudcrabs either one.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_GuardGuarHerds",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "623624438267174105": {
+    "Prev": "530318411974930662",
+    "Next": "14967731067237640",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drulene falen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here you are, %PCName. Just ask if you ever need anything.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HR_GuardGuarHerds 50",
+      "Player->AddItem Ingred_Hackle-Lo_Leaf_01 2"
+    ]
+  },
+  "14967731067237640": {
+    "Prev": "623624438267174105",
+    "Next": "136597343142628027",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drulene falen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you ever need anything, %PCName, just ask.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal HR_GuardGuarHerds 50"
+    ]
+  },
+  "136597343142628027": {
+    "Prev": "14967731067237640",
+    "Next": "272271895236989007",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drulene falen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, I was having some trouble with bandits, but it sounds like you took care of them. Looks like I owe you some more Hackle-lo.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "HR_GuardGuarHerds",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "bandit_scarred_de_hrggh",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "bandit_scruffy_de_hrggh",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition 15",
+      "Player->ModReputation 1",
+      "Choice \"Accept some Hackle-lo.\" 1 \"No thanks.\" 2"
+    ]
+  },
+  "272271895236989007": {
+    "Prev": "136597343142628027",
+    "Next": "79189961011616681",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drulene falen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, I guess I owe you some more hackle-lo. I'm glad to hear that the bandits won't be troubling us again.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "bandit_scarred_de_hrggh",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "bandit_scruffy_de_hrggh",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition 15",
+      "Player->ModReputation 1",
+      "Choice \"Accept some Hackle-lo.\" 1 \"No thanks.\" 2"
+    ]
+  },
+  "79189961011616681": {
+    "Prev": "272271895236989007",
+    "Next": "2400256751537825895",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drulene falen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The bandits have only tried to get my guar and those of two other herders nearby. The bandits came from the south last time and they led off one of my best guar that way. I'd check south of here to see if there are any caves or tombs that the bandits could be hiding in.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_GuardGuarHerds",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HR_GuardGuarHerds 20"
+    ]
+  },
+  "2400256751537825895": {
+    "Prev": "79189961011616681",
+    "Next": "1208390672995727617",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drulene falen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You helped me with the Mudcrabs, %PCName. Maybe you could help me with these bandits. They've hit me and two other guar herders near here. I watched them last time and they left almost due south with one of my prize guar. I think they're hiding out in an old cave south of here.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_MudcrabNest",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Journal HR_GuardGuarHerds 20"
+    ]
+  },
+  "1208390672995727617": {
+    "Prev": "2400256751537825895",
+    "Next": "312891687915024376",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled from House Redoran. Make amends and perhaps we can speak again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "312891687915024376": {
+    "Prev": "1208390672995727617",
+    "Next": "277621425128059441",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I just heard that Drulene Falen is dead. I believe that you are responsible. You will be expelled from House Redoran, and I will not give you any more duties.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "drulene falen",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_GuardGuarHerds",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "PCExpell \"Redoran\"",
+      "Set ExpRedoran to 1",
+      "Journal HR_GuardGuarHerds 200"
+    ]
+  },
+  "277621425128059441": {
+    "Prev": "312891687915024376",
+    "Next": "2651717557106344741",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You handled the bandits well, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_GuardGuarHerds",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2651717557106344741": {
+    "Prev": "277621425128059441",
+    "Next": "17216318072596123844",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good work, %PCName. I have more duties for you. One of the councilors has been threatened.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_GuardGuarHerds",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal HR_GuardGuarHerds 100",
+      "ModPCFacRep 5 \"Redoran\"",
+      "ModDisposition 5"
+    ]
+  },
+  "17216318072596123844": {
+    "Prev": "2651717557106344741",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It happens, especially further from the law. Usually the bandits are outcast Ashlanders. Go talk to Drulene Falen again. She might be able to tell you where the bandits are.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FoundersHelm",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HR_GuardGuarHerds 10"
+    ]
+  }
+}

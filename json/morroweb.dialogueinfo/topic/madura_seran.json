@@ -1,0 +1,543 @@
+{
+  "24046923714138937": {
+    "Prev": "",
+    "Next": "3148911826205611394",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "madura seran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I'm her.",
+    "Filters": [],
+    "Script": []
+  },
+  "3148911826205611394": {
+    "Prev": "24046923714138937",
+    "Next": "16908113191051981",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled, but maybe you can join the Imperial Legion again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "16908113191051981": {
+    "Prev": "3148911826205611394",
+    "Next": "2807487592699019779",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You say Madura Seran is dead? This will hurt our standing with the Temple, %PCName. I wish it hadn't happened this way.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "madura seran",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "IL_RescuePilgrim",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal IL_RescuePilgrim 200"
+    ]
+  },
+  "2807487592699019779": {
+    "Prev": "16908113191051981",
+    "Next": "3330154592904210342",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Medura Seran was safe, last I heard.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "MaduraRescued",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "IL_RescuePilgrim",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "3330154592904210342": {
+    "Prev": "2807487592699019779",
+    "Next": "854610607761931976",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Medura Seran was safe, last I heard.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescuePilgrim",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "854610607761931976": {
+    "Prev": "3330154592904210342",
+    "Next": "28202294273180732340",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So you got Medura Seran out of the camp and in one piece. Good work, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescuePilgrim",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal IL_RescuePilgrim 100",
+      "ModDisposition 10",
+      "\"Madura Seran\"->Disable"
+    ]
+  },
+  "28202294273180732340": {
+    "Prev": "854610607761931976",
+    "Next": "803832709110557235",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have a report from Ald Velothi that one of their own, Medura Seran, is being held hostage in an outcast ashlander camp just south of their village. Go there and escort her to safety.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_GnisisBlight",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal IL_RescuePilgrim 10"
+    ]
+  },
+  "803832709110557235": {
+    "Prev": "28202294273180732340",
+    "Next": "2074128107134905863",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "abassel asserbassalit",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "She is dead.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "madura seran",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2074128107134905863": {
+    "Prev": "803832709110557235",
+    "Next": "413322904195818531",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "abassel asserbassalit",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "She is free to go.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescuePilgrim",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "413322904195818531": {
+    "Prev": "2074128107134905863",
+    "Next": "161339535169252721",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "abassel asserbassalit",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you, %PCName. She is free to go.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal IL_RescuePilgrim 40",
+      "Player->RemoveItem Gold_001 500",
+      "Additem, gold_001, 500"
+    ]
+  },
+  "161339535169252721": {
+    "Prev": "413322904195818531",
+    "Next": "1555068822039125648",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "abassel asserbassalit",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Come back when you are ready to trade.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "1555068822039125648": {
+    "Prev": "161339535169252721",
+    "Next": "16527235661184427383",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "abassel asserbassalit",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So, this pilgrim has value? I will give her to you for 500 drakes.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 500.0
+      }
+    ],
+    "Script": [
+      "Choice \"Pay 500 drakes.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "16527235661184427383": {
+    "Prev": "1555068822039125648",
+    "Next": "17311293131827315369",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "abassel asserbassalit",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So, this pilgrim has value? I will give her to you for 500 drakes, but you seem short on gold. Come back when you have more.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "Gold_001",
+        "Value": 500.0
+      }
+    ],
+    "Script": []
+  },
+  "17311293131827315369": {
+    "Prev": "16527235661184427383",
+    "Next": "2142583812286213357",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "abassel asserbassalit",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No, foreigner. We will keep this pilgrim.",
+    "Filters": [],
+    "Script": []
+  },
+  "2142583812286213357": {
+    "Prev": "17311293131827315369",
+    "Next": "810755786704315",
+    "Type": "Topic",
+    "Disposition": 20,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rawia ashirbibi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You'll have to talk to Abassel. He's inside.",
+    "Filters": [],
+    "Script": []
+  },
+  "810755786704315": {
+    "Prev": "2142583812286213357",
+    "Next": "1192025347320630137",
+    "Type": "Topic",
+    "Disposition": 20,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "kund assarnibani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You'll have to talk to Abassel. He's inside.",
+    "Filters": [],
+    "Script": []
+  },
+  "1192025347320630137": {
+    "Prev": "810755786704315",
+    "Next": "24525250961434625896",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ald Velothi",
+    "PlayerFaction": "",
+    "Text": "Someone has killed her. It's a shame.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "madura seran",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "24525250961434625896": {
+    "Prev": "1192025347320630137",
+    "Next": "1366025478300544394",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ald Velothi",
+    "PlayerFaction": "",
+    "Text": "You did a brave thing rescuing her from those ashlanders.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "MaduraRescued",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1366025478300544394": {
+    "Prev": "24525250961434625896",
+    "Next": "1066924253930228699",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ald Velothi",
+    "PlayerFaction": "",
+    "Text": "You're the one who rescued her right? It's nice to see someone of courage.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "MaduraRescued",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "moddisposition 5"
+    ]
+  },
+  "1066924253930228699": {
+    "Prev": "1366025478300544394",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ald Velothi",
+    "PlayerFaction": "",
+    "Text": "Some rogue Ashlanders have a small camp just south of the village. They took her there. Look for the camp past the lighted tree, up on the hill. Watch yourself.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

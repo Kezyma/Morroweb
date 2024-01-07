@@ -1,0 +1,2272 @@
+{
+  "155311419625522406": {
+    "Prev": "",
+    "Next": "1232025441586514082",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ano vando",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Vampire! The Light of Day will bring you to your end!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "1232025441586514082": {
+    "Prev": "155311419625522406",
+    "Next": "143615274198053934",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mastrius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Night walker, it is good you have come. Perhaps you will be able to free me from my imprisonment.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampCurse",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampCurse\" 10"
+    ]
+  },
+  "143615274198053934": {
+    "Prev": "1232025441586514082",
+    "Next": "28288248112506910274",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mastrius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Leave this place. You should not be here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "NotEqual",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "28288248112506910274": {
+    "Prev": "143615274198053934",
+    "Next": "11086177241786024123",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mastrius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I must escape this dungeon. It has been too long since I have tasted the blood of man or mer.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "VA_VampCurse",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "11086177241786024123": {
+    "Prev": "28288248112506910274",
+    "Next": "19208178212016431195",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "marara",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "All I wish is to be finished with this living death.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "VA_VampMarara",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "19208178212016431195": {
+    "Prev": "11086177241786024123",
+    "Next": "23984433100155166",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fathasa llethri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Leave here now, vampire. I don't want my son to get any further ideas.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_VampRich",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "23984433100155166": {
+    "Prev": "19208178212016431195",
+    "Next": "29122277261103617235",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "marara",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Greetings, dark walker. What brings you to my home? Have you come to rid me of this unlife?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "VA_VampMarara",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "29122277261103617235": {
+    "Prev": "23984433100155166",
+    "Next": "14831200351236920210",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "iniel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What, vampire? Make it quick.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "14831200351236920210": {
+    "Prev": "29122277261103617235",
+    "Next": "2882210645157225123",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tusamircil",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What is it, vampire?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2882210645157225123": {
+    "Prev": "14831200351236920210",
+    "Next": "344985061647627648",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sanvyn llethri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What is it, vampire? Haven't you gone yet?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampRich",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "344985061647627648": {
+    "Prev": "2882210645157225123",
+    "Next": "1059811772497023760",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sanvyn llethri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, Shadow Walker? Your servant awaits.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampRich",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "1059811772497023760": {
+    "Prev": "344985061647627648",
+    "Next": "29730146331941318055",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sanvyn llethri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Greetings, Dark One. I am yours. I submit myself to your will.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "VA_VampRich",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "29730146331941318055": {
+    "Prev": "1059811772497023760",
+    "Next": "9806271031984225130",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fathasa llethri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Murderer! Child killer! Begone foul creature!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "VA_VampRich",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "VA_VampRich",
+        "Value": 70.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "sanvyn llethri",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "9806271031984225130": {
+    "Prev": "29730146331941318055",
+    "Next": "14947169611632517274",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fathasa llethri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What is it you want, vampire? Have you convinced my son of the error in his thinking?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "VA_VampRich",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "VA_VampRich",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "14947169611632517274": {
+    "Prev": "9806271031984225130",
+    "Next": "6827178201292127974",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fathasa llethri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Greetings, Child Killer. I assume you have come here because of my son.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "VA_VampRich",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "6827178201292127974": {
+    "Prev": "14947169611632517274",
+    "Next": "305311403560112764",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinyaramen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well. What do you want?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "VA_VampChild",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampChild",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem \"p_sinyaramen_UNIQUE\" 1",
+      "AddItem \"p_sinyaramen_UNIQUE\" 1",
+      "Journal \"VA_VampChild\" 70"
+    ]
+  },
+  "305311403560112764": {
+    "Prev": "6827178201292127974",
+    "Next": "63326584685031353",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinyaramen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will not speak with your kind, vampire.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "p_sinyaramen_UNIQUE",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampChild",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Choice \"I have the potion you ordered.\" 1"
+    ]
+  },
+  "63326584685031353": {
+    "Prev": "305311403560112764",
+    "Next": "23288195233207216141",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinyaramen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will not speak with your kind, vampire.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "p_sinyaramen_UNIQUE",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampChild",
+        "Value": 70.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampChild",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "23288195233207216141": {
+    "Prev": "63326584685031353",
+    "Next": "24097136242586527318",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinyaramen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will not speak with your kind, vampire.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "p_sinyaramen_UNIQUE",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampChild",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "24097136242586527318": {
+    "Prev": "23288195233207216141",
+    "Next": "1059410975162981253",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dhaunayne aundae",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you plan to serve me again, Darkling?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampChild",
+        "Value": 120.0
+      }
+    ],
+    "Script": []
+  },
+  "1059410975162981253": {
+    "Prev": "24097136242586527318",
+    "Next": "2603930950322915943",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dhaunayne aundae",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You try my patience, accident.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampChild",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "2603930950322915943": {
+    "Prev": "1059410975162981253",
+    "Next": "629057771099724223",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dhaunayne aundae",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What is it, little monster? How does an abomination such as you plan to serve me?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampChild",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "629057771099724223": {
+    "Prev": "2603930950322915943",
+    "Next": "866915373304815535",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raxle berne",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, little monster. What do you want?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 2.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampBlood",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "866915373304815535": {
+    "Prev": "629057771099724223",
+    "Next": "2611018385464224428",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raxle berne",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What is it, abomination? It is only because you have Berne blood in your veins that I do not kill you where you stand. The ways you may serve me are limited.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 2.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampBlood",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampBlood\" 10",
+      "AddTopic \"serve me\""
+    ]
+  },
+  "2611018385464224428": {
+    "Prev": "866915373304815535",
+    "Next": "4048140942163818175",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Irarak",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Greetings, my dark friend. Welcome to the Brood of Lord Irarak.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampCult",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampCult",
+        "Value": 70.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "4048140942163818175": {
+    "Prev": "2611018385464224428",
+    "Next": "10287422524627363",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Irarak",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What is it, Blood Friend? How may the Lord Irarak be of service to you?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampCult",
+        "Value": 70.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampCult\" 70"
+    ]
+  },
+  "10287422524627363": {
+    "Prev": "4048140942163818175",
+    "Next": "3217114731291464558",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ginith Ancestral Tomb",
+    "PlayerFaction": "",
+    "Text": "You are another of the master's kind. Welcome, dark one. Welcome to the lair of Lord Irarak.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "3217114731291464558": {
+    "Prev": "10287422524627363",
+    "Next": "18312298182980820012",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "volrina quarra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You try my patience, monster.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 3.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampCult",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "18312298182980820012": {
+    "Prev": "3217114731291464558",
+    "Next": "18401181952688331057",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "volrina quarra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What is it, Fresh Blood? You have no place here in the house of Quarra. You are of very little use to me.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "18401181952688331057": {
+    "Prev": "18312298182980820012",
+    "Next": "13121158613201513548",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "derar hlervu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What is it you wish, lifeless one?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "13121158613201513548": {
+    "Prev": "18401181952688331057",
+    "Next": "3044221498305878208",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": 1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Clan Aundae",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What do you want, New Blood?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "3044221498305878208": {
+    "Prev": "13121158613201513548",
+    "Next": "179574422478717327",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": 0,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Clan Aundae",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Please. No.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "179574422478717327": {
+    "Prev": "3044221498305878208",
+    "Next": "259221507852426785",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": 1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Clan Berne",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Speak quickly, yearling.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "259221507852426785": {
+    "Prev": "179574422478717327",
+    "Next": "969440011069428633",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": 0,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Clan Berne",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do not hurt me, dark one.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "969440011069428633": {
+    "Prev": "259221507852426785",
+    "Next": "11337101222612612920",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": 1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Clan Quarra",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Don't waste my time, accident.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "11337101222612612920": {
+    "Prev": "969440011069428633",
+    "Next": "32350171784430100",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": 0,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Clan Quarra",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I submit to your will.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "32350171784430100": {
+    "Prev": "11337101222612612920",
+    "Next": "16794314993072114347",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raven omayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Mistress Dratha has no more words for you.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "dratha",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_Rimintil",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_VampBlood2",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "16794314993072114347": {
+    "Prev": "32350171784430100",
+    "Next": "997961793009723664",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raven omayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you retrieved the Quarra Blood Potion yet?",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "dratha",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_Rimintil",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampBlood2",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "VA_VampBlood2",
+        "Value": 15.0
+      }
+    ],
+    "Script": []
+  },
+  "997961793009723664": {
+    "Prev": "16794314993072114347",
+    "Next": "182493256931859663",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raven omayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you taken care of Rimintil, vampire?",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "dratha",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_Rimintil",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "182493256931859663": {
+    "Prev": "997961793009723664",
+    "Next": "23135326841307430151",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raven omayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ahhh...one of the dark ones. You are an interesting lot. Mistress Dratha has a task for you. She would like the Altmer named Rimintil eliminated.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "dratha",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_Rimintil",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "23135326841307430151": {
+    "Prev": "182493256931859663",
+    "Next": "1500915192974013252",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sirilonwe",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have nothing further about which I wish to speak to you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_Shashev",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_VampDust",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1500915192974013252": {
+    "Prev": "23135326841307430151",
+    "Next": "299354959860027837",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sirilonwe",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you found my vampire dust yet, lifeless thing?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_Shashev",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_VampDust",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "299354959860027837": {
+    "Prev": "1500915192974013252",
+    "Next": "9240273352055117689",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sirilonwe",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I wanted to have someone killed. Did you do it, creature?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_Shashev",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "9240273352055117689": {
+    "Prev": "299354959860027837",
+    "Next": "183721970211230303",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sirilonwe",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Though I find your kind abhorrent, you can serve a purpose for me. I wish to have someone killed.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_Shashev",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "183721970211230303": {
+    "Prev": "9240273352055117689",
+    "Next": "259876592925710398",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fathasa llethri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hello again, vampire. Have you convinced my son?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_VampRich",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "259876592925710398": {
+    "Prev": "183721970211230303",
+    "Next": "726744581494319467",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": 5,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A vampire. How quaint. There are certain experiments I've had in mind for one of your kind. What is it you want?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "726744581494319467": {
+    "Prev": "259876592925710398",
+    "Next": "265292642811853343",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hmmm...a vampire. Interesting. What is it you want?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "265292642811853343": {
+    "Prev": "726744581494319467",
+    "Next": "2946213762062124311",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Say your peace and leave, vampire. We will not have you killed, but your presence here is...a nuisance.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2946213762062124311": {
+    "Prev": "265292642811853343",
+    "Next": "30363846865395047",
+    "Type": "Greeting",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "Vivec, Guild of Mages",
+    "PlayerFaction": "",
+    "Text": "Your kind is not welcome here, vampire. I have nothing I wish to say to you. Speak with Sirilonwe. She seems to have an affinity for your kind.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "30363846865395047": {
+    "Prev": "2946213762062124311",
+    "Next": "10468327633251929353",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Your kind is not welcome here, vampire. Ask me what you will, and be on your way.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "10468327633251929353": {
+    "Prev": "30363846865395047",
+    "Next": "214592859716319417",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Sarethi Ancestral Tomb",
+    "PlayerFaction": "",
+    "Text": "Yes? What do you ask of your fellow vampires?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "214592859716319417": {
+    "Prev": "10468327633251929353",
+    "Next": "3167792062730719786",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Dulo Ancestral Tomb",
+    "PlayerFaction": "",
+    "Text": "Yes? What do you ask of your fellow vampires?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "3167792062730719786": {
+    "Prev": "214592859716319417",
+    "Next": "190721980368456842",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Aralen Ancestral Tomb",
+    "PlayerFaction": "",
+    "Text": "Yes? What do you ask of your fellow vampires?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "190721980368456842": {
+    "Prev": "3167792062730719786",
+    "Next": "20240322032973122257",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Raviro Ancestral Tomb",
+    "PlayerFaction": "",
+    "Text": "Yes? What do you ask of your fellow vampires?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "20240322032973122257": {
+    "Prev": "190721980368456842",
+    "Next": "210097242895910057",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Othrelas Ancestral Tomb",
+    "PlayerFaction": "",
+    "Text": "Yes? What do you ask of your fellow vampires?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "210097242895910057": {
+    "Prev": "20240322032973122257",
+    "Next": "301355380701825631",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Andrethi Ancestral Tomb",
+    "PlayerFaction": "",
+    "Text": "Yes? What do you ask of your fellow vampires?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "301355380701825631": {
+    "Prev": "210097242895910057",
+    "Next": "2377312691303782497",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Serano Ancestral Tomb",
+    "PlayerFaction": "",
+    "Text": "Yes? What do you ask of your fellow vampires?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2377312691303782497": {
+    "Prev": "301355380701825631",
+    "Next": "2185917811248127545",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Hleran Ancestral Tomb",
+    "PlayerFaction": "",
+    "Text": "Yes? What do you ask of your fellow vampires?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2185917811248127545": {
+    "Prev": "2377312691303782497",
+    "Next": "578128438312667949",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Alen Ancestral Tomb",
+    "PlayerFaction": "",
+    "Text": "Yes? What do you ask of your fellow vampires?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "578128438312667949": {
+    "Prev": "2185917811248127545",
+    "Next": "30413105531090563",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Vampire! I curse you, in Almsivi's name, and in the name of all the ancestors. Return to the foul corruption from which you came! Die, fiend!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Level",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "30413105531090563": {
+    "Prev": "578128438312667949",
+    "Next": "127216720183781120",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "Sorcerer",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Vampire! I curse you, in Almsivi's name, and in the name of all the ancestors. Leave my sight, unholy beast!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModFight 50",
+      "Goodbye"
+    ]
+  },
+  "127216720183781120": {
+    "Prev": "30413105531090563",
+    "Next": "1168020397697927416",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "Mage",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Vampire! I curse you, in Almsivi's name, and in the name of all the ancestors. Leave here, monster!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModFight 50",
+      "Goodbye"
+    ]
+  },
+  "1168020397697927416": {
+    "Prev": "127216720183781120",
+    "Next": "1901771442409431438",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Sorcerer",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Remarkable. A vampire. In Morrowind. And still alive... so to speak. [Chuckles.] If you're looking for a vampirism cure, I can't help you. But I can tell you where to start looking.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1901771442409431438": {
+    "Prev": "1168020397697927416",
+    "Next": "22154188692129820500",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Mage",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Remarkable. A vampire. In Morrowind. And still alive... so to speak. [Chuckles.] If you're looking for a vampirism cure, I can't help you. But I can tell you where to start looking.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "22154188692129820500": {
+    "Prev": "1901771442409431438",
+    "Next": "11657146863060720256",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't fear you, vampire. Begone, fiend.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Level",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "ModFight 50",
+      "Goodbye"
+    ]
+  },
+  "11657146863060720256": {
+    "Prev": "22154188692129820500",
+    "Next": "263042661832839078",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No! A vampire! Get away, you foul creature!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Goodbye",
+      "ModFlee 100",
+      "ModDisposition -50"
+    ]
+  },
+  "263042661832839078": {
+    "Prev": "11657146863060720256",
+    "Next": "242672632452579098",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Get away from me, vampire!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Goodbye",
+      "ModFlee 100",
+      "ModDisposition -50"
+    ]
+  },
+  "242672632452579098": {
+    "Prev": "263042661832839078",
+    "Next": "",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Cover yourself! Are you mad? Have you no decency?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcClothingModifier",
+        "Compare": "LessEqual",
+        "Id": "",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotRace",
+        "Func": "NotRace",
+        "Compare": "Equal",
+        "Id": "Khajiit",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotRace",
+        "Func": "NotRace",
+        "Compare": "Equal",
+        "Id": "Argonian",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "crassius curio",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "nolore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "21859267502372626985": {
+    "Prev": "",
+    "Next": "13740130131417216540",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hannat zainsubani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I am Hannat Zainsubani, son of Hassour Zainsubani.",
+    "Filters": [],
+    "Script": []
+  },
+  "13740130131417216540": {
+    "Prev": "21859267502372626985",
+    "Next": "204882359639141175",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hassour zainsubani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you again for rescuing my son.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Hannat",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "204882359639141175": {
+    "Prev": "13740130131417216540",
+    "Next": "2665428651765232348",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hassour zainsubani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have spoken with my son? Indeed? He blossoms 'anew beneath tomorrow's sun'? That is my son, indeed. And you have rescued him from a terrible fate, if that is his message. He owes you a debt of gratitude, and I am proud to pay that debt. Who can place a value on life? But please accept these five pieces of raw ebony, rare and valuable. And from me personally, accept this, my own personal blade, and this, the ring from my own finger. May these gifts bless you, as you have blessed my son.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Hannat",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MS_Hannat",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "player->additem \"ring of knuckle luck\" 1",
+      "player->additem \"imperial netch blade\" 1",
+      "player->additem ingred_raw_ebony_01 5",
+      "Journal MS_Hannat 70"
+    ]
+  },
+  "2665428651765232348": {
+    "Prev": "204882359639141175",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hassour zainsubani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I wonder at my son -- he has been so long away, without a word to his father, surely he wishes me to die of worry, so he may inherit this fine brandy. He has proposed to chart the rarely visited ancient underground complex at Mamaea, west of Red Mountain; if you should chance to see him in your travels, chide him, and tell him an old man longs for news of his son-and-heir.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_11_ZainsubaniInformant",
+        "Value": 31.0
+      }
+    ],
+    "Script": [
+      "Journal, \"A1_11_ZainsubaniInformant\", 35"
+    ]
+  }
+}

@@ -1,0 +1,998 @@
+{
+  "23066108981558011850": {
+    "Prev": "",
+    "Next": "17006234403263719357",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hasphat antabolis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. The box was just what I was looking for.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_2_AntabolisInformant",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "17006234403263719357": {
+    "Prev": "23066108981558011850",
+    "Next": "3236710700194205911",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hasphat antabolis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Perfect. Just what I was looking for. Just let me take this Dwemer puzzle box, and then I'll tell you what Caius will want to know about the Sixth House. And about the Nerevarine. By the way, the inscriptions on the box seem to be the directions for setting a Dwemer key to open a specific lock. If you're interested, after you've delivered your report to Caius, come back, and maybe I'll have a key you can take back to Arkngthand.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_dwrv_ark_cube00",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem, \"misc_dwrv_Ark_cube00\", 1",
+      "Journal, \"A1_2_AntabolisInformant\", 10",
+      "moddisposition 10"
+    ]
+  },
+  "3236710700194205911": {
+    "Prev": "17006234403263719357",
+    "Next": "266351095457551500",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hasphat antabolis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Right. As I said, get me the Dwemer puzzle box from Arkngthand, and I'll tell you what you want to know.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "A1_2_AntabolisInformant",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "266351095457551500": {
+    "Prev": "3236710700194205911",
+    "Next": "1427024818124768213",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hasphat antabolis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There are Dwemer ruins nearby called Arkngthand. I need you to run over there and find me a little cube with a circular design and some symbols on one side. It's called 'a Dwemer puzzle box'. Bring me back the Dwemer puzzle box, and I'll tell you what you want to know.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_2_AntabolisInformant",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal, \"A1_2_AntabolisInformant\", 5"
+    ]
+  },
+  "1427024818124768213": {
+    "Prev": "266351095457551500",
+    "Next": "21620292953016531237",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gaenor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You must REALLY think I'm dense, %PCRace. Like YOU could put together a whole suit of Daedric Armor! I'm sure you just think you're so funny, don't you? Well, I'll teach you to laugh at me! You just wait, %PCName. I'll get you when you least expect it!!!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 16.0
+      }
+    ],
+    "Script": [
+      "Journal MS_Natural 10",
+      "StartScript GaenorTimer",
+      "setdisposition 10",
+      "Goodbye"
+    ]
+  },
+  "21620292953016531237": {
+    "Prev": "1427024818124768213",
+    "Next": "1077923272908815004",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gaenor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sorry, what? Oh, come on. Look at you! I'm sure you've got a whole stash of ebony weapons someplace! Probably have your own Ebony mine! I know you can spare it, so hand it over!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 15.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Fine, take it.\" 14 \"I said no.\" 12"
+    ]
+  },
+  "1077923272908815004": {
+    "Prev": "21620292953016531237",
+    "Next": "26515240481753828440",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gaenor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Wow. What a great sword. I've held a few swords in my lifetime, but this... this is exquisite. Okay, clearly you've got some connections. How about getting me, your good friend, a full suit of Daedric armor? I'm sure there's enough floating around that you can find it, and get it for me. What do you say?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 14.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "ebony shortsword",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"ebony shortsword\" 1",
+      "Choice: \"Sure, I'll do that.\" 16 \"No, I don't think so.\" 12"
+    ]
+  },
+  "26515240481753828440": {
+    "Prev": "1077923272908815004",
+    "Next": "24729302372747010443",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gaenor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What, you don't have one? Well, then don't offer me something you don't have! Sheesh. Some people. But listen. I don't need the sword all that badly, so it's okay. What I could REALLY use is a full suit of Daedric armor. I'm sure you've got an extra lying around someplace, right? Or you could dig one up for me? How about it, %PCName?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 14.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "ebony shortsword",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Sure, I'll get right on that.\" 16 \"No. Sorry.\" 12"
+    ]
+  },
+  "24729302372747010443": {
+    "Prev": "26515240481753828440",
+    "Next": "19686209801618223790",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gaenor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you really think I'm that stupid? No one walks around with a million gold on them; that's ludicrous! I won't stand for this kind of patronizing! I WILL NOT BE MOCKED! You'll see, %PCName. You'll ALL see. I'll get you!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 13.0
+      }
+    ],
+    "Script": [
+      "Journal MS_Natural 10",
+      "StartScript GaenorTimer",
+      "Goodbye"
+    ]
+  },
+  "19686209801618223790": {
+    "Prev": "24729302372747010443",
+    "Next": "33095906142065911",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gaenor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No?....   NO? You don't say \"no\" to me! NO ONE SAYS \"NO\" TO GAENOR! Oh, don't you think I'll forget this. I'll remember you, %PCRace, and I'll get you for it. I promise you that!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 12.0
+      }
+    ],
+    "Script": [
+      "Journal MS_Natural 10",
+      "StartScript GaenorTimer",
+      "setdisposition 10",
+      "Goodbye"
+    ]
+  },
+  "33095906142065911": {
+    "Prev": "19686209801618223790",
+    "Next": "15591283942662814665",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gaenor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I AM speaking the same language, right? I mean, you understand what I'm saying? Well, then why can't you seem to understand that I need this money? Give it to me!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 11.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Fine, take it.\" 5 \"No. Stop asking.\" 12"
+    ]
+  },
+  "15591283942662814665": {
+    "Prev": "33095906142065911",
+    "Next": "2235218479785929814",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gaenor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What? Wait - let's try that again. I need ten thousand gold from you. You're going to give it to me, right?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Oh, okay. Here.\" 9 \"No. Sorry.\" 12"
+    ]
+  },
+  "2235218479785929814": {
+    "Prev": "15591283942662814665",
+    "Next": "6718108301769924924",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gaenor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't even know what to say. I'll never be able to truly pay you back for this. You've restored my faith in the world, %PCName. And boy, are you ever rich! I bet you've got a million gold. In fact, I bet you've got ten million! You must be the richest %PCRace ever! You should give me a million, don't you think? Then we can both be millionaires!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 9.0
+      },
+      {
+        "Type": "Global",
+        "Func": "PcGold",
+        "Compare": "GreaterEqual",
+        "Id": "PCGold",
+        "Value": 10000.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"gold_001\" 10000",
+      "StartScript GetPCGold",
+      "Choice: \"Sure. Here it is.\" 13 \"Not a chance.\" 12"
+    ]
+  },
+  "6718108301769924924": {
+    "Prev": "2235218479785929814",
+    "Next": "20718143721639116037",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gaenor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, I see. You think this is all just some kind of joke. Offering me money you don't have. Well, I won't be laughed at. DO YOU HEAR ME? I won't stand for it! I'll get you, %PCRace. I'll get you back for this, and then we'll see who's laughing!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 9.0
+      },
+      {
+        "Type": "Global",
+        "Func": "PcGold",
+        "Compare": "Less",
+        "Id": "PCGold",
+        "Value": 100000.0
+      }
+    ],
+    "Script": [
+      "Journal MS_Natural 10",
+      "StartScript GaenorTimer",
+      "setdisposition 10",
+      "Goodbye"
+    ]
+  },
+  "20718143721639116037": {
+    "Prev": "6718108301769924924",
+    "Next": "29910251821498311074",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gaenor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you some kind of miser or something? I mean, seriously. A hundred gold, and you can't part with it? I've given away ten times as much in my day; a hundred gold is nothing! Now really, just hand it over already!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 8.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Fine. Take it.\" 3 \"No means no.\" 12",
+      "moddisposition -10"
+    ]
+  },
+  "29910251821498311074": {
+    "Prev": "20718143721639116037",
+    "Next": "2523348661641021446",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gaenor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ha ha. Quite the communication break-down we're having here, isn't it? I can see I'm just not getting through to you. Let me try this one last time, okay? It's ten gold. I know you have it. You won't miss it. I need it more than you do! Give it to me, okay?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 7.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Fine, take it.\" 1 \"No. I'm not kidding.\" 12",
+      "moddisposition -10"
+    ]
+  },
+  "2523348661641021446": {
+    "Prev": "29910251821498311074",
+    "Next": "2241912665309717701",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gaenor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, come on. We've come this far with it. You've already proven yourself to be the generous type; why not go that extra step and really impress me? It's not like I'm asking for your first-born child here... Seriously. Think about it for a moment.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Well, okay.\" 5 \"No, I really mean it.\" 11",
+      "moddisposition -10"
+    ]
+  },
+  "2241912665309717701": {
+    "Prev": "2523348661641021446",
+    "Next": "9667147082712717734",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gaenor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Wow! You have no idea what this means to me, %PCName. I've never held this much gold in my life! Well, heck. You've just got money to burn, don't you? I bet you could spare another 10000 gold, couldn't you? C'mon. I know you've got it. Let's have it!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      },
+      {
+        "Type": "Global",
+        "Func": "PcGold",
+        "Compare": "GreaterEqual",
+        "Id": "PCGold",
+        "Value": 1000.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"gold_001\" 1000",
+      "StartScript GetPCGold",
+      "Choice: \"Okay, here you are.\" 9 \"No way.\" 10"
+    ]
+  },
+  "9667147082712717734": {
+    "Prev": "2241912665309717701",
+    "Next": "164070102684613596",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gaenor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Umm, you don't seem to have that much. Well, I'm not particular. I'll just as easily take an ebony shortsword. Got one of those you can give me?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      },
+      {
+        "Type": "Global",
+        "Func": "PcGold",
+        "Compare": "Less",
+        "Id": "PCGold",
+        "Value": 1000.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Okay, here you go.\"  14 \"Not a chance.\" 15"
+    ]
+  },
+  "164070102684613596": {
+    "Prev": "9667147082712717734",
+    "Next": "9350226882929132340",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gaenor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Heh. Umm, maybe I'm not being clear here. I'm trying to say that I'd REALLY appreciate it if you could just help me out a little bit. It's only a hundred gold. I'm sure you've got that much, and I'm sure you wouldn't even miss it. So come on. Really. Help me out!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Okay, here you go.\" 3 \"No, really. I mean it.\" 8",
+      "moddisposition -5"
+    ]
+  },
+  "9350226882929132340": {
+    "Prev": "164070102684613596",
+    "Next": "184559762346714804",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gaenor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You really are something, %PCName. I can see we're going to get along famously! Okay, I'll be up front with you. If I could just have another, oh, thousand gold or so, I can really make it here. I just know it. You've been so good to me, and it's clear that you've got the money...  Just a little more help, that's all I ask for.  You'll do it, right?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Global",
+        "Func": "PcGold",
+        "Compare": "GreaterEqual",
+        "Id": "PCGold",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"gold_001\" 100",
+      "StartScript GetPCGold",
+      "Choice: \"Okay. Here you are.\" 5 \"No, that's too much. Sorry.\" 6"
+    ]
+  },
+  "184559762346714804": {
+    "Prev": "9350226882929132340",
+    "Next": "1749437732779125280",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gaenor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I love it that you want to help, but you don't have that much? Are you sure? Hmm. Well, perhaps we could work out some other sort of deal. Have you got maybe, I don't know, a nice ebony shortsword I could have? I mean, that'd be worth more than fifty gold, I know, but the value of that alone would solve all my problems. What do you say?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Global",
+        "Func": "PcGold",
+        "Compare": "Less",
+        "Id": "PCGold",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Okay, here you go.\" 14 \"No, I don't think so.\" 15"
+    ]
+  },
+  "1749437732779125280": {
+    "Prev": "184559762346714804",
+    "Next": "2076874752574127188",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gaenor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you sure about that? I mean, to look at you, it's obvious that you're a %PCRace of means. I imagine you wouldn't even know that the gold was gone. Think about it for another second or two. Think about how much it'd mean to me, about what a great help it would be.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Well, okay. Here.\" 1 \"No, I really don't think so.\" 7",
+      "moddisposition -5"
+    ]
+  },
+  "2076874752574127188": {
+    "Prev": "1749437732779125280",
+    "Next": "1821522740927813172",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gaenor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Splendid! I really do appreciate it, and I must say, you're quite the generous soul. In fact, as long as we're talking, and getting along so well, do you think maybe you could spot me another hundred? I'm quite sure that I can pay you back in just a few days time. I've always had excellent luck when it comes to these sort of things. So, what do you say?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "PcGold",
+        "Compare": "GreaterEqual",
+        "Id": "PCGold",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"gold_001\" 50",
+      "StartScript GetPCGold",
+      "Choice: \"I suppose so.\" 3 \"No, I don't think so. Sorry.\" 4"
+    ]
+  },
+  "1821522740927813172": {
+    "Prev": "2076874752574127188",
+    "Next": "1225621782201019766",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gaenor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I love it that you want to help, but you don't have that much? Are you sure? Hmm. Well, perhaps we could work out some other sort of deal. Have you got maybe, I don't know, a nice ebony shortsword I could have? I mean, that'd be worth more than fifty gold, I know, but the value of that alone would solve all my problems. What do you say?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "PcGold",
+        "Compare": "Less",
+        "Id": "PCGold",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Okay, here you go.\"  14 \"Not a chance.\" 15"
+    ]
+  },
+  "1225621782201019766": {
+    "Prev": "1821522740927813172",
+    "Next": "16126113032611217218",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Gaenor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Glad you asked. As you may have noticed, I'm not looking my best at the moment. I'm a little, shall we say, down on my luck, which is NOT something I'm used to, let me tell you. At any rate, I'm looking for a little starting capital to get things rolling here in Mournhold - I've recently arrived myself, as well - and I thought you might be able to help me out. Think you could part with, say, fifty gold?",
+    "Filters": [],
+    "Script": [
+      "Choice: \"Sure, here you are.\" 1 \"No, I don't think so. Sorry.\" 2",
+      "StartScript GetPCGold"
+    ]
+  },
+  "16126113032611217218": {
+    "Prev": "1225621782201019766",
+    "Next": "20109703929214667",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Nerile Andaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've no more favors to ask of you, %PCName. You've done more than enough.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_CrimsonPlague",
+        "Value": 170.0
+      }
+    ],
+    "Script": []
+  },
+  "20109703929214667": {
+    "Prev": "16126113032611217218",
+    "Next": "31347164141689419920",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Nerile Andaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for aiding me, %PCName. I'm afraid there's more serious work to be done, now that I've determined the Crimson Plague is behind all this.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_CrimsonPlague",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "31347164141689419920": {
+    "Prev": "20109703929214667",
+    "Next": "69713042325132634",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Nerile Andaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I know, I know. It's a menial task. I do apologize, but it needs to be done.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_CrimsonPlague",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "69713042325132634": {
+    "Prev": "31347164141689419920",
+    "Next": "3270259621624513081",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Nerile Andaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I hope it's not too much of an imposition, but there's another sick individual that needs healing. Athelyn Malas is out in the Temple Courtyard; the Ordinators won't let him come in. They've seen the increase in people requesting healing from the Temple, and fear that allowing him access will only spread whatever disease it is he carries. Can you take a Cure Disease Potion to him?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_CrimsonPlague",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "3270259621624513081": {
+    "Prev": "69713042325132634",
+    "Next": "3019210122399819207",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Nerile Andaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for delivering the potion, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_CrimsonPlague",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "3019210122399819207": {
+    "Prev": "3270259621624513081",
+    "Next": "467429055423419646",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Nerile Andaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you could just deliver that potion, %PCName, I'd be most appreciative. Things have been so busy here that I simply can't do it myself.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_CrimsonPlague",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "467429055423419646": {
+    "Prev": "3019210122399819207",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Nerile Andaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. Well. It's not much, really. A simple delivery that needs to be made, actually. Geon Auline reported being ill earlier this week, yet refuses to come to the Temple for healing. Some nonsense about a collection of his. At any rate, if he will not come to us, then we must take the initiative and go to him. Will you deliver this Cure Disease Potion to him?",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "PlagueActivate",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  }
+}

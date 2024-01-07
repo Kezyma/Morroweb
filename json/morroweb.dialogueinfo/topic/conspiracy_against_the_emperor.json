@@ -1,0 +1,192 @@
+{
+  "1743727191259888357": {
+    "Prev": "",
+    "Next": "16994673217549149",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I thank you and the Emperor himself may personally thank you when he hears of this. You have done a great service to the Empire. Long live Uriel Septim!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_TalosTreason",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "16994673217549149": {
+    "Prev": "1743727191259888357",
+    "Next": "98569073422121880",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Now the traitors are dead. It saddens me that this could happen to men under my command. We all swore to serve the Emperor, no matter what happens. You've earned my gratitude, %PCName. Long live Uriel Septim!",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "arius rulician",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "oritius maro",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_TalosTreason",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal IL_TalosTreason 100",
+      "ModPCFacRep 10 \"Imperial Legion\"",
+      "ModDisposition 15"
+    ]
+  },
+  "98569073422121880": {
+    "Prev": "16994673217549149",
+    "Next": "10059168633212818068",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A conspiracy to kill the emperor? Thank the Divines you found this evidence. Well done, %PCName. And, it's good to hear you brought justice to those who would consider such a course of action.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "arius rulician",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "oritius maro",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_talostreason",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_TalosTreason",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal IL_TalosTreason 100",
+      "ModPCFacRep 10 \"Imperial Legion\"",
+      "ModDisposition 15",
+      "additem \"bk_talostreason\" 1",
+      "player->removeitem \"bk_talostreason\" 1"
+    ]
+  },
+  "10059168633212818068": {
+    "Prev": "98569073422121880",
+    "Next": "13425230692736826703",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This is a most troubling letter. Thank the Divines you found this evidence. Now you must execute Aurius Rulician and Oritius Maro for their crimes.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_talostreason",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_TalosTreason",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal IL_TalosTreason 50",
+      "\"arius rulician\"->SetFight 100",
+      "\"oritius maro\"->SetFight 100",
+      "additem \"bk_talostreason\" 1",
+      "player->removeitem \"bk_talostreason\" 1",
+      "\"arius rulician\"->StartCombat Player",
+      "\"oritius maro\"->StartCombat Player"
+    ]
+  },
+  "13425230692736826703": {
+    "Prev": "10059168633212818068",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I know something is going on. You must find out what. I worry our time is short.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_TalosTreason",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  }
+}

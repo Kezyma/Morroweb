@@ -1,0 +1,686 @@
+{
+  "21221271758922977": {
+    "Prev": "",
+    "Next": "1470126099150552764",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm very disappointed in you, %PCName. You broke our rules, and I can't have one of your reputation in the Bal Molagmer. Clear you name, and perhaps we can speak again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1470126099150552764": {
+    "Prev": "21221271758922977",
+    "Next": "150672887146906605",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "I'm disappointed in you, %PCName. You've been caught too many times. Tone down your act, pay off yours debts, then come see me again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "150672887146906605": {
+    "Prev": "1470126099150552764",
+    "Next": "1060016751210971810",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "I know the school could use more, but you've done your job, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Plutocrats",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1060016751210971810": {
+    "Prev": "150672887146906605",
+    "Next": "21241989827008217",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Good work, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Plutocrats",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Plutocrats 100",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "21241989827008217": {
+    "Prev": "1060016751210971810",
+    "Next": "2551120131278414428",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "It is not just the charity that is important, but stealing from the unjust. Go steal Odral Helvi's books from the Governor's Hall in Caldera, not some other set of history books, and deliver them to Vala Catraso.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Plutocrats",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "2551120131278414428": {
+    "Prev": "21241989827008217",
+    "Next": "1626491201979523650",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Odral Helvi in Caldera has all four volumes of \"A Brief History of the Empire.\" They are personal treasures of his, bound with gold and delicately printed. Family heirlooms. I want you to steal all four of these books and deliver them to Vala Catraso at the reading school at the Guild of Mages in Ald'ruhn. The school always accepts these books as donations, but I want you to donate Odral Helvi's books in the name of the Bal Molagmer. You'll find Helvi and the books in the Governor's Hall in Caldera.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "brallion",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_SS_GreedySlaver",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Enamor",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Plutocrats 10"
+    ]
+  },
+  "1626491201979523650": {
+    "Prev": "2551120131278414428",
+    "Next": "1704219242458426963",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Odral Helvi in Caldera has all four volumes of \"A Brief History of the Empire.\" They are personal treasures of his, bound with gold and delicately printed. Family heirlooms. I want you to steal all four of these books and deliver them to Vala Catraso at the reading school at the Guild of Mages in Ald'ruhn. The school always accepts books as donations, but I want you to donate Odral Helvi's books in the name of the Bal Molagmer. You'll find Helvi and the books in the Governor's Hall in Caldera.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_GreedySlaver",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Plutocrats 10"
+    ]
+  },
+  "1704219242458426963": {
+    "Prev": "1626491201979523650",
+    "Next": "23345157991826127550",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vala catraso",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Those last books you brought me haven't worn out yet.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Plutocrats",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "23345157991826127550": {
+    "Prev": "1704219242458426963",
+    "Next": "285371325279332325",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vala catraso",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll just pretend I didn't hear that last thing you said, whatever it was. Thank you for the books, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Plutocrats 50",
+      "Player->RemoveItem bk_BriefHistoryEmpire1_oh 1",
+      "Player->RemoveItem bk_BriefHistoryEmpire2_oh 1",
+      "Player->RemoveItem bk_BriefHistoryEmpire3_oh 1",
+      "Player->RemoveItem bk_BriefHistoryEmpire4_oh 1",
+      "ModDisposition 20"
+    ]
+  },
+  "285371325279332325": {
+    "Prev": "23345157991826127550",
+    "Next": "110452375683148601",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vala catraso",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Bal Molagmer? I have heard rumors of their return, and now this. Those gloves are priceless, I hope you know. I don't know what to say. Thank you for the books, these should last at least a few months.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 11.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "TGglove",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Plutocrats 50",
+      "Player->RemoveItem bk_BriefHistoryEmpire1_oh 1",
+      "Player->RemoveItem bk_BriefHistoryEmpire2_oh 1",
+      "Player->RemoveItem bk_BriefHistoryEmpire3_oh 1",
+      "Player->RemoveItem bk_BriefHistoryEmpire4_oh 1",
+      "ModDisposition 20"
+    ]
+  },
+  "110452375683148601": {
+    "Prev": "285371325279332325",
+    "Next": "2181631253136617506",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vala catraso",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Bal Molagmer? Well, with all due respect to this generous gift, I think I probably know more about that than you do. I've heard stories of their return, but you do not wear their trappings. These books are in excellent condition, %PCName. They should last at least a few months.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 11.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Plutocrats 50",
+      "Player->RemoveItem bk_BriefHistoryEmpire1_oh 1",
+      "Player->RemoveItem bk_BriefHistoryEmpire2_oh 1",
+      "Player->RemoveItem bk_BriefHistoryEmpire3_oh 1",
+      "Player->RemoveItem bk_BriefHistoryEmpire4_oh 1",
+      "ModDisposition 20"
+    ]
+  },
+  "2181631253136617506": {
+    "Prev": "110452375683148601",
+    "Next": "2008153441680414409",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vala catraso",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "These are exquisite! I've never seen their equal, %PCName. Where did you get them?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"I stole them from Odral Helvi.\" 10 \"Consider them a gift from the Bal Molagmer.\" 11"
+    ]
+  },
+  "2008153441680414409": {
+    "Prev": "2181631253136617506",
+    "Next": "6855166032705927590",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vala catraso",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, these will do. The old ones are almost completely worn out. I am very grateful, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Plutocrats 30",
+      "Player->RemoveItem bk_BriefHistoryEmpire1 1",
+      "Player->RemoveItem bk_BriefHistoryEmpire2 1",
+      "Player->RemoveItem bk_BriefHistoryEmpire3 1",
+      "Player->RemoveItem bk_BriefHistoryEmpire4 1",
+      "ModDisposition 20"
+    ]
+  },
+  "6855166032705927590": {
+    "Prev": "2008153441680414409",
+    "Next": "226069333213615017",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vala catraso",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you change your mind, I'll be here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "226069333213615017": {
+    "Prev": "6855166032705927590",
+    "Next": "251322602913615762",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vala catraso",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have a complete set of \"A Brief History of the Empire\" to donate to the school?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_BriefHistoryEmpire1_oh",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_BriefHistoryEmpire2_oh",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_BriefHistoryEmpire3_oh",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_BriefHistoryEmpire4_oh",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here they are\" 1 \"No, nevermind\" 3"
+    ]
+  },
+  "251322602913615762": {
+    "Prev": "226069333213615017",
+    "Next": "49929529575306",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vala catraso",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have a complete set of \"A Brief History of the Empire\" to donate to the school?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_BriefHistoryEmpire1",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_BriefHistoryEmpire2",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_BriefHistoryEmpire3",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_BriefHistoryEmpire4",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here they are\" 2 \"No, nevermind\" 3"
+    ]
+  },
+  "49929529575306": {
+    "Prev": "251322602913615762",
+    "Next": "1996768431446821711",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vala catraso",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, we are always looking for more history books. The students wear them out so fast. They don't always understand that the pages are only for reading, not...cleaning. I'm always looking for donations of all four volumes of \"Brief History of the Empire.\"",
+    "Filters": [],
+    "Script": []
+  },
+  "1996768431446821711": {
+    "Prev": "49929529575306",
+    "Next": "245441891185682708",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ald-ruhn, Guild of Mages",
+    "PlayerFaction": "",
+    "Text": "You'd want Vala. She's around here somewhere. She accepts all the book donations.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Plutocrats",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "245441891185682708": {
+    "Prev": "1996768431446821711",
+    "Next": "120271162576887166",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Put that back, %PCName.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_BriefHistoryEmpire1_oh",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "120271162576887166": {
+    "Prev": "245441891185682708",
+    "Next": "84082144330466668",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Put that back, %PCName.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_BriefHistoryEmpire2_oh",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "84082144330466668": {
+    "Prev": "120271162576887166",
+    "Next": "937814514211732504",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Put that back, %PCName.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_BriefHistoryEmpire3_oh",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "937814514211732504": {
+    "Prev": "84082144330466668",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Put that back, %PCName.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_BriefHistoryEmpire4_oh",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  }
+}

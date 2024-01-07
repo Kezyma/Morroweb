@@ -1,0 +1,105 @@
+{
+  "1820511273849929303": {
+    "Prev": "",
+    "Next": "1635527932108921519",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "marara",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, worthy enough to free me from this place. Only another vampire shall be the one to do this.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampMarara",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "1635527932108921519": {
+    "Prev": "1820511273849929303",
+    "Next": "1385622378776530137",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "marara",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I rather thought not. You are too young to stand with one of my stature. Perhaps you'll come back another time and grant me my boon.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampMarara\" 40"
+    ]
+  },
+  "1385622378776530137": {
+    "Prev": "1635527932108921519",
+    "Next": "791116911277829170",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "marara",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Perhaps you will; perhaps not. You are a brave one to try, though. Let us begin, then.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampMarara\" 30",
+      "StartCombat Player"
+    ]
+  },
+  "791116911277829170": {
+    "Prev": "1385622378776530137",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "marara",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will not allow any mortal to cause my end. None but one of my own kind, another vampire, will be the one to end my life. Many mortals have tried, lured by the riches I have gathered throughout the years. Will you be the one, new blood? Will you end this life and claim my riches as your own?",
+    "Filters": [],
+    "Script": [
+      "Choice \"I will end your existence.\" 1 \"I will play no part in your death.\" 2"
+    ]
+  }
+}

@@ -1,0 +1,408 @@
+{
+  "24755120612880226698": {
+    "Prev": "",
+    "Next": "230855541116248489",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have heard that you are a False Incarnate. I am not yet convinced, but I no longer trust you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B8_MeetVivec",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "230855541116248489": {
+    "Prev": "24755120612880226698",
+    "Next": "1934925693795626210",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled from the Temple, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1934925693795626210": {
+    "Prev": "230855541116248489",
+    "Next": "4291603098312320",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already made the Pilgrimage to Maar Gan.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_MaarGan",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "4291603098312320": {
+    "Prev": "1934925693795626210",
+    "Next": "574580391613828057",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You made the Pilgrimage to Maar Gan? It sounds like you handled Anhaedra well. Since you have learned another of Vivec's lessons, please take this book as a gift.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_MaarGan",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Journal TT_MaarGan 100",
+      "Player->AddItem BookSkill_Block1 1",
+      "ModPCFacRep 5 \"Temple\"",
+      "ModDisposition 10"
+    ]
+  },
+  "574580391613828057": {
+    "Prev": "4291603098312320",
+    "Next": "372525092159529284",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you killed the Daedra at the shrine before taunting him, you must wait for his body to reform. Go back, taunt him into attacking, and then pray at the shrine.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "dremora_ttmg",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_MaarGan",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "372525092159529284": {
+    "Prev": "574580391613828057",
+    "Next": "24728322841593024942",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go to the shrine in Maar Gan. Read the inscription on the rock and imitate Vivec's actions. If you have trouble, speak with the priest. He will assist you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_FalseIncarnate",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Maar Gan\"",
+      "Journal TT_MaarGan 10"
+    ]
+  },
+  "24728322841593024942": {
+    "Prev": "372525092159529284",
+    "Next": "1129427758221420033",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Scout",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ald-ruhn",
+    "PlayerFaction": "",
+    "Text": "The road leads north from the west gate of Ald'ruhn. Turn northeast -- right --  when the road forks, and head towards the village of Maar Gan. The track runs under the highland skirts of Red Mountain on the east. Maar Gan is the only settlement along the road.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Maar Gan\""
+    ]
+  },
+  "1129427758221420033": {
+    "Prev": "24728322841593024942",
+    "Next": "31295116372823213211",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hassour zainsubani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Maar Gan is a small village north of Ald'ruhn. A road runs from Ald'ruhn towards Gnisis to the northwest and Maar Gan to the north. Take the right branch at the fork to reach Maar Gan. But it  is a long and difficult road, and outlanders may get lost. The silt strider goes from Ald'ruhn to Maar Gan. It costs little, and you don't risk getting lost.",
+    "Filters": [],
+    "Script": [
+      "ShowMap \"Maar Gan\""
+    ]
+  },
+  "31295116372823213211": {
+    "Prev": "1129427758221420033",
+    "Next": "1524914885736721452",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Maar Gan",
+    "PlayerFaction": "",
+    "Text": "Maar Gan is a Redoran eggmining village in the northern Ashlands, north of Ald'ruhn, close to Foyada Bani-Dad, the Ghostfence, on the plains beneath Red Mountain. Monsters have been breaking through the Ghostfence here and attacking the villagers. Fortunately, monster fighters have answered the call for volunteers to come help protect Maar Gan. Pilgrims of the Tribunal Temple come to visit the Maar Gan Tower shrine where Lord Vivec outwitted the Bad Daedra Lord Mehrunes Dagon.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Maar Gan\""
+    ]
+  },
+  "1524914885736721452": {
+    "Prev": "31295116372823213211",
+    "Next": "279671404270616993",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "artisa arelas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Maar Gan is a small isolated village in a remote region north of Ald'ruhn. The Maar Gan shrine is an important Temple pilgrimage site.",
+    "Filters": [],
+    "Script": [
+      "ShowMap \"Maar Gan\""
+    ]
+  },
+  "279671404270616993": {
+    "Prev": "1524914885736721452",
+    "Next": "1873326709214753273",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Savant",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Maar Gan is a small isolated village in a remote region north of Ald'ruhn. The Maar Gan shrine is an important Temple pilgrimage site.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Maar Gan\""
+    ]
+  },
+  "1873326709214753273": {
+    "Prev": "279671404270616993",
+    "Next": "10181186361158731946",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Scout",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Urshilaku Camp",
+    "PlayerFaction": "",
+    "Text": "Maar Gan is a small isolated village in a remote region north of Ald'ruhn. Maar Gan's shrine is an important Temple pilgrimage site.",
+    "Filters": [],
+    "Script": [
+      "ShowMap \"Maar Gan\""
+    ]
+  },
+  "10181186361158731946": {
+    "Prev": "1873326709214753273",
+    "Next": "2879430882321259064",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Scout",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Buckmoth Legion Fort",
+    "PlayerFaction": "",
+    "Text": "Maar Gan is a small isolated village in a remote region north of Ald'ruhn. Maar Gan's shrine is an important Temple pilgrimage site.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Maar Gan\""
+    ]
+  },
+  "2879430882321259064": {
+    "Prev": "10181186361158731946",
+    "Next": "14648712045282628",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Scout",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ald-ruhn",
+    "PlayerFaction": "",
+    "Text": "Maar Gan is a small isolated village in a remote region north of Ald'ruhn. Maar Gan's shrine is an important Temple pilgrimage site.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Maar Gan\""
+    ]
+  },
+  "14648712045282628": {
+    "Prev": "2879430882321259064",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Scout",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Maar Gan",
+    "PlayerFaction": "",
+    "Text": "Maar Gan is a small isolated village in a remote region north of Ald'ruhn. Maar Gan's shrine is an important Temple pilgrimage site.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Maar Gan\""
+    ]
+  }
+}

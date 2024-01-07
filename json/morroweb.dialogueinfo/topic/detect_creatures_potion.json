@@ -1,0 +1,454 @@
+{
+  "397128577193745298": {
+    "Prev": "",
+    "Next": "269927297123935170",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you still a member of the guild? Once Trebonius gives the authorization, we can discuss guild matters again.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "269927297123935170": {
+    "Prev": "397128577193745298",
+    "Next": "839027414940417919",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Were you expelled? Or did you clear that up already? You ought to make amends with Guildmaster Trebonius just to be sure.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "839027414940417919": {
+    "Prev": "269927297123935170",
+    "Next": "18042315381634817738",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled, %PCName. If you want to make amends, you should speak with Guildmaster Trebonius.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "18042315381634817738": {
+    "Prev": "839027414940417919",
+    "Next": "93082034538356392",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I appreciated the potion, %PCName. It will prove very useful.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Potion",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "93082034538356392": {
+    "Prev": "18042315381634817738",
+    "Next": "58218803273127145",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What's that? Skink-in-Tree's-Shade is dead? This is just terrible news. I don't think I'll have any more duties for you if Skink is dead.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "skinkintreesshade",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "58218803273127145": {
+    "Prev": "93082034538356392",
+    "Next": "83841808170373980",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent. Why don't I give you a potion more useful to a %PCRank in the field?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "p_detect_creatures_s",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal MG_Potion 100",
+      "Player->RemoveItem P_Detect_Creatures_S 1",
+      "Additem P_Detect_Creatures_S 1",
+      "Player->AddItem P_Chameleon_E 1",
+      "ModPCFacRep 5 \"Mages Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "83841808170373980": {
+    "Prev": "58218803273127145",
+    "Next": "872612872408318005",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh? Where is the potion? Do you have it with you?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "872612872408318005": {
+    "Prev": "83841808170373980",
+    "Next": "2637322085948726229",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Unlike a proper %PCRank, you do not keep your word. I certainly am not going to give you any more duties until you deliver a Detect Creatures potion to me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "2637322085948726229": {
+    "Prev": "872612872408318005",
+    "Next": "18248327143241612193",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Unlike a proper %PCRank, you do not keep your word. I certainly am not going to give you any more duties until you deliver a Detect Creatures potion to me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "18248327143241612193": {
+    "Prev": "2637322085948726229",
+    "Next": "18023171252229020242",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Ah, at last, you've brought me a Detect Creatures potion. Will you give the potion to me now?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Potion",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is\" 1 \"No\" 2"
+    ]
+  },
+  "18023171252229020242": {
+    "Prev": "18248327143241612193",
+    "Next": "3131105322833827259",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Just go talk to Skink-in-Tree's-Shade in Sadrith Mora and bring back the Detect Creatures potion.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Potion",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "3131105322833827259": {
+    "Prev": "18023171252229020242",
+    "Next": "25068303401577814200",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "It's simply taking Skink-in-Tree's-Shade forever to finish it. Go to Wolverine Hall in Sadrith Mora and bring the potion back to me as soon as Skink is finished.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_NchuleftBook",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MG_Potion 10",
+      "ShowMap \"Wolverine Hall\""
+    ]
+  },
+  "25068303401577814200": {
+    "Prev": "3131105322833827259",
+    "Next": "14425139661450619504",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I heard Edwinna finally got her potion.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Potion",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "14425139661450619504": {
+    "Prev": "25068303401577814200",
+    "Next": "164524821272239103",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "I have given you the potion, %PCName. Return it to Edwinna in Ald'ruhn.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Potion",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "164524821272239103": {
+    "Prev": "14425139661450619504",
+    "Next": "2462225274809610844",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Yes, of course, friend. Take this potion back to Edwinna, along with my apologies. Speak with me again next time you are here. I may have some duties for you, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameRace",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Potion",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal MG_Potion 50",
+      "Player->AddItem P_Detect_Creatures_S 1",
+      "ModDisposition 5"
+    ]
+  },
+  "2462225274809610844": {
+    "Prev": "164524821272239103",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Yes, of course, soft-skin. Take this potion back to Edwinna, along with my apologies. Speak with me again next time you are here. I may have some duties for you, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Potion",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal MG_Potion 50",
+      "Player->AddItem P_Detect_Creatures_S 1",
+      "ModDisposition 5"
+    ]
+  }
+}

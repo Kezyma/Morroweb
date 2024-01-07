@@ -1,0 +1,364 @@
+{
+  "1720031258938610261": {
+    "Prev": "",
+    "Next": "1345019047168220354",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dratha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you still here? You have my permission to leave.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_FleshAmulet",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1345019047168220354": {
+    "Prev": "1720031258938610261",
+    "Next": "2126929372337219181",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dratha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have not yet discovered all the amulet's properties, but I believe it has enchantments that are unique.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_FleshAmulet",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2126929372337219181": {
+    "Prev": "1345019047168220354",
+    "Next": "309292023561911878",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dratha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. In exchange I will give you a spare amulet of my own. Here. Take it. You are dismissed.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "amuletfleshmadewhole_uniq",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "SameSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HT_FleshAmulet 100",
+      "Player->AddItem \"Amulet of Spell Absorption\" 1",
+      "Player->RemoveItem AmuletFleshMadeWhole_uniq 1",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 5"
+    ]
+  },
+  "309292023561911878": {
+    "Prev": "2126929372337219181",
+    "Next": "1069519882869710129",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dratha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, this is right amulet. You've done well, %PCName. Why not take this amulet of mine? And some scrolls as well.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "amuletfleshmadewhole_uniq",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HT_FleshAmulet 100",
+      "Player->AddItem \"Amulet of Spell Absorption\" 1",
+      "Player->AddItem \"sc_summongoldensaint\" 4",
+      "Player->RemoveItem AmuletFleshMadeWhole_uniq 1",
+      "AddItem AmuletFleshMadeWhole_uniq 1",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 5"
+    ]
+  },
+  "1069519882869710129": {
+    "Prev": "309292023561911878",
+    "Next": "1147946041401025657",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dratha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So you found the amulet, but you want to keep it to yourself? You are walking a fine line, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -20",
+      "ModFight 10"
+    ]
+  },
+  "1147946041401025657": {
+    "Prev": "1069519882869710129",
+    "Next": "11802167403143524199",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dratha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do not let me think you are unable to finish this task for me. I despise incompetence. Of course, I expected nothing less from a man.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Function",
+        "Func": "SameSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "11802167403143524199": {
+    "Prev": "1147946041401025657",
+    "Next": "1725260422893830061",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dratha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do not let me think you are unable to finish this task for me. I despise incompetence.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "1725260422893830061": {
+    "Prev": "11802167403143524199",
+    "Next": "29692251591727724573",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dratha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh? Have you found the amulet?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_FleshAmulet",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is.\" 1 \"No, no yet.\" 2"
+    ]
+  },
+  "29692251591727724573": {
+    "Prev": "1725260422893830061",
+    "Next": "6949311831931728042",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dratha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Ones of the guards in Tel Naga, Master Neloth's tower in Sadrith Mora, has kept this amulet away from me for the last fifty years or so, the selfish little Bosmer. Deliver this amulet to me and I will reward you.",
+    "Filters": [],
+    "Script": [
+      "Journal HT_FleshAmulet 10"
+    ]
+  },
+  "6949311831931728042": {
+    "Prev": "29692251591727724573",
+    "Next": "1377398571164825576",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "berengeval",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What about it?",
+    "Filters": [],
+    "Script": []
+  },
+  "1377398571164825576": {
+    "Prev": "6949311831931728042",
+    "Next": "126732576520339297",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Sadrith Mora, Tel Naga General Quarters",
+    "PlayerFaction": "",
+    "Text": "Hm. I believe Berengeval said something about that once. Perhaps you should ask him.",
+    "Filters": [],
+    "Script": []
+  },
+  "126732576520339297": {
+    "Prev": "1377398571164825576",
+    "Next": "3191132634529326094",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Sadrith Mora, Tel Naga Great Hall",
+    "PlayerFaction": "",
+    "Text": "Berengeval has a strange amulet. He's a guard in the general quarters.",
+    "Filters": [
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "nartise arobar",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "3191132634529326094": {
+    "Prev": "126732576520339297",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Sadrith Mora, Tel Naga Upper Hall",
+    "PlayerFaction": "",
+    "Text": "Berengeval has a strange amulet. He's a guard in the general quarters.",
+    "Filters": [],
+    "Script": []
+  }
+}

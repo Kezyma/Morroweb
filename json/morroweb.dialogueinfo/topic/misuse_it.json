@@ -1,0 +1,58 @@
+{
+  "29069300061194713139": {
+    "Prev": "",
+    "Next": "10044103771892030405",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "graring",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I do not believe you will put these things to a bad use, %PCName. You are not like the others.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_8",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "10044103771892030405": {
+    "Prev": "29069300061194713139",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "graring",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We learned that Stalhrim can be forged much like iron or steel. We were made outcasts for it; the Skaal are too narrow-minded to understand its practical value. Some, like this woman, hear of it and come seeking it, but will not get it from us. You, however, have earned my respect. We will now see if you can truly be trusted - take this pick axe, and use it to chip off a piece of Stalhrim. Bring that piece to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_8",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "removeitem \"BM Nordic Pick\" 1",
+      "player->additem \"BM Nordic Pick\" 1",
+      "Journal CO_8 30"
+    ]
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "17498218802788614295": {
+    "Prev": "",
+    "Next": "326995002383219361",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sul-matuul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have already completed the initiation rite.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 45.0
+      }
+    ],
+    "Script": []
+  },
+  "326995002383219361": {
+    "Prev": "17498218802788614295",
+    "Next": "9722245681613512088",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sul-matuul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This is my father's Bonebiter Bow. You have completed the initiation rite. I name you %PCName, Clanfriend of the Ashlanders. Keep my father's bow, and bear it with honor. You are a friend of our tribe, and may rest in any Urshilaku bed, but do not harm other tribe members, or take their things. And now I will fulfill my other promise. Go to the wise woman's yurt, and Nibani Maesa shall examine you, and test you against the Nerevarine prophecies.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 40.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bonebiter_bow_unique",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"A2_1_MeetSulMatuul\" 45",
+      "PCJoinFaction Ashlanders",
+      "moddisposition 10"
+    ]
+  },
+  "9722245681613512088": {
+    "Prev": "326995002383219361",
+    "Next": "798277064645198",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sul-matuul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Until you bring me the Bonebiter Bow, you may not go before Nibani Maesa to be tested for the Nerevarine prophecies.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 40.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "bonebiter_bow_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "798277064645198": {
+    "Prev": "9722245681613512088",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sul-matuul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "To be adopted into the tribe, you must undergo a harrowing. In a harrowing, you will be judged by the spirits and ancestors to see if you are worthy. Go to the Urshilaku Burial Caverns and fetch me Sul-Senipul's Bonebiter Bow. Sul-Senipul was my father, and his spirit guards his bonemold long bow deep in the burial caverns. Return to me with this bow, and I will adopt you into the Ashlander tribes as a Clanfriend.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Journal \"A2_1_MeetSulMatuul\" 40"
+    ]
+  }
+}

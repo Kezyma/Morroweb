@@ -1,0 +1,85 @@
+{
+  "19465144532888719944": {
+    "Prev": "",
+    "Next": "26082108611162423596",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Elbert Nermarc",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have no idea whether they were magical to begin with, or if someone had altered them. Didn't care to find out, honestly. The woman scared me, and I wasn't about to go back and ask more questions. I'd steer clear of her, if I were you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_Thief",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "26082108611162423596": {
+    "Prev": "19465144532888719944",
+    "Next": "319589261196256201",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Elbert Nermarc",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I stepped closer to one to get a better look, and it shocked me. Badly, at that. Took several hours to regain the feeling in my left arm. At the time, I stumbled and fell, only to hear her laughing maniacally. She was upset that they weren't strong enough! When I'd recovered a bit, I tried asking what she was up to, and she exploded at me. Accused me of being a spy, of trying to steal from her. She ran me out of the manor, and I haven't spoken to her since, which suits me just fine.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MS_Thief 30",
+      "StartScript SadriThief"
+    ]
+  },
+  "319589261196256201": {
+    "Prev": "26082108611162423596",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Elbert Nermarc",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, as I said, it started out with simple questions. She'd show up every now and then, acting a little odd, asking about what would be involved in enchanting various sorts of objects. I assumed she had a passing interest in the subject, until she begged me to visit her manor to help her with something she was working on. There were more than a dozen of them strewn about the place. I'd never seen anything like them before; maybe they were Dwemer in origin.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_Thief",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Continue\" 1"
+    ]
+  }
+}

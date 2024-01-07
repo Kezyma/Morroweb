@@ -1,0 +1,216 @@
+{
+  "253981740513897402": {
+    "Prev": "",
+    "Next": "15625302088422329",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have not yet had word from Arch-Mage Trebonius in Vivec. Until then, I must consider you expelled.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "15625302088422329": {
+    "Prev": "253981740513897402",
+    "Next": "3173525341303673458",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You were still expelled from the Mages Guild last I heard. Be patient. The Guild does not move quickly here in Vvardenfell.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "3173525341303673458": {
+    "Prev": "15625302088422329",
+    "Next": "2468019262163711759",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I cannot discuss these matters with you. You have been expelled.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2468019262163711759": {
+    "Prev": "3173525341303673458",
+    "Next": "18049971589412553",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No, I already heard what happened. You are responsible for her death. You are not a trustworthy %PCRace.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "tenyeminwe",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "18049971589412553": {
+    "Prev": "2468019262163711759",
+    "Next": "3537108143220331174",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I believe she was planning to return to Summerset Isle.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_EscortScholar1",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3537108143220331174": {
+    "Prev": "18049971589412553",
+    "Next": "2177046322069513727",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am glad to hear that Tenyeminwe made it to the Elf-Skerring safely. You have my thanks.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_EscortScholar1",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal MG_EscortScholar1 100",
+      "\"Tenyeminwe\"->Disable"
+    ]
+  },
+  "2177046322069513727": {
+    "Prev": "3537108143220331174",
+    "Next": "275056352678631704",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Escort her to Gals Arethi's ship, the Elf-Skerring. It's at the Telvanni docks.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_EscortScholar1",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "275056352678631704": {
+    "Prev": "2177046322069513727",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Tenyeminwe is staying at Muriel's Cornerclub. She is concerned about some trouble she had with a Telvanni last night. She wants to leave Sadrith Mora on the Elf-Skerring but is afraid to go to the docks. If you escort her to Gals Arethi's ship, I would be grateful.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MG_Potion",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MG_EscortScholar1 10",
+      "\"Tenyeminwe\"->Enable"
+    ]
+  }
+}

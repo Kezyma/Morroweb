@@ -1,0 +1,169 @@
+{
+  "4253175241618111558": {
+    "Prev": "",
+    "Next": "1701148282063111743",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rasha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is good the shirts have been delivered. I thank you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_TraderLate",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1701148282063111743": {
+    "Prev": "4253175241618111558",
+    "Next": "31298159051931415852",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rasha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will find another way to deliver my shirts, you who are not helpful.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_TraderLate",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "31298159051931415852": {
+    "Prev": "1701148282063111743",
+    "Next": "5362326491184315061",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rasha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, we have made our arrangement. Now go, Oath-Swearer. You must deliver those shirts for me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_TraderLate",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "5362326491184315061": {
+    "Prev": "31298159051931415852",
+    "Next": "159489297246356020",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rasha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? Very sad for both of us. We both stood to gain much. Perhaps you are already cursed by Zenithar, yes? Perhaps he will not accept your oath. I must go. I don't want your curse to be rubbing off on me. No, not on me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_TraderLate\" 40",
+      "Goodbye"
+    ]
+  },
+  "159489297246356020": {
+    "Prev": "5362326491184315061",
+    "Next": "843215059274174023",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rasha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Most excellent, yes? We will both gain from this...I shall keep my good name, and you shall benefit from Teneran's generosity. Wonderful. Take care, %PCName, one should not take an oath sworn to Zenithar lightly. No, never lightly.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AddTopic \"Rasha's Shirts\"",
+      "Journal \"MV_TraderLate\" 30",
+      "RemoveItem \"Exquisite_Shirt_01_Rasha\" 5",
+      "Player->AddItem \"Exquisite_Shirt_01_Rasha\" 5"
+    ]
+  },
+  "843215059274174023": {
+    "Prev": "159489297246356020",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rasha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. Most pressing. I have, you see, a shipment of clothing...fine clothing, it is...to get to Ald-ruhn. But, I fear other business draws me away. Perhaps, I think, you and I might come to an arrangement, yes? If you will deliver Rasha's shirts...these fine, fine shirts...to Bivale Teneran the clothier in Ald-ruhn, she will pay you for your services. And a generous woman she is. I would ask that you swear an oath to Zenithar to seal our arrangement, though. Yes. What do you think of my offer, hmmmm?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_TraderLate",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_TraderLate\" 20",
+      "Choice \"I swear to Zenithar I will deliver your shipment.\" 1 \"I'm sorry. I cannot do that now.\" 2"
+    ]
+  }
+}

@@ -1,0 +1,475 @@
+{
+  "2405121217174931000": {
+    "Prev": "",
+    "Next": "574964682444529983",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eleedal_lei",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I will free the other slaves. I will guide them back to Black Marsh when it is safe.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_SlaveRebellion",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "574964682444529983": {
+    "Prev": "2405121217174931000",
+    "Next": "130725390249541486",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eleedal_lei",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you found the key? Will you ley me go free?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_SlaveRebellion",
+        "Value": 15.0
+      }
+    ],
+    "Script": []
+  },
+  "130725390249541486": {
+    "Prev": "574964682444529983",
+    "Next": "2238726501446923625",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eleedal_lei",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Therana is mad. She demands more and more kwama eggs, and when the mine is empty, she still demands more. I delivered the eggs last time, and found she was not even eating them. She was decorating her home with rotting kwama eggs. It was then I decided I could not go on.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Keep listening.\" 3 \"Order them back to work.\" 5 \"Kill them.\" 2"
+    ]
+  },
+  "2238726501446923625": {
+    "Prev": "130725390249541486",
+    "Next": "11801246712219815016",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eleedal_lei",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I would rather die free than be a slave again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "StartScript AbebaalAttack",
+      "Goodbye"
+    ]
+  },
+  "11801246712219815016": {
+    "Prev": "2238726501446923625",
+    "Next": "16952255022479118023",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eleedal_lei",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am surprised you are willing to listen... Will you help us? I was a sorcerer in Black Marsh, but I cannot cast spells with these slave bracers on. Will you find the key to our slave bracers and free us? There may be a key here, but we have not yet found it. I am sure there is a key in Tel Branora.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Choice \"Agree to free them.\" 4 \"Order them back to their duties.\" 5"
+    ]
+  },
+  "16952255022479118023": {
+    "Prev": "11801246712219815016",
+    "Next": "249031216323516666",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eleedal_lei",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You will free us? I am not sure I believe you... Very well. Try and find a key to my slave bracers in Tel Branora or here in the egg mine. Once I am free, I will let the others go free and lead them to safety.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Journal HT_SlaveRebellion 15"
+    ]
+  },
+  "249031216323516666": {
+    "Prev": "16952255022479118023",
+    "Next": "27644243831807731996",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eleedal_lei",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I would rather die free than be a slave again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "StartScript AbebaalAttack",
+      "Goodbye"
+    ]
+  },
+  "27644243831807731996": {
+    "Prev": "249031216323516666",
+    "Next": "28438612349993799",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eleedal_lei",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, we are rebelling. If Therana sent you, go ahead and kill us.",
+    "Filters": [],
+    "Script": [
+      "Choice \"Listen to their grievances.\" 1 \"Order them back to work.\" 5 \"Kill them.\" 2"
+    ]
+  },
+  "28438612349993799": {
+    "Prev": "27644243831807731996",
+    "Next": "1651620625250652400",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "felisa ulessen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "So be it. [Felisa teaches you spells of command.] May your slaves be more obedient.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Player->AddSpell \"command humanoid\"",
+      "Player->AddSpell \"command creature\""
+    ]
+  },
+  "1651620625250652400": {
+    "Prev": "28438612349993799",
+    "Next": "18371314593255530066",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "felisa ulessen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Your choice, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "18371314593255530066": {
+    "Prev": "1651620625250652400",
+    "Next": "12221252512500912603",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "felisa ulessen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "The slave rebellion is no more.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_SlaveRebellion",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "12221252512500912603": {
+    "Prev": "18371314593255530066",
+    "Next": "26566277503165711265",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "felisa ulessen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "The rebellious slaves are dead? Very good. Mistress Therana asked me to give you these if you killed the slaves.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "dan_ru",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "eleedal_lei",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "seen-rei",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "ahnarra",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "dro'zah",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "j'dato",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HT_SlaveRebellion 100",
+      "Player->AddItem \"ring of fire storm\" 1",
+      "Player->AddItem \"ring of toxic cloud\" 1",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 5",
+      "Player->ModReputation 1"
+    ]
+  },
+  "26566277503165711265": {
+    "Prev": "12221252512500912603",
+    "Next": "2255029888682713686",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "felisa ulessen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "The leader of this rebellion is dead? Very good. Mistress Therana asked me to give you this ring if you killed the leader.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "eleedal_lei",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HT_SlaveRebellion 100",
+      "Player->AddItem \"ring of fire storm\" 1",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 5",
+      "Player->ModReputation 1"
+    ]
+  },
+  "2255029888682713686": {
+    "Prev": "26566277503165711265",
+    "Next": "18490189293059117998",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "felisa ulessen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "You say the slaves have escaped? Hm. I suppose I will have to hire someone else to track them down. If you ever have holdings of your own, you'll want to be able to command them forcefully. I can teach you a spell that might help with this if you want.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_SlaveRebellion",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal HT_SlaveRebellion 110",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 5",
+      "Player->ModReputation 1",
+      "Choice \"Teach me to command slaves.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "18490189293059117998": {
+    "Prev": "2255029888682713686",
+    "Next": "127921522047495844",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "felisa ulessen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "The slaves have revolted in the Abebaal Egg Mine. Go there and put an end to this rebellion before it spread to Mistress Therana's other holdings.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_TheranaClothes",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HT_SlaveRebellion 10"
+    ]
+  },
+  "127921522047495844": {
+    "Prev": "18490189293059117998",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Abebaal Egg Mine",
+    "PlayerFaction": "",
+    "Text": "Talk to our leader, Eleedal-Lei.",
+    "Filters": [],
+    "Script": []
+  }
+}

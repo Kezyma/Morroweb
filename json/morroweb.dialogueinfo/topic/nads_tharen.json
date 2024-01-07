@@ -1,0 +1,584 @@
+{
+  "5904184632895410547": {
+    "Prev": "",
+    "Next": "1420596081618418073",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled, %PCName. Make amends and speak with me again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1420596081618418073": {
+    "Prev": "5904184632895410547",
+    "Next": "24802279512844221153",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "I wish Nads Tharen hadn't died getting us this key. Everyone hopes never to see a fellow thief dead, but it happens.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BrotherThief",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "24802279512844221153": {
+    "Prev": "1420596081618418073",
+    "Next": "14769165933097114287",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, this is the right key. This buys us some time in our war with the Camonna Tong. I'm glad you killed Arvama Rathri. She was probably working for the Camonna Tong. Here's a little something for you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "arvama rathri",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_BrotherThief 110",
+      "Player->RemoveItem key_tgbt 1",
+      "\"stacey\"->AddItem key_tgbt 1",
+      "Player->AddItem Gold_001 1000",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 15"
+    ]
+  },
+  "14769165933097114287": {
+    "Prev": "24802279512844221153",
+    "Next": "1336715068761718783",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, this is the right key. This buys us some time in our war with the Camonna Tong. Keep an eye on Arvama Rathri. I believe she may be working for the Camonna Tong herself. And here's a little something for you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_BrotherThief 100",
+      "Player->RemoveItem key_tgbt 1",
+      "\"stacey\"->AddItem key_tgbt 1",
+      "Player->AddItem Gold_001 500",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "1336715068761718783": {
+    "Prev": "14769165933097114287",
+    "Next": "31276280801395514726",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm not sure you understand who's in charge here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "31276280801395514726": {
+    "Prev": "1336715068761718783",
+    "Next": "12107131721719930511",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "So you avenged Nads Tharen and got the key.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "key_tgbt",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "arvama rathri",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give him the key\" 1 \"Keep the key\" 2"
+    ]
+  },
+  "12107131721719930511": {
+    "Prev": "31276280801395514726",
+    "Next": "31667156871863411129",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "So you found Nads Tharen and got the key.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "key_tgbt",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give him the key\" 1 \"Keep the key\" 2"
+    ]
+  },
+  "31667156871863411129": {
+    "Prev": "12107131721719930511",
+    "Next": "17869180592380911743",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "He used to hang out at the Elven Nations Cornerclub here in Vivec's Hlaalu Compound. He was supposed deliver a key to me. Find out what happened to him. If he's dead, as I fear, find his key and bring it to me.",
+    "Filters": [],
+    "Script": [
+      "Journal TG_BrotherThief 10"
+    ]
+  },
+  "17869180592380911743": {
+    "Prev": "31667156871863411129",
+    "Next": "192027211210518254",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gadela andus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So that's settled then.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BrotherThief",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "192027211210518254": {
+    "Prev": "17869180592380911743",
+    "Next": "253796133187821347",
+    "Type": "Topic",
+    "Disposition": 90,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gadela andus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Alright, I'll tell you just one thing. I saw Nads Tharen talking with Arvama Rathri the last day he was here. Haven't seen him in a while, though. Check over in St. Delyn canton, South Side canalworks. That's where he lives.",
+    "Filters": [],
+    "Script": [
+      "Journal TG_BrotherThief 25"
+    ]
+  },
+  "253796133187821347": {
+    "Prev": "192027211210518254",
+    "Next": "15319306012741831961",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gadela andus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I really couldn't say.",
+    "Filters": [],
+    "Script": []
+  },
+  "15319306012741831961": {
+    "Prev": "253796133187821347",
+    "Next": "1123727137234813433",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sovali uvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, I guess that's settled then.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BrotherThief",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1123727137234813433": {
+    "Prev": "15319306012741831961",
+    "Next": "2546723342882214978",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sovali uvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Arvama Rathri spoke with him the last time he was in here. You might check his residence, but I don't know where he lives. Ask Gadela. She knows her customers well, although she is reticent to speak of them.",
+    "Filters": [],
+    "Script": [
+      "Journal TG_BrotherThief 20"
+    ]
+  },
+  "2546723342882214978": {
+    "Prev": "1123727137234813433",
+    "Next": "321931813509429274",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sovali uvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ask Arvama. She spoke with him",
+    "Filters": [],
+    "Script": []
+  },
+  "321931813509429274": {
+    "Prev": "2546723342882214978",
+    "Next": "3196716354340931582",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arvama rathri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You look like a smart %PCRace. Too smart to be asking me about that again. Let his death be a lesson to you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BrotherThief",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3196716354340931582": {
+    "Prev": "321931813509429274",
+    "Next": "3196850732776221912",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arvama rathri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Didn't think so. Get out of here, before I get angry.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "key_tgbt",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BrotherThief",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -25"
+    ]
+  },
+  "3196850732776221912": {
+    "Prev": "3196716354340931582",
+    "Next": "30297151332589826552",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arvama rathri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Perhaps I did. But you won't live to tell anyone.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "key_tgbt",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BrotherThief",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "30297151332589826552": {
+    "Prev": "3196850732776221912",
+    "Next": "28269125151195326275",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arvama rathri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So he's dead. What does that have to do with me?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "key_tgbt",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BrotherThief",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"I believe you killed him.\" 1 \"Nothing.\" 2"
+    ]
+  },
+  "28269125151195326275": {
+    "Prev": "30297151332589826552",
+    "Next": "8202149042713212257",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arvama rathri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What are you suggesting?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BrotherThief",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "8202149042713212257": {
+    "Prev": "28269125151195326275",
+    "Next": "29049145971170113668",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "arvama rathri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I saw him from time to time, but I never spoke with him.",
+    "Filters": [],
+    "Script": [
+      "Journal TG_BrotherThief 50"
+    ]
+  },
+  "29049145971170113668": {
+    "Prev": "8202149042713212257",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec, Elven Nations Cornerclub",
+    "PlayerFaction": "",
+    "Text": "I haven't seen him for a few weeks. He used to come here every day.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

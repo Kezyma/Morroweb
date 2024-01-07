@@ -1,0 +1,150 @@
+{
+  "12942106023022017709": {
+    "Prev": "",
+    "Next": "156171272864323892",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fargoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, thank you for finding it! Those guards better look out.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "state",
+        "Value": -1.0
+      }
+    ],
+    "Script": []
+  },
+  "156171272864323892": {
+    "Prev": "12942106023022017709",
+    "Next": "158791326429969956",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fargoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Darn. Well if you see it let me know. It's an Engraved Ring of Healing. I know it's in there somewhere.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "158791326429969956": {
+    "Prev": "156171272864323892",
+    "Next": "3245423813243151497",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fargoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's not it! Don't mess with me, I don't like that. If you really find it, let me know.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "ring_keley",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "moddisposition -5"
+    ]
+  },
+  "3245423813243151497": {
+    "Prev": "158791326429969956",
+    "Next": "2507536232473510507",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fargoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You found it! Amazing! Thank you, thank you! You are now my favorite friend. I'll be sure to tell the others, especially my friend Arrille who runs the tradehouse here. Go see him, he'll be happy to see you now!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "ring_keley",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal MS_FargothRing 100",
+      "additem \"ring_keley\" 1",
+      "player->removeitem \"ring_keley\" 1",
+      "set state to -1",
+      "moddisposition 50",
+      "\"arrille\"->moddisposition 40"
+    ]
+  },
+  "2507536232473510507": {
+    "Prev": "3245423813243151497",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fargoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I swear one of the Guards has it. I had it last week before their weekly \"Let's shake down Fargoth\" ritual. An engraved healing ring, family heirloom of mine. You haven't seen it have you?",
+    "Filters": [],
+    "Script": [
+      "Journal MS_FargothRing 10",
+      "choice \"Uhhh. No, sorry. No ring.\" 1 \"Yes, I found it! Here take it.\" 2"
+    ]
+  }
+}

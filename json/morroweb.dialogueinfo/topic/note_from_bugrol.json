@@ -1,0 +1,91 @@
+{
+  "403322501421313164": {
+    "Prev": "",
+    "Next": "604422173542215240",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bashuk gra-bat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yeah, I know I got note! And you gave him mine! Good for you, Big Hero. I find him when I damn good and ready!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_Bugrol",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "604422173542215240": {
+    "Prev": "403322501421313164",
+    "Next": "2315126544231858736",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bashuk gra-bat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yeah, yeah, I got Bugrol's note, and you've got mine for him! What, you can't find him? You not a good finder like me?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_Bugrol",
+        "Value": 35.0
+      }
+    ],
+    "Script": []
+  },
+  "2315126544231858736": {
+    "Prev": "604422173542215240",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bashuk gra-bat",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yeah, that Bugrol always getting in trouble. Not me, though. I'm too smart. He a good hider, but I'm a better finder. I'll find him near tree and rock and other rock. No problem. He feel better if you take this note to him, if you can find him. I bet you not as good a finder as me. Not even close, I bet. But, give it a try, big shot.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_Bugrol",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_Bugrol",
+        "Value": 35.0
+      }
+    ],
+    "Script": [
+      "player->addItem \"bk_NoteFromBashuk\" 1",
+      "Journal \"MV_Bugrol\" 35",
+      "Goodbye"
+    ]
+  }
+}

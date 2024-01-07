@@ -1,0 +1,361 @@
+{
+  "6770277233235420412": {
+    "Prev": "",
+    "Next": "552232711132246371",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raven omayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Mistress Dratha will be pleased to be able to study the Blood.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_Rimintil",
+        "Value": 100.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_VampBlood2",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "552232711132246371": {
+    "Prev": "6770277233235420412",
+    "Next": "5155151192949414183",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raven omayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already have the Blood, vampire? An interesting coincidence. Mistress Dratha will be pleased to have it in her possession. As a reward for your effort, I have something your kind might be able to use. During an enchanting experiment, I created this Jinksword. It is strong and sharp, but the enchantment did not go as planned. I believe one of your ilk might find it valuable, though, as you seem to have a natural resistance to the spell in question.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_Rimintil",
+        "Value": 100.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "p_quarrablood_UNIQUE",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_VampBlood2",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal VA_VampBlood2 100",
+      "Player->RemoveItem \"p_quarrablood_UNIQUE\" 1",
+      "AddItem \"p_quarrablood_UNIQUE\" 1",
+      "Player->AddItem \"dwe_jinksword_curse_Unique\" 1"
+    ]
+  },
+  "5155151192949414183": {
+    "Prev": "552232711132246371",
+    "Next": "10824318302476431338",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raven omayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have the Blood. Well done, vampire. Perhaps your kind can be trained after all. As a reward for your effort, I have something your kind might be able to use. During an enchanting experiment, I created this Jinksword. It is strong and sharp, but the enchantment did not go as planned. I believe one of your ilk might find it valuable, though, as you seem to have a natural resistance to the spell in question.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_Rimintil",
+        "Value": 100.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "p_quarrablood_UNIQUE",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampBlood2",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "VA_VampBlood2",
+        "Value": 15.0
+      }
+    ],
+    "Script": [
+      "Journal VA_VampBlood2 100",
+      "Player->RemoveItem \"p_quarrablood_UNIQUE\" 1",
+      "AddItem \"p_quarrablood_UNIQUE\" 1",
+      "Player->AddItem \"dwe_jinksword_curse_Unique\" 1"
+    ]
+  },
+  "10824318302476431338": {
+    "Prev": "5155151192949414183",
+    "Next": "118625034156105492",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raven omayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Mistress Dratha believes that the study of the Blood of the Quarra Ancients could lead to a greater understanding of the abilities your kind possesses. It is important for her to obtain it. If her information is correct, the potion will be found close to Volrina Quarra, in her clan's lair in Druscashti. If it is not, only your kind might know where it resides now. Return it to me, vampire.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampBlood2",
+        "Value": 15.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "p_quarrablood_UNIQUE",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_VampBlood",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal VA_VampBlood2 15"
+    ]
+  },
+  "118625034156105492": {
+    "Prev": "10824318302476431338",
+    "Next": "1675511975201230755",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raven omayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Mistress Dratha believes that the study of the Blood of the Quarra Ancients could lead to a greater understanding of the abilities your kind possesses. It is important for her to obtain it. If her information is correct, the potion will be found close to Volrina Quarra, in her clan's lair in Druscashti. If it is not, only your kind might know where it resides now. Return it to me, vampire.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampBlood2",
+        "Value": 10.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "p_quarrablood_UNIQUE",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal VA_VampBlood2 10"
+    ]
+  },
+  "1675511975201230755": {
+    "Prev": "118625034156105492",
+    "Next": "16806197471213730780",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raxle berne",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have found it? You surprise me, clanless one. As I promised, you may use the services here at Galom Daeus freely. Do not overstay your welcome.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "p_quarrablood_UNIQUE",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampBlood",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampBlood",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampBlood\" 50",
+      "Player->RemoveItem \"p_quarrablood_UNIQUE\" 1",
+      "AddItem \"p_quarrablood_UNIQUE\" 1"
+    ]
+  },
+  "16806197471213730780": {
+    "Prev": "1675511975201230755",
+    "Next": "1911122170187685658",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raxle berne",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes...it will make me more powerful. And the Quarra will die.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_VampBlood",
+        "Value": 50.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "1911122170187685658": {
+    "Prev": "16806197471213730780",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raxle berne",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You will find it near Volrina Quarra, I would imagine. If you don't die first. Look for her in the Quarra lair in Druscashti.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampBlood",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampBlood",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  }
+}

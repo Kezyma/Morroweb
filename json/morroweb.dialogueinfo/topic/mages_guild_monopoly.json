@@ -1,0 +1,297 @@
+{
+  "107326605158571691": {
+    "Prev": "",
+    "Next": "365298312950132379",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "I believe you have all the votes you need.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_Monopoly",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "365298312950132379": {
+    "Prev": "107326605158571691",
+    "Next": "1358223039167801493",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "I have agreed to help you overturn the Mages Guild monopoly. Perhaps you can convince the other councilors with an appeal to fairness.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "mageMonopolyVote",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1358223039167801493": {
+    "Prev": "365298312950132379",
+    "Next": "14631252744521520",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Yes, I see your point, the Mages Guild monopoly is unfair. I will support this resolution to overturn the Mage Guild monopoly. Perhaps you could convince the other councilors with an appeal to fairness.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "bolvyn venim",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "set mageMonopolyVote to 1"
+    ]
+  },
+  "14631252744521520": {
+    "Prev": "1358223039167801493",
+    "Next": "8530279412096829840",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Yes, I see your point, the Mages Guild monopoly is unfair. I will support this resolution to overturn the Mage Guild monopoly. Perhaps you could convince the other councilors with an appeal to fairness. The only councilor who would never support this resolution is Archmaster Bolvyn Venim.",
+    "Filters": [],
+    "Script": [
+      "set mageMonopolyVote to 1"
+    ]
+  },
+  "8530279412096829840": {
+    "Prev": "14631252744521520",
+    "Next": "2174741125798695",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "I do not trust you. I don't even like you. Why should I listen to you, Telvanni?",
+    "Filters": [],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "2174741125798695": {
+    "Prev": "8530279412096829840",
+    "Next": "29074324782310629070",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bolvyn venim",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I would never support such a law.",
+    "Filters": [],
+    "Script": []
+  },
+  "29074324782310629070": {
+    "Prev": "2174741125798695",
+    "Next": "177323139223797229",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Redoran",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I agree that the Mages Guild monopoly is unfair. I will support this resolution.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "mageMonopolyVote",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "177323139223797229": {
+    "Prev": "29074324782310629070",
+    "Next": "750397711929024263",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Redoran",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No. Why would I aid the Telvanni? Get out of my manor.",
+    "Filters": [],
+    "Script": []
+  },
+  "750397711929024263": {
+    "Prev": "177323139223797229",
+    "Next": "245362887113087410",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hm. It seems you have killed too many Redoran Councilors. I do not believe we can get enough votes to overturn the Mages Guild Monopoly. Well, no matter, there will be more councilors to persuade another day.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "MonopolyVotes",
+        "Value": -1.0
+      }
+    ],
+    "Script": [
+      "Journal HT_Monopoly 200"
+    ]
+  },
+  "245362887113087410": {
+    "Prev": "750397711929024263",
+    "Next": "4175210062967421180",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already convinced enough Councilors of House Redoran on this issue. Soon we will take it before the Grand Council.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_Monopoly",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "4175210062967421180": {
+    "Prev": "245362887113087410",
+    "Next": "13472218821134525522",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have convinced at least three Councilors. This deserves a reward. Perhaps you could use this glove. I enchanted it myself many years ago.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "MonopolyVotes",
+        "Value": 2.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_Monopoly",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HT_Monopoly 100",
+      "Player->AddItem aryongloveleft 1",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 10",
+      "Player->ModReputation 1"
+    ]
+  },
+  "13472218821134525522": {
+    "Prev": "4175210062967421180",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "According to one interpretation of the Armistice, only the Mages Guild can officially offer spells and training to non-members. Speak with the House Redoran Councilors in Ald'ruhn. If you can convince at least three Councilors, we will have enough support in the Grand Council. I would start with Athyn Sarethi. as he seems to be the most open-minded.",
+    "Filters": [],
+    "Script": [
+      "Journal HT_Monopoly 10"
+    ]
+  }
+}

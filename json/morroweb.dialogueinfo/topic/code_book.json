@@ -1,0 +1,576 @@
+{
+  "3201295211554421724": {
+    "Prev": "",
+    "Next": "125491883450623122",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "You didn't have to kill Sottilde.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "sottilde",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_Sottilde",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "125491883450623122": {
+    "Prev": "3201295211554421724",
+    "Next": "18434310311958528613",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I'm glad you didn't resort to violence.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_Sottilde",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "18434310311958528613": {
+    "Prev": "125491883450623122",
+    "Next": "104192271555732400",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "These orders you've been given seem okay with me. Just try not to kill Sottilde to get that book. I've heard she's a pushover. I'm sure you can convince her to hand it over.",
+    "Filters": [],
+    "Script": []
+  },
+  "104192271555732400": {
+    "Prev": "18434310311958528613",
+    "Next": "434787761740226599",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sottilde",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Look, you've got the book. Just leave me alone. It won't do you any good, anyway.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_Sottilde",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "434787761740226599": {
+    "Prev": "104192271555732400",
+    "Next": "1261860021830039",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sottilde",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Look, you've got the book. Just leave me alone. It won't do you any good, anyway.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_sottildescodebook",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_Sottilde",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "1261860021830039": {
+    "Prev": "434787761740226599",
+    "Next": "113605083267904833",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sottilde",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thanks, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem \"bk_SottildesCodeBook\" 1",
+      "AddItem \"bk_SottildesCodeBook\" 1"
+    ]
+  },
+  "113605083267904833": {
+    "Prev": "1261860021830039",
+    "Next": "113211106899917354",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sottilde",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What use is it to you?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "113211106899917354": {
+    "Prev": "113605083267904833",
+    "Next": "4061239002998913836",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sottilde",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Look, %PCRank, I'll tell you what's going on. This code book has dirt on the Camonna Tong and the skooma trade. As soon as we get it figured out, we take it to the authorities and take over the trade ourselves. The Fighters Guild works for the Camonna Tong since Sjoring Hard-Heart took over. You have to decide where your loyalties lie, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_Sottilde",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "4061239002998913836": {
+    "Prev": "113211106899917354",
+    "Next": "26462204504029542",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sottilde",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "That code book belongs to the Thieves Guild now, %PCName. Put it down, walk away, and I'll forget about this.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_sottildescodebook",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Return Book\" 1 \"Keep Book\" 2"
+    ]
+  },
+  "26462204504029542": {
+    "Prev": "4061239002998913836",
+    "Next": "19824177531142629010",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sottilde",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What, *that* book? I just found it in the street. It's gibberish. Since it can't possibly be of any value to you, why not let me keep it?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_sottildescodebook",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Return Book\" 1 \"Keep Book\" 2"
+    ]
+  },
+  "19824177531142629010": {
+    "Prev": "26462204504029542",
+    "Next": "44036011015630500",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sottilde",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Okay, friend. You know about the code book. I don't want any trouble with you, so just take it. Just don't tell anyone I gave it to you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_Sottilde",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "RemoveItem \"bk_sottildescodebook\" 1",
+      "Player->AddItem \"bk_sottildescodebook\" 1",
+      "Journal FG_Sottilde 50"
+    ]
+  },
+  "44036011015630500": {
+    "Prev": "19824177531142629010",
+    "Next": "1358346142809518772",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sottilde",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What code book? I wouldn't talk to you about that sort of thing.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_Sottilde",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "1358346142809518772": {
+    "Prev": "44036011015630500",
+    "Next": "517217022759528166",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled from the Fighters Guild. Until you make amends, I cannot discuss contracts with you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "517217022759528166": {
+    "Prev": "1358346142809518772",
+    "Next": "591129612770112113",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Since you brought me the Bitter Cup, I'm not working against the Thieves Guild anymore. You have my word.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BitterBribe",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_RatHunt",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "591129612770112113": {
+    "Prev": "517217022759528166",
+    "Next": "1903183792713931014",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Don't go mentioning code books, %PCName. It's unhealthy.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_Sottilde",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1903183792713931014": {
+    "Prev": "591129612770112113",
+    "Next": "975177892579713478",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Here's your 50 Septims, %PCName. The guild needs more like you -- obedient and efficient. If you want more orders, just ask.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem \"bk_SottildesCodeBook\" 1",
+      "AddItem \"bk_SottildesCodeBook\" 1",
+      "Player->AddItem Gold_001 50",
+      "Journal FG_Sottilde 100",
+      "ModPCFacRep 5 \"Fighters Guild\"",
+      "ModPCFacRep -10 \"Thieves Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "975177892579713478": {
+    "Prev": "1903183792713931014",
+    "Next": "1378723972228521171",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I'm not paying any more than 50 septims. Don't make this difficult, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "1378723972228521171": {
+    "Prev": "975177892579713478",
+    "Next": "23811170001381413375",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "You already have the code book? You have good instincts. Well, just hand it over and these 50 septims are yours.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_sottildescodebook",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_Sottilde",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give Code Book\" 1 \"Keep Code Book\" 2"
+    ]
+  },
+  "23811170001381413375": {
+    "Prev": "1378723972228521171",
+    "Next": "27800257903207427840",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I'm glad to see that code book, %PCName. Hand it over and I'll get your payment.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_sottildescodebook",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_Sottilde",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give Code Book\" 1 \"Keep Code Book\" 2"
+    ]
+  },
+  "27800257903207427840": {
+    "Prev": "23811170001381413375",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "The code book our client wants is in the hands of Sottilde at the South Wall in Balmora. Find that code book and bring it back to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_Telvanni_agents",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal FG_Sottilde 10"
+    ]
+  }
+}

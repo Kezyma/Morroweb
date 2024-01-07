@@ -1,0 +1,326 @@
+{
+  "1998818362302786915": {
+    "Prev": "",
+    "Next": "3045211035247977776",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Don't worry about the staff.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_EbonyStaff",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "3045211035247977776": {
+    "Prev": "1998818362302786915",
+    "Next": "215353838119514689",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good that you were able to get your hands on that staff.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_EbonyStaff",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "215353838119514689": {
+    "Prev": "3045211035247977776",
+    "Next": "8193242452988327024",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I should be able to get a good price for it. Here, take this as your cut of the profits. You've done good work here, %PCRank. This ring might help you out a bit, too. Helps snatch things from a distance. You've done some good work for me, %PCName. If you there's any money on your head, I'll have someone take care of it. Good work.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": [
+      "Journal \"TG_EbonyStaff\" 100",
+      "Player->RemoveItem \"ebony staff caper\" 1",
+      "AddItem \"ebony staff caper\" 1",
+      "Player->AddItem \"Gold_001\" 250",
+      "Player->AddItem \"ring of telekinesis_UNIQUE\" 1",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 10",
+      "SetPCCrimeLevel 0",
+      "PayFineThief"
+    ]
+  },
+  "8193242452988327024": {
+    "Prev": "215353838119514689",
+    "Next": "45324597261383473",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's fair. It's a good staff, after all. Good work getting it, %PCRank. As a reward for the work you've done for me, take this ring. It can be a big help grabbing things when you don't want to be seen. You've done some good work for me, %PCName. If you there's any money on your head, I'll have someone take care of it. Good work.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem \"ring of telekinesis_UNIQUE\" 1",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 10",
+      "Journal \"TG_EbonyStaff\" 105",
+      "SetPCCrimeLevel 0",
+      "PayFineThief"
+    ]
+  },
+  "45324597261383473": {
+    "Prev": "8193242452988327024",
+    "Next": "1357302551321827376",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Can't say I blame you. Someone else will be able to take care of that eventually.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Journal \"TG_EbonyStaff\" 110"
+    ]
+  },
+  "1357302551321827376": {
+    "Prev": "45324597261383473",
+    "Next": "4759314541147915239",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Fine with me, %PCRank. Let me know when you've got it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "4759314541147915239": {
+    "Prev": "1357302551321827376",
+    "Next": "1047476964612360",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Can't say I blame you. Someone else will be able to take care of that eventually.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"TG_EbonyStaff\" 110"
+    ]
+  },
+  "1047476964612360": {
+    "Prev": "4759314541147915239",
+    "Next": "18307162392313923926",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's your skin. Felen Maryon is in Tel Branora. He's one of Mistress Therana's personal retainers. You'll likely find him in one of the Telvanni towers there. Here, take these. It's tough getting around inside those things. Good luck, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"TG_EbonyStaff\" 20",
+      "Player->AddItem \"p_levitation_q\" 3"
+    ]
+  },
+  "18307162392313923926": {
+    "Prev": "1047476964612360",
+    "Next": "2485811621343320211",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've got the staff. Excellent. Tell you what -- I'll give you a choice. I really didn't expect you to be able to get that thing. I didn't expect anyone would be able to, honestly. It's yours if you want it, but I can also sell it and give you a cut of the profits. What do you say?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_EbonyStaff",
+        "Value": 20.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "ebony staff caper",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"I'll keep the staff.\" 5 \"Sell the thing.\" 6"
+    ]
+  },
+  "2485811621343320211": {
+    "Prev": "18307162392313923926",
+    "Next": "13992215541127214764",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Haven't you got that staff yet? I know it's difficult, so if you want to give it up, let me know.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_EbonyStaff",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Choice \"I'll be able to do it.\" 3 \"I'll let someone else handle it.\" 4"
+    ]
+  },
+  "13992215541127214764": {
+    "Prev": "2485811621343320211",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Felen Maryon has an ebony staff that I'd like to get into our possession. He's a powerful wizard, though, so getting hold of it won't be easy. He's likely to kill you. This is the only job I've got left for you, so if you don't want it, you'll have to go elsewhere for your jobs. I wouldn't even offer it, but it's all I've got. It's up to you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_EbonyStaff",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"TG_EbonyStaff\" 10",
+      "Choice \"I'm interested.\" 1 \"I'll pass on this one.\" 2"
+    ]
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "521498497836822": {
+    "Prev": "",
+    "Next": "63176212281766898",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "radd hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled, but maybe you can join the Imperial Legion again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "63176212281766898": {
+    "Prev": "521498497836822",
+    "Next": "249216181135367510",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "radd hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "Dandsa is dead? No, I don't want to hear your excuses. Just get out of my sight.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Dandsa",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_ScrapMetal",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal IL_Damsel 200",
+      "ModDisposition -20"
+    ]
+  },
+  "249216181135367510": {
+    "Prev": "63176212281766898",
+    "Next": "275344075627317805",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "radd hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You said you rescued her already...",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Damsel",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "275344075627317805": {
+    "Prev": "249216181135367510",
+    "Next": "142989632957814351",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "radd hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "You rescued Dandsa? I'm glad to hear it, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Damsel",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal IL_Damsel 100",
+      "ModPCFacRep 5 \"Imperial Legion\"",
+      "ModDisposition 10",
+      "\"Dandsa\"->Disable"
+    ]
+  },
+  "142989632957814351": {
+    "Prev": "275344075627317805",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "radd hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "She is being held captive in Abernanit, a cave on an island southeast of Gnaar Mok. Find her and get her out alive.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_ScrapMetal",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal IL_Damsel 10"
+    ]
+  }
+}

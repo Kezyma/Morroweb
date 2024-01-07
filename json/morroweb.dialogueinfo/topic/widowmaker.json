@@ -1,0 +1,275 @@
+{
+  "94852024318024031": {
+    "Prev": "",
+    "Next": "199854045245617089",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "botrir",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Finally, it's in the proper hands again!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_RecoverWidowmaker",
+        "Value": 70.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "widowmaker_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "199854045245617089": {
+    "Prev": "94852024318024031",
+    "Next": "273691502665574168",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "botrir",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's better. Now keep your hands off my axe.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_RecoverWidowmaker",
+        "Value": 80.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -20",
+      "ModFight 10",
+      "Botrir->AddItem \"widowmaker_unique\" 1",
+      "Player->RemoveItem \"widowmaker_unique\" 1",
+      "AiWander 128 6 0 40 30 20 0 0 0 0 0 0"
+    ]
+  },
+  "273691502665574168": {
+    "Prev": "199854045245617089",
+    "Next": "9171283732884432720",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "botrir",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah...it feels good to hold it in my hands again! Truly, this is an axe of legend, and they will sing songs and write tales of my adventures with it. I think I shall begin by killing all the witches I can find. But first, allow me to teach you something of the way of the axe.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Botrir->AddItem \"widowmaker_unique\" 1",
+      "Player->RemoveItem \"widowmaker_unique\" 1",
+      "Player->ModAxe 1",
+      "MessageBox \"Your Axe skill has increased by 1.\"",
+      "AiWander 128 6 0 40 30 20 0 0 0 0 0 0",
+      "Journal \"MV_RecoverWidowmaker\" 80"
+    ]
+  },
+  "9171283732884432720": {
+    "Prev": "273691502665574168",
+    "Next": "1845925555276067852",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "botrir",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That is a mistake, friend. I'll have that axe, and if I have to pry it from your bloody, lifeless hands, so be it!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_RecoverWidowmaker\" 60",
+      "SetFight 100",
+      "AiWander 128 6 0 40 30 20 0 0 0 0 0 0",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "1845925555276067852": {
+    "Prev": "9171283732884432720",
+    "Next": "28648325852482428545",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "botrir",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't know why you think you can take that axe back from me, friend, but I'll need it now.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "widowmaker_unique",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "iveri llothri",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_RecoverWidowmaker",
+        "Value": 80.0
+      }
+    ],
+    "Script": [
+      "Choice \"Here is your axe, Botrir.\" 1 \"I've decided to keep it for myself.\" 2"
+    ]
+  },
+  "28648325852482428545": {
+    "Prev": "1845925555276067852",
+    "Next": "26722117261119711575",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "botrir",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Finally, it is out of the hands of that witch. If you'll just give me my axe, friend, I'd be willing to teach you a few things I've learned about the proper way to use one!",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "widowmaker_unique",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "iveri llothri",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Here is your axe, Botrir. Wield it wisely.\" 1 \"This is truly an axe fit for a warrior. That warrior is me.\" 2"
+    ]
+  },
+  "26722117261119711575": {
+    "Prev": "28648325852482428545",
+    "Next": "4813160631683428362",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "botrir",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My axe. It's been in my family for generations. A powerful axe, and tainted by the touch of that unholy spawn! I need it in my hands again!",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "widowmaker_unique",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "iveri llothri",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "4813160631683428362": {
+    "Prev": "26722117261119711575",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "botrir",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My axe. It's been in my family for generations. A powerful axe, and tainted by the touch of that unholy spawn! I'll get it back, and use it to cleave her in two!",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "widowmaker_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

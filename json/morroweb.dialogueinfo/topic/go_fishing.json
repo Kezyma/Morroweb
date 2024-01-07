@@ -1,0 +1,116 @@
+{
+  "2785832256428816452": {
+    "Prev": "",
+    "Next": "20264181701033523878",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Blatta Hateria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm ready to take you to Holamayan any time you're ready to travel.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_4_Milo_hola_go",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "20264181701033523878": {
+    "Prev": "2785832256428816452",
+    "Next": "2819428756258831443",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Blatta Hateria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, come see me whenever you're ready to go.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_4_MiloGone",
+        "Value": 20.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "2819428756258831443": {
+    "Prev": "20264181701033523878",
+    "Next": "2403323401419630561",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Blatta Hateria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. I'm ready to take you to Holamayan any time you're ready to travel. And I'll be here to offer that service any time you need it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_4_MiloGone",
+        "Value": 20.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal A2_4_Milo_hola_go 1"
+    ]
+  },
+  "2403323401419630561": {
+    "Prev": "2819428756258831443",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Blatta Hateria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I know a fine place. Excellent fishing. My friend, Mehra Milo, says it's her favorite fishing spot. You ready to go?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Yes\" 1 \"Not Yet\" 2"
+    ]
+  }
+}

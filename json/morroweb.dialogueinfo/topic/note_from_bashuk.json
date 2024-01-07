@@ -1,0 +1,58 @@
+{
+  "7466327432458532550": {
+    "Prev": "",
+    "Next": "13722249111848016762",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bugrol gro-bagul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Whew! Good thing you got my note to her. She'll help. I suppose you want your present?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_Bugrol",
+        "Value": 35.0
+      }
+    ],
+    "Script": [
+      "AddItem \"bk_NoteFromBashuk\" 1",
+      "player->RemoveItem \"bk_NoteFromBashuk\" 1",
+      "Journal \"MV_Bugrol\" 40"
+    ]
+  },
+  "13722249111848016762": {
+    "Prev": "7466327432458532550",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bugrol gro-bagul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, yes! I got note, you got present! Go away! You ruin my hiding!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_Bugrol",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  }
+}

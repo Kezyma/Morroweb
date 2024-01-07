@@ -1,0 +1,747 @@
+{
+  "15350119371917130651": {
+    "Prev": "",
+    "Next": "269112747218029472",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sul-matuul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This outcast ashlander you have killed, Zallay Subaddamael, betrayed Urshilaku hospitality and killed the husband of our trader Kurapli. I had promised her justice, and my failure to obtain it for her has troubled me. This gift pleases me, and does you honor.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_Kurapli_Zallay",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "zallay subaddamael",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "269112747218029472": {
+    "Prev": "15350119371917130651",
+    "Next": "31709286071592211961",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hassour zainsubani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I understand. Don't give it another thought. Now, what would you wish to know about the Ashlanders and the Nerevarine cult?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_11_ZainsubaniInformant",
+        "Value": 34.0
+      }
+    ],
+    "Script": []
+  },
+  "31709286071592211961": {
+    "Prev": "269112747218029472",
+    "Next": "2572695032553211367",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hassour zainsubani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Please take no offense, but I already own a copy of this book. But you could not know this, and it in no way diminishes the pleasure of your gift. Again, I thank you, and in return, I offer a gift of my experience of the Ashlands and its people. What would you wish to know about the Ashlanders and the Nerevarine cult?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_11_ZainsubaniInformant",
+        "Value": 33.0
+      }
+    ],
+    "Script": []
+  },
+  "2572695032553211367": {
+    "Prev": "31709286071592211961",
+    "Next": "5620221702201717473",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hassour zainsubani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This is a gift for me? A copy of \"The Five Far Stars.\" Noble words of noble warriors. I gratefully accept your gift. My people have never loved the written word, and I lament their ignorant scorn for such common yet potent magic. I thank you, and I honor your courtesy, %PCName. It would please me to return your courtesy by answering your questions. What would you wish to know about the Ashlanders and the Nerevarine cult?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_five_far_stars",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_11_ZainsubaniInformant",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal, \"A1_11_ZainsubaniInformant\", 33",
+      "SetDisposition 70",
+      "player->removeitem \"bk_five_far_stars\" 1"
+    ]
+  },
+  "5620221702201717473": {
+    "Prev": "2572695032553211367",
+    "Next": "2084814746714814834",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hassour zainsubani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This is a gift for me? I am amazed. A copy of \"Words of the Wind\"? The words of the blessed mothers. I gratefully accept your gift. My people have never loved the written word, and I lament their ignorant scorn for such common yet potent magic. I thank you, and I honor your courtesy, %PCName. It would please me to return your courtesy by answering your questions. What would you wish to know about the Ashlanders and the Nerevarine cult?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_words_of_the_wind",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_11_ZainsubaniInformant",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal, \"A1_11_ZainsubaniInformant\", 32",
+      "SetDisposition 70",
+      "player->removeitem \"bk_words_of_the_wind\" 1"
+    ]
+  },
+  "2084814746714814834": {
+    "Prev": "5620221702201717473",
+    "Next": "2507732579268392392",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hassour zainsubani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This is a gift for me? I am amazed. A copy of \"Ashland Hymns\"? Simple sentiments, simply stated. I gratefully accept your gift. My people have never loved the written word, and I lament their ignorant scorn for such common yet potent magic. I thank you, and I honor your courtesy, %PCName. It would please me to return your courtesy by answering your questions. What would you wish to know about the Ashlanders and the Nerevarine cult?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_Ashland_Hymns",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_11_ZainsubaniInformant",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal, \"A1_11_ZainsubaniInformant\", 31",
+      "SetDisposition 70",
+      "player->removeitem \"bk_Ashland_Hymns\" 1"
+    ]
+  },
+  "2507732579268392392": {
+    "Prev": "2084814746714814834",
+    "Next": "3002928192381218202",
+    "Type": "Topic",
+    "Disposition": 80,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hassour zainsubani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I understand. You wish to give me a suitable gift, but you do not know me well enough to choose such a gift, or you cannot find or afford a gift you know to be suitable for me. Well. Let us take your earnest thought and effort as a token of your gift. You have behaved courteously, and I am inclined to help you. What would you wish to know about the Ashlanders and the Nerevarine cult?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_11_ZainsubaniInformant",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal, \"A1_11_ZainsubaniInformant\", 34"
+    ]
+  },
+  "3002928192381218202": {
+    "Prev": "2507732579268392392",
+    "Next": "13966017994218704",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hassour zainsubani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. A gift that shows you have taken the care to learn something of the receiver. For example, I love poetry. No stranger could be expected to know this, but a book of poetry given to me by a stranger shows the giver respects me, and has made a special effort to know and please me. But now, I have answered your question, and would like some time to myself. If you will excuse me?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_11_ZainsubaniInformant",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal, \"A1_11_ZainsubaniInformant\", 20",
+      "Goodbye"
+    ]
+  },
+  "13966017994218704": {
+    "Prev": "3002928192381218202",
+    "Next": "2809331591351823503",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "zabamund",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Challenge me. The gift I want from you is your blood.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 13.0
+      }
+    ],
+    "Script": []
+  },
+  "2809331591351823503": {
+    "Prev": "13966017994218704",
+    "Next": "11673290332403621437",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "zabamund",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Challenge me. The gift I want from you is your blood.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 11.0
+      }
+    ],
+    "Script": []
+  },
+  "11673290332403621437": {
+    "Prev": "2809331591351823503",
+    "Next": "685179182874730012",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "zabamund",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is our custom. Among strangers, we honor this custom with gold.",
+    "Filters": [],
+    "Script": []
+  },
+  "685179182874730012": {
+    "Prev": "11673290332403621437",
+    "Next": "1924912360984825125",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Ashlanders",
+    "SpeakerCell": "Urshilaku Camp",
+    "PlayerFaction": "",
+    "Text": "You think to buy my friendship? You who have killed my kin? That is not likely.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 13.0
+      }
+    ],
+    "Script": []
+  },
+  "1924912360984825125": {
+    "Prev": "685179182874730012",
+    "Next": "15793321511392031575",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Ashlanders",
+    "SpeakerCell": "Urshilaku Camp",
+    "PlayerFaction": "",
+    "Text": "You think to buy my friendship? You who have killed my kin? That is not likely.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 11.0
+      }
+    ],
+    "Script": []
+  },
+  "15793321511392031575": {
+    "Prev": "1924912360984825125",
+    "Next": "11458100501302119369",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tussurradad",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "More kwama egg? No, outlander. You are too generous. Keep it for yourself.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "food_kwama_egg_02",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "11458100501302119369": {
+    "Prev": "15793321511392031575",
+    "Next": "2639522091120511816",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tussurradad",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "More kwama egg? No, outlander. You are too generous. Keep it for yourself.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "food_kwama_egg_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2639522091120511816": {
+    "Prev": "11458100501302119369",
+    "Next": "28885171882598725831",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "shabinbael",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want to offer me a gift of trama root? Well, thank you, outlander, and very kind of you, but I happen to have quite a lot of trama root at the moment. Thank you for the thought, but keep this gift for yourself.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_trama_root_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "28885171882598725831": {
+    "Prev": "2639522091120511816",
+    "Next": "17122012663703605",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "shallath-piremus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want to offer me a gift of trama root? Well, thank you, outlander, and very kind of you, but I happen to have quite a lot of trama root at the moment. Thank you for the thought, but keep this gift for yourself.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_trama_root_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "17122012663703605": {
+    "Prev": "28885171882598725831",
+    "Next": "3092026972262374647",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hainab",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want to offer me a gift of trama root? Well, thank you, outlander, and very kind of you, but I happen to have quite a lot of trama root at the moment. Thank you for the thought, but keep this gift for yourself.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_trama_root_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "3092026972262374647": {
+    "Prev": "17122012663703605",
+    "Next": "5408165372742427301",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tussurradad",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have a kwama egg for me? These are quite tasty. And not so easy to get. Thank you.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "food_kwama_egg_02",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem food_kwama_egg_02 1",
+      "additem food_kwama_egg_02 1",
+      "modDisposition 10"
+    ]
+  },
+  "5408165372742427301": {
+    "Prev": "3092026972262374647",
+    "Next": "107449173200277222",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tussurradad",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have a kwama egg for me? These are quite tasty. And not so easy to get. Thank you.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "food_kwama_egg_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem food_kwama_egg_01 1",
+      "additem food_kwama_egg_01 1",
+      "modDisposition 10"
+    ]
+  },
+  "107449173200277222": {
+    "Prev": "5408165372742427301",
+    "Next": "161644993293582724",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "shallath-piremus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want to offer me a gift of trama root? Well, outlander, you are not proud. But you are courteous, and in an outlander, that is not a thing to be despised. Very well. I accept your gift. And thank you.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_trama_root_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem ingred_trama_root_01 1",
+      "additem ingred_trama_root_01 1",
+      "modDisposition 10"
+    ]
+  },
+  "161644993293582724": {
+    "Prev": "107449173200277222",
+    "Next": "242302142031414354",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "shabinbael",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want to offer me a gift of trama root? Well, outlander, you are not proud. But you are courteous, and in an outlander, that is not a thing to be despised. Very well. I accept your gift. And thank you.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_trama_root_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem ingred_trama_root_01 1",
+      "additem ingred_trama_root_01 1",
+      "modDisposition 10"
+    ]
+  },
+  "242302142031414354": {
+    "Prev": "161644993293582724",
+    "Next": "4572154092732332664",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hainab",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want to offer me a gift of trama root? Well, outlander, you are not proud. But you are courteous, and in an outlander, that is not a thing to be despised. Very well. I accept your gift. And thank you.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_trama_root_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem ingred_trama_root_01 1",
+      "additem ingred_trama_root_01 1",
+      "modDisposition 10"
+    ]
+  },
+  "4572154092732332664": {
+    "Prev": "242302142031414354",
+    "Next": "29210153361932113685",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tussurradad",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want to offer me a gift, outlander? Then bring me a kwama egg, for I am hungry.",
+    "Filters": [],
+    "Script": []
+  },
+  "29210153361932113685": {
+    "Prev": "4572154092732332664",
+    "Next": "1254811306722630168",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "shallath-piremus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want to offer me a gift? Poor outlander. Even these small things are a puzzle to you. Then bring me some trama root for my larder. I am a hunter, and it is beneath my dignity to scrabble about in the dirt. But you? Perhaps this is a task you can handle.",
+    "Filters": [],
+    "Script": []
+  },
+  "1254811306722630168": {
+    "Prev": "29210153361932113685",
+    "Next": "8162279352552127730",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "shabinbael",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want to offer me a gift? Poor outlander. Even these small things are a puzzle to you. Then bring me some trama root for my larder. I am a hunter, and it is beneath my dignity to scrabble about in the dirt. But you? Perhaps this is a task you can handle.",
+    "Filters": [],
+    "Script": []
+  },
+  "8162279352552127730": {
+    "Prev": "1254811306722630168",
+    "Next": "2920761741085323386",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hainab",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want to offer me a gift? Poor outlander. Even these small things are a puzzle to you. Then bring me some trama root for my larder. I am a hunter, and it is beneath my dignity to scrabble about in the dirt. But you? Perhaps this is a task you can handle.",
+    "Filters": [],
+    "Script": []
+  },
+  "2920761741085323386": {
+    "Prev": "8162279352552127730",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Ashlanders",
+    "SpeakerCell": "Urshilaku Camp",
+    "PlayerFaction": "",
+    "Text": "Do you want to offer me a gift? Good. I am not proud. I like gold. This is the custom you outlanders call a 'bribe', yes?",
+    "Filters": [],
+    "Script": []
+  }
+}

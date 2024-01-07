@@ -1,0 +1,144 @@
+{
+  "12747321832750413845": {
+    "Prev": "",
+    "Next": "321659194231728130",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "cassius olcinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's me.",
+    "Filters": [],
+    "Script": []
+  },
+  "321659194231728130": {
+    "Prev": "12747321832750413845",
+    "Next": "17661097747920367",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lucretinaus olcinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've paid the wizard my son's debt? I thank you. This should cover the money he owed, and a little something for you as well. Your efforts are appreciated.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_Invisible",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Invisible\" 120",
+      "Player->AddItem \"Gold_001\" 500",
+      "RemoveItem \"Gold_001\" 500"
+    ]
+  },
+  "17661097747920367": {
+    "Prev": "321659194231728130",
+    "Next": "31469430572663846",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lucretinaus olcinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see that you paid the debt my son owed. I thank you for your help. Here is a reward for all your efforts.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_Invisible",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Invisible\" 120",
+      "Player->AddItem \"Gold_001\" 100",
+      "RemoveItem \"Gold_001\" 100"
+    ]
+  },
+  "31469430572663846": {
+    "Prev": "17661097747920367",
+    "Next": "213609484182709695",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lucretinaus olcinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My son is what??? That explains why I haven't seen him for days. He's a good boy, just a bit out of touch with things. I really appreciate you helping him out here. I'd do it myself, but I really can't take the time to leave the store. Here, take this to help you along.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Invisible",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem \"Gold_001\" 75",
+      "Journal \"EB_Invisible\" 50"
+    ]
+  },
+  "213609484182709695": {
+    "Prev": "31469430572663846",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fevyn ralen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That little twit! Of course I made him invisible. Did he tell you why? He asked me to! Came in muttering something about just wanting everyone to leave him alone, and promised to pay me 400 septims to make him invisible to everyone. Did I get my money, though? No! He still has a debt to pay. So, when he came in a few weeks later begging me to remove it, I laughed in his face...or where I assumed it was.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_Invisible",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Invisible",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Invisible\" 60"
+    ]
+  }
+}

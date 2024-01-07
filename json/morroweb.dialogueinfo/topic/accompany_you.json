@@ -1,0 +1,397 @@
+{
+  "1780757646719404": {
+    "Prev": "",
+    "Next": "14634112552908719169",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinnammu mirpal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. I did accompany you to Ald Daedroth, and I did name you Ahemmusa Nerevarine. Now I shall remain here and await the arrival of the tribe. It will take some time to make preparations, and there is much to be done here.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B2_AhemmusaSafe",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "14634112552908719169": {
+    "Prev": "1780757646719404",
+    "Next": "7547116022483510217",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinnammu mirpal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have accompanied you to the place made safe for the Ahemmusa. And so, if you wish, I shall name you Nerevarine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B2_AhemmusaSafe",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "7547116022483510217": {
+    "Prev": "14634112552908719169",
+    "Next": "26949321972009317085",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinnammu mirpal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well, then. I will wait here for now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B2_AhemmusaWalk",
+        "Value": 10.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": [
+      "AiWander 128 6 0 40 30 20 0 0 0 0 0 0",
+      "Goodbye"
+    ]
+  },
+  "26949321972009317085": {
+    "Prev": "7547116022483510217",
+    "Next": "17258938821019115",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinnammu mirpal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well, %PCName. I will accompany you to Ald Daedroth, and we will speak further when we stand before the great statue in the inner shrine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B2_AhemmusaWalk",
+        "Value": 10.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "AiFollowCell Player \"Ald Daedroth, Inner Shrine\" 0 4471 3620 -22 0",
+      "Goodbye"
+    ]
+  },
+  "17258938821019115": {
+    "Prev": "26949321972009317085",
+    "Next": "11792499177029698",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinnammu mirpal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you ready now for me to accompany you to Ald Daedroth?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B2_AhemmusaWalk",
+        "Value": 10.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "followNow",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice, \"Yes, please accompany me to Ald Daedroth.\" 5, \"No, you should wait here for now.\" 6"
+    ]
+  },
+  "11792499177029698": {
+    "Prev": "17258938821019115",
+    "Next": "14406136233904608",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinnammu mirpal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well, then. I will wait here for now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B2_AhemmusaWalk",
+        "Value": 10.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "AiWander 128 6 0 40 30 20 0 0 0 0 0 0 ",
+      "Goodbye"
+    ]
+  },
+  "14406136233904608": {
+    "Prev": "11792499177029698",
+    "Next": "1796152213109715098",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinnammu mirpal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well, %PCName. I will accompany you to Ald Daedroth, and we will speak further when we stand before the great statue.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B2_AhemmusaWalk",
+        "Value": 10.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "AiFollowCell Player \"Ald Daedroth, Inner Shrine\" 0 4471 3620 -22 0",
+      "Goodbye"
+    ]
+  },
+  "1796152213109715098": {
+    "Prev": "14406136233904608",
+    "Next": "17904321252405415910",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinnammu mirpal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am accompanying you to Ald Daedroth, where we will see if you have made it safe for the Ahemmusa. I will accompany you until we stand before the great statue in the inner shrine, where we will speak further. Do you wish me to continue accompanying you?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B2_AhemmusaWalk",
+        "Value": 10.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "followNow",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice, \"Yes, please continue with me to Ald Daedroth.\" 3, \"No, you should wait here for now.\" 4"
+    ]
+  },
+  "17904321252405415910": {
+    "Prev": "1796152213109715098",
+    "Next": "2682512249265228814",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinnammu mirpal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well, then. I will wait here for now. When you are ready, come to me, and I will accompany you to Ald Daedroth to see if it is safe.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B2_AhemmusaSafe",
+        "Value": 10.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "AiWander 128 6 0 40 30 20 0 0 0 0 0 0",
+      "Goodbye"
+    ]
+  },
+  "2682512249265228814": {
+    "Prev": "17904321252405415910",
+    "Next": "22911232913039718394",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinnammu mirpal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well, %PCName. Now I will accompany you to the Daedric shrine on Ald Daedroth. And when you have brought me to the old sanctuary beneath the ruins, and I may see the great statue of Sheogorath in the inner shrine, then I will surely know that you have made Ald Daedroth safe for the Ahemmusa, and I will name you Ahemmusa Nerevarine. Go ahead, and we will speak further before the great statue.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B2_AhemmusaSafe",
+        "Value": 10.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal B2_AhemmusaWalk 10",
+      "AiFollowCell Player \"Ald Daedroth, Inner Shrine\" 0 4471 3620 -22 0",
+      "Goodbye"
+    ]
+  },
+  "22911232913039718394": {
+    "Prev": "2682512249265228814",
+    "Next": "92038942909521601",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinnammu mirpal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you made Ald Daedroth a safe place for the Ahemmusa? If I may pass in safety to the old sanctuary and see the great statue in the inner shrine, then the place is safe for my people. If Ald Daedroth is safe, are you ready for me to accompany you there and test with our lives whether it is indeed safe?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B2_AhemmusaSafe",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice, \"Yes, please accompany me to Ald Daedroth.\" 1, \"No, you should wait here for now.\" 2"
+    ]
+  },
+  "92038942909521601": {
+    "Prev": "22911232913039718394",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinnammu mirpal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "When you are sure Ald Daedroth is safe, then you will return here to me. Then I will accompany you, and together we will cross the water to Ald Daedroth. If I may pass in safety to the old sanctuary and see the great statue in the inner shrine, then the place is safe for my people. I have not the arts of war, but I have courage. I wager my life against the safety of my people. But if Ald Daedroth is not safe... if I die on my journey... remember... if I die, you will not be named Ahemmusa Nerevarine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal \"B2_AhemmusaSafe\" 10"
+    ]
+  }
+}

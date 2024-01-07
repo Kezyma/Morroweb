@@ -1,0 +1,162 @@
+{
+  "29024290244592357": {
+    "Prev": "",
+    "Next": "2090302034490291",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled from the Fighters Guild. Until you make amends name, I can't talk to you about this contract.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2090302034490291": {
+    "Prev": "29024290244592357",
+    "Next": "288663578786817540",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "There's no more to say about this.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_Nchurdamz",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "288663578786817540": {
+    "Prev": "2090302034490291",
+    "Next": "13255560723683523",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I heard Larienna has left Vvardenfell. She's allegedly looking for an unplundered Dwemer ruin near Blacklight. Some work unfinished I think.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_Nchurdamz",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "13255560723683523": {
+    "Prev": "288663578786817540",
+    "Next": "9195317552314821510",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Larienna is dead? You were supposed to protect her, %PCName. Obviously I can't trust you. This is very disappointing.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Larienna Macrina",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_Nchurdamz 110"
+    ]
+  },
+  "9195317552314821510": {
+    "Prev": "13255560723683523",
+    "Next": "30319907730021203",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I heard Larienna was pleased with your work. Here's the 500 septims I owe you for this contract.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_Nchurdamz",
+        "Value": 90.0
+      }
+    ],
+    "Script": [
+      "Journal FG_Nchurdamz 100",
+      "ModPCFacRep 5 \"Fighters Guild\"",
+      "ModDisposition 10",
+      "Player->AddItem Gold_001 500"
+    ]
+  },
+  "30319907730021203": {
+    "Prev": "9195317552314821510",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Go to Nchurdamz, a Dwemer ruin far south of Sadrith Mora, and talk to Larienna Macrina. Help her clear out the necromancers there and report back to me. I'll mark the position on your map.",
+    "Filters": [],
+    "Script": [
+      "Journal FG_Nchurdamz 10",
+      "ShowMap Nchurdamz",
+      "\"Larienna Macrina\"->Enable",
+      "daedroth_fg_nchur->Enable"
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "3044730284651516607": {
+    "Prev": "",
+    "Next": "138381380186356242",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You just deliver that equipment to Toralf and his men, they'll take care of the colonists.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_13a",
+        "Value": 10.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "138381380186356242": {
+    "Prev": "3044730284651516607",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'd never dream of actually attempting to contact the barbarians that live here. No, I've simply seen to it that some of their equipment has been acquired. And now you're going to see to it that the equipment gets to the men I have arriving on the island. Mercenaries, of course. But properly outfitted, they'll look just like the Skaal. There are two bags under the table out in the hall; take the armor and weapons in them and deliver them to Toralf.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal CO_13a 10"
+    ]
+  }
+}

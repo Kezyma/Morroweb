@@ -1,0 +1,566 @@
+{
+  "66794353038430875": {
+    "Prev": "",
+    "Next": "91035936218037191",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tralas rendas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well. Stand still.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Cast \"shrine_maargan_npc_sp\" Player",
+      "Goodbye"
+    ]
+  },
+  "91035936218037191": {
+    "Prev": "66794353038430875",
+    "Next": "510247992393732284",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tralas rendas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you need assistance, speak with me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "510247992393732284": {
+    "Prev": "91035936218037191",
+    "Next": "169325213141115146",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tralas rendas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want the blessings of the Tribunal?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_MaarGan",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TT_MaarGan",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes.\" 1 \"No.\" 2"
+    ]
+  },
+  "169325213141115146": {
+    "Prev": "510247992393732284",
+    "Next": "15582931567910486",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Healer",
+    "SpeakerFaction": "Imperial Cult",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Imperial cult members, or reverent, respectful guests, may make offerings at shrines and receive in return a blessing. Common blessings are healing, cure common or blight disease, resistance to common or blight disease, cure poison, and other health benefits. More extraordinary blessings are reserved for the advanced ranks of the faithful. No offering need be made by these pious souls; benefits may include long-term fortification of attributes and abilities.",
+    "Filters": [],
+    "Script": []
+  },
+  "15582931567910486": {
+    "Prev": "169325213141115146",
+    "Next": "19512113122160228881",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Healer",
+    "SpeakerFaction": "Imperial Cult",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Most shrines provide common blessings like healing, cure common or cure blight disease, and cure poison.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "19512113122160228881": {
+    "Prev": "15582931567910486",
+    "Next": "19082242531176319859",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Monk",
+    "SpeakerFaction": "Imperial Cult",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Most shrines provide common blessings like healing, cure common or cure blight disease, and cure poison.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "19082242531176319859": {
+    "Prev": "19512113122160228881",
+    "Next": "1512230081169115999",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Priest Service",
+    "SpeakerFaction": "Imperial Cult",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Most shrines provide common blessings like healing, cure common or cure blight disease, and cure poison.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "1512230081169115999": {
+    "Prev": "19082242531176319859",
+    "Next": "30905121611418017393",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Priest",
+    "SpeakerFaction": "Imperial Cult",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Most shrines provide common blessings like healing, cure common or cure blight disease, and cure poison.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "30905121611418017393": {
+    "Prev": "1512230081169115999",
+    "Next": "1480835042708010402",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Healer",
+    "SpeakerFaction": "Imperial Cult",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Imperial cult members and reverent guests may make offerings at altars and receive in return a blessing.",
+    "Filters": [],
+    "Script": []
+  },
+  "1480835042708010402": {
+    "Prev": "30905121611418017393",
+    "Next": "204323452789915297",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Monk",
+    "SpeakerFaction": "Imperial Cult",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Imperial cult members and reverent guests may make offerings at altars and receive in return a blessing.",
+    "Filters": [],
+    "Script": []
+  },
+  "204323452789915297": {
+    "Prev": "1480835042708010402",
+    "Next": "5644203513237424106",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Priest Service",
+    "SpeakerFaction": "Imperial Cult",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Imperial cult members and reverent guests may make offerings at altars and receive in return a blessing.",
+    "Filters": [],
+    "Script": []
+  },
+  "5644203513237424106": {
+    "Prev": "204323452789915297",
+    "Next": "999317742302763852",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Priest",
+    "SpeakerFaction": "Imperial Cult",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Imperial cult members and reverent guests may make offerings at altars and receive in return a blessing.",
+    "Filters": [],
+    "Script": []
+  },
+  "999317742302763852": {
+    "Prev": "5644203513237424106",
+    "Next": "335918871233145830",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Healer",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "In addition to common blessings, most shrines provide special blessings of the saints that fortify attributes and abilities for long durations.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 25.0
+      }
+    ],
+    "Script": []
+  },
+  "335918871233145830": {
+    "Prev": "999317742302763852",
+    "Next": "730116955323385794",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Monk",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "In addition to common blessings, most shrines provide special blessings of the saints that fortify attributes and abilities for long durations.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 25.0
+      }
+    ],
+    "Script": []
+  },
+  "730116955323385794": {
+    "Prev": "335918871233145830",
+    "Next": "19862301721525411938",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Priest Service",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "In addition to common blessings, most shrines provide special blessings of the saints that fortify attributes and abilities for long durations.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 25.0
+      }
+    ],
+    "Script": []
+  },
+  "19862301721525411938": {
+    "Prev": "730116955323385794",
+    "Next": "323142681580737641",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Priest",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "In addition to common blessings, most shrines provide special blessings of the saints that fortify attributes and abilities for long durations.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 25.0
+      }
+    ],
+    "Script": []
+  },
+  "323142681580737641": {
+    "Prev": "19862301721525411938",
+    "Next": "1027626077759414037",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Healer",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Most shrines provide common blessings like healing, cure common or cure blight disease, and cure poison.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1027626077759414037": {
+    "Prev": "323142681580737641",
+    "Next": "295532289065455725",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Monk",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Most shrines provide common blessings like healing, cure common or cure blight disease, and cure poison.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "295532289065455725": {
+    "Prev": "1027626077759414037",
+    "Next": "31375190581227610914",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Priest Service",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Most shrines provide common blessings like healing, cure common or cure blight disease, and cure poison.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "31375190581227610914": {
+    "Prev": "295532289065455725",
+    "Next": "12847254152810122782",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Priest",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Most shrines provide common blessings like healing, cure common or cure blight disease, and cure poison.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "12847254152810122782": {
+    "Prev": "31375190581227610914",
+    "Next": "164242263559986844",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Healer",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Temple faithful and reverent guests may make offerings at shrines and receive in return a blessing.",
+    "Filters": [],
+    "Script": []
+  },
+  "164242263559986844": {
+    "Prev": "12847254152810122782",
+    "Next": "1920241442779429944",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Monk",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Temple faithful and reverent guests may make offerings at shrines and receive in return a blessing.",
+    "Filters": [],
+    "Script": []
+  },
+  "1920241442779429944": {
+    "Prev": "164242263559986844",
+    "Next": "808957252906718847",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Priest Service",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Temple faithful and reverent guests may make offerings at shrines and receive in return a blessing.",
+    "Filters": [],
+    "Script": []
+  },
+  "808957252906718847": {
+    "Prev": "1920241442779429944",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Priest",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Temple faithful and reverent guests may make offerings at shrines and receive in return a blessing.",
+    "Filters": [],
+    "Script": []
+  }
+}

@@ -1,0 +1,266 @@
+{
+  "403914234323723754": {
+    "Prev": "",
+    "Next": "16080269222141625811",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "severia gratius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's simple, really. I want you to kill the man responsible for the moon sugar poisonings. Jeleen, our Cult priest, was the most recent victim, and he actually caught a glimpse of the culprit. It was a man wearing, oddly enough, a unique white Colovian fur helm. Bring me this white helm, and I'll know the deed is done. Now, go speak with Jeleen at the Cult shrine here in Frostmoth before you depart. He may have some more information.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal BM_MoonSugar 30",
+      "ModDisposition 10"
+    ]
+  },
+  "16080269222141625811": {
+    "Prev": "403914234323723754",
+    "Next": "2667220210291301738",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "severia gratius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see. Well, if you change your mind, come talk to me. This issue isn't going to resolve itself, and I hardly have the resources to deal with it effectively. Good day, %PCClass.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal BM_MoonSugar 20",
+      "ModPCFacRep -5 \"Imperial Legion\"",
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "2667220210291301738": {
+    "Prev": "16080269222141625811",
+    "Next": "180032662991810439",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "severia gratius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent. You are a credit to the Imperial Legion, %PCName. I hereby order you to kill the man responsible for the moon sugar poisonings. Jeleen, our Cult priest, was the most recent victim, and he actually caught a glimpse of the culprit. It was a man wearing, oddly enough, a unique white Colovian fur helm. Bring me this white helm, and I'll know justice has been served. Be sure to question Jeleen at the Cult shrine before you depart. He may have some more information.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal BM_MoonSugar 30",
+      "ModDisposition 10",
+      "ModPCFacRep 5 \"Imperial Legion\""
+    ]
+  },
+  "180032662991810439": {
+    "Prev": "2667220210291301738",
+    "Next": "4874121011997725324",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "severia gratius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well, then. I hope you will put any personal matters to rest as quickly as you're able, and then return to accept this mission. You are a member of the Imperial Legion, %PCName, and our first duty is to the Empire. I know thinngs seem a bit lax around here, and some of the other guards aren't as motivated as they should be. I expected better from you. Good day.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Journal BM_MoonSugar 20",
+      "ModPCFacRep -10 \"Imperial Legion\"",
+      "ModDisposition -15",
+      "Goodbye"
+    ]
+  },
+  "4874121011997725324": {
+    "Prev": "180032662991810439",
+    "Next": "713718083160817343",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "severia gratius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If it were just the locals the Empire couldn't be bothered. But now one of our own has been affected! Last week our Cult priest was stricken with moon sugar euphoria after drinking some wine. I don't have the manpower to deal with this problem, but my superiors are getting impatient. He wants the culprit dead. I know you're not a member of the Imperial Legion, but I'd like to hire you to help in the investigation. I'll make it worth your while. Are you interested?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_MoonSugar",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_MoonSugar",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Choice \"I'll help you Severia.  Just tell me what you need done.\" 1 \"No thanks, Severia.  This is an Imperial matter, and I've got other business to attend to.\" 2"
+    ]
+  },
+  "713718083160817343": {
+    "Prev": "4874121011997725324",
+    "Next": "93772688968416664",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "severia gratius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If it were just the locals the Empire couldn't be bothered. But now one of our own has been affected! Last week our Cult priest was stricken with moon sugar euphoria after drinking some wine. I don't have the manpower to deal with this problem, but my superiors are getting impatient. They want the culprit dead. I need to call upon you, as a loyal member of the Imperial Legion, to bring this poisoner to justice. What say you? Will you serve me, and the Empire?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_MoonSugar",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_MoonSugar",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Choice \"I would be honored to serve the Empire.  What must I do, Severia?\" 3 \"I can't help you right now, Severia. I have other pressing matters to attend to.\" 4"
+    ]
+  },
+  "93772688968416664": {
+    "Prev": "713718083160817343",
+    "Next": "22865119751549021299",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "severia gratius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The matter is still under investigation, and I suggest you get a move on.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_MoonSugar",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_MoonSugar",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "22865119751549021299": {
+    "Prev": "93772688968416664",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "severia gratius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That matter has been put to rest, thanks to you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_MoonSugar",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  }
+}

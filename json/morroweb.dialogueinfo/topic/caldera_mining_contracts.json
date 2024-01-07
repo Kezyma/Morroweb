@@ -1,0 +1,845 @@
+{
+  "1419286822419213889": {
+    "Prev": "",
+    "Next": "1238238402598021610",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've broken the rules of House Hlaalu, sweetie. It brings tears to my eyes when I think about your disloyalty. Maybe you can make amends and make everything better.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1238238402598021610": {
+    "Prev": "1419286822419213889",
+    "Next": "1500732332906012738",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I wish you had spared Elmussa's life. No need to be jealous, sweetie, but I wish I knew more thieves.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "elmussa damori",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_CaptureSpy",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1500732332906012738": {
+    "Prev": "1238238402598021610",
+    "Next": "25648551158927803",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It sounds like you already took care of everything, my sweet.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_CaptureSpy",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "25648551158927803": {
+    "Prev": "1500732332906012738",
+    "Next": "2128030798724820897",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Just report back to Odral, dumpling, but don't tell him who the spy is.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_CaptureSpy",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2128030798724820897": {
+    "Prev": "25648551158927803",
+    "Next": "1778044762984327838",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hm. I will try and get in touch with her. Oh, no, dumpling! No need to be jealous! Just don't tell Odral who the thief really is. Tell him you found the documents in a crate or something. Please take this little gift of 500 drakes for keeping me informed.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HH_CaptureSpy 50",
+      "Player->AddItem Gold_001 500"
+    ]
+  },
+  "1778044762984327838": {
+    "Prev": "2128030798724820897",
+    "Next": "17632281732292924431",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I hoped you'd be more loyal. After all we've been through together...",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "17632281732292924431": {
+    "Prev": "1778044762984327838",
+    "Next": "1275727158317638834",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Will you tell me who the thief is?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_CaptureSpy",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Choice \"Truth: Elmussa Damori.\" 1 \"Lie.\" 2"
+    ]
+  },
+  "1275727158317638834": {
+    "Prev": "17632281732292924431",
+    "Next": "2352412899209251574",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This does not sound suspicious. If you can, sweetie pie, keep the identity of the thief secret from Odral, but tell me who it is.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_CaptureSpy",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "2352412899209251574": {
+    "Prev": "1275727158317638834",
+    "Next": "1556919049174624459",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "irgola",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, I'm glad that's settled.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_CaptureSpy",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1556919049174624459": {
+    "Prev": "2352412899209251574",
+    "Next": "1275730384197348258",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "irgola",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I did not steal the mining contracts. Look around if you want, but don't take anything.",
+    "Filters": [],
+    "Script": []
+  },
+  "1275730384197348258": {
+    "Prev": "1556919049174624459",
+    "Next": "931020016145017973",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "elmussa damori",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thanks, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_CaptureSpy",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "931020016145017973": {
+    "Prev": "1275730384197348258",
+    "Next": "1937921768246029051",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "elmussa damori",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've given you the key. Take the documents back to Odral, but don't tell him that it was me, all right? Just make up some story.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_CaptureSpy",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "1937921768246029051": {
+    "Prev": "931020016145017973",
+    "Next": "27816280872274410917",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "elmussa damori",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Yes, I stole them, %PCRank. Guild business. If you turn me in, you'll lose standing with the Guild. The documents are in that chest on my windowsill. Here is the key. Tell Odral that you just found the documents lying around. That fool will believe anything if you flatter him enough.",
+    "Filters": [],
+    "Script": [
+      "Journal HH_CaptureSpy 41",
+      "Player->AddItem key_elmussadamori 1",
+      "Set OwnershipHHCS to 1"
+    ]
+  },
+  "27816280872274410917": {
+    "Prev": "1937921768246029051",
+    "Next": "875423461186535727",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "elmussa damori",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see you've found them. Very, well, I admit it. I stole them under contract with the Thieves Guild. Odral Helvi has abused his power and made many enemies. Flatter him a bit, make up some story about where you found the contracts, and I'll put in a good word for you with my Guild and with House Hlaalu.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_CalderaMiningContract",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HH_CaptureSpy 40",
+      "Set OwnershipHHCS to 1"
+    ]
+  },
+  "875423461186535727": {
+    "Prev": "27816280872274410917",
+    "Next": "1958932831546124345",
+    "Type": "Topic",
+    "Disposition": 80,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "elmussa damori",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Okay, I confess. I stole them under contract with the Thieves Guild. They are in the chest on my windowsill. Here is the key. Odral Helvi has abused his power and made many enemies. Flatter him a bit, make up some story about where you found the contracts, and I'll put in a good word for you with my Guild and with House Hlaalu.",
+    "Filters": [],
+    "Script": [
+      "Journal HH_CaptureSpy 40",
+      "Player->AddItem key_elmussadamori 1",
+      "Set OwnershipHHCS to 1"
+    ]
+  },
+  "1958932831546124345": {
+    "Prev": "875423461186535727",
+    "Next": "3081231026442314798",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "elmussa damori",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Why are you asking me? You have no proof.",
+    "Filters": [],
+    "Script": []
+  },
+  "3081231026442314798": {
+    "Prev": "1958932831546124345",
+    "Next": "1625481902529716639",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't think so. You've been expelled. Until you make amends, I don't have to discuss business with you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1625481902529716639": {
+    "Prev": "3081231026442314798",
+    "Next": "2949528398143693956",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already returned the missing contracts.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_CaptureSpy",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2949528398143693956": {
+    "Prev": "1625481902529716639",
+    "Next": "139221622049027039",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Even if you found and killed the thief, you still have to bring me the Caldera mining contracts.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "elmussa damori",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "bk_CalderaMiningContract",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_CaptureSpy",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "139221622049027039": {
+    "Prev": "2949528398143693956",
+    "Next": "32636292071366831578",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, these are the contracts. It seems Elmussa Damori was the thief, and you have dealt with her already. Good work, %PCName. Take these 1000 drakes and these scrolls with my gratitude.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "elmussa damori",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem \"bk_CalderaMiningContract\" 1",
+      "Player->AddItem Gold_001 1000",
+      "Player->AddItem sc_golnaraseyemaze 2",
+      "Player->AddItem sc_fourthbarrier 2",
+      "Journal HH_CaptureSpy 120",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 20",
+      "Player->ModReputation 1"
+    ]
+  },
+  "32636292071366831578": {
+    "Prev": "139221622049027039",
+    "Next": "266152453925424925",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good work. I will have her arrested if she has not already fled. Take these 1000 drakes with my gratitude.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HH_CaptureSpy 110",
+      "Player->RemoveItem \"bk_CalderaMiningContract\" 1",
+      "Player->AddItem Gold_001 1000",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 10",
+      "\"Elmussa Damori\"->Disable",
+      "Player->ModReputation 1"
+    ]
+  },
+  "266152453925424925": {
+    "Prev": "32636292071366831578",
+    "Next": "865925577198831975",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That is very disappointing. I suppose the thief must be outside Caldera, then. Well, take these 500 drakes for your efforts.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal HH_CaptureSpy 100",
+      "Player->RemoveItem \"bk_CalderaMiningContract\" 1",
+      "Player->AddItem Gold_001 500",
+      "ModPCFacRep 10 \"Hlaalu\"",
+      "ModDisposition 5",
+      "Player->ModReputation 1"
+    ]
+  },
+  "865925577198831975": {
+    "Prev": "266152453925424925",
+    "Next": "21419185382597229921",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That does not convince me. Tell me where you really found the Caldera mining contracts or we have nothing to discuss.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "21419185382597229921": {
+    "Prev": "865925577198831975",
+    "Next": "1571214372148418670",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see you found the missing contracts. Where did you find them?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_CalderaMiningContract",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Truth: Elmussa Damori.\" 1 \"Lie.\" 2"
+    ]
+  },
+  "1571214372148418670": {
+    "Prev": "21419185382597229921",
+    "Next": "2172160452916926446",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Someone stole some of our mining contracts, which were written on a scroll. There have been too many thefts recently for it to be an outsider. I believe someone in town is the thief. Find the thief and return the mining contracts to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BankFraud",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HH_CaptureSpy 10"
+    ]
+  },
+  "2172160452916926446": {
+    "Prev": "1571214372148418670",
+    "Next": "3276180922507331034",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Caldera",
+    "PlayerFaction": "",
+    "Text": "The thefts began not to long ago. Talk to Irgola and Elmussa Damori. They both moved here recently.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HH_CaptureSpy",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3276180922507331034": {
+    "Prev": "2172160452916926446",
+    "Next": "261013111687204578",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Imperial",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Caldera",
+    "PlayerFaction": "",
+    "Text": "I would start by interrogating our most recent residents, Elmussa Damori and Irgola the Pawnbroker.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HH_CaptureSpy",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "261013111687204578": {
+    "Prev": "3276180922507331034",
+    "Next": "568313261821125190",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Argonian",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Caldera",
+    "PlayerFaction": "",
+    "Text": "I just work here.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HH_CaptureSpy",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "568313261821125190": {
+    "Prev": "261013111687204578",
+    "Next": "2791558542250031918",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Khajiit",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Caldera",
+    "PlayerFaction": "",
+    "Text": "%Name knows nothing of this.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HH_CaptureSpy",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2791558542250031918": {
+    "Prev": "568313261821125190",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Caldera",
+    "PlayerFaction": "",
+    "Text": "I don't know. Where did you last see them?",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HH_CaptureSpy",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  }
+}

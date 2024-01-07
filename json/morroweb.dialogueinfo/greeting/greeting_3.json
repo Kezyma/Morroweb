@@ -1,0 +1,38 @@
+{
+  "22580190852053612072": {
+    "Prev": "",
+    "Next": "",
+    "Type": "Greeting",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Traitors to the %Faction must die.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ExpMoragTong",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -50",
+      "Goodbye"
+    ]
+  }
+}

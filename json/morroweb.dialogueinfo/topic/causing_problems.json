@@ -1,0 +1,131 @@
+{
+  "2592723811105698811": {
+    "Prev": "",
+    "Next": "643514478144145764",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "denegor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm cool. No problems.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Bouncer",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "643514478144145764": {
+    "Prev": "2592723811105698811",
+    "Next": "1353115325312871696",
+    "Type": "Topic",
+    "Disposition": 75,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "denegor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, okay, I guess, but just because you ask me so nice. Bartender! Get me another sujamma so I can sit here and drink all quiet and sweet like the good %PCRace says.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_Bouncer\" 20"
+    ]
+  },
+  "1353115325312871696": {
+    "Prev": "643514478144145764",
+    "Next": "1558417643780330399",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "denegor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "*hic* Not for the likes of a dirty %PCRace like you, you... you... bubble-faced puke. I can say whatever I want to say and nobody can stop me. NOBODY!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1558417643780330399": {
+    "Prev": "1353115325312871696",
+    "Next": "1768268483140018819",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "denegor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No, I'm not coming with you, you dirty %PCRace! *hic* Who knows what revolting tricks you'll pull when we're alone. *hic*  GET AWAY FROM ME! You won't take me in! You can't! VICTORY! OR... VICTORY!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "StartCombat player",
+      "Goodbye"
+    ]
+  },
+  "1768268483140018819": {
+    "Prev": "1558417643780330399",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "denegor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's right!  *hic* I've never met a %PCRace I liked. I say we should just ship them all back to... to... *hic* well, to wherever the heck they came from and build a wall between us and them. WHO'S WITH ME?!",
+    "Filters": [],
+    "Script": [
+      "Choice \"Sir, why don't you calm down a bit?\" 1 \"Sir, you're going to have to leave. Please come with me.\" 2"
+    ]
+  }
+}

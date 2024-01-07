@@ -1,0 +1,148 @@
+{
+  "5554153612468918286": {
+    "Prev": "",
+    "Next": "24740196861759530510",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "severia gratius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You're new at Frostmoth so I guess you haven't heard. Over the past couple of months several people across Solstheim have been poisoned...with moon sugar. Someone has been slipping it into their food and wine. They experience temporary euphoria, and then complete exhaustion. I've been charged with finding the culprit and bringing him to justice. Recently our Cult priest Jeleen was poisoned, so it is now officially an Imperial matter.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_MoonSugar",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_MoonSugar",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Journal BM_MoonSugar 10"
+    ]
+  },
+  "24740196861759530510": {
+    "Prev": "5554153612468918286",
+    "Next": "3606205341628112906",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "severia gratius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You're in charge of the investigation now, %PCName. I suggest you stop wasting time and get on with it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_MoonSugar",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_MoonSugar",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3606205341628112906": {
+    "Prev": "24740196861759530510",
+    "Next": "17327213981927329143",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "jeleen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I too was stricken with moon sugar euphoria.  It was just last week, after a Cult service.  I sat down to some wine, and moments later realized something was wrong.  I am a law-biding man, %PCName, and have never experienced anything so...free, in all my life!  The laughing, the dancing...it was horrible!  And then, as I drifted off, I saw him.  A strange man...old and frail -- certainly no Nord -- wearing a white Colovian fur helm.  But even stranger was his silly song.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_MoonSugar",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "17327213981927329143": {
+    "Prev": "3606205341628112906",
+    "Next": "1484423123291231819",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "severia gratius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The matter has been resolved. The poisoner has been brought to justice, and the Imperial Legion has you to thank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_MoonSugar",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1484423123291231819": {
+    "Prev": "17327213981927329143",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uncle sweetshare",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That Severia Gratius is so grumpy!  Maybe I should visit her next!  Because that's what I do, %PCName!  I visit the sad and miserable and spread all the happiness I can! It is the way of Uncle Sweetshare, you see!  Now that Jeleen, there's a sad, sad boy.  His true love has disappeared, don't you know.  Very sad, very sad.  That's why I sang to him, %PCName!  He needed something extra, something special!  Sugar and a song!  It cures all!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_MoonSugar",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  }
+}

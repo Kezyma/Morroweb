@@ -1,0 +1,90 @@
+{
+  "19700265441214810192": {
+    "Prev": "",
+    "Next": "2521766932062316625",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nels llendo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ahhhh...yes. Though it is Nels Llendo they call thief, it is you, %PCName, who has stolen my heart. Your kiss is worth more gold than I might find in a Duke's treasury. I must take my leave of you now, dear lady, but I take my lodging at the Halfway Tavern in Pelagiad. Perhaps you will visit Nels Llendo there some time. I'm certain I will be able to be of some service to you then. Until that time, good bye.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "journal \"MV_3_Charming\" 120",
+      "ModDisposition 30",
+      "Goodbye"
+    ]
+  },
+  "2521766932062316625": {
+    "Prev": "19700265441214810192",
+    "Next": "209412776195423851",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nels llendo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? Ah well, perhaps it was too much to hope for a simple man such as Nels Llendo. But, if you ever change your mind, you know where to find me. Good day, madam.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "journal \"MV_3_Charming\" 130",
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "209412776195423851": {
+    "Prev": "2521766932062316625",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nels llendo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, all I desire is a single kiss from beautiful lady such as yourself. Will you not grant Nels Llendo so simple a boon?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_3_Charming",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"What harm could one kiss do?\" 1 \"I'd sooner kiss a guar.\" 2"
+    ]
+  }
+}

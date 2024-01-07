@@ -1,0 +1,220 @@
+{
+  "46662122842887030": {
+    "Prev": "",
+    "Next": "25759346779414877",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nibani maesa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go to Ald'ruhn, the chief town of the Redoran. They say the council meets under the shell of a giant Emperor crab. The Redoran are proud and haughty, known as great warriors and great worshippers of the Tribunal. Since they love the Temple and Vivec, they cannot love you. The Temple warriors hate the Nerevarine prophecies, and will kill you if they see you. Be careful.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B5_RedoranHort",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "25759346779414877": {
+    "Prev": "46662122842887030",
+    "Next": "42414593202123354",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bolvyn venim",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Even if you get the councilors on your side, I will veto them. I would rather die than see House Redoran dishonored by an outlander.",
+    "Filters": [],
+    "Script": []
+  },
+  "42414593202123354": {
+    "Prev": "25759346779414877",
+    "Next": "313867236248843459",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Perhaps if you consult the recent edition of the Red Book of Great House Redoran, you'll note that it lists the current Redoran councilors and their residences.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B5_RedoranBook",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "313867236248843459": {
+    "Prev": "42414593202123354",
+    "Next": "207924979163721176",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Redoran councilors are among the most distinguished and honorable Dunmer in Morrowind. Here. Perhaps you'd like to review a recent edition of the Red Book of Great House Redoran. It lists the current Redoran councilors and their residences.",
+    "Filters": [],
+    "Script": [
+      "Player->AddItem \"bk_RedBook426\" 1",
+      "Journal B5_RedoranBook 1"
+    ]
+  },
+  "207924979163721176": {
+    "Prev": "313867236248843459",
+    "Next": "11560326981415026465",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have killed one of the Redoran Councilors. I will not give you any aid.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "RedoranMurdered",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "11560326981415026465": {
+    "Prev": "207924979163721176",
+    "Next": "104471515838016293",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Currently the Redoran Councilors are myself, Athyn Sarethi, the Archmaster Bolvyn Venim, Garisa Llethri, Hlaren Ramoran, Brara Morvayn, and Miner Arobar. Did you not get a Red Book of the Great House Redoran?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B5_RedoranBook",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "104471515838016293": {
+    "Prev": "11560326981415026465",
+    "Next": "27375101302218828398",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Currently the Redoran Councilors are myself, Athyn Sarethi, the Archmaster Bolvyn Venim, Garisa Llethri, Hlaren Ramoran, Brara Morvayn, and Miner Arobar. Please take this copy of the Red Book. It lists each of the councilors and where they currently reside.",
+    "Filters": [],
+    "Script": [
+      "Player->AddItem \"bk_RedBook426\" 1",
+      "Journal B5_RedoranBook 1"
+    ]
+  },
+  "27375101302218828398": {
+    "Prev": "104471515838016293",
+    "Next": "22336237631390313514",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Redoran",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You should consult the recent edition of the Red Book of Great House Redoran. It lists the current Redoran councilors and their residences.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B5_RedoranBook",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "22336237631390313514": {
+    "Prev": "27375101302218828398",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Redoran",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here's a recent edition of the Red Book of Great House Redoran. It lists the current Redoran councilors and their residences.",
+    "Filters": [],
+    "Script": [
+      "Player->AddItem \"bk_RedBook426\" 1",
+      "Journal B5_RedoranBook 1"
+    ]
+  }
+}

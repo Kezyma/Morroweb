@@ -1,0 +1,328 @@
+{
+  "1285313042877624077": {
+    "Prev": "",
+    "Next": "2273119457622526861",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dro'sakhar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes? What is it?",
+    "Filters": [],
+    "Script": []
+  },
+  "2273119457622526861": {
+    "Prev": "1285313042877624077",
+    "Next": "2657517022116112845",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have heard of this Khajiit, and he is a known outlaw. I believe that this bounty is a legitimate one, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "FG_KhajiitBounty",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "FG_KhajiitBounty",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal FG_KhajiitBounty 60"
+    ]
+  },
+  "2657517022116112845": {
+    "Prev": "2273119457622526861",
+    "Next": "23376145162848111688",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled, and I don't have to talk to you about any contracts.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "23376145162848111688": {
+    "Prev": "2657517022116112845",
+    "Next": "605342961734514737",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "You sure got that Khajiit, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_KhajiitBounty",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "605342961734514737": {
+    "Prev": "23376145162848111688",
+    "Next": "1748015982406012139",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "So Dro'Sakhar is already dead. You get his bounty then. Here's the 500 septims.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_KhajiitBounty",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "dro'sakhar",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_KhajiitBounty 100",
+      "ModPCFacRep 5 \"Fighters Guild\"",
+      "ModDisposition 10",
+      "Player->AddItem Gold_001 500"
+    ]
+  },
+  "1748015982406012139": {
+    "Prev": "605342961734514737",
+    "Next": "22399301022664217471",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I heard you got that Khajiit. Here's the 500 septim bounty.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "dro'sakhar",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_KhajiitBounty 100",
+      "ModPCFacRep 5 \"Fighters Guild\"",
+      "ModDisposition 10",
+      "Player->AddItem Gold_001 500"
+    ]
+  },
+  "22399301022664217471": {
+    "Prev": "1748015982406012139",
+    "Next": "242138384466729627",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I got a bounty on this Khajiit outlaw Dro'Sakhar. He's hiding here in Vivec. In St. Olms, I think.",
+    "Filters": [],
+    "Script": [
+      "Journal FG_KhajiitBounty 10"
+    ]
+  },
+  "242138384466729627": {
+    "Prev": "22399301022664217471",
+    "Next": "2353774952895012947",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Khajiit",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec, St. Olms",
+    "PlayerFaction": "",
+    "Text": "%Name knows nothing of this.",
+    "Filters": [],
+    "Script": []
+  },
+  "2353774952895012947": {
+    "Prev": "242138384466729627",
+    "Next": "27935143102985715674",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec, St. Olms Canal South-Two",
+    "PlayerFaction": "",
+    "Text": "Look around. I think he's been here recently.",
+    "Filters": [],
+    "Script": []
+  },
+  "27935143102985715674": {
+    "Prev": "2353774952895012947",
+    "Next": "22442061226824352",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Khajiit",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec, St. Olms",
+    "PlayerFaction": "",
+    "Text": "%Name knows nothing of this.",
+    "Filters": [],
+    "Script": []
+  },
+  "22442061226824352": {
+    "Prev": "27935143102985715674",
+    "Next": "2834821698897115878",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec, St. Olms",
+    "PlayerFaction": "",
+    "Text": "There's a Khajiit in one of the homes off the south-side canal. He looked suspicious.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2834821698897115878": {
+    "Prev": "22442061226824352",
+    "Next": "271897381568517740",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Khajiit",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec",
+    "PlayerFaction": "",
+    "Text": "%Name does not know this person.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "271897381568517740": {
+    "Prev": "2834821698897115878",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec",
+    "PlayerFaction": "",
+    "Text": "Don't know that one. Check over in St. Olms. Lots of shady characters in that part of Vivec.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "551218783209314257": {
+    "Prev": "",
+    "Next": "23130724226028218",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, Ahnassi is a thief. But she is a NICE thief. Don't you think so?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 32.0
+      }
+    ],
+    "Script": []
+  },
+  "23130724226028218": {
+    "Prev": "551218783209314257",
+    "Next": "3634127492333627256",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ahnassi tells you, Ahnassi trusts you. Yes, Ahnassi is a thief. You do not mind? Why? Because Ahnassi loves secret things. She loves secrets, and when she finds them, she loves to have them. Like this strange Hrordis upstairs. Hrordis has a secret, Ahnassi can see, so Ahnassi follows Hrordis, and this is how Ahnassi knows Hrordis serves Mehrunes Dagon. This magic belt Hrordis has, such a pretty belt, but strange writings in strange letters, maybe evil, maybe danger.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal romance_ahnassi 32",
+      "Journal \"Romance_Ahnassi\" 30",
+      "modDisposition 10"
+    ]
+  },
+  "3634127492333627256": {
+    "Prev": "23130724226028218",
+    "Next": "2007643192535827435",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Please excuse poor Ahnassi. She knows you must see her drooping tail and drooping whiskers. But Ahnassi must understand, and save her pride. Ahnassi will pretend she does not care. But to you, Ahnassi can't hide. So sad, so sad, so sad.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "2007643192535827435": {
+    "Prev": "3634127492333627256",
+    "Next": "2875712351909012565",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Please forgive Ahnassi, if she purrs like a kitten. But Ahnassi is so pleased! You will come visit Ahnassi often then? And tell her things? And ask her things too, for we are now friends, yes? Ahnassi such secrets knows, she almost bursts. Like... Ahnassi MUST tell her new friend! This Hrordis upstairs? Such a secret I know!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "choice \"Continue\" 3"
+    ]
+  },
+  "2875712351909012565": {
+    "Prev": "2007643192535827435",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What Khajiit can see what she wants, and not take it? Could Ahnassi ask for gift? Don't say 'No' to Ahnassi. Must Ahnassi be the thief?. Must she steal this thing, this %PCName fellow she wants? Or will he give himself as a gift?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give Ahnassi the gift of friendship.\" 1 \"Refuse Ahnassi the gift of friendship.\" 2"
+    ]
+  }
+}

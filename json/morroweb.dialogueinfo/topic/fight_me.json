@@ -1,0 +1,265 @@
+{
+  "28993571037820837": {
+    "Prev": "",
+    "Next": "27319242181131618799",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Seler Favelnim",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No, you talked me out of it. There's no more need for violence.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_7",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "27319242181131618799": {
+    "Prev": "28993571037820837",
+    "Next": "3070321107210108802",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Seler Favelnim",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You're right, you're right.... I know you're right. I'm sorry. I'll stop, and I'll try to look on the bright side from now on.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Journal CO_7 60"
+    ]
+  },
+  "3070321107210108802": {
+    "Prev": "27319242181131618799",
+    "Next": "1512516121061127491",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Seler Favelnim",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You won't, eh? Well, maybe I won't give you a choice!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "1512516121061127491": {
+    "Prev": "3070321107210108802",
+    "Next": "19372277872210925921",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Seler Favelnim",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I suppose you're going to try and tell me that my family is more important, right? Look, I don't want things to end like this, but I don't want Dralora to have to see me wasting away in front of her. I don't want her to have to take care of me because I can't do it myself. Just kill me, won't you?  Put an end to this!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Fine. I'll do it.\" 1 \"No, I won't.\" 5"
+    ]
+  },
+  "19372277872210925921": {
+    "Prev": "1512516121061127491",
+    "Next": "2692387883073519102",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Seler Favelnim",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My wife? She's..... she's dead? Then I really have nothing to live for. Let's end this, %PCName, right now!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Dralora Favelnim",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "2692387883073519102": {
+    "Prev": "19372277872210925921",
+    "Next": "10134106374452486",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Seler Favelnim",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My wife will be better off without me, whether she knows it or not. What, you think you know better?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Choice: \"No, you're right. I'll do it.\" 1 \"This isn't your only option.\" 4"
+    ]
+  },
+  "10134106374452486": {
+    "Prev": "2692387883073519102",
+    "Next": "952914780362712088",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Seler Favelnim",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Why? Look at me. I'm an old man. My health is failing, I'm of no use in the mines, and I'm a burden to my family. I don't want to waste away in bed; don't you see? That's no way for a man to die.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Very well, I'll do as you ask.\" 1 \"What about your wife?\" 3"
+    ]
+  },
+  "952914780362712088": {
+    "Prev": "10134106374452486",
+    "Next": "6465611725112456",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Seler Favelnim",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good, good. Make it quick, will you? As flashy as I wanted this to be, I wasn't looking for lots of pain. I'll at least try and put up a fight, to make you look good. You shouldn't be blamed for this.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "6465611725112456": {
+    "Prev": "952914780362712088",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Seler Favelnim",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm.... I'm too tired. Just can't fight anymore...  Kill me, won't you? Just tell them you had no choice, that you had to defend yourself. I just don't want to live like this anymore.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_7",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Very well, I'll do as you ask.\" 1 \"Why would you want to die?\" 2"
+    ]
+  }
+}

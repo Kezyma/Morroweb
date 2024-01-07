@@ -1,0 +1,291 @@
+{
+  "1999628664275575595": {
+    "Prev": "",
+    "Next": "2457119632269479046",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have not yet had word from Arch-Mage Trebonius in Vivec. Until then, I must consider you expelled.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "2457119632269479046": {
+    "Prev": "1999628664275575595",
+    "Next": "19230153492438722940",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You were still expelled from the Mages Guild last I heard. Be patient. The Guild does not move quickly here in Vvardenfell.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "19230153492438722940": {
+    "Prev": "2457119632269479046",
+    "Next": "28193184913753120",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I cannot discuss these matters with you. You have been expelled.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "28193184913753120": {
+    "Prev": "19230153492438722940",
+    "Next": "12581303173471277",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, this will do nicely. I hope it wasn't too difficult.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "soulAshGhoul",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MG_SoulGem2 100",
+      "ModPCFacRep 5 \"Mages Guild\"",
+      "ModDisposition 10",
+      "StartScript SkinkSoul2"
+    ]
+  },
+  "12581303173471277": {
+    "Prev": "28193184913753120",
+    "Next": "2086523575865916448",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No, you cannot fool me. You are not carrying any suitable soul gems.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2086523575865916448": {
+    "Prev": "12581303173471277",
+    "Next": "87519092730110623",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I hope you didn't use the scrolls and gems I gave you. I do not have any more.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "87519092730110623": {
+    "Prev": "2086523575865916448",
+    "Next": "2647213656163984526",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Yes, thank you for bringing me the soul of an ash ghoul, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_SoulGem2",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2647213656163984526": {
+    "Prev": "87519092730110623",
+    "Next": "296718227730327448",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Well, have you found one?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_SoulGem2",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "StartScript SkinkSoul1",
+      "Choice \"Yes, here it is.\" 1 \"No, not yet\" 2"
+    ]
+  },
+  "296718227730327448": {
+    "Prev": "2647213656163984526",
+    "Next": "50787675809429573",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "The soul of any ash ghoul should be suitable. I believe the nearest ash ghoul is in Yakin. Scrolls are more reliable than spells, so take these scrolls, and these two soul gems.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_KillNecro1",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MG_SoulGem2 10",
+      "Player->AddItem sc_fphyggisgemfeeder 2",
+      "Player->AddItem Misc_soulgem_grand 2"
+    ]
+  },
+  "50787675809429573": {
+    "Prev": "296718227730327448",
+    "Next": "218151329596498534",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "smokey morth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The ash ghoul is a distorted, half-human, half-beast creature transformed by a mysterious force into a powerful magical being. Ash ghouls are highly intelligent, aggressive, and dangerous. Ash ghouls are associated in some way with the Devil Dagoth Ur.",
+    "Filters": [],
+    "Script": []
+  },
+  "218151329596498534": {
+    "Prev": "50787675809429573",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vala catraso",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The ash ghoul is a distorted, half-human, half-beast creature transformed by a mysterious force into a powerful magical being. Ash ghouls are highly intelligent, aggressive, and dangerous. Ash ghouls are associated in some way with the Devil Dagoth Ur.",
+    "Filters": [],
+    "Script": []
+  }
+}

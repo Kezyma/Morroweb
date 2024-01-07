@@ -1,0 +1,717 @@
+{
+  "14837323502099612939": {
+    "Prev": "",
+    "Next": "13777963420716707",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We've got all the picks we need for now, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_3a",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "13777963420716707": {
+    "Prev": "14837323502099612939",
+    "Next": "1336112862201359427",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, it seems you've come across several of them! I can afford to take six of those off your hands; I hope 500 gold each is sufficient. I believe it's quite a bit more than their actual worth, but we do need them. Thank you, %PCName. I won't be requiring any more, I don't think.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_3a",
+        "Value": 10.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "miner's pick",
+        "Value": 6.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "picks",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"miner's pick\" 6",
+      "player->additem \"gold_001\" 3000",
+      "Journal CO_3a 20",
+      "set \"Falco Galenus\".picks to 6"
+    ]
+  },
+  "1336112862201359427": {
+    "Prev": "13777963420716707",
+    "Next": "18947131982194012159",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have some more, do you? Well, these five should do just fine. That'll get us started, at least. Thank you for your help, %PCName. I appreciate the effort. Here's the money for them.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_3a",
+        "Value": 10.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "picks",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "miner's pick",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"miner's pick\" 5",
+      "player->additem \"gold_001\" 2500",
+      "set \"Falco Galenus\".picks to 6",
+      "Journal co_3a 20"
+    ]
+  },
+  "18947131982194012159": {
+    "Prev": "1336112862201359427",
+    "Next": "2022211479744530820",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Five of them, eh? Very well - I'll take all of them. I trust that 500 gold a piece is acceptable; it is much more than they're worth. Thank you, %PCName. I'll pay you for one more, if you can find it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_3a",
+        "Value": 10.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "miner's pick",
+        "Value": 5.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "picks",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"miner's pick\" 5",
+      "player->additem \"gold_001\" 2500",
+      "set \"Falco Galenus\".picks to 5"
+    ]
+  },
+  "2022211479744530820": {
+    "Prev": "18947131982194012159",
+    "Next": "1795132521608514327",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Four more picks should fill out what we need, %PCName. I appreciate you taking the time to find them for us. Here's the money.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_3a",
+        "Value": 10.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "picks",
+        "Value": 2.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "miner's pick",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"miner's pick\" 4",
+      "player->additem \"gold_001\" 2000",
+      "set \"Falco Galenus\".picks to ( \"Falco Galenus\".picks + 4 )",
+      "Journal CO_3a 20"
+    ]
+  },
+  "1795132521608514327": {
+    "Prev": "2022211479744530820",
+    "Next": "1552401062351896",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Found four more, have you? Excellent work. If you can find one more, we should have enough to last us for a while.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_3a",
+        "Value": 10.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "picks",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "miner's pick",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"miner's pick\" 4",
+      "player->additem \"gold_001\" 2000",
+      "set \"Falco Galenus\".picks to ( \"Falco Galenus\".picks + 4 )"
+    ]
+  },
+  "1552401062351896": {
+    "Prev": "1795132521608514327",
+    "Next": "3564257574955713",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've found four of them? Well, that's good news. I'll gladly take those off your hands; I trust 500 gold each will suffice? We could still use one or two more, if you can find them.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_3a",
+        "Value": 10.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "picks",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "miner's pick",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"miner's pick\" 4",
+      "player->additem \"gold_001\" 2000",
+      "set \"Falco Galenus\".picks to 4"
+    ]
+  },
+  "3564257574955713": {
+    "Prev": "1552401062351896",
+    "Next": "17196103712834627391",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Three pick axes are just what we needed, %PCName. Thank you for finding them. That should be enough for now; I appreciate your efforts, and I won't soon forget you did this for us.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_3a",
+        "Value": 10.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "picks",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "miner's pick",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"miner's pick\" 3",
+      "player->additem \"gold_001\" 1500",
+      "set \"Falco Galenus\".picks to 6"
+    ]
+  },
+  "17196103712834627391": {
+    "Prev": "3564257574955713",
+    "Next": "110731795215042201",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll take all three of those picks, %PCName. They'll make a big difference. But we could still use more, if you can find them.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_3a",
+        "Value": 10.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "LessEqual",
+        "Id": "picks",
+        "Value": 2.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "miner's pick",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"miner's pick\" 3",
+      "player->additem \"gold_001\" 1500",
+      "set \"Falco Galenus\".picks to ( \"Falco Galenus\".picks + 3 )"
+    ]
+  },
+  "110731795215042201": {
+    "Prev": "17196103712834627391",
+    "Next": "15762128773238218933",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Two picks will round out what we need, %PCName. I appreciate the effort you've made in getting them.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_3a",
+        "Value": 10.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "picks",
+        "Value": 4.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "miner's pick",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"miner's pick\" 2",
+      "player->additem \"gold_001\" 1000",
+      "set \"Falco Galenus\".picks to 6",
+      "Journal CO_3a 20"
+    ]
+  },
+  "15762128773238218933": {
+    "Prev": "110731795215042201",
+    "Next": "22311451631025853",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "More picks? Wonderful. They're much needed. Thank you, %PCName. And here, take this.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_3a",
+        "Value": 10.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "picks",
+        "Value": 4.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "picks",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "miner's pick",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"miner's pick\" 2",
+      "player->additem \"gold_001\" 1000",
+      "set \"Falco Galenus\".picks to ( \"Falco Galenus\".picks + 2 )"
+    ]
+  },
+  "22311451631025853": {
+    "Prev": "15762128773238218933",
+    "Next": "3674108701631125198",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have two of them? Excellent! I'll take those, and I can give you 500 gold a piece. A good bit more than they're worth, but I'm willing to pay it; we're in dire need of them. Thank you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_3a",
+        "Value": 10.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "picks",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "miner's pick",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"miner's pick\" 2",
+      "player->additem \"gold_001\" 1000",
+      "set \"Falco Galenus\".picks to ( \"Falco Galenus\".picks + 2 )"
+    ]
+  },
+  "3674108701631125198": {
+    "Prev": "22311451631025853",
+    "Next": "3054873462512512922",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "One more pick should be all we need, %PCName. Thank you for finding them all.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "11111 test journal",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "miner's pick",
+        "Value": 1.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "picks",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"miner's pick\" 1",
+      "player->additem \"gold_001\" 500",
+      "set \"Falco Galenus\".picks to 6",
+      "Journal CO_3a 20"
+    ]
+  },
+  "3054873462512512922": {
+    "Prev": "3674108701631125198",
+    "Next": "22809173611921443",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Every pick axe makes our job easier, %PCName. Thank you for bringing me this one.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_3a",
+        "Value": 10.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "miner's pick",
+        "Value": 1.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "picks",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"miner's pick\" 1",
+      "player->additem \"gold_001\" 500",
+      "set \"Falco Galenus\".picks to ( \"Falco Galenus\".picks + 1 )"
+    ]
+  },
+  "22809173611921443": {
+    "Prev": "3054873462512512922",
+    "Next": "265699676246418529",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've found one of them! I feared they'd all been lost in the wreck. Thank you, %PCName. I'll give you 500 gold for it, if only because I'm so desperate to have it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_3a",
+        "Value": 10.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "miner's pick",
+        "Value": 1.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "picks",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"miner's pick\" 1",
+      "player->additem \"gold_001\" 500",
+      "set \"Falco Galenus\".picks to ( \"Falco Galenus\".picks + 1 )"
+    ]
+  },
+  "265699676246418529": {
+    "Prev": "22809173611921443",
+    "Next": "2234319399260617058",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Any pick axes you can bring us will be an immense help.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_3a",
+        "Value": 10.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "picks",
+        "Value": 6.0
+      }
+    ],
+    "Script": []
+  },
+  "2234319399260617058": {
+    "Prev": "265699676246418529",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, there were several miner's picks that were supposed to be sent over. We can manage without the other things, but we really need those to make any decent progress in the mine. Did you happen to check the wreckage? There's always a chance that a few of the supplies survived the wreck. Well, if you come across any, I'd be willing to pay you to deliver them here. Keep it in mind, will you?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_3a",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal CO_3a 10"
+    ]
+  }
+}

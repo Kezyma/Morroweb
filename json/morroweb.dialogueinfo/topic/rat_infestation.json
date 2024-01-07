@@ -1,0 +1,282 @@
+{
+  "427322506235555557": {
+    "Prev": "",
+    "Next": "286249991299529386",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "audenian valius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't believe you've killed them all. I still can hear them skittering around below.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_Pest",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Pest",
+        "Value": 40.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Less",
+        "Id": "rat_telvanni_unique",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "286249991299529386": {
+    "Prev": "427322506235555557",
+    "Next": "129126688246183210",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "audenian valius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've gotten rid of them all? Excellent! Well, as promised, here's something for your troubles. They're not particularly easy to come by, but I appreciate your effort.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_Pest",
+        "Value": 25.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "rat_telvanni_unique",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Pest",
+        "Value": 40.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "rat_telvanni_unique_2",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Pest\" 40",
+      "Player->AddItem \"misc_soulgem_grand\" 1"
+    ]
+  },
+  "129126688246183210": {
+    "Prev": "286249991299529386",
+    "Next": "28615110302518722625",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "audenian valius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've killed the rats in my back room? Well, I could have done that! I'm talking about the source of the infestation. There must be a nest of them somewhere, probably down in the Underworks. When you've gotten rid of those, let me know, and I'll reward you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_Pest",
+        "Value": 25.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "EB_Pest",
+        "Value": 26.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "rat_telvanni_unique_2",
+        "Value": 2.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Less",
+        "Id": "rat_telvanni_unique",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Pest\" 30"
+    ]
+  },
+  "28615110302518722625": {
+    "Prev": "129126688246183210",
+    "Next": "1201722348114007768",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "audenian valius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh well. I'm sure I'll find a way to take care of this problem.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Pest\" 26"
+    ]
+  },
+  "1201722348114007768": {
+    "Prev": "28615110302518722625",
+    "Next": "308375402180723621",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "audenian valius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You will? Excellent. Just let me know when you've solved my rat problem.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Pest\" 25"
+    ]
+  },
+  "308375402180723621": {
+    "Prev": "1201722348114007768",
+    "Next": "23615824453621378",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "audenian valius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's been awful in the past few weeks, and nothing I do seems to help. I've tried poison, spells, everything! I know you've killed the ones in my back room, and for that I thank you, but they'll just keep coming back unless they're stamped out at the source. I'd be grateful if you could take care of this for me, and I would be willing to pay you for your services.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_Pest",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "rat_telvanni_unique_2",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Pest\" 20",
+      "Choice \"I can get rid of those rats for you.\" 1 \"I can't help you.\" 2",
+      "\"rat_telvanni_unique\"->Enable"
+    ]
+  },
+  "23615824453621378": {
+    "Prev": "308375402180723621",
+    "Next": "2707916169591022042",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "audenian valius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's been awful in the past few weeks, and nothing I do seems to help. I've tried poison, spells, everything! I've even got a couple of them shut up in my back room. I'd be grateful if you could take care of this for me, and I would be willing to pay you for your services.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_Pest",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Pest\" 20",
+      "Choice \"I can get rid of those rats for you.\" 1 \"I can't help you.\" 2",
+      "\"rat_telvanni_unique\"->Enable"
+    ]
+  },
+  "2707916169591022042": {
+    "Prev": "23615824453621378",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "audenian valius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, how I hate those damn rats.",
+    "Filters": [],
+    "Script": []
+  }
+}

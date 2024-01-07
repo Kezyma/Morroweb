@@ -1,0 +1,181 @@
+{
+  "11462277591204425974": {
+    "Prev": "",
+    "Next": "112173101545011005",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sure Mistress Morvayn is grateful. Perhaps someday soon she will be able to move back to Morvayn Manor.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_MorvaynManor",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_OldFlame",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Stronghold",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "112173101545011005": {
+    "Prev": "11462277591204425974",
+    "Next": "16539254612291431459",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have earned the support of Mistress Morvayn. You must also speak with Hlaren Ramoran, and you must build a stronghold. When you have, speak with me again for more duties.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_MorvaynManor",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "16539254612291431459": {
+    "Prev": "112173101545011005",
+    "Next": "213695276350815543",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Brara Morvayn has given you her support for the title of Redoran Hortator.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B5_MorvaynHort",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "213695276350815543": {
+    "Prev": "16539254612291431459",
+    "Next": "1113014361278362524",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Since the Morvayn Manor has been overrun, Mistress Morvayn stays in the Redoran Council Hall. Speak with her there and get her support.",
+    "Filters": [],
+    "Script": []
+  },
+  "1113014361278362524": {
+    "Prev": "213695276350815543",
+    "Next": "75352717372138086",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ald-ruhn, Redoran Council Entrance",
+    "PlayerFaction": "",
+    "Text": "Her quarters can be found on the lower level northwest of the entrance.",
+    "Filters": [],
+    "Script": []
+  },
+  "75352717372138086": {
+    "Prev": "1113014361278362524",
+    "Next": "165930408523511024",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ald-ruhn, Redoran Council Hall",
+    "PlayerFaction": "",
+    "Text": "Her quarters can be found on the lower level northwest of the entrance.",
+    "Filters": [],
+    "Script": []
+  },
+  "165930408523511024": {
+    "Prev": "75352717372138086",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Redoran",
+    "SpeakerCell": "Ald-ruhn",
+    "PlayerFaction": "",
+    "Text": "She moved into temporary quarters in the Redoran Council Hall after blighted creatures attacked her manor and killed her husband.",
+    "Filters": [
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "brara morvayn",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

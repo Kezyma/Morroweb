@@ -1,0 +1,209 @@
+{
+  "18559260826117964": {
+    "Prev": "",
+    "Next": "28789216433257116552",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "apelles matius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, that's what you'll need if you're so hell-bent on tracking down these Dark Brotherhood assassins you claim have visited you.",
+    "Filters": [],
+    "Script": []
+  },
+  "28789216433257116552": {
+    "Prev": "18559260826117964",
+    "Next": "6741245212456111069",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "asciene rane",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, you let me know when you wish to return. You've certainly got reason enough to go!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": []
+  },
+  "6741245212456111069": {
+    "Prev": "28789216433257116552",
+    "Next": "1423930459746025913",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "asciene rane",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll transport you right away. Good luck to you!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "StartScript MHTransportScript",
+      "Goodbye"
+    ]
+  },
+  "1423930459746025913": {
+    "Prev": "6741245212456111069",
+    "Next": "127057871732231210",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "asciene rane",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Heading back, are you? Hope you've gotten all that business cleared up.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_DBAttack",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, please.\" 3 \"No, not now.\" 4"
+    ]
+  },
+  "127057871732231210": {
+    "Prev": "1423930459746025913",
+    "Next": "25282287292091227193",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "asciene rane",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well! I certainly didn't mean to pry. I simply can't send you there without good reason. Good day!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "25282287292091227193": {
+    "Prev": "127057871732231210",
+    "Next": "1345816464305833843",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "asciene rane",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, my! I can see why you'd want to get that cleared up. That's dangerous business, though. I can't say I'd be happy to send you off on that sort of fool's errand. If you're sure, though, I suppose I can oblige you. If you need to return to Vvardenfell, speak with Effe-Tei in the Royal Palace. Take care, friend. Those people are not to be taken lightly. I'll send you there when we've finished speaking.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TR_DBAttack 60",
+      "StartScript MHTransportScript",
+      "Goodbye"
+    ]
+  },
+  "1345816464305833843": {
+    "Prev": "25282287292091227193",
+    "Next": "2399717232665011086",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "asciene rane",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You wish to go to the mainland? That's highly irregular. I'm sure you've heard that they've restricted travel to Mournhold. They've been a bit worried about the Blight. Even though it's been reported that the Blight is gone from Vvardenfell, they're still worried about possible contamination. What's your reason for wanting to go to the city?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "C3_DestroyDagoth",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"I fear I've been marked by the Dark Brotherhood, and I wish to investigate.\" 1 \"None of your business.\" 2"
+    ]
+  },
+  "2399717232665011086": {
+    "Prev": "1345816464305833843",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "asciene rane",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You wish to go to the mainland? That's highly irregular. I'm sure you've heard that they've restricted travel to Mournhold. They've been a bit worried about the Blight. What's your reason for wanting to go to the city?",
+    "Filters": [],
+    "Script": [
+      "Choice \"I fear I've been marked by the Dark Brotherhood, and I wish to investigate.\" 1 \"None of your business.\" 2"
+    ]
+  }
+}

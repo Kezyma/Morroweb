@@ -1,0 +1,126 @@
+{
+  "7162151183142518854": {
+    "Prev": "",
+    "Next": "2230420380811519217",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gindrala hleran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you again for your help.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_SleeperDreamer02",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2230420380811519217": {
+    "Prev": "7162151183142518854",
+    "Next": "1130022589237875643",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gindrala hleran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Goodness. Is he... dead? How unpleasant. Was it very dangerous? I'm sorry. I really have nothing to give you but my thanks. But I'll tell everyone how kind and brave you were to help me.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Dreamer_Talker02",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal A1_SleeperDreamer02 50",
+      "player->modReputation 1"
+    ]
+  },
+  "1130022589237875643": {
+    "Prev": "2230420380811519217",
+    "Next": "5450236161264522728",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gindrala hleran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Please. Get him out of my house. He's scaring me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_SleeperDreamer02",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Dreamer_Talker02",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "5450236161264522728": {
+    "Prev": "1130022589237875643",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gindrala hleran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He's talking to himself. He won't listen to me. He looks very strange. He stares at me funny. And he seems to have lost his shirt. Please. Get him out of there? He's scaring me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_2_6thHouse",
+        "Value": 50.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Dreamer_Talker02",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal A1_SleeperDreamer02 1",
+      "player->additem key_gindrala 1"
+    ]
+  }
+}

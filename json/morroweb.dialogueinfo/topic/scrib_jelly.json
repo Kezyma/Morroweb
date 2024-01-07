@@ -1,0 +1,188 @@
+{
+  "2485732163286322874": {
+    "Prev": "",
+    "Next": "1539433321411228868",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dinok",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I gave you all I have.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC4_scrib_A",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->additem ingred_scrib_jelly_01 1",
+      "journal IC4_scrib_A 1"
+    ]
+  },
+  "1539433321411228868": {
+    "Prev": "2485732163286322874",
+    "Next": "2190216439103128843",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dinok",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You want scrib jelly for the Imperial cult? For cure poison potions, I suppose. Here. I have a little bit left from my shift.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC4_scrib",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC4_scrib",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "player->additem ingred_scrib_jelly_01 1",
+      "journal IC4_scrib_A 2"
+    ]
+  },
+  "2190216439103128843": {
+    "Prev": "1539433321411228868",
+    "Next": "2006718089303436331",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "findulain",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You're looking for scrib jelly? Plenty of scribs in Shulk Eggmine. Help yourself. The hive replaces them in no time. And look around outside. Scribs wander around outside the mines. I'm sure I saw one out here just a while ago.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC4_scrib",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC4_scrib",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2006718089303436331": {
+    "Prev": "2190216439103128843",
+    "Next": "103208332180972772",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "findulain",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Scribs are little baby kwama. We shuck the shells, crush the flesh into a jelly. Doesn't taste bad. And filling. Takes a while getting used to the texture, though.",
+    "Filters": [],
+    "Script": []
+  },
+  "103208332180972772": {
+    "Prev": "2006718089303436331",
+    "Next": "3135289841504518178",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Synnolian Tunifus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Scribs are a larval form of the kwama. Crushed scribs produce a nutritious but sour-tasting gelatin with modest magical properties that the natives eat with gusto.",
+    "Filters": [],
+    "Script": []
+  },
+  "3135289841504518178": {
+    "Prev": "103208332180972772",
+    "Next": "31294228192733412809",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tendris vedran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Scribs are a larval form of the kwama. Crushed scribs produce a nutritious but sour-tasting gelatin with modest magical properties that the natives eat with gusto.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "31294228192733412809": {
+    "Prev": "3135289841504518178",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "anarenen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Scribs are a larval form of the kwama. Crushed scribs produce a nutritious but sour-tasting gelatin with modest magical properties that the natives eat with gusto.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

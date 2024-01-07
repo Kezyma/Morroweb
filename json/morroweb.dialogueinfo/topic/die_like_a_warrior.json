@@ -1,0 +1,82 @@
+{
+  "92389111277639271": {
+    "Prev": "",
+    "Next": "6380274872805310243",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "umbra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent! Perhaps now I will be granted a warrior's death. And if I am not, know that you will be.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_Umbra\" 40",
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "6380274872805310243": {
+    "Prev": "92389111277639271",
+    "Next": "1069934151909518569",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "umbra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You disappoint me. Perhaps one day you will come relieve me of my burden. Until then, I will search for the one who will.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_Umbra\" 50"
+    ]
+  },
+  "1069934151909518569": {
+    "Prev": "6380274872805310243",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "umbra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't believe it is too much to ask to die as a warrior should -- in battle. It is my curse, though, that I have found no one that can best me in combat. Are you the one that can? Can you come and lift me from these shackles of life? Come then, be the new wielder of Umbra!",
+    "Filters": [],
+    "Script": [
+      "Journal \"MS_Umbra\" 30",
+      "Choice \"I will give you the death you deserve.\" 1 \"No, I'm sorry.\" 2"
+    ]
+  }
+}

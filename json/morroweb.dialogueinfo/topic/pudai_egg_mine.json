@@ -1,0 +1,194 @@
+{
+  "293001017149137691": {
+    "Prev": "",
+    "Next": "2528627182202951019",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled from the Fighters Guild. Until you make amends, I can't talk to you about this contract.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2528627182202951019": {
+    "Prev": "293001017149137691",
+    "Next": "30688139953226211452",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already brought me the Eggs of Gold.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_FindPudai",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "30688139953226211452": {
+    "Prev": "2528627182202951019",
+    "Next": "12205192293042811012",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well! These are the Eggs of Gold. I'll tell you I honestly didn't believe they existed. Good work, %PCRank. Our client, a Telvanni, is paying us well. Take these 10,000 septims.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_uniq_egg_of_gold",
+        "Value": 7.0
+      }
+    ],
+    "Script": [
+      "Journal FG_FindPudai 100",
+      "Player->RemoveItem misc_uniq_egg_of_gold 7",
+      "AddItem misc_uniq_egg_of_gold 7",
+      "Player->AddItem Gold_001 10000",
+      "ModPCFacRep 5 \"Fighters Guild\"",
+      "ModDisposition 15"
+    ]
+  },
+  "12205192293042811012": {
+    "Prev": "30688139953226211452",
+    "Next": "34220103282832382",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, where are they? I don't see them.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "34220103282832382": {
+    "Prev": "12205192293042811012",
+    "Next": "237330738136519753",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, keep looking. Who knows if the place really exists?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "237330738136519753": {
+    "Prev": "34220103282832382",
+    "Next": "268591172097622974",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So have you found the Eggs of Gold?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_FindPudai",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here they are\" 1 \"No, not yet\" 2"
+    ]
+  },
+  "268591172097622974": {
+    "Prev": "237330738136519753",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No one knows exactly where the Pudai Egg Mine is. I believe it is somewhere on or near the island of Sheogorad north of here. It is said that there are seven eggs of gold there. If you find Pudai and these eggs, bring them to me. I wouldn't worry too much if you can't find it. No one else has, but it's the only contract I've got right now.",
+    "Filters": [],
+    "Script": [
+      "Journal FG_FindPudai 10"
+    ]
+  }
+}

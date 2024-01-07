@@ -1,0 +1,182 @@
+{
+  "7529199151019922690": {
+    "Prev": "",
+    "Next": "984727539316418937",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rabinna",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes?",
+    "Filters": [],
+    "Script": []
+  },
+  "984727539316418937": {
+    "Prev": "7529199151019922690",
+    "Next": "2658413319245776771",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Im_Kilaya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We heard the slave had been killed. This is a very sad thing.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "Rabinna",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2658413319245776771": {
+    "Prev": "984727539316418937",
+    "Next": "206684523190984478",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Im_Kilaya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "She is in good hands now. Thank you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_SlaveMule",
+        "Value": 115.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Rabinna",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "206684523190984478": {
+    "Prev": "2658413319245776771",
+    "Next": "108169654132513017",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Im_Kilaya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you going to bring here here? She would be safe.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_SlaveMule",
+        "Value": 95.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Rabinna",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "108169654132513017": {
+    "Prev": "206684523190984478",
+    "Next": "486556011656210881",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Im_Kilaya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you going to bring here here? She would be safe.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_SlaveMule",
+        "Value": 112.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Rabinna",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "486556011656210881": {
+    "Prev": "108169654132513017",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Im_Kilaya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is good that you brought her here. We have heard tales of drugs being smuggled inside these poor people. There seems to be no low the smugglers and slavers won't stoop to for profit. We will give her the help she needs. Thank you, and please take this in return. Perhaps it will help you in funding other missions of goodwill. Take care.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_SlaveMule",
+        "Value": 114.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Rabinna",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_SlaveMule\" 115",
+      "Player->AddItem \"Gold_001\" 400",
+      "ModPCFacRep 10 \"Twin Lamps\""
+    ]
+  }
+}

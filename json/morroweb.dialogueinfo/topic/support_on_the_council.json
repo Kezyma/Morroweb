@@ -1,0 +1,292 @@
+{
+  "1506513024518912120": {
+    "Prev": "",
+    "Next": "30394187651137910123",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dram bero",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "How can I support you if you've been expelled?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "30394187651137910123": {
+    "Prev": "1506513024518912120",
+    "Next": "309242245816442169",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dram bero",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes you have my support.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BeroSupport",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "309242245816442169": {
+    "Prev": "30394187651137910123",
+    "Next": "60374343133924659",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dram bero",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Normally I would support you, but you have killed my champion, Garding. Since you did this without any provocation, I will not offer you my support. That is final.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BeroSupport",
+        "Value": 200.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "60374343133924659": {
+    "Prev": "309242245816442169",
+    "Next": "6596156161856024898",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dram bero",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You killed Garding, which is quite disappointing, but I agree that it was a fair fight. I will support you on the Council.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "garding",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BeroSupport",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal HH_BeroSupport 100",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition -10"
+    ]
+  },
+  "6596156161856024898": {
+    "Prev": "60374343133924659",
+    "Next": "2997320526937610949",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dram bero",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You defeated my champion fairly. I will support you on the Council.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BeroSupport",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal HH_BeroSupport 100",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 10"
+    ]
+  },
+  "2997320526937610949": {
+    "Prev": "6596156161856024898",
+    "Next": "2861326008142821974",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dram bero",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Speak with my champion, Garding the Bold.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BeroSupport",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2861326008142821974": {
+    "Prev": "2997320526937610949",
+    "Next": "18291421547496585",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dram bero",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. You may use any tactics at your disposal. I would prefer that you spare his life, but I will not insist upon it. When you are ready, speak with my champion, Garding the Bold. Then meet him in the Arena.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HH_BeroSupport 50"
+    ]
+  },
+  "18291421547496585": {
+    "Prev": "2861326008142821974",
+    "Next": "124521385026209050",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dram bero",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I expected more spirit, %PCName, from what Crassius Curio has said of you. Speak with me again if you change your mind.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "124521385026209050": {
+    "Prev": "18291421547496585",
+    "Next": "5625214941255225342",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dram bero",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have supported you as Hortator, but pledging my support on the Hlaalu Council in another matter. If I am to risk supporting you, I must know that you are strong as well as clever. I will offer my support if you best my champion, Garding the Bold. Are you willing?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BeroSupport",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B6_BeroHort",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "5625214941255225342": {
+    "Prev": "124521385026209050",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dram bero",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am impressed that you found my manor. If I am to risk supporting you, I must know that you are strong as well as clever. I will offer my support if you best my champion, Garding the Bold. Are you willing?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BeroSupport",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes.\" 1 \"No, not yet.\" 2"
+    ]
+  }
+}

@@ -1,0 +1,779 @@
+{
+  "104481231387131116": {
+    "Prev": "",
+    "Next": "204186042278416672",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Falura Llervu is yours now. do with her as you will.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "204186042278416672": {
+    "Prev": "104481231387131116",
+    "Next": "15517172812159024624",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sweet Alma. I hope I don't encounter another trader as sharp as you, or I'll end up paying YOU for my goods. But I'll accept your offer, and thank you for your custom. Now, here's the key to her cage. I've removed her slave bracers. When you're ready, you should speak to Falura Llervu, give her the presents -- the exquisite clothes and Telvanni Bug Musk -- and explain to her that she is to follow you back to Zainab camp to meet her future husband, Ashkhan Kaushad.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 35.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "potion_t_bug_musk_01",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 600.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": [
+      "player->AddItem \"Key_SavileCageKey\" 1",
+      "addtopic \"Falura Llervu\"",
+      "player->removeitem \"gold_001\" 600",
+      "additem \"gold_001\" 600",
+      "Journal \"B3_ZainabBride\" 40"
+    ]
+  },
+  "15517172812159024624": {
+    "Prev": "204186042278416672",
+    "Next": "2491289151521720320",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You drive a hard bargain. But I like to see a happy customer. I'll accept your offer, and thank you for your custom. Now, here's the key to her cage. I've removed her slave bracers. When you're ready, you should speak to Falura Llervu and explain to her that she is to follow you back to Zainab camp to meet her future husband, Ashkhan Kaushad.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 35.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "potion_t_bug_musk_01",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 800.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "player->AddItem \"Key_SavileCageKey\" 1",
+      "addtopic \"Falura Llervu\"",
+      "player->removeitem \"gold_001\" 800",
+      "additem \"gold_001\" 800",
+      "Journal \"B3_ZainabBride\" 40"
+    ]
+  },
+  "2491289151521720320": {
+    "Prev": "15517172812159024624",
+    "Next": "13343197331608628177",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. Yes. I believe that is a fair price. Thank you for your custom, and come back soon. Now, here's the key to her cage. I've removed her slave bracers. When you're ready, you should speak to Falura Llervu, give her the presents -- the exquisite clothes and Telvanni Bug Musk -- and explain to her that she is to follow you back to Zainab camp to meet her future husband, Ashkhan Kaushad.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 35.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "potion_t_bug_musk_01",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 1000.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "player->AddItem \"Key_SavileCageKey\" 1",
+      "addtopic \"Falura Llervu\"",
+      "player->removeitem \"gold_001\" 1000",
+      "additem \"gold_001\" 1000",
+      "Journal \"B3_ZainabBride\" 40"
+    ]
+  },
+  "13343197331608628177": {
+    "Prev": "2491289151521720320",
+    "Next": "2649923720198211995",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Of course, of course. But don't take too long. I'm sure I could sell her for twice the price to another client.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 35.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "2649923720198211995": {
+    "Prev": "13343197331608628177",
+    "Next": "3109297432254624828",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well.... Since I like you, I'll take 1100 drakes. Thank you for your custom, and come back soon. Now, here's the key to her cage. I've removed her slave bracers. When you're ready, you should speak to Falura Llervu, give her the presents -- the exquisite clothes and Telvanni Bug Musk -- and explain to her that she is to follow you back to Zainab camp to meet her future husband, Ashkhan Kaushad.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 35.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "potion_t_bug_musk_01",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 1200.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 7.0
+      }
+    ],
+    "Script": [
+      "player->AddItem \"Key_SavileCageKey\" 1",
+      "player->removeitem \"gold_001\" 1100",
+      "additem \"gold_001\" 1100",
+      "addtopic \"Falura Llervu\"",
+      "Journal \"B3_ZainabBride\" 40"
+    ]
+  },
+  "3109297432254624828": {
+    "Prev": "2649923720198211995",
+    "Next": "2577918821384810419",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very good. Thank you for your custom, and come back soon. Now, here's the key to her cage. I've removed her slave bracers. When you're ready, you should speak to Falura Llervu, give her the presents -- the exquisite clothes and Telvanni Bug Musk -- and explain to her that she is to follow you back to Zainab camp to meet her future husband, Ashkhan Kaushad.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 35.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "potion_t_bug_musk_01",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 1200.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "player->AddItem \"Key_SavileCageKey\" 1",
+      "player->removeitem \"gold_001\" 1200",
+      "additem \"gold_001\" 1200",
+      "addtopic \"Falura Llervu\"",
+      "Journal \"B3_ZainabBride\" 40"
+    ]
+  },
+  "2577918821384810419": {
+    "Prev": "3109297432254624828",
+    "Next": "23488311441865222646",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sure it won't take you long to raise the funds. We'll be here, waiting, until you return.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 35.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "23488311441865222646": {
+    "Prev": "2577918821384810419",
+    "Next": "61482966266706458",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have the Telvanni Bug Musk? Excellent. No, don't give it to me. You'll give it to her when you have bought her. Now. Let me tell you my price. For this superb specimen, skillfully coached to play her part in your little scheme, I am pleased to accept from you the modest sum of 1200 drakes. And I only offer you this special price out of my friendship for Sonummu Zabamat.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 35.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "potion_t_bug_musk_01",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 600.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcMercantile",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 80.0
+      }
+    ],
+    "Script": [
+      "Choice \"Let me consider your offer\" 3 \"I'll give you 600 drakes\" 6"
+    ]
+  },
+  "61482966266706458": {
+    "Prev": "23488311441865222646",
+    "Next": "6143165652095425846",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have the Telvanni Bug Musk? Excellent. No, don't give it to me. You'll give it to her when you have bought her. Now. Let me tell you my price. For this superb specimen, skillfully coached to play her part in your little scheme, I am pleased to accept from you the modest sum of 1200 drakes. And I only offer you this special price out of my friendship for Sonummu Zabamat.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 35.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "potion_t_bug_musk_01",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 800.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcMercantile",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Choice \"Let me consider your offer\" 3 \"I'll give you 800 drakes\" 5"
+    ]
+  },
+  "6143165652095425846": {
+    "Prev": "61482966266706458",
+    "Next": "726713543322634580",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have the Telvanni Bug Musk? Excellent. No, don't give it to me. You'll give it to her when you have bought her. Now. Let me tell you my price. For this superb specimen, skillfully coached to play her part in your little scheme, I am pleased to accept from you the modest sum of 1200 drakes. And I only offer you this special price out of my friendship for Sonummu Zabamat.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 35.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "potion_t_bug_musk_01",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 1200.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcMercantile",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Choice \"Let me consider your offer\" 3 \"I'll give you 1000 drakes\" 4"
+    ]
+  },
+  "726713543322634580": {
+    "Prev": "6143165652095425846",
+    "Next": "2820723446314879775",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have the Telvanni Bug Musk? Excellent. No, don't give it to me. You'll give it to her when you have bought her. Now. Let me tell you my price. For this superb specimen, skillfully coached to play her part in your little scheme, I am pleased to accept from you the modest sum of 1200 drakes. And I only offer you this special price out of my friendship for Sonummu Zabamat.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 35.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "potion_t_bug_musk_01",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 1200.0
+      }
+    ],
+    "Script": [
+      "Choice \"I'll buy her for 1200 drakes.\" 2 \"Will you take 1100 drakes?\" 7 \"Let me consider your offer\" 3"
+    ]
+  },
+  "2820723446314879775": {
+    "Prev": "726713543322634580",
+    "Next": "1676112532884610181",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have the Telvanni Bug Musk? Excellent. No, don't give it to me. You'll give it to her when you have bought her. Now. Let me tell you my price. For this superb specimen, skillfully coached to play her part in your little scheme, I am pleased to accept from you the modest sum of 1200 drakes. And I only offer you this special price out of my friendship for Sonummu Zabamat.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 35.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "potion_t_bug_musk_01",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 1200.0
+      }
+    ],
+    "Script": [
+      "Choice \"I'll buy her for 1200 drakes.\" 2 \"Let me consider your offer\" 3"
+    ]
+  },
+  "1676112532884610181": {
+    "Prev": "2820723446314879775",
+    "Next": "208061514417349254",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have the Telvanni Bug Musk? Excellent. No, don't give it to me. You'll give it to her when you have bought her. Now. Let me tell you my price. For this superb specimen, skillfully coached to play her part in your little scheme, I am pleased to accept from you the modest sum of 1200 drakes. And I only offer you this special price out of my friendship for Sonummu Zabamat.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 35.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "potion_t_bug_musk_01",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "Gold_001",
+        "Value": 1200.0
+      }
+    ],
+    "Script": [
+      "Choice \"I don't have that much. \"1 \"Let me consider your offer\" 3"
+    ]
+  },
+  "208061514417349254": {
+    "Prev": "1676112532884610181",
+    "Next": "2835389051537227090",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No. This will not work unless we do it my way. You cannot change my mind on this. When you have brought me the Telvanni Bug Musk perfume I asked you for, then Falura Llervu will be ready, and then, and only then, we will discuss her price.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 35.0
+      }
+    ],
+    "Script": []
+  },
+  "2835389051537227090": {
+    "Prev": "208061514417349254",
+    "Next": "145446561201129080",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. These clothes are perfect. Hold onto them. You'll give them to her when you've bought her. But I need a little more time to coach Falura Llervu to play the part of a high-born Telvanni lady. I know just the thing we need! Go get a bottle of Telvanni Bug musk perfume! Try Bildren Areleth the Apothecary here in Tel Aruhn or Jolda the Apothecary in Tel Mora. That will make Falura Llervu completely irresistible! Go! Hurry!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 30.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "exquisite_shirt_01",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "exquisite_skirt_01",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "exquisite_shoes_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"B3_ZainabBride\" 35"
+    ]
+  },
+  "145446561201129080": {
+    "Prev": "2835389051537227090",
+    "Next": "17711726492724879",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No. This will not work unless we do it my way. You cannot change my mind on this. When you have an exquisite shirt, an exquisite skirt, and exquisite shoes to dress Falura Llervu in, then we will discuss her price.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "17711726492724879": {
+    "Prev": "145446561201129080",
+    "Next": "1568529021376323888",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You need a slave to pose as a high-born Telvanni lady? Sweet Alma, that Sonummu Zabamat and her cunning plans.... I do have the slave you want, Falura Llervu, a pretty Dunmer girl. But first you must get an exquisite shirt, an exquisite skirt, and exquisite shoes, to dress her in. Go get these exquisite clothes and bring them to me, and then we will discuss a price for her.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 25.0
+      }
+    ],
+    "Script": [
+      "Journal \"B3_ZainabBride\" 30"
+    ]
+  },
+  "1568529021376323888": {
+    "Prev": "17711726492724879",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sorry, but all we have at the moment are standard household slaves. Would you like me to tell you about them?",
+    "Filters": [],
+    "Script": []
+  }
+}

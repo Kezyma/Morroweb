@@ -1,0 +1,362 @@
+{
+  "673831780100131603": {
+    "Prev": "",
+    "Next": "14581122272701019103",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled, but maybe you can join the Imperial Legion again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "14581122272701019103": {
+    "Prev": "673831780100131603",
+    "Next": "457248072609226505",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The matter has been settled. No good can come from speaking of it again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_MaidenToken",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "457248072609226505": {
+    "Prev": "14581122272701019103",
+    "Next": "208093104199499030",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Varona Nelas is dead? Then this secret dies with her.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "varona nelas",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal IL_MaidenToken 120",
+      "ModPCFacRep 5 \"Imperial Legion\"",
+      "ModDisposition 10"
+    ]
+  },
+  "208093104199499030": {
+    "Prev": "457248072609226505",
+    "Next": "20849587027259109",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You gave the glove back to Ilmeni Dren? I did not want anyone else to know who the glove belonged to, but thank you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_MaidenToken",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal IL_MaidenToken 110",
+      "ModPCFacRep 5 \"Imperial Legion\"",
+      "ModDisposition 10"
+    ]
+  },
+  "20849587027259109": {
+    "Prev": "208093104199499030",
+    "Next": "794119896190795305",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, thank you. I will return the glove to it's proper owner.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal IL_MaidenToken 100",
+      "Player->RemoveItem expensive_glove_left_ilmeni 1",
+      "ModPCFacRep 5 \"Imperial Legion\"",
+      "ModDisposition 10"
+    ]
+  },
+  "794119896190795305": {
+    "Prev": "20849587027259109",
+    "Next": "158754466219649698",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go to Assumanu and recover the maiden's glove. Hurry before Varona Nelas uses the glove for blackmail.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "158754466219649698": {
+    "Prev": "794119896190795305",
+    "Next": "1296039112203820838",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you have the glove?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "expensive_glove_left_ilmeni",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescueKnight",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "1296039112203820838": {
+    "Prev": "158754466219649698",
+    "Next": "151952058819421217",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The outcast Telvanni Varona Nelas is blackmailing a Buoyant Armiger. Varona Nelas has an embroidered glove which was given to this Buoyant Armiger as a token of affection. It would cause a scandal if it were known that they are lovers. Go to Assumanu, which is southeast of Ald Redaynia, and recover the glove at all costs.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescueKnight",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "journal \"il_maidentoken\" 10"
+    ]
+  },
+  "151952058819421217": {
+    "Prev": "1296039112203820838",
+    "Next": "247536760298621919",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "varona nelas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I already gave it to you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_MaidenToken",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "247536760298621919": {
+    "Prev": "151952058819421217",
+    "Next": "29924312862975410651",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "varona nelas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I like you. Here take it. Ilmeni Dren of Vivec gave this to a Buoyant Armiger, and she'd hate for that secret to get out. Do what you will with it, I have more important things to deal with then this sad love affair.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "allimir",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal IL_MaidenToken 50",
+      "RemoveItem expensive_glove_left_ilmeni 1",
+      "Player->AddItem expensive_glove_left_ilmeni 1"
+    ]
+  },
+  "29924312862975410651": {
+    "Prev": "247536760298621919",
+    "Next": "22221194801952316608",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "varona nelas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah yes. I have it, and can tell of its owner. But I don't like you enough to just hand it over.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "allimir",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "22221194801952316608": {
+    "Prev": "29924312862975410651",
+    "Next": "2856123761998425699",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "varona nelas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "How dare you demand that after what you did to Alimir? Now it's your turn!",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "allimir",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "StartCombat Player"
+    ]
+  },
+  "2856123761998425699": {
+    "Prev": "22221194801952316608",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, it is my glove.",
+    "Filters": [],
+    "Script": []
+  }
+}

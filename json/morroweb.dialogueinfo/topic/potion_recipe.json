@@ -1,0 +1,348 @@
+{
+  "15767133192949410750": {
+    "Prev": "",
+    "Next": "1273114672891516606",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "anis seloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I wouldn't give out my potion recipes to anyone, no matter who they were!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_CookbookAlchemy",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "1273114672891516606": {
+    "Prev": "15767133192949410750",
+    "Next": "24084136422592332110",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can't talk to you about this until you make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "24084136422592332110": {
+    "Prev": "1273114672891516606",
+    "Next": "2778680492178917946",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What do you mean Tusamircil is dead? If I find out you're involved in this, we'll have words, %PCRank. For now, though, I'll continue to give you jobs.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "tusamircil",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_CookbookAlchemy",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal TG_CookbookAlchemy 110",
+      "ModPCFacRep -5 \"Thieves Guild\"",
+      "ModDisposition -10"
+    ]
+  },
+  "2778680492178917946": {
+    "Prev": "24084136422592332110",
+    "Next": "2757166561925818522",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already delivered the potion recipe, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_CookbookAlchemy",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2757166561925818522": {
+    "Prev": "2778680492178917946",
+    "Next": "29053127642556110735",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I heard you delivered the potion to Tusamircil. Here's a little something for your trouble.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_CookbookAlchemy",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal TG_CookbookAlchemy 100",
+      "Player->AddItem Gold_001 500",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "29053127642556110735": {
+    "Prev": "2757166561925818522",
+    "Next": "24678222942009530176",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So do you have the potion recipe? Good. Deliver it to Tusamircil at Wolverine Hall.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_dispelrecipe_tgca",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_CookbookAlchemy",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "24678222942009530176": {
+    "Prev": "29053127642556110735",
+    "Next": "2755810957209285709",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We don't usually do business with the Mages Guild, but Tusamircil wants a recipe for a potion of dispel magic. Everyone says the best alchemist in town is Anis Seloth. You might want to start looking for the recipe there. When you find it, deliver it straight to Tusamircil at Wolverine Hall.",
+    "Filters": [],
+    "Script": [
+      "Journal TG_CookbookAlchemy 10",
+      "ShowMap \"Wolverine Hall\"",
+      "\"crate_01_anis seloth\"->AddItem \"bk_dispelrecipe_tgca\" 1"
+    ]
+  },
+  "2755810957209285709": {
+    "Prev": "24678222942009530176",
+    "Next": "2368123156915224486",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tusamircil",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already brought me the recipe. I have it here somewhere...",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_CookbookAlchemy",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2368123156915224486": {
+    "Prev": "2755810957209285709",
+    "Next": "132327150610021124",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tusamircil",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, this recipe will do nicely. Now leave me to my studies.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_CookbookAlchemy 50",
+      "Player->RemoveItem bk_DispelRecipe_TGCA 1",
+      "AddItem bk_DispelRecipe_TGCA 1"
+    ]
+  },
+  "132327150610021124": {
+    "Prev": "2368123156915224486",
+    "Next": "2670011907176102675",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tusamircil",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, then what are you doing talking to me about it? Find a recipe for a potion of dispel magic and bring it to me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "2670011907176102675": {
+    "Prev": "132327150610021124",
+    "Next": "33818809221827887",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tusamircil",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So do you have a recipe for a potion of dispel magic?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_dispelrecipe_tgca",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_CookbookAlchemy",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is\" 1 \"No, not yet\" 2"
+    ]
+  },
+  "33818809221827887": {
+    "Prev": "2670011907176102675",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tusamircil",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I made an agreement with the Guild to bring me a potion recipe. Why are you standing here talking to me instead of looking for this recipe?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_CookbookAlchemy",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  }
+}

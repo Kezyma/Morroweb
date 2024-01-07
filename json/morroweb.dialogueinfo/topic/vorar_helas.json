@@ -1,0 +1,258 @@
+{
+  "302724868906427195": {
+    "Prev": "",
+    "Next": "1211832190306292853",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled, %PCName. You need to talk with your recruiting officer and join up again if you still can.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1211832190306292853": {
+    "Prev": "302724868906427195",
+    "Next": "2698723240231396707",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I haven't heard any more yet, %PCName. Give it time.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Smuggler",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2698723240231396707": {
+    "Prev": "1211832190306292853",
+    "Next": "129963086726015259",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Vorar is dead and there is nothing more to say.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Smuggler",
+        "Value": 200.0
+      }
+    ],
+    "Script": []
+  },
+  "129963086726015259": {
+    "Prev": "2698723240231396707",
+    "Next": "32226176311314830510",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Vorar Helas is dead? I did not wish him dead. I was hoping we could use him to find out who was behind the whole operation. But I thank you for your honesty.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "vorar helas",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal IL_Smuggler 200",
+      "ModPCFacRep 5 \"Imperial Legion\"",
+      "ModDisposition 5"
+    ]
+  },
+  "32226176311314830510": {
+    "Prev": "129963086726015259",
+    "Next": "60811821444791118",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This along with the word of a member of the Legions should be enough to convict him. I will let you know when we catch him.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal IL_Smuggler 100",
+      "Player->RemoveItem misc_dwrv_artifact_ILS 1",
+      "ModPCFacRep 5 \"Imperial Legion\"",
+      "ModDisposition 10",
+      "\"Vorar Helas\"->Disable"
+    ]
+  },
+  "60811821444791118": {
+    "Prev": "32226176311314830510",
+    "Next": "2620557812221520762",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go to his home here in Balmora and bring me any Dwemer artifacts you find.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "2620557812221520762": {
+    "Prev": "60811821444791118",
+    "Next": "1445911535144414564",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You seem amused... Do you already have proof that Vorar Helas is a smuggler?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_dwrv_artifact_ils",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "IL_Smuggler",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "1445911535144414564": {
+    "Prev": "2620557812221520762",
+    "Next": "1276329144286092223",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you found any evidence in Vorar Helas' home?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_dwrv_artifact_ils",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Smuggler",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "1276329144286092223": {
+    "Prev": "1445911535144414564",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "I believe Vorar Helas is a smuggler. I hate to ask you to break the law, but we need evidence to convict him. Go to Vorar Helas' house in Balmora and bring me any Dwemer artifacts you find inside.",
+    "Filters": [],
+    "Script": [
+      "Journal IL_Smuggler 10"
+    ]
+  }
+}

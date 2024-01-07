@@ -1,0 +1,303 @@
+{
+  "13206175551619022130": {
+    "Prev": "",
+    "Next": "1314220211956218923",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 3,
+    "SpeakerId": "Lalatia Varian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Cult",
+    "Text": "Your first quest shall be the vision of the Ring in Darkness.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC24_OracleQuest",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC25_JonHawker",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1314220211956218923": {
+    "Prev": "13206175551619022130",
+    "Next": "23862210483012817555",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 3,
+    "SpeakerId": "Lalatia Varian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Cult",
+    "Text": "It is your free choice. Should you change your mind, speak to me again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC25_JonHawker",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "23862210483012817555": {
+    "Prev": "1314220211956218923",
+    "Next": "144639881200232761",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 3,
+    "SpeakerId": "Lalatia Varian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Cult",
+    "Text": "I await your decision.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC25_JonHawker",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "144639881200232761": {
+    "Prev": "23862210483012817555",
+    "Next": "137919204904826733",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 3,
+    "SpeakerId": "Lalatia Varian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Cult",
+    "Text": "I welcome you, and give thanks. Speak to me again when you are ready to perform your first service.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC25_JonHawker",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal IC24_OracleQuest 1",
+      "Goodbye"
+    ]
+  },
+  "137919204904826733": {
+    "Prev": "144639881200232761",
+    "Next": "75269684659829701",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 3,
+    "SpeakerId": "Lalatia Varian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Cult",
+    "Text": "And I will wait for your return.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC25_JonHawker",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "75269684659829701": {
+    "Prev": "137919204904826733",
+    "Next": "2393117867133330418",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 3,
+    "SpeakerId": "Lalatia Varian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Cult",
+    "Text": "Very well. I ask you to bind yourself to me by solemn oath, to assist me in solving the riddles of the mystical visions I am granted by the Nine. You must swear to serve faithfully, and to do as I ask you, without question, without fail. Only if bound by such an oath may I reveal the secret visions granted to me. Will you swear to dedicate yourself to me, to perform the Oracle's Quests? Will you swear before the Nine Divines?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC25_JonHawker",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"I swear to dedicate myself to the Oracle's Quests.\" 1 \"I must consider carefully before swearing such an oath.\" 2 \"I will not swear.\" 3"
+    ]
+  },
+  "2393117867133330418": {
+    "Prev": "75269684659829701",
+    "Next": "113162436914361914",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 3,
+    "SpeakerId": "Lalatia Varian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Cult",
+    "Text": "Very well. I ask you to bind yourself to me by solemn oath, to assist me in solving the riddles of the mystical visions I am granted by the Nine. You must swear to serve faithfully, and to do as I ask you, without question, without fail. Only if bound by such an oath may I reveal the secret visions granted to me. Will you swear to dedicate yourself to me, to perform the Oracle's Quests? Will you swear before the Nine Divines?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC25_JonHawker",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"I swear to dedicate myself to the Oracle's Quests.\" 1 \"I must consider carefully before swearing such an oath.\" 2 \"I will not swear.\" 3"
+    ]
+  },
+  "113162436914361914": {
+    "Prev": "2393117867133330418",
+    "Next": "17541100572329623431",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 3,
+    "SpeakerId": "Lalatia Varian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Cult",
+    "Text": "I warn you. An Oracle's Quests are perilous. You may face opponents of far greater skill, power, and experience than yourself. Where strength and wisdom may fail, caution and cunning may prevail. But you will face grave risks, and may not yet be equal to the task. In spite of this warning, do you still wish to swear oath to serve me in my Oracle's Quests?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcLevel",
+        "Compare": "Less",
+        "Id": "",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC25_JonHawker",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"I am resolved to swear, and defy the risks.\" 4 \"I'll be careful. Let me try.\" 5 \"I will wait until I am stronger.\" 6"
+    ]
+  },
+  "17541100572329623431": {
+    "Prev": "113162436914361914",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 3,
+    "SpeakerId": "Lalatia Varian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Cult",
+    "Text": "I ask you to bind yourself to me by solemn oath, to assist me in solving the riddles of the mystical visions I am granted by the Nine. You must swear to serve faithfully, and to do as I ask you, without question, without fail. Only if you are bound by such an oath may I reveal the secret visions granted to me. Will you swear to dedicate yourself to me, to perform the Oracle's Quests? Will you swear before the Nine Divines?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC25_JonHawker",
+        "Value": 25.0
+      }
+    ],
+    "Script": [
+      "Choice \"I swear to dedicate myself to the Oracle's Quests.\" 1 \"I must consider carefully before swearing such an oath.\" 2 \"I will not swear.\" 3"
+    ]
+  }
+}

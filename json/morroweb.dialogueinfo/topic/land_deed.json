@@ -1,0 +1,528 @@
+{
+  "2254224951230532596": {
+    "Prev": "",
+    "Next": "14721121503043418127",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been dismissed from the Imperial Legion for behavior unbecoming a Legionnaire, but maybe you can join the Imperial Legion again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "14721121503043418127": {
+    "Prev": "2254224951230532596",
+    "Next": "6837136632986730617",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I won't try and get her land. Not after what happened. Some other members of the Legion are making a fund for the widow.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_WidowLand",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "6837136632986730617": {
+    "Prev": "14721121503043418127",
+    "Next": "32399235801138929067",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already brought me the land deed.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_WidowLand",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "32399235801138929067": {
+    "Prev": "6837136632986730617",
+    "Next": "13897267331640916399",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If Lugrub is dead, justice has been served. Good work, %PCName. I have more orders for you. Also, take this broadsword for a job well done.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "lugrub gro-ogdum",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_WidowLand",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal IL_WidowLand 120",
+      "ModPCFacRep 5 \"Imperial Legion\"",
+      "ModDisposition 20",
+      "Player->additem \"imperial broadsword\", 1"
+    ]
+  },
+  "13897267331640916399": {
+    "Prev": "32399235801138929067",
+    "Next": "28477173912627218819",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Forget about the land. Bring Lugrub gro-Ogdum to justice.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_WidowLand",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "28477173912627218819": {
+    "Prev": "13897267331640916399",
+    "Next": "49115804237806628",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, this is the land deed. I hope you didn't have to do anything illegal... I have more orders for you. Also, take this broadsword for a job well done.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal IL_WidowLand 100",
+      "Player->RemoveItem bk_WidowDeed 1",
+      "ModPCFacRep 5 \"Imperial Legion\"",
+      "ModDisposition 10",
+      "Player->additem \"imperial broadsword\", 1"
+    ]
+  },
+  "49115804237806628": {
+    "Prev": "28477173912627218819",
+    "Next": "9866147143187425721",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Murdered? Do you have any proof?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "9866147143187425721": {
+    "Prev": "49115804237806628",
+    "Next": "341428685188516704",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What part of \"Bring me the land deed\" did you not understand? You have your orders.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "341428685188516704": {
+    "Prev": "9866147143187425721",
+    "Next": "1201828957771131707",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So do you have the land deed?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "lugrub's axe",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_widowdeed",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_WidowLand",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is\" 1 \"Mansilamat Vabdas was murdered\" 2 \"No, not yet\" 3"
+    ]
+  },
+  "1201828957771131707": {
+    "Prev": "341428685188516704",
+    "Next": "18413141791528116690",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So do you have the land deed?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "lugrub's axe",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_WidowLand",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Mansilamat Vabdas was murdered\" 2 \"No, not yet\" 3"
+    ]
+  },
+  "18413141791528116690": {
+    "Prev": "1201828957771131707",
+    "Next": "3541264951818811442",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So do you have the land deed?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_widowdeed",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_WidowLand",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is\" 1 \"No, not yet\" 3"
+    ]
+  },
+  "3541264951818811442": {
+    "Prev": "18413141791528116690",
+    "Next": "2942222710176909816",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "Mansilamat Vabdas died recently in the eggmine. He is survived by his wife who now owns a parcel of land we could use for another dock. Talk to the Widow Vabdas and get the deed to her land. Don't take \"no\" for an answer. Get me that land deed.",
+    "Filters": [],
+    "Script": [
+      "Journal IL_WidowLand 10"
+    ]
+  },
+  "2942222710176909816": {
+    "Prev": "3541264951818811442",
+    "Next": "23511226431546930483",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "widow vabdas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You mock me in my grief, foreigner. You stole the land, and I will make sure everyone knows about it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "IL_WidowLand",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "23511226431546930483": {
+    "Prev": "2942222710176909816",
+    "Next": "5655144476592568",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "widow vabdas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You surprise me, foreigner. Perhaps you are not the thief I thought you were.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_WidowLand",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "5655144476592568": {
+    "Prev": "23511226431546930483",
+    "Next": "1512523839214441360",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "widow vabdas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You will not steal my husband's land.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_WidowLand",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "1512523839214441360": {
+    "Prev": "5655144476592568",
+    "Next": "3223216722794530554",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "widow vabdas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My husband was murdered by a legionnaire and now you come asking for his land. You will never get his land. I will fight you and all of Gnisis will fight you until all you foreigners leave us in peace. Now get out of my house.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_WidowLand",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal IL_WidowLand 30"
+    ]
+  },
+  "3223216722794530554": {
+    "Prev": "1512523839214441360",
+    "Next": "23593135496072781",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dondos driler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, you will need a land deed. Baren Alen at the Hlaalu Treasury can sell you one.",
+    "Filters": [],
+    "Script": []
+  },
+  "23593135496072781": {
+    "Prev": "3223216722794530554",
+    "Next": "22797217082606422045",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baren alen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I have the land deed for the abandoned Rethan Manor. We just need to barter and agree on the method of payment.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "hasLandDeed",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "22797217082606422045": {
+    "Prev": "23593135496072781",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ancestor_ghost_vabdas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do not let them take my lands. Avenge my death and let my wife live in peace.",
+    "Filters": [],
+    "Script": []
+  }
+}

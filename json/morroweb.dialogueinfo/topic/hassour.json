@@ -1,0 +1,228 @@
+{
+  "237092951122708616": {
+    "Prev": "",
+    "Next": "2509220253904931572",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have heard that you are a False Incarnate. I am not yet convinced, but I no longer trust you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B8_MeetVivec",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2509220253904931572": {
+    "Prev": "237092951122708616",
+    "Next": "31875216091781719674",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled from the Temple.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "31875216091781719674": {
+    "Prev": "2509220253904931572",
+    "Next": "22489294731844927691",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You cleansed the dark cult from Hassour.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_Hassour",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "22489294731844927691": {
+    "Prev": "31875216091781719674",
+    "Next": "16186187232437826792",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have already sought out Hassour and cleansed the land of Dagoth Fovon? I am impressed, %PCName. Surely you do not need these scrolls and potions of cure blight, but take them anyway. As a gift from the Temple.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "dagoth fovon",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TT_Hassour",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TT_Hassour 100",
+      "Player->AddItem \"sc_cureblight_ranged\" 2",
+      "Player->AddItem \"p_cure_blight_s\" 2",
+      "ModPCFacRep 5 \"Temple\"",
+      "ModDisposition 10"
+    ]
+  },
+  "16186187232437826792": {
+    "Prev": "22489294731844927691",
+    "Next": "41811249643821698",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have slain Dagoth Fovon and cleansed the dark cult from Hassour. As these cultists sometimes spread Blight diseases, perhaps you can make use of these scrolls and potions.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "dagoth fovon",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_Hassour",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal TT_Hassour 100",
+      "Player->AddItem \"sc_cureblight_ranged\" 2",
+      "Player->AddItem \"p_cure_blight_s\" 2",
+      "ModPCFacRep 5 \"Temple\"",
+      "ModDisposition 10"
+    ]
+  },
+  "41811249643821698": {
+    "Prev": "16186187232437826792",
+    "Next": "471711104110843001",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There is a dark cult dwelling in Hassour. Go to Hassour and bring the Tribunal's justice to the leader of this cult, Dagoth Fovon. To get to Hassour, go to Balmora, then head east towards Moonmoth Legion Fort. When you enter the Foyada Mamaea, follow it all the way south.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 15.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_MaarGan",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal TT_Hassour 10"
+    ]
+  },
+  "471711104110843001": {
+    "Prev": "41811249643821698",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There is a dark cult dwelling in Hassour. Go to Hassour and bring the Tribunal's justice to the leader of this cult, Dagoth Fovon. Be warned, %PCRank, that Dagoth Fovon is a terrible foe. You may wish to fight more of the lesser servants of the Sixth House before taking on Dagoth Fovon. Many of the righteous have fallen to him. To get to Hassour, go to Balmora, then head east towards Moonmoth Legion Fort. When you enter the Foyada Mamaea, follow it all the way south.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_MaarGan",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal TT_Hassour 10"
+    ]
+  }
+}

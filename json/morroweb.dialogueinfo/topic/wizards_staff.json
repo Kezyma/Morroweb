@@ -1,0 +1,224 @@
+{
+  "3807109561712424351": {
+    "Prev": "",
+    "Next": "1360031246256389924",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, it is wise to keep your Wizard's Staff with you at all times.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "ebony wizard's staff",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Advancement",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "1360031246256389924": {
+    "Prev": "3807109561712424351",
+    "Next": "2927107341234926805",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have shown me that you have a Wizard's Staff.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Advancement",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "2927107341234926805": {
+    "Prev": "1360031246256389924",
+    "Next": "1541930354291453006",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have already given you your Wizard's Staff. Don't tell me you lost such a rare and prized possession.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Advancement",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "1541930354291453006": {
+    "Prev": "2927107341234926805",
+    "Next": "532963032433411353",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So you have a Wizard's Staff? Yes, that one will do. You are now ready for advancement.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "ebony wizard's staff",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal MG_Advancement 70"
+    ]
+  },
+  "532963032433411353": {
+    "Prev": "1541930354291453006",
+    "Next": "433110561382718791",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well, I will take your gold... I assume it's all there. And give you this Wizard's Staff. You are now ready for advancement.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 5000.0
+      }
+    ],
+    "Script": [
+      "Journal MG_Advancement 60",
+      "Player->RemoveItem Gold_001 5000",
+      "Player->AddItem \"ebony wizard's staff\" 1"
+    ]
+  },
+  "433110561382718791": {
+    "Prev": "532963032433411353",
+    "Next": "5895134216438541",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You do not have enough gold.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "5895134216438541": {
+    "Prev": "433110561382718791",
+    "Next": "1791529551199246334",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Really any Wizard's Staff will do, but it is no crime to take one from a renegade and outlaw like Anirne. Last I heard, she was in the caverns of Sud.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "1791529551199246334": {
+    "Prev": "5895134216438541",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I could sell you a Wizard's Staff, but they are quite expensive at 5,000 septims. However, I also know of a former member of our order, Anirne, who may still have her Wizard's Staff.",
+    "Filters": [],
+    "Script": [
+      "Choice \"Buy a Wizard's Staff.\" 1 \"Ask about Anirne.\" 2"
+    ]
+  }
+}

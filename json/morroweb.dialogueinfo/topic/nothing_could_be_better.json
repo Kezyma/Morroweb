@@ -1,0 +1,33 @@
+{
+  "11890323041436530010": {
+    "Prev": "",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gadayn andarys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's been simply wonderful, my friend. Glathel and I are perfectly suited for one another. Here, please take this as a token of our gratitude.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Unrequited",
+        "Value": 110.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem \"flamemirror robe\" 1",
+      "ModMercantile -30",
+      "ModDisposition 30",
+      "Journal EB_Unrequited 110"
+    ]
+  }
+}

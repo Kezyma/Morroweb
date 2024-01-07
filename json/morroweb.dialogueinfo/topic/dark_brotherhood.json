@@ -1,0 +1,1364 @@
+{
+  "6845170651501226134": {
+    "Prev": "2645524591143603526",
+    "Next": "98651948238611929",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We are still at war with the Dark Brotherhood. Do not forget that.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_DB_Contact",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "98651948238611929": {
+    "Prev": "6845170651501226134",
+    "Next": "100473047913081416",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So Tsrazami was an agent of the Dark Brotherhood. Alas, she left Vvardenfell or is dead. Perhaps we can find another contact.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "tsrazami",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_DB_Contact",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal MT_DB_Contact 100",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition 10"
+    ]
+  },
+  "100473047913081416": {
+    "Prev": "98651948238611929",
+    "Next": "86875093661132389",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So Tsrazami is an agent of the Dark Brotherhood. And you have already questioned her yourself. I will certainly be interested in meeting her. At a place and time of my own choosing, of course. Please take these scrolls. I have found them useful at times.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_DB_Contact",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal MT_DB_Contact 100",
+      "Player->AddItem \"sc_inasismysticfinger\" 2",
+      "Player->AddItem \"sc_invisibility\" 2",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition 10"
+    ]
+  },
+  "86875093661132389": {
+    "Prev": "100473047913081416",
+    "Next": "3873259583249122185",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So Tsrazami is an agent of the Dark Brotherhood. You have done well. I will send agents to question Tsrazami.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_DB_Contact",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal MT_DB_Contact 100",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition 10",
+      "Tsrazami->Disable"
+    ]
+  },
+  "3873259583249122185": {
+    "Prev": "86875093661132389",
+    "Next": "942927600298601611",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That is an interesting note you have there. I believe I know this Tsrazami. I will have agents sent to find her if she still lives.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_miungei",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_DB_Contact",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal MT_DB_Contact 100",
+      "ModPCFacRep 5 \"Morag Tong\"",
+      "ModDisposition 10"
+    ]
+  },
+  "942927600298601611": {
+    "Prev": "3873259583249122185",
+    "Next": "2175921259213211577",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Is Miun-Gei dead? Hm. Try searching his shop. Perhaps you can find some clues there about who his contact was.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "miun_gei",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_DB_Contact",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "2175921259213211577": {
+    "Prev": "942927600298601611",
+    "Next": "2601215598124884165",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 2,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "The Dark Brotherhood rebelled against the Morag Tong many years ago. Since then they have been our enemy. I want you to speak with Miun-Gei, a Mehrunes Dagon cultist who has an Enchantment shop in the Lower Waistworks of the Foreign Quarter. I believe he knows of a contact in the Dark Brotherhood. When you have taken a name from him, bring that name to me.",
+    "Filters": [],
+    "Script": [
+      "Journal MT_DB_Contact 10"
+    ]
+  },
+  "2601215598124884165": {
+    "Prev": "2175921259213211577",
+    "Next": "242264020136006978",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "tsrazami",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "%Name hears much of you. %Name is loyal to you now, not the Dark Brotherhood. Trust %Name.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_DB_Contact",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "242264020136006978": {
+    "Prev": "2601215598124884165",
+    "Next": "56937010333332712",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tsrazami",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That is between %Name and the Grandmaster.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_DB_Contact",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "56937010333332712": {
+    "Prev": "242264020136006978",
+    "Next": "158291091410385925",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tsrazami",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "%Name will meet with Eno Hlaalu. But %Name promises nothing.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_DB_Contact",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "158291091410385925": {
+    "Prev": "56937010333332712",
+    "Next": "238622910963088348",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tsrazami",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you? You think you just talk with the first Khajiit you see? If you do not know how to hire the Dark Brotherhood, you do not deserve their services.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "238622910963088348": {
+    "Prev": "158291091410385925",
+    "Next": "58253051477013171",
+    "Type": "Topic",
+    "Disposition": 90,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tsrazami",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Tell your Grandmaster that %Name will speak with him.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal MT_DB_Contact 70"
+    ]
+  },
+  "58253051477013171": {
+    "Prev": "238622910963088348",
+    "Next": "247001198680239882",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tsrazami",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No more games, %PCName. You are Morag Tong. %Name knows of you. %Name will not betray the Dark Brotherhood for empty threats or a little gold.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "247001198680239882": {
+    "Prev": "58253051477013171",
+    "Next": "14063306481078030426",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tsrazami",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What makes you think %Name would do this?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "14063306481078030426": {
+    "Prev": "247001198680239882",
+    "Next": "89002161171687025",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tsrazami",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Fine with %Name.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "89002161171687025": {
+    "Prev": "14063306481078030426",
+    "Next": "178121420026479920",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tsrazami",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What does the %PCRace want with the Dark Brotherhood?",
+    "Filters": [],
+    "Script": [
+      "Choice \"I want someone dead.\" 1 \"You will tell me of the Dark Brotherhood.\" 2 \"Nevermind.\" 3"
+    ]
+  },
+  "178121420026479920": {
+    "Prev": "89002161171687025",
+    "Next": "72392188172573143",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "miun_gei",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Look, I only had one contact in the Brotherhood, a Khajiit named Tsrazami. But she's dead, and I'm not a member myself.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "tsrazami",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MT_DB_Contact 60"
+    ]
+  },
+  "72392188172573143": {
+    "Prev": "178121420026479920",
+    "Next": "25546226536338831",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "miun_gei",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't act like a guard, so I'll tell you. My contact in the Brotherhood is Tsrazami, a Khajiit. She's in the Plaza here in the Foreign Quarter. Tell her I sent you.",
+    "Filters": [],
+    "Script": [
+      "Journal MT_DB_Contact 50"
+    ]
+  },
+  "25546226536338831": {
+    "Prev": "72392188172573143",
+    "Next": "29275303911992717160",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "miun_gei",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You want to hire the Dark Brotherhood? How do I know I can trust you?",
+    "Filters": [],
+    "Script": []
+  },
+  "29275303911992717160": {
+    "Prev": "25546226536338831",
+    "Next": "12276284861507021461",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "miun_gei",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't know anything. I swear.",
+    "Filters": [],
+    "Script": []
+  },
+  "12276284861507021461": {
+    "Prev": "29275303911992717160",
+    "Next": "256278940312044066",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Dark Brotherhood is a depraved perversion of the ancient law-abiding order of the Morag Tong. They do not advertise their services or their creed, but they are an outlawed secret society of assassins with an evil reputation, and are often associated with Daedra worship. The Morag Tong is the sworn enemy of the Dark Brotherhood.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "256278940312044066": {
+    "Prev": "12276284861507021461",
+    "Next": "676698511543019021",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Assassin",
+    "SpeakerFaction": "Hlaalu",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Dark Brotherhood is an ancient secret association of assassins. They do not advertise their services or their creed, but they are an outlawed secret society with an evil reputation, and are often associated with Daedra worship. The Morag Tong claims the Dark Brotherhood is a depraved perversion of their ancient law-abiding order of assassins, and the Morag Tong is the sworn enemy of the Dark Brotherhood.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "676698511543019021": {
+    "Prev": "256278940312044066",
+    "Next": "2583921482320424032",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Agent",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Morag Tong claims the Dark Brotherhood is a depraved perversion of their ancient law-abiding order of assassins, and the Morag Tong is the sworn enemy of the Dark Brotherhood.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 33.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2583921482320424032": {
+    "Prev": "676698511543019021",
+    "Next": "1527726720279217874",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Agent",
+    "SpeakerFaction": "Hlaalu",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Morag Tong claims the Dark Brotherhood is a depraved perversion of their ancient law-abiding order of assassins, and the Morag Tong is the sworn enemy of the Dark Brotherhood.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 33.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1527726720279217874": {
+    "Prev": "2583921482320424032",
+    "Next": "31019308642441213060",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Agent",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Dark Brotherhood do not advertise their services or their creed, but they are an outlawed secret society with an evil reputation, and are often associated with Daedra worship.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 66.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "31019308642441213060": {
+    "Prev": "1527726720279217874",
+    "Next": "100490503012926648",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Agent",
+    "SpeakerFaction": "Hlaalu",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Dark Brotherhood do not advertise their services or their creed, but they are an outlawed secret society with an evil reputation, and are often associated with Daedra worship.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 66.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "100490503012926648": {
+    "Prev": "31019308642441213060",
+    "Next": "2886667992198222377",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Agent",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Dark Brotherhood is an ancient secret association of assassins.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2886667992198222377": {
+    "Prev": "100490503012926648",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Agent",
+    "SpeakerFaction": "Hlaalu",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Dark Brotherhood is an ancient secret association of assassins.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "7790121922046710132": {
+    "Prev": "",
+    "Next": "3101257063208914982",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "denegor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh yeah, sure. Heard ya the f-f-first time.",
+    "Filters": [],
+    "Script": []
+  },
+  "3101257063208914982": {
+    "Prev": "7790121922046710132",
+    "Next": "3106185062812528327",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "holmar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Wha?",
+    "Filters": [],
+    "Script": []
+  },
+  "3106185062812528327": {
+    "Prev": "3101257063208914982",
+    "Next": "2429159641037129581",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "asciene rane",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Horrible people. Stay clear of them, my friend.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "DBAttack",
+        "Value": -1.0
+      }
+    ],
+    "Script": []
+  },
+  "2429159641037129581": {
+    "Prev": "3106185062812528327",
+    "Next": "257033692708026903",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "apelles matius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I understand you've taken care of your problem with them. Good work.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_DBHunt",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "257033692708026903": {
+    "Prev": "2429159641037129581",
+    "Next": "14927322571589216857",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "apelles matius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Perhaps you have been attacked. That's bad business. I don't know who it is that wants you dead, and I don't want to know. Dark Brotherhood activity here on Vvardenfell has been almost unheard of, but I know they have a large contingent back on the mainland.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "DBAttack",
+        "Value": -1.0
+      }
+    ],
+    "Script": []
+  },
+  "14927322571589216857": {
+    "Prev": "257033692708026903",
+    "Next": "442923131696826151",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "apelles matius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Perhaps you have been attacked. That's bad business. I don't know who it is that wants you dead, and I don't want to know. Dark Brotherhood activity here on Vvardenfell has been almost unheard of, but I know they have a large contingent back on the mainland.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_DBAttack",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_DBAttack",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "442923131696826151": {
+    "Prev": "14927322571589216857",
+    "Next": "427320727333720300",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "plitinius mero",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Dark Brotherhood have a long and interesting history, though a great deal of it still lies shrouded in mystery. What is certain is that they are deadly and remorseless. Steer clear of them at all costs.",
+    "Filters": [],
+    "Script": []
+  },
+  "427320727333720300": {
+    "Prev": "442923131696826151",
+    "Next": "1155820751352831967",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "barenziah",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Not a group of people to be taken lightly. Their reach is far, and their methods well-honed. Take care when dealing with them.",
+    "Filters": [],
+    "Script": []
+  },
+  "1155820751352831967": {
+    "Prev": "427320727333720300",
+    "Next": "3174980240562025",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "King Hlaalu Helseth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "They are usually a very effective group. Not always, though, I have recently learned.",
+    "Filters": [],
+    "Script": []
+  },
+  "3174980240562025": {
+    "Prev": "1155820751352831967",
+    "Next": "18459277612740525523",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There's no more to say about that at the moment. Let us speak of other things.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR05_People",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "18459277612740525523": {
+    "Prev": "3174980240562025",
+    "Next": "3055017691113815619",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Tienius Delitian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You wish to know who sent the assassins to kill you in your sleep? A reasonable desire. I won't deny my knowledge of it, but I believe it is more important now to speak about an official matter.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_DBHunt",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3055017691113815619": {
+    "Prev": "18459277612740525523",
+    "Next": "24624165422434317532",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris hler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, an interesting group. Effective. Fear and mystery are powerful tools for them. There have been kings that have been rumored to utilize their services, but that is only rumor, of course.",
+    "Filters": [],
+    "Script": []
+  },
+  "24624165422434317532": {
+    "Prev": "3055017691113815619",
+    "Next": "26833042354743460",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Mournhold Temple",
+    "PlayerFaction": "",
+    "Text": "You say you've killed the local Dark Brotherhood leader, have you? And he spoke of his \"liege\" before he died? Well, I can tell you that the new king, Helseth, has been rumored to use the Dark Brotherhood's services. If he's the one who's after you, you'd better investigate it immediately. Try speaking with Tienius Delitian, his Captain. He's a reasonable man.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_DBHunt",
+        "Value": 100.0
+      },
+      {
+        "Type": "NotClass",
+        "Func": "NotClass",
+        "Compare": "Equal",
+        "Id": "Guard",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotFaction",
+        "Func": "NotFaction",
+        "Compare": "Equal",
+        "Id": "Temple",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "26833042354743460": {
+    "Prev": "24624165422434317532",
+    "Next": "236123770298022747",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "Mournhold",
+    "PlayerFaction": "",
+    "Text": "You believe you've killed their leader? Maybe, maybe not. Perhaps you should speak with Fedris Hler about this.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_DBHunt",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "236123770298022747": {
+    "Prev": "26833042354743460",
+    "Next": "2143510411258486053",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "Royal Guard",
+    "SpeakerCell": "Mournhold",
+    "PlayerFaction": "",
+    "Text": "You believe you've killed their leader? I wouldn't count on that. You probably ought to speak to Tienius Delitian about it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_DBHunt",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2143510411258486053": {
+    "Prev": "236123770298022747",
+    "Next": "1969313694195622814",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Mournhold",
+    "PlayerFaction": "",
+    "Text": "You've killed their leader, huh? Don't be so sure. You may have killed a high ranking officer around here, but there's always another to replace him. I don't know anything about who might have hired them, either. That's none of my business. Talk to one of the Royal Guard, or head over to the Temple.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_DBHunt",
+        "Value": 100.0
+      },
+      {
+        "Type": "NotFaction",
+        "Func": "NotFaction",
+        "Compare": "Equal",
+        "Id": "Royal Guard",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1969313694195622814": {
+    "Prev": "2143510411258486053",
+    "Next": "2063281643195811127",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Mournhold",
+    "PlayerFaction": "",
+    "Text": "I don't know why you'd want to go looking for those demons. Some say they live in the sewers beneath the Great Bazaar.",
+    "Filters": [],
+    "Script": [
+      "Journal TR_DBAttack 100"
+    ]
+  },
+  "2063281643195811127": {
+    "Prev": "1969313694195622814",
+    "Next": "26299122037530091",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Mournhold",
+    "PlayerFaction": "",
+    "Text": "That's a touchy subject, and I'm not comfortable talking about it with someone I don't really trust.",
+    "Filters": [],
+    "Script": []
+  },
+  "26299122037530091": {
+    "Prev": "2063281643195811127",
+    "Next": "2571717282110518638",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Royal Guard",
+    "SpeakerCell": "Mournhold",
+    "PlayerFaction": "",
+    "Text": "You want to know who sent the Dark Brotherhood after you? Don't ask me. I don't want any trouble. Speak with Tienius Delitian. You'll find him in the Throne Room.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_DBHunt",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2571717282110518638": {
+    "Prev": "26299122037530091",
+    "Next": "2335245834621329",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Royal Guard",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You want to go looking for them? It's your funeral. Look, I've heard rumors that they have a hideout in the ruins of Old Mournhold. You can get there through the sewers in the Great Bazaar.",
+    "Filters": [],
+    "Script": [
+      "Journal TR_DBAttack 100"
+    ]
+  },
+  "2335245834621329": {
+    "Prev": "2571717282110518638",
+    "Next": "1678137546137849",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Royal Guard",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's a touchy subject, and I'm not comfortable talking about it with someone I don't really trust.",
+    "Filters": [],
+    "Script": []
+  },
+  "1678137546137849": {
+    "Prev": "2335245834621329",
+    "Next": "22110144442459225358",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Royal Guard",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Why would you want anything to do with those scum?",
+    "Filters": [],
+    "Script": []
+  },
+  "22110144442459225358": {
+    "Prev": "1678137546137849",
+    "Next": "1153953981787613029",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Mournhold",
+    "PlayerFaction": "",
+    "Text": "I don't know anything about who might have sent those people after you. If you're looking for help, try talking to Tienius Delitian at the Royal Palace. If you're a more religious sort, try speaking with Fedris Hler at the Temple. Either of them might be able to help you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_DBHunt",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1153953981787613029": {
+    "Prev": "22110144442459225358",
+    "Next": "6845170651501226134",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Scum, all of them. If they're after you, friend, you'd better find yourself some help. Or write a will. Or both.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_DBAttack",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "2645524591143603526": {
+    "Prev": "",
+    "Next": "6845170651501226134",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "Skaal",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I know of no such brotherhood. Perhaps you need to speak to one of the Imperials in the south.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "TR_DBAttack",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

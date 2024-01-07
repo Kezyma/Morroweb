@@ -1,0 +1,156 @@
+{
+  "7498322952864617715": {
+    "Prev": "",
+    "Next": "23482305962378510414",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sul-matuul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have fulfilled the Fourth Trial of the prophecy of the Seven Visions. You are Hortator of all three Great Houses, Redoran, Hlaalu, and Telvanni. So I greet you, %PCName, Hortator and Nerevarine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B8_All_Hortator",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "23482305962378510414": {
+    "Prev": "7498322952864617715",
+    "Next": "6287125583265526398",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sul-matuul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Fourth Trial is to join the three Great Houses of Vvardenfell under one Hortator. You must be named Hortator in turn by House Redoran, House Hlaalu, and House Telvanni. I know little of the ways of the Great Houses. But first I would try the Redoran, for they are warriors, hard-willed, but straightforward. Then I'd try the Hlaalu, for though they are weak and spoiled, they are cunning and crafty. Save the Telvanni for last. Anyone who is not afraid of a 2000-year-old wizard is a fool.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B1_UnifyUrshilaku",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "6287125583265526398": {
+    "Prev": "23482305962378510414",
+    "Next": "28758149961788717676",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nibani maesa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are Hortator of all three Great Houses, Redoran, Hlaalu, and Telvanni. You have fulfilled that part of the prophecy. You have fulfilled the Fourth Trial of the Seven Visions.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B5_RedoranHort",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B6_HlaaluHort",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B7_TelvanniHort",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal \"B8_All_Hortator\" 50"
+    ]
+  },
+  "28758149961788717676": {
+    "Prev": "6287125583265526398",
+    "Next": "1855530296200537147",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nibani maesa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Fourth Trial is: 'A stranger's voice unites the Houses./Three Halls call him Hortator.' When you have been named 'Hortator' by each of the three Great Houses of Vvardenfell, come to me for further guidance, for you will have passed the Fourth Trial.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal \"A2_6_Incarnate\" 60",
+      "addtopic \"Telvanni Hortator\"",
+      "addtopic \"Redoran Hortator\"",
+      "addtopic \"Hlaalu Hortator\"",
+      "addtopic \"Redoran councilors\"",
+      "addtopic \"Hlaalu councilors\"",
+      "addtopic \"Telvanni councilors\""
+    ]
+  },
+  "1855530296200537147": {
+    "Prev": "28758149961788717676",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nibani maesa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A \"Hortator\" is a war-leader chosen when Dunmer great houses must put aside their normal feuds to unite against a common enemy. This has not happened since the Empire invaded our land.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 45.0
+      }
+    ],
+    "Script": []
+  }
+}

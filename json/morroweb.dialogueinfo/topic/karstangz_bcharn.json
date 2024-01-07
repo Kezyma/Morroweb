@@ -1,0 +1,155 @@
+{
+  "95493034656728770": {
+    "Prev": "",
+    "Next": "11288317631552513275",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It will remain active until I decide otherwise. The ashstorms will continue in Mournhold until I feel that these people have grown to appreciate all I do for them.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_ShowPower",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "11288317631552513275": {
+    "Prev": "95493034656728770",
+    "Next": "3795552476455906",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well done, %PCName. This is the effect I was looking for! Ashstorms in Mournhold! My magic will prevent anyone from further tampering with this machine. You will, of course, keep silent about this. My powers are a bit drained, mortal...they are not gone. My ordinators will take care of the remains of this End of Times cult and their leader. You have done well.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_ShowPower",
+        "Value": 95.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "MournWeather",
+        "Value": 7.0
+      }
+    ],
+    "Script": [
+      "Journal TR_ShowPower 100"
+    ]
+  },
+  "3795552476455906": {
+    "Prev": "11288317631552513275",
+    "Next": "40628024154631030",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see you have restarted the machine, but this is not what I asked for! This weather is not uncommon in the city. Only an ashstorm will show these people my true power!",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "NotEqual",
+        "Id": "MournWeather",
+        "Value": 7.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_ShowPower",
+        "Value": 90.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_ShowPower",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "40628024154631030": {
+    "Prev": "3795552476455906",
+    "Next": "3054058002300030732",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go. Take the Dwemer Coherer and restart the machine. I will have ashstorms in Mournhold!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_ShowPower",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "3054058002300030732": {
+    "Prev": "40628024154631030",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Loosely translated: the Weather Witch. At its height, the Dwemer civilization was masterful in the use of machinery. In a time of drought, Dwemer scholars were commissioned to create a machine that would bring rain to their lands. They created the Karstangz-Bcharn. Its existence was little more than a myth until recently, when the ruins opened beneath my city. I wish for you to activate the machine, make it to create ashstorms in Mournhold. Then, these heretics will know the power of Almalexia!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_ShowPower",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  }
+}

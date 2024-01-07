@@ -1,0 +1,100 @@
+{
+  "765114483039422559": {
+    "Prev": "",
+    "Next": "82352637833251291",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Elbert Nermarc",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes?",
+    "Filters": [],
+    "Script": []
+  },
+  "82352637833251291": {
+    "Prev": "765114483039422559",
+    "Next": "3915230929922196",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Alvan Llarys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He's dead? Well, then I don't know what to think. We'll have to try and deal with this on our own, I suppose.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Elbert Nermarc",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "3915230929922196": {
+    "Prev": "82352637833251291",
+    "Next": "571330019848219892",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Alvan Llarys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you spoken with him? I'd like to know as much as possible about what's going on.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_Thief",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "571330019848219892": {
+    "Prev": "3915230929922196",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Alvan Llarys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He's the enchanter working over at the Craftsmen's Hall. I have no idea what business she would have with him, but if she's been making the effort to visit him, then perhaps he may have some insight as to her condition. Could you go talk to him, %PCName, and ask him about Golena Sadri? I'd go myself, but I feel that I really should remain here to comfort her.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_Thief",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal MS_Thief 20"
+    ]
+  }
+}

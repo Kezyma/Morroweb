@@ -1,0 +1,176 @@
+{
+  "17923288002612312521": {
+    "Prev": "",
+    "Next": "17045304582379110086",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled from the Fighters Guild. Until you make amends, I can't talk to you about this contract.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "17045304582379110086": {
+    "Prev": "17923288002612312521",
+    "Next": "6254295691298930079",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I don't have any more bounty contracts right now, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_EngaerBounty",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "6254295691298930079": {
+    "Prev": "17045304582379110086",
+    "Next": "63745851461018789",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "You already killed Engaer? I'm impressed, %PCName. Here's the 1000 septims for the bounty.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_EngaerBounty",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "engaer",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_EngaerBounty 100",
+      "ModPCFacRep 5 \"Fighters Guild\"",
+      "ModDisposition 10",
+      "Player->AddItem Gold_001 1000"
+    ]
+  },
+  "63745851461018789": {
+    "Prev": "6254295691298930079",
+    "Next": "5661273411170317566",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Good work, %PCName. Here's the 1000 septims for this bounty.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_EngaerBounty",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "engaer",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_EngaerBounty 100",
+      "ModPCFacRep 5 \"Fighters Guild\"",
+      "ModDisposition 10",
+      "Player->AddItem Gold_001 1000"
+    ]
+  },
+  "5661273411170317566": {
+    "Prev": "63745851461018789",
+    "Next": "31508145581416228727",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Like I said, go to the tower here in Sadrith Mora and kill Engaer. There's 1000 septims in it when you come back.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_EngaerBounty",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "31508145581416228727": {
+    "Prev": "5661273411170317566",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Engaer is a Bosmer mercenary for Master Neloth. One of our clients wants him dead. Engaer is in Tel Naga, the tower here in Sadrith Mora. Try to avoid the other guards, and just kill Engaer. We don't need more trouble with House Telvanni. I'll give you half the bounty if you take care of this.",
+    "Filters": [],
+    "Script": [
+      "Journal FG_EngaerBounty 10"
+    ]
+  }
+}

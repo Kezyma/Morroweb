@@ -1,0 +1,139 @@
+{
+  "799730468105677864": {
+    "Prev": "",
+    "Next": "194037682199042059",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "high_pockets",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Not quite done yet, %PCName. Thanks for letting me read it, though. I'll be done shortly, I'm sure.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_HolyElf",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "194037682199042059": {
+    "Prev": "799730468105677864",
+    "Next": "2263911968445330526",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "high_pockets",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It was the most excellent book I've ever read.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "MS_HolyElf",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "2263911968445330526": {
+    "Prev": "194037682199042059",
+    "Next": "12814287882928221085",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "high_pockets",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you so much, %PCRace. I feel an overwhelming urge to review the good, old-fashioned wisdoms of the good book. Just let me browse through it for a while, and I'll give it back to you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_HolyElf\" 30",
+      "player->RemoveItem \"bk_SaryonisSermons\" 1",
+      "StartScript HighPocketsCellCheck",
+      "Goodbye"
+    ]
+  },
+  "12814287882928221085": {
+    "Prev": "2263911968445330526",
+    "Next": "1335531688277659479",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "high_pockets",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, that's too bad. Well, maybe you can still help me with that clay-brained Nord.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "1335531688277659479": {
+    "Prev": "12814287882928221085",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "high_pockets",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Say, is that Saryoni's Sermons you have there, %PCRace. Hmm...  It reminds me of my childhood. My parents, festering maggots though they were, always dragged me to the temple whenever they could. I wonder if you would let me borrow that book?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_SaryonisSermons",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Sure, as long as I get it back.\" 1 \"No, I'm not finished with it.\" 2"
+    ]
+  }
+}

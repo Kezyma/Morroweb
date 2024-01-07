@@ -1,0 +1,193 @@
+{
+  "2675825562212581755": {
+    "Prev": "",
+    "Next": "1970318731169927492",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you the one who claims to be the Nerevarine? You should speak with Archcanon Saryoni. Before these rumors are put to rest, I cannot give you duties.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B8_MeetVivec",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1970318731169927492": {
+    "Prev": "2675825562212581755",
+    "Next": "196033229984697708",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled from the Temple.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "196033229984697708": {
+    "Prev": "1970318731169927492",
+    "Next": "310787996283522232",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Assantus Hansar is dead. I wish the Temple had a chance to convert him.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_MinistryHeathen",
+        "Value": 200.0
+      }
+    ],
+    "Script": []
+  },
+  "310787996283522232": {
+    "Prev": "196033229984697708",
+    "Next": "28686228012354228233",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already cured Assantus Hansar.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_MinistryHeathen",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "28686228012354228233": {
+    "Prev": "310787996283522232",
+    "Next": "3590442825469591",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Assantus Hansar is dead? How unfortunate. Perhaps you can find someone else to cure in the Temple's name.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "assantushansar",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TT_MinistryHeathen 200"
+    ]
+  },
+  "3590442825469591": {
+    "Prev": "28686228012354228233",
+    "Next": "2172720431245831931",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So Assantus Hansar has been cured? Good work, %PCName. Take these potions in case you were infected as well.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_MinistryHeathen",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal TT_MinistryHeathen 100",
+      "Player->AddItem P_Cure_Common_S 3",
+      "ModPCFacRep 5 \"Temple\"",
+      "ModDisposition 10"
+    ]
+  },
+  "2172720431245831931": {
+    "Prev": "3590442825469591",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Temple does not proselytize, but we do good works. Assantus Hansar is an ill Ashlander in the outcast Ashlander camp of Ahinanapal which is just south of Ghostgate. Find and cure him. You may need a way to calm him, for outcast Ashlanders are often aggressive towards strangers.",
+    "Filters": [],
+    "Script": [
+      "Journal TT_MinistryHeathen 10",
+      "\"assantushansar\"->Enable"
+    ]
+  }
+}

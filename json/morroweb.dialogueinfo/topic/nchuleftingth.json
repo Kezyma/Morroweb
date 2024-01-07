@@ -1,0 +1,104 @@
+{
+  "3034714944355910117": {
+    "Prev": "",
+    "Next": "68713470236177426",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You can get there by going around the mountains near Suran and heading northeast along the Foyada Nadanat, or you can start in Molag Mar and head northwest towards Mount Kand. Go north around Mount Kand and along the north side of the Foyada.",
+    "Filters": [],
+    "Script": [
+      "ShowMap Nchuleftingth"
+    ]
+  },
+  "68713470236177426": {
+    "Prev": "3034714944355910117",
+    "Next": "3377130542535119081",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hasphat antabolis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I heard that Anes Vendu was dead. Is the expedition going well otherwise? Did they find the Dwemer translation key?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Excavation",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "3377130542535119081": {
+    "Prev": "68713470236177426",
+    "Next": "30149342957665081",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hasphat antabolis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I encourage you visit Senilias Cadiusus. Make sure you bring the letter of introduction I gave you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_Excavation",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "30149342957665081": {
+    "Prev": "3377130542535119081",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hasphat antabolis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My friend, Senilias Cadiusus, is the head of the Nchuleftingth expedition, and he is accompanied by his charming daughter, Pania Cadiusus. The Dwemer language has never been translated, and they are searching Nchuleftingth for a book that may be a Dwemer translation key. Here. Let me give you a letter of introduction. They might be willing to hire you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_2_AntabolisInformant",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal MG_Excavation 1",
+      "Player->AddItem, \"bk_A1_2_IntroToCadiusus\", 1",
+      "ShowMap Nchuleftingth"
+    ]
+  }
+}

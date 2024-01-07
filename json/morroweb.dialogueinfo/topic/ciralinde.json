@@ -1,0 +1,165 @@
+{
+  "82913059060309922": {
+    "Prev": "",
+    "Next": "1763912569203847298",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ciralinde is yours. I hope everything works out. Altmer are unaccustomed to slavery.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ciralindeBought",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1763912569203847298": {
+    "Prev": "82913059060309922",
+    "Next": "100781054114564566",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Unfortunately, I have just been informed that we've lost Ciralinde recently.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "ciralinde",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "100781054114564566": {
+    "Prev": "1763912569203847298",
+    "Next": "16212155803018311111",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, well. Ciralinde is now yours. She will be carefully removed from the slavepit and should be waiting for you just inside. I hope you enjoy your purchase.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 1000.0
+      }
+    ],
+    "Script": [
+      "Set ciralindeBought to 1",
+      "Player->RemoveItem Gold_001 1000",
+      "AddItem Gold_001 1000",
+      "\"Ciralinde\"->PositionCell 1030 -2660 180 180 \"Tel Aruhn, Underground\"",
+      "Set \"Ciralinde\".slaveStatus to 2"
+    ]
+  },
+  "16212155803018311111": {
+    "Prev": "100781054114564566",
+    "Next": "1138218748223143540",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sorry but you don't have enough gold to afford my fine slaves.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1138218748223143540": {
+    "Prev": "16212155803018311111",
+    "Next": "536523139115938165",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Surely you would not turn down such an offer? I acquired her legally. She was a wanted criminal.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "536523139115938165": {
+    "Prev": "1138218748223143540",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "savile imayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Interested in something more refined? Ciralinde is the same price as the others. 1000 gold. And well worth it for such a rarity! An Altmer slave!",
+    "Filters": [],
+    "Script": [
+      "Choice \"Buy the slave.\" 1 \"Nevermind.\" 2"
+    ]
+  }
+}

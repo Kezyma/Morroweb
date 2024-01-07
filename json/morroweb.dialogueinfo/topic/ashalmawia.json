@@ -1,0 +1,121 @@
+{
+  "26923300772730626963": {
+    "Prev": "",
+    "Next": "15332114242699817535",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard you were expelled, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "15332114242699817535": {
+    "Prev": "26923300772730626963",
+    "Next": "556712224299328628",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The cultists in Assannidatinti are no more.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_CultElimination",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "556712224299328628": {
+    "Prev": "15332114242699817535",
+    "Next": "13302538963722469",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Gordol is dead and the Fourth Corner shall no longer plague the citizens of Ald Velothi. Please take this spear as a reward from me, and from St. Veloth, the patron of our village.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "gordol",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_CultElimination",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HR_CultElimination 100",
+      "Player->AddItem \"ebony spear_hrce_unique\" 1",
+      "ModDisposition 10",
+      "ModPCFacRep 5 \"Redoran\""
+    ]
+  },
+  "13302538963722469": {
+    "Prev": "556712224299328628",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go to Ashalmawia, just east of Ald Velothi. Find the foul Daedra worshipper Gordol, kill him, and report your victory to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ShishiReport",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "ShowMap Ashalmawia",
+      "Journal HR_CultElimination 10"
+    ]
+  }
+}

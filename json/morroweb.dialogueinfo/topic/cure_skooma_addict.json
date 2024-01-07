@@ -1,0 +1,391 @@
+{
+  "15030238642478630175": {
+    "Prev": "",
+    "Next": "6012451890879572",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "j'dhannar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "J'Dhannar will read this book you gave him. Thank you again. And thank Ahnassi, and tell her... goodbye.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 75.0
+      }
+    ],
+    "Script": []
+  },
+  "6012451890879572": {
+    "Prev": "15030238642478630175",
+    "Next": "16722134891007325831",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "j'dhannar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "J'Dhannar does not understand. What good is a book? I do not want this book. But... J'Dhannar can see you have a good heart. J'Dhannar is sorry for what he says. J'Dhannar will take this book, and will read it. And you... return to Ahnassi and tell her, J'Dhannar is sorry, and J'Dhannar forgives her, and J'Dhannar will always have Ahnassi in his heart, but our bond is broken now, for better or worse, and we must each find our own way from this cold time and hard place.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_Confessions",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal Romance_Ahnassi 75",
+      "player->removeitem bk_confessions 1"
+    ]
+  },
+  "16722134891007325831": {
+    "Prev": "6012451890879572",
+    "Next": "265023107688328478",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "j'dhannar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Why do you want to give me this book? What good is a book? Why do you not listen? Why should I trust you?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_Confessions",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "265023107688328478": {
+    "Prev": "16722134891007325831",
+    "Next": "676128101359116282",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "j'dhannar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hah! You call yourself a friend of Ahnassi? Then J'Dhannar curses you, and J'Dhannar curses this faithless mate. Ahnassi calls ME a coward and a fool, the one who is her husband, and whom she must respect? And she leaves me to beg and starve? SHE is the fool, and you are a fool, too. There IS no cure for the skooma addict! All the world knows this! No one knows J'Dhannar's shame better than J'Dhannar! But J'Dhannar is helpless. What can J'Dhannar do? Nothing. But beg and starve and cry and die....",
+    "Filters": [],
+    "Script": [
+      "Journal Romance_Ahnassi 70"
+    ]
+  },
+  "676128101359116282": {
+    "Prev": "265023107688328478",
+    "Next": "2824118597265937182",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Khajiit",
+    "SpeakerClass": "Healer Service",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Khajiit know there is no cure for a Khajiit who has bred skooma in his blood. This one has heard of a book where a Dunmer claims to have been cured of skooma addiction. I have not seen such a book. And how could a Dunmer know more than a Khajiit where skooma and Khajiit are concerned?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "Romance_Ahnassi",
+        "Value": 75.0
+      }
+    ],
+    "Script": []
+  },
+  "2824118597265937182": {
+    "Prev": "676128101359116282",
+    "Next": "1521828130478729327",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Khajiit",
+    "SpeakerClass": "Healer",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Khajiit know there is no cure for a Khajiit who has bred skooma in his blood. This one has heard of a book where a Dunmer claims to have been cured of skooma addiction. I have not seen such a book. And how could a Dunmer know more than a Khajiit where skooma and Khajiit are concerned?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "Romance_Ahnassi",
+        "Value": 75.0
+      }
+    ],
+    "Script": []
+  },
+  "1521828130478729327": {
+    "Prev": "2824118597265937182",
+    "Next": "898122883298037504",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Healer Service",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have not heard that there is a cure for skooma addiction. The Khajiit themselves say there is no cure, and they should know. But there is a book I have heard of, 'Confessions of a Dunmer Skooma-Eater,' which claims to be a memoir of a Dunmer woman who overcame her addiction to skooma. This book praises skooma, and says that skooma addicts are not necessarily foolish or evil. Dunmer won't carry such a book. Try Vivec, Jobasha's Rare Books, in the Foreign Quarter.",
+    "Filters": [
+      {
+        "Type": "NotRace",
+        "Func": "NotRace",
+        "Compare": "Equal",
+        "Id": "Khajiit",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "Romance_Ahnassi",
+        "Value": 75.0
+      }
+    ],
+    "Script": []
+  },
+  "898122883298037504": {
+    "Prev": "1521828130478729327",
+    "Next": "9056153363128827950",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Healer",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have not heard that there is a cure for skooma addiction. The Khajiit themselves say there is no cure, and they should know. But there is a book I have heard of, 'Confessions of a Dunmer Skooma-Eater,' which claims to be a memoir of a Dunmer woman who overcame her addiction to skooma. This book praises skooma, and says that skooma addicts are not necessarily foolish or evil. Dunmer won't carry such a book. Try Vivec, Jobasha's Rare Books, in the Foreign Quarter.",
+    "Filters": [
+      {
+        "Type": "NotRace",
+        "Func": "NotRace",
+        "Compare": "Equal",
+        "Id": "Khajiit",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "Romance_Ahnassi",
+        "Value": 75.0
+      }
+    ],
+    "Script": []
+  },
+  "9056153363128827950": {
+    "Prev": "898122883298037504",
+    "Next": "15183212452840513466",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Khajiit",
+    "SpeakerClass": "Savant",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Khajiit know there is no cure for a Khajiit who has bred skooma in his blood. This one has heard of a book where a Dunmer claims to have been cured of skooma addiction. I have not seen such a book. And how could a Dunmer know more than a Khajiit where skooma and Khajiit are concerned?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "Romance_Ahnassi",
+        "Value": 75.0
+      }
+    ],
+    "Script": []
+  },
+  "15183212452840513466": {
+    "Prev": "9056153363128827950",
+    "Next": "1299523011235659910",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Khajiit",
+    "SpeakerClass": "Savant Service",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Khajiit know there is no cure for a Khajiit who has bred skooma in his blood. This one has heard of a book where a Dunmer claims to have been cured of skooma addiction. I have not seen such a book. And how could a Dunmer know more than a Khajiit where skooma and Khajiit are concerned?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "Romance_Ahnassi",
+        "Value": 75.0
+      }
+    ],
+    "Script": []
+  },
+  "1299523011235659910": {
+    "Prev": "15183212452840513466",
+    "Next": "2726528952606222692",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Savant",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have not heard that there is a cure for skooma addiction. The Khajiit themselves say there is no cure, and they should know. But there is a book I have heard of, 'Confessions of a Dunmer Skooma-Eater,' which claims to be a memoir of a Dunmer woman who overcame her addiction to skooma. This book praises skooma, and says that skooma addicts are not necessarily foolish or evil. Dunmer won't carry such a book. Try Vivec, Jobasha's Rare Books, in the Foreign Quarter.",
+    "Filters": [
+      {
+        "Type": "NotRace",
+        "Func": "NotRace",
+        "Compare": "Equal",
+        "Id": "Khajiit",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "Romance_Ahnassi",
+        "Value": 75.0
+      }
+    ],
+    "Script": []
+  },
+  "2726528952606222692": {
+    "Prev": "1299523011235659910",
+    "Next": "25972850394551336",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Savant Service",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have not heard that there is a cure for skooma addiction. The Khajiit themselves say there is no cure, and they should know. But there is a book I have heard of, 'Confessions of a Dunmer Skooma-Eater,' which claims to be a memoir of a Dunmer woman who overcame her addiction to skooma. This book praises skooma, and says that skooma addicts are not necessarily foolish or evil. Dunmer won't carry such a book. Try Vivec, Jobasha's Rare Books, in the Foreign Quarter.",
+    "Filters": [
+      {
+        "Type": "NotRace",
+        "Func": "NotRace",
+        "Compare": "Equal",
+        "Id": "Khajiit",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "Romance_Ahnassi",
+        "Value": 75.0
+      }
+    ],
+    "Script": []
+  },
+  "25972850394551336": {
+    "Prev": "2726528952606222692",
+    "Next": "1984923564118192406",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "jobasha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Khajiit know there is no cure for the skooma addict. And maybe Khajiit know things that are not true. You should read 'Confessions of a Dunmer Skooma-Eater.' Jobasha should have a copy for sale. In good condition, very reasonable.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "Romance_Ahnassi",
+        "Value": 75.0
+      }
+    ],
+    "Script": []
+  },
+  "1984923564118192406": {
+    "Prev": "25972850394551336",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ahnassi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There is no cure for the skooma addict. All Khajiit know this. But things we all know are true -- sometimes they are not true after all.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "Romance_Ahnassi",
+        "Value": 75.0
+      }
+    ],
+    "Script": []
+  }
+}

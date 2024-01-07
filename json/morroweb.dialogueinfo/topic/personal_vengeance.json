@@ -1,0 +1,84 @@
+{
+  "21073274251814412954": {
+    "Prev": "",
+    "Next": "2056330183302113826",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "kurapli",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I thank you, Clanfriend, for giving me vengeance for the murder of my husband.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "zallay subaddamael",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_Kurapli_Zallay",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2056330183302113826": {
+    "Prev": "21073274251814412954",
+    "Next": "20821191192233716393",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "kurapli",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have killed the murderer of my husband, Airan-Ahhe. I thank you, and do you honor, Clanfriend. I have long kept Airan-Ahhe's spear. He no longer has any use for it. It is with pride that I pass it on to you, and ask only that you remember his name when you use it.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "zallay subaddamael",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal A2_1_Kurapli_Zallay 50",
+      "player->additem \"Airan_Ahhe's_Spirit_Spear_uniq\" 1"
+    ]
+  },
+  "20821191192233716393": {
+    "Prev": "2056330183302113826",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "kurapli",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Zallay Subaddamael, an outcast ashlander, betrayed Urshilaku hospitality and killed my husband. If you could find Zallay Subaddamael, kill him, and bring the justice of his death to me, I can promise you a fine reward -- my dead husband's enchanted Spirit Spear. It is a great treasure, but I would be glad if it might purchase the vengeance that would set my husband's spirit to rest. Bring me news of Zallay Subaddamael's death, and the Spirit Spear is yours.",
+    "Filters": [],
+    "Script": [
+      "Journal \"A2_1_Kurapli_Zallay\" 1"
+    ]
+  }
+}

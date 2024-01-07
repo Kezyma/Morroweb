@@ -1,0 +1,424 @@
+{
+  "16059164232654622362": {
+    "Prev": "",
+    "Next": "201245784706824603",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "temis romavel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You found a Telvanni sorcerer? I'm relieved. I thought I might be going crazy.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "faves andas",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ShishiReport",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "201245784706824603": {
+    "Prev": "16059164232654622362",
+    "Next": "16221212482270711236",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "temis romavel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Brerama Selas believes that all the Telvanni have been found, but I don't know... I think there may be a few hiding somewhere. Sometimes I hear strange noises in the room below this one.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ShishiReport",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "16221212482270711236": {
+    "Prev": "201245784706824603",
+    "Next": "322002447654695567",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "brerama selas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Telvanni have no more claims on Shishi. I hope the Duke acts soon.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ShishiReport",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "322002447654695567": {
+    "Prev": "16221212482270711236",
+    "Next": "24769144633073912431",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "brerama selas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Be sure you mention that you found and killed the Telvanni wizard when you deliver the report.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "faves andas",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ShishiReport",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "24769144633073912431": {
+    "Prev": "322002447654695567",
+    "Next": "1659315471527717938",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "brerama selas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I already gave you the report.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ShishiReport",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "1659315471527717938": {
+    "Prev": "24769144633073912431",
+    "Next": "253236927768220382",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "brerama selas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, of course. Here, take the report.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ShishiReport",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HR_ShishiReport 30",
+      "RemoveItem \"bk_ShishiReport\" 1",
+      "Player->AddItem \"bk_ShishiReport\" 1"
+    ]
+  },
+  "253236927768220382": {
+    "Prev": "1659315471527717938",
+    "Next": "336925644266512084",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard you were expelled, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "336925644266512084": {
+    "Prev": "253236927768220382",
+    "Next": "30739249662356519524",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Shishi is still disputed territory. I hope the Duke does something about all these rogue Telvanni soon.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ShishiReport",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "30739249662356519524": {
+    "Prev": "336925644266512084",
+    "Next": "2264113185113765599",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, this is the report I wanted. What was that? You also found a Telvanni wizard hiding there? Good work, %PCName. Maybe now the Telvanni will give up their claims to Shishi.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_shishireport",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "faves andas",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HR_ShishiReport 110",
+      "ModPCFacRep 10 \"Redoran\"",
+      "ModDisposition 15",
+      "Player->RemoveItem \"bk_ShishiReport\" 1",
+      "AddItem \"bk_ShishiReport\" 1",
+      "Player->ModReputation 1"
+    ]
+  },
+  "2264113185113765599": {
+    "Prev": "30739249662356519524",
+    "Next": "58023957270694123",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thanks for the report, %PCName. Hopefully the Telvanni will give up their claims on the tower now.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_shishireport",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HR_ShishiReport 100",
+      "ModPCFacRep 5 \"Redoran\"",
+      "ModDisposition 5",
+      "Player->RemoveItem \"bk_ShishiReport\" 1",
+      "AddItem \"bk_ShishiReport\" 1",
+      "Player->ModReputation 1"
+    ]
+  },
+  "58023957270694123": {
+    "Prev": "2264113185113765599",
+    "Next": "271415904585427944",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, where is it? Bring me that report, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "271415904585427944": {
+    "Prev": "58023957270694123",
+    "Next": "2024532482439523227",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I need that report. There may be lives at stake.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "2024532482439523227": {
+    "Prev": "271415904585427944",
+    "Next": "27722286132390412013",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you have the report from Shishi?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ShishiReport",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "27722286132390412013": {
+    "Prev": "2024532482439523227",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Shishi is a Velothi tower in the middle of the Foyada Bani-Dad northwest of Maar Gan. Go to Maar Gan, head east past the Silt Strider, then follow the Foyada north and west until you see it. It's right in the middle of the Foyada. The leader of the expedition you need to speak with is Brerama Selas.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Kagouti",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HR_ShishiReport 10",
+      "StartScript ShishiOdirniranFights"
+    ]
+  }
+}

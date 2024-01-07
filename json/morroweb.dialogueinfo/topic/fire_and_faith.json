@@ -1,0 +1,321 @@
+{
+  "875533041115632079": {
+    "Prev": "",
+    "Next": "260551696074030628",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "You already brought me a copy of \"Nchunak's Fire and Faith.\"",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_FireAndFaith",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "260551696074030628": {
+    "Prev": "875533041115632079",
+    "Next": "7498320632387820740",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Yes, this is the last of the three books I was looking for. I know I had another copy of \"Fire and Faith\" once... Ah, well. Please accept these trinkets. I no longer have any use for them.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_nchunaksfireandfaith",
+        "Value": 0.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "givenReward",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_ChroniclesNchuleft",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_DwemerLaw",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HT_FireAndFaith 100",
+      "Journal HT_DwemerLaw 110",
+      "AddItem \"bk_NchunaksFireAndFaith\" 1",
+      "Player->RemoveItem \"bk_NchunaksFireAndFaith\" 1",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 10",
+      "Set givenReward to 1",
+      "Player->AddItem \"ondusi's key\" 1",
+      "Player->AddItem \"amulet of admonition\" 1",
+      "Player->AddItem \"second barrier belt\" 1",
+      "Player->AddItem \"common_shoes_02_surefeet\" 1"
+    ]
+  },
+  "7498320632387820740": {
+    "Prev": "260551696074030628",
+    "Next": "327912071309163532",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "This is one of the three books I was looking for. Speak with me again when you have delivered all three.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_nchunaksfireandfaith",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HT_FireAndFaith 100",
+      "AddItem \"bk_NchunaksFireAndFaith\" 1",
+      "Player->RemoveItem \"bk_NchunaksFireAndFaith\" 1",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 10"
+    ]
+  },
+  "327912071309163532": {
+    "Prev": "7498320632387820740",
+    "Next": "28556295591698132546",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Oh? And where is it? Have you brought me an invisible book? Bring me the book, %PCName, and no trickery.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "28556295591698132546": {
+    "Prev": "327912071309163532",
+    "Next": "156751750879794779",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Find the book, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "156751750879794779": {
+    "Prev": "28556295591698132546",
+    "Next": "56263164849614269",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Have you found a copy of \"Nchunak's Fire and Faith?\"",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_DwemerLaw",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "56263164849614269": {
+    "Prev": "156751750879794779",
+    "Next": "12285723197411650",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "I know the Hall of Wisdom in Vivec has a copy of this book, but their library is well guarded. Rare booksellers may have a copy. There are certainly a few copies in the hand of private collectors such as myself.",
+    "Filters": [],
+    "Script": [
+      "Journal HT_DwemerLaw 5"
+    ]
+  },
+  "12285723197411650": {
+    "Prev": "56263164849614269",
+    "Next": "952630821461914851",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dorisa darvel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I may have a copy of \"Nchunak's Fire and Faith.\" Let me check...",
+    "Filters": [],
+    "Script": []
+  },
+  "952630821461914851": {
+    "Prev": "12285723197411650",
+    "Next": "13797771141032114",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Khajiit",
+    "SpeakerClass": "Bookseller",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "%Name thinks Dorisa's shop in Balmora is the place to look.",
+    "Filters": [],
+    "Script": [
+      "Journal HT_FireAndFaith 31"
+    ]
+  },
+  "13797771141032114": {
+    "Prev": "952630821461914851",
+    "Next": "28485128182480123028",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Bookseller",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I think Dorisa Darvel in Balmora has a copy of this book.",
+    "Filters": [],
+    "Script": [
+      "Journal HT_FireAndFaith 31"
+    ]
+  },
+  "28485128182480123028": {
+    "Prev": "13797771141032114",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "Vivec",
+    "PlayerFaction": "",
+    "Text": "The Hall of Wisdom here in Vivec holds many rare books such as this.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HT_FireAndFaith 30"
+    ]
+  }
+}

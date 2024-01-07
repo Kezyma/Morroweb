@@ -1,0 +1,97 @@
+{
+  "252783019320518892": {
+    "Prev": "",
+    "Next": "9688184562159120200",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mirisa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I came to Thirsk to preach the word of the Cult, and to sway the barbarians from their love of drink. That foul Erich poured mead on me. Then...then he struck me. I awoke in his chambers. That was over three weeks ago, by my reckoning! Every day he comes in to taunt me, and beat me. The only food and drink I've been given is rotting meat and...and mead! Please, stranger, you must release me so that we may travel together back to the Cult Shrine!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Missionary",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Missionary",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Journal \"BM_Missionary\" 50",
+      "ModDisposition 20"
+    ]
+  },
+  "9688184562159120200": {
+    "Prev": "252783019320518892",
+    "Next": "28769140322763320994",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mirisa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am a prisoner no longer, thanks to you!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Missionary",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "28769140322763320994": {
+    "Prev": "9688184562159120200",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mirisa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We must travel together back to the Imperial Cult Shrine at Fort Frostmoth!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Missionary",
+        "Value": 60.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Missionary",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  }
+}

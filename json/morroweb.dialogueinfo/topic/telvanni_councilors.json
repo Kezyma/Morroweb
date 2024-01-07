@@ -1,0 +1,196 @@
+{
+  "444923667335910796": {
+    "Prev": "",
+    "Next": "23403290561736116141",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "therana",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No, Telvanni make the worst councilors. I wouldn't listen to their advice if I were you.",
+    "Filters": [],
+    "Script": []
+  },
+  "23403290561736116141": {
+    "Prev": "444923667335910796",
+    "Next": "165088352650819690",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nibani maesa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am told that wizards who speak for the Telvanni councilors may be found in a strange building in Sadrith Mora. The councilors themselves are ageless sorcerers living in the towers scattered over Vvardenfell. I know nothing about them, except that they are old, terrible, and evil.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "165088352650819690": {
+    "Prev": "23403290561736116141",
+    "Next": "184791102221215053",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You should consult the recent edition of the Brown Book of Great House Telvanni. It lists the current Telvanni councilors and their residences. Let me mark the locations of the councilor's towers on your map -- Tel Aruhn, Tel Vos, Tel Mora, Tel Branora. And Tel Naga is right in the center of Sadrith Mora. And don't forget Baladas Demnevanni. He is a councilor of House Telvanni now as well.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B7_TelvanniBook",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_BaladasAlly",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Tel Aruhn\"",
+      "ShowMap \"Tel Vos\"",
+      "ShowMap \"Tel Mora\"",
+      "ShowMap \"Tel Branora\""
+    ]
+  },
+  "184791102221215053": {
+    "Prev": "165088352650819690",
+    "Next": "2531875621888917458",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You should consult the recent edition of the Brown Book of Great House Telvanni. It lists the current Telvanni councilors and their residences. Let me mark the locations of the councilor's towers on your map -- Tel Aruhn, Tel Vos, Tel Mora, Tel Branora. And Tel Naga is right in the center of Sadrith Mora.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B7_TelvanniBook",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Tel Aruhn\"",
+      "ShowMap \"Tel Vos\"",
+      "ShowMap \"Tel Mora\"",
+      "ShowMap \"Tel Branora\""
+    ]
+  },
+  "2531875621888917458": {
+    "Prev": "184791102221215053",
+    "Next": "2948222082267586416",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here's a recent edition of the Brown Book of Great House Telvanni. It lists the current Telvanni councilors and their residences. Let me mark the locations of the councilor's towers on your map -- Tel Aruhn, Tel Vos, Tel Mora, Tel Branora. And Tel Naga is right in the center of Sadrith Mora.",
+    "Filters": [],
+    "Script": [
+      "Player->AddItem \"bk_BrownBook426\" 1",
+      "Journal B7_TelvanniBook 1",
+      "ShowMap \"Tel Aruhn\"",
+      "ShowMap \"Tel Vos\"",
+      "ShowMap \"Tel Mora\"",
+      "ShowMap \"Tel Branora\""
+    ]
+  },
+  "2948222082267586416": {
+    "Prev": "2531875621888917458",
+    "Next": "2176429171229129378",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You should consult the recent edition of the Brown Book of Great House Telvanni. It lists the current Telvanni councilors and their residences. Let me mark the locations of the councilor's towers on your map -- Tel Aruhn, Tel Vos, Tel Mora, Tel Branora. And Tel Naga is right in the center of Sadrith Mora.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B7_TelvanniBook",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Tel Aruhn\"",
+      "ShowMap \"Tel Vos\"",
+      "ShowMap \"Tel Mora\"",
+      "ShowMap \"Tel Branora\""
+    ]
+  },
+  "2176429171229129378": {
+    "Prev": "2948222082267586416",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Telvanni",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here's a recent edition of the Brown Book of Great House Telvanni. It lists the current Telvanni councilors and their residences. Let me mark the locations of the councilor's towers on your map -- Tel Aruhn, Tel Vos, Tel Mora, Tel Branora. And Tel Naga is right in the center of Sadrith Mora.",
+    "Filters": [],
+    "Script": [
+      "Player->AddItem \"bk_BrownBook426\" 1",
+      "Journal B7_TelvanniBook 1",
+      "ShowMap \"Tel Aruhn\"",
+      "ShowMap \"Tel Vos\"",
+      "ShowMap \"Tel Mora\"",
+      "ShowMap \"Tel Branora\""
+    ]
+  }
+}

@@ -1,0 +1,459 @@
+{
+  "757140392688427679": {
+    "Prev": "",
+    "Next": "320511777053927908",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm very disappointed in you, %PCName. You broke our rules, and I can't have one of your reputation in the Bal Molagmer. Make amends, and perhaps we can speak again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "320511777053927908": {
+    "Prev": "757140392688427679",
+    "Next": "200536553412614549",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "I'm disappointed in you, %PCName. You've been caught too many times. Tone down your act, pay off yours debts, then come see me again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcCrimeLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "200536553412614549": {
+    "Prev": "320511777053927908",
+    "Next": "1714528609101821248",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "You already gave the goblet to Danso Indules.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_ChurchPolice",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1714528609101821248": {
+    "Prev": "200536553412614549",
+    "Next": "12110311893013414604",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You shouldn't have told her where you stole it from, but it can't be helped now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_SS_ChurchPolice",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "12110311893013414604": {
+    "Prev": "1714528609101821248",
+    "Next": "3686119311093521117",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Good. Danso Indules can sell that goblet and do more good than Berel Sala and the Ordinators ever will.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_ChurchPolice",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_ChurchPolice 100",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "3686119311093521117": {
+    "Prev": "12110311893013414604",
+    "Next": "23560146351223629101",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "That's the right goblet. Take it to Danso Indules outside the High Fane south of here.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_dwrv_goblet10_tgcp",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_ChurchPolice",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "23560146351223629101": {
+    "Prev": "3686119311093521117",
+    "Next": "24725121792530720447",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "There is a Dwemer goblet in Berel Sala's office in the Hall of Justice. Steal this goblet and donate it to Danso Indules, who is usually outside near the High Fane.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Plutocrats",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_ChurchPolice 10"
+    ]
+  },
+  "24725121792530720447": {
+    "Prev": "23560146351223629101",
+    "Next": "92253221599315445",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "danso indules",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I really can't accept another donation. I appreciate the offer, but I don't need any more trouble with the Ordinators.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_ChurchPolice",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "92253221599315445": {
+    "Prev": "24725121792530720447",
+    "Next": "220026410174166089",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "danso indules",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No, if that belongs to Berel Sala, I will not accept it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_SS_ChurchPolice",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "220026410174166089": {
+    "Prev": "92253221599315445",
+    "Next": "1978688501139224731",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "danso indules",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, thank you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_ChurchPolice",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1978688501139224731": {
+    "Prev": "220026410174166089",
+    "Next": "29851308212628320349",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "danso indules",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I cannot accept it, then. Though I need the money, I do not need any trouble with the Ordinators.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_ChurchPolice 60",
+      "ModDisposition -10"
+    ]
+  },
+  "29851308212628320349": {
+    "Prev": "1978688501139224731",
+    "Next": "1277013791444324431",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "danso indules",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Indeed. I did not realize.... Yes, I see your gloves. I will accept this gift. Thank you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "TGglove",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_ChurchPolice 55",
+      "Player->RemoveItem misc_dwrv_goblet10_tgcp 1",
+      "ModDisposition 10"
+    ]
+  },
+  "1277013791444324431": {
+    "Prev": "29851308212628320349",
+    "Next": "220406661291426414",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "danso indules",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, really? There are many stories of their recent return, but I see nothing about you that indicates your involvement.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_ChurchPolice 50",
+      "Player->RemoveItem misc_dwrv_goblet10_tgcp 1"
+    ]
+  },
+  "220406661291426414": {
+    "Prev": "1277013791444324431",
+    "Next": "462029541115214917",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "danso indules",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Why are you giving this to me? I know I could use the money, but...",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Choice \"I stole it from Berel Sala.\" 1 \"The Bal Molagmer wish you well.\" 2"
+    ]
+  },
+  "462029541115214917": {
+    "Prev": "220406661291426414",
+    "Next": "6289156743095632520",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "danso indules",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, if it's none of my business...",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": []
+  },
+  "6289156743095632520": {
+    "Prev": "462029541115214917",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "danso indules",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That goblet looks familiar, what about it?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_dwrv_goblet10_tgcp",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_ChurchPolice",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give her the goblet.\" 3 \"Keep the goblet.\" 4"
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "10018164562358527356": {
+    "Prev": "",
+    "Next": "2050926713078194",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Archmagister Gothren never directly refuses requests; he just delays indefinitely, never giving an answer. I don't know of any solution, other than killing Gothren. I'll tell you plainly. I stand to gain if Archmagister Gothren dies. I say this so you won't think I'm trying to trick you. My advice is still good. Gothren won't name you Hortator, but he'll never come out and say so. And in House Telvanni it is customary to settle disputes in this manner.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "gothren",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B7_AryonHort",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal B7_AryonHort 40"
+    ]
+  },
+  "2050926713078194": {
+    "Prev": "10018164562358527356",
+    "Next": "2449496412482331494",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He is the current head of House Telvanni. He has held this position for many years. If you need to speak with him, you may find him in Tel Aruhn. If you have never been there, Tel Aruhn is west of Sadrith Mora. I will mark it on your map.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "gothren",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Tel Aruhn\""
+    ]
+  },
+  "2449496412482331494": {
+    "Prev": "2050926713078194",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mallam ryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, Archmagister Gothren is my patron. If you have business with him, you may find him in Tel Aruhn.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "gothren",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

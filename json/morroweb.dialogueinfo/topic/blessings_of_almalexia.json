@@ -1,0 +1,229 @@
+{
+  "712120392085112489": {
+    "Prev": "",
+    "Next": "96057061260473768",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mehra helas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Almalexia watches over all Her children -- the sick, the needy, the poor. Well... not actually in person. She used to... in person, you know. But She's made no public appearance for years, so the Temple takes care of Her children for Her. That's what the money goes for, child.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "96057061260473768": {
+    "Prev": "712120392085112489",
+    "Next": "35795308803816517",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mehra helas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Bless you anyway, child.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "35795308803816517": {
+    "Prev": "96057061260473768",
+    "Next": "2843104871966510473",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mehra helas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you, my child.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 5.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcLuck",
+        "Compare": "Less",
+        "Id": "",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "player->removeitem gold_001 5",
+      "additem gold_001 5",
+      "Cast \"Almalexia's Blessing\" Player"
+    ]
+  },
+  "2843104871966510473": {
+    "Prev": "35795308803816517",
+    "Next": "342813892439222106",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mehra helas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you, my child.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "player->removeitem gold_001 5",
+      "additem gold_001 5"
+    ]
+  },
+  "342813892439222106": {
+    "Prev": "2843104871966510473",
+    "Next": "1980757012749821810",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mehra helas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't even have five gold coins to your name? You poor little thing. Then bless you, my child, and may your fortunes improve.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 5.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcLuck",
+        "Compare": "Less",
+        "Id": "",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Cast \"Almalexia's Blessing\" Player"
+    ]
+  },
+  "1980757012749821810": {
+    "Prev": "342813892439222106",
+    "Next": "315777294833862",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mehra helas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't even have five gold coins to your name? You poor little thing. Then bless you, my child, and may your fortunes improve.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "315777294833862": {
+    "Prev": "1980757012749821810",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mehra helas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Our wealth dies with us, my child, but our good deeds outlive us all. Would you care to make a donation to the Temple, and receive the blessings of the Lady of Mercy?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Here's five gold for the Temple, mehra.\" 1 \"Sorry, mehra. Not today.\" 2 \"What's Almalexia going to do with this money?\" 3"
+    ]
+  }
+}

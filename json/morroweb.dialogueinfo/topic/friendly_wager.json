@@ -1,0 +1,382 @@
+{
+  "1087028490327310249": {
+    "Prev": "",
+    "Next": "2831727880757962",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ignatius_flaccus2",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Not today, I'm afraid.  I still need to get around to repairing my other bots.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_BattleBots1",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "2831727880757962": {
+    "Prev": "1087028490327310249",
+    "Next": "7546307851172928459",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ignatius_flaccus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Wow, you've got some guts, %PCRace. All right. Let's watch the fight.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 7.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 1000.0
+      }
+    ],
+    "Script": [
+      "set ignatius_flaccus.PCBotBet to 1000",
+      "Player->RemoveItem Gold_001 1000",
+      "set ignatius_flaccus.FightStart to 1",
+      "GoodBye"
+    ]
+  },
+  "7546307851172928459": {
+    "Prev": "2831727880757962",
+    "Next": "20388122182535229651",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ignatius_flaccus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sorry, %PCRace. It looks like you don't have enough money to bet. Nonetheless, we can still enjoy the fight.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 7.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_BattleBots1\" 60",
+      "set ignatius_flaccus.FightStart to 1",
+      "Goodbye"
+    ]
+  },
+  "20388122182535229651": {
+    "Prev": "7546307851172928459",
+    "Next": "81182783615356846",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ignatius_flaccus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I like your style, %PCRace. A nice, hefty bet. All right, let's watch the fight.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 250.0
+      }
+    ],
+    "Script": [
+      "set ignatius_flaccus.PCBotBet to 250",
+      "Player->RemoveItem Gold_001 250",
+      "set ignatius_flaccus.FightStart to 1",
+      "GoodBye"
+    ]
+  },
+  "81182783615356846": {
+    "Prev": "20388122182535229651",
+    "Next": "2067022270107619326",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ignatius_flaccus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sorry, %PCRace. It looks like you don't have enough money to bet.  Nonetheless, we can still enjoy the fight.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_BattleBots1\" 60",
+      "set ignatius_flaccus.FightStart to 1",
+      "Goodbye"
+    ]
+  },
+  "2067022270107619326": {
+    "Prev": "81182783615356846",
+    "Next": "41117870297054898",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ignatius_flaccus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Playing it safe I see. All right, let's watch the fight.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "set ignatius_flaccus.PCBotBet to 50",
+      "Player->RemoveItem Gold_001 50",
+      "set ignatius_flaccus.FightStart to 1",
+      "GoodBye"
+    ]
+  },
+  "41117870297054898": {
+    "Prev": "2067022270107619326",
+    "Next": "139322904269881383",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ignatius_flaccus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sorry, %PCRace. It looks like you don't have enough money to bet. Nonetheless, we can still enjoy the fight.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_BattleBots1\" 60",
+      "set ignatius_flaccus.FightStart to 1",
+      "Goodbye"
+    ]
+  },
+  "139322904269881383": {
+    "Prev": "41117870297054898",
+    "Next": "1924130161803530107",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ignatius_flaccus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Strength over speed, huh? Well, I'll take that bet. Now how much would you like to wager?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "set ignatius_flaccus.BotBetOn to 2",
+      "Choice \"50 septims.\" 5 \"250 septims.\" 6 \"1000 septims.\" 7"
+    ]
+  },
+  "1924130161803530107": {
+    "Prev": "139322904269881383",
+    "Next": "818122406966925399",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ignatius_flaccus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Speed over strength, huh?  Well, I'll take that bet. How much would you like to wager?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "set ignatius_flaccus.BotBetOn to 1",
+      "Choice \"50 septims.\" 5 \"250 septims.\" 6 \"1000 septims.\" 7"
+    ]
+  },
+  "818122406966925399": {
+    "Prev": "1924130161803530107",
+    "Next": "2787025319301892573",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ignatius_flaccus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Great, which bot will you bet on? The sphere bot is faster, but the steam centurion is stronger.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"I'll take the sphere bot.\" 3 \"I'll take the steam centurion.\" 4"
+    ]
+  },
+  "2787025319301892573": {
+    "Prev": "818122406966925399",
+    "Next": "182162439343607829",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ignatius_flaccus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, that's too bad. Well, the fight is starting. Let's watch.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_BattleBots1\" 90",
+      "set ignatius_flaccus.FightStart to 1"
+    ]
+  },
+  "182162439343607829": {
+    "Prev": "2787025319301892573",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ignatius_flaccus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, a wager. A bet. I'll double the money you put down if your bot wins. Would you like to place a bet?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_BattleBots1",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MS_BattleBots1",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, I would.\" 1 \"No, thank you.\" 2"
+    ]
+  }
+}

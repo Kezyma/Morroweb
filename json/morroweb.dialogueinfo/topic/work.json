@@ -1,0 +1,3327 @@
+{
+  "8891108291020417774": {
+    "Prev": "3046249381472296",
+    "Next": "3148887633161254",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have your reward. Good day to you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "town_Sadrith",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "3148887633161254": {
+    "Prev": "8891108291020417774",
+    "Next": "261963968885613487",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then here's your Thief Ring. Good day to you. And thank you very much for your assistance. And when I speak with my fellow Telvanni, I shall speak favorably of you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 15.0
+      }
+    ],
+    "Script": [
+      "player->additem \"Thief_Ring\" 1",
+      "Journal \"town_Sadrith\" 110",
+      "modDisposition 30",
+      "player->modReputation 1"
+    ]
+  },
+  "261963968885613487": {
+    "Prev": "3148887633161254",
+    "Next": "30502172241312930122",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then here's your Mage Ring. Good day to you. And thank you very much for your assistance. And when I speak with my fellow Telvanni, I shall speak favorably of you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 14.0
+      }
+    ],
+    "Script": [
+      "player->additem \"Mage_Ring\" 1",
+      "Journal \"town_Sadrith\" 105",
+      "modDisposition 30",
+      "player->modReputation 1"
+    ]
+  },
+  "30502172241312930122": {
+    "Prev": "261963968885613487",
+    "Next": "2894357981232220231",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then here's your Fighter Ring. And thank you very much for your assistance. And when I speak with my fellow Telvanni, I shall speak favorably of you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 13.0
+      }
+    ],
+    "Script": [
+      "player->additem \"Fighter_Ring\" 1",
+      "Journal \"town_Sadrith\" 100",
+      "modDisposition 30",
+      "player->modReputation 1"
+    ]
+  },
+  "2894357981232220231": {
+    "Prev": "30502172241312930122",
+    "Next": "188935824266231469",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So. You determined that Uleni Heleran was the source of the haunting, and you took care of it. No, no! I don't need to know any further details. You got rid of the ghost, so you shall have your reward. I have a Fighter Ring, a Mage Ring, and a Thief Ring. Each ring fortifies the attributes most prized in each of these specialized disciplines. Which ring would you prefer?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "town_Sadrith",
+        "Value": 5.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "uleni heleran",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Fighter Ring\" 13 \"Mage Ring\" 14 \"Thief Ring\" 15"
+    ]
+  },
+  "188935824266231469": {
+    "Prev": "2894357981232220231",
+    "Next": "3272132299150223291",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then here's your Thief Ring. Good day to you. And thank you very much for your assistance. And when I speak with my fellow Telvanni, I shall speak favorably of you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 12.0
+      }
+    ],
+    "Script": [
+      "player->additem \"Thief_Ring\" 1",
+      "Journal \"town_Sadrith\" 90",
+      "modDisposition 30",
+      "player->modReputation 1"
+    ]
+  },
+  "3272132299150223291": {
+    "Prev": "188935824266231469",
+    "Next": "6322286981906011552",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then here's your Mage Ring. Good day to you. And thank you very much for your assistance. And when I speak with my fellow Telvanni, I shall speak favorably of you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 11.0
+      }
+    ],
+    "Script": [
+      "player->additem \"Mage_Ring\" 1",
+      "Journal \"town_Sadrith\" 85",
+      "modDisposition 30",
+      "player->modReputation 1"
+    ]
+  },
+  "6322286981906011552": {
+    "Prev": "3272132299150223291",
+    "Next": "135564551255911423",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then here's your Fighter Ring. And thank you very much for your assistance. And when I speak with my fellow Telvanni, I shall speak favorably of you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "player->additem \"Fighter_Ring\" 1",
+      "Journal \"town_Sadrith\" 80",
+      "modDisposition 30",
+      "player->modReputation 1"
+    ]
+  },
+  "135564551255911423": {
+    "Prev": "6322286981906011552",
+    "Next": "217532409619682908",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then here's your Thief Ring. Good day to you. And thank you very much for your assistance. And when I speak with my fellow Telvanni, I shall speak favorably of you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 9.0
+      }
+    ],
+    "Script": [
+      "player->additem \"Thief_Ring\" 1",
+      "Journal \"town_Sadrith\" 75",
+      "modDisposition 30",
+      "player->modReputation 1"
+    ]
+  },
+  "217532409619682908": {
+    "Prev": "135564551255911423",
+    "Next": "1107740211863528523",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then here's your Mage Ring. Good day to you. And thank you very much for your assistance. And when I speak with my fellow Telvanni, I shall speak favorably of you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 8.0
+      }
+    ],
+    "Script": [
+      "player->additem \"Mage_Ring\" 1",
+      "Journal \"town_Sadrith\" 70",
+      "modDisposition 30",
+      "player->modReputation 1"
+    ]
+  },
+  "1107740211863528523": {
+    "Prev": "217532409619682908",
+    "Next": "61371558348924793",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then here's your Fighter Ring. And thank you very much for your assistance. And when I speak with my fellow Telvanni, I shall speak favorably of you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 7.0
+      }
+    ],
+    "Script": [
+      "player->additem \"Fighter_Ring\" 1",
+      "Journal \"town_Sadrith\" 65",
+      "modDisposition 30",
+      "player->modReputation 1"
+    ]
+  },
+  "61371558348924793": {
+    "Prev": "1107740211863528523",
+    "Next": "10632251392598221435",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then here's your Thief Ring. Good day to you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": [
+      "player->additem \"Thief_Ring\" 1",
+      "Journal \"town_Sadrith\" 60",
+      "modDisposition -20",
+      "player->modReputation 1"
+    ]
+  },
+  "10632251392598221435": {
+    "Prev": "61371558348924793",
+    "Next": "16061223121741414966",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then here's your Mage Ring. Good day to you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "player->additem \"Mage_Ring\" 1",
+      "Journal \"town_Sadrith\" 55",
+      "modDisposition -20",
+      "player->modReputation 1"
+    ]
+  },
+  "16061223121741414966": {
+    "Prev": "10632251392598221435",
+    "Next": "9713105022672519536",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then here's your Fighter Ring. Good day to you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "player->additem \"Fighter_Ring\" 1",
+      "Journal \"town_Sadrith\" 50",
+      "modDisposition -20",
+      "player->modReputation 1"
+    ]
+  },
+  "9713105022672519536": {
+    "Prev": "16061223121741414966",
+    "Next": "218956161499127703",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "[Sputter. Sputter.] The NERVE of that outlander! A disgrace to her race! She blames ME, when it was she who failed to obtain her Hospitality Papers. Hmmph. I'll take care of HER! And you? You got rid of the ghost, so you shall have your reward. I have a Fighter Ring, a Mage Ring, and a Thief Ring. Each ring fortifies the attributes most prized in each of these specialized disciplines. Which ring would you prefer?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Choice \"Fighter Ring\" 10 \"Mage Ring\" 11 \"Thief Ring\" 12"
+    ]
+  },
+  "218956161499127703": {
+    "Prev": "9713105022672519536",
+    "Next": "657117141488523503",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well. I should have known. She was quite abusive when she was released. Blamed ME for the whole thing, when it was she who failed to obtain her Hospitality Papers. I will deal with her in my own time. And you have my thanks. You have gotten rid of the ghost, so you shall have your reward. I have a Fighter Ring, a Mage Ring, and a Thief Ring. Each ring fortifies the attributes most prized in each of these specialized disciplines. Which ring would you prefer?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Choice \"Fighter Ring\" 7 \"Mage Ring\" 8 \"Thief Ring\" 9"
+    ]
+  },
+  "657117141488523503": {
+    "Prev": "218956161499127703",
+    "Next": "2132219571122579920",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well. I'm extremely displeased that you will not tell me the name of the sorcerer responsible. But you have gotten rid of the ghost, so you shall have your reward. I have a Fighter Ring, a Mage Ring, and a Thief Ring. Each ring fortifies the attributes most prized in each of these specialized disciplines. Which ring would you prefer?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Choice \"Fighter Ring\" 4 \"Mage Ring\" 5 \"Thief Ring\" 6"
+    ]
+  },
+  "2132219571122579920": {
+    "Prev": "657117141488523503",
+    "Next": "929918682840429247",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You say the hauntings will stop. How do you know? Can you prove it? What was causing the hauntings? If you want your reward, you must give me a satisfactory explanation.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "town_Sadrith",
+        "Value": 35.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_uleni's_papers",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      " Choice \"Explain what happened, but withhold Uleni's name.\" 1 \"Explain what happened, and include Uleni's name.\" 2 \"Explain what happened, and deliver Uleni's Papers.\" 3"
+    ]
+  },
+  "929918682840429247": {
+    "Prev": "2132219571122579920",
+    "Next": "2517822201309914123",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You say the hauntings will stop. How do you know? Can you prove it? What was causing the hauntings? If you want your reward, you must give me a satisfactory explanation.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "town_Sadrith",
+        "Value": 35.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "bk_uleni's_papers",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Explain what happened, but withhold Uleni's name.\" 1 \"Explain what happened, and include Uleni's name.\" 2"
+    ]
+  },
+  "2517822201309914123": {
+    "Prev": "929918682840429247",
+    "Next": "951829803251657388",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You say you killed the haunting? Weren't you listening? No matter how often it is killed, it reappears. Go. Look. Kill it again. And again. And it reappears. Go talk to Mage-Mistress Arara Uvulas, Master Neloth's Mouth. She said she couldn't see how to stop the hauntings, but maybe she can tell you where to start.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "uleni heleran",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "gateway_haunt",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"town_Sadrith\" 8"
+    ]
+  },
+  "951829803251657388": {
+    "Prev": "2517822201309914123",
+    "Next": "1315269581821724084",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angaredhel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A ghost is haunting our South Turret bed chamber. As soon as we get rid of it, it reappears. We can't rent the room, and all our guests are in an uproar. The Mage-Mistress Arara Uvulas, Master Neloth's Mouth, came to take a look, but said she couldn't see how to stop the hauntings. If you can get rid of the Gateway haunting permanently, I will offer you a choice from a number of valuable items from a local enchanter.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "uleni heleran",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"town_Sadrith\" 5"
+    ]
+  },
+  "1315269581821724084": {
+    "Prev": "951829803251657388",
+    "Next": "232153034183510400",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "daynes redothril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been paid.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Daynes",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "232153034183510400": {
+    "Prev": "1315269581821724084",
+    "Next": "3128113061259445316",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "daynes redothril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see you have the ebony ring and the glass ring from Ienas Sarandas. And I hear Ienas Sarandas was found dead in his home. I don't suppose YOU had anything to do with that? Here's the 50 drakes I promised you. And I'll take the goods. But don't expect me to thank you for them. No debt is worth a man's life. Of course, there were no witnesses. But everyone knows you killed that poor fool. Don't think anyone here will forgive you for that.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sarandas_ring_1",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sarandas_ring_2",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "ienas sarandas",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Daynes",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem Sarandas_ring_1 1",
+      "player->removeitem Sarandas_ring_2 1",
+      "player->additem gold_001 50",
+      "ModDisposition -20",
+      "Journal Town_Ald_Daynes 10"
+    ]
+  },
+  "3128113061259445316": {
+    "Prev": "232153034183510400",
+    "Next": "24145139920453395",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "daynes redothril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you again. You handled the affair very well.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Daynes",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "24145139920453395": {
+    "Prev": "3128113061259445316",
+    "Next": "3164516302967022377",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "daynes redothril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see you have the ebony ring and the glass ring from Ienas Sarandas. Here are the 50 drakes for your services. And thank you very much for handling this situation so well. I really appreciate it.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sarandas_ring_1",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sarandas_ring_2",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Daynes",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem Sarandas_ring_1 1",
+      "player->removeitem Sarandas_ring_2 1",
+      "player->additem gold_001 50",
+      "ModDisposition 40",
+      "Journal Town_Ald_Daynes 3"
+    ]
+  },
+  "3164516302967022377": {
+    "Prev": "24145139920453395",
+    "Next": "256832801748262237",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "daynes redothril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Daynes",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "256832801748262237": {
+    "Prev": "3164516302967022377",
+    "Next": "16765227591265824402",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "daynes redothril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see you have the ebony ring and the glass ring from Ienas Sarandas. Here are the 50 drakes for your services. Thank you very much.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sarandas_ring_1",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sarandas_ring_2",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Daynes",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem Sarandas_ring_1 1",
+      "player->removeitem Sarandas_ring_2 1",
+      "player->additem gold_001 50",
+      "ModDisposition 20",
+      "Journal Town_Ald_Daynes 5"
+    ]
+  },
+  "16765227591265824402": {
+    "Prev": "256832801748262237",
+    "Next": "20071303212661316300",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "daynes redothril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am looking for a fellow named Ienas Sarandas. I sold him two fine matched rings, one with an raw ebony stone, the other with a raw glass stone, but he has failed to pay the remaining 150 drakes owed. If you will find Sarandas, and either get the ebony ring and the glass ring and return them to me, or get the overdue payment of 150 drakes he owes me, I will pay you 50 gold.",
+    "Filters": [],
+    "Script": [
+      "Journal Town_Ald_Daynes 1"
+    ]
+  },
+  "20071303212661316300": {
+    "Prev": "16765227591265824402",
+    "Next": "13512289772635318464",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tiras sadus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been paid.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Tiras",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "13512289772635318464": {
+    "Prev": "20071303212661316300",
+    "Next": "6010266771373726057",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tiras sadus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see you have the racer suede belt from Ienas Sarandas. And I hear Ienas Sarandas was found dead in his home. I don't suppose YOU had anything to do with that? Here's the 25 drakes I promised you. And I'll take the goods. But don't expect me to thank you for them. No debt is worth a man's life. Of course, there were no witnesses. But everyone knows you killed that poor fool. Don't think anyone here will forgive you for that.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sarandas_belt",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "ienas sarandas",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Tiras",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem Sarandas_belt 1",
+      "player->additem gold_001 25",
+      "ModDisposition -20",
+      "Journal Town_Ald_Tiras 10"
+    ]
+  },
+  "6010266771373726057": {
+    "Prev": "13512289772635318464",
+    "Next": "1182372591914630546",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tiras sadus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you again. You handled the affair very well.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Tiras",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "1182372591914630546": {
+    "Prev": "6010266771373726057",
+    "Next": "175537234308921605",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tiras sadus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see you have the racer suede belt from Ienas Sarandas. Here are the 25 drakes for your services. And thank you very much for handling this situation so well. I really appreciate it.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sarandas_belt",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Tiras",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem Sarandas_belt 1",
+      "player->additem gold_001 25",
+      "ModDisposition 40",
+      "Journal Town_Ald_Tiras 3"
+    ]
+  },
+  "175537234308921605": {
+    "Prev": "1182372591914630546",
+    "Next": "10645123122388727805",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tiras sadus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Tiras",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "10645123122388727805": {
+    "Prev": "175537234308921605",
+    "Next": "5037184171251128858",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tiras sadus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see you have the racer suede belt from Ienas Sarandas. Here are the 25 drakes for your services. Thank you very much.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sarandas_belt",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Tiras",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem Sarandas_belt 1",
+      "player->additem gold_001 25",
+      "ModDisposition 20",
+      "Journal Town_Ald_Tiras 5"
+    ]
+  },
+  "5037184171251128858": {
+    "Prev": "10645123122388727805",
+    "Next": "1347041952164610802",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tiras sadus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I sold an Ashlander hand-crafted racer suede belt to a customer, but he has failed to make his final payment on time. If you would find Ienas Sarandas and get back my belt, or get the overdue payment of 50 septims he owes me, I will pay you 25 gold.",
+    "Filters": [],
+    "Script": [
+      "Journal Town_Ald_Tiras 1"
+    ]
+  },
+  "1347041952164610802": {
+    "Prev": "5037184171251128858",
+    "Next": "32556192323116825901",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bevene releth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been paid.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Bevene",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "32556192323116825901": {
+    "Prev": "1347041952164610802",
+    "Next": "1442621092381129928",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bevene releth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see you have the firejade amulet from Ienas Sarandas. And I hear Ienas Sarandas was found dead in his home. I don't suppose YOU had anything to do with that? Here's the 25 drakes I promised you. And I'll take the goods. But don't expect me to thank you for them. No debt is worth a man's life. Of course, there were no witnesses. But everyone knows you killed that poor fool. Don't think anyone here will forgive you for that.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sarandas_amulet",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "ienas sarandas",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Bevene",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem Sarandas_amulet 1",
+      "player->additem gold_001 25",
+      "ModDisposition -20",
+      "Journal Town_Ald_Bevene 10"
+    ]
+  },
+  "1442621092381129928": {
+    "Prev": "32556192323116825901",
+    "Next": "649341947214187",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bevene releth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you again. You handled the affair very well.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Bevene",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "649341947214187": {
+    "Prev": "1442621092381129928",
+    "Next": "29503193261818212269",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bevene releth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see you have the firejade amulet from Ienas Sarandas. Here are the 25 drakes for your services. And thank you very much for handling this situation so well. I really appreciate it.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sarandas_amulet",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Aldruhn",
+        "Value": 45.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Bevene",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem Sarandas_amulet 1",
+      "player->additem gold_001 25",
+      "ModDisposition 40",
+      "Journal Town_Ald_Bevene 3"
+    ]
+  },
+  "29503193261818212269": {
+    "Prev": "649341947214187",
+    "Next": "4983233851187915700",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bevene releth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Bevene",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "4983233851187915700": {
+    "Prev": "29503193261818212269",
+    "Next": "30278122061007110588",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bevene releth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see you have the firejade amulet from Ienas Sarandas. Here are the 25 drakes for your services. Thank you very much.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sarandas_amulet",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "Town_Ald_Bevene",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem Sarandas_amulet 1",
+      "player->additem gold_001 25",
+      "ModDisposition 20",
+      "Journal Town_Ald_Bevene 5"
+    ]
+  },
+  "30278122061007110588": {
+    "Prev": "4983233851187915700",
+    "Next": "1196731660155416593",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bevene releth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I made a firejade amulet for a customer, Ienas Sarandas. I made delivery, and received my first payment, but Sera Ienas is behind time for his final payment, and I can wait no longer. I will pay you 25 drakes if you will find Sera Ienas Sarandas and either recover and return my amulet, or extract the overdue payment of 50 drakes for me.",
+    "Filters": [],
+    "Script": [
+      "Journal Town_Ald_Bevene 1"
+    ]
+  },
+  "1196731660155416593": {
+    "Prev": "30278122061007110588",
+    "Next": "2686059252347028537",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "llether vari",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been paid.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Llethri",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "2686059252347028537": {
+    "Prev": "1196731660155416593",
+    "Next": "343226737311217534",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "llether vari",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see you have the designer shoes from Ienas Sarandas. And I hear Ienas Sarandas was found dead in his home. I don't suppose YOU had anything to do with that? Here's the 50 drakes I promised you. And I'll take the goods. But don't expect me to thank you for them. No debt is worth a man's life. Of course, there were no witnesses. But everyone knows you killed that poor fool. Don't think anyone here will forgive you for that.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sarandas_shoes_2",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "ienas sarandas",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Llethri",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem Sarandas_shoes_2 1",
+      "player->additem gold_001 50",
+      "ModDisposition -20",
+      "Journal Town_Ald_Llethri 10"
+    ]
+  },
+  "343226737311217534": {
+    "Prev": "2686059252347028537",
+    "Next": "26976122002561730362",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "llether vari",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you again. You handled the affair very well.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Llethri",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "26976122002561730362": {
+    "Prev": "343226737311217534",
+    "Next": "12936255911491431053",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "llether vari",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see you have the designer shoes from Ienas Sarandas. Here are the 50 drakes for your services. And thank you very much for handling this situation so well. I really appreciate it.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sarandas_shoes_2",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Llethri",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem Sarandas_shoes_2 1",
+      "player->additem gold_001 50",
+      "ModDisposition 40",
+      "Journal Town_Ald_Llethri 3"
+    ]
+  },
+  "12936255911491431053": {
+    "Prev": "26976122002561730362",
+    "Next": "3074829103260045997",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "llether vari",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Llethri",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "3074829103260045997": {
+    "Prev": "12936255911491431053",
+    "Next": "16230191812744024182",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "llether vari",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see you have the designer shoes from Ienas Sarandas. Here are the 50 drakes for your services. Thank you very much.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sarandas_shoes_2",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Llethri",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem Sarandas_shoes_2 1",
+      "player->additem gold_001 50",
+      "ModDisposition 20",
+      "Journal Town_Ald_Llethri 5"
+    ]
+  },
+  "16230191812744024182": {
+    "Prev": "3074829103260045997",
+    "Next": "25420266202273216361",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "llether vari",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I sold a pair of splendid designer shoes bearing the Light enchantment. The radiant glow is practical as well as ornamental -- quite useful for late evening gatherings. The purchaser, one Ienas Sarandus, paid me 120 drakes on account when he received the shoes, but he has failed to pay the balance of 120 septims in a timely fashion. If you would find this Ienas Sarandus, and return the shoes or the overdue payment of 120 gold he owes me, I will pay you 50 gold for your time and effort.",
+    "Filters": [],
+    "Script": [
+      "Journal Town_Ald_Llethri 1"
+    ]
+  },
+  "25420266202273216361": {
+    "Prev": "16230191812744024182",
+    "Next": "1730915595141957029",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bivale teneran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been paid.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Bivale",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "1730915595141957029": {
+    "Prev": "25420266202273216361",
+    "Next": "56414042407330415",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bivale teneran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see you have the brocade shirt and silk pants from Ienas Sarandas. And I hear Ienas Sarandas was found dead in his home. I don't suppose YOU had anything to do with that? Here's the 50 drakes I promised you. And I'll take the goods. But don't expect me to thank you for them. No debt is worth a man's life. Of course, there were no witnesses. But everyone knows you killed that poor fool. Don't think anyone here will forgive you for that.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sarandas_pants_2",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sarandas_shirt_2",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "ienas sarandas",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Bivale",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem Sarandas_shirt_2 1",
+      "player->removeitem Sarandas_pants_2 1",
+      "player->additem gold_001 50",
+      "ModDisposition -20",
+      "Journal Town_Ald_Bivale 10"
+    ]
+  },
+  "56414042407330415": {
+    "Prev": "1730915595141957029",
+    "Next": "31656195732675914452",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bivale teneran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you again. You handled the affair very well.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Bivale",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "31656195732675914452": {
+    "Prev": "56414042407330415",
+    "Next": "28682149311990932669",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bivale teneran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see you have the brocade shirt and silk pants from Ienas Sarandas. Here are the 50 drakes for your services. And thank you very much for handling this situation so well. I really appreciate it.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sarandas_pants_2",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sarandas_shirt_2",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Aldruhn",
+        "Value": 45.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Bivale",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem Sarandas_shirt_2 1",
+      "player->removeitem Sarandas_pants_2 1",
+      "ModDisposition 40",
+      "Journal Town_Ald_Bivale 3"
+    ]
+  },
+  "28682149311990932669": {
+    "Prev": "31656195732675914452",
+    "Next": "23007154882636221386",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bivale teneran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Bivale",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "23007154882636221386": {
+    "Prev": "28682149311990932669",
+    "Next": "1570919043091617989",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bivale teneran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see you have the brocade shirt and silk pants from Ienas Sarandas. Here are the 50 drakes for your services. Thank you very much.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sarandas_pants_2",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sarandas_shirt_2",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Town_Ald_Bivale",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem Sarandas_shirt_2 1",
+      "player->removeitem Sarandas_pants_2 1",
+      "player->additem gold_001 50",
+      "ModDisposition 20",
+      "Journal Town_Ald_Bivale 5"
+    ]
+  },
+  "1570919043091617989": {
+    "Prev": "23007154882636221386",
+    "Next": "222554022576615491",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bivale teneran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I made a brocade shirt and silk pants for Ienas Sarandas. He gave me half-payment on account, and said he'd pay me the rest later, but it's been weeks, and I have my own bills to pay. Find Ienas Sarandus, get the overdue payment of 360 drakes he owes me, or get the shirt and pants and bring them back to me, and I'll give you 50 drakes for your services.",
+    "Filters": [],
+    "Script": [
+      "Journal Town_Ald_Bivale 1"
+    ]
+  },
+  "222554022576615491": {
+    "Prev": "1570919043091617989",
+    "Next": "52532735564856410",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "elam andas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am grateful for the work you did for us. But I'm afraid I have no more work for you. Thank you anyway.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "town_Vivec",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "52532735564856410": {
+    "Prev": "222554022576615491",
+    "Next": "4735211653017530921",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "elam andas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very good. Please accept the belt, with our thanks. And accept, on the behalf of Vivec City, our thanks for ridding us of this dangerous killer.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "player->additem \"Belt of the Armor of God\" 1",
+      "player->modReputation 1",
+      "modDisposition 20",
+      "Journal town_Vivec 55"
+    ]
+  },
+  "4735211653017530921": {
+    "Prev": "52532735564856410",
+    "Next": "53254245230021937",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "elam andas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very good. Please accept the helm and cuirass, with our thanks. And accept, on the behalf of Vivec City, our thanks for ridding us of this dangerous killer.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "player->additem \"Indoril Cuirass\" 1",
+      "player->additem \"Indoril Helmet\" 1",
+      "player->modReputation 1",
+      "modDisposition 20",
+      "Journal town_Vivec 50"
+    ]
+  },
+  "53254245230021937": {
+    "Prev": "4735211653017530921",
+    "Next": "7236257792293914681",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "elam andas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The helm and cuirass are heavy armor, and useful only to a strong fighter. These items belonged to one of the Ordinators who were killed, and it is fitting that they should reward the one who avenged his murder. However, we ask that you not wear this armor in Vivec City, for you may be mistaken for an Ordinator and guard. Alternatively, the Belt of the Armor of God provides magical armor and improves resistance against hostile spells, and should be useful for any adventurer. Which would you like?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Choice \"I'd like the helm and cuirass.\" 4 \"I'd like the belt.\" 5"
+    ]
+  },
+  "7236257792293914681": {
+    "Prev": "53254245230021937",
+    "Next": "10456327091641827268",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "elam andas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "According to your report, the Dunmer woman you killed matches the description given us. We'll dispatch Ordinators to follow up, but I believe you have identified and executed the killer. On behalf of the city, and of the Office of the Watch, thank you. And now, for the reward I promised. I'll give you a choice. You may either have an Indoril helm and cuirass, or a Belt of the Armor of God.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "dreamer prophet",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 3"
+    ]
+  },
+  "10456327091641827268": {
+    "Prev": "7236257792293914681",
+    "Next": "949528503156242800",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "elam andas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As I said, I cannot officially hire you for this task. But if you find and execute this killer, when you return to report your success to me, I promise you a handsome reward.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "town_Vivec",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "949528503156242800": {
+    "Prev": "10456327091641827268",
+    "Next": "2224720903141020832",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "elam andas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I cannot hire you. Only Ordinators may serve the Watch. But if you can find this killer, and execute him, I personally promise you a very handsome reward. I require no commitment from you. Indeed, I cannot officially accept one. But if you are interested, I can tell you what we know about the seven victims and the reports of witnesses.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "\"Dreamer Prophet\"->enable ",
+      "Journal town_Vivec 10"
+    ]
+  },
+  "2224720903141020832": {
+    "Prev": "949528503156242800",
+    "Next": "3014621102722632318",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "elam andas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We've had seven killings in Vivec recently. All the victims had their throats slit. Most did not appear to have struggled. Five victims were outlanders. Two were Ordinators. The two Ordinators were armed and on duty. Their weapons were still in their belts. Nothing was removed from the victim's bodies.",
+    "Filters": [],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  },
+  "3014621102722632318": {
+    "Prev": "2224720903141020832",
+    "Next": "1246037692797226500",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "larrius varro",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Never mind about that work. As I said, it's all been taken care of. And I hope you like your present.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "town_balmora",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "1246037692797226500": {
+    "Prev": "3014621102722632318",
+    "Next": "234153887565011361",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "larrius varro",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see everything's been taken care of. And, remarkably enough, without creating any problems of a legal nature. You are far more discrete than I had hoped. I'm so glad I found that nice present from the Emperor. Here. It seems to be a ring. A very nice ring. There was no note with it, I'm afraid. But I'll let the Emperor know you've received it. I'm sure he'll be pleased. And, also, from me, because of your exceptional discretion, take this special volume from my own library, with my compliments.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "vadusa sathryon",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "marasa aren",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "madrale thirith",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "sovor trandel",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "thanelen velas",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcCrimeLevel",
+        "Compare": "Less",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal town_balmora 35",
+      "player->additem \"Ring_Surrounding_UNIQUE\" 1",
+      "player->additem BookSkill_Speechcraft1 1",
+      "player->modReputation 1",
+      "player->modDisposition 20",
+      "SetPCCrimeLevel 0"
+    ]
+  },
+  "234153887565011361": {
+    "Prev": "1246037692797226500",
+    "Next": "10034124262058012285",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "larrius varro",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see everything's been taken care of. And, just in case you had any problems of a legal nature, I spoke to some of my friends, and I've taken care of some things as well. And I DID find that nice present from the Emperor. Here. It seems to be a ring. A very nice ring. There was no note with it, I'm afraid. But I'll let the Emperor know you've received it. I'm sure he'll be pleased.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "vadusa sathryon",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "marasa aren",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "madrale thirith",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "sovor trandel",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "thanelen velas",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal town_balmora 30",
+      "player->additem \"Ring_Surrounding_UNIQUE\" 1",
+      "player->modReputation 1",
+      "player->modDisposition 20",
+      "SetPCCrimeLevel 0"
+    ]
+  },
+  "10034124262058012285": {
+    "Prev": "234153887565011361",
+    "Next": "22736241442127721775",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "larrius varro",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "When you have finished doing some things, stop back and see me, and we'll see if I've found that nice present from the Emperor for you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "town_balmora",
+        "Value": 25.0
+      }
+    ],
+    "Script": []
+  },
+  "22736241442127721775": {
+    "Prev": "10034124262058012285",
+    "Next": "1716729918917213958",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "larrius varro",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for coming, but I no longer have any work for you. The work I needed done involved some persons who used to frequent the Council Club in Balmora. But they all died violently. And mysteriously. The guards are very concerned, and they're following all leads. But somehow I know this is a mystery that will never be solved.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "vadusa sathryon",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "marasa aren",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "madrale thirith",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "sovor trandel",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "thanelen velas",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1716729918917213958": {
+    "Prev": "22736241442127721775",
+    "Next": "2422028623156785801",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "larrius varro",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Through various channels, I've learned a bit about your situation. I'd like to tell you a little story. And when I'm done, you can ask me some questions. And then, maybe, you might decide to go out and do some things. You might, and you might not. That's your affair. And I also want to tell you about a nice present I think the Emperor wants you to have. I'm not sure where it is. But maybe you'll want to check back and see if I've found it. Later. After you have done some things.",
+    "Filters": [],
+    "Script": []
+  },
+  "2422028623156785801": {
+    "Prev": "1716729918917213958",
+    "Next": "63898813151632051",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "turedus talanian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I'm pleased, and I think Master Aryon will be pleased.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "town_Tel_Vos",
+        "Value": 35.0
+      }
+    ],
+    "Script": []
+  },
+  "63898813151632051": {
+    "Prev": "2422028623156785801",
+    "Next": "255325752673924651",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "turedus talanian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for your report. So you think Cure Common Disease and Cure Blight Disease potions would be valuable trade goods. That makes sense. Master Aryon will be pleased. He can produce such potions very easily. Well done, %PCName. Here's your 100 drakes, with my thanks. I'll tell Master Aryon how you've handled this. I think he'll be pleased. If you're interested, and Master Aryon has work for you, you'll have my recommendation. And here. You'll find this amulet handy when visiting Telvanni wizards.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "town_Tel_Vos_wise",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "HT_BaladasAlly",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "player->additem gold_001 100",
+      "player->additem \"amulet of levitating\" 1",
+      "modDisposition 30",
+      "\"Aryon\"->ModDisposition 30",
+      "\"andil\"->modDisposition 20",
+      "\"milar maryon\"->modDisposition 20",
+      "\"mirvon andrethi\"->modDisposition 20",
+      "\"alenus vendu\"->modDisposition 20",
+      "Journal town_Tel_Vos 35",
+      "player->modReputation 1"
+    ]
+  },
+  "255325752673924651": {
+    "Prev": "63898813151632051",
+    "Next": "8709201432335932469",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "turedus talanian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for your report. So you think Cure Common Disease and Cure Blight Disease potions would be valuable trade goods. That makes sense. Master Aryon will be pleased. He can produce such potions very easily. Well done, %PCName. Here's your 100 drakes, with my thanks. I'll tell Master Aryon how you've handled this. I think he'll be pleased. If you're interested, and Master Aryon has work for you, you'll have my recommendation. And here. You'll find this amulet handy when visiting Telvanni wizards.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "town_Tel_Vos_she",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "HT_BaladasAlly",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "player->additem gold_001 100",
+      "player->additem \"amulet of levitating\" 1",
+      "modDisposition 30",
+      "\"Aryon\"->ModDisposition 30",
+      "\"andil\"->modDisposition 20",
+      "\"milar maryon\"->modDisposition 20",
+      "\"mirvon andrethi\"->modDisposition 20",
+      "\"alenus vendu\"->modDisposition 20",
+      "Journal town_Tel_Vos 35",
+      "player->modReputation 1"
+    ]
+  },
+  "8709201432335932469": {
+    "Prev": "255325752673924651",
+    "Next": "989024957264171670",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "turedus talanian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for your report. So you think Cure Common Disease and Cure Blight Disease potions would be valuable trade goods. That makes sense. Master Aryon will be pleased. He can produce such potions very easily. Well done, %PCName. Here's your 100 drakes, with my thanks. I'll tell Master Aryon how you've handled this. I think he'll be pleased. And here. You'll find this amulet handy when visiting Telvanni wizards.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "town_Tel_Vos_wise",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->additem gold_001 100",
+      "player->additem \"amulet of levitating\" 1",
+      "modDisposition 30",
+      "\"Aryon\"->ModDisposition 30",
+      "\"andil\"->modDisposition 20",
+      "\"milar maryon\"->modDisposition 20",
+      "\"mirvon andrethi\"->modDisposition 20",
+      "\"alenus vendu\"->modDisposition 20",
+      "player->modReputation 1",
+      "Journal town_Tel_Vos 35"
+    ]
+  },
+  "989024957264171670": {
+    "Prev": "8709201432335932469",
+    "Next": "493104722789517505",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "turedus talanian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for your report. So you think Cure Common Disease and Cure Blight Disease potions would be valuable trade goods. That makes sense. Master Aryon will be pleased. He can produce such potions very easily. Well done, %PCName. Here's your 100 drakes, with my thanks. I'll tell Master Aryon how you've handled this. I think he'll be pleased. And here. You'll find this amulet handy when visiting Telvanni wizards.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "town_Tel_Vos_she",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->additem gold_001 100",
+      "player->additem \"amulet of levitating\" 1",
+      "modDisposition 30",
+      "\"Aryon\"->ModDisposition 30",
+      "\"andil\"->modDisposition 20",
+      "\"milar maryon\"->modDisposition 20",
+      "\"mirvon andrethi\"->modDisposition 20",
+      "\"alenus vendu\"->modDisposition 20",
+      "player->modReputation 1",
+      "Journal town_Tel_Vos 35"
+    ]
+  },
+  "493104722789517505": {
+    "Prev": "989024957264171670",
+    "Next": "10188100071119119441",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "turedus talanian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. When you've determined the trade goods wanted by the Zainab, report back to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "town_Tel_Vos",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "10188100071119119441": {
+    "Prev": "493104722789517505",
+    "Next": "1626524535912927357",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "turedus talanian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sorry. Perhaps you'll reconsider. The offer stands.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "1626524535912927357": {
+    "Prev": "10188100071119119441",
+    "Next": "14565236722240224144",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "turedus talanian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. When you've determined the trade goods wanted by the Zainab, report back to me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "addtopic \"trade goods wanted\"",
+      "Journal town_Tel_Vos 10"
+    ]
+  },
+  "14565236722240224144": {
+    "Prev": "1626524535912927357",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "turedus talanian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We've been trying to establish trade links with the Zainab. Master Aryon thinks that shared self-interest will make the Zainab more careful about offending Tel Vos. But dealing with the Zainab is tricky, requiring knowledge of the Ashlanders, a silver tongue, and sharp wits. I'll pay you 100 drakes to visit the Zainab camp and find out what goods the tribe would be interested in trading for. Will you take the job?",
+    "Filters": [],
+    "Script": [
+      "Choice \"I'll take the job.\" 1 \"No thanks.\" 2"
+    ]
+  },
+  "2554525040468637": {
+    "Prev": "",
+    "Next": "2252913641207624560",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Our work is done. You brought me the ten propylon indices, and I gave you a master index. Now I'll send you to whichever stronghold you wish, anytime you wish. Just tell me which stronghold you want to visit -- Hlormaren, Marandus, Falasmaryon, Valenvaryon, Indoranyon, Berandas, Andasreth, Rotheran, Falensarano, or Telasero -- and I'll send you there directly.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Master_Index",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2252913641207624560": {
+    "Prev": "2554525040468637",
+    "Next": "27820212262370130451",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Finally I have all ten indices. Here's your 500 gold, and a master index. Here's how it will work. If you want to travel to a Dunmer stronghold, just speak with me here, and bring the master index with you. I'll send you directly to whichever stronghold you wish. And for return trips, just make sure you have your master index with you when you activate the propylons in the propylon chambers, and you'll be transported here to me directly.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Master_Index",
+        "Value": 45.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "index_telas",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem index_telas 1",
+      "player->additem gold_001 500",
+      "Journal MS_Master_Index 50",
+      "player->additem index_master 1",
+      "modDisposition 10",
+      "addtopic \"Hlormaren\"",
+      "addtopic \"Marandus\"",
+      "addtopic \"Falasmaryon\"",
+      "addtopic \"Valenvaryon\"",
+      "addtopic \"Indoranyon\"",
+      "addtopic \"Berandas\"",
+      "addtopic \"Andasreth\"",
+      "addtopic \"Rotheran\"",
+      "addtopic \"Falensarano\"",
+      "addtopic \"Telasero\""
+    ]
+  },
+  "27820212262370130451": {
+    "Prev": "2252913641207624560",
+    "Next": "29795105121702117571",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Just one more index. Bring me the Telasero Propylon Index, and then I'll make you a master index so you can travel to the Dunmer strongholds at will.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Master_Index",
+        "Value": 45.0
+      }
+    ],
+    "Script": []
+  },
+  "29795105121702117571": {
+    "Prev": "27820212262370130451",
+    "Next": "21027141122167519323",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here's 500 gold for the Falensarano index. One more to go -- the Telasero Propylon Index. It is in Telasero, a Dunmer stronghold between Suran and Molag Mar, on the southern coast of the Molag Amur region. All I know is that it is in a dark place, in a troth with a number of other objects. Not much to go on, I'm afraid. And I've heard it is a very, very bad place.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Master_Index",
+        "Value": 40.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "index_falen",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ShowMap Telasero",
+      "player->removeitem index_falen 1",
+      "player->additem gold_001 500",
+      "Journal MS_Master_Index 45",
+      "modDisposition 5"
+    ]
+  },
+  "21027141122167519323": {
+    "Prev": "29795105121702117571",
+    "Next": "9094119383018911976",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Bring me the Falensarano Propylon Index. Then we'll talk about the others.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Master_Index",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "9094119383018911976": {
+    "Prev": "21027141122167519323",
+    "Next": "518926473630519023",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here's 500 gold for the Rotheran index. Now bring me the Falensarano Propylon Index. This was last known in the possession of an obscure but tough-looking outlander named Huunen. He was last seen headed for Maelkashishi, a Daedric shrine on the western edge of the mountains west of Maar Gan. It is a bad place. He's probably dead. And locating his corpse there -- and presumably the index -- may be tough.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Master_Index",
+        "Value": 35.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "index_roth",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem index_roth 1",
+      "player->additem gold_001 500",
+      "Journal MS_Master_Index 40",
+      "modDisposition 5"
+    ]
+  },
+  "518926473630519023": {
+    "Prev": "9094119383018911976",
+    "Next": "14060209922677313404",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Bring me the Rotheran Propylon Index. Then we'll talk about the others.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Master_Index",
+        "Value": 35.0
+      }
+    ],
+    "Script": []
+  },
+  "14060209922677313404": {
+    "Prev": "518926473630519023",
+    "Next": "32478133982358118445",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here's 500 gold for the Andasreth index. Now bring me the Rotheran Propylon Index. Rols Ienith has the index. He's a deranged outlaw, and you'll probably have to kill him to get it. He lives in something called the Communal Hut on top of Rotheran, a Dunmer stronghold on the southern tip of Dagon Fel island.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Master_Index",
+        "Value": 30.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "index_andra",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Rotheran\"",
+      "player->removeitem index_andra 1",
+      "player->additem gold_001 500",
+      "Journal MS_Master_Index 35",
+      "modDisposition 5"
+    ]
+  },
+  "32478133982358118445": {
+    "Prev": "14060209922677313404",
+    "Next": "14218155321035625567",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Bring me the Andasreth Propylon Index. Then we'll talk about the others.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Master_Index",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "14218155321035625567": {
+    "Prev": "32478133982358118445",
+    "Next": "5358140132184718551",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. Here's 500 gold. Now bring me the Andasreth Propylon Index. A Dark Elf troublemaker named Brilnosu Llarys owns the index, but I've learned she doesn't carry it on her person. Her hide-out is in a dome on top of the Dunmer stronghold called Hlormaren, on the coast, due west of Balmora. Search carefully there for the index.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Master_Index",
+        "Value": 25.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "index_beran",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Hlormaren\"",
+      "player->removeitem index_beran 1",
+      "player->additem gold_001 500",
+      "Journal MS_Master_Index 30",
+      "modDisposition 5"
+    ]
+  },
+  "5358140132184718551": {
+    "Prev": "14218155321035625567",
+    "Next": "14667284622761317333",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Bring me the Berandas Propylon Index. Then we'll talk about the others.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Master_Index",
+        "Value": 25.0
+      }
+    ],
+    "Script": []
+  },
+  "14667284622761317333": {
+    "Prev": "5358140132184718551",
+    "Next": "194974407318995109",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here's 500 gold for the Indoranyon Index. Now bring me the Berandas Propylon Index. All I know is that the wizard Baladas Demnevanni of Gnisis has it. His tower is named Arvs Drelen. The folk of Gnisis seem terrified of him, but he's lived right among them for years, so he can't be all that bad.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Master_Index",
+        "Value": 20.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "index_indo",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ShowMap Gnisis",
+      "player->removeitem index_indo 1",
+      "player->additem gold_001 500",
+      "Journal MS_Master_Index 25",
+      "modDisposition 5"
+    ]
+  },
+  "194974407318995109": {
+    "Prev": "14667284622761317333",
+    "Next": "3239627053096812198",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Bring me the Indoranyon Propylon Index. Then we'll talk about the others.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Master_Index",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "3239627053096812198": {
+    "Prev": "194974407318995109",
+    "Next": "626216801711623824",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here's your 500 gold. Next I want the Indoranyon Propylon Index. Its current owner, Divayth Fyr, the old and powerful Telvanni wizard of Tel Fyr, a collector of antiquities, may not want to part with it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Master_Index",
+        "Value": 15.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "index_valen",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Tel Fyr\"",
+      "player->removeitem index_valen 1",
+      "player->additem gold_001 500",
+      "Journal MS_Master_Index 20",
+      "modDisposition 5"
+    ]
+  },
+  "626216801711623824": {
+    "Prev": "3239627053096812198",
+    "Next": "27552107252387018016",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Bring me the Valenvaryon Propylon Index. Then we'll talk about the others.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Master_Index",
+        "Value": 15.0
+      }
+    ],
+    "Script": []
+  },
+  "27552107252387018016": {
+    "Prev": "626216801711623824",
+    "Next": "182916691174130199",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here's 500 gold. Next bring me the Valenvaryon Propylon Index. Nibani Maesa, a Wise Woman of the Urshilaku Ashlander tribe in Urshilaku Camp, has this index. She may not know its worth -- perhaps you can buy it from her cheaply.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Master_Index",
+        "Value": 10.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "index_falas",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Urshilaku Camp\"",
+      "player->removeitem index_falas 1",
+      "player->additem gold_001 500",
+      "Journal MS_Master_Index 15",
+      "modDisposition 5"
+    ]
+  },
+  "182916691174130199": {
+    "Prev": "27552107252387018016",
+    "Next": "1821232444801730616",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Bring me the Falasmaryon Propylon Index. Then we'll talk about the others.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Master_Index",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "1821232444801730616": {
+    "Prev": "182916691174130199",
+    "Next": "3080311244280837441",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We're making excellent progress. Here's 500 gold. Now bring me the Falasmaryon Propylon Index. A pilgrim with no idea of the thing's value gave it as an offering to the shrine at Maar Gan. Shouldn't present any problem for an enterprising adventurer like yourself.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Master_Index",
+        "Value": 5.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "index_maran",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Maar Gan\"",
+      "player->removeitem index_maran 1",
+      "player->additem gold_001 500",
+      "Journal MS_Master_Index 10",
+      "modDisposition 5"
+    ]
+  },
+  "3080311244280837441": {
+    "Prev": "1821232444801730616",
+    "Next": "3170312963023711763",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Bring me the Marandus Propylon Index. Then we'll talk about the others.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Master_Index",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "3170312963023711763": {
+    "Prev": "3080311244280837441",
+    "Next": "14378124993178824558",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent. Here's your 500 gold. Now bring me the Marandus Propylon Index. I've learned it was packed with some other things and delivered to the St. Olms Temple in Vivec. Of course those priests would have no idea of the value of the thing. Probably just threw it on the floor. Just look around for empty crates in a storage area. Look carefully -- it's tiny and grey, and easily overlooked in poor lighting.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Master_Index",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "index_hlor",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem index_hlor 1",
+      "player->additem gold_001 500",
+      "Journal MS_Master_Index 5",
+      "modDisposition 5"
+    ]
+  },
+  "14378124993178824558": {
+    "Prev": "3170312963023711763",
+    "Next": "1875325647288445966",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "First bring me the Hlormaren Propylon Index. Then we'll talk about the others.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Master_Index",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1875325647288445966": {
+    "Prev": "14378124993178824558",
+    "Next": "1963420149310967942",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. Bring me the Hlormaren Propylon Index, and I'll pay you 500 gold. It's a tiny grey thumb-shaped thing about the size of a key. I've learned it is available from Irgola the Pawnbroker here in Caldera, three buildings down to the right. It's not actually enchanted, as such, so don't expect a Detect Enchantment spell to locate it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal MS_Master_Index 1"
+    ]
+  },
+  "1963420149310967942": {
+    "Prev": "1875325647288445966",
+    "Next": "3046249381472296",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well. Perhaps another time.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "3046249381472296": {
+    "Prev": "1963420149310967942",
+    "Next": "8891108291020417774",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "folms mirel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have a proposition. There's a teleportation artifact called a 'propylon index'. I know where to find ten of these propylon indices. I'll tell you where to find one. You bring it to me, and I'll pay you 500 gold and tell you where to find the next one. And when you've brought me all ten, I'll make you a master propylon index, so you can travel back and forth between Caldera and the ten propylon chambers all over Vvardenfell. If you're interested, I'll tell you where to look for the first one.",
+    "Filters": [],
+    "Script": [
+      "Choice \"I'm not interested.\" 1 \"I'm interested.\" 2"
+    ]
+  }
+}

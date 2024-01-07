@@ -1,0 +1,165 @@
+{
+  "124541148218820313": {
+    "Prev": "",
+    "Next": "5184237901321513008",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nels llendo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There's no more to be said now. Perhaps I'll see you again some time.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_3_Charming",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "5184237901321513008": {
+    "Prev": "124541148218820313",
+    "Next": "25678167392892913449",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nels llendo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I fear you are making an unwise decision, my friend. But, so be it...though I hate to soil my clothes with your blood. No matter. Such is the life of Nels Llendo.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "journal \"MV_3_Charming\" 90",
+      "ModDisposition -30",
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "25678167392892913449": {
+    "Prev": "5184237901321513008",
+    "Next": "2151217716230119273",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nels llendo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "An excellent choice, my friend. As I said, Nels Llendo can be a very good friend to have. If you are ever in Pelagiad, I can usually be found at the Halfway Tavern. Do stop by and visit -- I'm certain I can be of some service to you. Now, I must be off. Good day to you, sir!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "journal \"MV_3_Charming\" 100",
+      "additem \"Gold_001\" 50",
+      "player->removeitem \"Gold_001\" 50",
+      "ModDisposition 30",
+      "Goodbye"
+    ]
+  },
+  "2151217716230119273": {
+    "Prev": "25678167392892913449",
+    "Next": "3104511809334630768",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nels llendo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hmmmm...you don't seem to have the gold that Nels Llendo requires. That is a problem.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "Gold_001",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "journal \"MV_3_Charming\" 90",
+      "ModDisposition -30",
+      "SetFight 100",
+      "Goodbye"
+    ]
+  },
+  "3104511809334630768": {
+    "Prev": "2151217716230119273",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nels llendo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A very simple proposition, actually. You will give me 50 septims, and in return, you will be allowed to continue safely on your journey. Nels Llendo gives you his word as a gentleman that, once our transaction has taken place, you have nothing to fear from me. In fact, I can be a very good friend to have. What say you?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_3_Charming",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Fine. Take my money, brigand.\" 1 \"Never!\" 2"
+    ]
+  }
+}

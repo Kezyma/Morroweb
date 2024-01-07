@@ -1,0 +1,63 @@
+{
+  "29376275271574232005": {
+    "Prev": "",
+    "Next": "18113235732202214110",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vivec_god",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "'Dagoth Ur's Plans' summarizes what we know or suspect. You have a copy. It's also available in my library.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B8_MeetVivec",
+        "Value": 50.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_Dagoth_Urs_Plans",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "18113235732202214110": {
+    "Prev": "29376275271574232005",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vivec_god",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We know nothing for sure, but we have learned much from interrogating Sixth House cultists and victims of dream compulsions, and from our study of Dagoth Ur's actions. The Temple scholars and Inquisitors have prepared a document, 'Dagoth Ur's Plans,' that summarizes what we know or suspect. Take this copy. It's also available in my library.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B8_MeetVivec",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "player->additem \"bk_dagoth_urs_plans\" 1"
+    ]
+  }
+}

@@ -1,0 +1,391 @@
+{
+  "2486648242933018869": {
+    "Prev": "",
+    "Next": "1585268962877616570",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "radd hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled, but maybe you can join the Imperial Legion again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1585268962877616570": {
+    "Prev": "2486648242933018869",
+    "Next": "22569745938527696",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "radd hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He's dead? This is horrible.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "jocien ancois",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal IL_RescueHermit 200",
+      "ModDisposition -20"
+    ]
+  },
+  "22569745938527696": {
+    "Prev": "1585268962877616570",
+    "Next": "28039319222421214231",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "radd hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You rescued him already.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescueHermit",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "28039319222421214231": {
+    "Prev": "22569745938527696",
+    "Next": "18750305871822010090",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "radd hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You rescued Jocien? Good. Now he can continue his good works here in Vvardenfell.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescueHermit",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "\"Jocien Ancois\"->disable",
+      "Journal IL_RescueHermit 100",
+      "ModPCFacRep 5 \"Imperial Legion\"",
+      "ModDisposition 10"
+    ]
+  },
+  "18750305871822010090": {
+    "Prev": "28039319222421214231",
+    "Next": "13320298301339622648",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "radd hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Jocien has been trying to teach the Erabenimsun of Imperial culture and virtue, but some Ashlanders do not appreciate his efforts. He was at the Erabenimsun camp, but was taken from there. Go find Jocien, deal with his captors, make sure he is safe, and report back to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_ScrapMetal",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal IL_RescueHermit 10"
+    ]
+  },
+  "13320298301339622648": {
+    "Prev": "18750305871822010090",
+    "Next": "6573249891283315366",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "zennammu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I had forgotten him. He was easy to forget.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescueHermit",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "6573249891283315366": {
+    "Prev": "13320298301339622648",
+    "Next": "2553114363315668575",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "zennammu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, you have brought us a better man. We will let Jocien go.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescueHermit",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Journal IL_RescueHermit 50"
+    ]
+  },
+  "2553114363315668575": {
+    "Prev": "6573249891283315366",
+    "Next": "1250212732499911311",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "zennammu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Assaba-Bentus is on his way? I will believe that when he is here. Go wait outside for him.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescueHermit",
+        "Value": 25.0
+      }
+    ],
+    "Script": []
+  },
+  "1250212732499911311": {
+    "Prev": "2553114363315668575",
+    "Next": "1270013915606912852",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "zennammu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You want to take Jocien from us? But how can we work our magic without a man? I will let Jocien go if you can bring us a better man. The brave hunter Assaba-Bentus of the Erabenimsun is young, strong, and handsome. If you bring him here, we will let Jocien go.",
+    "Filters": [],
+    "Script": [
+      "Journal IL_RescueHermit 20"
+    ]
+  },
+  "1270013915606912852": {
+    "Prev": "1250212732499911311",
+    "Next": "560528479473529011",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mimanu zeba-adad",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Talk to Zennammu in the yurt.",
+    "Filters": [],
+    "Script": []
+  },
+  "560528479473529011": {
+    "Prev": "1270013915606912852",
+    "Next": "2927730726799024737",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mamaea ashun-idantus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Talk to Zennammu in the yurt.",
+    "Filters": [],
+    "Script": []
+  },
+  "2927730726799024737": {
+    "Prev": "560528479473529011",
+    "Next": "155848272747623407",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "assaba-bentus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What of him? I heard he was back in the Erabenimsun camp.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescueHermit",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "155848272747623407": {
+    "Prev": "2927730726799024737",
+    "Next": "1507556812238423466",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "assaba-bentus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He came to our camp speaking many lies from a large book. We told him the Mabrigash wanted to hear his words. Of course he was captured by the Mabrigash, who hold him captive still. He couldn't escape from his shirt without help.",
+    "Filters": [],
+    "Script": []
+  },
+  "1507556812238423466": {
+    "Prev": "155848272747623407",
+    "Next": "1107136083057322861",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Ashlanders",
+    "SpeakerCell": "Erabenimsun Camp",
+    "PlayerFaction": "",
+    "Text": "Yes, he speaks from his books and we listen to him. The way a guar listens to its owner.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "jocien ancois",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescueHermit",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1107136083057322861": {
+    "Prev": "1507556812238423466",
+    "Next": "8769151241279710721",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "kummu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He came with so many books. Tried to teach us. Then went to the Mabrigash. So many books. They were old, pages always falling out. I kept picking them up after him. If you seek him, look for a trail of pages.",
+    "Filters": [],
+    "Script": []
+  },
+  "8769151241279710721": {
+    "Prev": "1107136083057322861",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Ashlanders",
+    "SpeakerCell": "Erabenimsun Camp",
+    "PlayerFaction": "",
+    "Text": "He is like the Nix-Hound chasing a bone. We told him the Mabrigash wanted to hear him speak from his books. He went to them, and never returned.",
+    "Filters": [],
+    "Script": []
+  }
+}

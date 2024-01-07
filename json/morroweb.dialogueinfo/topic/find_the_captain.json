@@ -1,0 +1,363 @@
+{
+  "5997240972055523133": {
+    "Prev": "",
+    "Next": "953627866121527089",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "saenus lusius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There is still no word from the Captain. He is now presumed dead. This is a great loss to all of us at Fort Frostmoth, and a loss to the Legion as a whole.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_WildHunt",
+        "Value": 100.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "falx carius2",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "953627866121527089": {
+    "Prev": "5997240972055523133",
+    "Next": "184192331626322982",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "saenus lusius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank the gods that he has returned.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_WildHunt",
+        "Value": 100.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "falx carius",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "184192331626322982": {
+    "Prev": "953627866121527089",
+    "Next": "488513823450411702",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "saenus lusius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He must be found, and it is possible that these Skaal know something of the disappearance, though they claim they do not. Learn what you can from them. They do not seem to be threatening, but I believe they know more than they let on. Stay with them until you have learned more. I will take care of the soldiers here at the fort. I am counting on you. Good luck.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_CariusGone",
+        "Value": 105.0
+      }
+    ],
+    "Script": []
+  },
+  "488513823450411702": {
+    "Prev": "184192331626322982",
+    "Next": "2081522852892620877",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "saenus lusius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Skaal say they know nothing of the attack? Interesting. I have no doubt that they were not the instigators of this horror, but I do believe they know more than they have let on to you. For now, return to them. Live among them for a time, and see what you might learn. Take care with them, %PCName. They live by a strict code, and you will be expected to follow it while you are with them.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_CariusGone",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal BM_CariusGone 105"
+    ]
+  },
+  "2081522852892620877": {
+    "Prev": "488513823450411702",
+    "Next": "46301907810277546",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "saenus lusius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You must find Carius. And the Nord village would be a good place to begin looking.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_CariusGone",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_CariusGone",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "46301907810277546": {
+    "Prev": "2081522852892620877",
+    "Next": "8607287322760015660",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "saenus lusius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There was a terrible battle. We were caught completely by surprise. And in the aftermath we realized that Captain Carius was missing. I searched thoroughly, and there was no sign of his body, so I do not believe he is dead. And these wolf creatures...they were horrible and fierce. You must find him, %PCName. There is a Nord village on the north end of this island. They may know something about what has occurred.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Smugglers",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_CariusGone",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal BM_CariusGone 10"
+    ]
+  },
+  "8607287322760015660": {
+    "Prev": "46301907810277546",
+    "Next": "1813025143864628175",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gaea artoria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We've given up the search. He still might turn up, but I'm not counting on it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_WildHunt",
+        "Value": 100.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "falx carius2",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1813025143864628175": {
+    "Prev": "8607287322760015660",
+    "Next": "2434112309897321581",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gaea artoria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He's back! I knew he'd make it. We're all better off with him in charge.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_WildHunt",
+        "Value": 100.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "falx carius",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2434112309897321581": {
+    "Prev": "1813025143864628175",
+    "Next": "2746520972216411678",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gaea artoria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Those Nords may say they don't know nothing, but I don't believe that they don't know nothing! Stick with them for a while. See if you can figure anything out. Even if they didn't take him, I'll bet they know who did! You stick with them. I'll take care of anything here at the fort. Counting on you, %PCName. We have to find the Cap'n. Now go!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_CariusGone",
+        "Value": 105.0
+      }
+    ],
+    "Script": []
+  },
+  "2746520972216411678": {
+    "Prev": "2434112309897321581",
+    "Next": "58882762067417002",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gaea artoria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "They don't know anything? I doubt that! You'll need to get closer. They're a cagey bunch. Go live among them, see what you can learn. You may have to stick with them for a long time, but you're up to it. I'll take care of things here--you keep an eye on those Nords. Get in good with them.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_CariusGone",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal BM_CariusGone 110"
+    ]
+  },
+  "58882762067417002": {
+    "Prev": "2746520972216411678",
+    "Next": "3766326413198011977",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gaea artoria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've gotta find him. I'm sure the Nord village is a good place to start.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_CariusGone",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_CariusGone",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "3766326413198011977": {
+    "Prev": "58882762067417002",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gaea artoria",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There was an attack...some kind of wolf creatures. I don't know exactly how it all happened. We were outmanned, but the soldiers fought valiantly, especially the Cap'n. When it was over, he was gone. I didn't see him go down, so I assume he was alive. My guess is that those savages from the Nord village have something to do with this. You need to find him, %PCName.",
+    "Filters": [],
+    "Script": [
+      "Journal BM_CariusGone 10"
+    ]
+  }
+}

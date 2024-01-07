@@ -1,0 +1,68 @@
+{
+  "24765270853169620010": {
+    "Prev": "",
+    "Next": "2946661372007223879",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galos mathendis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Master Aryon is my patron. He lives in the new Telvanni city of Tel Vos.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "aryon",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2946661372007223879": {
+    "Prev": "24765270853169620010",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Tel Vos",
+    "PlayerFaction": "",
+    "Text": "If you want to speak with him, you must levitate up to the top of the tower and look for a door facing south.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "aryon",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotCell",
+        "Func": "NotCell",
+        "Compare": "Equal",
+        "Id": "Tel Vos, Aryon's Chambers",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

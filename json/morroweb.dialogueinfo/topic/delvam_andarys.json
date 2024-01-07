@@ -1,0 +1,175 @@
+{
+  "24421611624155836": {
+    "Prev": "",
+    "Next": "240731187827028011",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharer rotheloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have heard that you claim to be the Incarnate. I do not know the truth of the matter, but for now I will not give you duties.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B8_MeetVivec",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "240731187827028011": {
+    "Prev": "24421611624155836",
+    "Next": "1702226066361211704",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharer rotheloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled from the Temple.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1702226066361211704": {
+    "Prev": "240731187827028011",
+    "Next": "13771258712510221954",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharer rotheloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You brought the Temple's justice to Delvam Andarys.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_Mawia",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "13771258712510221954": {
+    "Prev": "1702226066361211704",
+    "Next": "198642015546015508",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharer rotheloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already brought justice to Delvam Andarys? You have done the Temple a great service. I have more urgent duties for you.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "delvam andarys",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TT_Mawia",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TT_Mawia 100",
+      "ModPCFacRep 5 \"Temple\"",
+      "ModDisposition 20"
+    ]
+  },
+  "198642015546015508": {
+    "Prev": "13771258712510221954",
+    "Next": "2825345461555910156",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharer rotheloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Delvam Andarys is dead. You have done the Temple a great service. When you are ready, I have more urgent duties for you.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "delvam andarys",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TT_Mawia 100",
+      "ModPCFacRep 5 \"Temple\"",
+      "ModDisposition 20"
+    ]
+  },
+  "2825345461555910156": {
+    "Prev": "198642015546015508",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharer rotheloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Delvam Andarys is in Mawia, which is southeast of Molag Mar. From here, follow the river to the east as it heads south. It is not far before it opens into a lake. Turn east again and look for an island just south of the coast. Go there, find Delvam Andarys, and make certain that he does not escape the justice of the Temple.",
+    "Filters": [],
+    "Script": [
+      "Journal TT_Mawia 10",
+      "ShowMap \"Tel Branora\""
+    ]
+  }
+}

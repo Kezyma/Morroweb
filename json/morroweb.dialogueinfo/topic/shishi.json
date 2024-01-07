@@ -1,0 +1,227 @@
+{
+  "3092611814237015968": {
+    "Prev": "",
+    "Next": "804738973020830453",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faves andas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already dealt with Brerama Selas, the only Redoran I was worried about. Report back to Aryon and I will handle any Redorans still here in my own time.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_Shishi",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "804738973020830453": {
+    "Prev": "3092611814237015968",
+    "Next": "2948081582918918336",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faves andas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you killed Brerama Selas? Excellent. I can handle the other Redorans on my own. I will tell Master Aryon that you assisted me. You might find these books of interest, %PCName. I have already studied them.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "brerama selas",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HT_Shishi 50",
+      "Player->AddItem BookSkill_Alteration5 1",
+      "Player->AddItem bookskill_destruction3 1",
+      "RemoveItem BookSkill_Alteration5 1",
+      "RemoveItem bookskill_destruction3 1"
+    ]
+  },
+  "2948081582918918336": {
+    "Prev": "804738973020830453",
+    "Next": "51635771838725669",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faves andas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You must kill Brerama Selas. Once she is dead, I will take care of the other Redorans in my time.",
+    "Filters": [],
+    "Script": []
+  },
+  "51635771838725669": {
+    "Prev": "2948081582918918336",
+    "Next": "2273622215745215611",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have already ended the Redoran siege of Shishi.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_Shishi",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2273622215745215611": {
+    "Prev": "51635771838725669",
+    "Next": "4997302941717320239",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, the Faves Andas may no longer be living, but the Redorans will not have Shishi either. You have saved a potentially embarrassing situation, %PCName.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "faves andas",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "brerama selas",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HT_Shishi 100",
+      "ModPCFacRep 5 \"Telvanni\""
+    ]
+  },
+  "4997302941717320239": {
+    "Prev": "2273622215745215611",
+    "Next": "17585208732668524324",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So Faves Andes is dead? What about the Redorans in Shishi? Return to Shishi and make sure the leader of the Redorans is dead.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "faves andas",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "17585208732668524324": {
+    "Prev": "4997302941717320239",
+    "Next": "1795112152256244005",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am glad to hear that Faves Andes is safe. Perhaps this will keep House Redoran from making any other unwise decisions. Vvardenfell has plenty of land for all three Great Houses. I have prepared for you a Silver Staff of War, another tradition gift of House Telvanni.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "brerama selas",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HT_Shishi 100",
+      "Player->AddItem \"Silver Staff of War\" 1",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 5",
+      "Player->ModReputation 1"
+    ]
+  },
+  "1795112152256244005": {
+    "Prev": "17585208732668524324",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Several Redoran have infiltrated Shishi and the Telvanni Faves Andes has gone into hiding. Shishi is a Velothi tower in middle of the Foyada Bani-Dad northwest of Maar Gan. Leave Maar Gan, go east past the silt strider, then follow the Foyada north and west. If you cannot find Faves Andes, look for a skull on a desk, which opens a door to a secret storage space.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_Monopoly",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HT_Shishi 10",
+      "StartScript ShishiOdirniranFights"
+    ]
+  }
+}

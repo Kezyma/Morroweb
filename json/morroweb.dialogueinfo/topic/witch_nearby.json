@@ -1,0 +1,129 @@
+{
+  "70761743163833078": {
+    "Prev": "",
+    "Next": "1982225914140222963",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "botrir",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sure she hasn't gotten far. When I find her, I'll tear off her legs and break them over her head!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_RecoverWidowmaker",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MV_RecoverWidowmaker",
+        "Value": 40.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "iveri llothri",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1982225914140222963": {
+    "Prev": "70761743163833078",
+    "Next": "18785221863248311369",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "botrir",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent! Let us go, stranger. I think she headed to the northwest, but I can't be sure. Let's find her! I'll tear her head off and spit in the stump!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_RecoverWidowmaker\" 30",
+      "\"Botrir\"->AiFollow Player 0 0 0 0 0 0 0 0"
+    ]
+  },
+  "18785221863248311369": {
+    "Prev": "1982225914140222963",
+    "Next": "8740270002906713552",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "botrir",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Bah! I'll find her myself then!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_RecoverWidowmaker\" 40",
+      "Goodbye"
+    ]
+  },
+  "8740270002906713552": {
+    "Prev": "18785221863248311369",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "botrir",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Aye, I was escorting this...woman, Iveri Llothri, to Tel Aruhn, and she seemed real friendly. Then for no reason, she turned on me! Put me under some spell, and by the time I realized what was happening, she had taken off with my gold, my armor, and my axe, Widowmaker! Damn her for even laying hands on the axe of my fathers! I'll tear her throat out and wear it as a belt! Come with me, stranger; help me find this devil and end her pitiful existence!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_RecoverWidowmaker",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_RecoverWidowmaker\" 20",
+      "Choice \"I'll help you recover your axe.\" 1 \"Sorry. You're on your own.\" 2"
+    ]
+  }
+}

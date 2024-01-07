@@ -1,0 +1,117 @@
+{
+  "1619018371671630615": {
+    "Prev": "",
+    "Next": "1822523079911950",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bugrol gro-bagul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hey, you got my note, so go! Don't want to stay out here all day. No fun to sleep on rocks.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_Bugrol",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "1822523079911950": {
+    "Prev": "1619018371671630615",
+    "Next": "2631628153225366",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bugrol gro-bagul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good, good. I guess you know how those townbosses can be, too. Mean, mean. Good thing I'm smarter than them. You take the note to Bashuk gra-Bat in Caldera. She's good friend of Bugrol. She help me out. You're okay by me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "RemoveItem \"bk_NoteFromBugrol\" 1",
+      "player->AddItem \"bk_NoteFromBugrol\" 1",
+      "Journal \"MV_Bugrol\" 20",
+      "Goodbye"
+    ]
+  },
+  "2631628153225366": {
+    "Prev": "1822523079911950",
+    "Next": "206761854481713449",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bugrol gro-bagul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "P'lah! You just like the rest. No present for you, stinkweed. You go now.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -30",
+      "Journal \"MV_Bugrol\" 25",
+      "Goodbye"
+    ]
+  },
+  "206761854481713449": {
+    "Prev": "2631628153225366",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bugrol gro-bagul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You wanna help? Sure you do, good friend. Look--those guys in Caldera think I did something bad, so they're looking for me. I'm too smart for them, though. I can hide real good. My friend can help me. Maybe you bring her a note for me? I can give you a present. Really!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_Bugrol",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Choice \"Take note from Bugrol.\" 1 \"Don't take note from Bugrol.\" 2"
+    ]
+  }
+}

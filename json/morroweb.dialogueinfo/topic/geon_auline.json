@@ -1,0 +1,116 @@
+{
+  "18069211062775032265": {
+    "Prev": "",
+    "Next": "19163106472196721469",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Geon Auline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, that's me.",
+    "Filters": [],
+    "Script": []
+  },
+  "19163106472196721469": {
+    "Prev": "18069211062775032265",
+    "Next": "26030780139845180",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Nerile Andaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He's dead? There's no explanation for that. He was ill, yes, but the disease wouldn't have killed him so quickly. %PCName... I find it difficult to believe you had nothing to do with this. I can't trust you, and I'm afraid I can't work with someone I don't trust. Please leave. Now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_CrimsonPlague",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MS_CrimsonPlague",
+        "Value": 50.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Geon Auline",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "moddisposition -50",
+      "Journal MS_CrimsonPlague 49",
+      "Goodbye"
+    ]
+  },
+  "26030780139845180": {
+    "Prev": "19163106472196721469",
+    "Next": "208342158280538010",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Nerile Andaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I imagine he should be feeling much better now, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_CrimsonPlague",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "208342158280538010": {
+    "Prev": "26030780139845180",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Nerile Andaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "His house is in Godsreach. He rarely leaves it, from what I understand.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_CrimsonPlague",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  }
+}

@@ -1,0 +1,299 @@
+{
+  "2350524040492646": {
+    "Prev": "",
+    "Next": "788811521893631724",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, you certainly blew it, didn't you?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_12a",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "788811521893631724": {
+    "Prev": "2350524040492646",
+    "Next": "2608210010157310265",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Quite a nice job you did, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_12a",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2608210010157310265": {
+    "Prev": "788811521893631724",
+    "Next": "23990259152249132668",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He's dead? Excellent. It's a shame I wasn't there to see it myself, but I do need to keep my distance. Plausible deniability, of course. The investors should start pulling out any day now, %PCRank. Good work. Here, take this. It's a special present for all the good work you've done. You won't see another like it anywhere.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_12a",
+        "Value": 40.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal CO_12a 50",
+      "ModPCFacRep 12 \"East Empire Company\"",
+      "player->additem \"BM_ice_shield\" 1",
+      "player->additem \"gold_001\" 4000"
+    ]
+  },
+  "23990259152249132668": {
+    "Prev": "2608210010157310265",
+    "Next": "8798323192415522150",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Make sure no one sees you. If you're spotted, or if the guards return by the time you shoot Falco, you'll most likely be caught. You're on your own if that should happen, %PCRank. I'll disavow any knowledge of the plot.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_12a",
+        "Value": 10.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "8798323192415522150": {
+    "Prev": "23990259152249132668",
+    "Next": "1083543102621012365",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Once you give Baslod the signal, he'll attack and draw away the guards.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_12a",
+        "Value": 5.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "1083543102621012365": {
+    "Prev": "8798323192415522150",
+    "Next": "2029325922203516541",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Why, yes, by those terrible Nords, of course. At least that's how it'll look. I've contracted a simpleton to pose as one of the Native Nords; he'll make an attempt on Falco's life and distract the guards. That's when YOU eliminate Falco. It's all been arranged, so you've little to worry about. Baslod will wait for your signal, and then strike.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal CO_12a 5"
+    ]
+  },
+  "2029325922203516541": {
+    "Prev": "1083543102621012365",
+    "Next": "226023593226057884",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've protected me well, %PCName. I appreciate it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_12",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "226023593226057884": {
+    "Prev": "2029325922203516541",
+    "Next": "156061980252223303",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've protected me well, %PCName. I appreciate it. Here, take this. It's the only one like it, so far as I know. Oh, and your usual compensation.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_12",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal CO_12 110",
+      "player->additem \"gold_001\" 1000",
+      "player->additem \"p_restore_health_e\" 10",
+      "player->additem \"BM_ice_shield\" 1",
+      "ModPCFacRep 12 \"East Empire Company\""
+    ]
+  },
+  "156061980252223303": {
+    "Prev": "226023593226057884",
+    "Next": "224655295311224994",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Keep sharp! There may be others!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_12",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "224655295311224994": {
+    "Prev": "156061980252223303",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's not that I value my own life so highly, but that without me here, there will be no one to directly oppose Carnius' actions. Just stay close for a while; we'll figure out what's going on soon enough.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal CO_12 10",
+      "StartScript ColonyAssassin"
+    ]
+  }
+}

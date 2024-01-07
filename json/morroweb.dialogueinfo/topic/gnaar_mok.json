@@ -1,0 +1,271 @@
+{
+  "9082116230579699": {
+    "Prev": "",
+    "Next": "779308981197010833",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drulene falen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Gnaar Mok is an island fishing village south along the coast. Here. Let me mark it on your map. Legion patrols pass here on their way to Gnaar Mok. They head west for the coast. The ruins of Andasreth, an old Dunmer stronghold, are out to the west. Very large building, hard to miss. The troopers just follow the coast south to Gnaar Mok, I believe. I've never been that way myself.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_2_6thHouse",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Gnaar Mok\""
+    ]
+  },
+  "779308981197010833": {
+    "Prev": "9082116230579699",
+    "Next": "23364179081614145",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raesa pullia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Follow the coast, wading around headlands when necessary. Pass a shipwreck. When the coast levels out and turns from barren rock to green swamp, you're in the Bitter Coast region. Keep south, with the water on your left, until you see Gnaar Mok, an island just off the coast. There's a crude plank bridge through some rocks to the island itself. It's a rough place, popular with adventurers, smugglers, and outlaws, but maybe someone in Gnaar Mok can tell you how to find the Ilunibi sea caverns.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_2_6thHouse",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Gnaar Mok\""
+    ]
+  },
+  "23364179081614145": {
+    "Prev": "779308981197010833",
+    "Next": "1083425663308630799",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raesa pullia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Gnaar Mok is an island fishing village on the Bitter Coast, roughly west of Caldera and Ald'ruhn. Here. Let me mark it on your map. There is no marked route to Gnaar Mok from Ald'ruhn. It's no easy trip. Our patrols take the Balmora road. At the Gnisis-Balmora-Ald'ruhn signpost, go south, then immediately west on a side road to Drulene Falen's cottage. Then head crosscountry west to the coast, with the old Dunmer stronghold at Andasreth as a landmark. When you hit the coast, turn south.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_2_6thHouse",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  },
+  "1083425663308630799": {
+    "Prev": "23364179081614145",
+    "Next": "1107836491078019511",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Gnaar Mok",
+    "PlayerFaction": "",
+    "Text": "Thankfully those breeding netch have been taken care of. Everyone seems a bit better now.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "netch_betty_ilgn",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "netch_bull_ilgn",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Gnaar Mok\""
+    ]
+  },
+  "1107836491078019511": {
+    "Prev": "1083425663308630799",
+    "Next": "11376221831362626253",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Gnaar Mok",
+    "PlayerFaction": "",
+    "Text": "Everyone's worried about those two breeding netch that have been attacking.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Gnaar Mok\""
+    ]
+  },
+  "11376221831362626253": {
+    "Prev": "1107836491078019511",
+    "Next": "286192853745128337",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "artisa arelas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Gnaar Mok is a tiny island fishing village in the Bitter Coast region of western Vvardenfell.",
+    "Filters": [],
+    "Script": [
+      "ShowMap \"Gnaar Mok\""
+    ]
+  },
+  "286192853745128337": {
+    "Prev": "11376221831362626253",
+    "Next": "286932325942225530",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Savant",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Gnaar Mok is a tiny island fishing village in the Bitter Coast region of western Vvardenfell.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Gnaar Mok\""
+    ]
+  },
+  "286932325942225530": {
+    "Prev": "286192853745128337",
+    "Next": "3158123819007462",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Scout",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Seyda Neen",
+    "PlayerFaction": "",
+    "Text": "Gnaar Mok is a tiny island fishing village in the Bitter Coast region of western Vvardenfell.",
+    "Filters": [],
+    "Script": [
+      "ShowMap \"Gnaar Mok\""
+    ]
+  },
+  "3158123819007462": {
+    "Prev": "286932325942225530",
+    "Next": "132582276931748526",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Scout",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Hla Oad",
+    "PlayerFaction": "",
+    "Text": "Gnaar Mok is a tiny island fishing village in the Bitter Coast region of western Vvardenfell.",
+    "Filters": [],
+    "Script": [
+      "ShowMap \"Gnaar Mok\""
+    ]
+  },
+  "132582276931748526": {
+    "Prev": "3158123819007462",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "radd hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Gnaar Mok is a tiny island fishing village in the Bitter Coast region of western Vvardenfell.",
+    "Filters": [],
+    "Script": [
+      "ShowMap \"Gnaar Mok\""
+    ]
+  }
+}

@@ -1,0 +1,249 @@
+{
+  "1897317817223277803": {
+    "Prev": "",
+    "Next": "797113916579313302",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled from the Fighters Guild. Until you make amends, I cannot discuss contracts with you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "797113916579313302": {
+    "Prev": "1897317817223277803",
+    "Next": "20854270293064228509",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Pelagiad",
+    "PlayerFaction": "",
+    "Text": "I've heard of them. They're holed up in Mannammu. Go south out of town, and a bit to the east. You'll see a little landbridge across the water. Leads right to it. Take care in there, though. There are six or seven of those fetchers, and they don't take kindly to visitors.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_VerethiGang",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "20854270293064228509": {
+    "Prev": "797113916579313302",
+    "Next": "8888286971918311942",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Pelagiad",
+    "PlayerFaction": "",
+    "Text": "I know who you're talking about. Look in Mannammu.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_VerethiGang",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "8888286971918311942": {
+    "Prev": "20854270293064228509",
+    "Next": "2331648982901920427",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Pelagiad",
+    "PlayerFaction": "",
+    "Text": "I'm not sure I want to talk to you about that.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_VerethiGang",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "2331648982901920427": {
+    "Prev": "8888286971918311942",
+    "Next": "264121051861631065",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Verethi Gang won't trouble anyone anymore.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_VerethiGang",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "264121051861631065": {
+    "Prev": "2331648982901920427",
+    "Next": "7704965455886442",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you already killed Dovres Verethi, then I guess I ought to go ahead and pay you the 1000 septims.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_VerethiGang",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Dovres Verethi",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_VerethiGang 100",
+      "ModPCFacRep 10 \"Fighters Guild\"",
+      "ModDisposition 20",
+      "Player->AddItem Gold_001 1000"
+    ]
+  },
+  "7704965455886442": {
+    "Prev": "264121051861631065",
+    "Next": "252352462923707053",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good work, %PCName. Here's the 1000 septims from the contract.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_VerethiGang",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Dovres Verethi",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_VerethiGang 100",
+      "ModPCFacRep 10 \"Fighters Guild\"",
+      "ModDisposition 20",
+      "Player->AddItem Gold_001 1000"
+    ]
+  },
+  "252352462923707053": {
+    "Prev": "7704965455886442",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Our client wants the leader of the Verethi Gang, Dovres Verethi, killed. The Verethi Gang are smugglers based in Mannammu just southeast of Pelagiad. Kill Dovres Verethi and report back to me for 1000 septims.",
+    "Filters": [],
+    "Script": [
+      "Journal FG_VerethiGang 10"
+    ]
+  }
+}

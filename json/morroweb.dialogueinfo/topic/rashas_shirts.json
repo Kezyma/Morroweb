@@ -1,0 +1,92 @@
+{
+  "189687051648326022": {
+    "Prev": "",
+    "Next": "31548172053232221820",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bivale teneran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you again. Rasha does do good work, does he not?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_TraderLate",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "31548172053232221820": {
+    "Prev": "189687051648326022",
+    "Next": "4398001642310675",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bivale teneran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you not have the shirts, friend? I can see you are oath-bound to Zenithar to deliver them. You had better recover them and deliver them to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_TraderLate",
+        "Value": 30.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "exquisite_shirt_01_rasha",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "4398001642310675": {
+    "Prev": "31548172053232221820",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bivale teneran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah...you've brought the shirts from Rasha. Wonderful! He does such fine work, and he sells them to me for very reasonable prices. He's a careful sort, but that's just smart business if you ask me. Thank you for your help, and here's your payment.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "exquisite_shirt_01_rasha",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem \"Exquisite_Shirt_01_Rasha\" 5",
+      "AddItem \"Exquisite_Shirt_01_Rasha\" 5",
+      "Player->AddItem \"Belt of Iron Will\" 1",
+      "Journal \"MV_TraderLate\" 100"
+    ]
+  }
+}

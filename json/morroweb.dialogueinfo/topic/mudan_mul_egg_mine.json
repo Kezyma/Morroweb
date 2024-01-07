@@ -1,0 +1,240 @@
+{
+  "12593256011267619344": {
+    "Prev": "",
+    "Next": "20592162652859231730",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have already cured the kwama queen.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_MineCure",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "20592162652859231730": {
+    "Prev": "12593256011267619344",
+    "Next": "16507158082901630395",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So, the queen is no longer blighted? Very good work, %PCName. As your patron, I suppose I should give you some lessons. This book, though somewhat simplistic, has a good lesson on the school of Alteration.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_MineCure",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal HT_MineCure 100",
+      "Player->AddItem BookSkill_Alteration1 1",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 5",
+      "Player->ModReputation 1"
+    ]
+  },
+  "16507158082901630395": {
+    "Prev": "20592162652859231730",
+    "Next": "19182271931778711031",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have killed the queen? That is unfortunate. Wait a few days and return to the mind to see if a new queen has been born If not, the mine is lost forever and I will be somewhat disappointed.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "kwama queen_mudan",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "19182271931778711031": {
+    "Prev": "16507158082901630395",
+    "Next": "13951190932475731227",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I have taught you the spell. Now you just need to go find the queen and cure her of the blight.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_MineCure",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "13951190932475731227": {
+    "Prev": "19182271931778711031",
+    "Next": "23285136902751329926",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is a rather complicated spell. [Aryon teaches you a targeted cure blight spell.] You should understand the principle now. You will find this spell is much more efficient than most. If you want, you can also buy scrolls of cure blight from Hetman Abelmawia in Gnisis.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HT_MineCure 20",
+      "Player->AddSpell \"cure_blight_target\""
+    ]
+  },
+  "23285136902751329926": {
+    "Prev": "13951190932475731227",
+    "Next": "3810172492017319811",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I trust you can already cast this spell, then. If not, speak with Hetman Abelmawia in Gnisis. He sells scrolls of cure blight.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "3810172492017319811": {
+    "Prev": "23285136902751329926",
+    "Next": "5663292173125928939",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This mine is due west of my tower here in Tel Vos, just a few minutes from here. There's also a shortcut if you go through the dungeon. The Kwama queen there has a blight disease. If you wish, I can teach you a spell of cure blight that you can cast on the queen.",
+    "Filters": [],
+    "Script": [
+      "Journal HT_MineCure 10",
+      "Choice \"Yes, teach me the spell.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "5663292173125928939": {
+    "Prev": "3810172492017319811",
+    "Next": "260528338201089886",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Tel Vos",
+    "PlayerFaction": "",
+    "Text": "It's due west of here.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "260528338201089886": {
+    "Prev": "5663292173125928939",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vos",
+    "PlayerFaction": "",
+    "Text": "It's northwest of here. Due west of Tel Vos.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "30287243492157329020": {
+    "Prev": "",
+    "Next": "2352430382536726512",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Durus Marius is dead. There is no more to discuss.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_DB_Assernerairan",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2352430382536726512": {
+    "Prev": "30287243492157329020",
+    "Next": "29393297547330578",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So you have already honorably executed Durus Marius. I am pleased that you brought our justice to him as soon as you found him.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "durus marius",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MT_DB_Assernerairan",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal MT_DB_Assernerairan 100",
+      "ModPCFacRep 10 \"Morag Tong\"",
+      "ModDisposition 20",
+      "Player->ModReputation 1"
+    ]
+  },
+  "29393297547330578": {
+    "Prev": "2352430382536726512",
+    "Next": "22997706194302552",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So Durus Marius is dead and the cult in Assernerairan has been crushed. Please take these 2000 drakes as if this were a Writ of Execution.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "durus marius",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_S_Sublime",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MT_DB_Assernerairan 100",
+      "Player->AddItem Gold_001 2000",
+      "ModPCFacRep 10 \"Morag Tong\"",
+      "ModDisposition 20",
+      "Player->ModReputation 1"
+    ]
+  },
+  "22997706194302552": {
+    "Prev": "29393297547330578",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Assernerairan is in the Underworks of the St. Olms Canton here in Vivec City. Find this foul place and honorably execute Durus Marius, the leader of these Mehrunes Dagon cultists.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_S_Sublime",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MT_DB_Assernerairan 10"
+    ]
+  }
+}

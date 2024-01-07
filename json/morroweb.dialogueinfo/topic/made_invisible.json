@@ -1,0 +1,155 @@
+{
+  "970480242138523276": {
+    "Prev": "",
+    "Next": "16387276123135630800",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "cassius olcinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I just want to be seen again. That's not so much to ask.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_Invisible",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Invisible",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "16387276123135630800": {
+    "Prev": "970480242138523276",
+    "Next": "25445205312300314479",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "cassius olcinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? You're just like my father! Everyone thinks I'm a fool. I can't take this much longer.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Invisible\" 40"
+    ]
+  },
+  "25445205312300314479": {
+    "Prev": "16387276123135630800",
+    "Next": "262864122257310661",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "cassius olcinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You will? Thank you so much! I can't tell you how awful this is. People always walking into me, knocking me down. No one to talk to. It's awful.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Invisible\" 30"
+    ]
+  },
+  "262864122257310661": {
+    "Prev": "25445205312300314479",
+    "Next": "22968129811135110534",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "cassius olcinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, the wizard Fevyn Ralen cursed me with invisibility. What? He's dead??? Now I'll never become visible again!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Invisible",
+        "Value": 20.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "fevyn ralen",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Invisible\" 140"
+    ]
+  },
+  "22968129811135110534": {
+    "Prev": "262864122257310661",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "cassius olcinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, the wizard Fevyn Ralen cursed me with invisibility. You can't imagine what's it's like living like this! No one will talk to me; everyone thinks I'm a ghost of some sort. I can't take this any longer. I'm afraid to go talk to the wizard, and my  father the trader will think me a fool. Please, can you help?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Invisible",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Invisible\" 20",
+      "Choice \"I will try to help you.\" 1 \"There's nothing I can do for you.\" 2"
+    ]
+  }
+}

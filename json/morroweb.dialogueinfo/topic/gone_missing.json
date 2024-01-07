@@ -1,0 +1,160 @@
+{
+  "1679304871480331162": {
+    "Prev": "",
+    "Next": "7235141071192919873",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "moroni uvelas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've found my husband's ring? Oh, he must have.... Oh, no. Then the worst has come to pass. I can't say that I'm surprised, though it is difficult to hear. He had been heading toward such an end for years now. Thank you for your help, %PCName. Please, take this for your troubles. Maybe they will do you some good.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_DeadMen",
+        "Value": 50.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "common_ring_danar",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_DeadMen\" 60",
+      "Player->AddItem \"p_cure_common_s\" 3",
+      "Player->RemoveItem \"common_ring_danar\" 1",
+      "AddItem \"common_ring_danar\" 1"
+    ]
+  },
+  "7235141071192919873": {
+    "Prev": "1679304871480331162",
+    "Next": "13007699095403788",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "moroni uvelas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I just want to find my husband again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_DeadMen",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "EB_DeadMen",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "13007699095403788": {
+    "Prev": "7235141071192919873",
+    "Next": "34521107320161656",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "moroni uvelas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? Well, I can't blame you. My problems are my own, and I've no reason to expect anyone else to help me out.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_DeadMen\" 40"
+    ]
+  },
+  "34521107320161656": {
+    "Prev": "13007699095403788",
+    "Next": "2442624470239911961",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "moroni uvelas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You will? I can't tell you how relieved that would make me. Danar and his no-good friends sometimes take to the Underworks near here when they've got some skooma. You might find him down there.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_DeadMen\" 30",
+      "\"corprus_stalker_danar\"->Enable"
+    ]
+  },
+  "2442624470239911961": {
+    "Prev": "34521107320161656",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "moroni uvelas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes...my husband, Danar Uvelas, is missing again. It happens with him. See, he has a problem with skooma, although he swears he's been trying to stop. Last time he disappeared it was for days, and when he came back, he didn't look so good. I'm worried that he might have been infected with corprus, or something equally horrible. Do you think you might be able to find him for me?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_DeadMen",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_DeadMen\" 20",
+      "\"corprus_stalker_danar\"->Enable",
+      "Choice \"I will find your husband.\" 1 \"I cannot help you.\" 2"
+    ]
+  }
+}

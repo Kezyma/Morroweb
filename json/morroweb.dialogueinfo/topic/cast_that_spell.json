@@ -1,0 +1,85 @@
+{
+  "1088196861282021598": {
+    "Prev": "",
+    "Next": "1927731052240797090",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "din",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm waiting! Bring it on!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "1927731052240797090": {
+    "Prev": "1088196861282021598",
+    "Next": "308041953325316565",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "din",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Okay, then. Better to keep my eye on you anyway. Sneaky damn slaughterfish.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_MonsterDisease\" 47",
+      "\"Din\"->AiFollowCell,Player, \"Gnisis, Temple\", 0, 950, 2168, -638, 0"
+    ]
+  },
+  "308041953325316565": {
+    "Prev": "1927731052240797090",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "din",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go ahead! Do your worst! I am a god!!!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_MonsterDisease",
+        "Value": 46.0
+      }
+    ],
+    "Script": [
+      "Choice \"Perhaps you'd better follow me to the healer.\" 1 \"I'll cast the spell.\" 2"
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "4966280642784230339": {
+    "Prev": "",
+    "Next": "25724135261899830517",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "elmussa damori",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's me. What do you want?",
+    "Filters": [],
+    "Script": []
+  },
+  "25724135261899830517": {
+    "Prev": "4966280642784230339",
+    "Next": "2066038210674472",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Khajiit",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "%Name heard she is dead. %Name is very sad for her.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "elmussa damori",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2066038210674472": {
+    "Prev": "25724135261899830517",
+    "Next": "1283397793090727616",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Imperial",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Caldera",
+    "PlayerFaction": "",
+    "Text": "I heard she was a thief and Odral hired someone to kill her. In any case, she is dead now.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "elmussa damori",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1283397793090727616": {
+    "Prev": "2066038210674472",
+    "Next": "6380151871782830636",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Khajiit",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Caldera",
+    "PlayerFaction": "",
+    "Text": "%Name heard she left town. %Name thinks it very strange she would come and go so quickly.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_CaptureSpy",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "6380151871782830636": {
+    "Prev": "1283397793090727616",
+    "Next": "3260034792115412644",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Caldera",
+    "PlayerFaction": "",
+    "Text": "She left town and left all her stuff in her house. No one knows where she went. Rather suspicious if you ask me.",
+    "Filters": [
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "odral helvi",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_CaptureSpy",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3260034792115412644": {
+    "Prev": "6380151871782830636",
+    "Next": "155462576499089205",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "irgola",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "She moved here the same time I did. Keeps to herself mostly.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HH_CaptureSpy",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "155462576499089205": {
+    "Prev": "3260034792115412644",
+    "Next": "2027631265508210808",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Imperial",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Caldera",
+    "PlayerFaction": "",
+    "Text": "I can't say I know her well. She is not very sociable.",
+    "Filters": [],
+    "Script": []
+  },
+  "2027631265508210808": {
+    "Prev": "155462576499089205",
+    "Next": "915531942587830122",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Argonian",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Caldera",
+    "PlayerFaction": "",
+    "Text": "She moved here not too long ago. I don't know anything else about her.",
+    "Filters": [],
+    "Script": []
+  },
+  "915531942587830122": {
+    "Prev": "2027631265508210808",
+    "Next": "72392028751089463",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Khajiit",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Caldera",
+    "PlayerFaction": "",
+    "Text": "She keeps to her house during the day, but %Name knows she goes on walks at night. %Name sees her many times.",
+    "Filters": [],
+    "Script": []
+  },
+  "72392028751089463": {
+    "Prev": "915531942587830122",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Caldera",
+    "PlayerFaction": "",
+    "Text": "She lives in the last house on the right if you're coming in from the southern gate.",
+    "Filters": [
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "odral helvi",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

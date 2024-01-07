@@ -1,0 +1,121 @@
+{
+  "1980132281743222094": {
+    "Prev": "",
+    "Next": "16652824350141044",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "high_pockets",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That bastard Nord has parked his butt right inside the bar, %PCRace. Let's go teach him some manners!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_HolyElf",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MS_HolyElf",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "16652824350141044": {
+    "Prev": "1980132281743222094",
+    "Next": "206199461851720931",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "high_pockets",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, drat. You're just a no-good, milk-livered fool yourself, just like that Nord. Get out of my sight, maggot.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_HolyElf\" 110",
+      "Goodbye"
+    ]
+  },
+  "206199461851720931": {
+    "Prev": "16652824350141044",
+    "Next": "159753255247952331",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "high_pockets",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Fantastic. Um, you're bigger than me, so I'll follow you. He's right inside the bar there.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_HolyElf\" 20",
+      "high_pockets->AiFollow Player 0,0,0,0,0"
+    ]
+  },
+  "159753255247952331": {
+    "Prev": "206199461851720931",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "high_pockets",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, that bastard of a sload-sucking coxcomb. How would you like to help me go in there and teach that flea-bitten, dampworm-infested Nord the lesson of his life?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MS_HolyElf",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Choice \"Ok, let's go.\" 1 \"No, I don't have time for this.\" 2"
+    ]
+  }
+}

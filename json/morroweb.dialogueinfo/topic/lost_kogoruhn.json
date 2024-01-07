@@ -1,0 +1,450 @@
+{
+  "12361209572170722792": {
+    "Prev": "",
+    "Next": "24018213601959512201",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you the one who claims to be the Nerevarine? You should speak with Archcanon Saryoni. Before these rumors are put to rest, I cannot give you duties.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B8_MeetVivec",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "24018213601959512201": {
+    "Prev": "12361209572170722792",
+    "Next": "2650154672627531336",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled from the Temple.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2650154672627531336": {
+    "Prev": "24018213601959512201",
+    "Next": "19675226202170518327",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have given you the Hair Shirt of St. Aralor for safekeeping.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_HairShirt",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "19675226202170518327": {
+    "Prev": "2650154672627531336",
+    "Next": "28576164532467813440",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "As %PCRank, you may take the Hair Shirt of St. Aralor for safekeeping.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_HairShirt",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal TT_HairShirt 110",
+      "RemoveItem Expensive_Shirt_Hair 1",
+      "Player->AddItem Expensive_Shirt_Hair 1"
+    ]
+  },
+  "28576164532467813440": {
+    "Prev": "19675226202170518327",
+    "Next": "302742234350549193",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have returned the Hair Shirt of St. Aralor.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_HairShirt",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "302742234350549193": {
+    "Prev": "28576164532467813440",
+    "Next": "28708309053236627630",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. I suppose this means that Feril Salmyn is dead? It is unfortunate, but at least the relic has been returned.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TT_HairShirt 100",
+      "Player->RemoveItem Expensive_Shirt_Hair 1",
+      "AddItem Expensive_Shirt_Hair 1",
+      "Player->ModReputation 1"
+    ]
+  },
+  "28708309053236627630": {
+    "Prev": "302742234350549193",
+    "Next": "1420042752188618396",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That is a priceless relic. It should be in the Temple's care.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "1420042752188618396": {
+    "Prev": "28708309053236627630",
+    "Next": "27913170871940924591",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, that is the Hair Shirt of St. Aralor. Will you hand it over to the Temple?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "expensive_shirt_hair",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is.\" 1 \"No.\" 2"
+    ]
+  },
+  "27913170871940924591": {
+    "Prev": "1420042752188618396",
+    "Next": "1894241211018531827",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uvoo llaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I do not know where Lost Kogoruhn is. One of our valiant Ordinators, Feril Salmyn, wore the Hair Shirt of St. Aralor. He was searching for Lost Kogoruhn, but is now lost himself. He is presumed dead, but if you can find him alive or recover the Hair Shirt of St. Aralor, the Temple would be grateful.",
+    "Filters": [],
+    "Script": [
+      "Journal TT_HairShirt 10"
+    ]
+  },
+  "1894241211018531827": {
+    "Prev": "27913170871940924591",
+    "Next": "8202719791375796",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Scout",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Kogoruhn used to lie north of the northern boundary of the Ghostfence. It was northeast of Maar Gan and west of the present-day Vos. It was near the stronghold of Falasmaryon, which I can mark on your map.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_HairShirt",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TT_HairShirt",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Falasmaryon\""
+    ]
+  },
+  "8202719791375796": {
+    "Prev": "1894241211018531827",
+    "Next": "3257217953160174462",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Maar Gan",
+    "PlayerFaction": "",
+    "Text": "Kogoruhn used to be somewhere northeast of here.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_HairShirt",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TT_HairShirt",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3257217953160174462": {
+    "Prev": "8202719791375796",
+    "Next": "1218614813294616776",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ghostgate",
+    "PlayerFaction": "",
+    "Text": "Lost Kogoruhn was somewhere north of the northern boundary of the Ghostfence. It was closer to Maar Gan than Ghostgate.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_HairShirt",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TT_HairShirt",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1218614813294616776": {
+    "Prev": "3257217953160174462",
+    "Next": "1416546933256715466",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Tel Vos",
+    "PlayerFaction": "",
+    "Text": "Kogoruhn? It used to be west of here. No one's been there in years.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_HairShirt",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TT_HairShirt",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1416546933256715466": {
+    "Prev": "1218614813294616776",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vos",
+    "PlayerFaction": "",
+    "Text": "Kogoruhn? It used to be west of here. No one's been there in years.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_HairShirt",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TT_HairShirt",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  }
+}

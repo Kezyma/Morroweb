@@ -1,0 +1,220 @@
+{
+  "408123122128446361": {
+    "Prev": "",
+    "Next": "11630124531778831393",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Kaye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Mount Kand is in the Molag Amur region. Speak to Nevosi Hlan, shipmaster at the Ebonheart docks. Take a ship to Tel Branora; from there, you can get a ship to Molag Mar. From Molag Mar travel on foot north by roads, watching for signs to Mount Kand. I don't know the region myself, but I've heard it is wild and dangerous, and easy to get lost in.",
+    "Filters": [],
+    "Script": [
+      "ShowMap \"Molag Mar\"",
+      "ShowMap \"Mount Kand\""
+    ]
+  },
+  "11630124531778831393": {
+    "Prev": "408123122128446361",
+    "Next": "1051815131787018614",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "atronach_storm_ttmk",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I serve in Mount Kand -- eternally. Like my brethren. Now. Answer my riddle.",
+    "Filters": [],
+    "Script": []
+  },
+  "1051815131787018614": {
+    "Prev": "11630124531778831393",
+    "Next": "30144110542529632161",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "atronach_frost_ttmk",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I serve in Mount Kand -- eternally. Like my brethren. Now. Answer my riddle.",
+    "Filters": [],
+    "Script": []
+  },
+  "30144110542529632161": {
+    "Prev": "1051815131787018614",
+    "Next": "6086323792119811837",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "atronach_flame_ttmk",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I ssserve in Mount Kand -- eternally. My riddle ... you will anssswer it. And then you will perish in flames.",
+    "Filters": [],
+    "Script": []
+  },
+  "6086323792119811837": {
+    "Prev": "30144110542529632161",
+    "Next": "2577229328994413670",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharer rotheloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have heard that you claim to be the Incarnate. I do not know the truth of the matter, but for now I will not give you duties.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B8_MeetVivec",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2577229328994413670": {
+    "Prev": "6086323792119811837",
+    "Next": "22949307441425724768",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharer rotheloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled from the Temple.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "22949307441425724768": {
+    "Prev": "2577229328994413670",
+    "Next": "24310115101398920473",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharer rotheloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I heard you defeated the Daedra at Mount Kand in a contest of riddles and received Vivec's blessings. I celebrate your success. I have other duties for you when you are ready.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_MountKand",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal TT_MountKand 110"
+    ]
+  },
+  "24310115101398920473": {
+    "Prev": "22949307441425724768",
+    "Next": "13349528327226309",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharer rotheloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "As I said, go to Mount Kand and answer the Daedra's riddles. If you answer correctly, you do not have to fight them.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_MountKand",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "13349528327226309": {
+    "Prev": "24310115101398920473",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharer rotheloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "I want you to make the Pilgrimage to Mount Kand, which is northwest of Molag Mar. It's on the left side of the trail. I will mark it on your map. On Mount Kand, Vivec won a contest of wits with three Daedra. There are few lights in the caverns. You may need these potions. If you are not good with riddles, you may want to find a copy of \"The Yellow Book of Riddles.\" Several booksellers have this book.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_CuringTouch",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal TT_MountKand 10",
+      "ShowMap \"Mount Kand\"",
+      "Player->AddItem \"p_night-eye_q\" 4"
+    ]
+  }
+}

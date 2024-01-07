@@ -1,0 +1,51 @@
+{
+  "31045242555523926": {
+    "Prev": "",
+    "Next": "1091431135261045346",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sharn gra-muzgob",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. Andrano Ancestral Tomb. South of Pelagiad. Just off the road. Just before the fork where the road goes southwest towards Seyda Neen and southeast to Vivec.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_4_MuzgobInformant",
+        "Value": 12.0
+      }
+    ],
+    "Script": []
+  },
+  "1091431135261045346": {
+    "Prev": "31045242555523926",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sharn gra-muzgob",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The tomb is south of Pelagiad, just off the road, just before you reach the fork where the road goes southwest towards Seyda Neen and southeast to Vivec. You may need an enchanted blade. Some spirits are immune to normal weapons. Here. Take this old shortsword. And maybe these old scrolls will come in handy.",
+    "Filters": [],
+    "Script": [
+      "player->additem \"fireblade\" 1",
+      "player->additem sc_taldamsscorcher 2",
+      "player->additem sc_vitality 2",
+      "Journal A1_4_MuzgobInformant 12"
+    ]
+  }
+}

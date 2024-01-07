@@ -1,0 +1,565 @@
+{
+  "2116816273201314971": {
+    "Prev": "",
+    "Next": "286311551328583410",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Varus Vatinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled. Join the Imperial Legion again. Then you can return Chrysamere with honor.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "286311551328583410": {
+    "Prev": "2116816273201314971",
+    "Next": "18533321852598013334",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Varus Vatinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for returning it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_KnightShield",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "18533321852598013334": {
+    "Prev": "286311551328583410",
+    "Next": "251206522153139252",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Varus Vatinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well done, %PCName. I applaud you. For what you have accomplished, I will make you a %NextPCRank.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"IL_KnightShield\" 100",
+      "PCRaiseRank \"Imperial Legion\"",
+      "AddItem \"claymore_chrysamere_unique\" 1",
+      "Player->RemoveItem \"claymore_chrysamere_unique\" 1"
+    ]
+  },
+  "251206522153139252": {
+    "Prev": "18533321852598013334",
+    "Next": "19908310741524224999",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Varus Vatinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is my duty to return Chrysamere to the Legions!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "147793207175513376": {
+    "Prev": "19908310741524224999",
+    "Next": "28657131431411516608",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Varus Vatinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will ask one more time: Give me Chrysamere, or be guilty of treason and die by my hand.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give him Chrysamere.\" 1 \"Nevermind.\" 3"
+    ]
+  },
+  "28657131431411516608": {
+    "Prev": "147793207175513376",
+    "Next": "2027090723103015924",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Varus Vatinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So you have found Chrysamere, and a fine blade it is! Return it to me and I will make you a %NextPCRank.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "claymore_chrysamere_unique",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_KnightShield",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give him Chrysamere.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "2027090723103015924": {
+    "Prev": "28657131431411516608",
+    "Next": "31963175611400924827",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Varus Vatinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you not found it yet? It must be returned!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_KnightShield",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "31963175611400924827": {
+    "Prev": "2027090723103015924",
+    "Next": "31919795587782922",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "Varus Vatinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "Chrysamere, sometimes called the Paladin's Blade, is a sword of legend. It was in the possession of the Legion for many years, but was stolen by a treacherous Knight. Our spies have heard rumors that it is now in the possession of Draramu Hloran, a powerful sorceress near Sadrith Mora, and no friend of the Legion. Kill her and return Chrysamere to me.",
+    "Filters": [],
+    "Script": [
+      "Journal \"IL_KnightShield\" 60"
+    ]
+  },
+  "31919795587782922": {
+    "Prev": "31963175611400924827",
+    "Next": "1902724394776324421",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "maranique jolvanne",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is a powerful weapon, %PCRace. Designed, they say, to kill spellcasters. Now go from here.",
+    "Filters": [],
+    "Script": []
+  },
+  "1902724394776324421": {
+    "Prev": "31919795587782922",
+    "Next": "244882320109814575",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "draramu hloran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You seek the Sword of the Paladins? And what makes you think you deserve it? Because you wear the Imperial crest? Bah! Take it from me then, if you dare.",
+    "Filters": [],
+    "Script": [
+      "SetFight 100",
+      "Goodbye"
+    ]
+  },
+  "19908310741524224999": {
+    "Prev": "251206522153139252",
+    "Next": "147793207175513376",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't have Chrysamere with you? Then come back with it, and we'll settle the deal.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "claymore_chrysamere_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "244882320109814575": {
+    "Prev": "1902724394776324421",
+    "Next": "32061131621299025489",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What?  How is it that you have this?  This was part of the museum's collection!  GUARDS!",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "chrysamere",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "claymore_chrysamere_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "SetPCCrimeLevel 100000",
+      "Set PCThief to 1",
+      "Goodbye"
+    ]
+  },
+  "32061131621299025489": {
+    "Prev": "244882320109814575",
+    "Next": "2231822277112262123",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, thank you for allowing us to add it to our collection.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "chrysamere",
+        "Value": 2.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "claymore_chrysamere_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2231822277112262123": {
+    "Prev": "32061131621299025489",
+    "Next": "492121693103813757",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you.  This will take a prominent place in our collection, as I'm sure it will be very popular for our visitors.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "claymore_chrysamere_unique",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"claymore_chrysamere_unique\" 1",
+      "set MuseumDonations to MuseumDonations + 1",
+      "set chrysamere to 2",
+      "\"claymore_chrysamere_unique_x\"->Enable",
+      "moddisposition 5"
+    ]
+  },
+  "492121693103813757": {
+    "Prev": "2231822277112262123",
+    "Next": "24260817624902358",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you.  This will take a prominent place in our collection, as I'm sure it will be very popular for our visitors.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "claymore_chrysamere_unique",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"claymore_chrysamere_unique\" 1",
+      "player->additem \"gold_001\" 30000",
+      "set chrysamere to 2",
+      "\"claymore_chrysamere_unique_x\"->Enable"
+    ]
+  },
+  "24260817624902358": {
+    "Prev": "492121693103813757",
+    "Next": "387671902114612479",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't have Chrysamere with you? Then come back with it, and we'll settle the deal.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "claymore_chrysamere_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "387671902114612479": {
+    "Prev": "24260817624902358",
+    "Next": "9450231651037932278",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, please do take care of it, then.  I'd hate to see something happen to such a valuable weapon.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "9450231651037932278": {
+    "Prev": "387671902114612479",
+    "Next": "47522309084448926",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, well.  The Paladin's Blade.  A wonderful find, to be sure.  Do you wish to part with it? I can offer you 30000 gold for it.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "chrysamere",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_Blade",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Sell the item.\" 4 \"Keep the item.\" 5 \"Donate the item\" 6"
+    ]
+  },
+  "47522309084448926": {
+    "Prev": "9450231651037932278",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, well.  The Paladin's Blade.  A wonderful find, to be sure.  Do you wish to part with it? I can offer you 30000 gold for it.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "chrysamere",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Sell the item.\" 4 \"Keep the item.\" 5"
+    ]
+  }
+}

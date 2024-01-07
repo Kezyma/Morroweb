@@ -1,0 +1,65 @@
+{
+  "164191972610637287": {
+    "Prev": "",
+    "Next": "1575397162787810533",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eraldil",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He wishes to apologize? How very noble. But, at least he sent a gift along, which is certainly appropriate. Well, I'm sure I'll have use for it sometime, although it's probably not even of good quality.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_Unrequited",
+        "Value": 70.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "p_lovepotion_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Unrequited\" 90",
+      "Player->RemoveItem \"p_lovepotion_unique\" 1",
+      "AddItem \"p_lovepotion_unique\" 1"
+    ]
+  },
+  "1575397162787810533": {
+    "Prev": "164191972610637287",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gadayn andarys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I'm sure she'll accept my apologies...and the potion of course.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Unrequited",
+        "Value": 90.0
+      }
+    ],
+    "Script": []
+  }
+}

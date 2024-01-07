@@ -1,0 +1,426 @@
+{
+  "14579671149418650": {
+    "Prev": "",
+    "Next": "28795174823266728766",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tholer saryoni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have heard the Duke's concerns. Rest assured that from now on, there will be limits to the Ordinator's influence.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_WinSaryoni",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "28795174823266728766": {
+    "Prev": "14579671149418650",
+    "Next": "905325665237516558",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tholer saryoni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have brought me the Robe of St Roris. For this I will speak with Berel Sala, and I will not let him influence Temple policy as much as in the past.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_WinSaryoni",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "905325665237516558": {
+    "Prev": "28795174823266728766",
+    "Next": "1103129957204925885",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tholer saryoni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. Yes, I will place this robe somewhere safe. I will speak with Berel Sala and see to it that the Ordinators take their orders from the Temple.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem \"Robe of St Roris\" 1",
+      "Journal HH_WinSaryoni 70"
+    ]
+  },
+  "1103129957204925885": {
+    "Prev": "905325665237516558",
+    "Next": "19912311301638426264",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tholer saryoni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you want my aid, you must give me the robe.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "19912311301638426264": {
+    "Prev": "1103129957204925885",
+    "Next": "2984521971445921689",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tholer saryoni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have the Robe of St. Roris the martyr. It is the robe he wore when he was slain and was thus blessed with his blood. Will you hand over the robe now?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "robe of st roris",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is.\" 1 \"No.\" 2"
+    ]
+  },
+  "2984521971445921689": {
+    "Prev": "19912311301638426264",
+    "Next": "795232754250407802",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "tholer saryoni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "I understand your concerns, but the Ordinators are a necessity. Especially in these troubling times.",
+    "Filters": [],
+    "Script": []
+  },
+  "795232754250407802": {
+    "Prev": "2984521971445921689",
+    "Next": "22925242863013420753",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Vedam Dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Alas, you seem to have been expelled from House Hlaalu. When you make amends, speak with me again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "22925242863013420753": {
+    "Prev": "795232754250407802",
+    "Next": "49502714644205522",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Vedam Dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Ordinators seem to be under control now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_WinSaryoni",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "49502714644205522": {
+    "Prev": "22925242863013420753",
+    "Next": "2517787053219530477",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Vedam Dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You bring me news that Berel Sala is dead. Perhaps this will help us control the ordinators, but perhaps it will not. Only time will tell.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "berel sala",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "HH_WinSaryoni",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HH_WinSaryoni 110",
+      "ModPCFacRep 10 \"Hlaalu\""
+    ]
+  },
+  "2517787053219530477": {
+    "Prev": "49502714644205522",
+    "Next": "1053715775136832877",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Vedam Dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Berel Sala has been murdered. There are rumors in town that you were responsible. If you are so careless, I do not believe you should be the Grandmaster of House Hlaalu.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "berel sala",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "1053715775136832877": {
+    "Prev": "2517787053219530477",
+    "Next": "1873023874111644213",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Vedam Dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have heard that the Archcanon will speak with Berel Sala and the Ordinators. Perhaps he can convince them to leave House Hlaalu's business alone. Please accept my gratitude.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_WinSaryoni",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal HH_WinSaryoni 100",
+      "ModPCFacRep 10 \"Hlaalu\"",
+      "ModDisposition 20",
+      "Player->ModReputation 1"
+    ]
+  },
+  "1873023874111644213": {
+    "Prev": "1053715775136832877",
+    "Next": "62974736131015446",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "Vedam Dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Go speak with Archcanon Tholer Saryoni in Vivec. Get him to put a stop to the worst of Berel Sala's excesses.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_WinSaryoni",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HH_WinSaryoni 10"
+    ]
+  },
+  "62974736131015446": {
+    "Prev": "1873023874111644213",
+    "Next": "2279213437671325343",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "Vedam Dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Berel Sala, the leader of the Ordinators, is a fanatic. The Archcanon Tholer Saryoni, on the other hand, seems to be a decent and reasonable man. I need you to convince Archcanon Saryoni to put a stop to the worst of the Ordinator's zeal. Saryoni may be found at the High Fane in Vivec. Here is a key to his quarters.",
+    "Filters": [],
+    "Script": [
+      "Journal HH_WinSaryoni 10",
+      "Player->AddItem \"key_archcanon_private\" 1"
+    ]
+  },
+  "2279213437671325343": {
+    "Prev": "62974736131015446",
+    "Next": "159762363019015187",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "berel sala",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Perhaps. Perhaps I would listen to you if I had any respect for you. Saryoni was a far greater man, and he would never place these impossible restrictions on us. Leave me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "159762363019015187": {
+    "Prev": "2279213437671325343",
+    "Next": "24517181632377922414",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "berel sala",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see that you still have some reason about you. Leave me now, as I am quite busy.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "24517181632377922414": {
+    "Prev": "159762363019015187",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "berel sala",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What do you want us to do, %PCName? Shall we lie down like dogs in the street and let the heretics and Dagoth Ur's creatures trample over us?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Our enemy is Dagoth Ur and the Four Corners, not the Hlaalu.\" 1 \"Nevermind.\" 2"
+    ]
+  }
+}

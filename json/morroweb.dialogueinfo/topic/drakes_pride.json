@@ -1,0 +1,283 @@
+{
+  "143101437367061686": {
+    "Prev": "",
+    "Next": "1957554642047311325",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "senise thindo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, this is the Drake's Pride that I wear. It is not for sale.",
+    "Filters": [],
+    "Script": []
+  },
+  "1957554642047311325": {
+    "Prev": "143101437367061686",
+    "Next": "2145425348324619427",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, it is a fine and marvelous robe when worn by the rare wizard who is worthy of it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_DrakePride",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2145425348324619427": {
+    "Prev": "1957554642047311325",
+    "Next": "153227411508118960",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Were you expelled for getting me the robe? How unfortunate. I will take care of this for you. It's the least I can do. And take these ten drakes for your trouble.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HT_DrakePride 100",
+      "Player->AddItem Gold_001 10",
+      "Player->RemoveItem \"exquisite_robe_drake's pride\" 1",
+      "AddItem \"exquisite_robe_drake's pride\" 1",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 5",
+      "PCClearExpelled"
+    ]
+  },
+  "153227411508118960": {
+    "Prev": "2145425348324619427",
+    "Next": "28327282662566813983",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, now the robe is in the proper hands. Here, take these ten drakes for your trouble.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HT_DrakePride 100",
+      "Player->AddItem Gold_001 10",
+      "Player->RemoveItem \"exquisite_robe_drake's pride\" 1",
+      "AddItem \"exquisite_robe_drake's pride\" 1",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 10"
+    ]
+  },
+  "28327282662566813983": {
+    "Prev": "153227411508118960",
+    "Next": "3199888722703229870",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It looks very similar. Are you certain? Do not lie to me, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "3199888722703229870": {
+    "Prev": "28327282662566813983",
+    "Next": "864630441314367005",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, is that the Robe of Drake's Pride?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "exquisite_robe_drake's pride",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_DrakePride",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is\" 1 \"No\" 2"
+    ]
+  },
+  "864630441314367005": {
+    "Prev": "3199888722703229870",
+    "Next": "513927245139498696",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neloth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "At the present time, Senise Thindo wears the Robe of Drake's Pride. She is a servant of Master Gothren in Tel Aruhn and a mere child of two hundred years. She does not deserve the robe. Correct this injustice and bring the robe to me, as clearly I deserve the robe far more than she does.",
+    "Filters": [],
+    "Script": [
+      "Journal HT_DrakePride 10"
+    ]
+  },
+  "513927245139498696": {
+    "Prev": "864630441314367005",
+    "Next": "169551838408112032",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Tel Aruhn, Tower Living Quarters",
+    "PlayerFaction": "",
+    "Text": "Speak with Senise Thindo about that.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "senise thindo",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HT_DrakePride",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "169551838408112032": {
+    "Prev": "513927245139498696",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Tel Aruhn",
+    "PlayerFaction": "",
+    "Text": "Yes, that is one of Senise Thindo's robes. She is in the tower's living quarters.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "senise thindo",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HT_DrakePride",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  }
+}

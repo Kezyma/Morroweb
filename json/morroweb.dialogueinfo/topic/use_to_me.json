@@ -1,0 +1,155 @@
+{
+  "7930314222588231070": {
+    "Prev": "",
+    "Next": "21497226712804026472",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "volrina quarra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I grow weary of speaking with you, little calf. Do not test my will.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampCult",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampCult",
+        "Value": 120.0
+      }
+    ],
+    "Script": []
+  },
+  "21497226712804026472": {
+    "Prev": "7930314222588231070",
+    "Next": "146772376210691146",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "volrina quarra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hmmmm...we shall see. He may not be a powerful vampire, but he has many followers. I do not expect I will see you again, yearling.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampCult\" 20"
+    ]
+  },
+  "146772376210691146": {
+    "Prev": "21497226712804026472",
+    "Next": "1989815408250812784",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "volrina quarra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am not surprised, accidental vampire. Leave my house.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampCult\" 30"
+    ]
+  },
+  "1989815408250812784": {
+    "Prev": "146772376210691146",
+    "Next": "319637422773129631",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "volrina quarra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are a mistake in our world. Were you not of my blood, I would kill you where you stand. But, I am in need of an errand runner. You will do. There is a vampire near Gnisis who has taken the name Irarak. He finds himself worshipped as a god by some of the local mortals. This mockery must not be allowed to continue. Kill him for me, and I will allow you use of the Quarra Clan services. Or, you may go from here forever.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampCult",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampCult\" 10",
+      "Choice \"I will kill him.\" 1 \"I have no interest in this.\" 2"
+    ]
+  },
+  "319637422773129631": {
+    "Prev": "1989815408250812784",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "volrina quarra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You wish to be of further use? I will allow it, pathetic child. I am attempting to create some powerful magicks for members of my clan. Thus far, I have been unsuccessful. I will need some more raw materials with which to work.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_VampCult",
+        "Value": 120.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampAmulet",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampAmulet\" 10"
+    ]
+  }
+}

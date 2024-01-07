@@ -1,0 +1,1650 @@
+{
+  "1780832516495118503": {
+    "Prev": "",
+    "Next": "656107832777416909",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sorkvild the raven",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No matter what the locals say, the practice is not outlawed by the Empire, you should know that. They have nothing to fear of me.",
+    "Filters": [],
+    "Script": []
+  },
+  "656107832777416909": {
+    "Prev": "1780832516495118503",
+    "Next": "658522588247723488",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sharn gra-muzgob",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "In the Empire, necromancy is a legitimate discipline, though body and spirit are protected property, and may not be used without permission of the owner. But in Morrowind, the Dunmer loathe necromancers, and put them to death. That's absurd, of course, since the Dunmer summon their OWN dead to guard tombs and defend the family. Sacred necromancy is righteous, while philosophical necromancy is evil. It's primitive superstition, that's all.",
+    "Filters": [],
+    "Script": []
+  },
+  "658522588247723488": {
+    "Prev": "656107832777416909",
+    "Next": "21331154091702424138",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have not yet had word from Arch-Mage Trebonius in Vivec. Until then, I must consider you expelled.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ExpMagesGuild",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "21331154091702424138": {
+    "Prev": "658522588247723488",
+    "Next": "2823453232721226765",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You were still expelled from the Mages Guild last I heard. Be patient. The Guild does not move quickly here in Vvardenfell.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ExpMagesGuild",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "2823453232721226765": {
+    "Prev": "21331154091702424138",
+    "Next": "869831062717723408",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I cannot discuss these matters with you. You have been expelled.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ExpMagesGuild",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "869831062717723408": {
+    "Prev": "2823453232721226765",
+    "Next": "173721191397023906",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "It is always a shame when any wizard turns to necromancy.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_KillNecro1",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "173721191397023906": {
+    "Prev": "869831062717723408",
+    "Next": "175633062321862411",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "While killing is never pleasant, it is sometimes necessary. Telura Ulver is dead. You have proven yourself to the Guild, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_KillNecro1",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "telura ulver",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MG_KillNecro1 100",
+      "ModPCFacRep 5 \"Mages Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "175633062321862411": {
+    "Prev": "173721191397023906",
+    "Next": "6333276543878090",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Kill the necromancer Telura Ulver and report back to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_KillNecro1",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "6333276543878090": {
+    "Prev": "175633062321862411",
+    "Next": "20545279312171813479",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "The Necromancer is Telura Ulver, a former Mages Guild member. She may be found in Shal.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_WiseWoman",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MG_KillNecro1 10"
+    ]
+  },
+  "20545279312171813479": {
+    "Prev": "6333276543878090",
+    "Next": "2455129817137921511",
+    "Type": "Topic",
+    "Disposition": 80,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "telura ulver",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I am a Necromancer. What of it? Are you foolish enough to think you can punish me?",
+    "Filters": [],
+    "Script": []
+  },
+  "2455129817137921511": {
+    "Prev": "20545279312171813479",
+    "Next": "16663465355749005",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tashpi ashibael",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll leave for the mainland as soon as I get a few things together. There are many other towns in need of a healer. Tell Ranis Athrys that I am dead.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_KillNecro2",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "16663465355749005": {
+    "Prev": "2455129817137921511",
+    "Next": "13600181432589823134",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tashpi ashibael",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If Ranis has held a grudge this long, it would be best for me to leave for the mainland. There are plenty of towns that could use a healer. Tell Ranis Athrys that I am dead. I will leave Vvardenfell and Ranis need never know.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MG_KillNecro2 50",
+      "Choice \"I agree. I will let you go.\" 5 \"You cannot escape justice!\" 2"
+    ]
+  },
+  "13600181432589823134": {
+    "Prev": "16663465355749005",
+    "Next": "28261116062223115087",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tashpi ashibael",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Spirits of my ancestors protect me!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "PlaceAtPC ancestor_ghost 1 256 0",
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "28261116062223115087": {
+    "Prev": "13600181432589823134",
+    "Next": "1614024078739828639",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tashpi ashibael",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, I see. I refused to join the Mages Guild. I chose to practice healing among my people, away from the politics of the Guild. Since I was a Velothi and not well born like Ranis... Well, it's not important now. Maybe I know a way out of this situation.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Choice \"Tell me more.\" 1 \"Die necromancer!\" 2"
+    ]
+  },
+  "1614024078739828639": {
+    "Prev": "28261116062223115087",
+    "Next": "29622237501229931844",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tashpi ashibael",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ask anyone in the village. I'm no necromancer and anyone around here can tell you the truth of the matter.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": []
+  },
+  "29622237501229931844": {
+    "Prev": "1614024078739828639",
+    "Next": "3590166513109528514",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tashpi ashibael",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well. I'll leave for the mainland once I get a few things together. Report back to Ranis Athrys that I am dead.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "ModDisposition 20"
+    ]
+  },
+  "3590166513109528514": {
+    "Prev": "29622237501229931844",
+    "Next": "1801413006891110116",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tashpi ashibael",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Necromancy? I am NOT a necromancer. Who said I was a... a necromancer?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Ranis Athrys.\" 3 \"Not your concern.\" 4",
+      "Journal MG_KillNecro2 40"
+    ]
+  },
+  "1801413006891110116": {
+    "Prev": "3590166513109528514",
+    "Next": "2077768322628128683",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have not had word that you were in good standing again. If you persist in this behavior, I will be forced to make a formal complaint to Arch-Mage Trebonius.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "2077768322628128683": {
+    "Prev": "1801413006891110116",
+    "Next": "39302776942045569",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You were expelled some time ago. Do not expect me to help you now.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "39302776942045569": {
+    "Prev": "2077768322628128683",
+    "Next": "22659724474087299",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled. I can't say I am surprised. There are so few truly dedicated to our cause here in Vvardenfell.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "ExpMagesGuild",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "22659724474087299": {
+    "Prev": "39302776942045569",
+    "Next": "23074262592547915642",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There is one less necromancer here in Vvardenfell thanks to you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_KillNecro2",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "23074262592547915642": {
+    "Prev": "22659724474087299",
+    "Next": "2463273543017213775",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Wait... You already killed Tashpi? I wish you had told me sooner.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MG_KillNecro2",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "tashpi ashibael",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MG_KillNecro2 100",
+      "ModPCFacRep 5 \"Mages Guild\"",
+      "ModDisposition 10",
+      "Player->ModReputation 1"
+    ]
+  },
+  "2463273543017213775": {
+    "Prev": "23074262592547915642",
+    "Next": "19887164801415920631",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've killed Tashpi? Good work, %PCName. These scrolls should help you deal with any other necromancers you find.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_KillNecro2",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "tashpi ashibael",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MG_KillNecro2 100",
+      "Player->AddItem sc_elementalburstfire 2",
+      "Player->AddItem sc_fourthbarrier 2",
+      "ModPCFacRep 5 \"Mages Guild\"",
+      "ModDisposition 20",
+      "Player->ModReputation 1"
+    ]
+  },
+  "19887164801415920631": {
+    "Prev": "2463273543017213775",
+    "Next": "26588325161890227286",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "She is truly dead? You have done me... the Guild, that is, a great service. These scrolls should help you deal with any other necromancers you find.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MG_KillNecro2 100",
+      "Player->AddItem sc_elementalburstfire 2",
+      "Player->AddItem sc_fourthbarrier 2",
+      "ModPCFacRep 10 \"Mages Guild\"",
+      "ModDisposition 15",
+      "\"Tashpi Ashibael\"->Disable",
+      "Player->ModReputation 1"
+    ]
+  },
+  "26588325161890227286": {
+    "Prev": "19887164801415920631",
+    "Next": "22613110382082613249",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I do not see what could possibly be difficult about this assignment, %PCName. Find Tashpi Ashibael in Maar Gan and kill her.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "22613110382082613249": {
+    "Prev": "26588325161890227286",
+    "Next": "29691119164287107",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Did you kill the necromancer?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_KillNecro2",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Choice \"Lie: Yes.\" 1 \"No.\" 2"
+    ]
+  },
+  "29691119164287107": {
+    "Prev": "22613110382082613249",
+    "Next": "2207819035236046612",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's not a difficult assignment, %PCName. Go to Maar Gan. Find Tashpi Ashibael. Kill her.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_KillNecro2",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "2207819035236046612": {
+    "Prev": "29691119164287107",
+    "Next": "3345270192821425521",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ranis athrys",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Find Tashpi Ashibael in Maar Gan and kill her. The Mages Guild cannot tolerate necromancers.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_EscortScholar2",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MG_KillNecro2 10"
+    ]
+  },
+  "3345270192821425521": {
+    "Prev": "2207819035236046612",
+    "Next": "846221273040921408",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Maar Gan",
+    "PlayerFaction": "",
+    "Text": "Tashpi is not a necromancer. Who have you been talking to?",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_KillNecro2",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MG_KillNecro2",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "846221273040921408": {
+    "Prev": "3345270192821425521",
+    "Next": "496219430927714767",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Maar Gan",
+    "PlayerFaction": "",
+    "Text": "Tashpi? The healer? She's no necromancer.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_KillNecro2",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MG_KillNecro2",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "496219430927714767": {
+    "Prev": "846221273040921408",
+    "Next": "211343044102516519",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Dreamers",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Necromancy is the evil sorcery of the invaders, an abomination to our ancestors. All true Dunmer worship their ancestors, and honor their traditions. Our ancestors now are mad with shame and hatred, seeing us brought low by beasts and lesser races. Only when we have driven the foreigners from the land can our ancestors rest.",
+    "Filters": [],
+    "Script": []
+  },
+  "211343044102516519": {
+    "Prev": "496219430927714767",
+    "Next": "251914276190268105",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Savant",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Necromancy is not illegal, per se, in the Empire, though body and spirit are protected as property, and may not be used without permission of the owner, and public display of the living dead is widely prohibited. Mages may purchase corpses and souls for philosophical research, and may do with them as they wish in private. Necromancers and vampires are widely confused in the public mind, and persecuted, but in remote locations, necromancers are free to pursue their studies without legal interference.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotRace",
+        "Func": "NotRace",
+        "Compare": "Equal",
+        "Id": "Dark Elf",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "251914276190268105": {
+    "Prev": "211343044102516519",
+    "Next": "2565726100906922907",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Cult",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "In the Empire, necromancers and vampires are widely confused in the public mind, and persecuted, but in remote locations, necromancers are usually free to pursue their studies without legal interference.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 33.0
+      }
+    ],
+    "Script": []
+  },
+  "2565726100906922907": {
+    "Prev": "251914276190268105",
+    "Next": "8209105932010921324",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Legion",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "In the Empire, necromancers and vampires are widely confused in the public mind, and persecuted, but in remote locations, necromancers are usually free to pursue their studies without legal interference.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 33.0
+      }
+    ],
+    "Script": []
+  },
+  "8209105932010921324": {
+    "Prev": "2565726100906922907",
+    "Next": "1290949695591311",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Cult",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "In the Empire, mages may legally purchase corpses and souls for philosophical research, and may do with them as they wish in private.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 66.0
+      }
+    ],
+    "Script": []
+  },
+  "1290949695591311": {
+    "Prev": "8209105932010921324",
+    "Next": "22310187462254325359",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Legion",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "In the Empire, mages may legally purchase corpses and souls for philosophical research, and may do with them as they wish in private.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 66.0
+      }
+    ],
+    "Script": []
+  },
+  "22310187462254325359": {
+    "Prev": "1290949695591311",
+    "Next": "19108147941895910960",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Cult",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "In the Empire, body and spirit are protected as property, and may not be used without permission of the owner, and public display of the living dead is widely prohibited. But necromancy itself is not really illegal.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "19108147941895910960": {
+    "Prev": "22310187462254325359",
+    "Next": "1187648141845521127",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Legion",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "In the Empire, body and spirit are protected as property, and may not be used without permission of the owner, and public display of the living dead is widely prohibited. But necromancy itself is not really illegal.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1187648141845521127": {
+    "Prev": "19108147941895910960",
+    "Next": "196318202121928451",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Monk",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ignorant foreigners confuse our communication and reliance upon our ancestor spirits with necromancy, but ancestor veneration is holy and pious, while necromancy is godless, perverse sorcery.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "196318202121928451": {
+    "Prev": "1187648141845521127",
+    "Next": "467717080619924706",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Healer",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ignorant foreigners confuse our communication and reliance upon our ancestor spirits with necromancy, but ancestor veneration is holy and pious, while necromancy is godless, perverse sorcery.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "467717080619924706": {
+    "Prev": "196318202121928451",
+    "Next": "20273193472032116533",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Priest Service",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ignorant foreigners confuse our communication and reliance upon our ancestor spirits with necromancy, but ancestor veneration is holy and pious, while necromancy is godless, perverse sorcery.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "20273193472032116533": {
+    "Prev": "467717080619924706",
+    "Next": "31277202392386511071",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Priest",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ignorant foreigners confuse our communication and reliance upon our ancestor spirits with necromancy, but ancestor veneration is holy and pious, while necromancy is godless, perverse sorcery.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "31277202392386511071": {
+    "Prev": "20273193472032116533",
+    "Next": "9108230902419317895",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Healer",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Necromancy is a loathsome abomination. Necromancers and vampires are foul and evil beyond reckoning, and must be destroyed.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "9108230902419317895": {
+    "Prev": "31277202392386511071",
+    "Next": "24537280422694227487",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Monk",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Necromancy is a loathsome abomination. Necromancers and vampires are foul and evil beyond reckoning, and must be destroyed.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "24537280422694227487": {
+    "Prev": "9108230902419317895",
+    "Next": "2120028514167484880",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Priest Service",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Necromancy is a loathsome abomination. Necromancers and vampires are foul and evil beyond reckoning, and must be destroyed.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2120028514167484880": {
+    "Prev": "24537280422694227487",
+    "Next": "243326862181210139",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Priest",
+    "SpeakerFaction": "Temple",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Necromancy is a loathsome abomination. Necromancers and vampires are foul and evil beyond reckoning, and must be destroyed.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "243326862181210139": {
+    "Prev": "2120028514167484880",
+    "Next": "313992229469025322",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Ashlanders",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Foolish outlanders believe WE are necromancers because we are protected by our ancestors. Outlanders know nothing about the sacred honor of ancestors faithfully protecting their living kin.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "313992229469025322": {
+    "Prev": "243326862181210139",
+    "Next": "1591029856163771358",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Ashlanders",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Necromancy is an evil magic that forces the spirits and remains of our ancestors to serve a black sorcerer. There is no greater evil than profaning the bones or spirits of our fathers.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1591029856163771358": {
+    "Prev": "313992229469025322",
+    "Next": "218221251706511636",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Savant",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "According to the Dunmer, animation or control of a deceased's flesh or spirit is righteous when practiced according to established cult ritual, but illegal and abominable when practiced by secular sorcerers. However, in Telvanni districts, necromancy is privately practiced by wizards in defiance of Temple censure.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "218221251706511636": {
+    "Prev": "1591029856163771358",
+    "Next": "743723461135417613",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "Commoner",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Our practice of binding our dead to protect sacred and family property is our right, and protected by Temple and Imperial law.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 25.0
+      }
+    ],
+    "Script": []
+  },
+  "743723461135417613": {
+    "Prev": "218221251706511636",
+    "Next": "1633550042528627418",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "Commoner",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The traditional Dunmer practices of sanctified invocation of spiritual and bodily remains to protect sacred and family property are universally approved and protected by Temple and Imperial law.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 25.0
+      }
+    ],
+    "Script": []
+  },
+  "1633550042528627418": {
+    "Prev": "743723461135417613",
+    "Next": "208732691008218546",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "Pauper",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Our traditional practice of ancestor worship is NOT necromancy. Only ignorant outlanders could mistake our sacred rituals for the vile sorceries of necromancers.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "208732691008218546": {
+    "Prev": "1633550042528627418",
+    "Next": "31688253491865615774",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "Commoner",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The traditional Dunmer practices of ancestor worship are NOT necromancy. Only ignorant outlanders could confuse our sacred practices with the vile sorceries of necromancers.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "31688253491865615774": {
+    "Prev": "208732691008218546",
+    "Next": "118223831586113419",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "Commoner",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Under the terms of the Armistice, necromancy defined as \"animation and control of a deceased's flesh or spirit\" is punishable by death.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 75.0
+      }
+    ],
+    "Script": []
+  },
+  "118223831586113419": {
+    "Prev": "31688253491865615774",
+    "Next": "3022418122005321064",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "Pauper",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Under the terms of the Armistice, necromancy is punishable by death.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 75.0
+      }
+    ],
+    "Script": []
+  },
+  "3022418122005321064": {
+    "Prev": "118223831586113419",
+    "Next": "8824317432448917152",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "Commoner",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Necromancy is both illegal and utterly evil according to our custom and religion.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "8824317432448917152": {
+    "Prev": "3022418122005321064",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "Pauper",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Necromancy is both illegal and utterly evil according to our custom and religion.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

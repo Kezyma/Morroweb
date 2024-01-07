@@ -1,0 +1,57 @@
+{
+  "1319019733996815490": {
+    "Prev": "",
+    "Next": "1691123165242221147",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "King Hlaalu Helseth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As I said, meet my informant at the Winged Guar. Ask him about his uncle's farm.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "HelAss",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1691123165242221147": {
+    "Prev": "1319019733996815490",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "King Hlaalu Helseth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I wish for you to meet an informant of mine at a local cornerclub, The Winged Guar. You'll find it in Godsreach. He's an orc, and shouldn't be hard to pick out. Find him, and ask him about his \"uncle's farm.\" He'll know what it means. Then report back to me with your information.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "HelAss",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TR_Assassins 10",
+      "set HelAss to 1"
+    ]
+  }
+}

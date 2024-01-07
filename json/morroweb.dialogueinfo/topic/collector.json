@@ -1,0 +1,135 @@
+{
+  "1306292171999413059": {
+    "Prev": "",
+    "Next": "52344611140020899",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Geon Auline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, now that I have the full collection of daggers, I may contact the Mournhold Artifact Museum.  They're all so wonderful, aren't they?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_EstateSale",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "52344611140020899": {
+    "Prev": "1306292171999413059",
+    "Next": "443723601239526003",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Geon Auline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Perhaps I'd have better luck opening a store of some sort, since oafs like you seem to be more interested in selling things than procuring them for investors. Hear that, %PCName? It's SARCASM.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_EstateSale",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "443723601239526003": {
+    "Prev": "52344611140020899",
+    "Next": "2615928702192531125",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Geon Auline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I do hope you can acquire that Droth Dagger for me, %PCName.  It would complete a most wonderful collection, perhaps something the Museum of Artifacts would be interested in.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_EstateSale",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "2615928702192531125": {
+    "Prev": "443723601239526003",
+    "Next": "2311161141269921179",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Geon Auline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This Droth Dagger has had me occupied for quite some time.  I've located one, but have had a rather, ah, difficult time obtaining it.  I freely admit I'm obsessing a bit over it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_EstateSale",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "2311161141269921179": {
+    "Prev": "2615928702192531125",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Geon Auline",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I have amassed quite a collection of rare items, some of which you see displayed here.  I'm currently working on the last piece of a set, a very rare Droth Dagger.  It's been a challenge to track one down, to say the least.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_EstateSale",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal MS_EstateSale 10",
+      "addtopic \"Droth Dagger\""
+    ]
+  }
+}

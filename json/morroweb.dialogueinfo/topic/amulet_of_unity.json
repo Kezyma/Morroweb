@@ -1,0 +1,196 @@
+{
+  "5223302971255627274": {
+    "Prev": "",
+    "Next": "21789187772732032727",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edd theman",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I already gave you the Amulet of Unity.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_EddieAmulet",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "21789187772732032727": {
+    "Prev": "5223302971255627274",
+    "Next": "455920882527715484",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edd theman",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I found the Amulet of Unity. It's good thing you gave me those potions or else the guardians would have seen me for sure. I hope the Amulet works as well as they say.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_EddieAmulet",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal HT_EddieAmulet 100",
+      "Player->AddItem Amulet_Unity_uniq 1",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "Player->ModReputation 1"
+    ]
+  },
+  "455920882527715484": {
+    "Prev": "21789187772732032727",
+    "Next": "15819209241060928312",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edd theman",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll leave just as soon as I'm ready.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_EddieAmulet",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "15819209241060928312": {
+    "Prev": "455920882527715484",
+    "Next": "14465112633238229227",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edd theman",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. This should be enough. I'll see you in a few weeks.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem P_Invisibility_S 5",
+      "Journal HT_EddieAmulet 50",
+      "StartScript FastEddieAmulet"
+    ]
+  },
+  "14465112633238229227": {
+    "Prev": "15819209241060928312",
+    "Next": "300910685519010918",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edd theman",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll wait. I'm not going to get the Amulet of Unity without them.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "300910685519010918": {
+    "Prev": "14465112633238229227",
+    "Next": "4917171011702111441",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edd theman",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you have five Standard Potions of Invisibility?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "p_invisibility_s",
+        "Value": 5.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_EddieAmulet",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here they are.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "4917171011702111441": {
+    "Prev": "300910685519010918",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edd theman",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Amulet of Unity was made many years ago, back in the First Era. It's on the mainland and heavily guarded. I don't want to have to fight those guards, so I'll need at least five Standard Potions of Invisibility. I can cast Invisibility of course, but I'll want to save my magicka for other things.",
+    "Filters": [],
+    "Script": [
+      "Journal HT_EddieAmulet 10"
+    ]
+  }
+}

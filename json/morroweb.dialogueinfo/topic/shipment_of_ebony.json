@@ -1,0 +1,726 @@
+{
+  "28301321162474932431": {
+    "Prev": "",
+    "Next": "3397283233160231405",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drinar varyon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You gave me the ebony. We have no more business to discuss.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "HH_EbonyDelivery",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "3397283233160231405": {
+    "Prev": "28301321162474932431",
+    "Next": "470688971786123660",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drinar varyon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, five pieces. Good. You are dismissed. I will tell Odral you made the delivery.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 7.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem Ingred_Raw_Ebony_01 5",
+      "Journal HH_EbonyDelivery 50"
+    ]
+  },
+  "470688971786123660": {
+    "Prev": "3397283233160231405",
+    "Next": "16538183611930411342",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drinar varyon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then I'll take it from your dead body.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 8.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "16538183611930411342": {
+    "Prev": "470688971786123660",
+    "Next": "17582193711605422712",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drinar varyon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have the ebony? Give it to me, quickly.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_raw_ebony_01",
+        "Value": 5.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EbonyDelivery",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HH_EbonyDelivery",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give him the ebony.\" 7 \"Keep the ebony.\" 8"
+    ]
+  },
+  "17582193711605422712": {
+    "Prev": "16538183611930411342",
+    "Next": "2619666592296720931",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "segunivus mantedius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This matter is now out of your hands. I will send men to investigate Odral Helvi and Drinar Varyon. If they can confirm your story, I will have both of them arrested.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem Ingred_Raw_Ebony_01 5",
+      "Journal HH_EbonyDelivery 60",
+      "\"Drinar Varyon\"->Disable",
+      "\"Odral Helvi\"->Disable"
+    ]
+  },
+  "2619666592296720931": {
+    "Prev": "17582193711605422712",
+    "Next": "10366252532913317648",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "segunivus mantedius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you keep the ebony, I will be forced to have you arrested for failing to cooperate with an Imperial investigation.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "10366252532913317648": {
+    "Prev": "2619666592296720931",
+    "Next": "19400243671378030535",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "segunivus mantedius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Give me the ebony, and I will investigate Drinar Varyon and Odral Helvi. If what you say is true, I will have them both arrested.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give Ebony.\" 1 \"Keep Ebony.\" 2"
+    ]
+  },
+  "19400243671378030535": {
+    "Prev": "10366252532913317648",
+    "Next": "3108241043209931887",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "segunivus mantedius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's a very interesting story. I'm not sure if I believe it. I'm going to pretend this conversation never happened.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "3108241043209931887": {
+    "Prev": "19400243671378030535",
+    "Next": "1587836152668421038",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "segunivus mantedius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Odral Helvi ordered you to deliver the ebony? To whom?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Choice \"Truth: Drinar Varyon in Ald'ruhn.\" 3 \"Lie.\" 4"
+    ]
+  },
+  "1587836152668421038": {
+    "Prev": "3108241043209931887",
+    "Next": "263418614993618742",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "segunivus mantedius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go about your business then.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": []
+  },
+  "263418614993618742": {
+    "Prev": "1587836152668421038",
+    "Next": "1561342282664624523",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "segunivus mantedius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you know of an illegal shipment, you must bring me the evidence. Otherwise, my hands are tied.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "HH_EbonyDelivery",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1561342282664624523": {
+    "Prev": "263418614993618742",
+    "Next": "141339230316322147",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "segunivus mantedius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Odral Helvi and Drinar Varyon have been found guilty of the crime of ebony smuggling.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EbonyDelivery",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "141339230316322147": {
+    "Prev": "1561342282664624523",
+    "Next": "427811750143224419",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "segunivus mantedius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I assure you I will investigate this matter.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EbonyDelivery",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "427811750143224419": {
+    "Prev": "141339230316322147",
+    "Next": "29116303411468231529",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "segunivus mantedius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ebony? Why do you have ebony? Are you a licensed trader?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Truth: Odral Helvi ordered me to deliver it.\" 5 \"Lie: Yes, of course.\" 6"
+    ]
+  },
+  "29116303411468231529": {
+    "Prev": "427811750143224419",
+    "Next": "2893930856184510827",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've broken the rules of House Hlaalu, sweetie. It brings tears to my eyes when I think about your disloyalty. Maybe you can make amends and make everything better.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2893930856184510827": {
+    "Prev": "29116303411468231529",
+    "Next": "28392671624206530",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You did well, dumpling. Without Odral Helvi, our operations in Caldera will go so much smoother. Not to mention our relations with House Redoran.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EbonyDelivery",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "28392671624206530": {
+    "Prev": "2893930856184510827",
+    "Next": "719746601474914742",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I wish you had listened to my advice, but what's done is done. Odral knows someone's after him now. I don't think he'll have any more special favors to ask of you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EbonyDelivery",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "719746601474914742": {
+    "Prev": "28392671624206530",
+    "Next": "21076203682863413312",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You did well, my little pudding pie. Odral Helvi is now on a prison ship. The same situation you found yourself in when you first came here. Take these little rings, sweetie. They'll look good on you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EbonyDelivery",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Journal HH_EbonyDelivery 110",
+      "Player->AddItem \"dire shardbolt ring\" 1",
+      "Player->AddItem \"eye-maze ring\" 1",
+      "ModPCFacRep 10 \"Hlaalu\"",
+      "ModDisposition 20"
+    ]
+  },
+  "21076203682863413312": {
+    "Prev": "719746601474914742",
+    "Next": "13300271141681525597",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I wish you had spoken to me about this, my little pudding pie. This was out best chance to arrest Odral Helvi and now that chance is gone.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EbonyDelivery",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "13300271141681525597": {
+    "Prev": "21076203682863413312",
+    "Next": "107868896148242806",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This is the last of the evidence we needed. Instead of delivering the ebony to Drinar Varyon, take it to Segunivus Mantedius at the Fort Buckmoth near Ald'ruhn. I bet if you turn your charms on Segunivus Mantedius, he will have Odral Helvi and Drinar Varyon arrested for this.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EbonyDelivery",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HH_EbonyDelivery 20"
+    ]
+  },
+  "107868896148242806": {
+    "Prev": "13300271141681525597",
+    "Next": "2519820017255321152",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't think so. You've been expelled. Until you make amends, I don't have to discuss business with you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2519820017255321152": {
+    "Prev": "107868896148242806",
+    "Next": "1456128628325353864",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already delivered the ebony.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EbonyDelivery",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1456128628325353864": {
+    "Prev": "2519820017255321152",
+    "Next": "189125915823032577",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What? Drinar Varyon is dead? Now I'll need to find a new contact. Nevermind, %PCName.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "drinar varyon",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "189125915823032577": {
+    "Prev": "1456128628325353864",
+    "Next": "2212538103190213703",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for delivering the ebony to Drinar Varyon. Take these 500 drakes for your service.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EbonyDelivery",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal HH_EbonyDelivery 100",
+      "Player->AddItem Gold_001 500",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 10"
+    ]
+  },
+  "2212538103190213703": {
+    "Prev": "189125915823032577",
+    "Next": "259786305303106432",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Like I said, take the ebony to Drinar Varyon in Ald'ruhn.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EbonyDelivery",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "259786305303106432": {
+    "Prev": "2212538103190213703",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Take these five pieces of raw ebony to Drinar Varyon in Ald'ruhn. He will deliver them to... friends of mine on the mainland. Do not speak of this to anyone.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_RentCollector",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HH_EbonyDelivery 10",
+      "Player->AddItem Ingred_Raw_Ebony_01 5"
+    ]
+  }
+}

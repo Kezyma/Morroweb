@@ -1,0 +1,747 @@
+{
+  "319789851288521531": {
+    "Prev": "",
+    "Next": "21197137535937144",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rerlas mon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good grief, %PCName. Six of the best packrats ever to come out of my stable... dead! And you want me to sell you more? No, sera! I just can't stand it! All that work I put into training them, and you treating them like grocery items? No! It just won't do!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 100.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Rat_pack_rerlas",
+        "Value": 6.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_BadPets\" 150"
+    ]
+  },
+  "21197137535937144": {
+    "Prev": "319789851288521531",
+    "Next": "950336272971226737",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rerlas mon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sorry, %PCRace. I don't have any packrats in my stable, and I don't think I'll have any more in the foreseeable future.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 100.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "packrats",
+        "Value": 6.0
+      }
+    ],
+    "Script": []
+  },
+  "950336272971226737": {
+    "Prev": "21197137535937144",
+    "Next": "1592116638714226529",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rerlas mon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here is one of my finest pack rats.  He'll follow you around, right behind you, wherever you go. AND he'll carry small burdens for you. But take good care of him. Seems a shame to eat the poor little fellows, after all the trouble I have in capturing them and training them. But.. the customer is always right, and they're yours to do with as you wish.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 100.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Rat_pack_rerlas",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "PlaceAtPC, rat_pack_rerlas, 1, 256, 0",
+      "set packrats to packrats + 1",
+      "messagebox \"Just activate your pack rat to access its inventory.\"",
+      "player->RemoveItem Gold_001 100",
+      "Goodbye"
+    ]
+  },
+  "1592116638714226529": {
+    "Prev": "950336272971226737",
+    "Next": "187517143312827253",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rerlas mon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sorry, %PCRace. I don't have any more in my stable, and it takes a while to train them. Tell you what. Check by with me later, and I'll see what can be done.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 100.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "packrats",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "187517143312827253": {
+    "Prev": "1592116638714226529",
+    "Next": "13909264062049812419",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rerlas mon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thanks, %PCRace. Here is your very own pack rat. He'll follow you around, right behind you, wherever you go. AND he'll carry small burdens for you. But take good care of him. They don't grow on trees, you know.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "PlaceAtPC, rat_pack_rerlas, 1, 256, 0",
+      "set packrats to packrats + 1",
+      "messagebox \"Just activate your pack rat to access its inventory.\"",
+      "player->RemoveItem Gold_001 100",
+      "Journal \"MS_BadPets\" 110",
+      "Goodbye"
+    ]
+  },
+  "13909264062049812419": {
+    "Prev": "187517143312827253",
+    "Next": "22464101481207824727",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rerlas mon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'd love to sell you one, %PCRace, but it doesn't look like you can afford it. Come back when you have the money and I'll have the creature packaged up and ready to go.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "22464101481207824727": {
+    "Prev": "13909264062049812419",
+    "Next": "2342017405239945502",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rerlas mon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good grief, %PCName. Six of the best rats ever to come out of my stable... dead! And you want me to sell you more? No, sera! I just can't stand it! All that work I put into training them, and you treating them like grocery items? No! It just won't do!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 25.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Rat_rerlas",
+        "Value": 6.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_BadPets\" 150"
+    ]
+  },
+  "2342017405239945502": {
+    "Prev": "22464101481207824727",
+    "Next": "56379601445614950",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rerlas mon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sorry, %PCRace. I don't have any pet rats in my stable, and I don't think I'll have any more in the foreseeable future.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 25.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "rats",
+        "Value": 6.0
+      }
+    ],
+    "Script": []
+  },
+  "56379601445614950": {
+    "Prev": "2342017405239945502",
+    "Next": "784549684363728",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rerlas mon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here is one of my finest pet rats. He'll follow you around, right behind you, wherever you go. But take good care of him. They're hard to train, you know. Seems a shame to eat the poor little fellows, after all the trouble I have in capturing them and training them. But.. the customer is always right, and they're yours to do with as you wish.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 25.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Rat_rerlas",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "PlaceAtPC, rat_rerlas, 1, 256, 0",
+      "set rats to rats + 1",
+      "player->RemoveItem Gold_001 25",
+      "Goodbye"
+    ]
+  },
+  "784549684363728": {
+    "Prev": "56379601445614950",
+    "Next": "2969128699121477891",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rerlas mon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sorry, %PCRace. I don't have any more in my stable, and it takes a while to train them. Tell you what. Check by with me later, and I'll see what can be done.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 25.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "rats",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "2969128699121477891": {
+    "Prev": "784549684363728",
+    "Next": "37445675180273365",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rerlas mon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thanks, %PCRace. Here is your very own rat. He'll follow you around, right behind you, wherever you go. Come back anytime if you need another or want a replacement!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 25.0
+      }
+    ],
+    "Script": [
+      "PlaceAtPC, rat_rerlas, 1, 256, 0",
+      "set rats to rats + 1",
+      "player->RemoveItem Gold_001 25",
+      "Journal \"MS_BadPets\" 100",
+      "Goodbye"
+    ]
+  },
+  "37445675180273365": {
+    "Prev": "2969128699121477891",
+    "Next": "21321158081103523926",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rerlas mon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'd love to sell you one, %PCRace, but it doesn't look like you can afford it. Come back when you have the money and I'll have the creature packaged up and ready to go.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "21321158081103523926": {
+    "Prev": "37445675180273365",
+    "Next": "2632769132444425433",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rerlas mon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good grief, %PCName. Six of the best scribs ever to come out of my stable... dead! And you want me to sell you more? No, sera! I just can't stand it! All that work I put into training them, and you treating them like grocery items? No! It just won't do!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 20.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "scrib_rerlas",
+        "Value": 6.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_BadPets\" 150",
+      "Goodbye"
+    ]
+  },
+  "2632769132444425433": {
+    "Prev": "21321158081103523926",
+    "Next": "26787131313203110902",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rerlas mon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sorry, %PCRace. I don't have any pet scribs in my stable, and I don't think I'll have any more in the foreseeable future.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 20.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "scribs",
+        "Value": 6.0
+      }
+    ],
+    "Script": []
+  },
+  "26787131313203110902": {
+    "Prev": "2632769132444425433",
+    "Next": "363712806108417571",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rerlas mon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here is one of my finest pet scribs. He'll follow you around, right behind you, wherever you go. But take good care of him. They're hard to train, you know. Seems a shame to eat the poor little fellows, after all the trouble I have in capturing them and training them. But.. the customer is always right, and they're yours to do with as you wish.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 20.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "scrib_rerlas",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "PlaceAtPC, scrib_rerlas, 1, 256, 0",
+      "set scribs to scribs + 1",
+      "player->RemoveItem Gold_001 25",
+      "Goodbye"
+    ]
+  },
+  "363712806108417571": {
+    "Prev": "26787131313203110902",
+    "Next": "242467791458318626",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rerlas mon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sorry, %PCRace. I don't have any more in my stable, and it takes a while to train them. Tell you what. Check by with me later, and I'll see what can be done.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 20.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "scribs",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "242467791458318626": {
+    "Prev": "363712806108417571",
+    "Next": "514524878766931543",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rerlas mon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thanks, %PCRace. Here is your very own scrib. He'll follow you around, right behind you, wherever you go. Come back anytime if you need another or want a replacement!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "PlaceAtPC, scrib_rerlas, 1, 256, 0",
+      "set scribs to scribs + 1",
+      "player->RemoveItem Gold_001 20",
+      "Journal \"MS_BadPets\" 100",
+      "Goodbye"
+    ]
+  },
+  "514524878766931543": {
+    "Prev": "242467791458318626",
+    "Next": "9640224022394512284",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rerlas mon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'd love to sell you one, %PCRace, but it doesn't look like you can afford it. Come back when you have the money and I'll have the creature packaged up and ready to go.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "9640224022394512284": {
+    "Prev": "514524878766931543",
+    "Next": "2720616721142520270",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rerlas mon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, come back anytime you think you need one. I sure could use the business.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": []
+  },
+  "2720616721142520270": {
+    "Prev": "9640224022394512284",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rerlas mon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's right, you can have a scrib for the low, low price of 20 gold, or a rat for 25. They are trained to follow you and attack anyone who attacks you. OR you can buy my exclusive pack rat for 100 gold. They not only follow and fight, but also carry small burdens. And, in a pinch, you've got fresh meat on the hoof, whenever you need it. What do you say?  Would you like one?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Yes, I'd like to buy a scrib.\" 1 \"Yes, I'd like to buy a rat.\" 2 \"Yes, I'd like to buy your exclusive pack rat.\" 3 \"No, thank you.\" 4"
+    ]
+  }
+}

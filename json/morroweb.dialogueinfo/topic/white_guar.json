@@ -1,0 +1,135 @@
+{
+  "817314171107463": {
+    "Prev": "",
+    "Next": "309961482111576904",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "urshamusa rapli",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I saw the white guar in my visions. It must be found.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MS_WhiteGuar",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "309961482111576904": {
+    "Prev": "817314171107463",
+    "Next": "3188417923451722673",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "urshamusa rapli",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have seen it? Did you not follow it? You must follow the white guar.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_WhiteGuar",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MS_WhiteGuar",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "3188417923451722673": {
+    "Prev": "309961482111576904",
+    "Next": "2840286572377417556",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "urshamusa rapli",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have seen your journey in a vision. Although you did not follow the white guar, it seems the gods have led you to where you were needed. In my vision, I saw you were led to the corpse of Ashamanu. She was a healer many, many years ago. She gave her own life to save the lives of others. It is said that she will give her life again and again, so that our people may live through her sacrifice. You have witnessed a miracle, my child; you now hold the Amulet of Ashamanu.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_WhiteGuar",
+        "Value": 65.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "amulet of ashamanu (unique)",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "\"Ashamanu\"->Disable",
+      "\"Guar_White_UNIQUE\"->Disable",
+      "Journal \"MS_WhiteGuar\" 70"
+    ]
+  },
+  "2840286572377417556": {
+    "Prev": "3188417923451722673",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "urshamusa rapli",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have seen your journey in a vision. I know what the white guar led you to, and I know who she was. In my vision, I saw you were led to the corpse of Ashamanu. She was a healer many, many years ago. She gave her own life to save the lives of others. It is said that she will give her life again and again, so that others may live through her sacrifice. You have witnessed a miracle, my child; you now hold the Amulet of Ashamanu.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_WhiteGuar",
+        "Value": 60.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "amulet of ashamanu (unique)",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "\"Ashamanu\"->Disable",
+      "\"Guar_White_UNIQUE\"->Disable",
+      "Journal \"MS_WhiteGuar\" 70"
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "4100315981020626804": {
+    "Prev": "",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Sadrith Mora, Wolverine Hall",
+    "PlayerFaction": "",
+    "Text": "Yes. She teaches Conjuration and Mysticism and Destruction at the Mage Guild. You think she might be involved in the Gateway haunting? Well. I suppose it's possible. Uleni Heleran has a mischievous personality, and she has some sort of bad feeling for Angaredhel and the Gateway Inn. I also noticed that Uleni Heleran has been magically transporting into Wolverine Hall quite a bit lately. Maybe she's using a Mark and Recall spell sequence or a Divine Intervention.",
+    "Filters": [
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "uleni heleran",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "town_Sadrith",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "town_Sadrith",
+        "Value": 50.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"town_Sadrith\" 20"
+    ]
+  }
+}

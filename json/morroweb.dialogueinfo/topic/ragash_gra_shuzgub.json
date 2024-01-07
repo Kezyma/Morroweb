@@ -1,0 +1,523 @@
+{
+  "30019139331130616069": {
+    "Prev": "",
+    "Next": "124810331540527877",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled, but maybe you can join the Imperial Legion again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "124810331540527877": {
+    "Prev": "30019139331130616069",
+    "Next": "10481166662854224739",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ragash is dead, and I need a new tax collector.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescueRagash",
+        "Value": 200.0
+      }
+    ],
+    "Script": []
+  },
+  "10481166662854224739": {
+    "Prev": "124810331540527877",
+    "Next": "67722293285591",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You got Ragash away from Baladas' tower.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescueRagash",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "67722293285591": {
+    "Prev": "10481166662854224739",
+    "Next": "2887214553238286416",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So she's dead already? That's too bad. Now I need a new tax collector. Well, you did what you could, %PCName.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "ragash gra-shuzgub",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "IL_RescueRagash",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal IL_RescueRagash 200"
+    ]
+  },
+  "2887214553238286416": {
+    "Prev": "67722293285591",
+    "Next": "2915623406106918097",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What do you mean she's dead? I ordered you to find her, not get her killed! You've disappointed me, %PCName.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "ragash gra-shuzgub",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -20",
+      "Journal IL_RescueRagash 200"
+    ]
+  },
+  "2915623406106918097": {
+    "Prev": "2887214553238286416",
+    "Next": "3082822355715322846",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent! Good to hear you were able to get her out of there.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescueRagash",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal IL_RescueRagash 100",
+      "ModPCFacRep 5 \"Imperial Legion\"",
+      "ModDisposition 10",
+      "\"ragash gra-shuzgub\"->Disable"
+    ]
+  },
+  "3082822355715322846": {
+    "Prev": "2915623406106918097",
+    "Next": "1939027571026016986",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Haven't you found her yet? Ask Baladas Demnevanni about her.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescueRagash",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "1939027571026016986": {
+    "Prev": "3082822355715322846",
+    "Next": "11591115663084917415",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "She was sent to Arvs Drelen, but no word has been heard since, and I suspect foul play. Find her and bring her back. Careful with old Baladas, though. I don't trust him.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescuePilgrim",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal IL_RescueRagash 10"
+    ]
+  },
+  "11591115663084917415": {
+    "Prev": "1939027571026016986",
+    "Next": "161768566846524853",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "She is dead.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "ragash gra-shuzgub",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "161768566846524853": {
+    "Prev": "11591115663084917415",
+    "Next": "29963243473271410610",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have given you the key. Get her out of my tower before I reconsider.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "IL_RescueRagash",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "29963243473271410610": {
+    "Prev": "161768566846524853",
+    "Next": "1317713382644329420",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The matter is settled as far as I am concerned.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescueRagash",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "1317713382644329420": {
+    "Prev": "29963243473271410610",
+    "Next": "25188159682345431941",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well. I shall let her go. Take this key and take the orc with you when you leave.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal IL_RescueRagash 40",
+      "Player->AddItem key_arvs-drelen_cell 1",
+      "removeitem \"key_arvs-drelen_cell\" 1",
+      "Set timer to -1"
+    ]
+  },
+  "25188159682345431941": {
+    "Prev": "1317713382644329420",
+    "Next": "2676210024450818829",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What? So soon? Even the short-lived orcs need time to reflect on their transgressions.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2676210024450818829": {
+    "Prev": "25188159682345431941",
+    "Next": "878714867614322314",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Can you make such a promise? I do not know if I should trust you... But I shall. Take this key and take the orc with you when you leave.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal IL_RescueRagash 40",
+      "Player->AddItem key_arvs-drelen_cell 1",
+      "removeitem \"key_arvs-drelen_cell\" 1",
+      "Set timer to -1"
+    ]
+  },
+  "878714867614322314": {
+    "Prev": "2676210024450818829",
+    "Next": "695168312407925868",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You trouble me now. Do you think I have nothing better to do than listen to such lies? Leave now or you shall join the orc in my prison.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "695168312407925868": {
+    "Prev": "878714867614322314",
+    "Next": "312781057276661971",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "You are of respectable rank in House Telvanni, but I am the better wizard. Do you care to test your skills against mine, child?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "312781057276661971": {
+    "Prev": "695168312407925868",
+    "Next": "2303327322494513098",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I do not pay tribute to any man. Do not anger me, or you shall join the orc in my prison.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "2303327322494513098": {
+    "Prev": "312781057276661971",
+    "Next": "2699922789121932027",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Leave. Now.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "2699922789121932027": {
+    "Prev": "2303327322494513098",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "She came demanding tribute for the Empire of men. I was here before Gnisis, before the Empire of men. I will be here after Gnisis is gone and after this short-lived Empire has crumbled. The people of Gnisis live only because I tolerate them. Why should I pay tribute?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Ragash learned her lesson.\" 1 \"Let her go and no one will trouble you again.\" 2 \"Everyone pays taxes.\" 3"
+    ]
+  }
+}

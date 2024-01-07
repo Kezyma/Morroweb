@@ -1,0 +1,178 @@
+{
+  "31243247571916132474": {
+    "Prev": "",
+    "Next": "626856532363514661",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "daric bielle",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sure he is! Knew it all along. You need another drink.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_BountyHunter",
+        "Value": 140.0
+      }
+    ],
+    "Script": []
+  },
+  "626856532363514661": {
+    "Prev": "31243247571916132474",
+    "Next": "83652556926559507",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "daric bielle",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, don't that beat all. How about that. Maybe you've been spending a little time in the bottle as well, huh friend? Pshhh...okay, okay. Here's your reward. Wasn't much anyway. Plus, I've got good credit at this place. Barkeep, another one over here!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_BountyHunter",
+        "Value": 80.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_BountyHunter",
+        "Value": 140.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_BountyHunter\" 140",
+      "RemoveItem \"Gold_001\" 150",
+      "Player->AddItem \"Gold_001\" 150",
+      "Goodbye"
+    ]
+  },
+  "83652556926559507": {
+    "Prev": "626856532363514661",
+    "Next": "810575671423331853",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hides_his_eyes",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You told that idiot my secret! Fetcher! I will never go back!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_BountyHunter",
+        "Value": 140.0
+      }
+    ],
+    "Script": [
+      "StartCombat Player",
+      "SetFight 100",
+      "SetDisposition 0",
+      "Goodbye"
+    ]
+  },
+  "810575671423331853": {
+    "Prev": "83652556926559507",
+    "Next": "18532298121074631179",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hides_his_eyes",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are a good friend. I thank you. I will let others know what you have done for me today.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_BountyHunter\" 120",
+      "ModPCFacRep 5 \"Twin Lamps\" ",
+      "Goodbye"
+    ]
+  },
+  "18532298121074631179": {
+    "Prev": "810575671423331853",
+    "Next": "7783853278979516",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hides_his_eyes",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You would tell that fool? I will not go back. I will never go back!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_BountyHunter\" 130",
+      "StartCombat Player",
+      "ModPCFacRep -5 \"Twin Lamps\""
+    ]
+  },
+  "7783853278979516": {
+    "Prev": "18532298121074631179",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hides_his_eyes",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You found my secret, you did? I'll not try to hide it from you. I am the one the bounty hunter seeks. What of it? He would take me back to the slavers. That is not for me. So I dragged him around the wilderness for a while...what of it? Does he not deserve it, the drunken fool? And he paid me well! So, you know my secret. What will you do with it? You will not tell, will you?",
+    "Filters": [],
+    "Script": [
+      "Journal \"MV_BountyHunter\" 110",
+      "Choice \"Your secret is save with me, friend.\" 1 \"I am honor-bound to tell Bielle what I have learned.\" 2"
+    ]
+  }
+}

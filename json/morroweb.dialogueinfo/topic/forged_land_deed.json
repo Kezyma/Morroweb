@@ -1,0 +1,633 @@
+{
+  "535412220890519954": {
+    "Prev": "",
+    "Next": "1036312146125447659",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm very disappointed in you, %PCName. You broke our rules, and I can't have one of your reputation in the Bal Molagmer. Make amends, and perhaps we can speak again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1036312146125447659": {
+    "Prev": "535412220890519954",
+    "Next": "31663295561499727741",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "I'm disappointed in you, %PCName. You've been caught too many times. Tone down your act, pay off yours debts, then come see me again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcCrimeLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "31663295561499727741": {
+    "Prev": "1036312146125447659",
+    "Next": "111723425101266659",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Indrele Rathryon has the deed now, and the Temple courts have been stalled.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Generosity2",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "111723425101266659": {
+    "Prev": "31663295561499727741",
+    "Next": "2020824791273289534",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "I heard you gave the land deed to Indrele Rathryon. Maybe Velanda Omani will leave her alone now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Generosity2",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Generosity2 100",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "2020824791273289534": {
+    "Prev": "111723425101266659",
+    "Next": "3123625870320926210",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "You have the land deed? Take it to Indrele Rathryon in Seyda Neen.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_indreledeed",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Generosity2",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "3123625870320926210": {
+    "Prev": "2020824791273289534",
+    "Next": "22391288163153227573",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "The Hlaalu Councilor Velanda Omani wants Indrele Rathryon's land. Velanda Omani forged a land deed and placed it in the Library of Vivec. Without our help, Velanda Omani's bribes will prevent justice, and allow the forged deed to stand. Go to the Library of Vivec, find the deed, and deliver it to Indrele Rathryon in the name of the Bal Molagmer.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Yngling",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Generosity2 10"
+    ]
+  },
+  "22391288163153227573": {
+    "Prev": "3123625870320926210",
+    "Next": "1036416049168545689",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "indrele rathryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I burned that land deed. If Velanda Omani wants my land she'll have to forge another one. I don't know if she'd do that or not, but for now, my land is safe.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Generosity2",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1036416049168545689": {
+    "Prev": "22391288163153227573",
+    "Next": "120599882799226037",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "indrele rathryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You gave me the land deed, and I am grateful.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Generosity2",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "120599882799226037": {
+    "Prev": "1036416049168545689",
+    "Next": "1538590672597130268",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "indrele rathryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, I won't argue with you, but I still don't understand why you did this.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Generosity2 50",
+      "Player->RemoveItem bk_IndreleDeed 1",
+      "ModDisposition 25"
+    ]
+  },
+  "1538590672597130268": {
+    "Prev": "120599882799226037",
+    "Next": "1620413279116669157",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "indrele rathryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you very much. I can't tell you what this means. And...your gloves...they seem somehow familiar...stories I heard as a child. Anyway, I thank you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "TGglove",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Generosity2 55",
+      "Player->RemoveItem bk_IndreleDeed 1",
+      "ModDisposition 25"
+    ]
+  },
+  "1620413279116669157": {
+    "Prev": "1538590672597130268",
+    "Next": "321094461560110622",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "indrele rathryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I thank you. I have my land deed, and Velanda Omani doesn't.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Generosity2 50",
+      "Player->RemoveItem bk_IndreleDeed 1"
+    ]
+  },
+  "321094461560110622": {
+    "Prev": "1620413279116669157",
+    "Next": "2727512660673812667",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "indrele rathryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What? This looks like the land deed... Why are you giving me this?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Choice \"I stole it.\" 1 \"This deed belongs in your hands.\" 2"
+    ]
+  },
+  "2727512660673812667": {
+    "Prev": "321094461560110622",
+    "Next": "1107454491077912844",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "indrele rathryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "And my answer will be the same next time.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": []
+  },
+  "1107454491077912844": {
+    "Prev": "2727512660673812667",
+    "Next": "169416125277387578",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "indrele rathryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Just leave me alone. I already told you. I never signed any land deed. I'm not selling my land, and I'm not moving back to Cyrodiil.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_indreledeed",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give her the land deed\" 3 \"Nevermind\" 4"
+    ]
+  },
+  "169416125277387578": {
+    "Prev": "1107454491077912844",
+    "Next": "2451124916197662",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "velanda omani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Oh, that? I had nothing to do with that, believe me! That was one of my retainers. When I found out what he planned, I sent him back to the mainland.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_indreledeed",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2451124916197662": {
+    "Prev": "169416125277387578",
+    "Next": "333729882291638447",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "velanda omani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You ruined my plans, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Generosity2",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "333729882291638447": {
+    "Prev": "2451124916197662",
+    "Next": "3254431973644726957",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "velanda omani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. Now leave and I'll forget about this.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Generosity2 30",
+      "Player->RemoveItem bk_IndreleDeed 1",
+      "AddItem bk_IndreleDeed 1"
+    ]
+  },
+  "3254431973644726957": {
+    "Prev": "333729882291638447",
+    "Next": "156762636158544895",
+    "Type": "Topic",
+    "Disposition": 15,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "velanda omani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So be it. Leave before I lose my temper.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "156762636158544895": {
+    "Prev": "3254431973644726957",
+    "Next": "42334688260573534",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "velanda omani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So be it. Leave before I lose my temper.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "42334688260573534": {
+    "Prev": "156762636158544895",
+    "Next": "10622994875827021",
+    "Type": "Topic",
+    "Disposition": 15,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "velanda omani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't know how you got that back, but you won't get away with this.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_indreledeed",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_SS_Generosity2",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "10622994875827021": {
+    "Prev": "42334688260573534",
+    "Next": "2535878202473527910",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "velanda omani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't know how you got that back, but you won't get away with this.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_indreledeed",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_SS_Generosity2",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "2535878202473527910": {
+    "Prev": "10622994875827021",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "velanda omani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I believe you have something that belongs to me. If you give it back to me and leave quietly, I will forget this ever happened.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_indreledeed",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give her the land deed' 1 \"Keep the land deed\" 2"
+    ]
+  }
+}

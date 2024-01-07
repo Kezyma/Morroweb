@@ -1,0 +1,214 @@
+{
+  "1723911314733617745": {
+    "Prev": "",
+    "Next": "289061260284169735",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tarvyn faren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thanks to you, everyone will know the name Tarvyn Feran as a trader who can reach his customers even with all the troubles for House Hlaalu.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EscortMerchant",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "289061260284169735": {
+    "Prev": "1723911314733617745",
+    "Next": "1102239892086015388",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tarvyn faren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I'm Tarvyn Faren. We're travelling together to the Halfway Tavern in Pelagiad.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "followNow",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1102239892086015388": {
+    "Prev": "289061260284169735",
+    "Next": "1106615169245343131",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tarvyn faren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I'm Tarvyn Faren. Are you here to escort me? Tell me when you're ready to travel together.",
+    "Filters": [],
+    "Script": []
+  },
+  "1106615169245343131": {
+    "Prev": "1102239892086015388",
+    "Next": "14990275261124026118",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled. I cannot discuss business with you unless you make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "14990275261124026118": {
+    "Prev": "1106615169245343131",
+    "Next": "154029330312387837",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard that Tarvyn Faren did not arrive safely. I hold you responsible. I will not discuss any more business with you.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "tarvyn faren",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "154029330312387837": {
+    "Prev": "14990275261124026118",
+    "Next": "34807678397810688",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have already escorted Tarvyn Faren to Pelagiad.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EscortMerchant",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "34807678397810688": {
+    "Prev": "154029330312387837",
+    "Next": "6876249721214614834",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm glad Tarvyn Faren arrived safely. Take these 500 drakes for helping House Hlaalu's business.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EscortMerchant",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal HH_EscortMerchant 100",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 10",
+      "Player->AddItem Gold_001 500",
+      "\"Tarvyn Faren\"->Disable"
+    ]
+  },
+  "6876249721214614834": {
+    "Prev": "34807678397810688",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Meet Tarvyn Faren on the road to Pelagiad, near the Silt Strider just north of the bridge to the Foreign Quarter. Escort him safely to Pelagiad.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BuriedTreasure",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HH_EscortMerchant 10",
+      "\"Tarvyn Faren\"->Enable"
+    ]
+  }
+}

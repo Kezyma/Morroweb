@@ -1,0 +1,91 @@
+{
+  "16276279542531830053": {
+    "Prev": "",
+    "Next": "12067297762488413045",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dhaunayne aundae",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You? An unfortunate accident perpetrated by one of my kind? Hmmm...you are expendable enough, so may be of use. I have some questions about my past I need answered, and you might be fit to get this information. Answers about my family.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampChild",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampChild\" 10"
+    ]
+  },
+  "12067297762488413045": {
+    "Prev": "16276279542531830053",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dhaunayne aundae",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You try my patience, but I suppose I can make further use of you. You are expendable after all. I wish for you to take care of a bothersome vampire hunter.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampChild",
+        "Value": 120.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampHunter",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  }
+}

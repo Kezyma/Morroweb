@@ -1,0 +1,943 @@
+{
+  "45341331184509153": {
+    "Prev": "",
+    "Next": "22761111983241720411",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You broke the rules, %PCName. Maybe you can make amends, and maybe not.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "22761111983241720411": {
+    "Prev": "45341331184509153",
+    "Next": "214594804292603296",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "What do you want, %PCRank?",
+    "Filters": [],
+    "Script": []
+  },
+  "214594804292603296": {
+    "Prev": "22761111983241720411",
+    "Next": "32041140792766818395",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 8,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Actually, this is the final job I'll give you. Take care of the Guild. You've done great things, %PCName. With you here, I think it's safe for me to take a little vacation. Maybe go back to Hammerfell, see the old family. Until I get back, I'm leaving the Guild in your capable hands.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_KillHardHeart",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "PCRaiseRank"
+    ]
+  },
+  "32041140792766818395": {
+    "Prev": "214594804292603296",
+    "Next": "499230085676914328",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 8,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "You've made progress getting the Camonna Tong off our backs, but we can't rest until Sjoring Hard-Heart is dead.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_KillIenith",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "499230085676914328": {
+    "Prev": "32041140792766818395",
+    "Next": "2404113282401411056",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 8,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "The Camonna Tong's best enforcers are Navil and Ranes Ienith.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_Hostage",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2404113282401411056": {
+    "Prev": "499230085676914328",
+    "Next": "14798263842227627605",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Come talk to me again when you're a Mastermind in the Guild.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_Hostage",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "14798263842227627605": {
+    "Prev": "2404113282401411056",
+    "Next": "2082326972226812630",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Based on what we know, Hrundi might join our cause and betray his leaders in the Fighters Guild. If that doesn't work, we could put pressure on Hrundi's woman.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BitterBribe",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "2082326972226812630": {
+    "Prev": "14798263842227627605",
+    "Next": "68333529153802365",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Based on what Percius Mercius told you, Hrundi might join our cause and betray his leaders in the Fighters Guild. If that doesn't work, we could put pressure on Hrundi's woman.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BitterBribe",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "68333529153802365": {
+    "Prev": "2082326972226812630",
+    "Next": "155083018658041521",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Based on what we know, I think we can win over Eydis Fire-Eye if we can find the Bitter Cup.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_EnemyParley",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "155083018658041521": {
+    "Prev": "68333529153802365",
+    "Next": "30351133391107816483",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Based on what Percius Mercius told you, I think we can win over Eydis Fire-Eye if we can find the Bitter Cup.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_EnemyParley",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "30351133391107816483": {
+    "Prev": "155083018658041521",
+    "Next": "31812106825080860",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "The Fighters Guild is betraying the Empire for Camonna Tong gold. Percius Mercius, the old guildmaster in Ald'ruhn, might be willing to help us fight.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BrotherThief",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "31812106825080860": {
+    "Prev": "30351133391107816483",
+    "Next": "3444290155618608",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 6,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "A fellow thief and member of the Guild has gone missing. Would you track down Nads Tharen for me?",
+    "Filters": [],
+    "Script": []
+  },
+  "3444290155618608": {
+    "Prev": "31812106825080860",
+    "Next": "9927911370112357",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "I've heard you're a promising young member, but I'd like to see you a bit more seasoned. Come talk to me when you're a Captain. Until then, practice your skills, and talk to Big Helende, Habasi, or Aengoth. They've generally got work that needs to be done.",
+    "Filters": [],
+    "Script": []
+  },
+  "9927911370112357": {
+    "Prev": "3444290155618608",
+    "Next": "14769307073235427",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Habasi has no jobs for you. Ask Aengoth the Jeweler in Ald'ruhn or Big Helende in Sadrith Mora.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BalmoraDefenses",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "14769307073235427": {
+    "Prev": "9927911370112357",
+    "Next": "3304234993260222307",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Habasi has no jobs for you. Ask Aengoth the Jeweler in Ald'ruhn or Big Helende in Sadrith Mora.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "hecerinde",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BrotherBragor",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3304234993260222307": {
+    "Prev": "14769307073235427",
+    "Next": "22145416337694702",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A master of security lives here in Balmora. Habasi knows only that he is an Altmer. Perhaps he can help secure the South Wall.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BrotherBragor",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal TG_BalmoraDefenses 5"
+    ]
+  },
+  "22145416337694702": {
+    "Prev": "3304234993260222307",
+    "Next": "31873317122217515589",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Fort Pelagiad's jail holds a member of the Guild, New-Shoes Bragor.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_VintageBrandy",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "31873317122217515589": {
+    "Prev": "22145416337694702",
+    "Next": "1018928453919926813",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ralen Hlaalo died recently, but left a bottle of Vintage Brandy.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_OverduePayments",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal TG_VintageBrandy 5"
+    ]
+  },
+  "1018928453919926813": {
+    "Prev": "31873317122217515589",
+    "Next": "1918916302047131431",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ra'Zhid, no good friend of Habasi, stole Dwemer artifacts from the Guild.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_ManorKey",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1918916302047131431": {
+    "Prev": "1018928453919926813",
+    "Next": "300112200155814557",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Habasi wants the key to Nerano Manor.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_Diamonds",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "300112200155814557": {
+    "Prev": "1918916302047131431",
+    "Next": "17435195231490130495",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A good friend of Habasi wants a diamond. Nalcarya the Alchemist has diamonds.",
+    "Filters": [],
+    "Script": []
+  },
+  "17435195231490130495": {
+    "Prev": "300112200155814557",
+    "Next": "2419990142116235",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I got no jobs for you, %PCRank. Try Sugar-Lips Habasi in Balmora or Big Helende in Sadrith Mora. Or you could talk to the Master Thief himself, Gentleman Jim Stacey. He's in Vivec, but is very choosy about who he has work for him.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_DartsJudgement",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2419990142116235": {
+    "Prev": "17435195231490130495",
+    "Next": "330985295213459",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Eindel, a Bosmer like me, has some fine arrows, the Darts of Judgement.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_AldruhnDefenses",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "330985295213459": {
+    "Prev": "2419990142116235",
+    "Next": "192221651782585306",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We got some Dwemer Spider Centurions from a friend, and we got Estoril who can fix them up, but we don't have any scrap metal.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_Withershins",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "192221651782585306": {
+    "Prev": "330985295213459",
+    "Next": "105049630584730967",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There's another book I want you to fetch for me. It's called \"Withershins.\"",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BadGandosa",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "105049630584730967": {
+    "Prev": "192221651782585306",
+    "Next": "532012418244687968",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Gandosa Arobar is a Councilor's daughter if you know what I mean. I hear she's got a copy of Boethiah's Pillow Book.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_MasterHelm",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "532012418244687968": {
+    "Prev": "105049630584730967",
+    "Next": "4250324162546318551",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There's a customer who wants a Redoran Master Helm.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_LootAldruhnMG",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "4250324162546318551": {
+    "Prev": "532012418244687968",
+    "Next": "248322429164191633",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aengoth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I got a job for you. Something that might add some clink to your pockets. I've heard the Ald'ruhn Guild of Mages has been left unguarded. I want you to get Anareren's Devil Tanto.",
+    "Filters": [],
+    "Script": []
+  },
+  "248322429164191633": {
+    "Prev": "4250324162546318551",
+    "Next": "19880206552472026882",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't have any jobs for you. Try asking Sugar-Lips Habasi in Balmora or Aengoth the Jeweler in Ald'ruhn. If they don't have anything for you, you can speak to the boss himself, Gentleman Jim Stacey.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_EbonyStaff",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "19880206552472026882": {
+    "Prev": "248322429164191633",
+    "Next": "1986056692116910551",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'd like you to see if you can't get Felen Maryon's staff.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_RedoranCookbook",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1986056692116910551": {
+    "Prev": "19880206552472026882",
+    "Next": "25630773155356680",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "One of our customers wants the book \"Redoran Cooking Secrets.\"",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SadrithMoraDefenses",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "25630773155356680": {
+    "Prev": "1986056692116910551",
+    "Next": "60743624357024488",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We need to protect ourselves from the Camonna Tong. Maybe we could hire a wizard from the Mages Guild.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_GrandmasterRetort",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "60743624357024488": {
+    "Prev": "25630773155356680",
+    "Next": "704571411820512285",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "One of our customers wants a Grandmaster's Retort.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_CookbookAlchemy",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "tusamircil",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "704571411820512285": {
+    "Prev": "60743624357024488",
+    "Next": "9285243492694821389",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "One of our customers wants a Grandmaster's Retort.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_CookbookAlchemy",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "9285243492694821389": {
+    "Prev": "704571411820512285",
+    "Next": "17454192872205327061",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "big helende",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We've been hired to fetch a Dispel potion recipe.",
+    "Filters": [],
+    "Script": []
+  },
+  "17454192872205327061": {
+    "Prev": "9285243492694821389",
+    "Next": "1196140512712519990",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can't give you jobs if you're not in the Guild. You want to join the Thieves Guild?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "RankRequirement",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "1196140512712519990": {
+    "Prev": "17454192872205327061",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Thieves Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can't give you jobs if you're not in the Guild.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

@@ -1,0 +1,658 @@
+{
+  "635218764820424505": {
+    "Prev": "",
+    "Next": "24463198842591620919",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ygfa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are now a %NextPCRank in the Imperial Cult. Welcome, %PCName, to our community, and may your rejoice in its blessings. Can I tell you about our services? Or, if you can donate more time and effort, would you like to become a lay servant?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Piernette",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC_guide",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "PCJoinFaction \"Imperial cult\"",
+      "Journal IC0_ImperialCult 1"
+    ]
+  },
+  "24463198842591620919": {
+    "Prev": "635218764820424505",
+    "Next": "2162127882539027671",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ygfa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are now a %NextPCRank in the Imperial Cult. Welcome, %PCName, to our community, and may your rejoice in its blessings. Can I tell you about our services? Or, if you can donate more time and effort, would you like to become a lay servant?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Piernette",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "PCJoinFaction \"Imperial cult\"",
+      "Journal IC0_ImperialCult 1",
+      "player->additem bk_formygodsandemperor 1",
+      "journal IC_guide 2"
+    ]
+  },
+  "2162127882539027671": {
+    "Prev": "24463198842591620919",
+    "Next": "72131109139413990",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Cult",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are now a %NextPCRank in the Imperial Cult. Welcome, %PCName, to our community, and may your rejoice in its blessings. Can I tell you about our services? Or, if you can donate more time and effort, would you like to become a lay servant?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC_guide",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem gold_001 50",
+      "PCJoinFaction \"Imperial cult\"",
+      "Journal IC0_ImperialCult 1"
+    ]
+  },
+  "72131109139413990": {
+    "Prev": "2162127882539027671",
+    "Next": "25257250481672719256",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Cult",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are now a %NextPCRank in the Imperial Cult. Welcome, %PCName, to our community, and may your rejoice in its blessings. Can I tell you about our services? Or, if you can donate more time and effort, would you like to become a lay servant?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "player->removeitem gold_001 50",
+      "PCJoinFaction \"Imperial cult\"",
+      "Journal IC0_ImperialCult 1",
+      "player->additem bk_formygodsandemperor 1",
+      "journal IC_guide 2"
+    ]
+  },
+  "25257250481672719256": {
+    "Prev": "72131109139413990",
+    "Next": "931645952895514436",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Cult",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "At present you don't have the one-time pledge of 50 gold that we require. We'll be pleased to reconsider your request when you have the gold.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "Gold_001",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "931645952895514436": {
+    "Prev": "25257250481672719256",
+    "Next": "1171026857307445138",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Cult",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Our rules are equally simple. It is forbidden to attack another person of the Imperial cult, and of course, forbidden to kill another cult member. It is forbidden to steal from another member, whether by open theft or by covert pickpocketing. It is forbidden to trespass upon the private property of another member -- private property being understood to be anything behind a locked door. Break any one of these rules, and you shall be expelled from the cult. Now, %PCName. Do you wish to join?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, I wish to join.\" 1 \"No, not at this time.\" 4"
+    ]
+  },
+  "1171026857307445138": {
+    "Prev": "931645952895514436",
+    "Next": "1351230495117214619",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Cult",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Our doctrines are simple. We acknowledge the divinity of the Nine Divines: Akatosh, Dibella, Arkay, Zenithar, Mara, Stendarr, Kynareth, Julianos, and Tiber Septim. We preach the Nine Virtues: Humility, Inspiration, Piety, Work, Compassion, Justice, Ambition, Learning, and Civility. Our Emperor is the Defender of the Faith, and the Empire is the worldly working of the Divine Plan. We pledge aid and comfort to all citizens in need, and serve the Emperor and Empire at his will.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 5"
+    ]
+  },
+  "1351230495117214619": {
+    "Prev": "1171026857307445138",
+    "Next": "12408259581540119541",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Cult",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "To serve and glorify the Nine Divines, you must cultivate a noble personality and a strong will. Respect the magical arts, especially the colleges of Restoration, Mysticism, and Conjuration. Those who swear to avoid bloodshed, to take the field unarmored, to fight only with blunt weapons, are especially praiseworthy. Knowledge of enchantments and the gift of diplomatic speech are other qualities we look for in our initiates.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 6"
+    ]
+  },
+  "12408259581540119541": {
+    "Prev": "1351230495117214619",
+    "Next": "2196898952846710261",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Cult",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "All mortals are weak. But your will to make amends is praiseworthy. You are now again, a member of the cult. But I caution you. Do not again forget yourself, for there is no further recourse if you should be expelled once more.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "PCClearExpelled",
+      "Set ExpImperialCult to 1"
+    ]
+  },
+  "2196898952846710261": {
+    "Prev": "12408259581540119541",
+    "Next": "1068023481210125110",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Cult",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Please reconsider, %PCName, and come to us again. There is great strength and comfort in the solace of the Nine.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "1068023481210125110": {
+    "Prev": "2196898952846710261",
+    "Next": "2037310632894118071",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Cult",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "With greatest sorrow, we must turn away our faces. You have done the unforgivable, and are henceforth cast out from our community.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ExpImperialCult",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "goodbye"
+    ]
+  },
+  "2037310632894118071": {
+    "Prev": "1068023481210125110",
+    "Next": "2454416001137612162",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Cult",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled from the Imperial cult. If you heartily repent your misdeeds, we will give you a second chance -- only one second chance -- to return as a member of our community. Do you wish to atone?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, please forgive me\" 3 \"No\" 4"
+    ]
+  },
+  "2454416001137612162": {
+    "Prev": "2037310632894118071",
+    "Next": "3075047641370210028",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Cult",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are already a member of the Imperial Cult, %PCRank %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "3075047641370210028": {
+    "Prev": "2454416001137612162",
+    "Next": "1699416384765524239",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ygfa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We accept all citizens of good character and earnest faith. We ask for 50 drakes from new members, but since you have been so kind to Piernette, let's forget that. The only other cost of membership comes when you use our health, healing, and blessing shrines -- modest fees which help us spread the blessings of the Nine to those less fortunate than ourselves. Do you wish to join the Imperial Cult? Or would you rather I review the Imperial cult doctrines with you before you join?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "RankRequirement",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_Piernette",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Choice \"Join the Imperial Cult.\" 1 \"Review the doctrines.\" 2"
+    ]
+  },
+  "1699416384765524239": {
+    "Prev": "3075047641370210028",
+    "Next": "1017330103221051829",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Cult",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We accept all citizens of good character and earnest faith. We ask only a one-time pledge of 50 drakes to aid us in our good works. Thereafter, the only cost of membership comes when you use our health, healing, and blessing shrines -- modest fees which help us spread the blessings of the Nine to those less fortunate than ourselves. Do you wish to join the Imperial Cult? Or would you rather I review the Imperial cult requirements and doctrines with you before you join?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "RankRequirement",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Join the Imperial Cult.\" 1 \"Review the requirements and doctrines.\" 2"
+    ]
+  },
+  "1017330103221051829": {
+    "Prev": "1699416384765524239",
+    "Next": "31986419155198072",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 4,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Cult",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sorry for you, and for your misfortunes. Perhaps your attributes are so greatly reduced by curse or disease. But in your case, I'm afraid we cannot offer membership.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "31986419155198072": {
+    "Prev": "1017330103221051829",
+    "Next": "2585332132899910599",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 0,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Cult",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Speak with Ygfa at Fort Pelagiad, Syloria Siruliulus at Fort Buckmoth, Somutis Vunnis at Fort Moonmoth, Ruccia Conician in the Grand Council Chambers in Ebonheart, or Lalatia Varian in the Imperial Chapels at Ebonheart.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "ygfa",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "somutis vunnis",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "syloria siruliulus",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "Ruccia Conician",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC_guide",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2585332132899910599": {
+    "Prev": "31986419155198072",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 0,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Cult",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Speak with Ygfa at Fort Pelagiad, Syloria Siruliulus at Fort Buckmoth, Somutis Vunnis at Fort Moonmoth, Ruccia Conician in the Grand Council Chambers in Ebonheart, or Lalatia Varian in the Imperial Chapels at Ebonheart. And here's my copy of 'For my Gods and Emperor'. It's a handbook for members of the Imperial cult. Keep it. Read it. It may help you decide whether you should join the Imperial cult.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "ygfa",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "somutis vunnis",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "syloria siruliulus",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "Ruccia Conician",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "Lalatia Varian",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->additem bk_formygodsandemperor 1",
+      "journal IC_guide 1"
+    ]
+  }
+}

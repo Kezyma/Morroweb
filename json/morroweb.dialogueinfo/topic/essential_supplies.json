@@ -1,0 +1,129 @@
+{
+  "2574426244513322545": {
+    "Prev": "",
+    "Next": "26545254192088211895",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crulius pontanian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I gave you the scrolls. But, as I said, you might also want to browse my selection for scrolls to suit your own personal style.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_Supplies2",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "26545254192088211895": {
+    "Prev": "2574426244513322545",
+    "Next": "2668431443105585643",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crulius pontanian",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You're %PCName? Caius said you'd come by. I've chosen from my best scroll stocks. I don't know your preferences or situation, but Blessings and Barriers always come in handy. Purity of Body sets you up amazingly in a fight. And, of course, Divine Intervention gets you safe to an Imperial cult shrine when all else fails. Here. They're paid for. Now, I don't know your budget, but you might also want to browse my selection for scrolls to suit your own personal style.",
+    "Filters": [],
+    "Script": [
+      "player->additem sc_divineintervention 1",
+      "player->additem sc_secondbarrier 1",
+      "player->additem sc_warriorsblessing 1",
+      "player->additem sc_purityofbody 2",
+      "journal A2_1_Supplies2 5"
+    ]
+  },
+  "2668431443105585643": {
+    "Prev": "26545254192088211895",
+    "Next": "25281185372478627323",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "somutis vunnis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I gave you the potions. But I have many other potions for sale, and all the proceeds go to support the good works of the Imperial cult.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_Supplies",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "25281185372478627323": {
+    "Prev": "2668431443105585643",
+    "Next": "1714292802532715578",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "somutis vunnis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. Caius said a friend was heading into the backcountry, and would need some potions. I've given you cures and fortifies. There's no charge. But, if you'll take my advice, and you can afford it, stock up on the cures. There's are no Imperial cult cure altars north of Ald'ruhn; the one at Gnisis is far to the west. And we've heard many recent reports of diseased creatures and blighted creatures in the northern wilds.",
+    "Filters": [],
+    "Script": [
+      "player->additem p_cure_common_s 2",
+      "player->additem p_cure_blight_s 2",
+      "player->additem p_fortify_health_c 1",
+      "player->additem p_fortify_strength_c 1",
+      "player->additem p_fortify_speed_c 1",
+      "journal A2_1_Supplies 5"
+    ]
+  },
+  "1714292802532715578": {
+    "Prev": "25281185372478627323",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Before you go to Urshilaku camp, see Somutis Vunnis and Crulius Pontanian at Fort Moonmoth. I've asked them to put aside some potions and scrolls for you. Courtesy of the Emperor. In particular, you'll want the cure potions; I hear the blight is very bad up north. And use the Divine Intervention scroll if you find you're over your head. It will get you safe to an Imperial cult shrine, where you can heal, refit, and try again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  }
+}

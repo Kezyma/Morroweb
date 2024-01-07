@@ -1,0 +1,310 @@
+{
+  "212731722754717191": {
+    "Prev": "",
+    "Next": "555269681678010982",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tarer braryn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I suppose there's nothing more to say about this.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_Apologies",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "555269681678010982": {
+    "Prev": "212731722754717191",
+    "Next": "7668540395945674",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tarer braryn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see all is forgiven. He gave you something for me? Excellent. I'm feeling better already. Since you did such a good job, here's an extra 50 gold.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Apologies",
+        "Value": 5.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MS_Apologies",
+        "Value": 100.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "p_cure_common_unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem \"p_cure_common_unique\" 1",
+      "Player->AddItem \"Gold_001\" 100",
+      "AddItem \"p_cure_common_unique\" 1",
+      "RemoveItem \"Gold_001\" 100",
+      "ModDisposition 10",
+      "Journal MS_Apologies 100"
+    ]
+  },
+  "7668540395945674": {
+    "Prev": "555269681678010982",
+    "Next": "15506300582587925179",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This book is from Tarer? Well, it's about time he learned some humility. I'm touched by the gesture nonetheless.  Here's something for that rash of his, and a little something for you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Apologies",
+        "Value": 5.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_Aedra_Tarer_Unique",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal MS_Apologies 10",
+      "Player->RemoveItem \"bk_Aedra_Tarer_Unique\" 1",
+      "Additem \"bk_Aedra_Tarer_Unique\" 1",
+      "Player-> AddItem \"P_Levitation_E\" 1 ",
+      "Player->AddItem \"p_cure_common_unique\" 1",
+      "ModDisposition 10",
+      "Journal MS_Apologies 10"
+    ]
+  },
+  "15506300582587925179": {
+    "Prev": "7668540395945674",
+    "Next": "10281264153056623114",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tarer braryn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't have anything more to say about that.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_Apologies",
+        "Value": 7.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "10281264153056623114": {
+    "Prev": "15506300582587925179",
+    "Next": "27869415257855512",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tarer braryn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Trebonius is dead? Oh...this is rash is going to last a while.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "p_cure_common_unique",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_Apologies",
+        "Value": 5.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "trebonius artorius",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Journal MS_Apologies 110"
+    ]
+  },
+  "27869415257855512": {
+    "Prev": "10281264153056623114",
+    "Next": "2952021996223231169",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tarer braryn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, %PCName,  I thought you said you were going to help. I won't pay for a favor not done.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "p_cure_common_unique",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_Apologies",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "2952021996223231169": {
+    "Prev": "27869415257855512",
+    "Next": "3682258062850715304",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tarer braryn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hmmm... well, suit yourself. I'm sure it will go away on its own.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal MS_Apologies 7",
+      "ModDisposition -10"
+    ]
+  },
+  "3682258062850715304": {
+    "Prev": "2952021996223231169",
+    "Next": "1359219556106738155",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tarer braryn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. Take this book to him, and tell him I'm truly sorry. You'll find him in the Mage's Guild here in Vivec. He's a rather powerful wizard, as I've learned.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MS_Apologies 5",
+      "Player->AddItem \"bk_Aedra_Tarer_Unique\" 1",
+      "RemoveItem \"bk_Aedra_tarer_unique\" 1"
+    ]
+  },
+  "1359219556106738155": {
+    "Prev": "3682258062850715304",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tarer braryn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm afraid I was rather drunk last night when I ran into Trebonius Artorius, that arrogant fool. It seems that the drink took over my tongue, and I called him a Flat-Head. Now I have a horrid rash. No matter what I do, now matter how many potions I use or spells I cast, it won't go away. I've tried everything! If you give him my most sincere apologies, maybe he'll make it go away. I'd do it myself but I'm feeling a little under the weather. I'll pay you 50 gold for your trouble.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MS_Apologies",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MS_Apologies 1",
+      "Choice \"Sure, why not?\" 1 \"I've got troubles enough of my own, thanks\" 2"
+    ]
+  }
+}

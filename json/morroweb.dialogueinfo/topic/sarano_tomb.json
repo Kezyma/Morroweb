@@ -1,0 +1,183 @@
+{
+  "63713957387728219": {
+    "Prev": "",
+    "Next": "17374156062890225690",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled from the Fighters Guild. Until you make amends, I cannot discuss contracts with you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "17374156062890225690": {
+    "Prev": "63713957387728219",
+    "Next": "1670290122322126271",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Moonmoth Legion Fort",
+    "PlayerFaction": "",
+    "Text": "You wish to go there? Leave the fort and follow the path to the southeast, through the mountain pass. Continue to follow the path southeast along the shoreline. After you reach the fields of Kummu, follow the path north to the tomb. Take care in that place.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_HungerLoose",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "1670290122322126271": {
+    "Prev": "17374156062890225690",
+    "Next": "15865178062262113089",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Everyone is grateful to you for clearing the Tomb of the Hunger.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_HungerLoose",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "15865178062262113089": {
+    "Prev": "1670290122322126271",
+    "Next": "32478233302529384",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am sure the Sarano family is grateful. In the meantime, here's some more tangible gratitude: 1000 septims.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "hunger_fghl",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_HungerLoose",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal FG_HungerLoose 100",
+      "Player->AddItem Gold_001 1000",
+      "ModPCFacRep 10 \"Fighters Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "32478233302529384": {
+    "Prev": "15865178062262113089",
+    "Next": "477917962517610214",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already killed the Hunger? Then take the 1000 septims for this contract.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "hunger_fghl",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_HungerLoose",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal FG_HungerLoose 100",
+      "Player->AddItem Gold_001 1000",
+      "ModPCFacRep 10 \"Fighters Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "477917962517610214": {
+    "Prev": "32478233302529384",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A Hunger has violated the Sarano Tomb. Go to this tomb, which is over the hills southeast of Fort Moonmoth between the Ashlands and Lake Amaya, and kill the Hunger.",
+    "Filters": [],
+    "Script": [
+      "Journal FG_HungerLoose 10"
+    ]
+  }
+}

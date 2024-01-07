@@ -1,0 +1,270 @@
+{
+  "343730381104195176": {
+    "Prev": "",
+    "Next": "251775843253796085",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "May Vivec guide your hand when you use the Redas treasures.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_RedasTomb",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "251775843253796085": {
+    "Prev": "343730381104195176",
+    "Next": "1897614771600114721",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Here. Take them, %PCRank. You have certainly earned the right to keep them.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal HR_RedasTomb 110",
+      "Player->AddItem Misc_De_Goblet_01_Redas 1",
+      "Player->AddItem Extravagant_Robe_01_Red 1",
+      "Player->AddItem \"Dwarven War Axe_Redas\" 1"
+    ]
+  },
+  "1897614771600114721": {
+    "Prev": "251775843253796085",
+    "Next": "2706103621586011289",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then I shall keep them safe.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": []
+  },
+  "2706103621586011289": {
+    "Prev": "1897614771600114721",
+    "Next": "31342289932300624786",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Do you want the family treasures, %PCRank?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_RedasTomb",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes\" 3 \"No\" 4"
+    ]
+  },
+  "31342289932300624786": {
+    "Prev": "2706103621586011289",
+    "Next": "7491153122350620021",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have already returned the treasures.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_RedasTomb",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "7491153122350620021": {
+    "Prev": "31342289932300624786",
+    "Next": "16744495609827900",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. You are doing well. Speak to me again when you want more duties.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HR_RedasTomb 100",
+      "Player->RemoveItem Misc_De_Goblet_01_Redas 1",
+      "Player->RemoveItem Extravagant_Robe_01_Red 1",
+      "Player->RemoveItem \"Dwarven War Axe_Redas\" 1",
+      "ModPCFacRep 5 \"Redoran\"",
+      "ModDisposition 10"
+    ]
+  },
+  "16744495609827900": {
+    "Prev": "7491153122350620021",
+    "Next": "32766548788414141",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That is very disappointing, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "32766548788414141": {
+    "Prev": "16744495609827900",
+    "Next": "12094318091800613784",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, %PCName. You have all three of the treasures. Will you give them to me now?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_de_goblet_01_redas",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Extravagant_Robe_01_Red",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "dwarven war axe_redas",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here they are.\" 1 \"No.\" 2"
+    ]
+  },
+  "12094318091800613784": {
+    "Prev": "32766548788414141",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "faral retheran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go to the Redas Ancestral Tomb and  bring me the Redas War Axe, the Redas Chalice, and the Redas Robe of Deeds. The tomb is just south of Molag Mar, but you'll have to go around the mountains. I'd suggest following the mountains west and then following them back east. The tomb is in the side of the mountain, near an ashlander camp.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_HlaanoSlanders",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HR_RedasTomb 10"
+    ]
+  }
+}

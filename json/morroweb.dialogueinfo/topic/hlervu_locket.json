@@ -1,0 +1,734 @@
+{
+  "1235736256005107": {
+    "Prev": "",
+    "Next": "26751263162622918984",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm very disappointed in you, %PCName. You broke our rules, and I can't have one of your reputation in the Bal Molagmer. Make amends, and perhaps we can speak again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "26751263162622918984": {
+    "Prev": "1235736256005107",
+    "Next": "273043401663532546",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "I'm disappointed in you, %PCName. You've been caught too many times. Tone down your act, pay off yours debts, then come see me again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcCrimeLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "273043401663532546": {
+    "Prev": "26751263162622918984",
+    "Next": "18377249141786929336",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You aren't wearing the gloves, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "TGglove",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "18377249141786929336": {
+    "Prev": "273043401663532546",
+    "Next": "3138320991782123306",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "You say Braynas Hlervu is dead? That's terrible to hear. I'm sure you had nothing to do with that. Well, we'll have to move on, then. There are other ways the Bal Molagmer may help.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "braynas hlervu",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Generosity1 110"
+    ]
+  },
+  "3138320991782123306": {
+    "Prev": "18377249141786929336",
+    "Next": "306103232232220533",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "The Hlervu Locket has been returned.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Generosity1",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "306103232232220533": {
+    "Prev": "3138320991782123306",
+    "Next": "3243268701278516124",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Good. Justice has been done. And if you kept a little something for yourself, I can certainly understand. I know something else the reformed Bal Molagmer might do if you're interested.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Generosity1",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Generosity1 100",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "3243268701278516124": {
+    "Prev": "306103232232220533",
+    "Next": "609715347845032083",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "So is that the locket? Take it to Braynas Hlervu in Ald'ruhn.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "exquisite_amulet_hlervu1",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "common_glove_l_balmolagmer",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "common_glove_r_balmolagmer",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Generosity1",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "609715347845032083": {
+    "Prev": "3243268701278516124",
+    "Next": "2436329922181731048",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "So is that the locket? Take it to Braynas Hlervu in Ald'ruhn. And make sure you wear the gloves.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "exquisite_amulet_hlervu1",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Generosity1",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "2436329922181731048": {
+    "Prev": "609715347845032083",
+    "Next": "25648299562416528978",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Braynas Hlervu is a poor, retired egg miner. He gave his family's treasured locket to the taxmen this year. The locket is now being held in Venim Manor with the rest of the taxes. Wear the gloves I gave you and pay a visit to Venim Manor in Ald'ruhn. Find the Hlervu Locket and return it to Braynas Hlervu in the name of the Bal Molagmer.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TG_SS_Generosity1",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Generosity1",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Generosity1 10"
+    ]
+  },
+  "25648299562416528978": {
+    "Prev": "2436329922181731048",
+    "Next": "229025136957914317",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "braynas hlervu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Bolvyn Venim sent his Blood Guards to look for the locket, but they didn't find it and left me alone. It's too dangerous to keep here. When my nephew comes to visit, I'll give it to him.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Generosity1",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "229025136957914317": {
+    "Prev": "25648299562416528978",
+    "Next": "867107531063610990",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "braynas hlervu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have hidden it well.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Generosity1",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "867107531063610990": {
+    "Prev": "229025136957914317",
+    "Next": "13343236191315282",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "braynas hlervu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, I'll accept it as a gift. But what if they come looking for it?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Generosity1 50",
+      "Player->RemoveItem Exquisite_Amulet_Hlervu1 1",
+      "AddItem Exquisite_Amulet_Hlervu1 1",
+      "ModDisposition 20"
+    ]
+  },
+  "13343236191315282": {
+    "Prev": "867107531063610990",
+    "Next": "2172211501467717141",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "braynas hlervu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't know what that means, but thank you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Generosity1 55",
+      "Player->RemoveItem Exquisite_Amulet_Hlervu1 1",
+      "AddItem Exquisite_Amulet_Hlervu1 1",
+      "ModDisposition 20"
+    ]
+  },
+  "2172211501467717141": {
+    "Prev": "13343236191315282",
+    "Next": "2735529623103710891",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "braynas hlervu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This IS my locket! Where did you get this?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Choice \"I stole it from Venim Manor.\" 1 \"In the name of the Bal Molagmer, I return this to you.\" 2"
+    ]
+  },
+  "2735529623103710891": {
+    "Prev": "2172211501467717141",
+    "Next": "1719688832395121359",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "braynas hlervu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh. My family had a locket just like that. I only thought...",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": []
+  },
+  "1719688832395121359": {
+    "Prev": "2735529623103710891",
+    "Next": "188491638920193709",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "braynas hlervu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Is... Is that my locket?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "exquisite_amulet_hlervu1",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "common_glove_l_balmolagmer",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "common_glove_r_balmolagmer",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, take it.\" 3 \"No.\" 4"
+    ]
+  },
+  "188491638920193709": {
+    "Prev": "1719688832395121359",
+    "Next": "1351692727469982",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "braynas hlervu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I had to give my family's treasured locket to the taxmen this year. The locket is now being held in Venim Manor with the rest of the taxes. I wouldn't be surprised if one of their damn guards made off with the thing himself.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "common_glove_l_balmolagmer",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "common_glove_r_balmolagmer",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Generosity1",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1351692727469982": {
+    "Prev": "188491638920193709",
+    "Next": "401131834134621632",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "braynas hlervu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I had to give my family's treasured locket to the taxmen this year. The locket is now being held in Venim Manor with the rest of the taxes. I wouldn't be surprised if one of their damn guards made off with the thing himself.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Generosity1",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "401131834134621632": {
+    "Prev": "1351692727469982",
+    "Next": "11695317411765628127",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "redoran guard female",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It was reported stolen. If you know anything about this, you should speak with Archmaster Bolvyn Venim.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Generosity1",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "11695317411765628127": {
+    "Prev": "401131834134621632",
+    "Next": "585286461490825644",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "redoran guard male",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It was reported stolen. If you know anything about this, you should speak with Archmaster Bolvyn Venim.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Generosity1",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "585286461490825644": {
+    "Prev": "11695317411765628127",
+    "Next": "2269617113238882699",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bolvyn venim",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. Now leave and do not speak with me of this again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Generosity1 30",
+      "Player->RemoveItem exquisite_amulet_hlervu1 1",
+      "\"bolvyn venim\"->AddItem exquisite_amulet_hlervu1 1"
+    ]
+  },
+  "2269617113238882699": {
+    "Prev": "585286461490825644",
+    "Next": "1430617851751013073",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bolvyn venim",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are nothing but a common thief. I will prove your guilt upon your body.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -50",
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "1430617851751013073": {
+    "Prev": "2269617113238882699",
+    "Next": "139475263152307134",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bolvyn venim",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't know how you got the locket back, but you won't make a fool of me!",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "exquisite_amulet_hlervu1",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Generosity1",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -50",
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "139475263152307134": {
+    "Prev": "1430617851751013073",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bolvyn venim",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What are you doing with that? That belongs with the collected taxes. Either give it to me or face justice.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "exquisite_amulet_hlervu1",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Here, take it.\" 1 \"The Bal Molagmer will return it to its owner.\" 2"
+    ]
+  }
+}

@@ -1,0 +1,345 @@
+{
+  "6926205663055731265": {
+    "Prev": "",
+    "Next": "11551130611020729672",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dhaunayne aundae",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've killed him, but not as you were ordered! Leave my presence, fool.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampChild",
+        "Value": 120.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_VampHunter",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampHunter\" 80"
+    ]
+  },
+  "11551130611020729672": {
+    "Prev": "6926205663055731265",
+    "Next": "1535020512243728253",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dhaunayne aundae",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've gotten rid of him, and in full view of the local populace? Well done, little abomination! For your efforts, take this. It is an amulet that will allow you to return to Ashmelech when in need. It is possible I will have future rewards for you, should you be able to rid this world of a large number of the Berne and Quarra clan. Now leave me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampChild",
+        "Value": 120.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_VampHunter",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampHunter\" 90",
+      "Player->AddItem \"amulet_aundae\" 1",
+      "AddTopic \"future rewards\""
+    ]
+  },
+  "1535020512243728253": {
+    "Prev": "11551130611020729672",
+    "Next": "228095534128791179",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dhaunayne aundae",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have no more to say on this topic, new blood. Begone.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampChild",
+        "Value": 120.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampHunter",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampHunter",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "AddTopic \"future rewards\""
+    ]
+  },
+  "228095534128791179": {
+    "Prev": "1535020512243728253",
+    "Next": "1895954131164512304",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dhaunayne aundae",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hmph. I should have expected as much. You are cowardly even for your ilk. Begone, then. I have nothing further to say to you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampChild",
+        "Value": 120.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampHunter\" 30"
+    ]
+  },
+  "1895954131164512304": {
+    "Prev": "228095534128791179",
+    "Next": "14317185292636531007",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dhaunayne aundae",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You show some degree of bravery, but you are young. And stupid. No matter. Find this one who kills our kind. Bring him to justice in the light of day, and let all who see know that they can suffer the same fate.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampChild",
+        "Value": 120.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampHunter\" 20",
+      "AddTopic \"future rewards\""
+    ]
+  },
+  "14317185292636531007": {
+    "Prev": "1895954131164512304",
+    "Next": "1815207811721223488",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dhaunayne aundae",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, he came nosing about our lair some weeks ago. Some of my spies have tracked him to the city of Ald'ruhn. It is not enough for you to kill him, though. I want him killed in broad daylight, with plenty of folk there to see his death. Let it serve as an example for all who would dare intrude in Ashmelech.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampChild",
+        "Value": 120.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampHunter",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampHunter\" 10",
+      "\"ano vando\"->enable",
+      "AddTopic \"future rewards\"",
+      "Choice \"I will kill this vampire hunter for all to see.\" 1 \"I will not do this for you.\" 2"
+    ]
+  },
+  "1815207811721223488": {
+    "Prev": "14317185292636531007",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ald-ruhn, Guild of Mages",
+    "PlayerFaction": "",
+    "Text": "Yes, he goes by the name Ano Vando, and he has been seen around here lately. Do not approach him, young vampire. It will be your end.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "ano vando",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampHunter\" 50",
+      "AddTopic \"future rewards\""
+    ]
+  }
+}

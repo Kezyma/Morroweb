@@ -1,0 +1,202 @@
+{
+  "30301105983058211244": {
+    "Prev": "",
+    "Next": "24021321932578124250",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris hler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have heard you've killed both of them. This will please the Lady.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "armion",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "yarnar",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_KillGoblins",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "24021321932578124250": {
+    "Prev": "30301105983058211244",
+    "Next": "21987848198878120",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris hler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I understand you've killed one of them. Good work.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_KillGoblins",
+        "Value": 30.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "armion",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "21987848198878120": {
+    "Prev": "24021321932578124250",
+    "Next": "23553146301338313999",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris hler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I understand you've killed one of them. Good work.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_KillGoblins",
+        "Value": 30.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "yarnar",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "23553146301338313999": {
+    "Prev": "21987848198878120",
+    "Next": "2080483792882917730",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris hler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You're to get rid of the two Altmer trainers if you can.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_KillGoblins",
+        "Value": 30.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "armion",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "yarnar",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2080483792882917730": {
+    "Prev": "23553146301338313999",
+    "Next": "30903220001853714612",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris hler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Traditionally, the Altmer have used the goblins to reinforce their armies. Why, I do not know. Rumor has it that Helseth has contracted two Altmer to train his goblin army. If you find these Altmer, it would be a service to rid the city of them as well.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_KillGoblins",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Journal TR_KillGoblins 30"
+    ]
+  },
+  "30903220001853714612": {
+    "Prev": "2080483792882917730",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Mournhold",
+    "PlayerFaction": "",
+    "Text": "Trainers? I'm not even certain there are goblins about, though there are rumors. I suppose if there were trainers, they'd be close by the goblins. Makes sense, don't you think?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_KillGoblins",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  }
+}

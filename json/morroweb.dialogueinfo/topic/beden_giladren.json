@@ -1,0 +1,569 @@
+{
+  "2075029345277211314": {
+    "Prev": "",
+    "Next": "2443424536883314001",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "beden giladren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you, %PCName. This pilgrimage has taught me a lesson in humility. I will ponder this lesson for awhile and then continue the pilgrimage.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FindGiladren",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "2443424536883314001": {
+    "Prev": "2075029345277211314",
+    "Next": "31249156902947329432",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "beden giladren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I thought the Ashlanders would kill me so I told them that I was a famous noble. I knew it was wrong, but what else could I do?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FindGiladren",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HR_FindGiladren 60"
+    ]
+  },
+  "31249156902947329432": {
+    "Prev": "2443424536883314001",
+    "Next": "1116555001993319447",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "beden giladren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I'm Beden Giladren. These ashlanders have me trapped here. Can you get me out?",
+    "Filters": [],
+    "Script": []
+  },
+  "1116555001993319447": {
+    "Prev": "31249156902947329432",
+    "Next": "1070828590963220854",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "manat shimmabadas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The famous noble is no longer enjoying our hospitality.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FindGiladren",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1070828590963220854": {
+    "Prev": "1116555001993319447",
+    "Next": "25753238636428",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "manat shimmabadas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He is free to go.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FindGiladren",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "25753238636428": {
+    "Prev": "1070828590963220854",
+    "Next": "276295148148942754",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "manat shimmabadas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well. Beden Giladren is free to leave and we can trade with you outlanders for food this winter.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HR_FindGiladren 75",
+      "Player->RemoveItem Gold_001 5000",
+      "AddItem Gold_001 5000"
+    ]
+  },
+  "276295148148942754": {
+    "Prev": "25753238636428",
+    "Next": "21279210302246322895",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "manat shimmabadas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Come back when you are ready to pay the ransom.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "21279210302246322895": {
+    "Prev": "276295148148942754",
+    "Next": "1271227115311616258",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "manat shimmabadas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What do you mean? You have not heard of the famous Redoran noble Beden Giladren?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Choice \"Nevermind.\" 2 \"He is not famous.\" 4"
+    ]
+  },
+  "1271227115311616258": {
+    "Prev": "21279210302246322895",
+    "Next": "25261123842098811934",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "manat shimmabadas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He told me that he was a famous noble of House Redoran. Perhaps you should speak with him.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Journal HR_FindGiladren 55"
+    ]
+  },
+  "25261123842098811934": {
+    "Prev": "1271227115311616258",
+    "Next": "1313229475796214858",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "manat shimmabadas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. He is free to leave.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Journal HR_FindGiladren 70",
+      "Player->RemoveItem Gold_001 5",
+      "AddItem Gold_001 5"
+    ]
+  },
+  "1313229475796214858": {
+    "Prev": "25261123842098811934",
+    "Next": "19961202701946116490",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "manat shimmabadas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So this \"famous noble\" is a liar and a coward. Very well, you can have him for five drakes.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 5.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FindGiladren",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Choice \"Nevermind.\" 2 \"Pay 5 drakes.\" 5"
+    ]
+  },
+  "19961202701946116490": {
+    "Prev": "1313229475796214858",
+    "Next": "22794228241231620251",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "manat shimmabadas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So this \"famous noble\" is a liar and a coward. Very well, you can have him for five drakes.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FindGiladren",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "22794228241231620251": {
+    "Prev": "19961202701946116490",
+    "Next": "2017414809104011237",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "manat shimmabadas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, you heard right. I have the famous noble Beden Giladren. I demand five thousand drakes in ransom. Will you pay?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 5000.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes.\" 1 \"No.\" 2 \"Who?\" 3"
+    ]
+  },
+  "2017414809104011237": {
+    "Prev": "22794228241231620251",
+    "Next": "11290774166475888",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "manat shimmabadas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, you heard right. I have the famous noble Beden Giladren. I demand five thousand drakes in ransom.",
+    "Filters": [],
+    "Script": [
+      "Choice \"Nevermind.\" 2 \"Who?\" 3"
+    ]
+  },
+  "11290774166475888": {
+    "Prev": "2017414809104011237",
+    "Next": "1682274202920515962",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tralas rendas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard you rescued the pilgrim. I guess the Ashlander that came here demanding ransom for a famous noble was confused.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FindGiladren",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "1682274202920515962": {
+    "Prev": "11290774166475888",
+    "Next": "1120711509191134305",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tralas rendas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, maybe. An Ashlander came here the other day demanding tribute for the esteemed noble \"Bindin Gildaran\" or somesuch. I didn't know of any Redoran noble by that name, so I just passed the report on. The Ashlander said to go west out of Maar Gan along the road towards the mountains and then head south along the mountains to get to his camp.",
+    "Filters": [],
+    "Script": [
+      "Journal HR_FindGiladren 30"
+    ]
+  },
+  "1120711509191134305": {
+    "Prev": "1682274202920515962",
+    "Next": "6251132076901714",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Beden Giladren is dead. You have failed House Redoran.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "beden giladren",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "6251132076901714": {
+    "Prev": "1120711509191134305",
+    "Next": "157197251675131892",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I wonder if Beden Giladren has finished the pilgrimages.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FindGiladren",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "157197251675131892": {
+    "Prev": "6251132076901714",
+    "Next": "5005491322187239",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I heard that you rescued Beden Giladren from the Ashlander camp. I will make sure House Redoran hears of your deeds.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FindGiladren",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal HR_FindGiladren 100",
+      "ModPCFacRep 5 \"Redoran\"",
+      "ModDisposition 10",
+      "\"Beden Giladren\"->Disable"
+    ]
+  },
+  "5005491322187239": {
+    "Prev": "157197251675131892",
+    "Next": "1734124558584232417",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Beden Giladren was on his way from Ald'ruhn to Maar Gan. I do not know what happened to him. Go to Maar Gan and see if you can find him.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FindTharen",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HR_FindGiladren 10"
+    ]
+  },
+  "1734124558584232417": {
+    "Prev": "5005491322187239",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Maar Gan",
+    "PlayerFaction": "",
+    "Text": "A missing pilgrim? Tralas Rendas at the shrine might know something about it.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HR_FindGiladren",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  }
+}

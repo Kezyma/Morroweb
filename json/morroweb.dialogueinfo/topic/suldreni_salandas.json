@@ -1,0 +1,209 @@
+{
+  "315425655159606229": {
+    "Prev": "",
+    "Next": "412532343106726927",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dovor Oren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Don't spare her another thought, %PCName. She got what she deserved. Heh.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Warlords",
+        "Value": 120.0
+      }
+    ],
+    "Script": []
+  },
+  "412532343106726927": {
+    "Prev": "315425655159606229",
+    "Next": "124808465796318850",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dovor Oren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ahem. Might I suggest that you re-think that decision? I do believe the items are more useful to me than they are to you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "124808465796318850": {
+    "Prev": "412532343106726927",
+    "Next": "11506290961376611061",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dovor Oren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ha! You are a wonder, %PCName. Well, you've been of immense help to me. Us. I'm more than happy to offer you this compensation. Now, if you'll excuse me, we have a great deal of planning to attend to. Thank you again for all you've done. I hope that someday all of Mournhold will know of your greatness.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "amulet_salandas",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "dwarven mace_salandas",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MS_Warlords 120",
+      "player->removeitem \"amulet_salandas\" 1",
+      "player->removeitem \"dwarven mace_salandas\" 1",
+      "additem \"amulet_salandas\" 1",
+      "additem \"dwarven mace_salandas\" 1",
+      "player->additem \"gold_001\" 4000",
+      "Goodbye"
+    ]
+  },
+  "11506290961376611061": {
+    "Prev": "124808465796318850",
+    "Next": "1122615968128723072",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dovor Oren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I require both items, %PCName. One or none does me no good. Let me know when you have them.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1122615968128723072": {
+    "Prev": "11506290961376611061",
+    "Next": "31457142301331832716",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dovor Oren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So, you've dealt with Suldreni, have you?  Wonderful.  Do you have the items?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Warlords",
+        "Value": 110.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Suldreni Salandas",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Give him the items.\" 1 \"Keep the items.\" 2"
+    ]
+  },
+  "31457142301331832716": {
+    "Prev": "1122615968128723072",
+    "Next": "1025348241675312570",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dovor Oren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You'll have to take care of her yourself, %PCName.  I believe you can find her somewhere in the Bazaar, wasting time as always.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_Warlords",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "1025348241675312570": {
+    "Prev": "31457142301331832716",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dovor Oren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. Yes, indeed. It's difficult to comprehend that so many sycophants can be concentrated in such a small area.  She's another of *them*, of course.  Loyal to whomever happens to be in power at the time, and then only if it serves her purpose. She has a mace and an amulet I find intriguing.  Can you bring them to me?",
+    "Filters": [],
+    "Script": [
+      "Journal MS_Warlords 110"
+    ]
+  }
+}

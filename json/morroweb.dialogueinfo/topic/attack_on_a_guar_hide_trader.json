@@ -1,0 +1,129 @@
+{
+  "1503324379289021007": {
+    "Prev": "",
+    "Next": "313303234871916712",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athanden girith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's what happened all right. Fetchers, all of them.",
+    "Filters": [],
+    "Script": []
+  },
+  "313303234871916712": {
+    "Prev": "1503324379289021007",
+    "Next": "1801177592343127685",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "emul-ran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are suggesting we have done this thing? That is fine, %PCRace, for it is true. Kashtes and I have taken the hides, and in our possession they will remain. Prepare to meet your gods, for no one may take what is now ours.",
+    "Filters": [],
+    "Script": [
+      "AddTopic \"Girith's guar hides\"",
+      "SetFight 100",
+      "StartCombat Player",
+      "\"Kashtes Ilabael\"->StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "1801177592343127685": {
+    "Prev": "313303234871916712",
+    "Next": "295522156660626532",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "kashtes ilabael",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We have the hides, %PCRace, and we shall keep them. You have made a mistake coming here, for we cannot allow you to leave. Offer what prayers you may, for your time is over.",
+    "Filters": [],
+    "Script": [
+      "AddTopic \"Girith's guar hides\"",
+      "SetFight 100",
+      "StartCombat Player",
+      "\"Emul-ran\"->StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "295522156660626532": {
+    "Prev": "1801177592343127685",
+    "Next": "206742901524631549",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Ashlanders",
+    "SpeakerCell": "Ahemmusa Camp",
+    "PlayerFaction": "",
+    "Text": "No. We have not done this thing. The ones you are looking for are Emul-Ran and Kashtes Ilabael. They are outcasts, belonging to none of our tribes. You should be able to find them south of here, along the water's edge. May you bring them swift justice.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_OutcastAshlanders",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_OutcastAshlanders\" 60"
+    ]
+  },
+  "206742901524631549": {
+    "Prev": "295522156660626532",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Ashlanders",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "None of our tribe would do this thing, unless we had been wronged by this trader. Perhaps you should check with one of the other tribes. Good luck to you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_OutcastAshlanders",
+        "Value": 30.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

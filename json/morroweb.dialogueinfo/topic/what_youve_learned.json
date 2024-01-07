@@ -1,0 +1,77 @@
+{
+  "13214166372160117024": {
+    "Prev": "",
+    "Next": "46492382783371509",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "And my instincts tell me that the Sixth House cult ties in somehow with the historical link between Nerevar and Dagoth Ur, and with the Dissident priests' suspicions about the nature of the Tribunal's magical power and immortality. And considering the recent increase in Blight storms and other activity near Red Mountain, I wonder if something has gone wrong in the Temple's ancient war with Dagoth Ur... something the Temple is eager to hide.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_11_ZainsubaniInformant",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "A1_11_ZainsubaniInformant",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "46492382783371509": {
+    "Prev": "13214166372160117024",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Two groups have an interest in the Nerevarine prophecies: the Ashlanders and the Dissident priests. Both may know things we need to know in order to have you satisfy the conditions of the Nerevarine prophecies. And though I'm still skeptical about signs and prophecies, the political grievances between the Ashlanders and the Tribunal, and the conflicts within the Temple itself, I take very seriously.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_11_ZainsubaniInformant",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "A1_11_ZainsubaniInformant",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice, \"Continue\", 1"
+    ]
+  }
+}

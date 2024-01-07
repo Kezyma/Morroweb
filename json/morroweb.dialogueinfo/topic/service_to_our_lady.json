@@ -1,0 +1,258 @@
+{
+  "281058046731128165": {
+    "Prev": "",
+    "Next": "3095912007739921190",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gavas drin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I know of nothing you may do for the Lady Almalexia at this time.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_MazedBand",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3095912007739921190": {
+    "Prev": "281058046731128165",
+    "Next": "17615160531930412071",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gavas drin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Unfortunately, I know of nothing you may do for the Lady now. Speak with Fedris Hler. He usually has errands that must be completed by the lowly. Don't let him tell you he has nothing to be done. I'm sure there's something.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_ShrineDead",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal TR_MazedBand 10"
+    ]
+  },
+  "17615160531930412071": {
+    "Prev": "3095912007739921190",
+    "Next": "23475290791936127480",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gavas drin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Finish your task at hand, and then maybe we will speak about it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_ShrineDead",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_ShrineDead",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "23475290791936127480": {
+    "Prev": "17615160531930412071",
+    "Next": "547611362223313957",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gavas drin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. Beneath this Temple, there is a large sewer system, built around the ruins of Old Mournhold. You smell like you may have spent some time there.... Regardless, in these ruins, there lies a shrine. This shrine has been corrupted.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_ShrineDead",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal TR_ShrineDead 20"
+    ]
+  },
+  "547611362223313957": {
+    "Prev": "23475290791936127480",
+    "Next": "131962205913775101",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris hler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have nothing I need you to do. If something comes up, you'll be informed.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_MazedBand",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "131962205913775101": {
+    "Prev": "547611362223313957",
+    "Next": "95284171320166654",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris hler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. You are to retrieve Barilzar's Mazed Band.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_MazedBand",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_MazedBand",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "95284171320166654": {
+    "Prev": "131962205913775101",
+    "Next": "1982919053165317100",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris hler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I spoke with the Lady earlier today, and there may be something that one of your skill will be able to help with. The Lady Almalexia would like you to retrieve a powerful artifact -- Barilzar's Mazed Band.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_MazedBand",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal TR_ShrineDead 20"
+    ]
+  },
+  "1982919053165317100": {
+    "Prev": "95284171320166654",
+    "Next": "2307721958258385187",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris hler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hmmm...I have nothing for you at this time. Speak with Gavas Drin, the Lord Archcanon. He was in consultation with the Lady Almalexia this very morning. Perhaps he has something for you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_KillGoblins",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal TR_ShrineDead 10"
+    ]
+  },
+  "2307721958258385187": {
+    "Prev": "1982919053165317100",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris hler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am always aware of those who might be able to serve our Lady Almalexia. Few are worthy to do so. The Temple and the city is guarded by the High Ordinators, and the Hands fulfill other duties for the Lady. I am her Chief Steward, Fedris Hler. Now, if you wish to be of use, we have some matters to discuss.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_KillGoblins",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  }
+}

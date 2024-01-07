@@ -1,0 +1,97 @@
+{
+  "1307729941889517608": {
+    "Prev": "",
+    "Next": "2682225572167725628",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "svenja snow-song",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Your words honor me and my fallen comrades.  The Udyrfrykte makes his lair in the ice caves that run beneath Thirsk.  The entrance is located on the shores of Lake Fjalding, just to the west of here.  I'm sure you will find the creature there, licking his wounds.  If you can manage to slay the Udyrfrykte, make sure you claim some part of the beast as a trophy. Bring that trophy back to me, and I will name you chieftain of Thirsk, for that is our way.  Go now, and good hunting.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal BM_MeadHall 30",
+      "ModDisposition 50",
+      "Goodbye"
+    ]
+  },
+  "2682225572167725628": {
+    "Prev": "1307729941889517608",
+    "Next": "14575132012716315592",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "svenja snow-song",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Coward!  Will you do nothing? Udyrfrykte is free from his icy prison, and he WILL return to Thirsk.  I am no match for such a creature.  My death will be on your conscience, as will the deaths of countless others.  Leave this mead hall, %PCClass.  Thirsk is a home for the valiant, and you clearly have no place here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal BM_MeadHall 20",
+      "SetDisposition 0",
+      "Goodbye"
+    ]
+  },
+  "14575132012716315592": {
+    "Prev": "2682225572167725628",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "svenja snow-song",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You're no stranger to combat, %PCClass.  I can see that in your eyes.  Do you have the power to slay the beast?  Do you have the courage?  Skjoldr Wolf-Runner was the last chieftain of Thirsk.  He took possession of the hall when he slew Griss the Yellow and placed his head on the pedestal.  But now Skjoldr is dead, and Thirsk has no chieftain.  If you can kill the Udyrfrykte and claim some kind of battle trophy, you might be found worthy to rule over Thirsk.  What say you?  Will you slay the Udyrfrykte?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Trial",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_MeadHall",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, I will kill the Udyrfrykte and claim the chieftain's throne of Thirsk.\" 1 \"No, I can't help you, Svenja.  Your problems are none of my concern.\" 2"
+    ]
+  }
+}

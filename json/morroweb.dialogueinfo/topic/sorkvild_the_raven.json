@@ -1,0 +1,354 @@
+{
+  "263604363290811409": {
+    "Prev": "",
+    "Next": "18164286542712731582",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "radd hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled, but maybe you can join the Imperial Legion again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "18164286542712731582": {
+    "Prev": "263604363290811409",
+    "Next": "32709198381821212557",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "radd hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You took care of that necromancer.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Necromancer",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "32709198381821212557": {
+    "Prev": "18164286542712731582",
+    "Next": "3076022391730410549",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "radd hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sorkvild the Raven is dead? Good work, %PCName.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "sorkvild the raven",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Necromancer",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal IL_Necromancer 100",
+      "ModPCFacRep 5 \"Imperial Legion\"",
+      "ModDisposition 10"
+    ]
+  },
+  "3076022391730410549": {
+    "Prev": "32709198381821212557",
+    "Next": "2026931390522213661",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "radd hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Dunmer despise necromancy. I can't say I like it much myself. We must prove to the Dunmer of Vvardenfell that the Imperial Legion is the first to root out necromancers wherever they try to hide. Find Sorkvild the Raven near Dagon Fel and kill him.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_GiantNetch",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal IL_Necromancer 10"
+    ]
+  },
+  "2026931390522213661": {
+    "Prev": "3076022391730410549",
+    "Next": "1362830642182517668",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sorkvild the raven",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Speaking.",
+    "Filters": [],
+    "Script": []
+  },
+  "1362830642182517668": {
+    "Prev": "2026931390522213661",
+    "Next": "2883330115149526467",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sarnir the clerk",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I doubt that many will mourn his loss.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "sorkvild the raven",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2883330115149526467": {
+    "Prev": "1362830642182517668",
+    "Next": "1899726248596525602",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sarnir the clerk",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He is known to the local people as a necromancer. His tower is to the east of town. He has, from time to time, tried to engage me in conversation on various topics, including Clavicus Vile and his legendary Second Era servant, N'Gasta the Sload. He is charming and personable, but I do not trust him.",
+    "Filters": [],
+    "Script": []
+  },
+  "1899726248596525602": {
+    "Prev": "2883330115149526467",
+    "Next": "579614973213146611",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "artisa arelas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sarnir the Clerk of Dagon Fel has spoken of him. Sorkvild the Raven has occupied an old wizard's tower in those parts, and he has a local reputation as a necromancer.",
+    "Filters": [],
+    "Script": []
+  },
+  "579614973213146611": {
+    "Prev": "1899726248596525602",
+    "Next": "1128831029839315191",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Dagon Fel",
+    "PlayerFaction": "",
+    "Text": "Thank you for getting rid of him.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "sorkvild the raven",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1128831029839315191": {
+    "Prev": "579614973213146611",
+    "Next": "243229457159297081",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Dagon Fel",
+    "PlayerFaction": "",
+    "Text": "You were the one who killed him? This is excellent news. Let that be a message to all who practice the dark arts.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "sorkvild the raven",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "moddisposition 5"
+    ]
+  },
+  "243229457159297081": {
+    "Prev": "1128831029839315191",
+    "Next": "23096107291110732156",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Dagon Fel",
+    "PlayerFaction": "",
+    "Text": "The local Dunmer are pleased with your efforts. It's made it better for us all. Thanks.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "sorkvild the raven",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "moddisposition 5"
+    ]
+  },
+  "23096107291110732156": {
+    "Prev": "243229457159297081",
+    "Next": "15687196642707231692",
+    "Type": "Topic",
+    "Disposition": 25,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Dagon Fel",
+    "PlayerFaction": "",
+    "Text": "He is practicing necromancy. This should not be done in these parts. If he wishes to do so, he should return to his native Skyrim. Someone needs to take care of him.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "15687196642707231692": {
+    "Prev": "23096107291110732156",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 25,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Dagon Fel",
+    "PlayerFaction": "",
+    "Text": "The local dark elves don't approve of his necromancy. He gives me the creeps too. You'll find his tower on the east side of town.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

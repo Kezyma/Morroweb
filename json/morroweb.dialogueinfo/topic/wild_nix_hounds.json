@@ -1,0 +1,239 @@
+{
+  "2777819940300101513": {
+    "Prev": "",
+    "Next": "81527746255832217",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falanu indaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can only pray those hounds don't return before my husband has returned.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_MissingCompanion",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_MissingCompanion",
+        "Value": 35.0
+      }
+    ],
+    "Script": []
+  },
+  "81527746255832217": {
+    "Prev": "2777819940300101513",
+    "Next": "30613310891028119849",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falanu indaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You're willing to do that? Thank you so much! I'm sure he didn't go too far, because the hounds seemed to have hurt him. If I remember correctly, he ran off to the west, but in all the confusion, I can't be sure.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_MissingCompanion\" 30"
+    ]
+  },
+  "30613310891028119849": {
+    "Prev": "81527746255832217",
+    "Next": "275542387028617392",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falanu indaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, hopefully, he'll find his way back, and the nix hounds won't come back for me. Take care, stranger.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_MissingCompanion\" 31"
+    ]
+  },
+  "275542387028617392": {
+    "Prev": "30613310891028119849",
+    "Next": "22671212642489019125",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falanu indaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There were at least three of them; they seemed to come out of nowhere. My husband, Drerel Indaren tried to fight them off, but the were too much for him, and he was forced to flee. I tried to play dead, in hopes the hounds would find no sport in me. I just hope I can find Drerel before the hounds come back.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_MissingCompanion",
+        "Value": 15.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_MissingCompanion\" 20",
+      "Choice \"I'll look for your husband.\" 1 \"I'm sorry. There is nothing I can do for you.\" 2"
+    ]
+  },
+  "22671212642489019125": {
+    "Prev": "275542387028617392",
+    "Next": "2015026164306208821",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drerel indaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I must get back to my wife before they return. Go!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_MissingCompanion",
+        "Value": 35.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_MissingCompanion",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "2015026164306208821": {
+    "Prev": "22671212642489019125",
+    "Next": "2819427968237309956",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drerel indaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent. Let us go quickly, then. I don't want those hounds to return before we do. I believe I came from the east, but in all the confusion, it was difficult to tell. Though I am injured, I'm sure I can make it there with you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_MissingCompanion\" 35",
+      "\"Drerel Indaren\"->AiFollow Player 0 -20286 57404 1584 0"
+    ]
+  },
+  "2819427968237309956": {
+    "Prev": "2015026164306208821",
+    "Next": "3073219652969714991",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drerel indaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go on your way, then. I can find her myself, if need be. You could have helped, stranger. Pray to your gods that if you are ever in need, you'll meet someone more charitable than yourself!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_MissingCompanion\" 36"
+    ]
+  },
+  "3073219652969714991": {
+    "Prev": "2819427968237309956",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drerel indaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, there must have been three at least. It was hard to tell in all of the confusion. Perhaps you've seen them around here. Anyway, Falanu smartly tried to play dead while I fought them off. They were too much for me, though, and they chased me off. I ran away from where my wife was lying, so as not to draw them closer to her. I fear, however, that they could have gone back for her. Can you help me? The two of us together can certainly find her, and kill the foul beasts should they show themselves again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_MissingCompanion",
+        "Value": 15.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_MissingCompanion\" 15",
+      "Choice \"Yes, let's go try and find your wife.\" 3 \"I'm sorry. You'll have to find her yourself.\" 4"
+    ]
+  }
+}

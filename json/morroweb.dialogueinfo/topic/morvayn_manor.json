@@ -1,0 +1,133 @@
+{
+  "4340163421565210051": {
+    "Prev": "",
+    "Next": "25594112161587625312",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "brara morvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled from House Redoran. You must make amends, if you can.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "25594112161587625312": {
+    "Prev": "4340163421565210051",
+    "Next": "227435610686626587",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "brara morvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will hire priests to clean and purify Morvayn Manor. Once this crisis is over, we can start repairing what we all have lost.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_MorvaynManor",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "227435610686626587": {
+    "Prev": "25594112161587625312",
+    "Next": "567812891061226127",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "brara morvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have destroyed the statue and I am grateful. Know that you have my support on the Council, and although I lost much of my wealth when Morvyan Manor fell, please take this amulet.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_MorvaynManor",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal HR_MorvaynManor 100",
+      "Player->AddItem \"amulet of mighty blows\" 1",
+      "ModPCFacRep 10 \"Redoran\"",
+      "ModDisposition 25",
+      "Player->ModReputation 1"
+    ]
+  },
+  "567812891061226127": {
+    "Prev": "227435610686626587",
+    "Next": "2103910864334612641",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "brara morvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have given you a key to my manor, which is just west of Skar. Go there and find the ash statue that has caused us so much misery. Take the statue to Lloros Sarano at the Temple.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_MorvaynManor",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "2103910864334612641": {
+    "Prev": "567812891061226127",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "brara morvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am a widow. My husband died defending Morvayn Manor from misshapen beasts that came through the Ghostfence. He believed that the beasts were attracted by a statue we recieved a few weeks before the attacks began. Go to Morvyan Manor, just east of Skar, here's the key. Get the statue, and take it to Lloros Sarano at the Temple. Once the statue has been destroyed, I will support you on the Council.",
+    "Filters": [],
+    "Script": [
+      "Journal HR_MorvaynManor 10",
+      "Player->AddItem \"key_morvaynmanor\" 1"
+    ]
+  }
+}

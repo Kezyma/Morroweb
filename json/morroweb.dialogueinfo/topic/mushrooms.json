@@ -1,0 +1,217 @@
+{
+  "1152123141125916332": {
+    "Prev": "",
+    "Next": "14103132243013728405",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ajira hears you are expelled. Ajira was told to say you should make amends with the Arch-Mage, but Ajira tells you that the wizards here have many things to do and many things on their minds. Soon Ranis Athrys will forget you are expelled and then Ajira can speak with you again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "14103132243013728405": {
+    "Prev": "1152123141125916332",
+    "Next": "2599357752391912393",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Ajira thanks you again for bringing her the samples.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_BCShrooms",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2599357752391912393": {
+    "Prev": "14103132243013728405",
+    "Next": "443498832435823519",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, these are all good samples. Now Ajira can write the report and be a Journeyman of the Mages Guild. Ajira has made potions for you to take in return. Ajira is no great alchemist yet, but Ajira thinks you can use these.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "ingred_bc_hypha_facia",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "ingred_coprinus_01",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "ingred_russula_01",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "ingred_bc_bungler's_bane",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal MG_BCShrooms 100",
+      "Player->RemoveItem \"ingred_bc_bungler's_bane\" 1",
+      "Player->RemoveItem \"ingred_bc_hypha_facia\" 1",
+      "Player->RemoveItem \"ingred_coprinus_01\" 1",
+      "Player->RemoveItem \"ingred_russula_01\" 1",
+      "Player->AddItem \"p_restore_health_c\" 4",
+      "ModPCFacRep 5 \"Mages Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "443498832435823519": {
+    "Prev": "2599357752391912393",
+    "Next": "2529516170625112058",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Where are these samples? Ajira does not see all four samples.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2529516170625112058": {
+    "Prev": "443498832435823519",
+    "Next": "52027510518312690",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Please hurry, %PCName. Ajira wants to be Journeyman very soon.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "52027510518312690": {
+    "Prev": "2529516170625112058",
+    "Next": "20728261851736471",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "Do you have samples of all the mushrooms? Luminous Russula, Violet Coprinus, Bungler's Bane, and Hypha Facia?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_BCShrooms",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here they are.\" 1 \"No, not yet\" 2"
+    ]
+  },
+  "20728261851736471": {
+    "Prev": "52027510518312690",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ajira",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Mages Guild",
+    "Text": "To finish Ajira's report, Ajira needs samples of Luminous Russula, Violet Coprinus, Bungler's Bane, and Hypha Facia. Ajira knows you can find all these on the Bitter Coast. The easiest way is go south along the River Odai until you see a wooden bridge across the river. Get out of the river there and find a path west over the hills.",
+    "Filters": [],
+    "Script": [
+      "Journal MG_BCShrooms 10"
+    ]
+  }
+}

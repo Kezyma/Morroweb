@@ -1,0 +1,131 @@
+{
+  "442362397403602": {
+    "Prev": "",
+    "Next": "3092817651153532605",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "geilir the mumbling",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah, not yet dear %PCClass.  First you must bring me the Skull of Oddfrid White-Lip.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_SadSeer",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_SadSeer",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "3092817651153532605": {
+    "Prev": "442362397403602",
+    "Next": "198422033013887203",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "geilir the mumbling",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "%PCClass, the skull of Oddfrid White-Lip is speaking to me, telling me your future. She says...she says the time for the hunt is near. You are both hunter and hunted. She sees you surrounded by ice. Beware betrayal! Oddfrid sees...she sees a giant.  And.... Yes! The horned huntsman! That is all. I'm not sure what it all means, but Oddfrid has nothing more to say.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_SadSeer",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_WildHunt",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal BM_SadSeer 100"
+    ]
+  },
+  "198422033013887203": {
+    "Prev": "3092817651153532605",
+    "Next": "30317141171093612725",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "geilir the mumbling",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "%PCClass, the skull of Oddfrid White-Lip is speaking to me, telling me your future. She says...she says you have accomplished much here on Solstheim, and your future is unclear. But wait! She sees something else.  Something very cloudy, something that could affect us all.  When the dragon dies, the Empire dies. Where is the lost dragon's blood, the\r\nEmpire's sire? And from the womb of the void, who shall stem the blood tide? I...I do not know what this means.  It is very unclear....",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_SadSeer",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_WildHunt",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal BM_SadSeer 110"
+    ]
+  },
+  "30317141171093612725": {
+    "Prev": "198422033013887203",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "geilir the mumbling",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sorry %PCCLass, but that is all I see.  I've have told your future.  What you do with that information is entirely up to you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_SadSeer",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  }
+}

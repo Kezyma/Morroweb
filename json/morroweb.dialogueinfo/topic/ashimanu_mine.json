@@ -1,0 +1,115 @@
+{
+  "31983195973055721557": {
+    "Prev": "",
+    "Next": "15114146751967722566",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I hope the mine gets back up and running soon. There's few enough egg mines as it is.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_AshimanuMine",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "15114146751967722566": {
+    "Prev": "31983195973055721557",
+    "Next": "612430826250010420",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, you killed the shalk already? Good work, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "HR_AshimanuMine",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "shalk_diseased_hram",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HR_AshimanuMine 100",
+      "ModPCFacRep 5 \"Redoran\"",
+      "ModDisposition 10"
+    ]
+  },
+  "612430826250010420": {
+    "Prev": "15114146751967722566",
+    "Next": "27411300681963417023",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard you killed the shalk. Good work, %PCName.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "shalk_diseased_hram",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HR_AshimanuMine 100",
+      "ModPCFacRep 5 \"Redoran\"",
+      "ModDisposition 10"
+    ]
+  },
+  "27411300681963417023": {
+    "Prev": "612430826250010420",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "theldyn virith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The diseased shalk has been infecting Kwama and miners, so the mine's been abandonded. Kill the shalk and report back to me. I just heard some reports of Kagouti attacking traders along that route as well, so be careful. If you see any Kagouti near there, kill them too. It's best to start in Gnisis and cross the river south of the silt strider. When you reach a rough trail, follow it east and south. When the trail branches south and east, take the east fork.",
+    "Filters": [],
+    "Script": [
+      "Journal HR_AshimanuMine 10"
+    ]
+  }
+}

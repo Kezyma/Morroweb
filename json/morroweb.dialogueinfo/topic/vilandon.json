@@ -1,0 +1,71 @@
+{
+  "2763725737200808910": {
+    "Prev": "",
+    "Next": "2916122081178031406",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sinyaramen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, my grandfather was killed by a vampire. It is no surprise. He hunted your kind to earn his bread. After his mother and father were slain by your ill breed, Vilandon spent his life trying to hunt you all down. It was his end, though. A vampire named Kjeld finally killed him, though it is said it was a long and bloody fight. But, that was hundreds of years ago. I will speak no more with you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampChild",
+        "Value": 70.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampChild",
+        "Value": 90.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampChild\" 90",
+      "Goodbye"
+    ]
+  },
+  "2916122081178031406": {
+    "Prev": "2763725737200808910",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dhaunayne aundae",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He was my son. What has become of him, I do not know.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampChild",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  }
+}

@@ -1,0 +1,1780 @@
+{
+  "19082137452685917367": {
+    "Prev": "",
+    "Next": "2687062311521519699",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm not a drinker myself.",
+    "Filters": [],
+    "Script": []
+  },
+  "2687062311521519699": {
+    "Prev": "19082137452685917367",
+    "Next": "2662419136307604715",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "Heard that got taken care of. About time.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2662419136307604715": {
+    "Prev": "2687062311521519699",
+    "Next": "4710123601842021340",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "I just hope you can figure out a way for things to go back to normal around here. It's depressing enough without having the benefit of the sweet spirits of the gods. Granted, I don't know which gods, but it must be one of them.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 55.0
+      }
+    ],
+    "Script": []
+  },
+  "4710123601842021340": {
+    "Prev": "2662419136307604715",
+    "Next": "279151227106694028",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "Heard you were looking into it. Hurry it up.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 55.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "gavebooze",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "279151227106694028": {
+    "Prev": "4710123601842021340",
+    "Next": "10331210622607417859",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "A bit of sujamma does me good. I won't forget this. You've been asking around about why this is a dry fort, right?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 50.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "potion_local_liquor_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition 40",
+      "set gavebooze to 1",
+      "Player->RemoveItem potion_local_liquor_01 1",
+      "AddItem potion_local_liquor_01 1",
+      "Journal BM_Morale 55"
+    ]
+  },
+  "10331210622607417859": {
+    "Prev": "279151227106694028",
+    "Next": "3068123445668611426",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "A bit of mazte does me good. I won't forget this. You've been asking around about why this is a dry fort, right?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 50.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "Potion_Local_Brew_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition 40",
+      "set gavebooze to 1",
+      "Player->RemoveItem Potion_Local_Brew_01 1",
+      "AddItem Potion_Local_Brew_01 1",
+      "Journal BM_Morale 55"
+    ]
+  },
+  "3068123445668611426": {
+    "Prev": "10331210622607417859",
+    "Next": "10720232102230922107",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "A bit of flin does me good. I won't forget this. You've been asking around about why this is a dry fort, right?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 50.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "Potion_Cyro_Whiskey_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition 40",
+      "set gavebooze to 1",
+      "Player->RemoveItem Potion_Cyro_Whiskey_01 1",
+      "AddItem Potion_Cyro_Whiskey_01 1",
+      "Journal BM_Morale 55"
+    ]
+  },
+  "10720232102230922107": {
+    "Prev": "3068123445668611426",
+    "Next": "697694642477030434",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "A bit of Cyrodiilic Brandy does me good. I won't forget this. You've been asking around about why this is a dry fort, right?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 50.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "potion_cyro_brandy_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition 40",
+      "set gavebooze to 1",
+      "Player->RemoveItem potion_cyro_brandy_01 1",
+      "AddItem potion_cyro_brandy_01 1",
+      "Journal BM_Morale 55"
+    ]
+  },
+  "697694642477030434": {
+    "Prev": "10720232102230922107",
+    "Next": "319229800417410410",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "A bit of shein does me good. I won't forget this. You've been asking around about why this is a dry fort, right?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 50.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "potion_comberry_wine_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition 40",
+      "set gavebooze to 1",
+      "Player->RemoveItem potion_comberry_wine_01 1",
+      "AddItem potion_comberry_wine_01 1",
+      "Journal BM_Morale 55"
+    ]
+  },
+  "319229800417410410": {
+    "Prev": "697694642477030434",
+    "Next": "12337293053027529039",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "A bit of greef does me good. I won't forget this. You've been asking around about why this is a dry fort, right?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 50.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "potion_comberry_brandy_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition 40",
+      "set gavebooze to 1",
+      "Player->RemoveItem potion_comberry_brandy_01 1",
+      "AddItem potion_comberry_brandy_01 1",
+      "Journal BM_Morale 55"
+    ]
+  },
+  "12337293053027529039": {
+    "Prev": "319229800417410410",
+    "Next": "2022145361410413125",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "Guess you don't have any more. I don't like being lied to.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 50.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "2022145361410413125": {
+    "Prev": "12337293053027529039",
+    "Next": "873980552067313697",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "Be that way. Fetcher.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 50.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "873980552067313697": {
+    "Prev": "2022145361410413125",
+    "Next": "199715231049310802",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "I could use some more booze, but I'll talk to you. I understand you're looking to find out why this place became a dry fort.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 50.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "gavebooze",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Morale 55"
+    ]
+  },
+  "199715231049310802": {
+    "Prev": "873980552067313697",
+    "Next": "72483542441430176",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "I could use some booze, but I'll talk to you. I understand you're looking to find out why this place became a dry fort.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Morale",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Morale 55"
+    ]
+  },
+  "72483542441430176": {
+    "Prev": "199715231049310802",
+    "Next": "6333182621103313348",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "I heard you might have some sujamma on you. I could sure use a bit.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 50.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "potion_local_liquor_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Sure, take it.\" 3 \"Find your own.\" 4"
+    ]
+  },
+  "6333182621103313348": {
+    "Prev": "72483542441430176",
+    "Next": "754019520318426639",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "I heard you might have some mazte on you. I could sure use a bit.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 50.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "Potion_Local_Brew_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Sure, take it.\" 3 \"Find your own.\" 4"
+    ]
+  },
+  "754019520318426639": {
+    "Prev": "6333182621103313348",
+    "Next": "27898261133206124100",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "I heard you might have some flin on you. I could sure use a bit.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 50.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "Potion_Cyro_Whiskey_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Sure, take it.\" 3 \"Find your own.\" 4"
+    ]
+  },
+  "27898261133206124100": {
+    "Prev": "754019520318426639",
+    "Next": "2589711363104239466",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "I heard you might have some Cyrodiilic Brandy on you. I could sure use a bit.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 50.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "potion_cyro_brandy_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Sure, take it.\" 3 \"Find your own.\" 4"
+    ]
+  },
+  "2589711363104239466": {
+    "Prev": "27898261133206124100",
+    "Next": "23064299311789731103",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "I heard you might have some shein on you. I could sure use a bit.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 50.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "potion_comberry_wine_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Sure, take it.\" 3 \"Find your own.\" 4"
+    ]
+  },
+  "23064299311789731103": {
+    "Prev": "2589711363104239466",
+    "Next": "118819213141465765",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "I heard you might have some greef on you. I could sure use a bit.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 50.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "potion_comberry_brandy_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Sure, take it.\" 3 \"Find your own.\" 4"
+    ]
+  },
+  "118819213141465765": {
+    "Prev": "23064299311789731103",
+    "Next": "274218188302930613",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "I heard you might have some more on you, but I guess you don't. That's a shame.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "274218188302930613": {
+    "Prev": "118819213141465765",
+    "Next": "2753592371115519698",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "I don't even want to talk about that now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "gavebooze",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "2753592371115519698": {
+    "Prev": "274218188302930613",
+    "Next": "1617818272230462182",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "Got enough for now. Check with me later, though.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "gavebooze",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "1617818272230462182": {
+    "Prev": "2753592371115519698",
+    "Next": "13922851312211961",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "Mmm...take me away, sweet sujamma. Thanks, friend. Just hasn't been the same around here since this became a dry fort. It's ridiculous, I tell you!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 9.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "potion_local_liquor_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition 40",
+      "set gavebooze to 1",
+      "Player->RemoveItem potion_local_liquor_01 1",
+      "AddItem potion_local_liquor_01 1",
+      "Journal BM_Morale 30"
+    ]
+  },
+  "13922851312211961": {
+    "Prev": "1617818272230462182",
+    "Next": "197462711780923133",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "Mazte. Good stuff. Thanks, friend. Just hasn't been the same around here since this became a dry fort. It's ridiculous, I tell you!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 8.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "Potion_Local_Brew_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition 40",
+      "set gavebooze to 1",
+      "Player->RemoveItem Potion_Local_Brew_01 1",
+      "AddItem Potion_Local_Brew_01 1",
+      "Journal BM_Morale 30"
+    ]
+  },
+  "197462711780923133": {
+    "Prev": "13922851312211961",
+    "Next": "6272133792664828491",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "Mmmm...flin. Thanks, friend. Just hasn't been the same around here since this became a dry fort. It's ridiculous, I tell you!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 7.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "Potion_Cyro_Whiskey_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition 40",
+      "set gavebooze to 1",
+      "Player->RemoveItem Potion_Cyro_Whiskey_01 1",
+      "AddItem Potion_Cyro_Whiskey_01 1",
+      "Journal BM_Morale 30"
+    ]
+  },
+  "6272133792664828491": {
+    "Prev": "197462711780923133",
+    "Next": "4364146422993629707",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "Some fine Cyrodiilic Brandy. Good stuff. Thanks, friend. Just hasn't been the same around here since this became a dry fort. It's ridiculous, I tell you!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "potion_cyro_brandy_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition 40",
+      "set gavebooze to 1",
+      "Player->RemoveItem potion_cyro_brandy_01 1",
+      "AddItem potion_cyro_brandy_01 1",
+      "Journal BM_Morale 30"
+    ]
+  },
+  "4364146422993629707": {
+    "Prev": "6272133792664828491",
+    "Next": "10712915108355508",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "Ahhh...shein. Thanks, friend. Just hasn't been the same around here since this became a dry fort. It's ridiculous, I tell you!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "potion_comberry_wine_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition 40",
+      "set gavebooze to 1",
+      "Player->RemoveItem potion_comberry_wine_01 1",
+      "AddItem potion_comberry_wine_01 1",
+      "Journal BM_Morale 30"
+    ]
+  },
+  "10712915108355508": {
+    "Prev": "4364146422993629707",
+    "Next": "250291990504911929",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "Mmm...grief. Thanks, friend. Just hasn't been the same around here since this became a dry fort. It's ridiculous, I tell you!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "potion_comberry_brandy_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition 40",
+      "set gavebooze to 1",
+      "Player->RemoveItem potion_comberry_brandy_01 1",
+      "AddItem potion_comberry_brandy_01 1",
+      "Journal BM_Morale 30"
+    ]
+  },
+  "250291990504911929": {
+    "Prev": "10712915108355508",
+    "Next": "913022265677419811",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "Doesn't look like you have any on you after all. I'm through talking. You get some more, come talk to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 9.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "potion_local_liquor_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "913022265677419811": {
+    "Prev": "250291990504911929",
+    "Next": "356357232609411066",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "Doesn't look like you have any on you after all. I'm through talking. You get some more, come talk to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 8.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "Potion_Local_Brew_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "356357232609411066": {
+    "Prev": "913022265677419811",
+    "Next": "7694256372697214319",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "Doesn't look like you have any on you after all. I'm through talking. You get some more, come talk to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 7.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "Potion_Cyro_Whiskey_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "7694256372697214319": {
+    "Prev": "356357232609411066",
+    "Next": "3011013026307762966",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "Doesn't look like you have any on you after all. I'm through talking. You get some more, come talk to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "potion_cyro_brandy_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "3011013026307762966": {
+    "Prev": "7694256372697214319",
+    "Next": "80732496961919823",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "Doesn't look like you have any on you after all. I'm through talking. You get some more, come talk to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "potion_comberry_wine_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "80732496961919823": {
+    "Prev": "3011013026307762966",
+    "Next": "11218317601729332749",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "Doesn't look like you have any on you after all. I'm through talking. You get some more, come talk to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "potion_comberry_brandy_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "11218317601729332749": {
+    "Prev": "80732496961919823",
+    "Next": "31177273692709120035",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "Hmph. Figures.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "31177273692709120035": {
+    "Prev": "11218317601729332749",
+    "Next": "109411329563451318",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "Smells like sujamma to me. I'd know the smell anywhere. How about giving a thirsty soldier a little pick-me-up?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "potion_local_liquor_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Sure, take it.\" 9 \"Find your own.\" 2"
+    ]
+  },
+  "109411329563451318": {
+    "Prev": "31177273692709120035",
+    "Next": "26172269172110810578",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "Smells like mazte to me. I'd know the smell anywhere. How about giving a thirsty soldier a little pick-me-up?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "Potion_Local_Brew_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Sure, take it.\" 8 \"Find your own.\" 2"
+    ]
+  },
+  "26172269172110810578": {
+    "Prev": "109411329563451318",
+    "Next": "13914149092472124770",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "Smells like flin to me. I'd know the smell anywhere. How about giving a thirsty soldier a little pick-me-up?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "Potion_Cyro_Whiskey_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Sure, take it.\" 7 \"Find your own.\" 2"
+    ]
+  },
+  "13914149092472124770": {
+    "Prev": "26172269172110810578",
+    "Next": "3816201432354225792",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "Smells like Cyrodiilic Brandy to me. I'd know the smell anywhere. How about giving a thirsty soldier a little pick-me-up?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "potion_cyro_brandy_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Sure, take it.\" 6 \"Find your own.\" 2"
+    ]
+  },
+  "3816201432354225792": {
+    "Prev": "13914149092472124770",
+    "Next": "527016831914420609",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "Smells like shein to me. I'd know the smell anywhere. How about giving a thirsty soldier a little pick-me-up?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "potion_comberry_wine_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Sure, take it.\" 5 \"Find your own.\" 2"
+    ]
+  },
+  "527016831914420609": {
+    "Prev": "3816201432354225792",
+    "Next": "302091118292128719",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "Smells like greef to me. I'd know the smell anywhere. How about giving a thirsty soldier a little pick-me-up?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "potion_comberry_brandy_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Sure, take it.\" 1 \"Find your own.\" 2"
+    ]
+  },
+  "302091118292128719": {
+    "Prev": "527016831914420609",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Guard",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Fort Frostmoth",
+    "PlayerFaction": "",
+    "Text": "Yeah, I love it, and you don't seem to have any more that I'd even drink. I hate this place.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Morale",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Morale",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  }
+}

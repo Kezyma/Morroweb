@@ -1,0 +1,288 @@
+{
+  "3129392061652731795": {
+    "Prev": "",
+    "Next": "1659232763013035",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "kjolver",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Dead?  Is it true?  Finally, Brandr is mine and mine alone!  %PCName, by slaying that trollop you have given me back my husband.  He will remember his love for me, and we will be happy once again.  I'll always be in your debt.  Here, take this gold.  It's everything I have.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "expensive_ring_erna",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_WomanScorned",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_WomanScorned",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal \"BM_WomanScorned\" 100",
+      "additem \"expensive_ring_erna\" 1",
+      "player->removeitem \"expensive_ring_erna\" 1",
+      "player->additem \"gold_001\" 1000",
+      "moddisposition 50"
+    ]
+  },
+  "1659232763013035": {
+    "Prev": "3129392061652731795",
+    "Next": "25891298822326911079",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "kjolver",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Liar!  Do you take me for a fool, %PCName?  This is not the ring of Erna the Quiet.  I should know -- my lout of a husband gave it to her!  Kill the harlot and bring me her ring, or you'll get nothing from me!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_WomanScorned",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_WomanScorned",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "25891298822326911079": {
+    "Prev": "1659232763013035",
+    "Next": "1688455102995032273",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "kjolver",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then why are you here wasting my time? Kill that tramp and bring me her ring. I want her dead, understand?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_WomanScorned",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_WomanScorned",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1688455102995032273": {
+    "Prev": "25891298822326911079",
+    "Next": "860173121158630926",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "kjolver",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent! I knew I was right about you, %PCName. Erna lives in the Skaal Village. You can probably find her at her house. Kill the tramp, and bring me back her ring as proof. You'll be rewarded, and I'll have my Brandr all to myself.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"BM_WomanScorned\" 30"
+    ]
+  },
+  "860173121158630926": {
+    "Prev": "1688455102995032273",
+    "Next": "7975255221294828371",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "kjolver",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well. Not everybody has the stomach for what I need done. If you change your mind, the offer will still be open.  And I trust you to keep this issue to yourself. Good day, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"BM_WomanScorned\" 20"
+    ]
+  },
+  "7975255221294828371": {
+    "Prev": "860173121158630926",
+    "Next": "325824266247171419",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "kjolver",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My husband Brandr has been running around behind my back with a harlot named Erna the Quiet. I love my husband.  He's my entire world, and that world isn't big enough for both Erna and me. I want Erna dead. But I'm no killer. Will you help me in this errand, %PCName? You'll be well compensated, of course.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_WomanScorned",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_WomanScorned",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal \"BM_WomanScorned\" 10",
+      "Choice \"I'll do it.  Business is business, after all.\" 1 \"I'm no assassin, Kjolver.  Get somebody else to do your dirty work.\" 2"
+    ]
+  },
+  "325824266247171419": {
+    "Prev": "7975255221294828371",
+    "Next": "466832861987827155",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "kjolver",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You...you've done it?  You've killed Erna the Quiet?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_WomanScorned",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_WomanScorned",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, Kjolver.  Here is Erna's ring.  Your husband's mistress lies dead by my hand.\" 3 \"Not yet, Kjolver.  I've been busy with other matters.\" 4"
+    ]
+  },
+  "466832861987827155": {
+    "Prev": "325824266247171419",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "kjolver",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The matter has been put to rest. My business with you is done.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_WomanScorned",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  }
+}

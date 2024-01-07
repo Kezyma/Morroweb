@@ -1,0 +1,320 @@
+{
+  "10541199391256511709": {
+    "Prev": "",
+    "Next": "186611130882606453",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dovor Oren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Nevermind. You've made it clear you have no intention of helping.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_Warlords",
+        "Value": 200.0
+      }
+    ],
+    "Script": []
+  },
+  "186611130882606453": {
+    "Prev": "10541199391256511709",
+    "Next": "134416150162520005",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dovor Oren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Think no more of it. He deserved what he got.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_Warlords",
+        "Value": 120.0
+      }
+    ],
+    "Script": []
+  },
+  "134416150162520005": {
+    "Prev": "186611130882606453",
+    "Next": "3030626921851513810",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dovor Oren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There are few who have the courage to do what's right, even when everyone is against them.  You, %PCName, have done what is right, and for that I... we commend you.  Now, let us talk of how else you can assist us.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Warlords",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "3030626921851513810": {
+    "Prev": "134416150162520005",
+    "Next": "7589166132136624151",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dovor Oren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I.... I'm afraid I don't understand.  You did us this favor, and yet now wish to keep the items?  I certainly cannot pay you for a task you have not completed.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "7589166132136624151": {
+    "Prev": "3030626921851513810",
+    "Next": "1502129587325836",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dovor Oren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah, wonderful.  Now, these tools can be put to freeing Mournhold from the yoke of the oppressor... that has a nice ring to it, wouldn't you say?  Here is your payment, %PCName -- know that you have my gratitude.  If you still wish to assist us, of course, there's more that can be done...",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "ebony shortsword_soscean",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "ebony_cuirass_soscean",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"ebony shortsword_soscean\" 1",
+      "player->removeitem \"ebony_cuirass_soscean\" 1",
+      "additem \"ebony shortsword_soscean\" 1",
+      "additem \"ebony_cuirass_soscean\" 1",
+      "player->additem \"gold_001\" 5000",
+      "Journal MS_Warlords 40"
+    ]
+  },
+  "1502129587325836": {
+    "Prev": "7589166132136624151",
+    "Next": "1758178803207826583",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dovor Oren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm afraid I don't see the humor in this situation.  You tell me Soscean is dead, yet you have nothing for me?  Perhaps you should rethink attempting to make such jokes.  Just bring me what I've asked for.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "1758178803207826583": {
+    "Prev": "1502129587325836",
+    "Next": "1869187861091729233",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dovor Oren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So, Soscean wouldn't go quietly, eh?  As I've said, he won't be missed.  Now, where are those items?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Warlords",
+        "Value": 30.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Soscean",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Here are the items.\" 3 \"I'm keeping the items.\" 4"
+    ]
+  },
+  "1869187861091729233": {
+    "Prev": "1758178803207826583",
+    "Next": "8233307532019519371",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dovor Oren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I assure you, he deserves whatever he has coming to him.  He's of no consequence.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Warlords",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "8233307532019519371": {
+    "Prev": "1869187861091729233",
+    "Next": "2929819171493218297",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dovor Oren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent.  Though the idea may seem distasteful at first, I assure you you're doing us all a favor, %PCName.  And, of course, there's money to ease the burden of guilt, should that be a problem for you.... Just bring me his sword and cuirass, and the money is yours. You'll likely find him wasting time in that damned bar, as usual.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MS_Warlords 30"
+    ]
+  },
+  "2929819171493218297": {
+    "Prev": "8233307532019519371",
+    "Next": "31982486641431909",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dovor Oren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What, too timid for the challenge?  Very well, %PCName.  I'd suggest, then, that you not return here.  And I'd also suggest you not tell anyone that we're here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal MS_Warlords 200"
+    ]
+  },
+  "31982486641431909": {
+    "Prev": "2929819171493218297",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dovor Oren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, I'm sure you've noticed him, strutting around as if he were Lord Vivec himself.  Of course, no one mentions the horrible things HE'S done to get where he is.  And for what?  He's just another noble, something Mournhold has no use for.  But the tools he's used to step on others and get where he is today, now THOSE Mournhold has use for.  Indeed, I have use for them.  Would you be willing to get them?",
+    "Filters": [],
+    "Script": [
+      "Choice: \"Yes, I'll get them.\" 1 \"No, I want nothing to do with this.\" 2"
+    ]
+  }
+}

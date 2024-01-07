@@ -1,0 +1,476 @@
+{
+  "3089529952262693622": {
+    "Prev": "",
+    "Next": "5080143422909823943",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ama Nin_DisguiseMara",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Woe is me. I prayed for aid, and received a cruel rebuff. It is enough to make one wonder about the gods. Perhaps they are evil and cruel, or careless and indifferent to the fate of poor mortals. Go, then. Leave me to suffer -- no doubt, as the gods intend.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sc_divineintervention",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": []
+  },
+  "5080143422909823943": {
+    "Prev": "3089529952262693622",
+    "Next": "292981449246703859",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ama Nin_DisguiseMara",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Bless you, and all your endeavors. Farewell, and good fortune. But before I go, please -- let me at least give you a gift. All I have is this lucky change of clothes I've carried with me on my travels. I never wear them -- I just keep them as a good luck charm. Perhaps you can wear them in remembrance of me, and in token of your generosity to a stranger.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sc_divineintervention",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal IC26_AmaNin_free 5",
+      "player->removeitem sc_divineintervention 1",
+      "player->additem Maras_Skirt 1",
+      "player->additem Maras_Blouse 1",
+      "player->modReputation 1",
+      "disable"
+    ]
+  },
+  "292981449246703859": {
+    "Prev": "5080143422909823943",
+    "Next": "1128619038211112222",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ama Nin_DisguiseMara",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "At last! You have found a Divine Intervention scroll? Give me that scroll, and I'm free.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sc_divineintervention",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC26_AmaNin_free",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give Divine Intervention scroll.\" 3  \"Keep Divine Intervention scroll.\" 4"
+    ]
+  },
+  "1128619038211112222": {
+    "Prev": "292981449246703859",
+    "Next": "73903210745468506",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ama Nin_DisguiseMara",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You haven't GOT a Divine Intervention scroll? But... I thought you were a servant of the Imperial cult? Surely the prudent and pious champion of the faith will carry Divine Interventions scrolls, both for personal use and for the aid of the less fortunate. Alas. I think you should go get a Divine Interventions scroll and bring it back to me so I can be rescued.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "sc_divineintervention",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal IC26_AmaNin_free 1"
+    ]
+  },
+  "73903210745468506": {
+    "Prev": "1128619038211112222",
+    "Next": "3162927018253629519",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ama Nin_DisguiseMara",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Woe is me. I prayed for aid, and received a cruel rebuff. It is enough to make one wonder about the gods. Perhaps they are evil and cruel, or careless and indifferent to the fate of poor mortals. Go, then. Leave me to suffer -- no doubt, as the gods intend.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sc_divineintervention",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "3162927018253629519": {
+    "Prev": "73903210745468506",
+    "Next": "199701931547912601",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ama Nin_DisguiseMara",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Bless you, and all your endeavors. Farewell, and good fortune. But before I go, please -- let me at least give you a gift. All I have is this lucky change of clothes I've carried with me on my travels. I never wear them -- I just keep them as a good luck charm. Perhaps you can wear them in remembrance of me, and in token of your generosity to a stranger.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sc_divineintervention",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal IC26_AmaNin_free 5",
+      "player->removeitem sc_divineintervention 1",
+      "player->additem Maras_Skirt 1",
+      "player->additem Maras_Blouse 1",
+      "player->modReputation 1",
+      "disable"
+    ]
+  },
+  "199701931547912601": {
+    "Prev": "3162927018253629519",
+    "Next": "19859151573141413527",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Ama Nin_DisguiseMara",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Mara be praised! And you, too, for your forethought and compassion. Since you came prepared -- not just for yourself, but for other poor victims -- a scroll of Divine Intervention can carry me from this terrible captivity to the safety of an Imperial cult shrine. Please, give me that scroll. I don't want to be here a moment longer.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sc_divineintervention",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give Divine Intervention scroll.\" 1  \"Keep Divine Intervention scroll.\" 2"
+    ]
+  },
+  "19859151573141413527": {
+    "Prev": "199701931547912601",
+    "Next": "493197851392013947",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Jon Hawker",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Just my luck. In answer to my prayers, the Nine send me a tight-wad hero. The gods have a funny sense of humor.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sc_divineintervention",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": []
+  },
+  "493197851392013947": {
+    "Prev": "19859151573141413527",
+    "Next": "105418323257312223",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Jon Hawker",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you, friend. And goodbye. But before I go, let me give you a gift. They took everything, but I managed to keep these gloves hidden. I've always been fond of them, and their maker. Wear them in good health, and in remembrance of me.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sc_divineintervention",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal IC25_JonHawker_free 5",
+      "player->removeitem sc_divineintervention 1",
+      "player->additem \"Zenithar's_Warning\" 1",
+      "player->additem \"Zenithar's_Wiles\" 1",
+      "player->modReputation 1",
+      "disable"
+    ]
+  },
+  "105418323257312223": {
+    "Prev": "493197851392013947",
+    "Next": "27024195352719422090",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Jon Hawker",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So. You found a Divine Intervention scroll? Give me that scroll, and I'm free.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sc_divineintervention",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC25_JonHawker_free",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give Divine Intervention scroll.\" 3  \"Keep Divine Intervention scroll.\" 4"
+    ]
+  },
+  "27024195352719422090": {
+    "Prev": "105418323257312223",
+    "Next": "73212269203227534",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Jon Hawker",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You haven't GOT a Divine Intervention scroll? My bad luck, to ALMOST be rescued. I had some Divine Interventions scrolls when I was captured, but they took all my possessions. Maybe you can find a Divine Intervention scroll around here somewhere.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "sc_divineintervention",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal IC25_JonHawker_free 1"
+    ]
+  },
+  "73212269203227534": {
+    "Prev": "27024195352719422090",
+    "Next": "29621537671216868",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Jon Hawker",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Just my luck. In answer to my prayers, the Nine send me a tight-wad hero. The gods have a funny sense of humor.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sc_divineintervention",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "29621537671216868": {
+    "Prev": "73212269203227534",
+    "Next": "2516522342224081737",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Jon Hawker",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you, friend. And goodbye. But before I go, let me give you a gift. They took everything, but I managed to keep these gloves hidden. I've always been fond of them, and their maker. Wear them in good health, and in remembrance of me.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sc_divineintervention",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal IC25_JonHawker_free 5",
+      "player->additem \"Zenithar's_Warning\" 1",
+      "player->additem \"Zenithar's_Wiles\" 1",
+      "player->removeitem sc_divineintervention 1",
+      "player->modReputation 1",
+      "disable"
+    ]
+  },
+  "2516522342224081737": {
+    "Prev": "29621537671216868",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Jon Hawker",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Lucky for me you came prepared -- not just for yourself, but for others. Don't worry about my stuff -- it wasn't worth anything. I just want out of here. Give me that scroll, and I'm free.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sc_divineintervention",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give Divine Intervention scroll.\" 1  \"Keep Divine Intervention scroll.\" 2"
+    ]
+  }
+}

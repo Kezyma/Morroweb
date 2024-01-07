@@ -1,0 +1,4763 @@
+{
+  "31262260993138022234": {
+    "Prev": "",
+    "Next": "8476195742479519095",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You broke the rules. The rules are simple. Break the rules, and you're out of the Blades. Forever.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "SetDisposition 0",
+      "Goodbye"
+    ]
+  },
+  "8476195742479519095": {
+    "Prev": "31262260993138022234",
+    "Next": "8226213591024718494",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I was going to send you to speak with Mehra Milo in Vivec. But Mehra Milo is DEAD! And you were responsible! Get OUT OF HERE! And don't come back! I don't CARE what the Emperor wants! I don't CARE about your excuses! GET OUT OF HERE! \r\n\r\n[This path to your destiny is blocked.]",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_10_MehraMilo",
+        "Value": 50.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "mehra milo",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "SetDisposition 0",
+      "Goodbye"
+    ]
+  },
+  "8226213591024718494": {
+    "Prev": "8476195742479519095",
+    "Next": "256041812384511341",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You know what to do. Get Mehra Milo to help you find the lost prophecies. Then take those lost prophecies to Nibani Maesa. From that point, you'll have to follow her directions, and follow the prophecies. Good luck.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_4_MiloGone",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "256041812384511341": {
+    "Prev": "8226213591024718494",
+    "Next": "80032404587920907",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Continue pursuing the Nerevarine prophecies, as the Emperor commands. First, go to the Hall of Wisdom and Justice, and get Mehra Milo to help you find the lost prophecies. She's being watched; if something has gone wrong, find her private quarters; she'll leave you a message there under the code word 'amaya.' Then take the lost prophecies to Nibani Maesa. From that point, you'll have to follow her directions, and follow the prophecies. Good luck.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_3_CorprusCure",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal \"A2_4_MiloGone\" 1",
+      "PCRaiseRank",
+      "\"bk_notetoamaya\"->enable",
+      "\"Mehra Milo\"->modDisposition 20",
+      "\"Mehra Milo\"->PositionCell, -680, -363, 88, 270, \"Ministry of Truth, Holding Cells\""
+    ]
+  },
+  "80032404587920907": {
+    "Prev": "256041812384511341",
+    "Next": "134044660806428478",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go to Tel Fyr and get that corprus disease cured. Then hurry back. I think I know how to get the lost prophecies Nibani Maesa asked for.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_3_CorprusCure",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "134044660806428478": {
+    "Prev": "80032404587920907",
+    "Next": "1774027995387524122",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I was going to send you to speak with Divayth Fyr at Tel Fyr. But Divayth Fyr is DEAD! And you were responsible! Get OUT OF HERE! And don't come back! I don't CARE what the Emperor wants! I don't CARE about your excuses! GET OUT OF HERE! \r\n\r\n[This path to your destiny is blocked.]",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_2_6thHouse",
+        "Value": 50.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "divayth fyr",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "SetDisposition 0",
+      "Goodbye"
+    ]
+  },
+  "1774027995387524122": {
+    "Prev": "134044660806428478",
+    "Next": "1302330988311795704",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here. Take this Dwemer artifact and 1000 drakes, and go to Tel Fyr. Divayth Fyr will like the Dwemer artifact. A gift may sweeten his disposition. The gold is for expenses. And here're a couple of Levitation potions. I hear you'll need them in Telvanni towers, because wizards don't use stairs. So get moving, and get that corprus disease cured. Then hurry back. I think I know how to get the lost prophecies Nibani Maesa asked for.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_2_6thHouse",
+        "Value": 50.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"A2_3_CorprusCure\" 1",
+      "moddisposition 10",
+      "PCRaiseRank",
+      "Player->AddItem misc_dwrv_artifact50 1",
+      "Player->AddItem, \"Gold_001\", 1000",
+      "Player->AddItem, \"P_Levitation_Q\", 3"
+    ]
+  },
+  "1302330988311795704": {
+    "Prev": "1774027995387524122",
+    "Next": "2620214463062927750",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I canvassed my informants for possible treatments, just in case you contracted the disease during your mission. I learned from Fast Eddie that your best chance of getting cured is Divayth Fyr, an ancient Telvanni wizard who runs a Corprusarium for victims of the disease.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_2_6thHouse",
+        "Value": 50.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 2"
+    ]
+  },
+  "2620214463062927750": {
+    "Prev": "1302330988311795704",
+    "Next": "1157411248134886970",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "With Dagoth Gares dead, the Sixth House shrine is no longer a threat. You've more than earned a promotion to the rank of Traveler. I'm very worried that you have corprus disease. But I have some good news in that department.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_2_6thHouse",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  },
+  "1157411248134886970": {
+    "Prev": "2620214463062927750",
+    "Next": "317466845234924361",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Your orders were to find that Sixth House base near Gnaar Mok, kill the Sixth House priest Dagoth Gares, and bring me a full report on the Sixth House base. Don't come back until you've completed the mission.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_2_6thHouse",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "317466845234924361": {
+    "Prev": "1157411248134886970",
+    "Next": "1457411711895630236",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I was going to send you to speak with Raesa Pullia at Buckmoth Fort. But Raesa Pullia is DEAD! And you were responsible! Get OUT OF HERE! And don't come back! I don't CARE what the Emperor wants! I don't CARE about your excuses! GET OUT OF HERE! \r\n\r\n[This path to your destiny is blocked.]",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 60.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "raesa pullia",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "SetDisposition 0",
+      "Goodbye"
+    ]
+  },
+  "1457411711895630236": {
+    "Prev": "317466845234924361",
+    "Next": "44223006522931235",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here's your mission. Fort Buckmoth sent a patrol to Gnaar Mok, hunting smugglers with Sixth House connections. They found a Sixth House base, a Sixth House shrine, and a Sixth House priest named Dagoth Gares. Speak to Champion Raesa Pullia at Fort Buckmoth; she'll tell you about the patrol and the Sixth House base. Your orders: find that Sixth House base, kill Dagoth Gares, and bring me a full report on the Sixth House base.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 60.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal \"A2_2_6thHouse\" 5",
+      "Player->AddItem Gold_001 400",
+      "\"dagoth gares\"->enable"
+    ]
+  },
+  "44223006522931235": {
+    "Prev": "1457411711895630236",
+    "Next": "148482385536758819",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hmm. Maybe you're still not ready. But I have to give you the mission anyway. You'll just have to be careful. Before you head out, make sure you outfit yourself with healing potions, new gear, a little training, whatever you think you need most. Remember! If you get in trouble, back off, rest up, and go back fresh. Don't take any chances. I think this will be a tough one.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 60.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 3"
+    ]
+  },
+  "148482385536758819": {
+    "Prev": "44223006522931235",
+    "Next": "16743230223029527310",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hmm. Maybe you're still not ready. Why don't you go back out and do some freelance work. And put everything you earn back into training and equipment. Come back to me when you're ready, and I'll give you your next mission.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 60.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcLevel",
+        "Compare": "Less",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": [
+      "Journal \"A2_2_6thHouse\" 2"
+    ]
+  },
+  "16743230223029527310": {
+    "Prev": "148482385536758819",
+    "Next": "20963322832865117216",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. I'm going to give you the mission. Before you head out, make sure you outfit yourself with healing potions, new gear, a little training, whatever you think you need most. And if you get in trouble, back off, rest up, and go back fresh. Don't take any chances. I think this will be a tough one.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 60.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 3"
+    ]
+  },
+  "20963322832865117216": {
+    "Prev": "16743230223029527310",
+    "Next": "324762905050632661",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good to see you back. I trust you've worked on your skills and your outfit. As I said before, I have a very tough assignment for you. Do you think you're ready?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "A2_2_6thHouse",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \" I'm ready.\" 4 \" I'm willing, but cautious.\" 5"
+    ]
+  },
+  "324762905050632661": {
+    "Prev": "20963322832865117216",
+    "Next": "2259272482394510942",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm cautious too. So I recommend you take time to improve your skills. Do a few jobs for the guilds, cash in some loot, and upgrade your equipment. Here're 400 drakes that might come in handy. And when you're ready, come back to me, and I'll give you your next mission.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 60.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcLevel",
+        "Compare": "Less",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": [
+      "Journal \"A2_2_6thHouse\" 1",
+      "Player->AddItem Gold_001 400"
+    ]
+  },
+  "2259272482394510942": {
+    "Prev": "324762905050632661",
+    "Next": "5309111512283917301",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. Cautious is smart. I'm going to give you the mission. But I'm going to give you 400 drakes. Before you head out, make sure you outfit yourself with healing potions, new gear, a little training, whatever you think you need most. And if you get in trouble, back off, rest up, and go back fresh. Don't take any chances. I think this will be a tough one.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 60.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 3"
+    ]
+  },
+  "5309111512283917301": {
+    "Prev": "2259272482394510942",
+    "Next": "4770290302917730510",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hmm. Don't get over-confident. But it so happens that I agree -- you're ready. But just in case I'm going to give you 400 drakes. Before you head out, make sure you outfit yourself with healing potions, new gear, a little training, whatever you think you need most. And remember: if you get in trouble, back off, rest up, and go back fresh. Don't get cocky. I think this will be a tough one.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 60.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 3"
+    ]
+  },
+  "4770290302917730510": {
+    "Prev": "5309111512283917301",
+    "Next": "91563777669810271",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've spoken with Sul-Matuul and Nibani Maesa, and, from what they say, it sounds like you could really be the Nerevarine. That's just incredible. But I'll have to get used to the idea. Let me try to get word to Mehra Milo. Maybe she can find out whether the Dissident Priests have any lost prophecies. But in the meantime, I have a very tough assignment for you. Do you think you're ready?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Choice \" I'm ready for anything.\" 1 \" I'm willing, but cautious.\" 2"
+    ]
+  },
+  "91563777669810271": {
+    "Prev": "4770290302917730510",
+    "Next": "23637233682388825458",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As I said, go to Urshilaku camp to speak with Sul-Matuul and Nibani Maesa. Tell them your story, and have them test you against the Nerevarine prophecies. As heads of the Nerevarine cult, they should be able to judge whether you might be the Nerevarine. When you've spoken with them, report back to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "23637233682388825458": {
+    "Prev": "91563777669810271",
+    "Next": "3040061042687429190",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I was going to send you to speak with Nibani Maesa at Urshilaku camp. But Nibani Maesa is DEAD! And you were responsible! Get OUT OF HERE! And don't come back! I don't CARE what the Emperor wants! I don't CARE about your excuses! GET OUT OF HERE! \r\n\r\n[This path to your destiny is blocked.]",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_11_ZainsubaniInformant",
+        "Value": 50.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "nibani maesa",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "SetDisposition 0",
+      "Goodbye"
+    ]
+  },
+  "3040061042687429190": {
+    "Prev": "23637233682388825458",
+    "Next": "25246150001870514559",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I was going to send you to speak with Sul-Matuul at Urshilaku camp. But Sul-Matuul is DEAD! And you were responsible! Get OUT OF HERE! And don't come back! I don't CARE what the Emperor wants! I don't CARE about your excuses! GET OUT OF HERE! \r\n\r\n[This path to your destiny is blocked.]",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_11_ZainsubaniInformant",
+        "Value": 50.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "sul-matuul",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "SetDisposition 0",
+      "Goodbye"
+    ]
+  },
+  "25246150001870514559": {
+    "Prev": "3040061042687429190",
+    "Next": "331214954264130237",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So. Zainsubani says Sul-Matuul and Nibani Maesa at Urshilaku camp are the heads of the Nerevarine cult. So I'm sending you to speak with them. Tell them your story, and have them test you against the Nerevarine prophecies. As heads of the Nerevarine cult, they can best judge whether you satisfy the prophecies. When you've spoken with them, report back to me. Here's 200 drakes for expenses. And pick up essential supplies at Fort Moonmoth.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_11_ZainsubaniInformant",
+        "Value": 50.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "PCRaiseRank",
+      "Journal \"A2_1_MeetSulMatuul\" 1",
+      "player->additem gold_001 200",
+      "player->additem bk_A1_1_PackageDecoded 1"
+    ]
+  },
+  "331214954264130237": {
+    "Prev": "25246150001870514559",
+    "Next": "202712574298283049",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As you'll see in the decoded message, the Emperor and his counselors say you have the 'appearance' of satisfying the conditions of the prophecy. Do you REALLY satisfy the prophecy? Are you REALLY the prophesied Nerevarine? At first, I thought we were just supposed to create a persuasive impostor. Now I don't know what to think. But I am sure of one thing. This is not just primitive superstition, and we will treat it seriously, just as his Majesty commands.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_11_ZainsubaniInformant",
+        "Value": 50.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 3"
+    ]
+  },
+  "202712574298283049": {
+    "Prev": "331214954264130237",
+    "Next": "328115204363039",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Emperor and his advisors think you have the appearance of meeting the conditions of the Nerevarine prophecies. That's why you were pulled out of prison on his Majesty's authority and sent to me. So you could satisfy the conditions of the Nerevarine prophecies and become the Nerevarine. Here. This is a decoded copy of the coded package you gave me when you arrived. Read it later. It should explain everything.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_11_ZainsubaniInformant",
+        "Value": 50.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 2"
+    ]
+  },
+  "328115204363039": {
+    "Prev": "202712574298283049",
+    "Next": "449310751594217271",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thanks for your report. But keep Zainsubani's notes on the Ashlanders. You'll need them. I'm promoting you, and sending you to the Urshilaku camp to speak with Sul-Matuul and Nibani Maesa. But before you go, I think it may be time to tell you what's going on.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_11_ZainsubaniInformant",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  },
+  "449310751594217271": {
+    "Prev": "328115204363039",
+    "Next": "2919124893811226563",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Did you speak with Hassour Zainsubani yet? Make sure you've gotten everything you can about the Ashlanders and the Nerevarine cult. Then report back.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_11_ZainsubaniInformant",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2919124893811226563": {
+    "Prev": "449310751594217271",
+    "Next": "1417518546209156116",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm not ready for you yet. I told you. Go out and brush up your skills, or do some freelance work to support your cover story. Or go shopping. Or do some sightseeing. Just leave me alone and let me think.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "localdaysPassed",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_V_VivecInformants",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1417518546209156116": {
+    "Prev": "2919124893811226563",
+    "Next": "443826593117014513",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I was going to send you to speak with Hassour Zainsubani in Ald'ruhn. But Hassour Zainsubani is DEAD! And you were responsible! Get OUT OF HERE! And don't come back! I don't CARE what the Emperor wants! I don't CARE about your excuses! GET OUT OF HERE! \r\n\r\n[This path to your destiny is blocked.]",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "localdaysPassed",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_V_VivecInformants",
+        "Value": 50.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "hassour zainsubani",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "SetDisposition 0",
+      "Goodbye"
+    ]
+  },
+  "443826593117014513": {
+    "Prev": "1417518546209156116",
+    "Next": "1629619842882527404",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We need an Ashlander informant. I have heard of a fellow in Ald'ruhn named Hassour Zainsubani, an Ashlander who left the Wastes to become a wealthy trader. They say the Ashlanders like to give and receive presents. Take these 100 drakes. Find out what Zainsubani likes, and get him a gift. Then give him the gift, and see if he will tell you about the Ashlanders and the Nerevarine cult. Then report back to me.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "localdaysPassed",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_V_VivecInformants",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal, \"A1_11_ZainsubaniInformant\", 1",
+      "player->additem gold_001 100"
+    ]
+  },
+  "1629619842882527404": {
+    "Prev": "443826593117014513",
+    "Next": "22853104932524110221",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If Mehra Milo says I must have a copy of 'Progress of Truth,' then I must have one. Go get a copy and bring it back to me. Buy a copy if you can. The 200 drakes I gave you for expenses should cover it. Now get moving.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "bk_progressoftruth",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_10_MehraMilo",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "22853104932524110221": {
+    "Prev": "1629619842882527404",
+    "Next": "275376449799317721",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Did you speak with Mehra Milo yet? Make sure you've gotten everything she can tell me about the Sixth House cult and the Nerevarine cult. Then report back.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_V_VivecInformants",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "A1_10_MehraMilo",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "275376449799317721": {
+    "Prev": "22853104932524110221",
+    "Next": "197219382651621066",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Where are the notes Huleeya gave you? Whatever you did with them, get them and bring them to me.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "bk_A1_7_HuleeyaInformant",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_7HuleeyaInformant",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "197219382651621066": {
+    "Prev": "275376449799317721",
+    "Next": "67952379338665913",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Did you speak with Huleeya yet? Make sure you've gotten everything he can tell me about the Sixth House cult and the Nerevarine cult. Then report back.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_V_VivecInformants",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "A1_7HuleeyaInformant",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "67952379338665913": {
+    "Prev": "197219382651621066",
+    "Next": "7182300462392120168",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Did you speak with Addhiranirr yet? Make sure you've gotten everything she can tell me about the Sixth House cult and the Nerevarine cult. Then report back.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_V_VivecInformants",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "A1_6_AddhiranirrInformant",
+        "Value": 45.0
+      }
+    ],
+    "Script": []
+  },
+  "13405161733617114": {
+    "Prev": "7182300462392120168",
+    "Next": "18776315443231526622",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have your report, and I'll make copies of your notes from Huleeya and the 'Progress of Truth.' Give me time to read and digest all this. In the meantime, I'm promoting you to Journeyman. You're doing good work. And here are 200 drakes. Go out and treat yourself to a new pair of shoes. And go do some jobs for the guilds, or other freelance work, just to keep your cover story current. Or get some training. Then, when you're fit and rested, come back, and I'll have new orders for you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "A1_6_AddhiranirrInformant",
+        "Value": 45.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_7HuleeyaInformant",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_10_MehraMilo",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal \"A1_V_VivecInformants\" 50",
+      "moddisposition 10",
+      "PCRaiseRank",
+      "player->additem gold_001 200"
+    ]
+  },
+  "18776315443231526622": {
+    "Prev": "13405161733617114",
+    "Next": "2452072631834729659",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Did you speak with Addhiranirr yet? Make sure you've gotten everything she can tell me about the Sixth House cult and the Nerevarine cult. Then report back.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_V_VivecInformants",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "A1_6_AddhiranirrInformant",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "2452072631834729659": {
+    "Prev": "18776315443231526622",
+    "Next": "6007273451569331766",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Like I said, I want you to interview three informants in Vivec City concerning the Nerevarine and the Sixth House. First, I want you to speak with Addhiranirr, a Khajiit Thieves Guild operative. Second, I want you to speak with Huleeya, an Argonian in the Morag Tong. Finally, I want you to speak with Mehra Milo, a Temple priestess. I gave you the details on paper. Go read them.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_V_VivecInformants",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "6007273451569331766": {
+    "Prev": "2452072631834729659",
+    "Next": "1089811670451623715",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I was going to send you to speak with Mehra Milo in Vivec. But Mehra Milo is DEAD! And you were responsible! Get OUT OF HERE! And don't come back! I don't CARE what the Emperor wants! I don't CARE about your excuses! GET OUT OF HERE! \r\n\r\n[This path to your destiny is blocked.]",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_4_MuzgobInformant",
+        "Value": 25.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "mehra milo",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "SetDisposition 0",
+      "Goodbye"
+    ]
+  },
+  "1089811670451623715": {
+    "Prev": "6007273451569331766",
+    "Next": "24470218281440529355",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I was going to send you to speak with Huleeya in Vivec. But Huleeya is DEAD! And you were responsible! Get OUT OF HERE! And don't come back! I don't CARE what the Emperor wants! I don't CARE about your excuses! GET OUT OF HERE! \r\n\r\n[This path to your destiny is blocked.]",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_4_MuzgobInformant",
+        "Value": 25.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "huleeya",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "SetDisposition 0",
+      "Goodbye"
+    ]
+  },
+  "24470218281440529355": {
+    "Prev": "1089811670451623715",
+    "Next": "140525241648531121",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I was going to send you to speak with Addhiranirr in Vivec. But Addhiranirr is DEAD! And you were responsible! Get OUT OF HERE! And don't come back! I don't CARE what the Emperor wants! I don't CARE about your excuses! GET OUT OF HERE! \r\n\r\n[This path to your destiny is blocked.]",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_4_MuzgobInformant",
+        "Value": 25.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "addhiranirr",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "SetDisposition 0",
+      "Goodbye"
+    ]
+  },
+  "140525241648531121": {
+    "Prev": "24470218281440529355",
+    "Next": "7418104811174331576",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've thought it over, and I want you to interview three informants in Vivec City concerning the Nerevarine and the Sixth House. First, I want you to speak with Addhiranirr, a Khajiit Thieves Guild operative. Second, I want you to speak with Huleeya, an Argonian in the Morag Tong. Finally, I want you to speak with Mehra Milo, a Temple priestess. Here. I've written the details down, so you won't forget. And here are 200 drakes. For bribes and other expenses.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_4_MuzgobInformant",
+        "Value": 25.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem, \"Gold_001\", 200",
+      "Player->AddItem, \"bk_A1_V_VivecInformants\", 1",
+      "Journal, \"A1_V_VivecInformants\", 1"
+    ]
+  },
+  "7418104811174331576": {
+    "Prev": "140525241648531121",
+    "Next": "32044174201413710180",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm not ready for you yet. And you're not at the level of performance I'm looking for yet. So, as I said, take some time to polish your skills and flesh out your cover story with a little freelance adventuring. Then, when you've gotten some exercise and loot, come back, and I'll have some new orders for you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_4_MuzgobInformant",
+        "Value": 25.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcLevel",
+        "Compare": "Less",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "32044174201413710180": {
+    "Prev": "7418104811174331576",
+    "Next": "2581185871472231536",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "WHAT?! You KILLED Sharn gra-Muzgob? Get OUT OF HERE! And don't come back! I don't CARE what the Emperor wants! I don't CARE about your excuses! GET OUT OF HERE! \r\n\r\n[This path to your destiny is blocked.]",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "sharn gra-muzgob",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_4_MuzgobInformant",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "SetDisposition 0",
+      "Goodbye"
+    ]
+  },
+  "2581185871472231536": {
+    "Prev": "32044174201413710180",
+    "Next": "1769827919139593749",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "And these are Sharn's notes on the Nerevarine cult? Excellent. I'm promoting you to Blades Apprentice, %PCName. Now give me some time to think how this fits in with the Emperor's plans for you. And I'd like to see you at a higher level of conditioning before I send you out again. So take some time to polish your skills and enhance your cover story with a little freelance adventuring. Then, when you're at the level of performance I want to see, I'll have new orders ready for you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcLevel",
+        "Compare": "Less",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_a1_4_sharnsnotes",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_4_MuzgobInformant",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem, \"bk_A1_4_SharnsNotes\", 1",
+      "ModDisposition, 10",
+      "Journal, \"A1_4_MuzgobInformant\", 25",
+      "PCRaiseRank"
+    ]
+  },
+  "1769827919139593749": {
+    "Prev": "2581185871472231536",
+    "Next": "297749082693230546",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, dear. Sharn gave you notes on the Nerevarine cult. But you can't GIVE them to me. Because you don't HAVE them. Well? What are you waiting for? Go get the notes. Bring them to me. Fly like the wind.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "LessEqual",
+        "Id": "bk_a1_4_sharnsnotes",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_4_MuzgobInformant",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "297749082693230546": {
+    "Prev": "1769827919139593749",
+    "Next": "1786930145923411366",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "And these are Sharn's notes on the Nerevarine cult? Excellent. I'm promoting you to Blades Apprentice, %PCName.  I'd like some time to think how this fits in with the Emperor's plans for you. So if you'd like to get in a little freelance adventuring, go ahead. But whenever you're ready, I'll have new orders for you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_a1_4_sharnsnotes",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_4_MuzgobInformant",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem, \"bk_A1_4_SharnsNotes\", 1",
+      "ModDisposition, 10",
+      "Journal, \"A1_4_MuzgobInformant\", 30",
+      "PCRaiseRank"
+    ]
+  },
+  "1786930145923411366": {
+    "Prev": "297749082693230546",
+    "Next": "23588256493054024115",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Get the information from Sharn gra-Muzgob at the Balmora Mages Guild like I asked you, and report back.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_4_MuzgobInformant",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "23588256493054024115": {
+    "Prev": "1786930145923411366",
+    "Next": "28516243641708915967",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've glanced at Hasphat Antabolis' notes. They cover the Sixth House admirably, but not the Nerevarine cult. Hop on over to the Balmora Mages Guild. It's right next to the Balmora Fighters Guild. Get Sharn gra-Muzgob to tell you what she knows about the Nerevarine. She'll have some silly errand for you. Do what she asks. And report back when she's given you the information.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_2_AntabolisInformant",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal, \"A1_4_MuzgobInformant\", 1"
+    ]
+  },
+  "28516243641708915967": {
+    "Prev": "23588256493054024115",
+    "Next": "2094519401100125494",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "WHAT?! You KILLED Hasphat Antabolis? Get OUT OF HERE! And don't come back! I don't CARE what the Emperor wants! I don't CARE about your excuses! GET OUT OF HERE! \r\n\r\n[This path to your destiny is blocked.]",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_2_AntabolisInformant",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "hasphat antabolis",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "SetDisposition 0",
+      "Goodbye"
+    ]
+  },
+  "2094519401100125494": {
+    "Prev": "28516243641708915967",
+    "Next": "2012622432489029727",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So. You say Hasphat Antabolis gave you notes to give to me? But you don't actuallly HAVE the notes? Perhaps... I hesitate to suggest it... you might go get the notes and bring them to me?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_2_AntabolisInformant",
+        "Value": 15.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "LessEqual",
+        "Id": "bk_a1_2_antabolistocosades",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2012622432489029727": {
+    "Prev": "2094519401100125494",
+    "Next": "1490057142559718427",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "These notes are from Hasphat Antabolis? Excellent. I trust he didn't work you too hard for them. I'll look them over in more detail later, but now, I have some new orders for you.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_a1_2_antabolistocosades",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_2_AntabolisInformant",
+        "Value": 15.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem, \"bk_A1_2_AntabolisToCosades\", 1",
+      "Journal, \"A1_2_AntabolisInformant\", 20",
+      "moddisposition 10"
+    ]
+  },
+  "1490057142559718427": {
+    "Prev": "2012622432489029727",
+    "Next": "1211138301695024876",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Get the information about the Nerevarine secret cult and the Sixth House secret cult from Hasphat Antabolis, like I told you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_2_AntabolisInformant",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1211138301695024876": {
+    "Prev": "1490057142559718427",
+    "Next": "14520215453172227671",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You're ready for your orders? Good. I want you to talk to Hasphat Antabolis at the Balmora Fighters Guild... WHAT?! You KILLED Hasphat Antabolis? Get OUT OF HERE! And don't come back! I don't CARE what the Emperor wants! I don't CARE about your excuses! GET OUT OF HERE! \r\n\r\n[This path to your destiny is blocked.]",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_1_FindSpymaster",
+        "Value": 18.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "hasphat antabolis",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "SetDisposition 0",
+      "Goodbye"
+    ]
+  },
+  "14520215453172227671": {
+    "Prev": "1211138301695024876",
+    "Next": "16539151961972116834",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "By the way... Hasphat is a student of Morrowind history. Take the chance to get a little education. And I have a few history books in here. Help yourself. You're welcome to them. No point in being part of history if you're too ignorant to understand it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_1_FindSpymaster",
+        "Value": 18.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal, \"A1_2_AntabolisInformant\", 1",
+      "StartScript Sleepers"
+    ]
+  },
+  "16539151961972116834": {
+    "Prev": "14520215453172227671",
+    "Next": "2064717508185713751",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ready for orders? Good. Go talk to Hasphat Antabolis at the Balmora Fighters Guild. Ask him what he knows about the Nerevarine secret cult and the Sixth House secret cult. You'll have to do him a favor first. Probably an ugly favor. But do it. Then get the information from Antabolis and report back to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_1_FindSpymaster",
+        "Value": 18.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  },
+  "2064717508185713751": {
+    "Prev": "16539151961972116834",
+    "Next": "17112260851298720525",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well... one look at you, and anyone can see you're an experienced adventurer. That can be your cover identity. Around here, freelance adventurers are thick as fleas on a guar. You'll want to keep active in that line, just to avoid unwanted attention. So. I have orders for you, whenever you're ready.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 4.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_1_FindSpymaster",
+        "Value": 14.0
+      }
+    ],
+    "Script": [
+      "Journal, \"A1_1_FindSpymaster\", 22"
+    ]
+  },
+  "17112260851298720525": {
+    "Prev": "2064717508185713751",
+    "Next": "2090431221919117613",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Like I said, pilgrim. Go get yourself some decent gear. And you need a cover identity -- 'freelance adventurer'. Join the Fighters Guild, or Mages Guild, or Imperial cult, or Imperial legion, advance in the ranks, gain skill and experience. Or go out on your own, look for freelance work, or trouble. Then, when you're ready, come back, and I'll have orders for you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_1_FindSpymaster",
+        "Value": 18.0
+      }
+    ],
+    "Script": []
+  },
+  "2090431221919117613": {
+    "Prev": "17112260851298720525",
+    "Next": "24348136862388510457",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "First thing, pilgrim. You're new. And you look it. Here's 200 drakes. Go get yourself a decent weapon. Or armor. Or a spell. And second thing... you need a cover identity. Around here, 'freelance adventurer' is a common profession. Sign on with the Fighters Guild, or Mages Guild, or Imperial cult, or Imperial legion, advance in the ranks, gain skill and experience. Or go out on your own, look for freelance work, or trouble. Then, when you're ready, come back, and I'll have orders for you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_1_FindSpymaster",
+        "Value": 14.0
+      }
+    ],
+    "Script": [
+      "Journal, \"A1_1_FindSpymaster\", 18",
+      "player->additem gold_001 200"
+    ]
+  },
+  "24348136862388510457": {
+    "Prev": "2090431221919117613",
+    "Next": "1506122032762213967",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Perhaps I wasn't sufficiently clear. First, we will take care of the \"Report to Caius Cosades\" business. Because until you have properly reported to me, and meekly agreed to follow my orders, then you won't be getting any orders from me. Is there any part of that you don't understand? Am I going too fast for you?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_1_FindSpymaster",
+        "Value": 12.0
+      }
+    ],
+    "Script": []
+  },
+  "1506122032762213967": {
+    "Prev": "24348136862388510457",
+    "Next": "12062700090844276",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What are you talking about? Nobody gave me any orders. Not that I know about.",
+    "Filters": [],
+    "Script": []
+  },
+  "12062700090844276": {
+    "Prev": "1506122032762213967",
+    "Next": "142514973160017662",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 6,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Fighters Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled from the Fighters Guild for breaking the rules. You'll have to make amends before I give you any orders.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "142514973160017662": {
+    "Prev": "12062700090844276",
+    "Next": "2947815097119619743",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 6,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Fighters Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you want to join the Fighters Guild?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2947815097119619743": {
+    "Prev": "142514973160017662",
+    "Next": "142614532669015006",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "What do you want, %PCRank?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_SilenceMagistrate",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "142614532669015006": {
+    "Prev": "2947815097119619743",
+    "Next": "4078646376514284",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't have any orders for you. Talk to Sjoring Hard-Heart the Guildmaster. If he doesn't have any orders for you, check with Eydis Fire-Eye in Balmora or Hrundi in Sadrith Mora. I guess you could ask the old guildmaster in Ald'ruhn too.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_SilenceMagistrate",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "4078646376514284": {
+    "Prev": "142614532669015006",
+    "Next": "213878862155329909",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "One of the magistrates has been giving the Fighters Guild trouble. I don't want the Fighters Guild to have any more trouble from Rufinus Alleius.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_SilenceTaxgirl",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "213878862155329909": {
+    "Prev": "4078646376514284",
+    "Next": "2952330407119326936",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I have a bounty contracted worth 500 gold for Adraria Vandacia.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_DebtStoine",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2952330407119326936": {
+    "Prev": "213878862155329909",
+    "Next": "34839143274604922",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I don't have orders for anyone under the rank of Protector. Check what you need for advancement and come back.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_DebtStoine",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "34839143274604922": {
+    "Prev": "2952330407119326936",
+    "Next": "5257862417724508",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Suvryn Doves says that Lirielle Stoine in Ald'ruhn owes him 2000 septims. Get Lirielle's debt money and bring it back to me. You get to keep half of it yourself.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_KhajiitBounty",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal FG_DebtStoine 5"
+    ]
+  },
+  "5257862417724508": {
+    "Prev": "34839143274604922",
+    "Next": "10745111182190324722",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I got a bounty on a Khajiit. Name's Dro'Sakhar.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_TongueToad",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "10745111182190324722": {
+    "Prev": "5257862417724508",
+    "Next": "1937259083260119688",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "There's an Argonian that can't keep its mouth shut. Go shut Tongue-Toad's mouth.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_DebtOrc",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1937259083260119688": {
+    "Prev": "10745111182190324722",
+    "Next": "1191528235155573474",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Nar gro-Shagramph said he'd deliver a ring to Ranes Ienith, but he hasn't delivered. Go talk to Ranes Ienith and bring the Juicedaw Feather Ring to me.",
+    "Filters": [],
+    "Script": []
+  },
+  "1191528235155573474": {
+    "Prev": "1937259083260119688",
+    "Next": "7649231411580718429",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "What can I do for you, Guildmaster?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_HungerLoose",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "7649231411580718429": {
+    "Prev": "1191528235155573474",
+    "Next": "2659576601744128536",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I don't have any more orders for you, %PCName. Try asking the Guild Stewards at Vivec City, Sadrith Mora, or Ald'ruhn.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_HungerLoose",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2659576601744128536": {
+    "Prev": "7649231411580718429",
+    "Next": "302195394851030199",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "There is a dangerous creature loose in the Sarano Tomb.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_VerethiGang",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "302195394851030199": {
+    "Prev": "2659576601744128536",
+    "Next": "24775283151789129157",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "A distinguished client has placed a contract on the Verethi Gang.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_AlofsFarm",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "24775283151789129157": {
+    "Prev": "302195394851030199",
+    "Next": "250831784289567444",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Alof the Easterner has seen Orc outlaws near his farm. I have a contract from Duke Dren himself to investigate the Orcs at a Daedric ruin.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_OrcBounty",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "250831784289567444": {
+    "Prev": "24775283151789129157",
+    "Next": "21189208202122430882",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I don't have orders for anyone under the rank of Protector. Find out what you need for advancement. The Guild Stewards at Vivec City, Sadrith Mora, or Ald'ruhn might have some work for you in the meantime.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_OrcBounty",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "21189208202122430882": {
+    "Prev": "250831784289567444",
+    "Next": "584514766536817770",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I have a bounty contract for the Orc Dura gra-Bol.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_DeseleDebt",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "584514766536817770": {
+    "Prev": "21189208202122430882",
+    "Next": "2292341144983871",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Helaviane Desele owes one of our clients 200 septims. Deliver Desele's debt money to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_Sottilde",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2292341144983871": {
+    "Prev": "584514766536817770",
+    "Next": "26982206593134019391",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Helaviane Desele owes one of our clients 200 septims. Deliver Desele's debt money to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_Egg_Poachers",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BitterBribe",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "26982206593134019391": {
+    "Prev": "2292341144983871",
+    "Next": "78553157274318817",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I need someone to return a code book that belongs to our client.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_Telvanni_agents",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "78553157274318817": {
+    "Prev": "26982206593134019391",
+    "Next": "152062574112057155",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "We have a contract from the Caldera Mining Company to kill four Telvanni agents responsible for trouble at the Caldera Mine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_Egg_Poachers",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "152062574112057155": {
+    "Prev": "78553157274318817",
+    "Next": "31266152841557531935",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "A local egg mine has problems with egg poachers. And you're going to solve those problems.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_RatHunt",
+        "Value": 105.0
+      }
+    ],
+    "Script": [
+      "AddTopic \"Shulk Egg Mine\""
+    ]
+  },
+  "31266152841557531935": {
+    "Prev": "152062574112057155",
+    "Next": "9988260523078626060",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I have a very simple contract to end an infestation of cave rats. You might be able to handle it.",
+    "Filters": [],
+    "Script": []
+  },
+  "9988260523078626060": {
+    "Prev": "31266152841557531935",
+    "Next": "2923068152139912626",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I told you there'd be no more orders from me. Go talk to someone else about it. Maybe that old fool Mercius in Ald'ruhn.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_Telasero",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "2923068152139912626": {
+    "Prev": "9988260523078626060",
+    "Next": "11906265392885522295",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "What can I do for you, %PCRank %PCName?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_FindPudai",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "11906265392885522295": {
+    "Prev": "2923068152139912626",
+    "Next": "3617247152366524760",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I don't have any more work for you, %PCName. You might want to speak with Percius in Ald'ruhn.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_FindPudai",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3617247152366524760": {
+    "Prev": "11906265392885522295",
+    "Next": "871376142414512800",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "We've been hired to find the Pudai Egg Mine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_EngaerBounty",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "871376142414512800": {
+    "Prev": "3617247152366524760",
+    "Next": "1108430345143335845",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I have a contract for 2000 septims for anyone who can bring Engaer to justice.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_Telasero",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1108430345143335845": {
+    "Prev": "871376142414512800",
+    "Next": "306351896729163759",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I have a contract to assist another Imperial researcher. I need someone to escort Sondaale of Shimmerene.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_DuniraiSupply",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "306351896729163759": {
+    "Prev": "1108430345143335845",
+    "Next": "2054123091537628361",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I don't have any work for anyone below the rank of Protector. You might want to check with the Guild Stewards in Ald'ruhn, Balmora, and Vivec City.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_DuniraiSupply",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2054123091537628361": {
+    "Prev": "306351896729163759",
+    "Next": "480026671175027775",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I need someone to get a load of sujamma to the Dunirai Caverns.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_TenimBounty",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_CorprusStalker",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "480026671175027775": {
+    "Prev": "2054123091537628361",
+    "Next": "93724100175335103",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "There's a creature loose in Berwen the Trader's shop in Tel Mora. There's 200 septims for whoever takes care of this Corprus Stalker. There's also a contract for an outlaw nearby. Another 200 septims for whoever brings Rels Tenim to justice.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_DissaplaMine",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "93724100175335103": {
+    "Prev": "480026671175027775",
+    "Next": "2626719821055415482",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Novor Drethan has hired us to help him take care of some problems at the Dissapla Mine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_Nchurdamz",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2626719821055415482": {
+    "Prev": "93724100175335103",
+    "Next": "1592316598446865",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Normally I wouldn't give any orders to someone as inexperienced as you. But if you feel up to it, Larienna Macrina wants us to provide some assistance with her expedition in the Dwemer ruins of Nchurdamz.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcLevel",
+        "Compare": "Less",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "1592316598446865": {
+    "Prev": "2626719821055415482",
+    "Next": "12086118183258213153",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Larienna Macrina wants us to provide some assistance with her expedition in the Dwemer ruins of Nchurdamz.",
+    "Filters": [],
+    "Script": []
+  },
+  "12086118183258213153": {
+    "Prev": "1592316598446865",
+    "Next": "11400304301303320456",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "You've already done more than I could have hoped for.",
+    "Filters": [],
+    "Script": []
+  },
+  "11400304301303320456": {
+    "Prev": "12086118183258213153",
+    "Next": "10238289422125820051",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "You've already done more than I could have hoped for.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_KillHardHeart",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "10238289422125820051": {
+    "Prev": "11400304301303320456",
+    "Next": "1684411597677626113",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "There is one more thing you must do, %PCName. Once you have done this, I will name you Guildmaster. You must kill Sjoring Hard-Heart.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_KillCronies",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1684411597677626113": {
+    "Prev": "10238289422125820051",
+    "Next": "28588310542639430523",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "The only way to save the Fighters Guild from the corruption of the Camonna Tong is to get rid of Sjoring Hard-Heart and those loyal to him. I heard Eydis Fire-Eye was no longer one of his chief supporters, but Lorbumol gro-Aglakh still needs to be dealt with.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_ElithPalSupply",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BitterBribe",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "28588310542639430523": {
+    "Prev": "1684411597677626113",
+    "Next": "1875411721122089040",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "The only way to save the Fighters Guild from the corruption of the Camonna Tong is to get rid of Sjoring Hard-Heart and those loyal to him. If you kill his chief supporters, Eydis Fire-Eye and Lorbumol gro-Aglakh, I'll put my own life on the line and support you as the new Guildmaster.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_ElithPalSupply",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1875411721122089040": {
+    "Prev": "28588310542639430523",
+    "Next": "31736303682969428548",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 3,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Come back a talk to me when you're a Guardian in the Fighters Guild. I've been impressed with your work so far, %PCName. I'll tell you more when I can. You might want to check with Hrundi in Sadrith Mora. He's a good man, and you can trust him.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_ElithPalSupply",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "31736303682969428548": {
+    "Prev": "1875411721122089040",
+    "Next": "27476264621113224297",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 3,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I have a small task for you. The Empire charges the Fighters Guild with keeping the forts and mines supplied. Would you be willing to take a load of flin to the Elith-Pal Mine?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_SuranBandits",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "27476264621113224297": {
+    "Prev": "31736303682969428548",
+    "Next": "32664295793242122409",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 3,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Serjo Avon Oran of Suran has given us a contract. He's been having problems with bandits in Suran.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_BeneranBounty",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "32664295793242122409": {
+    "Prev": "27476264621113224297",
+    "Next": "6986172382590219429",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 3,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "The Fighters Guild often enacts justice when there is no one else who can do so. I just received a contract straight from Cyrodiil. I need someone to find the murderer and outlaw Nerer Beneran.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_Vas",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "6986172382590219429": {
+    "Prev": "32664295793242122409",
+    "Next": "509077162812228948",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 3,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Sometimes we get a contract from one of the locals and sometimes they're a bit strange. Ulyne Henim, a young Buoyant Armiger, has hired us to provide some extra muscle to clean out a den of Necromancers known as Vas.",
+    "Filters": [],
+    "Script": []
+  },
+  "509077162812228948": {
+    "Prev": "6986172382590219429",
+    "Next": "726618815414722443",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I don't have much work for anyone under the rank of Swordsman. These Redorans are honorable enough, and they keep things pretty quiet around here. If you ever need any advice or have any questions about the orders you get, come talk to me. I used to be the Guildmaster. There's a few things I might tell a promising %PCRank. Seek Eydis Fire-Eye in Balmora to get your feet wet or Hrundi in Sadrith Mora if you're up for some challenges. You may also speak with Lorbumol gro-Uglakh in Vivec for your orders.",
+    "Filters": [],
+    "Script": []
+  },
+  "726618815414722443": {
+    "Prev": "509077162812228948",
+    "Next": "1925031993149376817",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 8,
+    "SpeakerId": "sjoring hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "You did quite a job on the local heads of the Thieves Guild. Now it's time to take care of the Master Thief in Vivec.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_BigBosses",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1925031993149376817": {
+    "Prev": "726618815414722443",
+    "Next": "14084242313055710359",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sjoring hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Just kill the Thieves Guild bosses like I told you. Then we can talk about the future of the Fighters Guild.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_KillBosses",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "14084242313055710359": {
+    "Prev": "1925031993149376817",
+    "Next": "29657168112870911070",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "sjoring hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I've watched your progress in the Fighters Guild, %PCName. You'll make a fine Guildmaster someday. But with all the unrest in Cyrodiil city, we need allies to make sure there's still a Fighter's Guild here for you. I need you to kill the Thieves Guild bosses.",
+    "Filters": [],
+    "Script": []
+  },
+  "29657168112870911070": {
+    "Prev": "14084242313055710359",
+    "Next": "25826122612459431407",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sjoring hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Until you earn a better rank, you'll take your orders from my Champion, Lorbumol gro-Aglakh.",
+    "Filters": [],
+    "Script": []
+  },
+  "25826122612459431407": {
+    "Prev": "29657168112870911070",
+    "Next": "702925862885917713",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Fighters Guild",
+    "SpeakerCell": "Vivec, Arena",
+    "PlayerFaction": "",
+    "Text": "Talk to Lorbumol.",
+    "Filters": [],
+    "Script": []
+  },
+  "702925862885917713": {
+    "Prev": "25826122612459431407",
+    "Next": "233008926309531981",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Fighters Guild",
+    "SpeakerCell": "Balmora",
+    "PlayerFaction": "",
+    "Text": "The Guild Steward here in Balmora is Eydis Fire-Eye.",
+    "Filters": [
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "hasphat antabolis",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "233008926309531981": {
+    "Prev": "702925862885917713",
+    "Next": "19895150701681715408",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Fighters Guild",
+    "SpeakerCell": "Sadrith Mora",
+    "PlayerFaction": "",
+    "Text": "Orders? You want to talk with Hrundi.",
+    "Filters": [],
+    "Script": []
+  },
+  "19895150701681715408": {
+    "Prev": "233008926309531981",
+    "Next": "4786211471979416427",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Fighters Guild",
+    "SpeakerCell": "Ald-ruhn",
+    "PlayerFaction": "",
+    "Text": "You want orders? Talk to Percius.",
+    "Filters": [],
+    "Script": []
+  },
+  "4786211471979416427": {
+    "Prev": "19895150701681715408",
+    "Next": "2838217597128377916",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Legion",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled, %PCName. You should review our rules and then join the Imperial Legion again..",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2838217597128377916": {
+    "Prev": "4786211471979416427",
+    "Next": "3242166992746921040",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Legion",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You look like you can handle a sword. Want to join the Imperial Legion?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "RankRequirement",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "3242166992746921040": {
+    "Prev": "2838217597128377916",
+    "Next": "1668115217884521023",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Legion",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't have any orders for you. Move along.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1668115217884521023": {
+    "Prev": "3242166992746921040",
+    "Next": "121111175044661847",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "What can I do for a %PCRank? I am at your service.",
+    "Filters": [],
+    "Script": []
+  },
+  "121111175044661847": {
+    "Prev": "1668115217884521023",
+    "Next": "19651266562534313346",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "The Emperor Uriel Septim VII wants the plans for the Anumidium.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Blueprints",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "19651266562534313346": {
+    "Prev": "121111175044661847",
+    "Next": "27675235816582962",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "I don't have any more orders for you. Check with the Knight Protectors in each of the Forts, and, when you're ready, check with the Knight of the Imperial Dragon, Varus Vatinius in Ebonheart.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_TalosTreason",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "27675235816582962": {
+    "Prev": "19651266562534313346",
+    "Next": "1678614083236592942",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "I suspect there is something going on with some of my troopers. Informants have told me of a conspiracy brewing involving the Talos Cult, but I have not yet been able to find any proof of this. Investigate this, %PCName, and bring me any information you find.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescueRagash",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal \"IL_TalosTreason\" 10"
+    ]
+  },
+  "1678614083236592942": {
+    "Prev": "27675235816582962",
+    "Next": "29517184731986316333",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You need further advancement. Talk to me again when you've earned the rank of Champion.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescueRagash",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "29517184731986316333": {
+    "Prev": "1678614083236592942",
+    "Next": "1025128183103418982",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Find out what happened to Ragash gra-Shuzgub.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescuePilgrim",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1025128183103418982": {
+    "Prev": "29517184731986316333",
+    "Next": "1557214595312296170",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Find out what happened to Ragash gra-Shuzgub.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_GnisisBlight",
+        "Value": 100.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "MaduraRescued",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1557214595312296170": {
+    "Prev": "1025128183103418982",
+    "Next": "26152322701389323290",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go to Ald Velothi and rescue the pilgrim Madura Seran.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "IL_RescuePilgrim",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "26152322701389323290": {
+    "Prev": "1557214595312296170",
+    "Next": "2389017779176722125",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I need a %PCRank to find Madura Seran, who is missing.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_GnisisBlight",
+        "Value": 100.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "MaduraRescued",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2389017779176722125": {
+    "Prev": "26152322701389323290",
+    "Next": "305665175172718838",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Cure the Kwama Queen in the Gnisis Eggmine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_GnisisBlight",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "305665175172718838": {
+    "Prev": "2389017779176722125",
+    "Next": "498385191267819249",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've proven yourself so far. Perhaps you can help with the Gnisis Eggmine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_WidowLand",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "498385191267819249": {
+    "Prev": "305665175172718838",
+    "Next": "230291976152377711",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Forget about the land deed. Kill Lugrub gro-Ogdun to avenge the death of Mansilamat Vabdas.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_WidowLand",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "230291976152377711": {
+    "Prev": "498385191267819249",
+    "Next": "22702227993256012156",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go get the Widow Vabdas' land deed.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_WidowLand",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "22702227993256012156": {
+    "Prev": "230291976152377711",
+    "Next": "1987232117493827067",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "Yes, let's see if you truly are loyal to our cause here in Morrowind. There's a little issue of a land deed here in Gnisis I need you to take care of.",
+    "Filters": [],
+    "Script": []
+  },
+  "1987232117493827067": {
+    "Prev": "22702227993256012156",
+    "Next": "27821265832707210124",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 8,
+    "SpeakerId": "Varus Vatinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "I have no more orders for you. If you still wish for further advancement, you must defeat me in an honorable duel to become the Knight of the Imperial Dragon.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_KnightShield",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "27821265832707210124": {
+    "Prev": "1987232117493827067",
+    "Next": "46195571632512808",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "Varus Vatinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "Only a Knight of the Garland can take the next step. You have not made enough advancement.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_KnightShield",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "46195571632512808": {
+    "Prev": "27821265832707210124",
+    "Next": "5931126441779123649",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "Varus Vatinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "You have returned the Lord's Mail. Now you must find the Paladin's Blade, Chrysamere.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_KnightShield",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "5931126441779123649": {
+    "Prev": "46195571632512808",
+    "Next": "2270732140518419427",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "Varus Vatinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "If you wish to become a Knight of the Garland of the Order of Ebonheart, I will need you to return two of the Order's possessions that have been stolen. The first is the Lord's Mail. Find it, and return it to me.",
+    "Filters": [],
+    "Script": []
+  },
+  "2270732140518419427": {
+    "Prev": "5931126441779123649",
+    "Next": "2584955311486720318",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Varus Vatinius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have no orders for anyone who is not a Knight Protector. Check with Frald the White here in Ebonheart.",
+    "Filters": [],
+    "Script": []
+  },
+  "2584955311486720318": {
+    "Prev": "2270732140518419427",
+    "Next": "31167212471997124948",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "Now why would a %PCRank be visiting me?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_ProtectEntius",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "31167212471997124948": {
+    "Prev": "2584955311486720318",
+    "Next": "660142602132520457",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have no more orders for you. Check with the Knight Protectors of each of the Legion forts, and check with Varus Vatinius, the Knight of the Imperial Dragon here in Ebonheart.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_ProtectEntius",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "660142602132520457": {
+    "Prev": "31167212471997124948",
+    "Next": "808013340104769413",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Before I give you these orders, you must pay for your crimes. I don't want you being followed or watched for what I must ask you to do.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcCrimeLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 200.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_FalseOrdinator",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "808013340104769413": {
+    "Prev": "660142602132520457",
+    "Next": "225842098680413262",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Saprius Entius is dead, I have no more orders for you.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "saprius entius",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_FalseOrdinator",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "225842098680413262": {
+    "Prev": "808013340104769413",
+    "Next": "553146531389521006",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A member of our Order is a murderer. Find Saprius Entius before the Ordinators do.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_FalseOrdinator",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "553146531389521006": {
+    "Prev": "225842098680413262",
+    "Next": "2879632621168346178",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "An Ordinator is spreading lies about the Order of Ebonheart. Stop Suryn Athones' slanders.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_TraitorWarrior",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2879632621168346178": {
+    "Prev": "553146531389521006",
+    "Next": "1823194792772528580",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Find the traitor Honthjolf.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Courtesy",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1823194792772528580": {
+    "Prev": "2879632621168346178",
+    "Next": "28557223491360129227",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Buoyant Armigers claim we have no courtesy.",
+    "Filters": [],
+    "Script": []
+  },
+  "28557223491360129227": {
+    "Prev": "1823194792772528580",
+    "Next": "114346397110836750",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "radd hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "I am at your service, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Necromancer",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "114346397110836750": {
+    "Prev": "28557223491360129227",
+    "Next": "3032620026114675",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "radd hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have no more orders to give you. Speak with the Knight Protectors in the other Legion forts.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Necromancer",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3032620026114675": {
+    "Prev": "114346397110836750",
+    "Next": "18923251071090112554",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "radd hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There's a necromancer up near Dagon Fel who calls himself Sorkvild the Raven.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_GiantNetch",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "18923251071090112554": {
+    "Prev": "3032620026114675",
+    "Next": "24509276992956511023",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "radd hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go to Gnaar Mok and kill the pair of breeding netch that threaten the town.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Damsel",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "24509276992956511023": {
+    "Prev": "18923251071090112554",
+    "Next": "233647502054425429",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "radd hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go to Abernanit and rescue the Imperial citizen Dandsa.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescueHermit",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "233647502054425429": {
+    "Prev": "24509276992956511023",
+    "Next": "2620213349353829635",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "radd hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I need a %PCRank to rescue the hermit Jocien Ancois.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_ScrapMetal",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2620213349353829635": {
+    "Prev": "233647502054425429",
+    "Next": "2980832791150510933",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "radd hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Buoyant Armigers have challenged us to a hunt. Go kill a Dwemer Centurion and bring me the scrap metal.",
+    "Filters": [],
+    "Script": []
+  },
+  "2980832791150510933": {
+    "Prev": "2620213349353829635",
+    "Next": "117191885045914425",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "What can I do for a %PCRank?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_MaidenToken",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "117191885045914425": {
+    "Prev": "2980832791150510933",
+    "Next": "1785517126180158140",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have no more orders for you. Check with the Knight Protectors in the other Legion forts.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_MaidenToken",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1785517126180158140": {
+    "Prev": "117191885045914425",
+    "Next": "128416598284649403",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I need you to bring me a maiden's token.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_RescueKnight",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "128416598284649403": {
+    "Prev": "1785517126180158140",
+    "Next": "1726624419989024778",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I need you to rescue a Knight of the Order of Ebonheart, Joncis Dalomax.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Smuggler",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1726624419989024778": {
+    "Prev": "128416598284649403",
+    "Next": "255104849150502170",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "imsin the dreamer",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Dwemer artifacts are being smuggled through Ald'Ruhn. I believe Drinar Varyon is responsible.",
+    "Filters": [],
+    "Script": []
+  },
+  "255104849150502170": {
+    "Prev": "1726624419989024778",
+    "Next": "14776268311511532191",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "angoril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "Things have been very quiet here. Sorry, no pressing business. Check with the Knight Protectors of the other Legion forts.",
+    "Filters": [],
+    "Script": []
+  },
+  "14776268311511532191": {
+    "Prev": "255104849150502170",
+    "Next": "243872450548217434",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Legion",
+    "SpeakerCell": "Ebonheart",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "But you are the Knight of the Imperial Dragon! You don't need to take orders.",
+    "Filters": [],
+    "Script": []
+  },
+  "243872450548217434": {
+    "Prev": "14776268311511532191",
+    "Next": "3463236541192520475",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Legion",
+    "SpeakerCell": "Ebonheart",
+    "PlayerFaction": "",
+    "Text": "Talk to Varus Vatinius in the Grand Council Chambers or Frald the White at the Hawkmoth Legion Garrison.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "3463236541192520475": {
+    "Prev": "243872450548217434",
+    "Next": "1012418668314518534",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Legion",
+    "SpeakerCell": "Gnisis",
+    "PlayerFaction": "",
+    "Text": "Talk to Darius. He's in the Madach Tradehouse.",
+    "Filters": [
+      {
+        "Type": "NotCell",
+        "Func": "NotCell",
+        "Compare": "Equal",
+        "Id": "Gnisis, Madach Tradehouse",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1012418668314518534": {
+    "Prev": "3463236541192520475",
+    "Next": "36602314956051470",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Legion",
+    "SpeakerCell": "Moonmoth Legion Fort",
+    "PlayerFaction": "",
+    "Text": "Talk to Radd Hard-Heart.",
+    "Filters": [
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "radd hard-heart",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "36602314956051470": {
+    "Prev": "1012418668314518534",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Legion",
+    "SpeakerCell": "Buckmoth Legion Fort",
+    "PlayerFaction": "",
+    "Text": "Talk to Imsin the Dreamer.",
+    "Filters": [
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "imsin the dreamer",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "7182300462392120168": {
+    "Prev": "67952379338665913",
+    "Next": "13405161733617114",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have your report, and I'll make copies of your notes from Huleeya and the 'Progress of Truth.' Give me time to read and digest all this. In the meantime, I'm promoting you to Journeyman. You're doing good work. And here are 200 drakes. Go out and treat yourself to a new pair of shoes. And go do some jobs for the guilds, or other freelance work, just to keep your cover story current. Or get some training. Then, when you're fit and rested, come back, and I'll have new orders for you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "A1_6_AddhiranirrInformant",
+        "Value": 60.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_7HuleeyaInformant",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_10_MehraMilo",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal \"A1_V_VivecInformants\" 50",
+      "moddisposition 10",
+      "PCRaiseRank",
+      "player->additem gold_001 200"
+    ]
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "10710209773245611490": {
+    "Prev": "",
+    "Next": "12382929493726667",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dovor Oren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah, took care of that for Olvyne, did you?  Good job.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Warlords",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "12382929493726667": {
+    "Prev": "10710209773245611490",
+    "Next": "1892120318932723612",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Olvyne Dobar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What? There's nothing else to discuss.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Warlords",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1892120318932723612": {
+    "Prev": "12382929493726667",
+    "Next": "943832011127195751",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Olvyne Dobar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ugh. Couldn't you at least have wiped the blood off, first? Disgusting...  Fine. We're done here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "silver spear_uvenim",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "silver_helm_uvenim",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"silver_helm_uvenim\" 1",
+      "player->removeitem \"silver spear_uvenim\" 1",
+      "additem \"silver_helm_uvenim\" 1",
+      "additem \"silver spear_uvenim\" 1",
+      "player->additem \"gold_001\" 1000",
+      "Journal MS_Warlords 100"
+    ]
+  },
+  "943832011127195751": {
+    "Prev": "1892120318932723612",
+    "Next": "232557728403422019",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Olvyne Dobar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What, you think this is funny? Just get the stuff. Let's not drag this out.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "232557728403422019": {
+    "Prev": "943832011127195751",
+    "Next": "2586522042937831187",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Olvyne Dobar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Don't make this any harder than it already is, okay? Just get me the stuff and let's be done with it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "2586522042937831187": {
+    "Prev": "232557728403422019",
+    "Next": "1532281371996425665",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Olvyne Dobar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don’t want to talk about this a whole lot, okay? Just give me the stuff if you have it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_Warlords",
+        "Value": 90.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Bels Uvenim",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Give her the items.\" 1 \"Keep the items.\" 2"
+    ]
+  },
+  "1532281371996425665": {
+    "Prev": "2586522042937831187",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Olvyne Dobar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yeah, that's what I said. Just get the spear and the helmet and bring it back. That's it.",
+    "Filters": [],
+    "Script": []
+  }
+}

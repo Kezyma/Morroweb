@@ -1,0 +1,129 @@
+{
+  "9798319332731915436": {
+    "Prev": "",
+    "Next": "25870232672445614525",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius2",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I believe we can find our way out of this demon realm.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_WildHunt",
+        "Value": 42.0
+      }
+    ],
+    "Script": []
+  },
+  "25870232672445614525": {
+    "Prev": "9798319332731915436",
+    "Next": "2476326893296078206",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius2",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I cannot believe this! Your mind has been clouded by these demons! I am sorry to have to fight you, %PCName, for I thought you a friend. If this is how it must be, I wish you an honorable death.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_WildHunt",
+        "Value": 30.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "StartCombat Player",
+      "Journal BM_WildHunt 44"
+    ]
+  },
+  "2476326893296078206": {
+    "Prev": "25870232672445614525",
+    "Next": "1223925555317134583",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius2",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am glad for your companionship. Together we will fight our way through these demon hordes and escape this evil prison. There is a door in the center of this maze, but we will need a key to enter. Let us go find this key and leave this place.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_WildHunt",
+        "Value": 30.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "AiFollow Player 0 0 0 0 0 0",
+      "Journal BM_WildHunt 42"
+    ]
+  },
+  "1223925555317134583": {
+    "Prev": "2476326893296078206",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius2",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That is what the demon told me. We are to fight our way through this maze, which is hunted by the werewolves the demon calls his Hounds. I am weak, my friend, and have been here for too long. Perhaps together, we can find our way to safety. We must find the key to allow us through the gate in the center of this maze.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_WildHunt",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Choice \"Let us go together.\" 1 \"Only one of us can survive. It will be me.\" 2"
+    ]
+  }
+}

@@ -1,0 +1,295 @@
+{
+  "105762705172818140": {
+    "Prev": "",
+    "Next": "1446457051840520784",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "duma gro-lag",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Come back when you got the stuff I need.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "Gold_001",
+        "Value": 2000.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "DA_Boethiah",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "DA_Boethiah",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "1446457051840520784": {
+    "Prev": "105762705172818140",
+    "Next": "2987732068325268228",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "duma gro-lag",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Come back when you got the stuff I need.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "bk_Boethiah's Glory_unique",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "DA_Boethiah",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "DA_Boethiah",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "2987732068325268228": {
+    "Prev": "1446457051840520784",
+    "Next": "13922325701797817131",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "duma gro-lag",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You got the stuff? Good, give it here. Okay, I found a place. Nice and away from stuff. Take me a few weeks, though. Gotta get some assistant sculpturists to help me out. Not easy to find, you know? Anyhow, it be done in not too long. I gonna build it at Khartag Point up on coast from here. Up north. You can't miss. It real big.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 2000.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_Boethiah's Glory_unique",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "DA_Boethiah",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "DA_Boethiah",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Journal \"DA_Boethiah\" 60",
+      "Player->RemoveItem \"Gold_001\" 2000",
+      "Player->RemoveItem \"bk_Boethiah's Glory_unique\" 1",
+      "AddItem \"Gold_001\" 2000",
+      "AddItem \"bk_Boethiah's Glory_unique\" 1",
+      "StartScript ShrineBoethiah",
+      "AddTopic \"Shrine of Boethiah\""
+    ]
+  },
+  "13922325701797817131": {
+    "Prev": "2987732068325268228",
+    "Next": "104931979206010663",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "duma gro-lag",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Me do big statue? Hmmm...could be good. Ghorak not throw that far at all! Tell you what--I make you statue. Need money, though for material. Need 2,000 septims for everything. And need plans. How I supposed to make big statue just like old one and not know what old one look like? Must be statue book somewhere tell me how to make shrine! Find me plans and gold, and I make your statue. Meantime, I find a good place to build it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "DA_Boethiah",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Journal \"DA_Boethiah\" 50"
+    ]
+  },
+  "104931979206010663": {
+    "Prev": "13922325701797817131",
+    "Next": "2882619774129331461",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "duma gro-lag",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? Okay, you come back if you want \"Untitled Rock,\" though.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "DA_Boethiah",
+        "Value": 40.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"DA_Boethiah\" 45"
+    ]
+  },
+  "2882619774129331461": {
+    "Prev": "104931979206010663",
+    "Next": "777471382982715200",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "duma gro-lag",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Me? Well, I have done a few pieces. Mostly, Ghorak just throw them really far. You interested in buying a piece? I'm working on one now...for now, I call \"Untitled Rock.\"",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "DA_Boethiah",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Journal \"DA_Boethiah\" 40",
+      "Choice \"I wish for you to recreate the Shrine of Boethiah.\" 1 \"No, I'm not interested in your work.\" 2"
+    ]
+  },
+  "777471382982715200": {
+    "Prev": "2882619774129331461",
+    "Next": "297061261653136735",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "verick gemain",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A sculptor? Not going to find many around here. Art's not really at a premium, you know? There's an orc in town who likes to carve up some stones, but I'm not about to buy his sculptures. He lives in Ghorak Manor with a bunch of other orcs. Odd ones, to be sure.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "DA_Boethiah",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "297061261653136735": {
+    "Prev": "777471382982715200",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Caldera",
+    "PlayerFaction": "",
+    "Text": "I certainly haven't heard of one around here. You might ask Verick Gemaine, though. He's a trader here in town, and buys and sells many different things. If anyone knows of a local sculptor, it would be him.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "DA_Boethiah",
+        "Value": 30.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

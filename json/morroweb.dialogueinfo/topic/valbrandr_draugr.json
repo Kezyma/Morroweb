@@ -1,0 +1,156 @@
+{
+  "244201160417278158": {
+    "Prev": "",
+    "Next": "28754201552050312126",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ingmar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He's dead by my hand, finally.  Thanks again for the assistance, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Ingmar",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "28754201552050312126": {
+    "Prev": "244201160417278158",
+    "Next": "3102294442442729894",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ingmar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good!  With your help I'll make short work of the draugr!  Lead on, %PCName.  I'll follow, and when we encounter the beast you distract it while I attack.  Please, do not attack the draugr!  I alone must attack and kill it.  At least then, well...I may retain a shred of my honor, and will at least feel like I earned my place among my people, even if I did get a little help.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"BM_Ingmar\" 30",
+      "moddisposition 10",
+      "AiFollow Player 0 0 0 0 0 0"
+    ]
+  },
+  "3102294442442729894": {
+    "Prev": "28754201552050312126",
+    "Next": "627514773120215849",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ingmar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You're right, I know.  I just fear that if I confront the creature again, it may be my end.  So be it.  Farewell, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"BM_Ingmar\" 20",
+      "Goodbye"
+    ]
+  },
+  "627514773120215849": {
+    "Prev": "3102294442442729894",
+    "Next": "2119730618105851846",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ingmar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Aye, it's the draugr that resides here in Valbrandr Barrow.  I'm supposed to kill it, you see.  Single-handedly.  Killing a draugr is a task every Skaal lad must complete before becoming a man.  Only...I can't kill it.  I've tried.  It nearly slit my throat!  But I can't return to my village until it's dead.  Say...maybe you could help! You could go with me, serve as a distraction!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Ingmar",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Less",
+        "Id": "draugr_valbrandr",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"BM_Ingmar\" 10",
+      "Choice \"That wouldn't be right, Ingmar.  You've got to kill this creature yourself.\" 1 \"All right, I'll help.  No sense letting you get killed.\" 2"
+    ]
+  },
+  "2119730618105851846": {
+    "Prev": "627514773120215849",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ingmar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Aye, it's the draugr that resides here in Valbrandr Barrow.  A foul, undead beast!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "BM_Ingmar",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Ingmar",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  }
+}

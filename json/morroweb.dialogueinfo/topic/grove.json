@@ -1,0 +1,163 @@
+{
+  "181132813177728532": {
+    "Prev": "",
+    "Next": "113271209030138971",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Unel has dealt with it? That's good to hear. Perhaps once those trees are gone, the Spriggans won't be so adamant about showing up. Good work, %PCName. Make a point to keep an eye out for them in the future.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_10",
+        "Value": 90.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->additem \"gold_001\" 2000",
+      "Journal CO_10 100",
+      "StartScript ColonyRootTimer"
+    ]
+  },
+  "113271209030138971": {
+    "Prev": "181132813177728532",
+    "Next": "40699222535513386",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Unel Lloran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "They should soon be weak enough that we can cut them down - thanks to you, of course.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_10",
+        "Value": 90.0
+      }
+    ],
+    "Script": []
+  },
+  "40699222535513386": {
+    "Prev": "113271209030138971",
+    "Next": "1793415864150414856",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Unel Lloran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We'll need to weaken the roots. Then we might be able to cut the trees down.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_10",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "1793415864150414856": {
+    "Prev": "40699222535513386",
+    "Next": "757325342299910182",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Unel Lloran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Unless we have access to the roots of the trees, there's little chance we can bring them down.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_10",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "757325342299910182": {
+    "Prev": "1793415864150414856",
+    "Next": "1953925123536530804",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Unel Lloran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There's no way we can cut those trees down as they are now. We could weaken them maybe if we could get at the roots, but they're probably too far underground to do anything from here.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_10",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "1953925123536530804": {
+    "Prev": "757325342299910182",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Unel Lloran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Some sort of magical heebie-jeebie, that'd be my guess. Either way, we can't start on the building orders until those trees are gone. Maybe if we could get at the roots or something, but we'd have to do that from underground...",
+    "Filters": [],
+    "Script": [
+      "Journal CO_10 40"
+    ]
+  }
+}

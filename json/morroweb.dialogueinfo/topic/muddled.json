@@ -1,0 +1,239 @@
+{
+  "205733683299535436": {
+    "Prev": "",
+    "Next": "30448140721617019032",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "din",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, everything was so confusing there for a while. You've got to watch those slaughterfish bites. I'd heard they can cause disease, but I didn't realize how severely.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_MonsterDisease",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "30448140721617019032": {
+    "Prev": "205733683299535436",
+    "Next": "19761967213016528",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "din",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What's this? I...I...thank you. I'm not sure what happened. Everything is sort of hazy after that slaughterfish bite. Thank you so much for your help. I'd like to reward you for your generosity. I have very little, but please take this gold. Even during all my days in the legion, I've never felt anything so strange. I'll make sure to mention to my Legion friends how helpful you were. Thank you again. If you ever need anything, don't hesitate to ask.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_MonsterDisease",
+        "Value": 49.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_MonsterDisease",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_MonsterDisease\" 60",
+      "RemoveItem \"Gold_001\" 30",
+      "Player->AddItem \"Gold_001\" 30",
+      "ModPCFacRep 5 \"Imperial Legion\"",
+      "Goodbye"
+    ]
+  },
+  "19761967213016528": {
+    "Prev": "30448140721617019032",
+    "Next": "9079474731225595",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "din",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Muddled? Where? No! Don't play in the muddled. You'll get a dirty mind.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_MonsterDisease",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_MonsterDisease",
+        "Value": 49.0
+      }
+    ],
+    "Script": []
+  },
+  "9079474731225595": {
+    "Prev": "19761967213016528",
+    "Next": "3003414966380822615",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "din",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, but everything is so much clearer now. Thank you for bringing me here. I'd really like to reward you for your generosity. I have very little, but please take this gold. Even during all my days in the legion, I've never felt anything so strange. I'll make sure to mention to my Legion friends how helpful you were. Thank you again. If you ever need anything, don't hesitate to ask.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_MonsterDisease",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_MonsterDisease\" 60",
+      "RemoveItem \"Gold_001\" 30",
+      "Player->AddItem \"Gold_001\" 30",
+      "ModPCFacRep 5 \"Imperial Legion\"",
+      "Goodbye"
+    ]
+  },
+  "3003414966380822615": {
+    "Prev": "9079474731225595",
+    "Next": "2010214589176655611",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "din",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go to Gnisis with you? A slaughterfish? Ha! Hmmm...maybe I should follow you. That way I can keep my eye on you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_MonsterDisease\" 40",
+      "AddTopic \"slaughterfish bite\"",
+      "\"Din\"->AiFollowCell,Player, \"Gnisis, Temple\", 0, 950, 2168, -638, 0"
+    ]
+  },
+  "2010214589176655611": {
+    "Prev": "3003414966380822615",
+    "Next": "2715912549403922083",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "din",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A spell, huh? Never heard of a slaughterfish that could cast spells. Give it your best shot! Stop looking at me!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_MonsterDisease\" 46"
+    ]
+  },
+  "2715912549403922083": {
+    "Prev": "2010214589176655611",
+    "Next": "3838125121486224273",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "din",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Fine! Can't trust you slaughterfish anyway! Are you threatening me? Go away!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_MonsterDisease\" 48"
+    ]
+  },
+  "3838125121486224273": {
+    "Prev": "2715912549403922083",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "din",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm just having some problems concentrating since the  slaughterfish bite. Having some problems controlling myself, too. You have a problem with that? Huh? Well? Sorry...I really need some help. Maybe you can get me to a healer? To hell with the healers. I don't need one! That Mehra Drora is a healer, but I don't like the way she looks at me. All of Gnisis is like that. Don't look at me!",
+    "Filters": [],
+    "Script": [
+      "Journal \"MV_MonsterDisease\" 30",
+      "Choice \"Perhaps you'd better follow me to the healer in Gnisis. I think she can help you.\" 1 \"Perhaps I can cast a spell to cure your disease.\" 2 \"I'm sorry, there's nothing I can do to help you.\" 3"
+    ]
+  }
+}

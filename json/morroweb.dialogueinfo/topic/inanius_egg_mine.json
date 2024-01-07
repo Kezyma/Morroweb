@@ -1,0 +1,509 @@
+{
+  "2725559212565815413": {
+    "Prev": "",
+    "Next": "3173427408889424848",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled from House Hlaalu. You must make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "3173427408889424848": {
+    "Prev": "2725559212565815413",
+    "Next": "28187187481765816676",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I respect the way you handled it, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EggMine",
+        "Value": 210.0
+      }
+    ],
+    "Script": []
+  },
+  "28187187481765816676": {
+    "Prev": "3173427408889424848",
+    "Next": "2866372511907513004",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ha! You got Avon Oran's gold and you killed the queen anyway. I like your style, %PCName. You understand how business is done in House Hlaalu. You deserve these 500 drakes for this.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "Kwama Queen_HHEM",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EggMine",
+        "Value": 200.0
+      }
+    ],
+    "Script": [
+      "Journal HH_EggMine 210",
+      "Player->AddItem Gold_001 500",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 10",
+      "\"Avon Oran\"->ModDisposition -30",
+      "Player->ModReputation 1"
+    ]
+  },
+  "2866372511907513004": {
+    "Prev": "28187187481765816676",
+    "Next": "21128281362765025661",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So you've spoken with Avon Oran? I won't turn this into a bidding war, but I'm not sure if I can trust you after this.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EggMine",
+        "Value": 200.0
+      }
+    ],
+    "Script": []
+  },
+  "21128281362765025661": {
+    "Prev": "2866372511907513004",
+    "Next": "257172174614226994",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You killed the queen in the Inanius egg mine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EggMine",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "257172174614226994": {
+    "Prev": "21128281362765025661",
+    "Next": "28159389061628853",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already killed that Kwama Queen? Good work, %PCName, but don't kill any more queens in House Hlaalu egg mines unless I say so.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Kwama Queen_HHEM",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "HH_EggMine",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HH_EggMine 100",
+      "Player->AddItem Gold_001 500",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 10",
+      "\"Avon Oran\"->ModDisposition -20",
+      "Player->ModReputation 1"
+    ]
+  },
+  "28159389061628853": {
+    "Prev": "257172174614226994",
+    "Next": "1904620615887414253",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You killed the queen? Good. Take these 500 drakes with my gratitude.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Kwama Queen_HHEM",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HH_EggMine 100",
+      "Player->AddItem Gold_001 500",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 10",
+      "\"Avon Oran\"->ModDisposition -20",
+      "Player->ModReputation 1"
+    ]
+  },
+  "1904620615887414253": {
+    "Prev": "28159389061628853",
+    "Next": "30805252979695599",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "A rival of mine in House Hlaalu gets his wealth from the Inanius Egg Mine. It is just across the mountains east of Suran. Go there and kill the kwama queen and ruin my rival's business. There won't be any miners to deal with this time of year, and I doubt the mine will recover.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_IndEsp1",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HH_EggMine 10"
+    ]
+  },
+  "30805252979695599": {
+    "Prev": "1904620615887414253",
+    "Next": "20687171822694514257",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "avon oran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I wish you had told me of this sooner. I could have made you a better offer.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "HH_EggMine",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "20687171822694514257": {
+    "Prev": "30805252979695599",
+    "Next": "20786659526961981",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "avon oran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, thank you for reminding me. You killed the kwama queen after you gave me your word. I will make sure the rest of House Hlaalu hears about this.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "Kwama Queen_HHEM",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EggMine",
+        "Value": 200.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "20786659526961981": {
+    "Prev": "20687171822694514257",
+    "Next": "1232193487831407",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "avon oran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If Nileno Dorvayn makes a better offer, come see me first.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EggMine",
+        "Value": 200.0
+      }
+    ],
+    "Script": []
+  },
+  "1232193487831407": {
+    "Prev": "20786659526961981",
+    "Next": "3225613285194619261",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "avon oran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. Good. Here are the drakes. Stay out of the egg mine and tell Nileno she lost this time.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HH_EggMine 200",
+      "Player->AddItem Gold_001 1000",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 20",
+      "\"Nileno Dorvayn\"->ModDisposition -15",
+      "Player->ModReputation 1"
+    ]
+  },
+  "3225613285194619261": {
+    "Prev": "1232193487831407",
+    "Next": "15071251752868210062",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "avon oran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Perhaps you misjudged how much the mine is worth to me. 1000 drakes is my final offer.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "15071251752868210062": {
+    "Prev": "3225613285194619261",
+    "Next": "22891216012962128231",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "avon oran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So Nileno wants to disrupt my business. Suppose I paid you 1000 drakes to leave the egg mine alone?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Choice \"I accept your offer.\" 1 \"No, I gave my word.\" 2"
+    ]
+  },
+  "22891216012962128231": {
+    "Prev": "15071251752868210062",
+    "Next": "1789315654195707681",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "avon oran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well then, what can I do for you?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": []
+  },
+  "1789315654195707681": {
+    "Prev": "22891216012962128231",
+    "Next": "311149155631310478",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "avon oran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Yes, that is one of my egg mines. Why do you ask?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_IndEsp1",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Choice \"Nileno Dorvayn asked me to kill the kwama queen.\" 3 \"Nothing, nevermind.\" 4"
+    ]
+  },
+  "311149155631310478": {
+    "Prev": "1789315654195707681",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Suran",
+    "PlayerFaction": "",
+    "Text": "Ser Avon Oran's egg mine? Just go south around those hills to the east. Then follow the hills back north from the river and you can't miss it.",
+    "Filters": [
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "avon oran",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

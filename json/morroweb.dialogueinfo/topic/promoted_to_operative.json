@@ -1,0 +1,60 @@
+{
+  "188301745237948866": {
+    "Prev": "",
+    "Next": "2114127706259639893",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. That makes you the ranking Blades agent here in Vvardenfell district while I'm gone. And I may be gone a while.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_4_MiloCaiusGone",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "2114127706259639893": {
+    "Prev": "188301745237948866",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That makes you the ranking Blades agent here in Vvardenfell district. As far as I know. There may be other Blades agents here I don't know about. It wouldn't surprise me. I may be gone a while, and you'll have expenses. Here's some gold. And you can use the house until I return. And I won't be needing these blacks or the ring while I'm in Cyrodiil. Maybe they'll come in handy. Take good care of them.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_3_CorprusCure",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem \"Gold_001\" 750",
+      "Player->AddItem Caius_pants 1",
+      "Player->AddItem caius_shirt 1",
+      "Player->AddItem caius_ring 1",
+      "Journal A2_4_MiloCaiusGone  5"
+    ]
+  }
+}

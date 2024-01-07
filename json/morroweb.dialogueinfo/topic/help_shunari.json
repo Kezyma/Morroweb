@@ -1,0 +1,238 @@
+{
+  "7931232901996815422": {
+    "Prev": "",
+    "Next": "2629646727342806",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Shunari Eye-Fly",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "%PCName is wise and good, to have helped poor, sick Shunari.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_CrimsonPlague",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "2629646727342806": {
+    "Prev": "7931232901996815422",
+    "Next": "1477522018224665813",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Shunari Eye-Fly",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good, good. Shunari is so weak, and needs curing. Use your spell, %PCName, and then Shunari will help.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "1477522018224665813": {
+    "Prev": "2629646727342806",
+    "Next": "28713313641746727811",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Shunari Eye-Fly",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? Why does %PCName not help Shunari? Once Shunari is better, she can help %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "moddisposition -5"
+    ]
+  },
+  "28713313641746727811": {
+    "Prev": "1477522018224665813",
+    "Next": "104727280798029011",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Shunari Eye-Fly",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Is %PCName going to help now? Cure Shunari, and then Shunari will help %PCName in return.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_CrimsonPlague",
+        "Value": 105.0
+      }
+    ],
+    "Script": [
+      "Choice: \"I will cure you now.\" 1 \"No, not yet\" 2"
+    ]
+  },
+  "104727280798029011": {
+    "Prev": "28713313641746727811",
+    "Next": "902622966480916085",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Shunari Eye-Fly",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, yes, %PCName helps now! Shunari saw %PCName go into tomb under temple. When %PCName left, Shunari went in to see if treasure was left. And then... Shunari will not say more. She is sick, and needs help. %PCName will cure her of bad disease, and then Shunari will tell more. Hurry, hurry, before poor Shunari dies! Meet Shunari in Temple Gardens with spell or scroll; Shunari does not trust potions that could be poison. Go see Nerile Andaren. She knows Shunari; she will help.",
+    "Filters": [],
+    "Script": [
+      "Journal MS_CrimsonPlague 100"
+    ]
+  },
+  "902622966480916085": {
+    "Prev": "104727280798029011",
+    "Next": "231855751244098981",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Nerile Andaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "She may not be the most lawful of Mournhold's citizens, but she often has valuable information. I do my best not to judge her actions. I'm glad you've been able to help her, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_CrimsonPlague",
+        "Value": 105.0
+      }
+    ],
+    "Script": []
+  },
+  "231855751244098981": {
+    "Prev": "902622966480916085",
+    "Next": "3005229102982111946",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Nerile Andaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you been able to aid Shunari? If she has information, you must make sure she is safe. Without her, we may never find out what's happened. I do hope she's all right.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_CrimsonPlague",
+        "Value": 105.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Shunari Eye-Fly",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "3005229102982111946": {
+    "Prev": "231855751244098981",
+    "Next": "277526556427025368",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Nerile Andaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, attend to her needs as soon as possible. She may have information that will benefit us.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_CrimsonPlague",
+        "Value": 105.0
+      }
+    ],
+    "Script": []
+  },
+  "277526556427025368": {
+    "Prev": "3005229102982111946",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Nerile Andaren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Shunari? Yes, I know her. But keep your voice down. The guards have been looking for her. She's quite the accomplished thief, it seems. Here, take this scroll. If she needs curing, she won't have anything to do with potions. She thinks they're all poison, or at least they could be. If you have a spell you can use, that will work too. I believe Galsa offers something that might work. Go quickly, %PCName. We need all the information we can get!",
+    "Filters": [],
+    "Script": [
+      "player->additem \"sc_chridittepanacea\" 1",
+      "Journal MS_CrimsonPlague 105"
+    ]
+  }
+}

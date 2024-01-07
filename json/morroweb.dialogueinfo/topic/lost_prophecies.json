@@ -1,0 +1,290 @@
+{
+  "113381081227819570": {
+    "Prev": "",
+    "Next": "1756732638309928813",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nibani maesa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have told me of these lost prophecies.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1756732638309928813": {
+    "Prev": "113381081227819570",
+    "Next": "1522532721216974818",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nibani maesa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have these lost prophecies? You will tell me these things, over and over, until I have them by heart. And then you will tell me what these priests say, what they see in these words. And then, you must leave me. Hunt. Sleep. Train. Feed. Learn the land. I must bring these things into me, and place them before my ancestors, and listen to them, and to the skies and stars of my dreams. And then, when the moons have come and gone, return, and I will give you my judgement.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_4_MiloGone",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "modDisposition 10",
+      "player->modReputation 1",
+      "Journal \"A2_6_Incarnate\" 1"
+    ]
+  },
+  "1522532721216974818": {
+    "Prev": "1756732638309928813",
+    "Next": "1989213207236428662",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gilvas barelo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We have given you copies of 'Kagrenac's Tools', 'The Lost Prophecy', and 'The Seven Curses'. From what you tell me, you may now have the Lost Prophecies the Wise Woman Nibani Maesa asked you to seek. Perhaps you should share your new knowledge with her.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_4_MiloGone",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1989213207236428662": {
+    "Prev": "1522532721216974818",
+    "Next": "2503712409524725855",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gilvas barelo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We have also prepared a document for you called 'Kagrenac's Tools'. This document will explain to you, and to others, the terrible secret that the Temple conceals about the true history of the Tribunal and the corrupt nature of their divine powers. It is to conceal this secret that the Temple persecutes the Nerevarine and the Dissident Priests. This persecution must stop. We must be united against the true enemy, Dagoth Ur. And if you are the Nerevarine, you must lead us against him.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_4_MiloGone",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"A2_4_MiloGone\" 50",
+      "Journal \"A2_4_MiloGone\" 49",
+      "Player->AddItem \"bk_TheLostProphecy\" 1",
+      "Player->AddItem \"bk_TheSevenCurses\" 1",
+      "Player->AddItem \"bk_Kagrenac'sTools\" 1"
+    ]
+  },
+  "2503712409524725855": {
+    "Prev": "1989213207236428662",
+    "Next": "1732342042317219446",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gilvas barelo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have reviewed the Apographa, and have found two passages of particular interest. We've made copies of these passages to give you. Many are familiar with the two Nerevarine prophecies current among the Ashlanders called 'The Stranger' and 'The Seven Vision'. We have two other prophecies, 'The Lost Prophecy' and 'The Seven Curses', that may offer additional insights into the riddles surrounding the coming of the Incarnate. Perhaps these are the Lost Prophecies that your friend Nibani Maesa told you about.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_4_MiloGone",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  },
+  "1732342042317219446": {
+    "Prev": "2503712409524725855",
+    "Next": "28695142411120824609",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mehra milo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ministry of Truth, Holding Cells",
+    "PlayerFaction": "",
+    "Text": "We can't talk now, but in the 'Apographa' -- the hidden teachings of the Temple -- there are several extensive references to 'lost prophecies' -- prophecies no longer current among the Ashlanders, but recorded by earlier Temple pilgrims and scholars. And I think you'll find what you're looking for in the libraries of Holamayan.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_4_MiloGone",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "28695142411120824609": {
+    "Prev": "1732342042317219446",
+    "Next": "107302854487736557",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mehra milo",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We can't talk now, but in the 'Apographa' -- the hidden teachings of the Temple -- there are several extensive references to 'lost prophecies' -- prophecies no longer current among the Ashlanders, but recorded by earlier Temple pilgrims and scholars. Caius thinks you'll find what you're looking for in the Apographa. And I'm trying to get you access to the Apographa through the Dissident priests.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "A2_4_MiloGone",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "107302854487736557": {
+    "Prev": "28695142411120824609",
+    "Next": "1389779942076114045",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Mehra Milo says the Dissident Priests do have records of Ashlander Nerevarine prophecies, and she has an idea how we might get a look at them.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "1389779942076114045": {
+    "Prev": "107302854487736557",
+    "Next": "2619330914230387314",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This sounds like something that Mehra Milo can help me with. I'll have to be careful. I don't want to risk getting her in trouble. But she may be able to find out whether the Dissident Priests do have any records of Ashlander Nerevarine prophecies, and, if so, how we might get a look at them. It may take some time. But I'll let you know when I find out.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "2619330914230387314": {
+    "Prev": "1389779942076114045",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nibani maesa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There are Nerevarine prophecies that have been lost. The Seven Curses. And others. Some are forgotten. Some hidden. Some deliberately lost. The wise women are the memory of the Velothi people. But it is a faulty memory, and we are mortal, and our knowledge dies with us. But we hear that the Dissident Priests of the Temple study our Nerevarine prophecies, and record them in books. Such written words never die. You must go to them and ask for these books, and bring what you find to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 45.0
+      }
+    ],
+    "Script": [
+      "Journal \"A2_1_MeetSulMatuul\" 56"
+    ]
+  }
+}

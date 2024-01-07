@@ -1,0 +1,283 @@
+{
+  "110818748366111580": {
+    "Prev": "",
+    "Next": "8101265522417313158",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What? How is it that you have this? This is part of the museum's collection! GUARDS!",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "maceslurring",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "Mace of Slurring",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "SetPCCrimeLevel 10000",
+      "Set PCThief to 1",
+      "Goodbye"
+    ]
+  },
+  "8101265522417313158": {
+    "Prev": "110818748366111580",
+    "Next": "2731610243102625094",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, thank you for allowing us to add it to our collection.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "maceslurring",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "2731610243102625094": {
+    "Prev": "8101265522417313158",
+    "Next": "198034837205617806",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As you wish, %PCName. Be careful you are not accidentally struck with it, lest we be unable to hold a conversation in the future.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "198034837205617806": {
+    "Prev": "2731610243102625094",
+    "Next": "6572169072733132689",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you, %PCName. It will take up a, err, special place in our museum. Somewhere upstairs, perhaps. Somewhere dark, as well.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "Mace of Slurring",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "set maceslurring to 2",
+      "player->removeitem \"mace of slurring\" 1",
+      "set MuseumDonations to MuseumDonations + 1",
+      "\"mace of slurring_x\"->enable",
+      "moddisposition 5"
+    ]
+  },
+  "6572169072733132689": {
+    "Prev": "198034837205617806",
+    "Next": "2908611213661330199",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you, %PCName. It will take up a, err, special place in our museum. Somewhere upstairs, perhaps. Somewhere dark, as well.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "Mace of Slurring",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "set maceslurring to 2",
+      "player->removeitem \"mace of slurring\" 1",
+      "player->additem \"gold_001\" 10000",
+      "\"mace of slurring_x\"->enable"
+    ]
+  },
+  "2908611213661330199": {
+    "Prev": "6572169072733132689",
+    "Next": "664074222876822275",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't have the Mace of Slurring with you? Well, bring it in and we can settle the deal.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "664074222876822275": {
+    "Prev": "2908611213661330199",
+    "Next": "1437120201389518329",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't have the Mace of Slurring with you? Well, bring it in and we can settle the deal.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1437120201389518329": {
+    "Prev": "664074222876822275",
+    "Next": "6050182311427524691",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, it's a rather...odd piece. From what I've gathered, it was crafted near the end of the Second Age by Kyanka, a slightly deranged Altmer weaponsmith and enchanter. He had a rather warped sense of humor, and apparently delighted at the thought of reducing opponents to a gibbering mess before crushing them to death. The mace has, admittedly, seen little use. Do you wish to part with it? I can offer you 10000 gold for it.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "maceslurring",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_Blade",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Sell the item.\" 1 \"Keep the item.\" 2 \"Donate the item.\" 3"
+    ]
+  },
+  "6050182311427524691": {
+    "Prev": "1437120201389518329",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, it's a rather...odd piece. From what I've gathered, it was crafted near the end of the Second Age by Kyanka, a slightly deranged Altmer weaponsmith and enchanter. He had a rather warped sense of humor, and apparently delighted at the thought of reducing opponents to a gibbering mess before crushing them to death. The mace has, admittedly, seen little use. Do you wish to part with it? I can offer you 10000 gold for it.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "maceslurring",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Sell the item.\" 1 \"Keep the item.\" 2"
+    ]
+  }
+}

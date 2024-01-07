@@ -1,0 +1,97 @@
+{
+  "14365163641701518018": {
+    "Prev": "",
+    "Next": "2218610984558912743",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno romari",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Our beliefs are very simple, dear friend. The blessed Tribunal, though once filled with glory, are no longer the gods they once were. As with the tides and Tamriel's moons, all cosmic powers will wax and wane. But, when gods die, it creates ripples throughout the lands. The passing of the Three will be a prelude to the end of this era, and the beginning of the next. The followers of the End of Times are making ourselves ready for this to happen.",
+    "Filters": [],
+    "Script": []
+  },
+  "2218610984558912743": {
+    "Prev": "14365163641701518018",
+    "Next": "3112617757320987918",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "meralyn othan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "They preach that the Tribunal have lost their powers, and that this is a signal that the apocalypse is near. Eno Romari teaches his followers that our time in Tamriel is at an end, and the gates of Oblivion will soon open and the daedra will walk the land. Only the ancestors who have already left this world will remain once the daedric scourge covers the earth. And so he promotes what he calls \"the Cleansing.\"",
+    "Filters": [],
+    "Script": []
+  },
+  "3112617757320987918": {
+    "Prev": "2218610984558912743",
+    "Next": "719599522759120768",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This cult will be gone from my city soon, %PCName. I cannot allow such heresy to poison the minds of my people.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_ShowPower",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "719599522759120768": {
+    "Prev": "3112617757320987918",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "They would dare...? So, the Tribunal has lost its power, has it? These fools would dare question Almalexia's power, here in her city! I will give them a lesson in power, %PCName, and you will be my agent.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_ShowPower",
+        "Value": 70.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_ShowPower",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  }
+}

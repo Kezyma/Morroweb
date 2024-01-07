@@ -1,0 +1,377 @@
+{
+  "1627714415913516768": {
+    "Prev": "",
+    "Next": "16858177242171622480",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Habasi hears you broke our agreement. Habasi does not want to speak with you now.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "16858177242171622480": {
+    "Prev": "1627714415913516768",
+    "Next": "1936012923220825898",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sovor trandel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's where I work. For a small consideration, I might...hey! Where's my key? I had it here a minute ago....",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "key_neranomanor",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1936012923220825898": {
+    "Prev": "16858177242171622480",
+    "Next": "3701102661900723915",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Habasi has the key. You know this. Why ask Habasi more about the key?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_ManorKey",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3701102661900723915": {
+    "Prev": "1936012923220825898",
+    "Next": "3093310665295110916",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Habasi likes this key, yes, but Habasi hears that Ondres Nerano is dead. This makes Habasi's job very hard and Habasi does not want to pay you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "ondres nerano",
+        "Value": 0.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "key_neranomanor",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TG_ManorKey 100",
+      "Player->RemoveItem key_neranomanor 1",
+      "AddItem key_neranomanor 1",
+      "ModPCFacRep 5 \"Thieves Guild\""
+    ]
+  },
+  "3093310665295110916": {
+    "Prev": "3701102661900723915",
+    "Next": "24830105101884724425",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, Habasi likes this key very much. Habasi pays you well for this key.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "key_neranomanor",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TG_ManorKey 100",
+      "Player->RemoveItem key_neranomanor 1",
+      "AddItem key_neranomanor 1",
+      "Player->AddItem Gold_001 500",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "24830105101884724425": {
+    "Prev": "3093310665295110916",
+    "Next": "8710119412041621762",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Habasi sees no key. Bring the key to Habasi.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "8710119412041621762": {
+    "Prev": "24830105101884724425",
+    "Next": "10450111472907632720",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Habasi is no patient clan mother. Bring the key to Habasi.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "10450111472907632720": {
+    "Prev": "8710119412041621762",
+    "Next": "1929258294129219",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You... gave the key back to Ondres Nerano? Habasi asks why did you do this thing? You must get the key back from Ondres Nerano.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_ManorKey",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Choice \"I have an extra key. Here.\" 1 \"Okay.\" 2"
+    ]
+  },
+  "1929258294129219": {
+    "Prev": "10450111472907632720",
+    "Next": "22041254742844331183",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "You have a key for Habasi?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_ManorKey",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is.\" 1 \"No, nevermind.\" 2"
+    ]
+  },
+  "22041254742844331183": {
+    "Prev": "1929258294129219",
+    "Next": "31884107962239918089",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "habasi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Habasi wants the key to Nerano Manor. Downstairs Manors are rarely locked, but Habasi wants to go upstairs secretly. Who has the key? Ondres Nerano has a key. Habasi thinks Nerano's servant, Sovor Trandel at the Council Club, has a key.",
+    "Filters": [],
+    "Script": [
+      "Journal TG_ManorKey 10"
+    ]
+  },
+  "31884107962239918089": {
+    "Prev": "22041254742844331183",
+    "Next": "2113329412389429573",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sovor trandel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Just don't tell Ondres Nerano where you got the key.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_ManorKey",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2113329412389429573": {
+    "Prev": "31884107962239918089",
+    "Next": "1282555263116622708",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sovor trandel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's where I work. For a small consideration, I might tell you a bit more.",
+    "Filters": [],
+    "Script": [
+      "Journal TG_ManorKey 30"
+    ]
+  },
+  "1282555263116622708": {
+    "Prev": "2113329412389429573",
+    "Next": "86132453257011435",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sovor trandel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's where I work.",
+    "Filters": [],
+    "Script": []
+  },
+  "86132453257011435": {
+    "Prev": "1282555263116622708",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ondres nerano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, this is Nerano Manor. Can I do something for you? Why are you here anyway?",
+    "Filters": [],
+    "Script": []
+  }
+}

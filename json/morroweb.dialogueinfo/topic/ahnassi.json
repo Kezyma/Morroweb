@@ -1,0 +1,108 @@
+{
+  "12530218523188615949": {
+    "Prev": "",
+    "Next": "28803227101115229726",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "daren adryn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You must be hard of hearing. And soon you'll be hard of breathing.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 42.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "SetDisposition 0",
+      "Goodbye"
+    ]
+  },
+  "28803227101115229726": {
+    "Prev": "12530218523188615949",
+    "Next": "287092065736496363",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "daren adryn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Never heard of her. And none of your business if I did. So blow, like smoke, or I'll spill you like a baby's cup.",
+    "Filters": [],
+    "Script": [
+      "Journal Romance_Ahnassi 42"
+    ]
+  },
+  "287092065736496363": {
+    "Prev": "28803227101115229726",
+    "Next": "779627327320975593",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "senyndie",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Certainly I will teach you something, if you wish. It always gives me pleasure to help Ahnassi's little schemes. And Ahnassi's friends are my friends, so you'll get my best rates.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "romance_ahnassi_A",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "779627327320975593": {
+    "Prev": "287092065736496363",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "senyndie",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So Ahnassi has sent you to me, because she thinks you might be eager to learn some of the things I know. That is so like Ahnassi, thinking of others. And always scheming, always scamming, bless her furry little paws. But, yes, I think I might teach you something, if you wish. It always gives me pleasure to help Ahnassi's little schemes. For a start, maybe you'll find this book interesting.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "Romance_Ahnassi",
+        "Value": 80.0
+      }
+    ],
+    "Script": [
+      "ModDisposition 50",
+      "Journal Romance_Ahnassi_A 1",
+      "player->additem BookSkill_Acrobatics4 1"
+    ]
+  }
+}

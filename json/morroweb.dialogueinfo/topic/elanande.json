@@ -1,0 +1,182 @@
+{
+  "24028130842006127237": {
+    "Prev": "",
+    "Next": "109272906172524742",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Felvan Ienith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'd better not say anything else.  I don't want Dovor to get mad.  He's real mean when he's mad.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Warlords",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "109272906172524742": {
+    "Prev": "24028130842006127237",
+    "Next": "4037281022886126308",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Felvan Ienith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You'd better not fool around.  If Dovor overhears you, he won't think it's funny.  Seriously.  Just give me the stuff, okay?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "4037281022886126308": {
+    "Prev": "109272906172524742",
+    "Next": "2306177152349029137",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Felvan Ienith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "She was willing to give them to you?...  Oh. I see.  *sigh*  Well, Dovor says most of the people here are bad, and that we're going to do good things, so I guess it's okay.  Right?  Anyway, thank you for the nice things.  Here's the money Dovor said you should have.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "ebony war axe_elanande",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "extravagant_robe_02_elanande",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"ebony war axe_elanande\" 1",
+      "player->removeitem \"extravagant_robe_02_elanande\" 1",
+      "additem \"ebony war axe_elanande\" 1",
+      "additem \"extravagant_robe_02_elanande\" 1",
+      "player->additem \"gold_001\" 1000",
+      "Journal MS_Warlords 70"
+    ]
+  },
+  "2306177152349029137": {
+    "Prev": "4037281022886126308",
+    "Next": "1623313792511624195",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Felvan Ienith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Umm....  where are they?  Dovor says I can't give you any money unless you give me the things I asked for.  You can't trick me.  Come back when you really have them.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1623313792511624195": {
+    "Prev": "2306177152349029137",
+    "Next": "30350217002529827389",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Felvan Ienith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You got them?  I mean, you got Elanande's robe and axe?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Warlords",
+        "Value": 60.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Elanande",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Give him the items.\" 1 \"Keep the items.\" 2"
+    ]
+  },
+  "30350217002529827389": {
+    "Prev": "1623313792511624195",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Felvan Ienith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yeah, that's what Dovor said.  I mean, that's what I want.  I think you can find her in Godsreach.",
+    "Filters": [],
+    "Script": []
+  }
+}

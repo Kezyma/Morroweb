@@ -1,0 +1,289 @@
+{
+  "251241723426664399": {
+    "Prev": "",
+    "Next": "23278297041148712701",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sason",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Malexa dead? This can't be! What will I do without her?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "MV_CultistVictim",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_CultistVictim",
+        "Value": 100.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "malexa",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_CultistVictim\" 110",
+      "ModPCFacRep 3 \"Redoran\"",
+      "Goodbye"
+    ]
+  },
+  "23278297041148712701": {
+    "Prev": "251241723426664399",
+    "Next": "7964235582404211258",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "malexa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't want to think about what they've got planned for me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_CultistVictim",
+        "Value": 45.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_CultistVictim",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "7964235582404211258": {
+    "Prev": "23278297041148712701",
+    "Next": "2905825901273472750",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sason",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't even want to think about what might be going on. It's too horrible.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_CultistVictim",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_CultistVictim",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2905825901273472750": {
+    "Prev": "7964235582404211258",
+    "Next": "20269221761713214532",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sason",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you! I'm sure they haven't gone far...although I was incapacitated, I don't believe it was that long ago they took her. They've probably taken her to a shrine to perform the ritual; I believe there's one to the west. It's too horrible to think about! Please hurry!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_CultistVictim\" 40",
+      "AddTopic \"escape from cultists\""
+    ]
+  },
+  "20269221761713214532": {
+    "Prev": "2905825901273472750",
+    "Next": "556515986173716757",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sason",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? You have no soul! I will not forget this.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_CultistVictim\" 46",
+      "ModPCFacRep -5 \"Redoran\"",
+      "Goodbye"
+    ]
+  },
+  "556515986173716757": {
+    "Prev": "20269221761713214532",
+    "Next": "1107513008174245499",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "malexa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you! Thank you so much. I'll follow you. I believe he's east of this shrine.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_CultistVictim\" 45",
+      "Journal \"MV_CultistVictim\" 50",
+      "\"Malexa\"->AiFollow Player 0, -57520,125104,1124, 0"
+    ]
+  },
+  "1107513008174245499": {
+    "Prev": "556515986173716757",
+    "Next": "1059827279277047471",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "malexa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You'd leave me in the hands of these monsters?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_CultistVictim\" 46",
+      "ModPCFacRep -5 \"Redoran\"",
+      "Goodbye"
+    ]
+  },
+  "1059827279277047471": {
+    "Prev": "1107513008174245499",
+    "Next": "28553310901496231627",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sason",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm certain of it! Please, can't you help? I have very little to offer you in return, only 200 septims, but I am a member of House Redoran, and I will make sure to let them know of the help you have given me. Will you help? I beg you!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_CultistVictim",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_CultistVictim\" 30",
+      "Choice \"I can help. I'll try and find Malexa and return her to you.\" 1 \"I'm sorry. I can't help you.\" 2"
+    ]
+  },
+  "28553310901496231627": {
+    "Prev": "1059827279277047471",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "malexa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "They kidnapped me while I was traveling with my husband, Sason. Please, you must help me escape, and return me to him. Won't you help?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_CultistVictim",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_CultistVictim\" 35",
+      "Choice \"Follow me. I'll get you out of here.\" 3 \"Sorry. I have no wish to get involved with this business.\" 4"
+    ]
+  }
+}

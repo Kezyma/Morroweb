@@ -1,0 +1,164 @@
+{
+  "2495197041127214592": {
+    "Prev": "",
+    "Next": "7984216862523425252",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galsa gindu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Indarys Manor will have more settlers soon enough.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Stronghold",
+        "Value": 270.0
+      }
+    ],
+    "Script": []
+  },
+  "7984216862523425252": {
+    "Prev": "2495197041127214592",
+    "Next": "27792235692012361",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galsa gindu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So, Hetman Guls is satisfied. I will give the orders to begin the last stage of your stronghold.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Stronghold",
+        "Value": 250.0
+      }
+    ],
+    "Script": [
+      "Journal HR_Stronghold 270",
+      "StartScript Strong_Build3_R",
+      "Player->ModReputation 2"
+    ]
+  },
+  "27792235692012361": {
+    "Prev": "7984216862523425252",
+    "Next": "1770530849447717108",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "galsa gindu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "So, Hetman Guls believes there should be more women there. I am inclined to agree with him. A stronghold cannot grow and prosper with so few women there. I am spoken for, of course, but if the men at Indarys Manor need wives, there are a few here in town.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Stronghold",
+        "Value": 220.0
+      }
+    ],
+    "Script": []
+  },
+  "1770530849447717108": {
+    "Prev": "27792235692012361",
+    "Next": "850775252952223238",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "galsa gindu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Yes, speak with Hetman Guls at your stronghold of Indarys Manor. He can tell you of anything troubling your settlers.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Stronghold",
+        "Value": 200.0
+      }
+    ],
+    "Script": []
+  },
+  "850775252952223238": {
+    "Prev": "1770530849447717108",
+    "Next": "22013240734418870",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "viras guls",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, you have found wives for us. Now the settlement around Indarys Manor will grow and prosper.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Stronghold",
+        "Value": 250.0
+      }
+    ],
+    "Script": []
+  },
+  "22013240734418870": {
+    "Prev": "850775252952223238",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "viras guls",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We are happy here, but the town would prosper if there were more women. Most men here are single and need wives.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Stronghold",
+        "Value": 200.0
+      }
+    ],
+    "Script": [
+      "Journal HR_Stronghold 220"
+    ]
+  }
+}

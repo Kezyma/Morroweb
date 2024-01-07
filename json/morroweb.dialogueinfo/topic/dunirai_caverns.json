@@ -1,0 +1,201 @@
+{
+  "1761127469947417490": {
+    "Prev": "",
+    "Next": "23985101963912862",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled from the Fighters Guild. Until you clear your name, I can't talk to you about this contract.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "23985101963912862": {
+    "Prev": "1761127469947417490",
+    "Next": "1209783637336219",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "There's nothing more to say about this.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_DuniraiSupply",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "1209783637336219": {
+    "Prev": "23985101963912862",
+    "Next": "149801966424020181",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I hope the miners are happy.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_DuniraiSupply",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "149801966424020181": {
+    "Prev": "1209783637336219",
+    "Next": "115139533254211208",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Good work, %PCName. Here's 500 septims to cover your trouble. It's the best I can do for this type of contract.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_DuniraiSupply",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal FG_DuniraiSupply 100",
+      "ModPCFacRep 5 \"Fighters Guild\"",
+      "ModDisposition 10",
+      "Player->AddItem Gold_001 500"
+    ]
+  },
+  "115139533254211208": {
+    "Prev": "149801966424020181",
+    "Next": "2372831459327301173",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I already gave you the sujamma. Just get it to the Dunirai Caverns.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_DuniraiSupply",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "2372831459327301173": {
+    "Prev": "115139533254211208",
+    "Next": "3454249193232319073",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Workers in the Adas Mine have been complaining that they're out of sujamma, and the Fighters Guild is responsible for supplying the Imperial mines in Vvardenfell. Unfortunately, I've recently learned that my contact there, Nelacar, is dead. We'll have to wait until we get a new contact. There are other orders for you, though.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "nelacar",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_TenimBounty",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal FG_DuniraiSupply 110"
+    ]
+  },
+  "3454249193232319073": {
+    "Prev": "2372831459327301173",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Workers in the Adas Mine have been complaining that they're out of sujamma, and the Fighters Guild is responsible for supplying the Imperial mines in Vvardenfell. Take this load of sujamma to Nelacar in the Dunirai Caverns southeast of Ghostgate between the Foyada Esannudan and the Foyada Ashur-Dan.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_TenimBounty",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal FG_DuniraiSupply 10",
+      "Player->AddItem Potion_Local_Liquor_01 20"
+    ]
+  }
+}

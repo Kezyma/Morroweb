@@ -1,0 +1,87 @@
+{
+  "18106264532566927101": {
+    "Prev": "",
+    "Next": "306922102717371333",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec, Guild of Mages",
+    "PlayerFaction": "",
+    "Text": "You killed him, %PCName. While he was not truly a member of the guild, no one admires your actions.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "tiram gadar",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "306922102717371333": {
+    "Prev": "18106264532566927101",
+    "Next": "18302250701608021366",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "trebonius artorius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He's been of immense assistance, %PCName. He helps me see the Dunmer side of every decision I make, and he came with the highest credentials.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MG_SpyCatch",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "18302250701608021366": {
+    "Prev": "306922102717371333",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec, Guild of Mages",
+    "PlayerFaction": "",
+    "Text": "Ask Guildmaster Trebonius. He's the one that puts up with Tiram.",
+    "Filters": [
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "tiram gadar",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MG_SpyCatch",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "33010797316628781": {
+    "Prev": "",
+    "Next": "233951085698446666",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "larrius varro",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah, I see you ran into that rogue Fjol. Shame you weren't able to bring him back here alive...but not much of one. You have my thanks, and this reward.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Fjol",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_Bastard",
+        "Value": 110.0
+      }
+    ],
+    "Script": [
+      "RemoveItem \"Gold_001\" 100",
+      "Player->AddItem \"Gold_001\" 100",
+      "Journal \"MV_Bastard\" 110"
+    ]
+  },
+  "233951085698446666": {
+    "Prev": "33010797316628781",
+    "Next": "310865822132287103",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "larrius varro",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you encountered that Nord yet? Do take care if you do.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_Bastard",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "310865822132287103": {
+    "Prev": "233951085698446666",
+    "Next": "32657233032626618519",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "larrius varro",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A number of careless travelers have been attacked recently. Seems there's a Nord near Hla Oad who's been robbing the unwary. If you happen upon him, take care. And, of course, I'd be grateful if you took care of that problem for me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_Bastard",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_Bastard\" 10"
+    ]
+  },
+  "32657233032626618519": {
+    "Prev": "310865822132287103",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "larrius varro",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So, I see you've located that rogue Fjol. Somewhat of a shame he's still out there, but knowing his location is a help. My thanks.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_Bastard",
+        "Value": 105.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Fjol",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

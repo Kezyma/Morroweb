@@ -1,0 +1,125 @@
+{
+  "14033221161550124909": {
+    "Prev": "",
+    "Next": "9319185523192029877",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raxle berne",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've killed her? Astounding! I expected you dead by now. Perhaps you have some potential, you horrible accident. Here is an amulet. It will allow you to return to Galom Daeus if you have need to. Kill some of the other clans worthless vampires, and perhaps I will have future rewards for you. Speak with me no more. I have no more need of you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 2.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "merta",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "VA_VampCountess",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampCountess\" 50",
+      "Player->AddItem \"amulet_berne\" 1"
+    ]
+  },
+  "9319185523192029877": {
+    "Prev": "14033221161550124909",
+    "Next": "11559303023151614752",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raxle berne",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is good she is dead.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 2.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "merta",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "11559303023151614752": {
+    "Prev": "9319185523192029877",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "raxle berne",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As I've said, she is a very powerful vampire living near Maar Gan. Look to the west of that city, in any tombs you may find. There you will find this rogue. She may be well guarded, but it is her you should concern yourself with. She must die for the disrespect she has shown me!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "VampClan",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  }
+}

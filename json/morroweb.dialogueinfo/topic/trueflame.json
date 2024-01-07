@@ -1,0 +1,83 @@
+{
+  "2023756682501221864": {
+    "Prev": "",
+    "Next": "19710143091751127718",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The blade burns bright again!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Blade",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "19710143091751127718": {
+    "Prev": "2023756682501221864",
+    "Next": "160306841980319182",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, how it burned with power! You must find the pieces and forge the blade once again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Blade",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "160306841980319182": {
+    "Prev": "19710143091751127718",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Blade of Nerevar. In the battle beneath Red Mountain, Trueflame was shattered, the flame extinguished, and in the confusion, the pieces lost. It is time for you, Nerevarine, to remake the blade and take your place by my side once again. I have only one, which I now give to you. Through my magic, I have been able to determine that the other pieces of the blade are nearby. Find the other two pieces of the blade, and forge the blade anew. Only you may accomplish this, Nerevarine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_Blade",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal TR_Blade 20",
+      "player->AddItem \"bladepiece_02\" 1"
+    ]
+  }
+}

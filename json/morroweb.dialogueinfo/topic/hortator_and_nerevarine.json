@@ -1,0 +1,65 @@
+{
+  "1867430472425114997": {
+    "Prev": "",
+    "Next": "28939178471843227703",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ghost_npc_peakstar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "To show them their need, you must tell them about the Tribunal, how they have adopted the profane tools of the Dwarves, how they have betrayed and misled their people -- and give them proofs. You must tell them about Dagoth Ur, and the Sixth House, about their powers and plans, and how the Tribunal no longer has power to contain them.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"A2_6_Incarnate\" 54"
+    ]
+  },
+  "28939178471843227703": {
+    "Prev": "1867430472425114997",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ghost_npc_peakstar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Dunmer of the Ashlands and Dunmer of the Houses have traditions of a War Leader set over all the tribes in times of need. First, your task is to prove to them their need. Then you must prove that you should be their war leader -- the Nerevarine, for Ashlanders; the Hortator, for the Great Houses.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  }
+}

@@ -1,0 +1,295 @@
+{
+  "1759319873180023076": {
+    "Prev": "",
+    "Next": "2571820389189875788",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've broken the rules of House Hlaalu, sweetie. It brings tears to my eyes when I think about your disloyalty. Maybe you can make amends and make everything better.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2571820389189875788": {
+    "Prev": "1759319873180023076",
+    "Next": "14243148571489025504",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I like your style, dumpling.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_NordSmugglers",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "14243148571489025504": {
+    "Prev": "2571820389189875788",
+    "Next": "17831157013069028708",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh? Velfred the Outlaw is dead? Excellent work, dumpling. Please accept my gift of 500 drakes.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "velfred",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_NordSmugglers",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HH_NordSmugglers 100",
+      "Player->AddItem Gold_001 500",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 10"
+    ]
+  },
+  "17831157013069028708": {
+    "Prev": "14243148571489025504",
+    "Next": "203181940198337651",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm so glad you convinced him to pay us respects, dumpling. Please accept this gift of 1000 drakes.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_NordSmugglers",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal HH_NordSmugglers 100",
+      "Player->AddItem Gold_001 1000",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 10"
+    ]
+  },
+  "203181940198337651": {
+    "Prev": "17831157013069028708",
+    "Next": "5178192682610232576",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He's been a very naughty boy, smuggling ebony without paying House Hlaalu the proper respect. I'm sure you can turn your sweet charms on him and make him respect House Hlaalu. And if he won't listen, you know what to do. He usually docks at Hla Oad.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EbonyDelivery",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HH_NordSmugglers 10"
+    ]
+  },
+  "5178192682610232576": {
+    "Prev": "203181940198337651",
+    "Next": "102031039827888901",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Nord",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Hla Oad",
+    "PlayerFaction": "",
+    "Text": "He met with an accident. Serves him right, too.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "velfred",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "102031039827888901": {
+    "Prev": "5178192682610232576",
+    "Next": "15638674614888245",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Redguard",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Hla Oad",
+    "PlayerFaction": "",
+    "Text": "Last I heard, someone snuck aboard the Grytewake and killed him.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "velfred",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "15638674614888245": {
+    "Prev": "102031039827888901",
+    "Next": "1432466453019829922",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Hla Oad",
+    "PlayerFaction": "",
+    "Text": "The Grytewake sometimes docks southwest of here. It's hard to see from a distance, just follow the coast.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1432466453019829922": {
+    "Prev": "15638674614888245",
+    "Next": "31994174562267025910",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Hla Oad",
+    "PlayerFaction": "",
+    "Text": "His ship is the Grytewake.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "31994174562267025910": {
+    "Prev": "1432466453019829922",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Hla Oad",
+    "PlayerFaction": "",
+    "Text": "He's been here once or twice. Why do you want to know?",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

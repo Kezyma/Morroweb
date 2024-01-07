@@ -1,0 +1,166 @@
+{
+  "311551140873575647": {
+    "Prev": "",
+    "Next": "1550211948009970",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "BM_riekling_Krish_UNIQU",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Taken care of. Obviously. I'm that good.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_FrostGiant1",
+        "Value": 90.0
+      }
+    ],
+    "Script": []
+  },
+  "1550211948009970": {
+    "Prev": "311551140873575647",
+    "Next": "31669231022017628961",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "BM_riekling_Krish_UNIQU",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Figure we can get up there now. I'll stick with you until you talk to that little weasel Dulk. What a suck-up.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_FrostGiant1",
+        "Value": 80.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_FrostGiant1",
+        "Value": 81.0
+      }
+    ],
+    "Script": []
+  },
+  "31669231022017628961": {
+    "Prev": "1550211948009970",
+    "Next": "314387370918010621",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "BM_riekling_Krish_UNIQU",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Just gotta take care of these grahl. I'm not leaving them down here. Wouldn't do when I'm running this place.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_FrostGiant1",
+        "Value": 75.0
+      }
+    ],
+    "Script": []
+  },
+  "314387370918010621": {
+    "Prev": "31669231022017628961",
+    "Next": "1941822209192246392",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "BM_riekling_Krish_UNIQU",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Right. Well, I couldn't until you took out those grahl. And you couldn't because no one goes up there without Karstaag's mystical blessing...which I have. Now, though...it shouldn't be a problem for either of us. I'll follow you up there, and you can talk to little Dulk about whatever you want.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_FrostGiant1",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_FrostGiant1",
+        "Value": 75.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "trollsdead",
+        "Value": 8.0
+      }
+    ],
+    "Script": [
+      "Journal BM_FrostGiant1 81",
+      "AiFollow Player 0 0 0 0 0 0"
+    ]
+  },
+  "1941822209192246392": {
+    "Prev": "314387370918010621",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "BM_riekling_Krish_UNIQU",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Right. And neither can you. See, no one can enter the castle without the mast...Karstaag's blessing. Which I have. I figure, you help me get past the grahl, I'll get you into the castle. Then you can ask little Dulk anything you want. So, c'mon. Let's move it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_FrostGiant1",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_FrostGiant1",
+        "Value": 75.0
+      }
+    ],
+    "Script": [
+      "Journal BM_FrostGiant1 75",
+      "AiFollow Player 0 0 0 0 0 0"
+    ]
+  }
+}

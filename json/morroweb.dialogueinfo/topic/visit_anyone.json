@@ -1,0 +1,158 @@
+{
+  "1758018448169332723": {
+    "Prev": "",
+    "Next": "2435555341558612371",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alvela saram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have the key. Now get moving. And remember what I said. Don't shed Ordinator blood. Don't betray our trust.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_4_MiloGone",
+        "Value": 15.0
+      }
+    ],
+    "Script": []
+  },
+  "2435555341558612371": {
+    "Prev": "1758018448169332723",
+    "Next": "3009666792526426372",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 0,
+    "SpeakerId": "alvela saram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "Some of us are sympathetic to the Dissident priests, but kill an Ordinator, and you'll lose that sympathy. You've got rank in the Temple -- maybe you can bluff your way through. Here's the key to the entrance. Now get going.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_4_MiloGone",
+        "Value": 10.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "removeitem \"Key_Ministry_Ext\" 1",
+      "player->additem \"Key_Ministry_Ext\" 1",
+      "Journal \"A2_4_MiloGone\" 15"
+    ]
+  },
+  "3009666792526426372": {
+    "Prev": "2435555341558612371",
+    "Next": "26889233861670824623",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 0,
+    "SpeakerId": "alvela saram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "Mehra said you would come. I'll say you subdued me with magic and stole my key. It opens all three exterior doors -- the upper back door is best. You'll need other keys for other doors inside. Search for the keys in desks; no one carries keys while on duty. Mehra is in Prison Keep in the cell on the far right. Mehra said you'd bring scrolls to get out.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_4_MiloGone",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  },
+  "26889233861670824623": {
+    "Prev": "3009666792526426372",
+    "Next": "143728122798129799",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alvela saram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Some of us are sympathetic to the Dissident priests, but kill an Ordinator, and you'll lose that sympathy. Here's the key to the entrance. Now get going.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_4_MiloGone",
+        "Value": 10.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "removeitem \"Key_Ministry_Ext\" 1",
+      "player->additem \"Key_Ministry_Ext\" 1",
+      "Journal \"A2_4_MiloGone\" 15"
+    ]
+  },
+  "143728122798129799": {
+    "Prev": "26889233861670824623",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "alvela saram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Mehra said you would come. I'll say you subdued me with magic and stole my key. It opens all three exterior doors -- the upper back door is best. You'll need other keys for other doors inside. Search for the keys in desks; no one carries keys while on duty. Mehra is in Prison Keep in the cell on the far right. Mehra said you'd bring scrolls to get out.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_4_MiloGone",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  }
+}

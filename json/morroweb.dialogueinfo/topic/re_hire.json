@@ -1,0 +1,590 @@
+{
+  "31696222953809450": {
+    "Prev": "",
+    "Next": "1414114402260925902",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm not going to re-hire you, %PCName. You failed to deliver that report. Clearly I can't count on you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_9",
+        "Value": 110.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1414114402260925902": {
+    "Prev": "31696222953809450",
+    "Next": "31219523236869189",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You'll have to take it up with Carnius, %PCName. There's nothing I can do about it.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "NotEqual",
+        "Id": "ColonySide",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "31219523236869189": {
+    "Prev": "1414114402260925902",
+    "Next": "18121165313085124619",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's your choice. You know where to find me if you change your mind.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": []
+  },
+  "18121165313085124619": {
+    "Prev": "31219523236869189",
+    "Next": "23103316272565919740",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Okay. Consider yourself reinstated to the East Empire Company. Now, get back to your current assignment.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 5000.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"gold_001\" 5000",
+      "PCClearExpelled"
+    ]
+  },
+  "23103316272565919740": {
+    "Prev": "18121165313085124619",
+    "Next": "23383112601490023927",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If I'm going to do this for you, the least you can do is be honest with me. Don't try and pull the wool over my eyes; come back when you actually have the money.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "Gold_001",
+        "Value": 5000.0
+      }
+    ],
+    "Script": []
+  },
+  "23383112601490023927": {
+    "Prev": "23103316272565919740",
+    "Next": "32407209861251910596",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't like doing this, because it's not exactly on the level. I know a few people on the Board of Directors, and I can get you reinstated. But it'll mean greasing a few palms, and that takes money. So here's what we'll do. You give me 5000 gold, and I can make sure the paperwork goes through.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Pay it.\" 5 \"Nevermind.\" 6"
+    ]
+  },
+  "32407209861251910596": {
+    "Prev": "23383112601490023927",
+    "Next": "3262227861198202209",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Your employment is in good standing, %PCName. Don't worry about it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "3262227861198202209": {
+    "Prev": "32407209861251910596",
+    "Next": "867531863223625605",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Not a chance. You killed Toralf, and I won't forgive that. Just be grateful I've allowed you to live.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "nordhit",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "867531863223625605": {
+    "Prev": "3262227861198202209",
+    "Next": "29431115691929921629",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "East Empire Company",
+    "Text": "Excellent. I'll just take this, and see that the paperwork is sent through. You can now concentrate on your current assignment, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_raw_Stalhrim_01",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"ingred_raw_stalhrim_01\" 2",
+      "PCClearExpelled"
+    ]
+  },
+  "29431115691929921629": {
+    "Prev": "867531863223625605",
+    "Next": "1580331231187310529",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "East Empire Company",
+    "Text": "You don't have the Stalhrim? Well, then I'm afraid you're not going to get anywhere.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "ingred_raw_Stalhrim_01",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "1580331231187310529": {
+    "Prev": "29431115691929921629",
+    "Next": "2284528455120385301",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Your choice. I can always find someone else to make sure things get done.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "2284528455120385301": {
+    "Prev": "1580331231187310529",
+    "Next": "19195153901497219600",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "East Empire Company",
+    "Text": "Well now. It seems to me that you should've known better than to do anything to put yourself in this position. Considering that, I think it's only fair of me to ask a rather high price in exchange for reinstating you. How about this: you bring me two pieces of stalhrim, and I'll see take care of it. Not really fair, I suppose, but then you don't have much of a choice, do you?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_8a",
+        "Value": 20.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Pay it.\" 3 \"Nevermind.\" 2"
+    ]
+  },
+  "19195153901497219600": {
+    "Prev": "2284528455120385301",
+    "Next": "130542661254026694",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "East Empire Company",
+    "Text": "Very well. I'll see to it that the paperwork is processed. Concentrate on your assignments, %PCRank, and try not to let this happen again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 5000.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "failedfirst",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"gold_001\" 5000",
+      "PCClearExpelled",
+      "set \"Carnius Magius\".failedfirst to 1"
+    ]
+  },
+  "130542661254026694": {
+    "Prev": "19195153901497219600",
+    "Next": "15597283117423396",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "East Empire Company",
+    "Text": "Very well. I'll see to it that the paperwork is processed. Concentrate on your assignments, %PCRank, and try not to let this happen again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 5000.0
+      }
+    ],
+    "Script": [
+      "player->removeitem \"gold_001\" 5000",
+      "PCClearExpelled"
+    ]
+  },
+  "15597283117423396": {
+    "Prev": "130542661254026694",
+    "Next": "23141247482603713765",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "East Empire Company",
+    "Text": "You don't even have that much with you, and yet still you try to gain my favor? This does not speak well of you, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "Gold_001",
+        "Value": 5000.0
+      }
+    ],
+    "Script": [
+      "Moddisposition -5"
+    ]
+  },
+  "23141247482603713765": {
+    "Prev": "15597283117423396",
+    "Next": "10547286992917717663",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "East Empire Company",
+    "Text": "Failed your first assignment? What makes you think I'd consider you again? You'll have to do something for me to make it worthwhile...  perhaps, say, 5000 gold pieces? What do you say?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_1",
+        "Value": 310.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "failedfirst",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Pay it.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "10547286992917717663": {
+    "Prev": "23141247482603713765",
+    "Next": "1758518225220022583",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "East Empire Company",
+    "Text": "Of course, I don't do this for just anyone. You'll have to do something for me to make it worthwhile...  perhaps, say, 5000 gold pieces? What do you say?",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "NotEqual",
+        "Id": "ColonySide",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice: \"Pay it.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "1758518225220022583": {
+    "Prev": "10547286992917717663",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You're a current employee of the company. I can't re-hire you.",
+    "Filters": [],
+    "Script": []
+  }
+}

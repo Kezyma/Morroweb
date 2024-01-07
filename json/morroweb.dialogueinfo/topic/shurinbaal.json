@@ -1,0 +1,223 @@
+{
+  "827268082364222974": {
+    "Prev": "",
+    "Next": "51288631815310381",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drinar varyon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "We don't want any involvement with the Thieves Guild. Talk all you want, but I'm not joining.",
+    "Filters": [],
+    "Script": []
+  },
+  "51288631815310381": {
+    "Prev": "827268082364222974",
+    "Next": "221546470299811993",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drinar varyon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't know what you're talking about.",
+    "Filters": [],
+    "Script": [
+      "ModDisposition -20"
+    ]
+  },
+  "221546470299811993": {
+    "Prev": "51288631815310381",
+    "Next": "1706026348196635874",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drinar varyon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Take your questions somewhere else, guar fetcher.",
+    "Filters": [],
+    "Script": [
+      "ModDisposition -20"
+    ]
+  },
+  "1706026348196635874": {
+    "Prev": "221546470299811993",
+    "Next": "2092630895215812011",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "drinar varyon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Get out of my house.",
+    "Filters": [],
+    "Script": [
+      "ModDisposition -20",
+      "Goodbye"
+    ]
+  },
+  "2092630895215812011": {
+    "Prev": "1706026348196635874",
+    "Next": "4945159601662816461",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You stopped the smugglers in Shurinbaal.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Shurinbaal",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "4945159601662816461": {
+    "Prev": "2092630895215812011",
+    "Next": "13188310301546525646",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Oh, you already took care of their smuggling operation? Good. You'll do well in House Redoran.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Daroder Helni",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Enjine",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "HR_Shurinbaal",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_HonorChallenge",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HR_Shurinbaal 100",
+      "ModPCFacRep 5 \"Redoran\"",
+      "ModDisposition 10"
+    ]
+  },
+  "13188310301546525646": {
+    "Prev": "4945159601662816461",
+    "Next": "72492464926110428",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So the leaders of Shurinbaal are dead? Good. They shall trouble House Redoran no longer.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Daroder Helni",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Enjine",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Shurinbaal",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HR_Shurinbaal 100",
+      "ModPCFacRep 5 \"Redoran\"",
+      "ModDisposition 10"
+    ]
+  },
+  "72492464926110428": {
+    "Prev": "13188310301546525646",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Shurinbaal is a cave southwest of Gnaar Mok. I'll mark this town on your map. I have heard that the smugglers are led by a Dunmer named Daroder and the Redguard Enjine. Kill the leaders and report back to me. I believe the smugglers have a local contact somewhere here in Ald'ruhn. It may be worth your time to investigate here as well.",
+    "Filters": [],
+    "Script": [
+      "Journal HR_Shurinbaal 10",
+      "ShowMap \"Gnaar Mok\""
+    ]
+  }
+}

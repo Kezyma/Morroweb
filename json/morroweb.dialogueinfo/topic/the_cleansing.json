@@ -1,0 +1,74 @@
+{
+  "3050214250541118807": {
+    "Prev": "",
+    "Next": "3020962771582521984",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "meralyn othan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is a ritual suicide, %PCName. My brother was no fool, but he was a trusting person, always looking for someone or something to believe in. He thought he had found that in the End of Times.",
+    "Filters": [],
+    "Script": []
+  },
+  "3020962771582521984": {
+    "Prev": "3050214250541118807",
+    "Next": "279916338606412388",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno romari",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is a glorious sacrifice for the good of all the people.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_ShowPower",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "279916338606412388": {
+    "Prev": "3020962771582521984",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno romari",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is a glorious ritual, friend %PCName. Our followers cleanse themselves of all of their troubles, all of their burdens here on this earth. They send themselves ahead to the ancestors, spreading our word, making ready for when we shall all join them in our fight against the daedric hordes.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_ShowPower",
+        "Value": 55.0
+      }
+    ],
+    "Script": [
+      "Journal TR_ShowPower 60"
+    ]
+  }
+}

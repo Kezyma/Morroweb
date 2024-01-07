@@ -1,0 +1,497 @@
+{
+  "4814160731644529355": {
+    "Prev": "",
+    "Next": "72911595534967662",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled from House Redoran. Make amends and perhaps we can speak again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "72911595534967662": {
+    "Prev": "4814160731644529355",
+    "Next": "92204667541930670",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I heard Mathis Dalobar was dead. I don't have any proof, but I believe you were responsible. I will have you expelled for this and will not give you any more duties.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "mathis dalobar",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "PCExpell \"Redoran\"",
+      "Set ExpRedoran to 1",
+      "ModDisposition -15",
+      "Journal HR_FindDalobar 200"
+    ]
+  },
+  "92204667541930670": {
+    "Prev": "72911595534967662",
+    "Next": "837124045333916612",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Mathis Dalobar is doing well last I heard.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FindDalobar",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "837124045333916612": {
+    "Prev": "92204667541930670",
+    "Next": "2803112788327348446",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I heard that Mathis Dalobar made it to Maar Gan with your help. Good work, %PCName. I have more duties for you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FindDalobar",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal HR_FindDalobar 100",
+      "\"Mathis Dalobar\"->Disable",
+      "ModPCFacRep 5 \"Redoran\"",
+      "ModDisposition 5"
+    ]
+  },
+  "2803112788327348446": {
+    "Prev": "837124045333916612",
+    "Next": "31996301793072325145",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "neminda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Mathis Dalobar is a trader who comes through Ald'ruhn just about every month. He was probably headed towards Maar Gan or Gnisis. Talk to the people in Maar Gan and find out if anyone there knows what happened to him. I'll mark these towns on your map.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_MudcrabNest",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Courier",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HR_FindDalobar 10",
+      "\"Mathis Dalobar\"->Enable",
+      "ShowMap \"Maar Gan\"",
+      "ShowMap \"Gnisis\""
+    ]
+  },
+  "31996301793072325145": {
+    "Prev": "2803112788327348446",
+    "Next": "166524532816031339",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mathis dalobar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thanks for getting me back to Maar Gan.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FindDalobar",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "166524532816031339": {
+    "Prev": "31996301793072325145",
+    "Next": "17008115842842914774",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mathis dalobar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I'm Mathis Dalobar. Let's travel together back to Maar Gan.",
+    "Filters": [],
+    "Script": []
+  },
+  "17008115842842914774": {
+    "Prev": "166524532816031339",
+    "Next": "27203277672206110516",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "miles gloriosus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If Mathis Dalobar thinks he can get out of his delivery contract with me, he's mistaken. He should have been here days ago.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HR_FindDalobar",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "27203277672206110516": {
+    "Prev": "17008115842842914774",
+    "Next": "23622241633028118194",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Publican",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Maar Gan",
+    "PlayerFaction": "",
+    "Text": "He hasn't been here recently. He'll turn up though. Always does. And he'll make up some excuse or other and charge higher prices than last year, too.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HR_FindDalobar",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "23622241633028118194": {
+    "Prev": "27203277672206110516",
+    "Next": "26977261051038831247",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "High Elf",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Maar Gan",
+    "PlayerFaction": "",
+    "Text": "I have not seen Mathis Dalobar. Perhaps he is no longer in business.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FindDalobar",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HR_FindDalobar",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "26977261051038831247": {
+    "Prev": "23622241633028118194",
+    "Next": "576920176436732",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Khajiit",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Maar Gan",
+    "PlayerFaction": "",
+    "Text": "%Name sees no Mathis Dalobar here. %Name saw a great ash storm and hid inside.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FindDalobar",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HR_FindDalobar",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "576920176436732": {
+    "Prev": "26977261051038831247",
+    "Next": "1972204181969527189",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Maar Gan",
+    "PlayerFaction": "",
+    "Text": "Maybe he got stuck in the ash storm.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FindDalobar",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HR_FindDalobar",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1972204181969527189": {
+    "Prev": "576920176436732",
+    "Next": "1838321353104505174",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Nord",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Maar Gan",
+    "PlayerFaction": "",
+    "Text": "Mathis Dalobar? The trader? He should have been here ages ago. Maybe he got caught in the ash storm.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FindDalobar",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HR_FindDalobar",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1838321353104505174": {
+    "Prev": "1972204181969527189",
+    "Next": "126251091953179144",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Maar Gan",
+    "PlayerFaction": "",
+    "Text": "I bet Mathis Dalobar was just delayed a bit by the ash storm.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FindDalobar",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HR_FindDalobar",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "126251091953179144": {
+    "Prev": "1838321353104505174",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Gnisis",
+    "PlayerFaction": "",
+    "Text": "He should be here any day now. If you want to find him, you might meet him on the road to Maar Gan or Ald'ruhn.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FindDalobar",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HR_FindDalobar",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "169152906840735393": {
+    "Prev": "",
+    "Next": "30958179731638013255",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "farvyn oreyn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, if that is how it must be. Guards! Kill this fool!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "DA_Malacath",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "\"dreynis nothro\"->StartCombat Player",
+      "\"vala herennius\"->StartCombat Player"
+    ]
+  },
+  "30958179731638013255": {
+    "Prev": "169152906840735393",
+    "Next": "5135287642595727737",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "farvyn oreyn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That is noble of you. However, I'm afraid I can't let someone go around ruining my family's good name. Guards! Silence this fool!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "DA_Malacath",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "\"dreynis nothro\"->StartCombat Player",
+      "\"vala herennius\"->StartCombat Player"
+    ]
+  },
+  "5135287642595727737": {
+    "Prev": "30958179731638013255",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "farvyn oreyn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Who? Oh, the orc. I'm sure I don't know...all right, stranger. It's all true. Do you think it's easy carrying on this kind of family name? Everyone expects a lot, you know. Of course, it does have its benefits--the adoration of everyone, the Imperial stipend. Why have you sought me out, then?",
+    "Filters": [],
+    "Script": [
+      "Journal \"DA_Malacath\" 50",
+      "Choice \"I come on the behest of Malacath to end this lie.\" 1 \"I have no wish to trouble you further.\" 2"
+    ]
+  }
+}

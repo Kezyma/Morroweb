@@ -1,0 +1,105 @@
+{
+  "315389227486817344": {
+    "Prev": "",
+    "Next": "343621443375821492",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mastrius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Get out of here! I have no further use for you!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "VA_VampCurse",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "343621443375821492": {
+    "Prev": "315389227486817344",
+    "Next": "6541224493213219367",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mastrius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You would come this far and not allow me to complete the spell? Fool! Weakling! I should have known you were an imperfect servant! Be gone. Leave me to my misery. Another will come to free me from this place.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampCurse\" 80"
+    ]
+  },
+  "6541224493213219367": {
+    "Prev": "343621443375821492",
+    "Next": "12020956056429542",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mastrius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then I will begin. Soon, the mortals will once again tremble at the mention of my name.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampCurse\" 70"
+    ]
+  },
+  "12020956056429542": {
+    "Prev": "6541224493213219367",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mastrius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This spell will take a great deal of strength to dispel. Azura has left me weakened, and I will not be strong enough to do it myself. You must lend me your strength, your endurance, your very life essence in order for me to succeed. Do this, and I will be free of this place, and will begin my conquest of the world above!",
+    "Filters": [],
+    "Script": [
+      "Journal \"VA_VampCurse\" 60",
+      "Choice \"Yes. Drain my power so you may complete your escape.\" 1 \"No. I will not allow this.\" 2"
+    ]
+  }
+}

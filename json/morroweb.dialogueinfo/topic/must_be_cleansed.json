@@ -1,0 +1,37 @@
+{
+  "16030276502417825843": {
+    "Prev": "",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gavas drin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No...certainly not by you. This task falls to one of Almalexia's chosen. You will escort this young priest, Urvel Dulni, to the shrine. Protect him well, %PCName. His experience is limited, but he is necessary to complete the ritual. The Shrine is protected by the Profane, powerful liches who feed from the power of the shrine. You must destroy them for Dulni to perform his duties. I stress again...protect Dulni at all costs. It is he who must perform the ceremony. If he is not able, there are no others.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_ShrineDead",
+        "Value": 40.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "urvel dulni",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TR_ShrineDead 40"
+    ]
+  }
+}

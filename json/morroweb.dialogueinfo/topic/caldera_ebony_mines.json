@@ -1,0 +1,440 @@
+{
+  "697385751627413134": {
+    "Prev": "",
+    "Next": "2639124211311913208",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "garisa llethri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have my support, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_CalderaDisrupt",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2639124211311913208": {
+    "Prev": "697385751627413134",
+    "Next": "406619611149120229",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "garisa llethri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Killing Odral Helvi and Stlennius Vibato will certainly shut down the ebony mines, but I wish you had chosen a more subtle route. There are political problems with... Well, with issues I am sure you do not need a lecture on. I will support you as a Councilman of House Redoran.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "odral helvi",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "stlennius vibato",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HR_CalderaDisrupt 100",
+      "ModPCFacRep 10 \"Redoran\"",
+      "ModDisposition 10"
+    ]
+  },
+  "406619611149120229": {
+    "Prev": "2639124211311913208",
+    "Next": "1506815143110037420",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "garisa llethri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, killing the head slave Dahleena will make the Hlaalu's mining more difficult. Good slaves are so hard to find these days... I expect the Hlaalu will not resume mining for at least a month. You have earned my support on the Council, and I want you to have these fine boots made from the blood of Red Mountain.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "dahleena",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HR_CalderaDisrupt 100",
+      "ModPCFacRep 10 \"Redoran\"",
+      "ModDisposition 20",
+      "Player->AddItem Ebony_Boots 1",
+      "Player->ModReputation 1"
+    ]
+  },
+  "1506815143110037420": {
+    "Prev": "406619611149120229",
+    "Next": "3119125152216225678",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "garisa llethri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have freed the head slave Dahleena? Interesting choice. Good slaves are so hard to find these days... I expect the Hlaalu will not resume mining for at least a month. You have earned my support on the Council, and I want you to keep these fine boots made from the blood of Red Mountain.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_CalderaDisrupt",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_CalderaCorrupt",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HR_CalderaDisrupt 100",
+      "ModPCFacRep 10 \"Redoran\"",
+      "ModDisposition 20",
+      "Player->AddItem Ebony_Boots 1",
+      "Player->ModReputation 1"
+    ]
+  },
+  "3119125152216225678": {
+    "Prev": "1506815143110037420",
+    "Next": "240069588124013849",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "garisa llethri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As I said, find a way to halt the mining. The Empire has taken enough of Red Mountain's blood. The ebony belongs to the Dunmer.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_CalderaDisrupt",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "240069588124013849": {
+    "Prev": "3119125152216225678",
+    "Next": "2700957082518931132",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "garisa llethri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good, yes, very good. This book shows that the Hlaalu are taking more ebony than they report to the Empire. Now that I have this evidence, I want the Caldera mines shut down. Return there and find a way to halt the mining. If the Hlaalu complain to the Duke or the Empire, we can show them these books to justify our actions.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HR_CalderaCorrupt 100",
+      "Journal HR_CalderaDisrupt 10",
+      "Player->RemoveItem \"bk_CalderaRecordBook2\" 1",
+      "ModPCFacRep 5 \"Redoran\"",
+      "ModDisposition 10"
+    ]
+  },
+  "2700957082518931132": {
+    "Prev": "240069588124013849",
+    "Next": "4314108323063113900",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "garisa llethri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What use is it to you? If you're thinking of bringing it to a guard, they'd probably put you in jail rather than go against the Empire and House Hlaalu.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "4314108323063113900": {
+    "Prev": "2700957082518931132",
+    "Next": "1068221912308416567",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 5,
+    "SpeakerId": "garisa llethri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Ah, I see you found the evidence I was looking for.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_CalderaRecordBook2",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_CalderaCorrupt",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give him the record book.\" 1 \"Keep the record book.\" 2"
+    ]
+  },
+  "1068221912308416567": {
+    "Prev": "4314108323063113900",
+    "Next": "34119639678313906",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "garisa llethri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "First I want you to find evidence that there is corruption at the mines. Since the mines are run by the dishonorable House Hlaalu and the Empire, I am sure there is corruption. Do not take any other actions until you have delivered the evidence of corruption to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_MadMilk",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Shurinbaal",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HR_CalderaCorrupt 10"
+    ]
+  },
+  "34119639678313906": {
+    "Prev": "1068221912308416567",
+    "Next": "15839273953247718242",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Khajiit",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Caldera Mine",
+    "PlayerFaction": "",
+    "Text": "%Name lives here. %Name works here.",
+    "Filters": [],
+    "Script": []
+  },
+  "15839273953247718242": {
+    "Prev": "34119639678313906",
+    "Next": "3614114532609917037",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Slave",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Caldera Mine",
+    "PlayerFaction": "",
+    "Text": "Welcome to the famous ebony mines of Caldera. What are you in for?",
+    "Filters": [],
+    "Script": []
+  },
+  "3614114532609917037": {
+    "Prev": "15839273953247718242",
+    "Next": "19815313942751812619",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "olumba gro-boglar",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Caldera",
+    "PlayerFaction": "",
+    "Text": "The Caldera ebony mines are southwest of the village of Caldera. There's an office, a bunkhouse, and guard tower over near the mine entrance. They work the mines by slave labor. That would never be allowed back West, but here, in Morrowind, slavery is still legal. I think it is a disgrace. But who cares what I think? Head west from town, then swing around again south into the bowl of the mine through a gap in the ridge. Or head straight southwest over the ridge -- but it is too steep a climb for most.",
+    "Filters": [],
+    "Script": []
+  },
+  "19815313942751812619": {
+    "Prev": "3614114532609917037",
+    "Next": "1075292581314830",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Khajiit",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Caldera",
+    "PlayerFaction": "",
+    "Text": "The Caldera ebony mines are southwest of the village of Caldera. Did you know slaves work the mines here? No, perhaps not. Nothing to see here in town. Nothing to offend the eye. What is not seen, does not offend, yes? But perhaps %Name should not speak about this in public. And who would listen, anyway? What is done matters, not what is said.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1075292581314830": {
+    "Prev": "19815313942751812619",
+    "Next": "10287309621206803",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Argonian",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Caldera",
+    "PlayerFaction": "",
+    "Text": "The Caldera ebony mines are southwest of the village of Caldera. There's an office, a bunkhouse, and guard tower over near the mine entrance. They work the mines by slave labor. That would never be allowed back West, but here, in Morrowind, slavery is still legal. I think it is a disgrace. But who cares what I think?",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "10287309621206803": {
+    "Prev": "1075292581314830",
+    "Next": "50642333173479357",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Caldera",
+    "PlayerFaction": "",
+    "Text": "The Caldera ebony mines are southwest of the village of Caldera. There's an office, a bunkhouse, and guard tower over near the mine entrance. If you're thinking of taking a look while you're here, head straight west from town, then swing around south into the bowl of the mine through a gap in the mountains. Otherwise, you can try climbing straight over the ridge -- but it is too steep a climb for most.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "50642333173479357": {
+    "Prev": "10287309621206803",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eydis fire-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "They're southwest of the town of Caldera, I believe. Check around when you're in Caldera. They'll give you better directions.",
+    "Filters": [],
+    "Script": []
+  }
+}

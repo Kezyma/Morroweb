@@ -1,0 +1,123 @@
+{
+  "2485623105585011377": {
+    "Prev": "",
+    "Next": "14101185552659010756",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uncle sweetshare",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He he he he he!  Mad?  Mad, you call me?  Oh no, %PCName...it is you who are mad!  For how can anyone who doesn't recognize true happiness ever be considered sane?  Oh why oh why can't you people just be happy?  Well, let's get to it then!  He he he, ha ha!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "goodbye"
+    ]
+  },
+  "14101185552659010756": {
+    "Prev": "2485623105585011377",
+    "Next": "679111305298115369",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uncle sweetshare",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Give you my helm?  Stop sharing...stop sharing my sugar?  He...heh...ho...hmmm....  Distressing...most distressing....  But you WILL let me live?  I do so love to live, %PCName!  All right, then.  We have a deal!  Here's my white helm, and you have my promise I will not spread any more cheer!  I will keep my candy all to myself!  That won't be so bad, will it? He he he he!  Ha ha ha!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "removeitem \"fur_colovian_helm_white\" 1",
+      "player->additem \"fur_colovian_helm_white\" 1",
+      "Journal BM_MoonSugar 70"
+    ]
+  },
+  "679111305298115369": {
+    "Prev": "14101185552659010756",
+    "Next": "156733146386169806",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uncle sweetshare",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's me, you see!  Uncle Sweetshare!  Just like in the children's rhyme!  When I found that old song the lyrics moved me like nothing else in my life!  I knew at that moment who I truly was, and what I was meant to do!  So I had this workshop built!  I make treats here, you see!  Delicious treats with the special sugar!  Moon sugar!  He he, ha ha!  Then I spread my cheer throughout the land!  But it's all a secret!  Shhhhhhhh....",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_MoonSugar",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_MoonSugar",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "journal BM_MoonSugar 50",
+      "Choice \"You're mad, and must be punished for your crimes!\" 1 \"Promise you'll stop poisoning people, and I'll spare your life.  Just give me your white helm and I'll bring it back to Severia Gratius as 'proof' of your death.\" 2"
+    ]
+  },
+  "156733146386169806": {
+    "Prev": "679111305298115369",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "uncle sweetshare",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Why that's me, %PCName!  At least...it used to be me.  I don't feel much like Uncle Sweetshare anymore, to tell you the truth!  Not without my white helm!  But that's just fine! Ha ha ha ha!  Because I still have my scrumptious treats, with all the sugar I can eat!  He he he he he!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_MoonSugar",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "19182367210488910": {
+    "Prev": "",
+    "Next": "23594156583276514905",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nibani maesa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sul-Matuul shall tell you of the third trial, and I shall guide each of your steps on the path of the Nerevarine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 5.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "23594156583276514905": {
+    "Prev": "19182367210488910",
+    "Next": "2252210634255823777",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nibani maesa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You do not listen. I said: when the moons have come and gone, return, and I will give you my judgement.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 1.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "localdaysPassed",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "2252210634255823777": {
+    "Prev": "23594156583276514905",
+    "Next": "2528812312292411884",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nibani maesa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That you have overcome the Curse-of-Flesh is strange enough, but that it should protect you from blight and age is past belief. Yet the signs of my dreams are clear. You have passed the second trial. But the third trial is unfulfilled. The mystery of the third trial is not my secret to share. Go to Sul-Matuul, the guardian of our cult, and he shall tell you of the third trial. When you have fulfilled the third trial, return to me for guidance on your next steps on the path of the Nerevarine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 1.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "localdaysPassed",
+        "Value": 2.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"A2_6_Incarnate\" 5"
+    ]
+  },
+  "2528812312292411884": {
+    "Prev": "2252210634255823777",
+    "Next": "2300511018106117836",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nibani maesa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are born on a certain day to uncertain parents. So you have passed the first trial. My dreams show me that you also fulfill the second trial, that 'neither blight nor age can harm him/The Curse-of-Flesh before him flies'. I have read the signs, but I cannot understand. Can you explain this to me?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 1.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "localdaysPassed",
+        "Value": 2.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Tell how I got corprus disease and was cured\" 2"
+    ]
+  },
+  "2300511018106117836": {
+    "Prev": "2528812312292411884",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nibani maesa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The ancestors and stars have given me clear signs. The lost prophecies leave no doubt -- the Incarnate shall be an outlander. You, blessed by Azura, must lift the seven curses of Dagoth Ur. Prophecy has shown the seven steps of the Nerevarine's path, and I have been chosen as your guide for each step on that path. I will read the signs, and show you the way. It is time for you to walk the path of the Seven Visions, and pass the Seven Trials of the Seven Visions.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 1.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "localdaysPassed",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "2954199812008424482": {
+    "Prev": "",
+    "Next": "3133521781172368081",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "paur maston",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, Vanjirra. She's always been a good partner.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "vanjirra",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_TraderMissed",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3133521781172368081": {
+    "Prev": "2954199812008424482",
+    "Next": "1299818210450917823",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "paur maston",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, Vanjirra. She's in Molag Mar waiting for me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_TraderMissed",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_TraderMissed",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1299818210450917823": {
+    "Prev": "3133521781172368081",
+    "Next": "320805212119311183",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "paur maston",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, my partner Vanjirra and I were going to do some business in Molag Mar. I was detained, though, and it seems she's gone ahead without me. I'm a bit surprised, because it's a fairly dangerous trip.",
+    "Filters": [],
+    "Script": [
+      "Journal \"MV_TraderMissed\" 10"
+    ]
+  },
+  "320805212119311183": {
+    "Prev": "1299818210450917823",
+    "Next": "18500209911864819544",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vanjirra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I have a business partner named Paur Maston. He was supposed to meet me a while back and travel here with me, but I suppose he was detained.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_TraderMissed",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_TraderMissed\" 15"
+    ]
+  },
+  "18500209911864819544": {
+    "Prev": "320805212119311183",
+    "Next": "276425104824718235",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vanjirra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What's that? Oh, no! I can't believe he's gone! It is good of you to come all this way to tell me of his passing, though.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_TraderMissed",
+        "Value": 90.0
+      }
+    ],
+    "Script": [
+      "RemoveItem \"Gold_001\" 50",
+      "Player->AddItem \"Gold_001\" 50",
+      "Journal \"MV_TraderMissed\" 130"
+    ]
+  },
+  "276425104824718235": {
+    "Prev": "18500209911864819544",
+    "Next": "185051072051301",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vanjirra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I'll miss him terribly. He was a good partner and a good friend.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_TraderMissed",
+        "Value": 130.0
+      }
+    ],
+    "Script": []
+  },
+  "185051072051301": {
+    "Prev": "276425104824718235",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vanjirra",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Paur Maston and I are business partners and have been for years.",
+    "Filters": [],
+    "Script": []
+  }
+}

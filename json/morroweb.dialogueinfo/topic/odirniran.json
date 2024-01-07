@@ -1,0 +1,853 @@
+{
+  "237473463721920844": {
+    "Prev": "",
+    "Next": "170341798426297493",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vedelea othril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, thank you %PCName. I think we can hold Odirniran from the Telvanni now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Odirniran",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "170341798426297493": {
+    "Prev": "237473463721920844",
+    "Next": "27744434198417870",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vedelea othril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The fight here went badly for us. Take me back to me sister, Remasa Othril, if you can.",
+    "Filters": [],
+    "Script": []
+  },
+  "27744434198417870": {
+    "Prev": "170341798426297493",
+    "Next": "2436024070536123699",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "remasa othril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "The Telvanni should leave Odirniran in peace now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Odirniran",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2436024070536123699": {
+    "Prev": "27744434198417870",
+    "Next": "1845781701148113995",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "remasa othril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "You've already helped us, %PCName. You should report back to Edryno Arethi.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Odirniran",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "1845781701148113995": {
+    "Prev": "2436024070536123699",
+    "Next": "187673394149301205",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "remasa othril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "You killed Milyn Faram and found Vedelea! Thank you, %PCName. We can take care of anything else left here in Odirniran.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "milyn faram",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Odirniran",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal HH_Odirniran 90"
+    ]
+  },
+  "187673394149301205": {
+    "Prev": "1845781701148113995",
+    "Next": "3078311214628326218",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "remasa othril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "I am sorry to hear about my sister. I should have expected this. Still, the necromancer is dead, and she died for a good cause.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "milyn faram",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "vedelea othril",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HH_Odirniran 80"
+    ]
+  },
+  "3078311214628326218": {
+    "Prev": "187673394149301205",
+    "Next": "796750224436008",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "remasa othril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "You killed the necromancer, but where is Vedelea? Is she okay? Escort her back to me if you find her.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "milyn faram",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "796750224436008": {
+    "Prev": "3078311214628326218",
+    "Next": "2816611175996918394",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "remasa othril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Vedelea is safe! Thank you, %PCName. but someone still needs to kill the Telvanni necromancer.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Odirniran",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "2816611175996918394": {
+    "Prev": "796750224436008",
+    "Next": "241883260689551489",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "remasa othril",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Yes, we've had trouble with a Telvanni necromancer. He's still somewhere in Odirniran, and he's taken my sister hostage. We are still recovering from our last assault, but most of his minions are dead. Kill the necromancer and rescue my sister, Vedelea Othril. Please hurry, %PCName. Who knows what he's doing to her?",
+    "Filters": [],
+    "Script": [
+      "Journal HH_Odirniran 30"
+    ]
+  },
+  "241883260689551489": {
+    "Prev": "2816611175996918394",
+    "Next": "9828261292346324867",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled. I cannot discuss business with you unless you make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "9828261292346324867": {
+    "Prev": "241883260689551489",
+    "Next": "497913241169721245",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "There is no more Telvanni threat in Odirniran.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Odirniran",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "497913241169721245": {
+    "Prev": "9828261292346324867",
+    "Next": "2678283224267591",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "You killed the Telvanni and you rescued Vedelea Othril? This was a great service to House Hlaalu. Please take these 1000 drakes for a job well done.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "milyn faram",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Odirniran",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal HH_Odirniran 100",
+      "ModPCFacRep 10 \"Hlaalu\"",
+      "ModDisposition 20",
+      "Player->AddItem Gold_001 1000",
+      "Player->ModReputation 1"
+    ]
+  },
+  "2678283224267591": {
+    "Prev": "497913241169721245",
+    "Next": "436815758175087782",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "I'm glad to hear that the Telvanni threat in Odirniran has ended. Please take these 500 drakes for a job well done.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "milyn faram",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Odirniran",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HH_Odirniran 100",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 15",
+      "Player->AddItem Gold_001 500",
+      "Player->ModReputation 1"
+    ]
+  },
+  "436815758175087782": {
+    "Prev": "2678283224267591",
+    "Next": "8317258352062724216",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "You've already killed the Necromancer in Odirniran? Good work. Take these 500 drakes for anticipating my needs so well.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "milyn faram",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "HH_Odirniran",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HH_Odirniran 100",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 15",
+      "Player->AddItem Gold_001 500",
+      "Player->ModReputation 1"
+    ]
+  },
+  "8317258352062724216": {
+    "Prev": "436815758175087782",
+    "Next": "2714427483100712578",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Go to Odirniran, on Azura's coast, west of the shrine to Azura and south of the old Dwemer ruins of Nchurdamz. I will mark these ruins on your map. If there are any survivors, ask them what needs to be done. If there are no survivors, take revenge on the foul Telvanni there.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EscortMerchant",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HH_Odirniran 10",
+      "ShowMap \"Nchurdamz\"",
+      "StartScript ShishiOdirniranFights"
+    ]
+  },
+  "2714427483100712578": {
+    "Prev": "8317258352062724216",
+    "Next": "1898320144106203",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Hlaalu",
+    "SpeakerCell": "Odirniran",
+    "PlayerFaction": "Hlaalu",
+    "Text": "House Hlaalu will be able to hold Odirniran now, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Odirniran",
+        "Value": 90.0
+      }
+    ],
+    "Script": []
+  },
+  "1898320144106203": {
+    "Prev": "2714427483100712578",
+    "Next": "2374698062158824386",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Hlaalu",
+    "SpeakerCell": "Odirniran",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Yes, this is Odirniran. We've been having trouble with a Telvanni necromancer and one of our party was captured. Speak with our leader, Remasa Othril.",
+    "Filters": [],
+    "Script": []
+  },
+  "2374698062158824386": {
+    "Prev": "1898320144106203",
+    "Next": "272792969286132687",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "milyn faram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "It is so much happier here now that Remasa Othril is dead. Now, go away, I have work to do.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_Odirniran",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "272792969286132687": {
+    "Prev": "2374698062158824386",
+    "Next": "9819186011414313638",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "milyn faram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Yes, quite. Why not take a sample of these new scrolls and examine them yourself? Now, if you will excuse me, I really must get back to work now.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HT_Odirniran 60",
+      "Player->AddItem sc_summondaedroth_hto 7",
+      "ModDisposition 10",
+      "Goodbye"
+    ]
+  },
+  "9819186011414313638": {
+    "Prev": "272792969286132687",
+    "Next": "270801196124933459",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "milyn faram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Scrolls of summoning are, without exception, based on the Law of Similarity as you must know. While others use parts of the creature, such as Daedra skin for summoning Daedra, I have developed a new methods, based on a recovered Dwemer machine. My scrolls only have an image of the Daedra, which works almost as well as a Daedra skin or heart... And at a fraction of the cost.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Choice \"Keep listening\" 1 \"Leave\" 4"
+    ]
+  },
+  "270801196124933459": {
+    "Prev": "9819186011414313638",
+    "Next": "22684177692838822859",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "milyn faram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "You are not interested in my research? Fine, then. I have important work to do.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "22684177692838822859": {
+    "Prev": "270801196124933459",
+    "Next": "11507187952797017888",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "milyn faram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Is Remasa Othril is dead, yes, but you also killed her sister, Vedelea Othril. I was... saving her for an experiment of mine and now you've ruined it. Report back to Aryon that I am well. And don't come here every again.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "remasa othril",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "vedelea othril",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HT_Odirniran 50",
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "11507187952797017888": {
+    "Prev": "22684177692838822859",
+    "Next": "11002209233194124149",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "milyn faram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Is Remasa Othril dead? She is? Excellent. I can get on with my experiments. Since you helped me with these meddling Hlaalu, I might be persuaded to share the results of my research.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "remasa othril",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HT_Odirniran 50",
+      "ModDisposition -10",
+      "Choice \"Listen to what he has to say.\" 2 \"Not interested.\" 4"
+    ]
+  },
+  "11002209233194124149": {
+    "Prev": "11507187952797017888",
+    "Next": "8472139863010721714",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "milyn faram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Yes, Odirniran is my home. If you wish to help me, please kill Remasa Othril, the leader of these Hlaalu who pester me. Feel free to kill my servants. I can usually raise them again. Also, please leave Vedelea Othril to me. I do not want her damaged or altered in any way... At least not by you.",
+    "Filters": [],
+    "Script": [
+      "Journal HT_Odirniran 30"
+    ]
+  },
+  "8472139863010721714": {
+    "Prev": "11002209233194124149",
+    "Next": "12417209471112418206",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "milyn faram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Odirniran is mine. You shall not take it from me.",
+    "Filters": [],
+    "Script": []
+  },
+  "12417209471112418206": {
+    "Prev": "8472139863010721714",
+    "Next": "619420457326116754",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "You dealt with the problems in Odirniran.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_Odirniran",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "619420457326116754": {
+    "Prev": "12417209471112418206",
+    "Next": "518916878171920739",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Yes, Milyn Faram sent me a messenger who spoke highly of you. Perhaps the Hlaalu will not be so hasty to oppose us next time. Why not take this book? It shows one of the many uses of illusions. I have also been researching how to make a Staff of Hunger. It is not quite perfected, but perhaps you could find some use for it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_Odirniran",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Journal HT_Odirniran 100",
+      "Player->AddItem bookskill_illusion3 1",
+      "Player->AddItem \"silver staff of hunger\" 1",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 5",
+      "Player->ModReputation 1"
+    ]
+  },
+  "518916878171920739": {
+    "Prev": "619420457326116754",
+    "Next": "29703317042670732378",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Yes, the leader of the Hlaalu in Odirniran has been retired... It is unfortunate that Milyn Faram is also dead. His research was unusual, but promising.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "remasa othril",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "milyn faram",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HT_Odirniran 100",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 5",
+      "Player->ModReputation 1"
+    ]
+  },
+  "29703317042670732378": {
+    "Prev": "518916878171920739",
+    "Next": "28906155033167413424",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Yes, the leader of the Hlaalu in Odirniran has been retired... Perhaps they will not be so hasty to oppose us next time.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "remasa othril",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HT_Odirniran 100",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 5",
+      "Player->ModReputation 1"
+    ]
+  },
+  "28906155033167413424": {
+    "Prev": "29703317042670732378",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "It is on Azura's coast, west of the shrine to Azura and south of the old Dwemer ruins of Nchurdamz. I will mark these ruins on your map. Go there and speak with Milyn Faram who is under attack by forces of House Hlaalu. He is probably making his last stand at the top of his tower.",
+    "Filters": [],
+    "Script": [
+      "Journal HT_Odirniran 10",
+      "ShowMap \"Nchurdamz\"",
+      "StartScript ShishiOdirniranFights"
+    ]
+  }
+}

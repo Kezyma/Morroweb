@@ -1,0 +1,145 @@
+{
+  "123233179153245831": {
+    "Prev": "",
+    "Next": "103918463143143475",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Larienna Macrina",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "All right then. Let's go. Remember, let me know if you require aid -- you watch my back and I'll watch yours. Take point and root out the threats. The treasure is yours -- and Hrelvesuu is mine.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "FG_Nchurdamz",
+        "Value": 11.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_Nchurdamz",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal \"FG_Nchurdamz\" 20",
+      "ModDisposition 10",
+      "AIFollow, Player, 0, 0, 0, 0"
+    ]
+  },
+  "103918463143143475": {
+    "Prev": "123233179153245831",
+    "Next": "27908313681285523350",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Larienna Macrina",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Fine. When you work up the gumption, lemme know. Otherwise, I'm sure someone else will come along and share the riches with me soon.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "FG_Nchurdamz",
+        "Value": 11.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_Nchurdamz",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal FG_Nchurdamz 11",
+      "ModDisposition -2"
+    ]
+  },
+  "27908313681285523350": {
+    "Prev": "103918463143143475",
+    "Next": "7939321882060124566",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Larienna Macrina",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah -- I knew you would return. The call of battle is strong, is it not?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_Nchurdamz",
+        "Value": 11.0
+      }
+    ],
+    "Script": [
+      "Choice ,\"Let's go.\", 3, \"You are insane.\", 4"
+    ]
+  },
+  "7939321882060124566": {
+    "Prev": "27908313681285523350",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Larienna Macrina",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have scoured the world over hunting a specific Daedroth with whom I have had issues in the past. When last we battled, I struck her a blow so grievous that she fled via spell to her dark sanctuary. This is that place. The beast's name is Hrelvesuu. She is weak, and likely recuperating from the damage I caused her. This place is well defended and I need someone to watch my back. You can have whatever \"treasure\" you can find in there. I seek only vengeance. What say you?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_Nchurdamz",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice ,\"I'm ready.\", 3, \"I cannot help you.\", 4"
+    ]
+  }
+}

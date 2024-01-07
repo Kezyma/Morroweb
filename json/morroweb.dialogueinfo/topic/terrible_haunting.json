@@ -1,0 +1,66 @@
+{
+  "219201920169165653": {
+    "Prev": "",
+    "Next": "274962412726645629",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "jeanne",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've done it! I can't thank you enough. Here, take this as a token of my gratitude. It is a good weapon; one of my best. Perhaps now my customers will return to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_Bone",
+        "Value": 90.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "EB_Bone",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Bone\" 110",
+      "Player->AddItem \"Steel Shardmauler\" 1"
+    ]
+  },
+  "274962412726645629": {
+    "Prev": "219201920169165653",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "jeanne",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Just recently, a dwarven spirit appeared in my shop. I don't know why it's here, or what it wants, but it scares off all of my customers. This guard won't do a thing about it; he thinks it would be bad luck to disturb the spirit. If you can get rid of the thing, I'd be very grateful.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_Bone",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Bone\" 80"
+    ]
+  }
+}

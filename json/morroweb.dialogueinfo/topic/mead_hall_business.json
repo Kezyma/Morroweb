@@ -1,0 +1,441 @@
+{
+  "12184241311417222600": {
+    "Prev": "",
+    "Next": "3222013492445325239",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "svenja snow-song",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The mead has already arrived, my chieftain.  It is upstairs in your quarters.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_MeadHall_b",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "3222013492445325239": {
+    "Prev": "12184241311417222600",
+    "Next": "757932010554814205",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "svenja snow-song",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The mead has arrived! We now have plenty to sell. Oh, and I've seen to it that three cases of Skyrim's finest honey wine have been placed upstairs in your quarters, my chieftain. Drink and be merry!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_MeadHall_b",
+        "Value": 10.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "localdaysPassed",
+        "Value": 7.0
+      }
+    ],
+    "Script": [
+      "Journal BM_MeadHall_b 20"
+    ]
+  },
+  "757932010554814205": {
+    "Prev": "3222013492445325239",
+    "Next": "31549113611924718638",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "svenja snow-song",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The mead has been ordered, great %PCName, but has not yet arrived from Skyrim.  As I mentioned before, it will take a total of seven days for the mead to get here.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_MeadHall_b",
+        "Value": 10.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "localdaysPassed",
+        "Value": 7.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "31549113611924718638": {
+    "Prev": "757932010554814205",
+    "Next": "98225224317696268",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "svenja snow-song",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have already collected the profits for this week, %PCName.  Talk to me again when seven days have passed, and I will give you the gold I have collected.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_MeadHall_b",
+        "Value": 20.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "localdaysPassed",
+        "Value": 7.0
+      }
+    ],
+    "Script": []
+  },
+  "98225224317696268": {
+    "Prev": "31549113611924718638",
+    "Next": "31724175601144029227",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "svenja snow-song",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We have plenty of mead in stock, %PCName, and you can collect the profits every week. Here is the gold we earned this week.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_MeadHall_b",
+        "Value": 20.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "localdaysPassed",
+        "Value": 7.0
+      }
+    ],
+    "Script": [
+      "player->additem \"gold_001\" 50",
+      "set LocalDaysPassed to 0"
+    ]
+  },
+  "31724175601144029227": {
+    "Prev": "98225224317696268",
+    "Next": "1471447882196521162",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "svenja snow-song",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Great chieftain of Thirsk, I am afraid you are unable to collect any profits from the sale of mead.  We have run low on the sweet nectar, and don't have enough to make a profit on.  If you direct me to order more mead from Skyrim, I will be happy to do so.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_MeadHall_b",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "1471447882196521162": {
+    "Prev": "31724175601144029227",
+    "Next": "139422788656786719",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "svenja snow-song",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, great chieftain. I will put in the order for mead. It should arrive from Skyrim in about a week.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_MeadHall_b",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal BM_MeadHall_b 10",
+      "set LocalDaysPassed to 0"
+    ]
+  },
+  "139422788656786719": {
+    "Prev": "1471447882196521162",
+    "Next": "240902503825510288",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "svenja snow-song",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The hunters have already returned, great chieftain, and you have been given the snow bear and snow wolf pelts. They killed as many of the elusive creatures as they could find, and assured me it would be no use going out again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_MeadHall_c",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "240902503825510288": {
+    "Prev": "139422788656786719",
+    "Next": "146388062228989431",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "svenja snow-song",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The hunters are still out in the wild, %PCName. Remember, snow bears and snow wolves are elusive creatures, and they may take some time to find and kill. Check back in a few days.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_MeadHall_c",
+        "Value": 10.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "localdaysPassed",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "146388062228989431": {
+    "Prev": "240902503825510288",
+    "Next": "15162176181071720835",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "svenja snow-song",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The hunters have returned, %PCName. Here are the snow bear and snow wolf pelts they were able to secure. The heads of these creatures have been mounted and placed on the walls upstairs, oh great chieftain.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "GreaterEqual",
+        "Id": "localdaysPassed",
+        "Value": 5.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_MeadHall_c",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "player->additem \"ingred_snowbear_pelt_unique\" 5",
+      "player->additem \"ingred_snowwolf_pelt_unique\" 5",
+      "journal BM_MeadHall_c 20"
+    ]
+  },
+  "15162176181071720835": {
+    "Prev": "146388062228989431",
+    "Next": "735327128316589149",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "svenja snow-song",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, my chieftain. I will send out the hunters. They will kill as many snow bears and snow wolves as they are able, and bring back their pelts. Brynjolfr the smith can use these pelts to craft some custom armor. These are elusive creatures, however, and it may be some time before the hunters return. Check back in a few days.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_MeadHall_c",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "journal BM_MeadHall_c 10"
+    ]
+  },
+  "735327128316589149": {
+    "Prev": "15162176181071720835",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "svenja snow-song",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As chieftain of Thirsk, there are certain things you may order the clan to do. As your second-in-command, I will make sure your orders are carried out. So, what is your command, my lord?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Order mead from Skyrim\" 1  \"Collect mead hall profits\" 2 \"Send out hunters to kill snow bears and snow wolves, and return with their pelts\" 3"
+    ]
+  }
+}

@@ -1,0 +1,421 @@
+{
+  "2820632185475114180": {
+    "Prev": "",
+    "Next": "611315073149616077",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "These Blades agents offer training... not free, of course, but cheap for a fellow agent. Look for Rithleen, Tyermaillin, and Nine-Toes here in Balmora. In Caldera, see Surane Leoriane. In Ald'ruhn, see Gildan. Sjorvar Horse-Mouth lives in a hut west of Ald'ruhn. And Elone the Scout can be found at Arrille's Tradehouse in Seyda Neen.",
+    "Filters": [],
+    "Script": []
+  },
+  "611315073149616077": {
+    "Prev": "2820632185475114180",
+    "Next": "299520821674915083",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 0,
+    "SpeakerId": "rithleen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Blades",
+    "Text": "Yes, I offer training, but only to Blades.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "blades_rithleen",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "299520821674915083": {
+    "Prev": "611315073149616077",
+    "Next": "2357887331113424888",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 0,
+    "SpeakerId": "rithleen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Blades",
+    "Text": "Yes. We aren't trying to make a profit off our fellow Blades, and as you rise in rank, your discount increases. Still, we have to live, and training isn't cheap. Well... basic skill training -- if you don't know very much -- can be pretty cheap. But advanced skill training -- for example, in your major specialties, that can get expensive. Here. I don't use this cuirass and helm any more. Maybe you can get a few drakes for it, and put them in your personal training fund.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcLevel",
+        "Compare": "LessEqual",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "player->additem steel_cuirass 1",
+      "player->additem steel_helm 1",
+      "journal blades_rithleen 1"
+    ]
+  },
+  "2357887331113424888": {
+    "Prev": "299520821674915083",
+    "Next": "199125112316114851",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 0,
+    "SpeakerId": "tyermaillin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Blades",
+    "Text": "Yes, I offer training, but only to Blades.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "blades_tyermaillin",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "199125112316114851": {
+    "Prev": "2357887331113424888",
+    "Next": "14994101652128814575",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 0,
+    "SpeakerId": "tyermaillin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Blades",
+    "Text": "Basic skill training is cheap. We give you discounts for higher rank in the Blades, and we keep our prices low. But advanced training is never cheap, even from us. Look. To get you started, here's my old alembic. Maybe you can get a few gold for it, or use it yourself.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcLevel",
+        "Compare": "LessEqual",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "player->additem apparatus_j_alembic_01 1",
+      "journal blades_tyermaillin 1"
+    ]
+  },
+  "14994101652128814575": {
+    "Prev": "199125112316114851",
+    "Next": "2322012302362129478",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 0,
+    "SpeakerId": "nine_toes",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Blades",
+    "Text": "Yes, I offer training, but only to Blades.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "blades_Nine_Toes",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2322012302362129478": {
+    "Prev": "14994101652128814575",
+    "Next": "2971530311182214951",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 0,
+    "SpeakerId": "nine_toes",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Blades",
+    "Text": "The basics we can teach you, won't cost much. Advanced training, though... that's expensive. If you're already skilled, you're much harder to teach. Maybe I can help you out. Here's a little moon sugar, on the house. You do know that trade in moon sugar and skooma is against the law, and most alchemists and apothecaries won't buy it. But Khajiit generally will. Try Ajira at the Balmora Mages Guild, or Ra'Virr, the trader in Balmora. Sell the sugar, and start saving for training.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcLevel",
+        "Compare": "LessEqual",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "player->additem ingred_moon_sugar_01 4",
+      "journal blades_Nine_Toes 1"
+    ]
+  },
+  "2971530311182214951": {
+    "Prev": "2322012302362129478",
+    "Next": "1915820015225438668",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 0,
+    "SpeakerId": "surane leoriane",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Blades",
+    "Text": "Yes, I offer training, but only to Blades.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "blades_Surane",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1915820015225438668": {
+    "Prev": "2971530311182214951",
+    "Next": "20823195772998220732",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 0,
+    "SpeakerId": "surane leoriane",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Blades",
+    "Text": "Of course we can train you. You pay, of course, but much less than you would outside the Blades. And may I suggest you find someone to teach you the Detect Enchantment spell? Whenever you're exploring, it's good to know where enchanted items are. Sometimes that's where dangerous enemies are... HOLDING the enchanted items. And sometimes that shows items hidden from view in deep pools or on high ledges. See Llaros Uvayn the Nightblade at the Caldera Governor's Hall.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcLevel",
+        "Compare": "LessEqual",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "journal blades_Surane 1"
+    ]
+  },
+  "20823195772998220732": {
+    "Prev": "1915820015225438668",
+    "Next": "53217046150488862",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 0,
+    "SpeakerId": "gildan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Blades",
+    "Text": "Yes, I offer training, but only to Blades.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "blades_Gildan",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "53217046150488862": {
+    "Prev": "20823195772998220732",
+    "Next": "922016956251251406",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 0,
+    "SpeakerId": "gildan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Blades",
+    "Text": "Certainly I offer basic training at low prices to colleagues. But even at my low prices, advanced training isn't cheap. Sorry, but that's the way it is. Look. Can I make a suggestion? Go see Wayn at the Balmora Guild of Fighters. Know what a jink blade is? It has a Paralyze enchantment. And a spider blade has a Poison enchantment. They're not considered honorable weapons, and most smiths don't sell them. But they sure come in handy.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcLevel",
+        "Compare": "LessEqual",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "journal blades_Gildan 1"
+    ]
+  },
+  "922016956251251406": {
+    "Prev": "53217046150488862",
+    "Next": "31218253942640724410",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 0,
+    "SpeakerId": "sjorvar horse-mouth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Blades",
+    "Text": "Yes, I offer training, but only to Blades.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "blades_Sjorvar",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "31218253942640724410": {
+    "Prev": "922016956251251406",
+    "Next": "928375942575631807",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 0,
+    "SpeakerId": "sjorvar horse-mouth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Blades",
+    "Text": "Yes, I can train you. And maybe offer a suggestion. If you're going exploring, get yourself an enchanted weapon, or some scrolls, or both. Can't harm a ghost without an enchanted weapon or magic. Galbedir at the Balmora Mages Guild usually has a selection, and can also enchant items for you -- IF you can afford the charged soul gems she sells, and IF you can afford her enchanting service.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcLevel",
+        "Compare": "LessEqual",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "journal blades_Sjorvar 1"
+    ]
+  },
+  "928375942575631807": {
+    "Prev": "31218253942640724410",
+    "Next": "10141134311208414374",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 0,
+    "SpeakerId": "elone",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Blades",
+    "Text": "Yes, I offer training, but only to Blades.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "blades_Elone",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "10141134311208414374": {
+    "Prev": "928375942575631807",
+    "Next": "8959207152222113989",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 0,
+    "SpeakerId": "elone",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Blades",
+    "Text": "Normally I don't offer training, but since you're one of us, I'll just charge you for my time and effort. But the best way to learn is to teach yourself. Why don't I give you my old copy of 'Guide to Vvardenfell'. If you're going to work with us here, you'd best know something about the land and the people.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcLevel",
+        "Compare": "LessEqual",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "player->additem bk_guide_to_vvardenfell 1",
+      "journal blades_Elone 1"
+    ]
+  },
+  "8959207152222113989": {
+    "Prev": "10141134311208414374",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Blades",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I offer training, but only to Blades.",
+    "Filters": [],
+    "Script": []
+  }
+}

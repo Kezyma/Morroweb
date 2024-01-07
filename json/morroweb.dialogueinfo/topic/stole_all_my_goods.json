@@ -1,0 +1,334 @@
+{
+  "11953306463129123950": {
+    "Prev": "",
+    "Next": "23830139732576429134",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tinos drothan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Come back when you've got all my glass.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_AngryTrader",
+        "Value": 23.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_AngryTrader",
+        "Value": 100.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "ingred_raw_glass_tinos",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "23830139732576429134": {
+    "Prev": "11953306463129123950",
+    "Next": "124578435416012955",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tinos drothan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've got my glass, and you've gained some knowledge. Not a bad bargain. Off with you now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_AngryTrader",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "124578435416012955": {
+    "Prev": "23830139732576429134",
+    "Next": "1016458152883123224",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tinos drothan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My glass, and those fetchers left to rot...excellent! Teach criminals like that to meddle with an honest trader. Now, let me tell you about a few tricks of the trade. I think they'll come in handy for you....",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_raw_glass_tinos",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "dondir",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "alvur hleran",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem \"Ingred_Raw_Glass_Tinos\" 10",
+      "AddItem \"Ingred_Raw_Glass_Tinos\" 10",
+      "Player->ModMercantile 5",
+      "MessageBox \"Your Mercantile skill has increased.\"",
+      "Journal \"MV_AngryTrader\" 110",
+      "Goodbye"
+    ]
+  },
+  "1016458152883123224": {
+    "Prev": "124578435416012955",
+    "Next": "12955751791531361",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tinos drothan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've gotten my glass back. Excellent. Too bad you didn't kill them both, but one is better than none. Well, a deal's a deal, so let me tell you a little about the merchant trade....",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_raw_glass_tinos",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "dondir",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "alvur hleran",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem \"Ingred_Raw_Glass_Tinos\" 10",
+      "AddItem \"Ingred_Raw_Glass_Tinos\" 10",
+      "Player->ModMercantile 3",
+      "MessageBox \"Your Mercantile skill has increased.\"",
+      "Journal \"MV_AngryTrader\" 105",
+      "Goodbye"
+    ]
+  },
+  "12955751791531361": {
+    "Prev": "1016458152883123224",
+    "Next": "2211828993356731823",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tinos drothan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've gotten my glass back. Excellent. Too bad you didn't kill them both, but one is better than none. Well, a deal's a deal, so let me tell you a little about the merchant trade....",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_raw_glass_tinos",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "dondir",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "alvur hleran",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem \"Ingred_Raw_Glass_Tinos\" 10",
+      "AddItem \"Ingred_Raw_Glass_Tinos\" 10",
+      "Player->ModMercantile 3",
+      "MessageBox \"Your Mercantile skill has increased.\"",
+      "Journal \"MV_AngryTrader\" 105",
+      "Goodbye"
+    ]
+  },
+  "2211828993356731823": {
+    "Prev": "12955751791531361",
+    "Next": "32452274732759623696",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tinos drothan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've gotten my glass back. Excellent. Damn shame you didn't kill those traitorous sons of bitches, but I'll take what I can get. Well, a deal's a deal, so let me tell you a little about the merchant trade....",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_raw_glass_tinos",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "alvur hleran",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "dondir",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem \"Ingred_Raw_Glass_Tinos\" 10",
+      "AddItem \"Ingred_Raw_Glass_Tinos\" 10",
+      "Player->ModMercantile 2",
+      "MessageBox \"Your Mercantile skill has increased.\"",
+      "Journal \"MV_AngryTrader\" 100",
+      "Goodbye"
+    ]
+  },
+  "32452274732759623696": {
+    "Prev": "2211828993356731823",
+    "Next": "245311060310745346",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tinos drothan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, get moving, then. Go on! Go!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_AngryTrader\" 23"
+    ]
+  },
+  "245311060310745346": {
+    "Prev": "32452274732759623696",
+    "Next": "247051467517838384",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tinos drothan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Lord, Mother, and Wizard! What are you still doing here? Go away!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_AngryTrader\" 25",
+      "ModDisposition -10"
+    ]
+  },
+  "247051467517838384": {
+    "Prev": "245311060310745346",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tinos drothan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, a whole shipment of raw glass. If you can return my goods, and kill those bastards who took them, I'd be willing to teach you a couple trader's secrets that could save you plenty of money in the future. My \"guards,\" Alvur Hleran and Dondir, probably haven't gone far. Stupid fetchers are probably holed up somewhere near here, counting my loot! Check to the southeast. That's the direction they headed.",
+    "Filters": [],
+    "Script": [
+      "Journal \"MV_AngryTrader\" 20",
+      "Choice \"I can help you recover your goods.\" 1 \"Sorry, I don't have time for you right now.\" 2"
+    ]
+  }
+}

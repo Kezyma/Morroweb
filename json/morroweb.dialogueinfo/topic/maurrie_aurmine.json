@@ -1,0 +1,73 @@
+{
+  "482124058322145462": {
+    "Prev": "",
+    "Next": "18467256072786617284",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "barnand erelie",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah...so you're the one who brought Maurrie and Nelos together. Nothing has been seen or heard of them since then, but the bards are singing songs of their love. Well, done %PCName! Please, take these as a token of my gratitude.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_VictimRomance",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "ModDisposition 20",
+      "AddTopic \"Maurrie and Nelos\"",
+      "Journal \"MV_VictimRomance\" 110",
+      "Player->AddItem \"p_restore_health_e\" 3",
+      "StartScript maurrieScript"
+    ]
+  },
+  "18467256072786617284": {
+    "Prev": "482124058322145462",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "emusette bracques",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ah...so you're the one who brought Maurrie and Nelos together. Nothing has been seen or heard of them since then, but the bards are singing songs of their love. Well, done %PCName! Please, take these as a token of my gratitude.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_VictimRomance",
+        "Value": 105.0
+      }
+    ],
+    "Script": [
+      "ModDisposition 20",
+      "AddTopic \"Maurrie and Nelos\"",
+      "Journal \"MV_VictimRomance\" 115",
+      "Player->AddItem \"p_restore_health_e\" 3",
+      "StartScript maurrieScript"
+    ]
+  }
+}

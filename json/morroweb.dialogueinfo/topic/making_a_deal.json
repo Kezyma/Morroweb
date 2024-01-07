@@ -1,0 +1,178 @@
+{
+  "2631229267581115376": {
+    "Prev": "",
+    "Next": "13701219872279110392",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "pemenie",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Our deal is complete, friend. You've already robbed me blind, taking my precious boots. Begone!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "MV_TraderAbandoned",
+        "Value": 90.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "13701219872279110392": {
+    "Prev": "2631229267581115376",
+    "Next": "10590112982161412214",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "pemenie",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We don't have a deal.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_TraderAbandoned",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "10590112982161412214": {
+    "Prev": "13701219872279110392",
+    "Next": "2776131344260117780",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "pemenie",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You know the deal. You get me to Gnaar Mok, and I'll give you 50 septims. What? Oh, sorry. The Boots of Blinding Speed, then.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_TraderAbandoned",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_TraderAbandoned",
+        "Value": 90.0
+      }
+    ],
+    "Script": []
+  },
+  "2776131344260117780": {
+    "Prev": "10590112982161412214",
+    "Next": "6620313491186629988",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "pemenie",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent...although, that seems to be quite a high payment. The Boots of Blinding Speed are a rare and wondrous thing. Never mind. I've made the deal, and I'm an honest woman. Let's get going.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_TraderAbandoned\" 20",
+      "\"Pemenie\"->AiFollow Player 0,17153,30966,795,0",
+      "Goodbye"
+    ]
+  },
+  "6620313491186629988": {
+    "Prev": "2776131344260117780",
+    "Next": "27049231571584021920",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "pemenie",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? Well, no matter. I'm sure someone else will be along shortly to take me up on my offer. Good day.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_TraderAbandoned\" 30",
+      "Goodbye"
+    ]
+  },
+  "27049231571584021920": {
+    "Prev": "6620313491186629988",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "pemenie",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Look, I'm just a poor merchant just trying to make my way to Gnaar Mok with some trade goods. I could use an escort, though, since mine seems to have buggered off. If you'd be willing to take me there, I'll give you...no, I shouldn't. Although, it is a dangerous trip. All right, I'll give you the Boots of Blinding Speed, although I'll be overpaying you by quite a bit.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_TraderAbandoned",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "AddTopic \"Pemenie the trader\"",
+      "Journal \"MV_TraderAbandoned\" 10",
+      "Choice \"I can take you to Gnaar Mok.\" 1 \"Sorry. You're on your own.\" 2"
+    ]
+  }
+}

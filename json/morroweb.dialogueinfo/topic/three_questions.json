@@ -1,0 +1,205 @@
+{
+  "2067226471295111341": {
+    "Prev": "",
+    "Next": "150601249108856709",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "I have answered your three questions.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_SpyBaladas",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "150601249108856709": {
+    "Prev": "2067226471295111341",
+    "Next": "2578295643110813657",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "You may ask your three questions. Did you not say your last question was about the Dwemer language?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_SpyBaladas",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "2578295643110813657": {
+    "Prev": "150601249108856709",
+    "Next": "13600237661108617260",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "You may ask your three questions. You said something about Dwemer artifacts?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_SpyBaladas",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "13600237661108617260": {
+    "Prev": "2578295643110813657",
+    "Next": "8262272013105723042",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "You may ask your three questions. You want to know first about the disappearance of the Dwarves?",
+    "Filters": [],
+    "Script": []
+  },
+  "8262272013105723042": {
+    "Prev": "13600237661108617260",
+    "Next": "175411905227051859",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mallam ryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "You already asked Baladas Demnevanni the three questions.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_SpyBaladas",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "175411905227051859": {
+    "Prev": "8262272013105723042",
+    "Next": "121032320820990316",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mallam ryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "You have spoken with Baladas? Yes, I see. Archmagister Gothren will be pleased with these answers and will be quite interested to know that Baladas is alive and well. I should give you something... Here, take these messenger scrolls. You may find them useful.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_SpyBaladas",
+        "Value": 71.0
+      }
+    ],
+    "Script": [
+      "Journal HT_SpyBaladas 100",
+      "Player->AddItem sc_messengerscroll 3",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 5"
+    ]
+  },
+  "121032320820990316": {
+    "Prev": "175411905227051859",
+    "Next": "279935469262087704",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mallam ryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "So you have spoken with him? And what did he say? Well, no matter. I did not believe you could convince him to answer all the questions. But Archmagister Gothren will be quite interested to know that Baladas is alive and well.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_SpyBaladas",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal HT_SpyBaladas 100",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 5"
+    ]
+  },
+  "279935469262087704": {
+    "Prev": "121032320820990316",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "mallam ryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Baladas Demnevanni lives in Arvs Drelen which is in Gnisis. You can use the Mages Guild teleport service to get to Ald'ruhn, and then take a Silt Strider there. Go there and ask him about the Disappearance of the Dwarves, Dwemer artifacts, and the Dwemer language. You do not have to get an answer from him, simply asking the three questions is enough.",
+    "Filters": [],
+    "Script": [
+      "Journal HT_SpyBaladas 10"
+    ]
+  }
+}

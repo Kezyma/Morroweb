@@ -1,0 +1,89 @@
+{
+  "28001277993062423758": {
+    "Prev": "",
+    "Next": "14519119852331525915",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see you've gotten some help in the effort to discover the smuggling ring. Report to me when you have more information.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Smugglers",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Smugglers",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "14519119852331525915": {
+    "Prev": "28001277993062423758",
+    "Next": "1231127201388311321",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As I said, please choose either Gaea Artoria or Saenus Lusius to aid you in this endeavor.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Smugglers",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "1231127201388311321": {
+    "Prev": "14519119852331525915",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "falx carius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I would like you to work with one of my soldiers on this case. There are two available to you, and they are two of the best here at Fort Frostmoth: Saenus Lusius and Gaea Artoria. You'll find Lusius in the General Quarters, and Artoria in the General Quarters, Upper Level. Speak with them and decide which will be your companion. When you have unearthed the smuggling ring, report to me. I leave how you deal with the smugglers to your discretion.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Smugglers",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Smugglers 20"
+    ]
+  }
+}

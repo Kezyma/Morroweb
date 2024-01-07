@@ -243,7 +243,7 @@ function mwb_magicEffectTable() {
                 key,
                 key,
                 dataObj["School"],
-                dataObj["BaseCost"],
+                dataObj["Cost"],
                 dataObj["Speed"],
                 dataObj["Size"],
                 dataObj["SizeCap"],
@@ -534,7 +534,7 @@ function mwb_weaponTable() {
                         dataSet.push([
                             key,
                             key,
-                            dataObj["WeaponType"],
+                            dataObj["Type"],
                             dataObj["Health"],
                             dataObj["Enchantment"],
                             dataObj["Chop"],
@@ -555,7 +555,7 @@ function mwb_weaponTable() {
                             return mwb_itemIcon(obj["Name"], obj["Icon"], true, false, true)
                         }
                     },
-                    { title: "Weapon Type" },
+                    { title: "Type" },
                     { title: "Health" },
                     { title: "Enchantment" },
                     { title: "Chop", render: (val) => `${val[0]}-${val[1]}` },

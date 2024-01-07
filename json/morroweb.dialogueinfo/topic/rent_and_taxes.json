@@ -1,0 +1,611 @@
+{
+  "75671752212717781": {
+    "Prev": "",
+    "Next": "2922319215230326375",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rovone arvel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've heard that Odral Helvi is... no longer with House Hlaalu. Things will be back to normal once I find a new caretaker.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EbonyDelivery",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "2922319215230326375": {
+    "Prev": "75671752212717781",
+    "Next": "283368661298257258",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rovone arvel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go to Odral Helvi in Caldera. Give him the hundred drakes. I will meet with him when I am not so busy. Now if you'll excuse me?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_RentCollector",
+        "Value": 65.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "283368661298257258": {
+    "Prev": "2922319215230326375",
+    "Next": "3216014843229255888",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rovone arvel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Odral is demanding fifty drakes from the farmers under my protection? I will deal with this matter myself. In the meantime, take these hundred drakes and return them to Odral Helvi.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_RentCollector",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HH_RentCollector 65",
+      "Player->AddItem Gold_001 100"
+    ]
+  },
+  "3216014843229255888": {
+    "Prev": "283368661298257258",
+    "Next": "1509231550499427378",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "manat varnan-adda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No, there's no way. I just can't afford it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_RentCollector",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "1509231550499427378": {
+    "Prev": "3216014843229255888",
+    "Next": "27765157561593924869",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "manat varnan-adda",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Fifty drakes?! I can't pay fifty drakes! I'll take this matter to Rovone Arvel.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_RentCollector",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HH_RentCollector 60"
+    ]
+  },
+  "27765157561593924869": {
+    "Prev": "1509231550499427378",
+    "Next": "21784285601702013673",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "llovyn andus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You killed my guar, Corky. Without him there's no way I can earn enough to pay Odral's new taxes. I think he just wants to chase us farmers off, but I'm not leaving. Not even if you kill me.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "guar_llovyn_unique",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_RentCollector",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "21784285601702013673": {
+    "Prev": "27765157561593924869",
+    "Next": "284079370478222353",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "llovyn andus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't have fifty drakes, but Corky's a good guar. He's worth fifty drakes, at least. If you don't want him, I'm sure Drulene Falen up near Ald'ruhn would be willing to take him off your hands.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "corkyFollow",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_RentCollector",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "284079370478222353": {
+    "Prev": "21784285601702013673",
+    "Next": "3473137512858525320",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "llovyn andus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't have fifty drakes. Look around if you want. I can't stop you. You can take my guar if you want.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_RentCollector",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HH_RentCollector 50"
+    ]
+  },
+  "3473137512858525320": {
+    "Prev": "284079370478222353",
+    "Next": "11265306233190727615",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've broken the rules of House Hlaalu, sweetie. It brings tears to my eyes when I think about your disloyalty. Maybe you can make amends and make everything better.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "11265306233190727615": {
+    "Prev": "3473137512858525320",
+    "Next": "96141035739312294",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I must say I am disappointed in you. Do you want to be a mere errand boy and assassin for the likes of Odral Helvi? Don't sell yourself short, dumpling.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_RentCollector",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "96141035739312294": {
+    "Prev": "11265306233190727615",
+    "Next": "21975375058242792",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You dealt with the situation well, sweetie pie.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_RentCollector",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "21975375058242792": {
+    "Prev": "96141035739312294",
+    "Next": "18019162552198323873",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Take the gold I just gave you and pay Odral Helvi yourself. Keep me informed of his actions and I will reward you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_RentCollector",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "18019162552198323873": {
+    "Prev": "21975375058242792",
+    "Next": "2444711313042219631",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A few drakes is nothing to one as worldy as you or I, dumpling. The farmers may not have five drakes to spare, much less fifty, and I suspect Odral merely wants them killed. Here, take these 500 drakes for keeping me informed and pay the rent yourself. Don't risk your succulent skin trying to find the farmers.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_RentCollector",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem Gold_001 500",
+      "Journal HH_RentCollector 70"
+    ]
+  },
+  "2444711313042219631": {
+    "Prev": "18019162552198323873",
+    "Next": "1953226065573929510",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't think so. You've been expelled. Until you make amends, I don't have to discuss business with you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1953226065573929510": {
+    "Prev": "2444711313042219631",
+    "Next": "27443193051814931196",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will put the land to good use.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_RentCollector",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "27443193051814931196": {
+    "Prev": "1953226065573929510",
+    "Next": "12161226421377532597",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already brought me the rent and taxes from the farmers.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_RentCollector",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "12161226421377532597": {
+    "Prev": "27443193051814931196",
+    "Next": "10881163352895231706",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You killed Manat and Llovyn? Now that the farmers are out of the way, I can put that land to better use. I believe we still have other business to discuss.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "manat varnan-adda",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "llovyn andus",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_RentCollector",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HH_RentCollector 110",
+      "Player->RemoveItem Gold_001 100",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 15",
+      "Player->ModReputation 1"
+    ]
+  },
+  "10881163352895231706": {
+    "Prev": "12161226421377532597",
+    "Next": "19083127232865015917",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hm. I must admit I did not think you could actually get the rent, %PCName. Well then, shall we discuss other business?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HH_RentCollector 100",
+      "Player->RemoveItem Gold_001 100",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition -5",
+      "Player->ModReputation 1"
+    ]
+  },
+  "19083127232865015917": {
+    "Prev": "10881163352895231706",
+    "Next": "2903831101632514757",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then go get it. I'm tired of waiting.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "2903831101632514757": {
+    "Prev": "19083127232865015917",
+    "Next": "54051711239624454",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you have the hundred drakes from  Manat Varnan-Adda and Llovyn Andus?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_RentCollector",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "54051711239624454": {
+    "Prev": "2903831101632514757",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The two farmers I want you to speak with are Manat Varnan-Adda and Llovyn Andus. Get fifty drakes from each of them and return to me. If they refuse to pay, kill them to set an example for others.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_ReplaceDocs",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HH_RentCollector 10"
+    ]
+  }
+}

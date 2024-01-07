@@ -1,0 +1,470 @@
+{
+  "19011276133174121216": {
+    "Prev": "",
+    "Next": "10228523674922289",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "You already brought me a copy of \"Antecedents of Dwemer Law.\"",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_DwemerLaw",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "10228523674922289": {
+    "Prev": "19011276133174121216",
+    "Next": "52686368290604787",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Good. This is the last of the three books I was looking for. Please accept these trinkets of mine. I no longer have any use for them.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_AntecedantsDwemerLaw",
+        "Value": 0.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "givenReward",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_ChroniclesNchuleft",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_FireAndFaith",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HT_DwemerLaw 100",
+      "Journal HT_DwemerLaw 130",
+      "Player->RemoveItem \"bk_AntecedantsDwemerLaw\" 1",
+      "AddItem \"bk_AntecedantsDwemerLaw\" 1",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 10",
+      "Set givenReward to 1",
+      "Player->AddItem \"ondusi's key\" 1",
+      "Player->AddItem \"amulet of admonition\" 1",
+      "Player->AddItem \"second barrier belt\" 1",
+      "Player->AddItem \"common_shoes_02_surefeet\" 1"
+    ]
+  },
+  "52686368290604787": {
+    "Prev": "10228523674922289",
+    "Next": "2215819110167722493",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Good. This is one of the three books I was looking for.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_AntecedantsDwemerLaw",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HT_DwemerLaw 100",
+      "Player->RemoveItem \"bk_AntecedantsDwemerLaw\" 1",
+      "AddItem \"bk_AntecedantsDwemerLaw\" 1",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 10"
+    ]
+  },
+  "2215819110167722493": {
+    "Prev": "52686368290604787",
+    "Next": "1220355191131617703",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "No. No tricks, %PCName. You do not have a copy of this book, and we both know it. Go find one before I lose my patience.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "1220355191131617703": {
+    "Prev": "2215819110167722493",
+    "Next": "4170183931997422042",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "If I knew where to find one, I would do it myself.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "4170183931997422042": {
+    "Prev": "1220355191131617703",
+    "Next": "15387256831498415691",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Have you found a copy of \"Antecedents of Dwemer Law?\"",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_DwemerLaw",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "15387256831498415691": {
+    "Prev": "4170183931997422042",
+    "Next": "28623184842176219318",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baladas demnevanni",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "This book is the most common of the ones I desire. Many scholars own a copy of this book. You need only find one.",
+    "Filters": [],
+    "Script": [
+      "Journal HT_DwemerLaw 5"
+    ]
+  },
+  "28623184842176219318": {
+    "Prev": "15387256831498415691",
+    "Next": "4344181461456621458",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ethes evos",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't have a copy I can spare.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_DwemerLaw",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "4344181461456621458": {
+    "Prev": "28623184842176219318",
+    "Next": "4932271822050113702",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ethes evos",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here. If there's anything else I can do for you, let me know.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HT_DwemerLaw 50",
+      "Player->RemoveItem Gold_001 300",
+      "Player->AddItem \"bk_AntecedantsDwemerLaw\" 1",
+      "AddItem Gold_001 300"
+    ]
+  },
+  "4932271822050113702": {
+    "Prev": "4344181461456621458",
+    "Next": "2165113336943529978",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ethes evos",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you change your mind, I will be here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "2165113336943529978": {
+    "Prev": "4932271822050113702",
+    "Next": "6734277462933311898",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ethes evos",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have a copy I will sell you for three hundred drakes. Much less than such a book is actually worth.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 300.0
+      }
+    ],
+    "Script": [
+      "Choice \"I agree. Here's 300 drakes.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "6734277462933311898": {
+    "Prev": "2165113336943529978",
+    "Next": "1776345992645813584",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ethes evos",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have a copy I will sell you for three hundred drakes. Much less than such a book is actually worth... But you don't look like you have 300 drakes to spare.",
+    "Filters": [],
+    "Script": []
+  },
+  "1776345992645813584": {
+    "Prev": "6734277462933311898",
+    "Next": "2067113803781732690",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "jobasha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Jobasha knows this book well. Do you wish to buy? Perhaps Jobasha has a copy...",
+    "Filters": [],
+    "Script": []
+  },
+  "2067113803781732690": {
+    "Prev": "1776345992645813584",
+    "Next": "2679445512950427211",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "codus callonus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ethes Evos was studying that book in the hopes of passing the Imperial Exams and moving to Cyrodiil. Perhaps he could make you a copy.",
+    "Filters": [],
+    "Script": []
+  },
+  "2679445512950427211": {
+    "Prev": "2067113803781732690",
+    "Next": "710323941870021649",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Bookseller",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Perhaps Jobasha in Vivec has a copy.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "710323941870021649": {
+    "Prev": "2679445512950427211",
+    "Next": "2887831296192128811",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edwinna elbert",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I know I purchased my own copy from Codus Callonus here in town. I think someone else asked for a copy, some local servant of House Redoran.",
+    "Filters": [],
+    "Script": []
+  },
+  "2887831296192128811": {
+    "Prev": "710323941870021649",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Mages Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Edwinna Elbert in Ald'ruhn is a scholar of the Dwemer. Ask her.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

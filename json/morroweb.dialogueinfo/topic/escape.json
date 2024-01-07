@@ -1,0 +1,232 @@
+{
+  "22014547216121258": {
+    "Prev": "",
+    "Next": "1122020813597119807",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "frelene acques",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You gave me the key already. I can get out on my own.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Stronghold",
+        "Value": 145.0
+      }
+    ],
+    "Script": []
+  },
+  "1122020813597119807": {
+    "Prev": "22014547216121258",
+    "Next": "34326888125527755",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "frelene acques",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thanks for getting me out, %PCName. Tell Percius I'm free.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Stronghold",
+        "Value": 144.0
+      }
+    ],
+    "Script": []
+  },
+  "34326888125527755": {
+    "Prev": "1122020813597119807",
+    "Next": "1511919980298518197",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "frelene acques",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We're on our way out. Let's hurry, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Stronghold",
+        "Value": 141.0
+      }
+    ],
+    "Script": []
+  },
+  "1511919980298518197": {
+    "Prev": "34326888125527755",
+    "Next": "196651877988842696",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "frelene acques",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "All right. I'll follow you. Once I'm out of the prison, I can make my own way from there.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "doorLocked",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HR_Stronghold 141",
+      "AiFollow Player 0 0 0 0 0"
+    ]
+  },
+  "196651877988842696": {
+    "Prev": "1511919980298518197",
+    "Next": "189921509300119250",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "frelene acques",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can't get out. You'll have to unlock the door.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "189921509300119250": {
+    "Prev": "196651877988842696",
+    "Next": "63567161180878781",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "frelene acques",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, this is it. I'll bide my time until the guards aren't watching. Then I'll make my escape. Tell Percius to expect me in a few days.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "key_vivec_hlaalu_cell",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HR_Stronghold 145",
+      "Player->RemoveItem key_vivec_hlaalu_cell 1"
+    ]
+  },
+  "63567161180878781": {
+    "Prev": "189921509300119250",
+    "Next": "641474311935828049",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "frelene acques",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't have the key yet. Go find the key and hand it to me between these bars.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "641474311935828049": {
+    "Prev": "63567161180878781",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "frelene acques",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "These ordinators are tough. If you open the door, we can make a run for it. Or, if you find the key to these cells, I'll bide my time and sneak out when the Ordinators aren't watching. All the guards use the same key for all the cells. I'm sure there's one somewhere nearby.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_Stronghold",
+        "Value": 130.0
+      }
+    ],
+    "Script": [
+      "Choice \"Let's make a run for it.\" 1 \"I'll give you the key.\" 2"
+    ]
+  }
+}

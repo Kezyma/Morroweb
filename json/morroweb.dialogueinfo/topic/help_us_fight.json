@@ -1,0 +1,310 @@
+{
+  "3241023336851719883": {
+    "Prev": "",
+    "Next": "25511301984329535",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled, %PCName. Make amends and speak with me again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "25511301984329535": {
+    "Prev": "3241023336851719883",
+    "Next": "272732589188839753",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "There's nothing more to be said about this.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_EnemyParley",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "272732589188839753": {
+    "Prev": "25511301984329535",
+    "Next": "291602494131264362",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "You already asked Percius Mercius to help us fight. I thank you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_EnemyParley",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "291602494131264362": {
+    "Prev": "272732589188839753",
+    "Next": "254595220250974745",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Well it sounds like Percius came through after all. I can already think of a way to make use of this In the meantime, here's some clink for your pockets.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_EnemyParley",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal TG_EnemyParley 100",
+      "Player->AddItem Gold_001 500",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "254595220250974745": {
+    "Prev": "291602494131264362",
+    "Next": "15356739472554032",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Unfortunately, I heard Mercius has been killed. That's a shame; he was a good man. Well, we'll have to explore other avenues. There are other jobs to be done.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "persius mercius",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TG_EnemyParley 110"
+    ]
+  },
+  "15356739472554032": {
+    "Prev": "254595220250974745",
+    "Next": "2493322934252667793",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Percius Mercius is the Steward of the Guild of Fighters in Ald'ruhn. He used to be the Master of the Fighters Guild before the Camonna Tong got involved. I believe he will help us fight the Camonna Tong. Go speak with him and listen to what he has to say. Report back to me with any information.",
+    "Filters": [],
+    "Script": [
+      "Journal TG_EnemyParley 10"
+    ]
+  },
+  "2493322934252667793": {
+    "Prev": "15356739472554032",
+    "Next": "16291121432157323898",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've told you all I can.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_EnemyParley",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "16291121432157323898": {
+    "Prev": "2493322934252667793",
+    "Next": "22831318762856219798",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "The new Master of the Fighters Guild is Sjoring Hard-Heart. He owes too much Camonna Tong gold to back out now. There's no way you can convince him. You'll have to kill him.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_EnemyParley 70"
+    ]
+  },
+  "22831318762856219798": {
+    "Prev": "16291121432157323898",
+    "Next": "2110299153195817823",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Eydis Fire-Eye is a good fighter, but there's always been something dark about her. I found out just recently what that was. She's a worshipper of Clavicus Vile. I don't know how you can use this information. I'm sure she can't be blackmailed.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal TG_EnemyParley 60",
+      "Choice \"Continue\" 1"
+    ]
+  },
+  "2110299153195817823": {
+    "Prev": "22831318762856219798",
+    "Next": "27511185941737631597",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "So you work for the Thieves Guild, too? Hmph. I'll tell you what I know. Hrundi in Sadrith Mora used to be my second in command. He's a good man, and he might be persuaded to join your cause. I hesitate to suggest this, but I trust you. Hrundi has a lover. A Dunmer, from what I hear. If you find her, you can convince Hrundi to join your cause.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_EnemyParley",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal TG_EnemyParley 50",
+      "Choice \"Continue\" 2"
+    ]
+  },
+  "27511185941737631597": {
+    "Prev": "2110299153195817823",
+    "Next": "51593041945121482",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can tell you what I know. Hrundi in Sadrith Mora used to be my second in command. He's a good man, and he might be persuaded to join your cause. I hesitate to suggest this, but if you can't convince him, Hrundi has a lover. A Dunmer from what I hear. If you find her, you can convince Hrundi to join your cause.",
+    "Filters": [],
+    "Script": [
+      "Journal TG_EnemyParley 50",
+      "Choice \"Continue\" 2"
+    ]
+  },
+  "51593041945121482": {
+    "Prev": "27511185941737631597",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "I'm not sure I trust you enough.",
+    "Filters": [],
+    "Script": []
+  }
+}

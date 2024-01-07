@@ -1,0 +1,233 @@
+{
+  "1506613382645324485": {
+    "Prev": "",
+    "Next": "30120308861557115251",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dangor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thanks for the flin, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_ElithPalSupply",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "30120308861557115251": {
+    "Prev": "1506613382645324485",
+    "Next": "547712891263456534",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dangor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thanks, %PCName. I've been looking forward to this shipment.",
+    "Filters": [],
+    "Script": [
+      "Player->RemoveItem Potion_Cyro_Whiskey_01 20",
+      "AddItem Potion_Cyro_Whiskey_01 20",
+      "Journal FG_ElithPalSupply 50"
+    ]
+  },
+  "547712891263456534": {
+    "Prev": "30120308861557115251",
+    "Next": "1733819314779529785",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dangor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then why did you come all this way with all that flin? Are you feeling okay?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "1733819314779529785": {
+    "Prev": "547712891263456534",
+    "Next": "2673227129691028931",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dangor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you here to deliver the flin?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_ElithPalSupply",
+        "Value": 10.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Potion_Cyro_Whiskey_01",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes.\" 1 \"No.\" 2"
+    ]
+  },
+  "2673227129691028931": {
+    "Prev": "1733819314779529785",
+    "Next": "1953941672849226799",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dangor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have some flin? Where?",
+    "Filters": [],
+    "Script": []
+  },
+  "1953941672849226799": {
+    "Prev": "2673227129691028931",
+    "Next": "308597046954614026",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Elith-Pal Mine",
+    "PlayerFaction": "",
+    "Text": "You've got a shipment for us? You'll want to talk to Dangor.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_ElithPalSupply",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "308597046954614026": {
+    "Prev": "1953941672849226799",
+    "Next": "47475302963219783",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Publican",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Imported Cyrodiilic whiskey is called flin. This stimulating beverage is imported and expensive, but has none of the unpleasant side effects of other intoxicating beverages. A sharp boost in strength and willpower is what most people experience.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "47475302963219783": {
+    "Prev": "308597046954614026",
+    "Next": "29911218162853331413",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Trader Service",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Imported Cyrodiilic whiskey is called flin. This stimulating beverage is imported and expensive, but has none of the unpleasant side effects of other intoxicating beverages. A sharp boost in strength and willpower is what most people experience.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "29911218162853331413": {
+    "Prev": "47475302963219783",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Trader",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Imported Cyrodiilic whiskey is called flin. This stimulating beverage is imported and expensive, but has none of the unpleasant side effects of other intoxicating beverages. A sharp boost in strength and willpower is what most people experience.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

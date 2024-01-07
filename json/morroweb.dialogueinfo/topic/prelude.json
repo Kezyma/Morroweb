@@ -1,0 +1,205 @@
+{
+  "241819190228828098": {
+    "Prev": "",
+    "Next": "68021249100582380",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled. I cannot discuss business with you unless you make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "68021249100582380": {
+    "Prev": "241819190228828098",
+    "Next": "1444219234163709208",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already brought me the Wakizashi.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_SunkenTreasure",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1444219234163709208": {
+    "Prev": "68021249100582380",
+    "Next": "308027921344728955",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, this is the one. Here, take these 500 drakes as a finders fee.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "daedric wakizashi_hhst",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HH_SunkenTreasure 100",
+      "Player->RemoveItem \"daedric wakizashi_hhst\" 1",
+      "AddItem \"daedric wakizashi_hhst\" 1",
+      "Player->AddItem Gold_001 500",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 20"
+    ]
+  },
+  "308027921344728955": {
+    "Prev": "1444219234163709208",
+    "Next": "16581276391588414095",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You found the Wakizashi? What did you do with it? Bring it here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "16581276391588414095": {
+    "Prev": "308027921344728955",
+    "Next": "60092734933329946",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You can keep everything else, but that Wakizashi is mine.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "60092734933329946": {
+    "Prev": "16581276391588414095",
+    "Next": "212118874212127267",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you found the Wakizashi?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_SunkenTreasure",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give her the Wakizashi.\" 1 \"Keep the Wakizashi.\" 2"
+    ]
+  },
+  "212118874212127267": {
+    "Prev": "60092734933329946",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The ship was trying to land at a secret dock and is likely to be hard to find. I believe they crashed on an island east of Bal Fell. Start there, head due east, and look around the islands you pass. It should be within two or three islands of Bal Fell. The ship was carrying a Daedric Wakizashi when it sank. Bring that Wakizashi to me. You can keep anything else you find there.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_AshlanderEbony",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HH_SunkenTreasure 10",
+      "ShowMap \"Bal Fell\""
+    ]
+  }
+}

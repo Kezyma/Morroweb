@@ -1,0 +1,57 @@
+{
+  "1908410205275058192": {
+    "Prev": "",
+    "Next": "11310263561489620560",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yagrum bagarn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I gave you the boots. Didn't I?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_3_CorprusCure",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "11310263561489620560": {
+    "Prev": "1908410205275058192",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yagrum bagarn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Lord Fyr obtained these enchanted Dwemer boots from an unfortunate thief. And, given the quality of their craftsmanship, little wonder the fellow came a bad end. But I can do nothing for them. The fundamental enchantment is flawed. Might as well start over again... if such a pair of boots could still be fashioned in these benighted latter days. But I have done my best. Take them to Lord Fyr, with my sincere apologies.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_3_CorprusCure",
+        "Value": 25.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem \"Dwemer_Boots of Flying\" 1",
+      "Journal \"A2_3_CorprusCure\" 40"
+    ]
+  }
+}

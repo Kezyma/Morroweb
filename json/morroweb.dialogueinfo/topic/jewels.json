@@ -1,0 +1,143 @@
+{
+  "25580221223090816960": {
+    "Prev": "",
+    "Next": "13796202762465024877",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "maurrie aurmine",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't care about them at all anymore.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_VictimRomance",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "13796202762465024877": {
+    "Prev": "25580221223090816960",
+    "Next": "3246023492512728471",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "maurrie aurmine",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, they were taken, but that's of little importance. It's the man who took them I must find.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_VictimRomance",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_VictimRomance",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3246023492512728471": {
+    "Prev": "13796202762465024877",
+    "Next": "5354228191367424396",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "maurrie aurmine",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You'll try? Thank you so! I'm sure you'll be able to find him. He mentioned something about having to head north, so I imagine he might be found in Pelagiad. Please, if you find him, give him this glove for me, as a token of my love. I'm certain he will want to find me again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_VictimRomance\" 40",
+      "AddTopic \"Maurrie's glove\"",
+      "RemoveItem \"Extravagant_Glove_Left_Maur\" 1",
+      "Player->AddItem \"Extravagant_Glove_Left_Maur\" 1"
+    ]
+  },
+  "5354228191367424396": {
+    "Prev": "3246023492512728471",
+    "Next": "31393271201148415693",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "maurrie aurmine",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you no heart? No soul? Can you not see that this must be true love? No matter. Though it may take years, I'm certain we will be reunited one day.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_VictimRomance\" 50",
+      "Goodbye"
+    ]
+  },
+  "31393271201148415693": {
+    "Prev": "5354228191367424396",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "maurrie aurmine",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What's that? Oh, never mind the jewels! I just want to find the bandit again. He was charming, and funny, and I simply must see him again. His name? Nelos...Nelos Onmar...a name that will stay on my lips for eternity. Perhaps you can find him for me? Please, I cannot live without knowing if he could ever love me. I have nothing to offer you in return, but could you not help me for the sake of love?",
+    "Filters": [],
+    "Script": [
+      "Journal \"MV_VictimRomance\" 30",
+      "AddTopic \"Nelos Onmar\"",
+      "Choice \"I will try and find this man, if only for love's sake.\" 1 \"I have no times for your foolish games, girl.\" 2"
+    ]
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "2439830951181128046": {
+    "Prev": "",
+    "Next": "4353257462646921585",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard that Fedris Tharen is dead. You have failed me, %PCName.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "fedris tharen",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "4353257462646921585": {
+    "Prev": "2439830951181128046",
+    "Next": "22756156191232620",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I hope he is well.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FindTharen",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "22756156191232620": {
+    "Prev": "4353257462646921585",
+    "Next": "15120165112291727816",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for healing Fedris Tharen. To make up for your sacrifice, why not take these cure disease potions? I have more than I need at the moment.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FindTharen",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal HR_FindTharen 110",
+      "ModPCFacRep 5 \"Redoran\"",
+      "ModDisposition 5",
+      "Player->AddItem P_Cure_Common_S 4",
+      "\"fedris tharen\"->Disable"
+    ]
+  },
+  "15120165112291727816": {
+    "Prev": "22756156191232620",
+    "Next": "28619192711299919323",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard you found Fedris Tharen. I will send a healer to him at once. While I'm thinking about it, why not take this cure disease potion?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_FindTharen",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal HR_FindTharen 100",
+      "ModPCFacRep 5 \"Redoran\"",
+      "ModDisposition 5",
+      "Player->AddItem P_Cure_Common_S 1",
+      "\"fedris tharen\"->Disable"
+    ]
+  },
+  "28619192711299919323": {
+    "Prev": "15120165112291727816",
+    "Next": "1644728677554213173",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Fedris Tharen left Gnisis several days ago. He was supposed to head to the Koal Cave, just south of Gnisis, but he never arrived. Go to Gnisis and ask around and find out what happened to him.",
+    "Filters": [],
+    "Script": [
+      "Journal HR_FindTharen 10",
+      "\"fedris tharen\"->Enable"
+    ]
+  },
+  "1644728677554213173": {
+    "Prev": "28619192711299919323",
+    "Next": "524923532212965617",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris tharen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I am Fedris Tharen.",
+    "Filters": [],
+    "Script": []
+  },
+  "524923532212965617": {
+    "Prev": "1644728677554213173",
+    "Next": "1271302972619530165",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Gnisis",
+    "PlayerFaction": "",
+    "Text": "Fedris Tharen the Pilgrim? I saw him leave Gnisis a few days ago. I haven't seen him since. He left south to the Koal Cave.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1271302972619530165": {
+    "Prev": "524923532212965617",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Gnisis",
+    "PlayerFaction": "",
+    "Text": "He may have gotten lost. I'd head south towards the Koal Cave and keep an eye out for him.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

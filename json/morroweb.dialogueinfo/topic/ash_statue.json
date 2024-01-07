@@ -1,0 +1,948 @@
+{
+  "1430113310772418621": {
+    "Prev": "",
+    "Next": "9981690360118614",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hanarai assutlanipal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What? No. Where did you...? Damn!",
+    "Filters": [],
+    "Script": [
+      "Journal HR_SixthHouseBase 80",
+      "SetFight 100",
+      "StartCombat Player",
+      "SetDisposition 0",
+      "Goodbye"
+    ]
+  },
+  "9981690360118614": {
+    "Prev": "1430113310772418621",
+    "Next": "1257519552675730314",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "velfred",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You weren't supposed to see 'em, %PCRace. I can't let you out of here if you've seen 'em.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "misc_6th_ash_statue_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "1257519552675730314": {
+    "Prev": "9981690360118614",
+    "Next": "139436801116903487",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You found ash statues on board the ship, dumping? I knew Velfred was a smuggler, but I had no idea he was involved in... darker things. A word of advice, my sweet, avoid these ash statues. They can be dangerous and are of little value.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "velfred",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "139436801116903487": {
+    "Prev": "1257519552675730314",
+    "Next": "32759239242722917952",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You found ash statues on board the ship, dumping? I knew Velfred was a smuggler, but I had no idea he was involved in... darker things. A word of advice, my sweet, avoid these ash statues. They can be dangerous and are of little value.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_NordSmugglers",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "32759239242722917952": {
+    "Prev": "139436801116903487",
+    "Next": "3621182032662764",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "You can tell Mistress Morvayn that I will destroy the ash statue. Perhaps the strange creatures that plague Morvayn Manor will leave now that the statue is gone.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HR_MorvaynManor 50",
+      "Player->RemoveItem Misc_6th_Ash_HRMM 1"
+    ]
+  },
+  "3621182032662764": {
+    "Prev": "32759239242722917952",
+    "Next": "19829245811768924111",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I do not understand why you would not want this statue destroyed. Are you sure that you are not under the corrupting influence of the ash statue?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "19829245811768924111": {
+    "Prev": "3621182032662764",
+    "Next": "235552196622624711",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "This ash statue was found in Morvyan Manor? Give it to me, then, and I will destroy it.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "misc_6th_ash_hrmm",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_MorvaynManor",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HR_MorvaynManor",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give him the statue.\" 1 \"Keep the statue.\" 2"
+    ]
+  },
+  "235552196622624711": {
+    "Prev": "19829245811768924111",
+    "Next": "2310019072674421887",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Did Mistress Morvayn ask you to bring me another ash statue? I believe I can remove the corrupting magic from these statues. Bring the statue to me, and I will do what I can.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_SixthHouseBase",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_MorvaynManor",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "2310019072674421887": {
+    "Prev": "235552196622624711",
+    "Next": "878911200279977751",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hanarai Assutlanipal is no longer a threat to Ald'ruhn.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_SixthHouseBase",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "878911200279977751": {
+    "Prev": "2310019072674421887",
+    "Next": "42732684149162726",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "By killing Hanarai Assutlanipal, the source of these ash statues in Ald'ruhn has been shut down. I admire your achievement, but we must remain vigilant against anyone else who comes to Ald'ruhn with ash statues.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "hanarai assutlanipal",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_SixthHouseBase",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal HR_SixthHouseBase 100",
+      "ModPCFacRep 10 \"Redoran\"",
+      "ModDisposition 10",
+      "Player->ModReputation 1"
+    ]
+  },
+  "42732684149162726": {
+    "Prev": "878911200279977751",
+    "Next": "217022662038444439",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Go to Hanarai Assutlanipal's house here in Ald'ruhn. Use the potions I gave you if you need them.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_SixthHouseBase",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "217022662038444439": {
+    "Prev": "42732684149162726",
+    "Next": "85268013239727747",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "You found a note on Galtis Guvron's body when you asked about the ash statues? Let me see... Perhaps this \"Hanarai\" is Hanarai Assutlanipal. She claims to be an outcast ashlander. Her house is the first one on the right down the stairs from the Temple. She may be as unwilling to talk as Galtis. Take these potions in case you need them.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_galtisguvronsnote",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_SixthHouseBase",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HR_SixthHouseBase 60",
+      "Player->AddItem p_restore_health_q 4",
+      "Player->AddItem p_cure_blight_s 1",
+      "Player->AddItem p_cure_common_s 1"
+    ]
+  },
+  "85268013239727747": {
+    "Prev": "217022662038444439",
+    "Next": "1671644781320831768",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Galtis Guvron gave Varvur the ash statue? And Galtis is dead? Did you find anything on his body? A clue to where the statues are coming from?",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "galtis guvron",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_SixthHouseBase",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "1671644781320831768": {
+    "Prev": "85268013239727747",
+    "Next": "1836516065139109545",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Galtis Guvron gave Varvur the ash statue? Go talk to Galtis Guvron at the Rat in the Pot and ask him about the ash statue.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_SixthHouseBase",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "1836516065139109545": {
+    "Prev": "1671644781320831768",
+    "Next": "1324818080504820959",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I'm believe these statues have some kind of corrupting influence. If you could find out how Varvur Sarethi got the ash statue, I would be grateful.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ClearSarethi",
+        "Value": 90.0
+      }
+    ],
+    "Script": [
+      "Journal HR_SixthHouseBase 10"
+    ]
+  },
+  "1324818080504820959": {
+    "Prev": "1836516065139109545",
+    "Next": "712511666137751854",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "You have the statue? Give it to me and I will see if I can clear Varvur's name for the murder of Bralen Carvaren.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "misc_6th_ash_hrcs",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ClearSarethi",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Journal HR_SixthHouseBase 10"
+    ]
+  },
+  "712511666137751854": {
+    "Prev": "1324818080504820959",
+    "Next": "1861830449286939983",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Bring me the statue. Then I may be able to clear Varvur's name for the murder of Bralen Carvaren.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ClearSarethi",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Journal HR_SixthHouseBase 10"
+    ]
+  },
+  "1861830449286939983": {
+    "Prev": "712511666137751854",
+    "Next": "1973822960200924559",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The statues are troubling, but surely not the concern of an outlander.",
+    "Filters": [],
+    "Script": []
+  },
+  "1973822960200924559": {
+    "Prev": "1861830449286939983",
+    "Next": "2944011921228814250",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "varvur sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I'm glad it's all over.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_SixthHouseBase",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2944011921228814250": {
+    "Prev": "1973822960200924559",
+    "Next": "204035075699627936",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "varvur sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I couldn't remember before, but now I know where I got the statue. I got it from Galtis Guvron at The Rat in the Pot.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_SixthHouseBase",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HR_SixthHouseBase 20"
+    ]
+  },
+  "204035075699627936": {
+    "Prev": "2944011921228814250",
+    "Next": "23942123711664510262",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "varvur sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I couldn't remember before, but now I know where I got the statue. I got it from Galtis Guvron at The Rat in the Pot.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ClearSarethi",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HR_SixthHouseBase 20"
+    ]
+  },
+  "23942123711664510262": {
+    "Prev": "204035075699627936",
+    "Next": "149996447217222030",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "varvur sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I was having bad dreams even before Bralen Carvaren died... It seems like they started when I got that ash statue. Maybe if you take the statue away, the dreams will stop. Maybe I should talk to one of the priests at the Temple.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "misc_6th_ash_hrcs",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HR_ClearSarethi 30"
+    ]
+  },
+  "149996447217222030": {
+    "Prev": "23942123711664510262",
+    "Next": "622524752287930266",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I am glad my son is feeling better.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ClearSarethi",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "622524752287930266": {
+    "Prev": "149996447217222030",
+    "Next": "897415265175130814",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Have you spoken to Lloros Sarano about the ash statue?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ClearSarethi",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "897415265175130814": {
+    "Prev": "622524752287930266",
+    "Next": "295096777629511348",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "This ash statue troubles me. I would have you speak with someone at the Temple about this statue. Perhaps Lloros Sarano would know more of it.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_6th_ash_hrcs",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ClearSarethi",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HR_ClearSarethi 50"
+    ]
+  },
+  "295096777629511348": {
+    "Prev": "897415265175130814",
+    "Next": "3050272797449699",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The ash statues are a sign of the Sixth House. But they are not the main front. Destroy Dagoth Ur. Do not get sidetracked by smaller plots.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B5_RedoranHort",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "3050272797449699": {
+    "Prev": "295096777629511348",
+    "Next": "13310153093804",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "These ash statues trouble me, but they are not your concern.",
+    "Filters": [],
+    "Script": []
+  },
+  "13310153093804": {
+    "Prev": "3050272797449699",
+    "Next": "1708820211313720508",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You know how people have started going crazy in the streets, attacking people for no reason? I've heard they've been finding these statues nearby and in their houses.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_6th_ash_statue_01",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_2_6thHouse",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1708820211313720508": {
+    "Prev": "13310153093804",
+    "Next": "198656552851920479",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's a peculiar thing. Never seen anything like it. Let me ask around and see if anyone has seen anything like that before.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_6th_ash_statue_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "198656552851920479": {
+    "Prev": "1708820211313720508",
+    "Next": "6536121722712532048",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galtis guvron",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "How could you... No, nevermind. I'll just have to take care of this right now.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "misc_6th_ash_statue_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HR_SixthHouseBase 50",
+      "SetFight 100",
+      "StartCombat Player",
+      "SetDisposition 0",
+      "Goodbye"
+    ]
+  },
+  "6536121722712532048": {
+    "Prev": "198656552851920479",
+    "Next": "2860725605711921272",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galtis guvron",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "How could you... No, nevermind. I'll just have to take care of this right now.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "misc_6th_ash_hrcs",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HR_SixthHouseBase 50",
+      "SetFight 100",
+      "StartCombat Player",
+      "SetDisposition 0",
+      "Goodbye"
+    ]
+  },
+  "2860725605711921272": {
+    "Prev": "6536121722712532048",
+    "Next": "307732822864210563",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galtis guvron",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "How could you... No, nevermind. I'll just have to take care of this right now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_SixthHouseBase",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HR_SixthHouseBase 50",
+      "SetFight 100",
+      "StartCombat Player",
+      "SetDisposition 0",
+      "Goodbye"
+    ]
+  },
+  "307732822864210563": {
+    "Prev": "2860725605711921272",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galtis guvron",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't know what you're talking about. I don't know anything about any statues.",
+    "Filters": [],
+    "Script": []
+  }
+}

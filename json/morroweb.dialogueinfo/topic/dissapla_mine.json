@@ -1,0 +1,533 @@
+{
+  "2492730217118499073": {
+    "Prev": "",
+    "Next": "96012902118444267",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "novor drethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Teres is dead?! Double damn.... Leave me. Now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "FG_DissaplaMine",
+        "Value": 55.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "teres arothan",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_DissaplaMine 55",
+      "ModDisposition -30",
+      "Goodbye"
+    ]
+  },
+  "96012902118444267": {
+    "Prev": "2492730217118499073",
+    "Next": "169993222120413617",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "teres arothan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Now that I'm safe, Novor Drethan can take care of any other Nix Hounds.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_DissaplaMine",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "169993222120413617": {
+    "Prev": "96012902118444267",
+    "Next": "31423196362046028021",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "novor drethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You're still here?",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "teres arothan",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5",
+      "Goodbye"
+    ]
+  },
+  "31423196362046028021": {
+    "Prev": "169993222120413617",
+    "Next": "3173352172246218678",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "teres arothan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "These Nix Hounds think the mine is theirs. Let's travel together back to Novor Drethan so he knows I'm safe.",
+    "Filters": [],
+    "Script": []
+  },
+  "3173352172246218678": {
+    "Prev": "31423196362046028021",
+    "Next": "705112154807125602",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "novor drethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thanks for finding Teres Arothan. You are quite the hero.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_DissaplaMine",
+        "Value": 90.0
+      }
+    ],
+    "Script": []
+  },
+  "705112154807125602": {
+    "Prev": "3173352172246218678",
+    "Next": "509219624313943502",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "novor drethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for rescuing Teres Arothan. I don't have anything to offer you except this raw glass, of course.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_DissaplaMine",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal FG_DissaplaMine 90",
+      "Player->AddItem Ingred_Raw_Glass_01 4"
+    ]
+  },
+  "509219624313943502": {
+    "Prev": "705112154807125602",
+    "Next": "170991381687316186",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "novor drethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am not impressed by your selfish attitude. I had enough of that with the Telvanni.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -25",
+      "Goodbye"
+    ]
+  },
+  "170991381687316186": {
+    "Prev": "509219624313943502",
+    "Next": "26649164721047619211",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "novor drethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I hope Teres Arothan is safe. If you find him, bring him back here. Once everyone is accounted for, I have a few spells that should dispense with the rest of the nix hounds quickly and safely.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_DissaplaMine 40"
+    ]
+  },
+  "26649164721047619211": {
+    "Prev": "170991381687316186",
+    "Next": "10133165931836820387",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "novor drethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "A pack of nix hounds was attacking my miners. We thought one of the miners was lost at first, but she turned up safe. Our healer, Teres Arothan went down to look for her and hasn't come back. Would you go down into the mines and bring back Teres Arothan if he still lives? I would go myself, but I should stay here to protect the miners if the nix hounds come back this way.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "FG_DissaplaMine",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Journal FG_DissaplaMine 30"
+    ]
+  },
+  "10133165931836820387": {
+    "Prev": "26649164721047619211",
+    "Next": "1713312163687420355",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "novor drethan",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A pack of nix-hounds was attacking my miners. We thought one of the miners was lost at first, but she turned up safe. Our healer, Teres Arothan went down to look for her and hasn't come back. Would you go down into the mines and bring back Teres Arothan if he still lives?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "FG_DissaplaMine",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Journal FG_DissaplaMine 30",
+      "Choice \"Yes\" 1 \"No\" 2"
+    ]
+  },
+  "1713312163687420355": {
+    "Prev": "10133165931836820387",
+    "Next": "74232294421935846",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled from the Fighters Guild. Until you make amends, I can't talk to you about this contract.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "74232294421935846": {
+    "Prev": "1713312163687420355",
+    "Next": "31160165801759211286",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I'll let you know if I hear of any more problems from the mines.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_DissaplaMine",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "31160165801759211286": {
+    "Prev": "74232294421935846",
+    "Next": "2789924482281797287",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I understand that Novor Drethan has been killed. Damn! You need to be more careful in your work. You're becoming quite a disappointment.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_DissaplaMine",
+        "Value": 30.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "novor drethan",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal FG_DissaplaMine 110"
+    ]
+  },
+  "2789924482281797287": {
+    "Prev": "31160165801759211286",
+    "Next": "383824880120159039",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Novor Drethan tells me you allowed his healer to get killed, %PCRank. Damn! You need to be more careful in your work.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_DissaplaMine",
+        "Value": 30.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "teres arothan",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal FG_DissaplaMine 110"
+    ]
+  },
+  "383824880120159039": {
+    "Prev": "2789924482281797287",
+    "Next": "3089710814246018640",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I was going to have you speak to Novor Drethan, but I know now that he's dead. Damn! I worry about your future, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "FG_DissaplaMine",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "novor drethan",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal FG_DissaplaMine 110"
+    ]
+  },
+  "3089710814246018640": {
+    "Prev": "383824880120159039",
+    "Next": "23517730635724613",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I was going to have you speak to Novor Drethan, but he tells me you were around when his healer got killed. Damn! You need to be more careful in your work.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "FG_DissaplaMine",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "teres arothan",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal FG_DissaplaMine 110"
+    ]
+  },
+  "23517730635724613": {
+    "Prev": "3089710814246018640",
+    "Next": "947072071080919569",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Sounds like everything went well, %PCName. Here's your share of the contract.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_DissaplaMine",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal FG_DissaplaMine 100",
+      "ModPCFacRep 5 \"Fighters Guild\"",
+      "ModDisposition 5",
+      "Player->AddItem Gold_001 250"
+    ]
+  },
+  "947072071080919569": {
+    "Prev": "23517730635724613",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Our client is Novor Drethan, the owner of the mine. Meet him inside the Dissapla Mine, northeast of the Dunmer stronghold Falensarano, which is on the mainland west of Tel Aruhn. Do whatever Novor says needs doing. He said something about Nix Hounds getting loose and attacking the miners.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_Nchurdamz",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal FG_DissaplaMine 10",
+      "ShowMap Falensarano"
+    ]
+  }
+}

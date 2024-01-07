@@ -1,0 +1,170 @@
+{
+  "2095823525176558072": {
+    "Prev": "",
+    "Next": "2620220904355927702",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "reeh_jah",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "One day, I will hopefully get there.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_RunawaySlave",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MV_RunawaySlave",
+        "Value": 36.0
+      }
+    ],
+    "Script": []
+  },
+  "2620220904355927702": {
+    "Prev": "2095823525176558072",
+    "Next": "6773302951545014614",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "reeh_jah",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You want to help me? That a rare thing in these parts, I tell you what. Maybe you get us there, maybe not, but I rather be on my way than have them find me here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_RunawaySlave\" 30",
+      "AddTopic \"Reeh-Jah\"",
+      "\"Reeh_Jah\"->AiFollowCell Player \"Ebonheart, Argonian Mission\" 0, -302, -114, 242, 0"
+    ]
+  },
+  "6773302951545014614": {
+    "Prev": "2620220904355927702",
+    "Next": "7926283922611210611",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "reeh_jah",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No! I should have known you bounty hunter! Don't hurt me. I'll come along. Just don't hurt me no more.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_RunawaySlave\" 35",
+      "AddTopic \"Reeh-Jah\"",
+      "\"Reeh_Jah\"->AiFollow Player 0, 12409, 48252, 735, 0"
+    ]
+  },
+  "7926283922611210611": {
+    "Prev": "6773302951545014614",
+    "Next": "1346910058101422147",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "reeh_jah",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Okay. Don't tell no one you seen me, okay? I'm off now.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_RunawaySlave\" 36"
+    ]
+  },
+  "1346910058101422147": {
+    "Prev": "7926283922611210611",
+    "Next": "1014426992663214933",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "reeh_jah",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No, not home. To the Argonian Mission in Ebonheart before they find me, that's where I must go. The Tel Aruhn hunters be out looking for me, no doubt about it. If they find Reeh-Jah, that's it for me!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_RunawaySlave",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_RunawaySlave\" 20",
+      "Choice \"A runaway slave? I'll help you to the Mission.\" 1 \"A runaway slave, huh? You'll be worth some money back in Tel Aruhn. Come with me, or I'll kill you where you stand.\" 2 \"Go on your way. I have no wish to get involved in this.\" 3"
+    ]
+  },
+  "1014426992663214933": {
+    "Prev": "1346910058101422147",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "reeh_jah",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, home.",
+    "Filters": [],
+    "Script": []
+  }
+}

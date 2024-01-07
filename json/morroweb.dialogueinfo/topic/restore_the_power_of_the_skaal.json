@@ -1,0 +1,231 @@
+{
+  "2681832241930516940": {
+    "Prev": "",
+    "Next": "234241585221691752",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "korst wind-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have completed the Ritual of the Gifts!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Stones",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "234241585221691752": {
+    "Prev": "2681832241930516940",
+    "Next": "100445432127576055",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "korst wind-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are to perform the Ritual of the Gifts.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Stones",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Stones",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "100445432127576055": {
+    "Prev": "234241585221691752",
+    "Next": "20339131302250813382",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "korst wind-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Heart-Fang wishes for you to do this, does he? Then I will assist you. There is a ritual that must be completed. On Solstheim, you will find six Standing Stones, each representing one of the six gifts of the All-Maker. At each of these Stones, a ritual must be completed. Once the Ritual of the Gifts is complete, the Oneness should be restored.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Stones",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Stones 40"
+    ]
+  },
+  "20339131302250813382": {
+    "Prev": "100445432127576055",
+    "Next": "32392142562214631127",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharsten heart-fang",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The power is restored. The Oneness of the lands is in balance.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Stones",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "32392142562214631127": {
+    "Prev": "20339131302250813382",
+    "Next": "2590175251454860",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharsten heart-fang",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have completed the Ritual of the Gifts. I am impressed with your efforts, outlander. But there is more to be done. You have shown a certain loyalty to the Skaal, and it surprises me. Tradition dictates that you now hold this, the Mace of Aevar Stonesinger. This is a treasure of the Skaal that I do not relish giving to an outsider. Still, you have earned it. For now. Now it is time to prove your wisdom.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Stones",
+        "Value": 80.0
+      }
+    ],
+    "Script": [
+      "player->AddItem BM_Mace_Aevar_UNI 1",
+      "Journal BM_Stones 100"
+    ]
+  },
+  "2590175251454860": {
+    "Prev": "32392142562214631127",
+    "Next": "1536026533232929528",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharsten heart-fang",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Wind-Eye has told you of the Ritual of the Gifts, has he not? Go to it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Stones",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Stones",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "1536026533232929528": {
+    "Prev": "2590175251454860",
+    "Next": "39331493327414043",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharsten heart-fang",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Wind-Eye will tell you more.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Stones",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "39331493327414043": {
+    "Prev": "1536026533232929528",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tharsten heart-fang",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is right that you do this, as it is your people who have caused the damage. Speak with Korst Wind-Eye, in the Shaman's Hut. He will give you further instructions.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Stones",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Stones 30"
+    ]
+  }
+}

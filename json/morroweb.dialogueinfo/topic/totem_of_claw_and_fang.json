@@ -1,0 +1,185 @@
+{
+  "28124324032279831259": {
+    "Prev": "",
+    "Next": "30384894051726081",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "korst wind-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We were finally able to reclaim the Totem, though it cost us many warriors.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Ceremony2",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "30384894051726081": {
+    "Prev": "28124324032279831259",
+    "Next": "253583915584114124",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "korst wind-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Totem has been returned, thanks to your efforts.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Ceremony1",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "253583915584114124": {
+    "Prev": "30384894051726081",
+    "Next": "1366018716636127307",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "korst wind-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have found the Totem! This is good news. Please, take this as a token of my thanks. I hope that your efforts have not left you too drained, as there is still much to be done. For your efforts, I will share with you some knowledge. The Skaal have the ability to summon wolves to fight by our sides. You, too, now possess this ability. The Ristaag must now be performed.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Ceremony1",
+        "Value": 30.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "Misc_BM_ClawFang_UNIQUE",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem Misc_BM_ClawFang_UNIQUE 1",
+      "Player->AddSpell BM_summonwolf",
+      "Journal BM_Ceremony1 100"
+    ]
+  },
+  "1366018716636127307": {
+    "Prev": "253583915584114124",
+    "Next": "781322821536212591",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "korst wind-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You say you have found the Totem, but you do not have it? This does us little good, %PCName. We need the Totem of Claw and Fang.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Ceremony1",
+        "Value": 30.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "Misc_BM_ClawFang_UNIQUE",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "781322821536212591": {
+    "Prev": "1366018716636127307",
+    "Next": "3617189622590827468",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "korst wind-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have not yet found it? Please, the Ristaag must be performed as soon as we can.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Ceremony1",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Ceremony1",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "3617189622590827468": {
+    "Prev": "781322821536212591",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "korst wind-eye",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is a powerful artifact, very sacred to the Skaal people. It is used to call to us powerful beasts that are used in the Ristaag. It was stolen many years ago, and we of the Skaal were foolish enough to believe it would not again be needed. I have learned that it may be found in the Tombs of Skaalara, to the east and a bit south of here. Please, return the Totem.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "BM_Ceremony1",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Ceremony1 20"
+    ]
+  }
+}

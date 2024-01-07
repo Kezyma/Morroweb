@@ -1,0 +1,738 @@
+{
+  "3180127153901629057": {
+    "Prev": "",
+    "Next": "3704151602294232305",
+    "Type": "Topic",
+    "Disposition": 80,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dulnea ralaal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Health to you and your cult.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC12_dinner",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC12_Dulnea",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "3704151602294232305": {
+    "Prev": "3180127153901629057",
+    "Next": "515770112936524904",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dulnea ralaal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. I see. Perhaps you are right. There's no cheaper way to gather goodwill than to buy a little of it. And the goodwill of the Imperial cult may be worth something in this town, as you say. Very well. Here's a bottle of Cyrodilic brandy for your cult's fund-raising dinner, with my compliments and best wishes.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC12_dinner",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->additem potion_cyro_brandy_01 1",
+      "journal IC12_Dulnea 1"
+    ]
+  },
+  "515770112936524904": {
+    "Prev": "3704151602294232305",
+    "Next": "758216088266055737",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dulnea ralaal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "In case you hadn't noticed, I'm a Dunmer. I am a Temple member. I've nothing in particular against the Imperial cult. But I've no particular feelings of generosity towards them, either.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC12_dinner",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "758216088266055737": {
+    "Prev": "515770112936524904",
+    "Next": "894426246211478972",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "banor seran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You're being tiresome. Go away.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC12_dinner",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC12_Banor",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "setdisposition 20",
+      "goodbye"
+    ]
+  },
+  "894426246211478972": {
+    "Prev": "758216088266055737",
+    "Next": "10822149393159317396",
+    "Type": "Topic",
+    "Disposition": 90,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "banor seran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Against my will, I'm impressed by your lack of courtesy and good sense. Here. This is a bottle of Cyrodilic brandy. A small price to be rid of you. Now, go away. And stay away.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC12_dinner",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->additem potion_cyro_brandy_01 1",
+      "journal IC12_Banor 1",
+      "setdisposition 20",
+      "goodbye"
+    ]
+  },
+  "10822149393159317396": {
+    "Prev": "894426246211478972",
+    "Next": "25282306142985410947",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "banor seran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You seem a decent sort. If stupid.  Let me make myself clear. No brandy for the Imperial cult, imported or otherwise. Do you understand me?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC12_dinner",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "25282306142985410947": {
+    "Prev": "10822149393159317396",
+    "Next": "34519558449010157",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "banor seran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Five bottles of Cyrodilic brandy? For the Imperial cult? Do I look like an Imperial stooge to you? Get out of here.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC12_dinner",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "34519558449010157": {
+    "Prev": "25282306142985410947",
+    "Next": "17483127032878823127",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "benunius agrudilius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "For the Nine's sake, leave me alone.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC12_dinner",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC12_Benunius",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "17483127032878823127": {
+    "Prev": "34519558449010157",
+    "Next": "302782502511720418",
+    "Type": "Topic",
+    "Disposition": 70,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "benunius agrudilius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Saints and Spirits! Give it a rest! All right. All right. Here. Rob me of my profits and comforts. Take this Cyrodilic brandy for the fund-raising dinner and leave me in peace.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC12_dinner",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->additem potion_cyro_brandy_01 1",
+      "journal IC12_Benunius 5"
+    ]
+  },
+  "302782502511720418": {
+    "Prev": "17483127032878823127",
+    "Next": "18811103932282821313",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "benunius agrudilius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I gave you greef, and that's all you're getting.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC12_dinner",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC12_Benunius",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "18811103932282821313": {
+    "Prev": "302782502511720418",
+    "Next": "2787917422882822924",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "benunius agrudilius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "FIVE bottles of Cyrodilic brandy? For a fund-raising dinner? Do you know what you're asking? That stuff is imported, and very dear indeed. No, I'll give you a bottle of the local greef, which is good enough, and all I'll give you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC12_dinner",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->additem potion_comberry_brandy_01 1",
+      "journal IC12_Benunius 1"
+    ]
+  },
+  "2787917422882822924": {
+    "Prev": "18811103932282821313",
+    "Next": "32105155103155731017",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "benunius agrudilius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "FIVE bottles of Cyrodilic brandy? Do you know what that stuff costs? And I don't mind saying, I don't like your manner, either.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC12_dinner",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "32105155103155731017": {
+    "Prev": "2787917422882822924",
+    "Next": "24456497358673462",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bacola closcius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I gave you a bottle. And an idea where to get the others.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC12_dinner",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC12_Bacola",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "24456497358673462": {
+    "Prev": "32105155103155731017",
+    "Next": "3157324231913918238",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bacola closcius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sorry. I've only two bottles, and you're welcome to one of them for the cult. But I happen to know that Banor Seran just took delivery of some Cyrodilic brandy. He's probably got it stored in the closet in the hall  just right of the bar. Now of course it would be WRONG to steal that brandy. Even though EVERYONE knows the Council Club is just a front for those Camonna Tong gangsters. But for such a good cause....",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC12_dinner",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "player->additem potion_cyro_brandy_01 1",
+      "journal IC12_Bacola 1"
+    ]
+  },
+  "3157324231913918238": {
+    "Prev": "24456497358673462",
+    "Next": "17750258732785324516",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "bacola closcius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No, I won't donate. Cyrodiilic brandy is expensive. And I don't like you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC12_dinner",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "17750258732785324516": {
+    "Prev": "3157324231913918238",
+    "Next": "544810696151965066",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Balmora, Council Club",
+    "PlayerFaction": "",
+    "Text": "Donation for the Imperial cult? Have you been eating magic mushrooms, pal? Don't talk to me Talk to Banor Seran. He runs the Council Club. And I'm sure he'll find your request amusing.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC12_dinner",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "544810696151965066": {
+    "Prev": "17750258732785324516",
+    "Next": "3235431032197615597",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Balmora, Eight Plates",
+    "PlayerFaction": "",
+    "Text": "Talk to Dulnea Ralaal. She's the proprietor.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC12_dinner",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "3235431032197615597": {
+    "Prev": "544810696151965066",
+    "Next": "1616291361317616918",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Balmora, Lucky Lockup",
+    "PlayerFaction": "",
+    "Text": "Talk to Benunius Agrudilius. He owns the Lucky Lockup.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC12_dinner",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1616291361317616918": {
+    "Prev": "3235431032197615597",
+    "Next": "1352621525305125438",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Balmora, South Wall Cornerclub",
+    "PlayerFaction": "",
+    "Text": "Talk to Bacola Closius. He owns the South Wall.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC12_dinner",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1352621525305125438": {
+    "Prev": "1616291361317616918",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Iulus Truptor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm afraid only Cyrodilic brandy will do for the Fort Moonmoth fund-raising dinner. The sort of person who has money to give to charity turns the nose up at the local comberry brandy they call greef.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC12_dinner",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  }
+}

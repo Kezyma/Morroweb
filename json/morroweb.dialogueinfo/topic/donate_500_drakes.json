@@ -1,0 +1,922 @@
+{
+  "123131596230923589": {
+    "Prev": "",
+    "Next": "293482712263012746",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "cunius pelelius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't know what you're talking about. I have reliable information indicating that you are no longer involved in this matter in any official capacity. Leave me immediately. Or I shall be forced to conclude that your intentions are criminal.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC14_Ponius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "IC13_rich",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "moddisposition -30",
+      "modFight 30",
+      "goodbye"
+    ]
+  },
+  "293482712263012746": {
+    "Prev": "123131596230923589",
+    "Next": "3966221861591615741",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "cunius pelelius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Our business is concluded. You will leave me in peace.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC14_Ponius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC13_rich",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "goodbye"
+    ]
+  },
+  "3966221861591615741": {
+    "Prev": "293482712263012746",
+    "Next": "1393132009206505543",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "cunius pelelius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This is most awkward. Since you confront me with this, I presume you intend blackmail? If you hope for cash, I must disappoint you -- I have no ready cash at present. You must content yourself with these pieces of raw ebony. I'm sure you can get your 500 drakes for them... and more. Now, leave me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC14_Ponius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC13_rich",
+        "Value": 10.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 9.0
+      }
+    ],
+    "Script": [
+      "player->additem ingred_raw_ebony_01 3",
+      "journal IC13_rich 42",
+      "goodbye"
+    ]
+  },
+  "1393132009206505543": {
+    "Prev": "3966221861591615741",
+    "Next": "3165523743834030874",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "cunius pelelius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This is most awkward. Since you confront me with this, I presume you intend blackmail? If you hope for cash, I must disappoint you -- I have no ready cash at present. You must content yourself with these pieces of raw ebony. I'm sure you can get your 500 drakes for them... and more. Now, leave me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC14_Ponius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC13_rich",
+        "Value": 10.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 8.0
+      }
+    ],
+    "Script": [
+      "player->additem ingred_raw_ebony_01 3",
+      "journal IC13_rich 40",
+      "goodbye"
+    ]
+  },
+  "3165523743834030874": {
+    "Prev": "1393132009206505543",
+    "Next": "574864501164710019",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "cunius pelelius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are a fool to listen to idle rumor, and a greater fool to confront me with it. Leave me, ser.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC14_Ponius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC13_rich",
+        "Value": 10.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 7.0
+      }
+    ],
+    "Script": [
+      "journal IC13_rich 15",
+      "modDisposition -10",
+      "goodbye"
+    ]
+  },
+  "574864501164710019": {
+    "Prev": "3165523743834030874",
+    "Next": "323017355327213468",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "cunius pelelius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I said... I am busy. Excuse me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC14_Ponius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC13_rich",
+        "Value": 10.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": [
+      "goodbye"
+    ]
+  },
+  "323017355327213468": {
+    "Prev": "574864501164710019",
+    "Next": "2176253323006810316",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "cunius pelelius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am busy. Excuse me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC14_Ponius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC13_rich",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC13_slave",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Press him for a commitment.\" 6 \"Thank him for his attention.\" 6 \"Threaten to reveal his skimming from the ebony mines\" 7 \"Threaten with slave's testimony about stolen ebony.\" 8"
+    ]
+  },
+  "2176253323006810316": {
+    "Prev": "323017355327213468",
+    "Next": "23155168961530026512",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "cunius pelelius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am busy. Excuse me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC14_Ponius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC13_rich",
+        "Value": 10.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_CalderaRecordBook2",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Press him for a commitment.\" 6 \"Thank him for his attention.\" 6 \"Threaten to reveal his skimming from the ebony mines\" 7 \"Show him the Secret Caldera Ledger.\" 9"
+    ]
+  },
+  "23155168961530026512": {
+    "Prev": "2176253323006810316",
+    "Next": "442725540210426598",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "cunius pelelius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am busy. Excuse me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC14_Ponius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC13_rich",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC13_rumor",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Press him for a commitment.\" 6 \"Thank him for his attention.\" 6 \"Threaten to reveal his skimming from the ebony mines\" 7"
+    ]
+  },
+  "442725540210426598": {
+    "Prev": "23155168961530026512",
+    "Next": "4588207528511505",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "cunius pelelius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am busy. Excuse me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC14_Ponius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC13_rich",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Press him for a commitment.\" 6 \"Thank him for his attention.\" 6"
+    ]
+  },
+  "4588207528511505": {
+    "Prev": "442725540210426598",
+    "Next": "301521725910747345",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "cunius pelelius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This is most awkward. Since you confront me with this, I presume you intend blackmail? If you hope for cash, I must disappoint you -- I have no ready cash at present. You must content yourself with these pieces of raw ebony. I'm sure you can get your 500 drakes for them... and more. Now, leave me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC14_Ponius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": [
+      "player->additem ingred_raw_ebony_01 3",
+      "journal IC13_rich 42",
+      "goodbye"
+    ]
+  },
+  "301521725910747345": {
+    "Prev": "4588207528511505",
+    "Next": "429326505275521989",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "cunius pelelius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This is most awkward. Since you confront me with this, I presume you intend blackmail? If you hope for cash, I must disappoint you -- I have no ready cash at present. You must content yourself with these pieces of raw ebony. I'm sure you can get your 500 drakes for them... and more. Now, leave me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC14_Ponius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "player->additem ingred_raw_ebony_01 3",
+      "journal IC13_rich 40",
+      "goodbye"
+    ]
+  },
+  "429326505275521989": {
+    "Prev": "301521725910747345",
+    "Next": "24001541486741632",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "cunius pelelius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are a fool to listen to idle rumor, and a greater fool to confront me with it. Leave me, ser.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC14_Ponius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "journal IC13_rich 15",
+      "modDisposition -10",
+      "goodbye"
+    ]
+  },
+  "24001541486741632": {
+    "Prev": "429326505275521989",
+    "Next": "123230411848513637",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "cunius pelelius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank me? What for? Are you still here?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC14_Ponius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal IC13_rich 10",
+      "goodbye"
+    ]
+  },
+  "123230411848513637": {
+    "Prev": "24001541486741632",
+    "Next": "2097528165111130958",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "cunius pelelius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Your views are unwelcome, ser. I have said I will be happy to discuss this matter at a later date. We will not discuss this further.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC14_Ponius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal IC13_rich 10",
+      "modDisposition -10",
+      "goodbye"
+    ]
+  },
+  "2097528165111130958": {
+    "Prev": "123230411848513637",
+    "Next": "30414152393112717643",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "cunius pelelius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You impertinent hound! Do you doubt my honor? Defend yourself, knave!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC14_Ponius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "journal IC13_fight 1",
+      "SetFight 90",
+      "setDisposition 0",
+      "\"cunius pelelius\"->StartCombat Player",
+      "goodbye"
+    ]
+  },
+  "30414152393112717643": {
+    "Prev": "2097528165111130958",
+    "Next": "317397797188695026",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "cunius pelelius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. I recall speaking with someone about a donation to the Widows and Orphans Fund. I am very busy at the moment, but I would be happy to discuss this matter at a later date. Now, if you'll excuse me?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC14_Ponius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC13_slave",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Demand the money he promised.\" 1 \"Press him for a commitment.\" 2 \"Thank him for his attention.\" 3 \"Threaten to reveal his skimming from the ebony mines\" 4 \"Threaten with slave's testimony about stolen ebony.\" 5"
+    ]
+  },
+  "317397797188695026": {
+    "Prev": "30414152393112717643",
+    "Next": "190991283251925956",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "cunius pelelius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. I recall speaking with someone about a donation to the Widows and Orphans Fund. I am very busy at the moment, but I would be happy to discuss this matter at a later date. Now, if you'll excuse me?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC14_Ponius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_CalderaRecordBook2",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Demand the money he promised.\" 1 \"Press him for a commitment.\" 2 \"Thank him for his attention.\" 3 \"Threaten to reveal his skimming from the ebony mines\" 4 \"Show him the Secret Caldera Ledger.\" 6"
+    ]
+  },
+  "190991283251925956": {
+    "Prev": "317397797188695026",
+    "Next": "23075179022236825180",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "cunius pelelius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. I recall speaking with someone about a donation to the Widows and Orphans Fund. I am very busy at the moment, but I would be happy to discuss this matter at a later date. Now, if you'll excuse me?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC14_Ponius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC13_rumor",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Demand the money he promised.\" 1 \"Press him for a commitment.\" 2 \"Thank him for his attention.\" 3 \"Threaten to reveal his skimming from the ebony mines\" 4"
+    ]
+  },
+  "23075179022236825180": {
+    "Prev": "190991283251925956",
+    "Next": "5733209191262622421",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "cunius pelelius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. I recall speaking with someone about a donation to the Widows and Orphans Fund. I am very busy at the moment, but I would be happy to discuss this matter at a later date. Now, if you'll excuse me?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC14_Ponius",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IC13_rich",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Demand the money he promised.\" 1 \"Press him for a commitment.\" 2 \"Thank him for his attention.\" 3"
+    ]
+  },
+  "5733209191262622421": {
+    "Prev": "23075179022236825180",
+    "Next": "27746161881283032689",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Caldera, Governor's Hall",
+    "PlayerFaction": "",
+    "Text": "If this is about a donation from Cunius Pelelius, you'd best talk directly to him.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "27746161881283032689": {
+    "Prev": "5733209191262622421",
+    "Next": "161531253318219831",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Iulus Truptor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Unfortunately, every time we ask Cunius Pelelius for the donation, he says he is very busy at the moment, but he will be happy to discuss the donation at a later date. I suppose he plans to keep deferring the obligation indefinitely until we abandon hope. We must have that money for the Widows and Orphans Fund. You'll just have to find some way to impress upon him the urgency of our cause. We have the greatest faith in you. We know you'll succeed.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC13_rich",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "161531253318219831": {
+    "Prev": "27746161881283032689",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Iulus Truptor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That is a large sum, but the Widows and Orphans Fund needs it badly. And Cunius Pelelius is a part of the trust who received the exclusive Imperial charter to exploit the rich ebony deposits of Caldera Mine, so he must be a very wealthy man, and more than able to spare 500 drakes for such a worthy cause.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "IC13_rich",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 10"
+    ]
+  }
+}

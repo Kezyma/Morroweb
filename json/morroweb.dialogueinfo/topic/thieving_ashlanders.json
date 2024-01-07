@@ -1,0 +1,149 @@
+{
+  "1322837921693332042": {
+    "Prev": "",
+    "Next": "2159817485756023190",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "marsus tullius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I understand you're not going to help. Now please, let me think about how I'll make up the money.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 40.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "2159817485756023190": {
+    "Prev": "1322837921693332042",
+    "Next": "1785912487227627851",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "marsus tullius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Maybe I'll run across them again one day. Then I'll be ready for them.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1785912487227627851": {
+    "Prev": "2159817485756023190",
+    "Next": "1957926327240137506",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "marsus tullius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent! Took me forever to hunt down those hides in the first place. Luckily, I found a good sized herd not too far south of here. I'd really appreciate you getting them back so I can make my guar hide shipment.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_InnocentAshlanders\" 30",
+      "AddTopic \"guar hide shipment\""
+    ]
+  },
+  "1957926327240137506": {
+    "Prev": "1785912487227627851",
+    "Next": "76991909872623933",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "marsus tullius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, can't say I blame you much. It's gotta be pretty tough to track down a couple of Ashlanders out here. They're tough bastards, I'll give them that.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_InnocentAshlanders\" 40"
+    ]
+  },
+  "76991909872623933": {
+    "Prev": "1957926327240137506",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "marsus tullius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yeah, a couple of them jumped me and took my hides. I didn't even see them coming. Sneaky, those Ashlanders are. If you can get them back for me, I'd really appreciate it. Figure you might know this area a little better than I do. If you can get them back, my father in Tel Aruhn will pay you well for your trouble, I swear it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_InnocentAshlanders",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_InnocentAshlanders\" 20",
+      "Choice \"I'll help you recover your hides.\" 1 \"Sorry. You'll have to find them yourself.\" 2"
+    ]
+  }
+}

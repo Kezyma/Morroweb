@@ -1,0 +1,289 @@
+{
+  "754015538380312340": {
+    "Prev": "",
+    "Next": "185642253342474301",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "danso indules",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Since you have killed one of the leaders of the Ashlander tribes, there is no possibility that you could be considered the Nerevarine of prophecy. They will not accept you. And now there is no chance that the Archcanon would wish to speak with you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B8_Failed_Nerevarine",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "185642253342474301": {
+    "Prev": "754015538380312340",
+    "Next": "109492082339932715",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "danso indules",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We've all heard the news! It's wonderful! Vivec has proclaimed you as his champion, and you go to confront Dagoth Ur beneath Red Mountain! And, joy of joys, the Temple is reconciled with the Dissident Priests, and once again we are united in our faith and mission.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B8_MeetVivec",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "109492082339932715": {
+    "Prev": "185642253342474301",
+    "Next": "10480127003029027954",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "danso indules",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I hear your meeting with the archcanon went well. I hope good comes of it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B8_MeetVivec",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "10480127003029027954": {
+    "Prev": "109492082339932715",
+    "Next": "2763538231500206",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "danso indules",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The archcanon is in his private quarters, and he very much wishes to speak with you, but I am to warn you... avoid confrontations with the Ordinators at all costs. The archcanon has spoken with the High Fane Ordinators, but if you are a wanted criminal, they may try to arrest you. If the blood of faithful servants of the Temple is spilled, it will make a reconciliation all that much more difficult.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B8_All_Hortator",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B8_All_Nerevarine",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal \"B8_MeetVivec\"  5",
+      "\"ordinator_high fane\"->setFight 30",
+      "\"ordinator_high fane\"->setDisposition 50"
+    ]
+  },
+  "2763538231500206": {
+    "Prev": "10480127003029027954",
+    "Next": "1954025441860514168",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "danso indules",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have also been named Nerevarine by the Urshilaku, Ahemmusa, Zainab, and Erabenimsun Ashlander tribes. The archcanon wishes to speak with you in his private quarters, but I warn you... avoid confrontations with Ordinators at all costs. If the blood of faithful servants of the Temple is spilled, it will make a reconciliation all that much more difficult.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B8_MeetVivec",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B1_UnifyUrshilaku",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B2_AhemmusaSafe",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabBride",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B4_KillWarLovers",
+        "Value": 50.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal B8_All_Hortator 50",
+      "Journal B8_All_Nerevarine 50"
+    ]
+  },
+  "1954025441860514168": {
+    "Prev": "2763538231500206",
+    "Next": "2055610805107028357",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "danso indules",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "But you have not been named Nerevarine by each of the Ashlander tribes --  the Urshilaku, Ahemmusa, Zainab, and Erabenimsun. I thought the conditions of the archcanon's offer were clear. There is no reason for a meeting until you have fulfilled both the Hortator and Nerevarine conditions of the prophecies. I'm sure the archcanon would have nothing to say to you at this point.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B8_MeetVivec",
+        "Value": 1.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2055610805107028357": {
+    "Prev": "1954025441860514168",
+    "Next": "26165774323091415",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "danso indules",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been acknowledged Hortator by House Redoran, House Hlaalu, and House Telvanni.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B8_MeetVivec",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B5_RedoranHort",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B6_HlaaluHort",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B7_TelvanniHort",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  },
+  "26165774323091415": {
+    "Prev": "2055610805107028357",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "danso indules",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I thought the conditions of the archcanon's offer were clear. There is no reason for a meeting until you have fulfilled the Hortator and Nerevarine conditions of the prophecies. I'm sure the archcanon would have nothing to say to you at this point.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B8_MeetVivec",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  }
+}

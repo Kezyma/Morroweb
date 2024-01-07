@@ -1,0 +1,156 @@
+{
+  "2019810294325217961": {
+    "Prev": "",
+    "Next": "174222919029913354",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Baro Egnatius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can't believe you killed him....",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_5",
+        "Value": 60.0
+      }
+    ],
+    "Script": []
+  },
+  "174222919029913354": {
+    "Prev": "2019810294325217961",
+    "Next": "985420205993718521",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Baro Egnatius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "How did you.... but where...  so it's true? He's dead? You don't mean to tell me that you....  I mean, you didn't.... you didn't KILL him, did you? Okay, listen. Maybe I made a bit of a mistake, all right? How about I just take the ship and deliver the ore, and we won't have any sort of problem at all. Just... just don't hurt me. Look, I'm going now, see?",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "saberout",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal CO_5 60"
+    ]
+  },
+  "985420205993718521": {
+    "Prev": "174222919029913354",
+    "Next": "1023226931703424",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Baro Egnatius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What, you're going to try and tell me you have it? Sure, it's easy to talk. A guy like Elberoth, though. He wouldn't just SAY he had his saber. He'd SHOW you he had it. And a guy looking at Elberoth holding his saber? He'd understand things pretty good, or he'd be REAL sorry.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "steel saber_elberoth",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "1023226931703424": {
+    "Prev": "985420205993718521",
+    "Next": "52462184226361685",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Baro Egnatius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Aye, I'd recognize his sword anywhere, if I saw it. What's it to you?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_5",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "52462184226361685": {
+    "Prev": "1023226931703424",
+    "Next": "197510945204731610",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Apronia Alfena",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I already gave it to you, %PCName. What, did you lose it? It's not like it was worth much. At least, not to anyone but Elberoth, and he certainly won't be needing it again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_5",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "197510945204731610": {
+    "Prev": "52462184226361685",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Apronia Alfena",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It certainly came in handy. Now that I think of it, though, I don't really have much of a use for it. Here, you take it. Not like it's worth much of anything, but odds are you'd be more likely to use it than I ever will.",
+    "Filters": [],
+    "Script": [
+      "removeitem \"steel saber_elberoth\" 1",
+      "player->additem \"steel saber_elberoth\" 1",
+      "Journal CO_5 50"
+    ]
+  }
+}

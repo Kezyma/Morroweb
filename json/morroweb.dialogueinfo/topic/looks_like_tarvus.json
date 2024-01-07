@@ -1,0 +1,88 @@
+{
+  "28382180941312210499": {
+    "Prev": "",
+    "Next": "86729163338916658",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "meryn othralas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Fantastic. Here, take a copy of the script. As you can see, people are already starting to gather, so we need to get this show started. I'm sure you know \"The Horror of Castle Xyr\" quite well, don't you? Of course you do, so there's no need for a lengthy rehearsal. Review the script for the next two minutes, then talk to me again. Make sure you come back within two minutes, as our play requires exact timing to pull off correctly.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_Performers\" 10",
+      "player->AddItem \"bk_playscript\" 1",
+      "Goodbye"
+    ]
+  },
+  "86729163338916658": {
+    "Prev": "28382180941312210499",
+    "Next": "3138894153266221655",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "meryn othralas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, that's too bad. Well, maybe another Tarvus look-alike will come along sooner or later.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_Performers\" 100"
+    ]
+  },
+  "3138894153266221655": {
+    "Prev": "86729163338916658",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "meryn othralas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hmmm....  Wait just a minute there, %PCRace. You know, you kind of look a little like Tarvus. I think this might work. What do you say, %PCRace? Would you like to take on the part of Clavides, Captain of the Imperial Guard, in our production?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MS_Performers",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, I'd love to help.\" 1 \"No thanks, I don't have time.\" 2"
+    ]
+  }
+}

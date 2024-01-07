@@ -1,0 +1,237 @@
+{
+  "22196257592020926573": {
+    "Prev": "",
+    "Next": "250662577148408456",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled from the Fighters Guild. Until you make amends, I can't talk to you about this contract.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "250662577148408456": {
+    "Prev": "22196257592020926573",
+    "Next": "12272317842355814908",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Last I heard, she was trying to get permission to study in the city of Sotha Sil.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_Telasero",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "12272317842355814908": {
+    "Prev": "250662577148408456",
+    "Next": "2557986482773411276",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sondaale of Shimmerene is dead? How do you know? Well, that's a shame. I don't have any more work for you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_Telasero",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "sondaale of shimmerene",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2557986482773411276": {
+    "Prev": "12272317842355814908",
+    "Next": "1928280813149921891",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There's no more to say about your pathetic efforts.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_Telasero",
+        "Value": 110.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "sondaale of shimmerene",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "1928280813149921891": {
+    "Prev": "2557986482773411276",
+    "Next": "19680231976348865",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard Sondaale of Shimmerene was dead. You idiot! You won't be getting any more contracts from me.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "sondaale of shimmerene",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_Telasero 110",
+      "ModDisposition -10"
+    ]
+  },
+  "19680231976348865": {
+    "Prev": "1928280813149921891",
+    "Next": "260512049306974389",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good work, %PCName. Here's the 500 septims for this contract.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_Telasero",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal FG_Telasero 100",
+      "ModPCFacRep 5 \"Fighters Guild\"",
+      "ModDisposition 10",
+      "Player->AddItem Gold_001 500"
+    ]
+  },
+  "260512049306974389": {
+    "Prev": "19680231976348865",
+    "Next": "130541660653534768",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Get moving, %PCRank. I need you to escort Sondaale through Telasero.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_Telasero",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "FG_Telasero",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "130541660653534768": {
+    "Prev": "260512049306974389",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go to Telasero, which is between Suran and the Silt Strider port near Molag Mar. Speak with Sondaale of Shimmerene and escort her through Telasero. She lacks the field experience of Larienna Macrina, so she will likely need more protection.",
+    "Filters": [],
+    "Script": [
+      "Journal FG_Telasero 10",
+      "\"sondaale of shimmerene\"->Enable",
+      "ShowMap Telasero"
+    ]
+  }
+}

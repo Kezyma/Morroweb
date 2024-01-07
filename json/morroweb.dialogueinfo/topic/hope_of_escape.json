@@ -1,0 +1,443 @@
+{
+  "17087258343206213671": {
+    "Prev": "",
+    "Next": "2298718963223836003",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rabinna",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ebonheart, Argonian Mission",
+    "PlayerFaction": "",
+    "Text": "Rabinna will be safe here. She will stay here. Even with Im-Kilaya dead, there are those that will help.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_SlaveMule",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "Im_Kilaya",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Rabinna->AiWander 128 0 0 0 0 0 0"
+    ]
+  },
+  "2298718963223836003": {
+    "Prev": "17087258343206213671",
+    "Next": "2052828240363523571",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rabinna",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ebonheart, Argonian Mission",
+    "PlayerFaction": "",
+    "Text": "Rabinna will be safe here. She will stay here.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_SlaveMule",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Rabinna->AiWander 128 0 0 0 0 0 0"
+    ]
+  },
+  "2052828240363523571": {
+    "Prev": "2298718963223836003",
+    "Next": "242948734166397219",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rabinna",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Rabinna will eventually find freedom.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "MV_SlaveMule",
+        "Value": 112.0
+      }
+    ],
+    "Script": []
+  },
+  "242948734166397219": {
+    "Prev": "2052828240363523571",
+    "Next": "17615179553088222918",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rabinna",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have done so much already. For that, Rabinna thanks you. Rabinna will hide here until an opportunity presents itself. Thank you for your help.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Journal MV_SlaveMule 113"
+    ]
+  },
+  "17615179553088222918": {
+    "Prev": "242948734166397219",
+    "Next": "1835815584938527581",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rabinna",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are much too kind to Rabinna. Thank you again for your help. Let us travel together.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_SlaveMule\" 112",
+      "\"Rabinna\"->AiFollowCell  Player \"Ebonheart, Argonian Mission\" 0 22 19 5 0"
+    ]
+  },
+  "1835815584938527581": {
+    "Prev": "17615179553088222918",
+    "Next": "1503123274319122007",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rabinna",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, with your help Rabinna can make it to Im-Kilaya at the Argonian Mission in Ebonheart. Will you help me?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_SlaveMule",
+        "Value": 102.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_SlaveMule",
+        "Value": 112.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "vorar helas",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "Im_Kilaya",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Im-Kilaya is dead. I'm sorry. I can do no more for you.\" 4"
+    ]
+  },
+  "1503123274319122007": {
+    "Prev": "1835815584938527581",
+    "Next": "142228585692015417",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rabinna",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, with your help Rabinna can make it to Im-Kilaya at the Argonian Mission in Ebonheart. Will you help me?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_SlaveMule",
+        "Value": 102.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_SlaveMule",
+        "Value": 112.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "vorar helas",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"I will help you.\" 3 \"I can do no more for you.\" 4"
+    ]
+  },
+  "142228585692015417": {
+    "Prev": "1503123274319122007",
+    "Next": "7729887236123232",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rabinna",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "[Rabinna is too frightened to speak to you.]",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_SlaveMule",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "7729887236123232": {
+    "Prev": "142228585692015417",
+    "Next": "245265752289728583",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rabinna",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you, a thousand times, thank you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_SlaveMule",
+        "Value": 95.0
+      }
+    ],
+    "Script": []
+  },
+  "245265752289728583": {
+    "Prev": "7729887236123232",
+    "Next": "3052727299694730518",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rabinna",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You would do that? Surely, you are blessed by the gods. Rabinna thanks you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_SlaveMule\" 113",
+      "\"Rabinna\"->AiWander 256 0 0 0 0 0 0 0"
+    ]
+  },
+  "3052727299694730518": {
+    "Prev": "245265752289728583",
+    "Next": "1346614261286926469",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rabinna",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You would do that? Surely, you are blessed by the gods. Rabinna thanks you. Let us travel together.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_SlaveMule\" 95",
+      "\"Rabinna\"->AiFollowCell  Player \"Ebonheart, Argonian Mission\" 0 22 19 5 0",
+      "AddTopic \"Rabinna\""
+    ]
+  },
+  "1346614261286926469": {
+    "Prev": "3052727299694730518",
+    "Next": "334760582671918832",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rabinna",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are like all the rest of them. There will be a day of reckoning, though Rabinna will never live to see it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_SlaveMule\" 100"
+    ]
+  },
+  "334760582671918832": {
+    "Prev": "1346614261286926469",
+    "Next": "2951911566238971858",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rabinna",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Rabinna has none, once in the possession of Vorar Helas. He will likely slaughter Rabinna for the drugs in my belly. My only hope is that you do not take Rabinna to that monster, and instead help me escape. There are those, such as Im-Kilaya in Ebonheart, who are willing to help those like me return to our homes. But he is dead, so there is no hope for me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_SlaveMule",
+        "Value": 75.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "Im_Kilaya",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_SlaveMule\" 75",
+      "Choice \"You are free to go where you please.\" 5 \"Sorry. I've already made a deal with Relam. You're bound for Balmora.\" 2"
+    ]
+  },
+  "2951911566238971858": {
+    "Prev": "334760582671918832",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rabinna",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Rabinna has none, once in the possession of Vorar Helas. He will likely slaughter Rabinna for the drugs in my belly. My only hope is that you do not take Rabinna to that monster, and instead help me escape. There are those, such as Im-Kilaya in Ebonheart, who are willing to help those like me return to our homes. If you were to take Rabinna to him at the Argonian Mission, Rabinna is sure he would help.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_SlaveMule",
+        "Value": 75.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_SlaveMule\" 75",
+      "Choice \"I will help you get to Im-Kilaya.\" 1 \"Sorry. I've already made a deal with Relam. You're bound for Balmora.\" 2"
+    ]
+  }
+}

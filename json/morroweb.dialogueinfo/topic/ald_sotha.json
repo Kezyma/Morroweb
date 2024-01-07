@@ -1,0 +1,355 @@
+{
+  "3068917735509529484": {
+    "Prev": "",
+    "Next": "225312121524552673",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled from the Morag Tong. In this dangerous times, I am not sure if you can make amends and regain my trust.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "225312121524552673": {
+    "Prev": "3068917735509529484",
+    "Next": "277363217580702386",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Dark Brotherhood can no longer hide from us in Ald Sotha.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_DB_AldSotha",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "277363217580702386": {
+    "Prev": "225312121524552673",
+    "Next": "26256106351547611924",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Night Mother is already dead? You have done well, %PCName. This ritual dagger has been passed from one Grandmaster to another for years. I believe you are the one who should wield it now and darken its blade with blood.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "severa magia",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MT_DB_AldSotha",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal MT_DB_AldSotha 100",
+      "Player->AddItem \"Daedric Dagger_MTAS\" 1",
+      "ModPCFacRep 15 \"Morag Tong\"",
+      "ModDisposition 20",
+      "Player->ModReputation 1"
+    ]
+  },
+  "26256106351547611924": {
+    "Prev": "277363217580702386",
+    "Next": "138341861636321048",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Night Mother is no more. You have done well, %PCName. This ritual dagger has been passed from one Grandmaster to another for years. I believe you are the one who should wield it now and darken its blade with blood.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "severa magia",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_DB_Assernerairan",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MT_DB_AldSotha 100",
+      "Player->AddItem \"Daedric Dagger_MTAS\" 1",
+      "ModPCFacRep 15 \"Morag Tong\"",
+      "ModDisposition 20",
+      "Player->ModReputation 1"
+    ]
+  },
+  "138341861636321048": {
+    "Prev": "26256106351547611924",
+    "Next": "21456167471394015241",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ald Sotha is northeast of Vivec. Somewhere in Ald Sotha you will find Severa Magia, the Night Mother of the Dark Brotherhood in Vvardenfell. Slay her and return to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MT_DB_Assernerairan",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Ald Sotha\"",
+      "Journal MT_DB_AldSotha 10"
+    ]
+  },
+  "21456167471394015241": {
+    "Prev": "138341861636321048",
+    "Next": "16871106641445926629",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "artisa arelas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ald Sotha is a splendid Daedric ruin within sight of Vivec City. Though exotic and picturesque, it is a dangerous site, haunted by old magics, dark cultists, and their Daedric summonings, and not recommended for sightseers.",
+    "Filters": [],
+    "Script": [
+      "ShowMap \"Ald Sotha\""
+    ]
+  },
+  "16871106641445926629": {
+    "Prev": "21456167471394015241",
+    "Next": "2902630686101395621",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "jobasha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ald Sotha is a splendid Daedric ruin within sight of Vivec City. Though exotic and picturesque, it is a dangerous site, haunted by old magics, dark cultists, and their Daedric summonings, and not recommended for sightseers.",
+    "Filters": [],
+    "Script": [
+      "ShowMap \"Ald Sotha\""
+    ]
+  },
+  "2902630686101395621": {
+    "Prev": "16871106641445926629",
+    "Next": "3145335292525417672",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Savant",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ald Sotha is a splendid Daedric ruin within sight of Vivec City. Though exotic and picturesque, it is a dangerous site, haunted by old magics, dark cultists, and their Daedric summonings, and not recommended for sightseers.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Ald Sotha\""
+    ]
+  },
+  "3145335292525417672": {
+    "Prev": "2902630686101395621",
+    "Next": "1237228497271626934",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Scout",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec",
+    "PlayerFaction": "",
+    "Text": "Though exotic and picturesque, Ald Sotha is a dangerous site, haunted by old magics, dark cultists, and their Daedric summonings, and not recommended for sightseers.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 50.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Ald Sotha\""
+    ]
+  },
+  "1237228497271626934": {
+    "Prev": "3145335292525417672",
+    "Next": "27617240421722420220",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Scout",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Suran",
+    "PlayerFaction": "",
+    "Text": "Though exotic and picturesque, Ald Sotha is a dangerous site, haunted by old magics, dark cultists, and their Daedric summonings, and not recommended for sightseers.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 50.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Ald Sotha\""
+    ]
+  },
+  "27617240421722420220": {
+    "Prev": "1237228497271626934",
+    "Next": "30390105221346723526",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Scout",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Suran",
+    "PlayerFaction": "",
+    "Text": "Ald Sotha is a large Daedric ruin in the southern Ascadian Isles region, within sight of Vivec City to the east.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Ald Sotha\""
+    ]
+  },
+  "30390105221346723526": {
+    "Prev": "27617240421722420220",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Scout",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec",
+    "PlayerFaction": "",
+    "Text": "Ald Sotha is a large Daedric ruin in the southern Ascadian Isles region, within sight of Vivec City to the east.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ShowMap \"Ald Sotha\""
+    ]
+  }
+}

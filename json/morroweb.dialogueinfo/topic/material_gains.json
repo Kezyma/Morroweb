@@ -1,0 +1,124 @@
+{
+  "2072520057149632826": {
+    "Prev": "",
+    "Next": "173629641422024622",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Irarak",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I think we've said enough on that topic.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "VA_VampCult",
+        "Value": 90.0
+      }
+    ],
+    "Script": []
+  },
+  "173629641422024622": {
+    "Prev": "2072520057149632826",
+    "Next": "135302427017235630",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Irarak",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Me die? I think not, vampire. To me, my minions! Slay this false god! He seeks to kill me!!!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampCult\" 90",
+      "StartCombat Player",
+      "ModDisposition -50",
+      "SetFight 100"
+    ]
+  },
+  "135302427017235630": {
+    "Prev": "173629641422024622",
+    "Next": "1243815991029010317",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Irarak",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sounds like a bargain, but it would be best if you never returned here. Take this.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampCult\" 90",
+      "Player->AddItem Gold_001 1000"
+    ]
+  },
+  "1243815991029010317": {
+    "Prev": "135302427017235630",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Irarak",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, well...there are those benefits as well. Look, I am beginning to see your angle here. I've got a good thing going, and I don't want it ruined. I'll pay you well to leave us in peace here, friend vampire. I will tell them that you are my Blood-Friend who walks above, spreading our word to others. I'll also pay you well. What do you say?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "VA_VampCult",
+        "Value": 80.0
+      }
+    ],
+    "Script": [
+      "Journal \"VA_VampCult\" 80",
+      "Choice \"I'll let you live, for a price.\" 1 \"You are a buffoon. You must die.\" 2"
+    ]
+  }
+}

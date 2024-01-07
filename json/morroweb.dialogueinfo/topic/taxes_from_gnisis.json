@@ -1,0 +1,395 @@
+{
+  "494233473208411278": {
+    "Prev": "",
+    "Next": "116032660164705731",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlaren ramoran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have my support on the council.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_OldFlame",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "116032660164705731": {
+    "Prev": "494233473208411278",
+    "Next": "11228678278417749",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlaren ramoran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have delivered the taxes, but you must also find out what happened to Nalvilie Saren.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_TaxCollector",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "11228678278417749": {
+    "Prev": "116032660164705731",
+    "Next": "1824625249478327144",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlaren ramoran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No. I have said what I said. I will say no more.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_TaxCollector",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "1824625249478327144": {
+    "Prev": "11228678278417749",
+    "Next": "312089280560724489",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlaren ramoran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have lied to me and I will not support you on the council.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_TaxCollector",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "312089280560724489": {
+    "Prev": "1824625249478327144",
+    "Next": "15967194622241312742",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlaren ramoran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. The taxes are all here. I have one more request before I give you my support on the council, I would like for you to find an old aquaintance of mine, Nalvilie Saren.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Journal HR_TaxCollector 100",
+      "Player->RemoveItem Gold_001 60",
+      "AddItem Gold_001 60",
+      "ModPCFacRep 5 \"Redoran\"",
+      "ModDisposition 10"
+    ]
+  },
+  "15967194622241312742": {
+    "Prev": "312089280560724489",
+    "Next": "2252017799943331494",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlaren ramoran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "And I suppose you're keeping it somewhere safe? Bring the taxes to me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "2252017799943331494": {
+    "Prev": "15967194622241312742",
+    "Next": "1098421318270988836",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlaren ramoran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "House Redoran values honesty. You have proven yourself to be as dishonest as the other outlanders. I will not give you my support on the council.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal HR_TaxCollector 70",
+      "Player->RemoveItem Gold_001 50",
+      "AddItem Gold_001 50",
+      "ModDisposition -25"
+    ]
+  },
+  "1098421318270988836": {
+    "Prev": "2252017799943331494",
+    "Next": "597831803248618175",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlaren ramoran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Not only are you lying to me about how much taxes were due, you didn't even bring 50 drakes with you. House Redoran has no use for such as you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal HR_TaxCollector 70",
+      "ModDisposition -25"
+    ]
+  },
+  "597831803248618175": {
+    "Prev": "1098421318270988836",
+    "Next": "25855212531836413400",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlaren ramoran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then why are you asking me about it? Get the taxes from Hetman Abelmawia in Gnisis and bring them back to me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "25855212531836413400": {
+    "Prev": "597831803248618175",
+    "Next": "20104848777383009",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlaren ramoran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you have the taxes?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_TaxCollector",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, 60 drakes.\" 1 \"Yes, 50 drakes.\" 2 \"No, not yet.\" 3"
+    ]
+  },
+  "20104848777383009": {
+    "Prev": "25855212531836413400",
+    "Next": "17786131453113727902",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hlaren ramoran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "My regular tax collector has fallen ill, but the duties are quite simple. Speak with Hetman Abelmawia and get the taxes from him. Then bring the taxes back to me.",
+    "Filters": [],
+    "Script": [
+      "Journal HR_TaxCollector 10"
+    ]
+  },
+  "17786131453113727902": {
+    "Prev": "20104848777383009",
+    "Next": "10141179982649715430",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hetman abelmawia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I do not think you are still collecting taxes from Gnisis.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_TaxCollector",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "10141179982649715430": {
+    "Prev": "17786131453113727902",
+    "Next": "69896061108197290",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hetman abelmawia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have given you the taxes. Take them back to Hlaren Ramoran in Ald'ruhn.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_TaxCollector",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "69896061108197290": {
+    "Prev": "10141179982649715430",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hetman abelmawia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are here for the taxes? Just a moment, I will get them for you. Yes, here they are. 60 drakes in all.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_TaxCollector",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HR_TaxCollector 50",
+      "Player->AddItem Gold_001 60"
+    ]
+  }
+}

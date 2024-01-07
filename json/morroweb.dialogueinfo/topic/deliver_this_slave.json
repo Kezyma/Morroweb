@@ -1,0 +1,286 @@
+{
+  "16698213032559025308": {
+    "Prev": "",
+    "Next": "185298859198819009",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Relam Arinith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Vorar is dead, huh? Well, not my problem, really. Just means my debt is forgiven.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "vorar helas",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_SlaveMule",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "185298859198819009": {
+    "Prev": "16698213032559025308",
+    "Next": "1009816624940419026",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Relam Arinith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You killed my slave! I needed her for business!",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "Rabinna",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MV_SlaveMule",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "StartCombat Player",
+      "SetFight 100",
+      "Goodbye"
+    ]
+  },
+  "1009816624940419026": {
+    "Prev": "185298859198819009",
+    "Next": "4298256092639324742",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Relam Arinith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard that the old kitten was dead. I sure hope you took care of things with Vorar Helas. He knows you're responsible.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "Rabinna",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_SlaveMule",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "NotEqual",
+        "Id": "MV_SlaveMule",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_SlaveMule",
+        "Value": 108.0
+      }
+    ],
+    "Script": []
+  },
+  "4298256092639324742": {
+    "Prev": "1009816624940419026",
+    "Next": "41043841529232122",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Relam Arinith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard you brought that slave to some abolitionists. That cost me a lot of money, fool. I can't let that go too easily.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_SlaveMule",
+        "Value": 114.0
+      }
+    ],
+    "Script": [
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "41043841529232122": {
+    "Prev": "4298256092639324742",
+    "Next": "18926178251516316180",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Relam Arinith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Heard you took care of that for me. Thanks.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_SlaveMule",
+        "Value": 108.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "LessEqual",
+        "Id": "MV_SlaveMule",
+        "Value": 109.0
+      }
+    ],
+    "Script": []
+  },
+  "18926178251516316180": {
+    "Prev": "41043841529232122",
+    "Next": "398516357382115214",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Relam Arinith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yeah, got to get that Khajiit to Balmora, one way or another.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_SlaveMule",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "398516357382115214": {
+    "Prev": "18926178251516316180",
+    "Next": "1882929519273112565",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Relam Arinith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent. You'll find Helas in Balmora, in the east side of town. Just tell him Relam Arinith sent you. Take care with this slave, friend. She's worth more than you can imagine. Rabinna here might not look like much, but it's what's on the inside that counts. Know what I mean?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_SlaveMule\" 30",
+      "AddTopic \"Relam Arinith\"",
+      "\"Rabinna\"->AiFollowCell Player \"Balmora, Vorar Helas' House\" 0, 22, 19, 5, 0"
+    ]
+  },
+  "1882929519273112565": {
+    "Prev": "398516357382115214",
+    "Next": "208023411785713753",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Relam Arinith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? Too bad. Just means I'll have to get her there myself. Your loss, friend.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_SlaveMule\" 40"
+    ]
+  },
+  "208023411785713753": {
+    "Prev": "1882929519273112565",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Relam Arinith",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yeah, just a little unfinished business between Vorar Helas and me. I owe him big for a deal we made a while ago. Rabinna here ought to pay for my side of the bargain, and more. There's a lot of money in some of these slaves. You interested in the work?",
+    "Filters": [],
+    "Script": [
+      "Journal \"MV_SlaveMule\" 20",
+      "Choice \"I'll deliver the slave to him for you.\" 1 \"Sorry, not interested.\" 2"
+    ]
+  }
+}

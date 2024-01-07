@@ -1,0 +1,408 @@
+{
+  "9182185082923919835": {
+    "Prev": "",
+    "Next": "3021215703121714835",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "varvur sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I feel as if this was all my fault, but at least the ash statue is gone. I know I won't do anything like that again. Oh, I think I remember where I got that ash statue...",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ClearSarethi",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "3021215703121714835": {
+    "Prev": "9182185082923919835",
+    "Next": "21640184821123124",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "varvur sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I didn't kill him. He was my closest friend. The guards found me near his body, but I don't remember anything that happened that night. Sometimes, though, sometimes I have... bad dreams.",
+    "Filters": [],
+    "Script": [
+      "Journal HR_ClearSarethi 20"
+    ]
+  },
+  "21640184821123124": {
+    "Prev": "3021215703121714835",
+    "Next": "10866258732432515556",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Yes, Varvur Sarethi has been cleared of the murder of Bralen Carvaren.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ClearSarethi",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "10866258732432515556": {
+    "Prev": "21640184821123124",
+    "Next": "8038201822630030147",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Varvur Sarethi spoke with me. I have cleared him of the statue's influence and cleared his name for the murder of Bralen Carvaren.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ClearSarethi",
+        "Value": 95.0
+      }
+    ],
+    "Script": [
+      "Journal HR_ClearSarethi 110"
+    ]
+  },
+  "8038201822630030147": {
+    "Prev": "10866258732432515556",
+    "Next": "16768277281115530317",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Have Varvur Sarethi speak with me soon. If this statue was responsible for his behavior, I will clear him of Bralen Carvaren's murder.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ClearSarethi",
+        "Value": 90.0
+      }
+    ],
+    "Script": []
+  },
+  "16768277281115530317": {
+    "Prev": "8038201822630030147",
+    "Next": "2294814228119529519",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Thank you, %PCName. Yes, I can see there is some kind of conjuration enchantment on this statue. I believe this statue influenced Varvur Sarethi in some manner, causing him to kill his friend Bralen Carvaren. He may still be under the influence of this statue. Tell Varvur to come and speak with me. When I am sure that he is no longer influenced by the statue, I will have him cleared of Bralen Carvaren's murder.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HR_ClearSarethi 90",
+      "Player->RemoveItem Misc_6th_Ash_HRCS 1",
+      "AddItem Misc_6th_Ash_HRCS 1"
+    ]
+  },
+  "2294814228119529519": {
+    "Prev": "16768277281115530317",
+    "Next": "51452194473007404",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "If you will not give me the statue, I cannot help you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "51452194473007404": {
+    "Prev": "2294814228119529519",
+    "Next": "13379121593019526301",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "You found an ash statue in Varvur Sarethi's room? Give me the ash statue so that I may examine it more carefully.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_6th_ash_hrcs",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ClearSarethi",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give him the statue.\" 1 \"Keep the statue.\" 2"
+    ]
+  },
+  "13379121593019526301": {
+    "Prev": "51452194473007404",
+    "Next": "182482843611328325",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lloros sarano",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Yes, Varvur has been charged with the murder. There is a great deal of evidence. If you must investigate this, start by speaking with Varvur Sarethi.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ClearSarethi",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HR_ClearSarethi 80"
+    ]
+  },
+  "182482843611328325": {
+    "Prev": "13379121593019526301",
+    "Next": "824215651650328220",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "You have cleared my son's name, and that is all that matters.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ClearSarethi",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "824215651650328220": {
+    "Prev": "182482843611328325",
+    "Next": "1221121790500821014",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "I understand that Varvur Sarethi's name will be cleared soon. You have my gratitude and you need not trouble yourself over this matter any longer.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ClearSarethi",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1221121790500821014": {
+    "Prev": "824215651650328220",
+    "Next": "1210182061964819402",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Thank you, %PCName. I understand that my son's name will be cleared when he has been purged of the ash statue's influence. I knew my son would never murder his friend, but I understand this statue influenced him in some way.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ClearSarethi",
+        "Value": 90.0
+      }
+    ],
+    "Script": [
+      "Journal HR_ClearSarethi 100",
+      "ModPCFacRep 5 \"Redoran\"",
+      "ModDisposition 20",
+      "Player->ModReputation 1"
+    ]
+  },
+  "1210182061964819402": {
+    "Prev": "1221121790500821014",
+    "Next": "84277198414124458",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "This ash statue troubles me. I would have you speak with someone at the Temple about this statue. Perhaps Lloros Sarano would know more of it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HR_ClearSarethi",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Journal HR_ClearSarethi 50"
+    ]
+  },
+  "84277198414124458": {
+    "Prev": "1210182061964819402",
+    "Next": "8240305423049117034",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "This ash statue troubles me. I would have you speak with someone at the Temple about this statue. Perhaps Lloros Sarano would know more of it.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_6th_ash_hrcs",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HR_ClearSarethi 50"
+    ]
+  },
+  "8240305423049117034": {
+    "Prev": "84277198414124458",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Redoran",
+    "Text": "Bralen Carvaren was one of Varvur Sarethi's friends. I cannot believe that my son would do such a thing, but the evidence is... persuasive. I would start by speaking with my son about Bralen Carvaren. He is in his room in the guard quarters.",
+    "Filters": [],
+    "Script": [
+      "Journal HR_ClearSarethi 10"
+    ]
+  }
+}

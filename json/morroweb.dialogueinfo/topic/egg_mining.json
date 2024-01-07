@@ -1,0 +1,129 @@
+{
+  "8679262935673775": {
+    "Prev": "",
+    "Next": "573420310247113969",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "dondos driler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Egg mining may not be glamorous, but it's a good, steady business. You may come to appreciate it in time.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 170.0
+      }
+    ],
+    "Script": []
+  },
+  "573420310247113969": {
+    "Prev": "8679262935673775",
+    "Next": "291161383129102767",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "dondos driler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "If the kwama queen at Shurdan-Raplay is dead, that is the end of your ambitions. A stronghold that cannot support itself -- and its House -- is no stronghold at all. So there will be no stronghold for you, and no more advancement.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "kwama queen_shurdan",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "291161383129102767": {
+    "Prev": "573420310247113969",
+    "Next": "2637812803295831604",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "dondos driler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Ilasour Tansumiran and Llaals Ores seem to be the only unemployed miners who could have helped you. And now, If Ilasour Tansumiran and Llaals Ores are dead, that is the end of your ambitions. A stronghold that cannot support itself -- and its House -- is no stronghold at all. So there will be no stronghold for you, and no more advancement.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "ilasour tansumiran",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "llaals ores",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2637812803295831604": {
+    "Prev": "291161383129102767",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "dondos driler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "I believe there are several egg mines near your stronghold, %PCName. Unfortunately, the only one that is on the land you purchased is the Shurdan-Raplay Egg Mine, which is blighted. If you cure the kwama queen in the Shurdan-Raplay mine and recruit some miners, you will have a profitable business for your stronghold.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HH_Stronghold 110"
+    ]
+  }
+}

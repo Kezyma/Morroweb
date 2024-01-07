@@ -1,0 +1,147 @@
+{
+  "145231109935711050": {
+    "Prev": "",
+    "Next": "2669792853210016366",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "urshamusa rapli",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My visions have left me, %PCName. I dream now only of the time when my tribe will be healthy.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_WhiteGuar",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "2669792853210016366": {
+    "Prev": "145231109935711050",
+    "Next": "30679170362445611569",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "urshamusa rapli",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The white guar must be found.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_WhiteGuar",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MS_WhiteGuar",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "30679170362445611569": {
+    "Prev": "2669792853210016366",
+    "Next": "2842720965105466049",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "urshamusa rapli",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I knew you were the one. Go now. I am certain this animal will appear for you. In my vision, I saw it where the path was forked, where the rocks grow from the earth like fingers on a hand.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_WhiteGuar\" 30",
+      "AddTopic \"White Guar\""
+    ]
+  },
+  "2842720965105466049": {
+    "Prev": "30679170362445611569",
+    "Next": "6104246921143712024",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "urshamusa rapli",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? Never fight against fate, child. But, we each must choose our own path.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_WhiteGuar\" 40"
+    ]
+  },
+  "6104246921143712024": {
+    "Prev": "2842720965105466049",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "urshamusa rapli",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The past seven nights, I have had dreams of a White Guar. I know this to be an animal sent by the gods to help my tribe. We have been suffering greatly from disease, and none of my magic will cure the ailment. Find this White Guar for us, stranger. Let it lead you to a new hope for my people.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MS_WhiteGuar",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_WhiteGuar\" 20",
+      "Choice \"I will try and find the white guar.\" 1 \"I'm sorry. I cannot help you.\" 2"
+    ]
+  }
+}

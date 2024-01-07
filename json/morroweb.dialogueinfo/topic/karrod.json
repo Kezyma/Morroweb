@@ -1,0 +1,548 @@
+{
+  "160967262575420246": {
+    "Prev": "",
+    "Next": "8979144322836121472",
+    "Type": "Topic",
+    "Disposition": 80,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Royal Guard",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I thought I saw him headed over to the Winged Guar. He goes there most nights to have a few bottles of brandy. Tough fellow, that one.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Champion",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_Champion",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "8979144322836121472": {
+    "Prev": "160967262575420246",
+    "Next": "3054027607190177422",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "karrod",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am Karrod, Champion of King Hlaalu Helseth, and eternal friend to you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Champion",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "3054027607190177422": {
+    "Prev": "8979144322836121472",
+    "Next": "2903913155152897527",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "barenziah",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Redguard had a piece of the blade! Excellent.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Champion",
+        "Value": 80.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bladepiece_01",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2903913155152897527": {
+    "Prev": "3054027607190177422",
+    "Next": "246962231888432069",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "barenziah",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have already defeated him in battle, %PCName, and I have heard that he actually spoke to you. You are full of surprises. He may be willing to speak with you about this blade you seek. I wish you luck.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_Blade",
+        "Value": 25.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Champion",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Blade",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal TR_Blade 30"
+    ]
+  },
+  "246962231888432069": {
+    "Prev": "2903913155152897527",
+    "Next": "125921085894130037",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "barenziah",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So you have defeated the Redguard? I am impressed, %PCName. He is a truly powerful adversary. I can only imagine my son's surprise!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Champion",
+        "Value": 80.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_Blade",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "125921085894130037": {
+    "Prev": "246962231888432069",
+    "Next": "91326680258692876",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "barenziah",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He is mute, %PCName. None have ever heard him utter a word. And the only way to get near him is in battle. You will need to convince Helseth to let you duel his champion. Speak with my son...perhaps it can be arranged.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_Blade",
+        "Value": 25.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_Champion",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TR_Blade 25"
+    ]
+  },
+  "91326680258692876": {
+    "Prev": "125921085894130037",
+    "Next": "810993852835025018",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "barenziah",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He is a dangerous man, but could be a powerful ally.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Blade",
+        "Value": 25.0
+      }
+    ],
+    "Script": []
+  },
+  "810993852835025018": {
+    "Prev": "91326680258692876",
+    "Next": "1218436741037015017",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "barenziah",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As fierce a warrior as I have ever seen, and completely loyal to my son. You'll often find him at the Winged Guar, enjoying a Cyrodiilic Brandy. It will be difficult for you to defeat this man in combat, %PCName. I wish you luck.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Champion",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal TR_Champion 30"
+    ]
+  },
+  "1218436741037015017": {
+    "Prev": "810993852835025018",
+    "Next": "2267821049149864221",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "King Hlaalu Helseth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My champion is dead, and you are to blame. Guards!",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "karrod",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Set KingHit to 1",
+      "Goodbye"
+    ]
+  },
+  "2267821049149864221": {
+    "Prev": "1218436741037015017",
+    "Next": "2091416499312483497",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "King Hlaalu Helseth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm amazed you were able to defeat him. There may be the stuff of greatness in you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Champion",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "2091416499312483497": {
+    "Prev": "2267821049149864221",
+    "Next": "27102273722377596",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "King Hlaalu Helseth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm amazed you were able to defeat him. There may be the stuff of greatness in you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Champion",
+        "Value": 70.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Greater",
+        "Id": "KarrodBeaten",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "27102273722377596": {
+    "Prev": "2091416499312483497",
+    "Next": "50241039637886880",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "King Hlaalu Helseth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The finest fighter I have ever known, as you will soon learn.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Champion",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_Champion",
+        "Value": 80.0
+      }
+    ],
+    "Script": [
+      "Journal TR_Champion 10"
+    ]
+  },
+  "50241039637886880": {
+    "Prev": "27102273722377596",
+    "Next": "30906112541782030440",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "King Hlaalu Helseth",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I met him many years ago, a deaf and dumb child wandering the streets of Wayrest. The boy actually had the audacity to try and rob my stepsister, Elysana. I marveled at his courage, and took him into my employ. When a dog has been beaten, %PCName, it will lick the hand of one who feeds it even the most meager of scraps. Now he is my most loyal of servants, and one of my most deadly. I wish for you to fight my champion.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_Champion",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal TR_Champion 10"
+    ]
+  },
+  "30906112541782030440": {
+    "Prev": "50241039637886880",
+    "Next": "23502723483524951",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ra'tesh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ra'Tesh knows the beautiful Karrod is dead. Ra'Tesh thinks you had something to do with it. You are a very bad person.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "karrod",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "23502723483524951": {
+    "Prev": "30906112541782030440",
+    "Next": "2388411215453514871",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ra'tesh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Rumor says you were able to best Karrod. Ra'Tesh has heard he was not badly damaged. This is a good thing.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Champion",
+        "Value": 80.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "karrod",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2388411215453514871": {
+    "Prev": "23502723483524951",
+    "Next": "27110231982806030923",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ra'tesh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Mmmm...the big Redguard. Ra'Tesh serves the brawny man his brandy almost every night. Ra'Tesh hears you are to duel him tomorrow. Ra'Tesh is sorry he will be losing a new customer.",
+    "Filters": [],
+    "Script": []
+  },
+  "27110231982806030923": {
+    "Prev": "2388411215453514871",
+    "Next": "291985501032725308",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "plitinius mero",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard you defeated him! Amazing!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Champion",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "291985501032725308": {
+    "Prev": "27110231982806030923",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "plitinius mero",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Best fighter I've ever seen, and I've seen the best in Tamriel. Hell with a sword, deadly with his bare hands. Shrugs off most attacks like they were beestings. A good fellow, though. Doesn't speak, but you can tell by looking in his eyes. Can drink most of my men under the table, too! Take care with him, %PCName. If you haven't already, you might speak with the Lady Barenziah about him. She's spent some time in his company.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_Champion",
+        "Value": 70.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_Champion",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  }
+}

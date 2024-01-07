@@ -1,0 +1,321 @@
+{
+  "562219181370423433": {
+    "Prev": "",
+    "Next": "1382213182112411931",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have done well in removing this threat to Our peace and security",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_MissingHand_02",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1382213182112411931": {
+    "Prev": "562219181370423433",
+    "Next": "15483227322906913509",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "[Almalexia regards you coolly.] Perhaps you think yourself too proud to accept the gifts of your Mistress? Very well. It is as you wish.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "moddisposition -30",
+      "Journal TR_MissingHand_02 110",
+      "goodbye"
+    ]
+  },
+  "15483227322906913509": {
+    "Prev": "1382213182112411931",
+    "Next": "2244017854242879950",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I bless you with my gift, and mark you as my own. Be ever faithful in your service, and you may expect more generous rewards.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "player->addspell \"her_reflected_glory\"",
+      "moddisposition 10",
+      "Journal TR_MissingHand_02 100",
+      "goodbye"
+    ]
+  },
+  "2244017854242879950": {
+    "Prev": "15483227322906913509",
+    "Next": "30201235932337512303",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I bless you with my gift, and mark you as my own. Be ever faithful in your service, and you may expect more generous rewards.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "player->addspell \"her_protection\"",
+      "moddisposition 10",
+      "Journal TR_MissingHand_02 100",
+      "goodbye"
+    ]
+  },
+  "30201235932337512303": {
+    "Prev": "2244017854242879950",
+    "Next": "625513173109812847",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I bless you with my gift, and mark you as my own. Be ever faithful in your service, and you may expect more generous rewards.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "player->addspell \"her_ironskin\"",
+      "moddisposition 10",
+      "Journal TR_MissingHand_02 100",
+      "goodbye"
+    ]
+  },
+  "625513173109812847": {
+    "Prev": "30201235932337512303",
+    "Next": "2693214659157421189",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Salas Valor is dead? The pain is almost more than I can bear... but you have served me faithfully, and it is in my mind to grant you a divine blessing. Would you like skin as tough as iron? Would you like my protection against paralyzing terror? Or would you wish to always bask in warm comfort of my reflected glory? Quick, now! Choose! You must not keep your Deity waiting!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_MissingHand_02",
+        "Value": 90.0
+      }
+    ],
+    "Script": [
+      "Choice \"Skin like iron, please!\" 2 \"Protection against paralysis, please!\" 3 \"Warm, reflected glory, please!\" 4 \"Uh... nothing for me, right now... but thanks.\" 5"
+    ]
+  },
+  "2693214659157421189": {
+    "Prev": "625513173109812847",
+    "Next": "6646139771281410558",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "When you have removed the threat Salas Valor represents to Our peace and security, report back to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_MissingHand_02",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "6646139771281410558": {
+    "Prev": "2693214659157421189",
+    "Next": "24938175302180813658",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Salas Valor is already dead? The pain is almost more than I can bear... but somehow, you have anticipated my need and served me faithfully! It is a sign! This miracle compels me to grant you a divine blessing. Would you like skin as tough as iron? Would you like the terrible force of lightning tamed as your protector? Or would you wish to always bask in warm comfort of my reflected glory? Quick, now! Choose! You must not keep your Deity waiting!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_MissingHand_01",
+        "Value": 90.0
+      }
+    ],
+    "Script": [
+      "Choice \"Skin like iron, please!\" 2 \"Tamed lightning, please!\" 3 \"Warm, reflected glory, please!\" 4 \"Uh... nothing for me, right now... but thanks.\" 5"
+    ]
+  },
+  "24938175302180813658": {
+    "Prev": "6646139771281410558",
+    "Next": "3059216781478229821",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Now Salas Valor haunts the streets and sewers of Mournhold. His wild, distracted manner frightens the people, but even my Ordinators are afraid to confront so terrible a weaponmaster and war-wizard. I beg you -- seek out Salas Valor. Relieve us of this threat to my beloved people, and bring peace to my sacred city of Mournhold.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TR_MissingHand_02 1"
+    ]
+  },
+  "3059216781478229821": {
+    "Prev": "24938175302180813658",
+    "Next": "13142310641054729340",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "One of my most faithful guards, one of my very own Hands of Almalexia, pledged to honor and protect and serve me in all ways, has lost his mind. Salas Valor has abandoned me, and now spews vile and slanderous untruths about me to any who would listen. I pity him, and know he is not responsible for his actions. To view the splendor of a god may drive even the strongest mortal mad. But now he presents a threat to us, and he is very dangerous. I fear you may not be able to spare his life.",
+    "Filters": [],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  },
+  "13142310641054729340": {
+    "Prev": "3059216781478229821",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Mournhold, Godsreach",
+    "PlayerFaction": "",
+    "Text": "Someone wearing the armor of the Hands of Almalexia has been walking around Godsreach, muttering to himself and acting strangely. Is that who you are looking for? Look out. I wouldn't want to tangle with with one of Almalexia's personal guards in a bad mood.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_MissingHand_02",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Salas Valor",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

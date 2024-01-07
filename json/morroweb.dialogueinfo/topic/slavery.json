@@ -1,0 +1,726 @@
+{
+  "1584724829308727856": {
+    "Prev": "",
+    "Next": "2459215329266594699",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galyn arvel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Continue your work to end slavery here in Morrowind.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_TwinLamps1",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2459215329266594699": {
+    "Prev": "1584724829308727856",
+    "Next": "2605211451269229298",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galyn arvel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for bringing J'Saddha here safely. You should speak with Ilmeni Dren again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_TwinLamps1",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "2605211451269229298": {
+    "Prev": "2459215329266594699",
+    "Next": "2737331301567828142",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galyn arvel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You know the Twin Lamps? Well then, yes, we are having some trouble here. A Khajiti slave, J'Saddha, was supposed to meet us at our boat. He sent us a message that he is hiding in some ruins east of here, but there are three slavehunters in town, and we cannot risk being discovered.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "HH_TwinLamps1",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Journal HH_TwinLamps1 30"
+    ]
+  },
+  "2737331301567828142": {
+    "Prev": "2605211451269229298",
+    "Next": "9621670125214296",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have done all that I would ask. Continue to do the work of the Twin Lamps.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_TwinLamps3",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "9621670125214296": {
+    "Prev": "2737331301567828142",
+    "Next": "2745857163047625219",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard that you killed Galyn Arvel. You do not belong in the Twin Lamps.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "galyn arvel",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "2745857163047625219": {
+    "Prev": "9621670125214296",
+    "Next": "16353157382132426588",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard that you were responsible for the death of that poor Khajiit in Ald Velothi. I should have known better than to trust a foreigner.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "j_saddha",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "16353157382132426588": {
+    "Prev": "2745857163047625219",
+    "Next": "850722354178351462",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard that you killed Sterdecan. You do not belong in the Twin Lamps.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "sterdecan",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "850722354178351462": {
+    "Prev": "16353157382132426588",
+    "Next": "218624053296254986",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard that you killed Hides-His-Foot. You do not belong in the Twin Lamps.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "hides_his_foot",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "218624053296254986": {
+    "Prev": "850722354178351462",
+    "Next": "2115419361728415632",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have saved Hides-His-Foot from slavery. I am grateful to you and I will speak to my father on your behalf.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_TwinLamps3",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal HH_TwinLamps3 100",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 20",
+      "Player->ModReputation 1"
+    ]
+  },
+  "2115419361728415632": {
+    "Prev": "218624053296254986",
+    "Next": "2440965123064717614",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The slaves on the Dren Plantation suffer the worst. One of them knows things about Orvas Dren that are valuable to the Twin Lamps. We can use him to blackmail Orvas Dren. I want you to free Hides-His-Foot from the Dren Plantation. Escort him to Sterdecan's Farm. Hides-His-Foot knows the way.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_TwinLamps1",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HH_TwinLamps3 10",
+      "ShowMap Dren Plantation"
+    ]
+  },
+  "2440965123064717614": {
+    "Prev": "2115419361728415632",
+    "Next": "238724680228759025",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard that you helped the Arvel family. When you have time, speak with me again, for there is still much work to done.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_TwinLamps1",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal HH_TwinLamps1 100",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 20",
+      "Player->ModReputation 1"
+    ]
+  },
+  "238724680228759025": {
+    "Prev": "2440965123064717614",
+    "Next": "625791172149116865",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As I asked, go to Ald Velothi and speak with Galyn Arvel.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_TwinLamps1",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "625791172149116865": {
+    "Prev": "238724680228759025",
+    "Next": "7165143272901728200",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am sorry. I thought we might have a common interest.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "7165143272901728200": {
+    "Prev": "625791172149116865",
+    "Next": "15999218291836912961",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am sorry. I thought we might have a common interest.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "15999218291836912961": {
+    "Prev": "7165143272901728200",
+    "Next": "2055516002117636777",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am sorry. I thought we might have a common interest.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "2055516002117636777": {
+    "Prev": "15999218291836912961",
+    "Next": "5028108573169626757",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am always glad to meet another member. There is a family in Ald Velothi, the Arvels, who need our help. Go to Ald Velothi and speak with Galyn Arvel.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Journal HH_TwinLamps1 10"
+    ]
+  },
+  "5028108573169626757": {
+    "Prev": "2055516002117636777",
+    "Next": "1748611858264948105",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, have you seen the twin lamps?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_TwinLamps1",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Choice \"They light the way to freedom.\" 4 \"Yes.\" 1 \"No.\" 2"
+    ]
+  },
+  "1748611858264948105": {
+    "Prev": "5028108573169626757",
+    "Next": "214762656075065054",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, have you seen the twin lamps?",
+    "Filters": [],
+    "Script": [
+      "Choice \"Yes.\" 1 \" No.\" 2"
+    ]
+  },
+  "214762656075065054": {
+    "Prev": "1748611858264948105",
+    "Next": "26389353539239455",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "huleeya",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am an Imperial citizen, and I believe slavery should be outlawed, as it is elsewhere in Tamriel. Many of Tamriel's people once practiced slavery, but have now rejected it as cruel and immoral. I hope that in my lifetime, slavery might be outlawed in Morrowind, but the Armistice confirmed slavery as lawful, and the Great Houses strongly resist any diminishment of the rights guaranteed by that ancient agreement between the Empire and the Dunmer.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_7HuleeyaInformant",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "26389353539239455": {
+    "Prev": "214762656075065054",
+    "Next": "26082321242514118161",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eldafire",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's shameful in this day and age. But it's legal here in Morrowind. Many Dark Elves own Argonian and Khajiit slaves. Their treatment is disgraceful. You would think the practice would die out as Morrowind adopts Imperial ways, but the natives persist in their cruel and barbaric 'traditions'.",
+    "Filters": [],
+    "Script": []
+  },
+  "26082321242514118161": {
+    "Prev": "26389353539239455",
+    "Next": "322585161722926294",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Dreamers",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Dunmer people have all been slaves, sleeping in shame, serving the outland overlords like meek children. But now the sleepers awake, and shall be slaves no longer. Now we shall be the Dunmer once again, free and proud -- rulers, not ruled.",
+    "Filters": [],
+    "Script": []
+  },
+  "322585161722926294": {
+    "Prev": "26082321242514118161",
+    "Next": "12402135751536128563",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "brallion",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Dark Elves have traditionally permitted enslavement of Humans, Orcs, Argonians, and Khajiit, and mistreatment of these races is not recognized as a crime, other than as a crime against property. Slavery is not now practiced in Summerset Isles or Valenwood, and its practice is on the wane in Morrowind. By terms of the Armistice, Morrowind defines its own laws and customs, and slavery remains legal. Slavery is uncommon in Redoran and Hlaalu Districts, common in Telvanni, Indoril, and Dres Districts.",
+    "Filters": [],
+    "Script": []
+  },
+  "12402135751536128563": {
+    "Prev": "322585161722926294",
+    "Next": "23825186351338632070",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "Dark Elf",
+    "SpeakerClass": "Savant",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Dunmer have traditionally permitted enslavement of humans, orcs, Argonians, and Khajiit. We do not recognize the mistreatment of slaves of these races as a serious crime, other than as a crime against property. By terms of the Armistice, Morrowind may define its own laws and customs, and slavery remains legal. Slavery is uncommon in Redoran and Hlaalu Districts, but common in Telvanni Districts.",
+    "Filters": [
+      {
+        "Type": "NotFaction",
+        "Func": "NotFaction",
+        "Compare": "Equal",
+        "Id": "Ashlanders",
+        "Value": 1.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "23825186351338632070": {
+    "Prev": "12402135751536128563",
+    "Next": "2676369343225521846",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Savant",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Slavery is protected by law in Morrowind. Slavery is illegal throughout the Empire, and considered barbaric. Slavery had disappeared in Sumerset Isles and Valenwood long before their incorporation into the Empire. Most Imperial citizens assume the practice will die out as Morrowind adopts Imperial ways, and the subject excites little passion except among Argonian and Khajiit abolitionists, outraged that the Empire does little to suppress persistent illegal cross-border slave raiding in southern Morrowind.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2676369343225521846": {
+    "Prev": "23825186351338632070",
+    "Next": "2515643532504519053",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": 5,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Legion",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Argonians abolitionists are outraged that the Empire does so little to suppress persistent illegal cross-border slave raiding in southern Morrowind.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 33.0
+      }
+    ],
+    "Script": []
+  },
+  "2515643532504519053": {
+    "Prev": "2676369343225521846",
+    "Next": "23795107031059222945",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": 5,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Legion",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Most Imperial citizens assume the practice will die out as Morrowind adopts Imperial ways, and the subject excites little passion except among Argonians abolitionists.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Less",
+        "Id": "Random100",
+        "Value": 66.0
+      }
+    ],
+    "Script": []
+  },
+  "23795107031059222945": {
+    "Prev": "2515643532504519053",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": 5,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Legion",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Slavery is protected by law in Morrowind. Slavery is illegal throughout the rest of the Empire, and considered barbaric by most citizens.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

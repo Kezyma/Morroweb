@@ -1,0 +1,140 @@
+{
+  "1242484951770522450": {
+    "Prev": "",
+    "Next": "2038308431655529886",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dagoth_ur_1",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It will all be decided here. I believe I will prevail. But I cannot be sure, and I am vain enough that, should I fall, I would wish to be remembered in my own words. So, if you have final questions you would ask, ask them now. I have final questions I would ask you, if you would answer.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "2038308431655529886": {
+    "Prev": "1242484951770522450",
+    "Next": "299342755425514106",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dagoth_ur_1",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "But I have won this place and power by right of conquest. By right of daring and enterprise. I will not risk it to cunning and deceit. I offer you no deals. If you are my enemy, I cannot trust you. And even if you are not my enemy, I cannot let you live.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 2"
+    ]
+  },
+  "299342755425514106": {
+    "Prev": "2038308431655529886",
+    "Next": "872112015739415948",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dagoth_ur_1",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Now that you have come to me here, there can be but one result. Many times I have rehearsed speeches offering to share this place with you. 'If you dare to defy the gods, take my hand.' 'To seal our oath of alliance, you shall give me Wraithguard.' 'You have ability. Special gifts you don't even understand. Serve me, and I can help you master those gifts.'",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "wraithguard_jury_rig",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sunder",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "keening",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  },
+  "872112015739415948": {
+    "Prev": "299342755425514106",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dagoth_ur_1",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Now that you have come to me here, there can be but one result. Many times I have considered offering to share this place with you. I considered offering to accept your oath of service. You might try to buy my trust by giving me Wraithguard, Keening, and Sunder. I thought we might once again be friends... comrades... brothers in arms.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "wraithguard",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "sunder",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "keening",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  }
+}

@@ -1,0 +1,266 @@
+{
+  "10575211192978614725": {
+    "Prev": "",
+    "Next": "3103227047327717869",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Maybe you need to join our cause. Make amends and speak with me again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "3103227047327717869": {
+    "Prev": "10575211192978614725",
+    "Next": "26197214322048832443",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There's no point in speaking about this anymore.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_Hostage",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "26197214322048832443": {
+    "Prev": "3103227047327717869",
+    "Next": "28946242011561130834",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hrundi agreed to join our cause.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_Hostage",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "28946242011561130834": {
+    "Prev": "26197214322048832443",
+    "Next": "3250848271566021940",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I understand Hrundi has been killed. Unfortunately, we won't be able to use him in our plans. There are still other jobs for you to take care of.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "hrundi",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TG_Hostage 110"
+    ]
+  },
+  "3250848271566021940": {
+    "Prev": "28946242011561130834",
+    "Next": "478235662083614738",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Did you talk him into joining? Good. We're making progress, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_Hostage",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal TG_Hostage 100",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "478235662083614738": {
+    "Prev": "3250848271566021940",
+    "Next": "39727916321817874",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Talk to Hrundi. If you can convince him to join our cause, you won't have to track down Hrundi's woman.",
+    "Filters": [],
+    "Script": []
+  },
+  "39727916321817874": {
+    "Prev": "478235662083614738",
+    "Next": "2352632305968729402",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've agreed to join your cause.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_Hostage",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "2352632305968729402": {
+    "Prev": "39727916321817874",
+    "Next": "23340961627326361",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Know about Falena Hlaren too? Alright, then, I guess I have to help you. Just remember that Sjoring also knows who my lover is. Take Sjoring out quickly. Don't give him a chance to regroup. For her sake. And yours.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_Hostage",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal TG_Hostage 70"
+    ]
+  },
+  "23340961627326361": {
+    "Prev": "2352632305968729402",
+    "Next": "28775234722882523330",
+    "Type": "Topic",
+    "Disposition": 80,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Alright, %PCName. You've convinced me. But Sjoring knows who my lover is. If he suspects anything, he'll take her away from me. I'll go along for now. Just be sure to take Sjoring out quickly. Don't give him a chance to regroup. For her sake. And yours.",
+    "Filters": [],
+    "Script": [
+      "Journal TG_Hostage 70"
+    ]
+  },
+  "28775234722882523330": {
+    "Prev": "23340961627326361",
+    "Next": "16921231431380068",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "I sympathize, believe me. But I have a good reason to obey Sjoring Hard-Heart. I can't support you. I would if I could, believe me.",
+    "Filters": [],
+    "Script": []
+  },
+  "16921231431380068": {
+    "Prev": "28775234722882523330",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hrundi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "No. Why would I support the Thieves Guild? Who told you that? Get out of here, thief.",
+    "Filters": [],
+    "Script": []
+  }
+}

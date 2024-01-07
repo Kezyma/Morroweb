@@ -1,0 +1,299 @@
+{
+  "1637710799869521443": {
+    "Prev": "",
+    "Next": "2743427227343412324",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've broken the rules of House Hlaalu, sweetie. It brings tears to my eyes when I think about your disloyalty. Maybe you can make amends and make everything better.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2743427227343412324": {
+    "Prev": "1637710799869521443",
+    "Next": "71413960226223402",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You never disappoint me, pudding pie.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_DestroyIndarysManor",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "71413960226223402": {
+    "Prev": "2743427227343412324",
+    "Next": "2290211391722619531",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh? Banden Indarys is already dead? Well, then, please accept these 1000 drakes from House Hlaalu.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "banden indarys",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "HH_DestroyIndarysManor",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HH_DestroyIndarysManor 100",
+      "Player->AddItem Gold_001 1000",
+      "ModPCFacRep 10 \"Hlaalu\"",
+      "ModDisposition 20",
+      "Player->ModReputation 1"
+    ]
+  },
+  "2290211391722619531": {
+    "Prev": "71413960226223402",
+    "Next": "478166382114232658",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So Indarys Manor is no more? Good work, %PCName. Please take these 1000 drakes from House Hlaalu.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "banden indarys",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_DestroyIndarysManor",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HH_DestroyIndarysManor 100",
+      "Player->AddItem Gold_001 1000",
+      "ModPCFacRep 10 \"Hlaalu\"",
+      "ModDisposition 20",
+      "Player->ModReputation 1"
+    ]
+  },
+  "478166382114232658": {
+    "Prev": "2290211391722619531",
+    "Next": "2866735503117516703",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "House Redoran also has an unchartered stronghold. The Redoran Stronghold of Indarys Manor is on the east side of the road from Ald'ruhn to Maar Gan in a place called the Bal Isra. Go there and kill the master of the stronghold, Banden Indarys. I know you will not disapoint me, pudding.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_NordSmugglers",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HH_DestroyIndarysManor 10",
+      "ShowMap \"Bal Isra\""
+    ]
+  },
+  "2866735503117516703": {
+    "Prev": "478166382114232658",
+    "Next": "3078511401174710666",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Indarys Manor has no leader. The Redorans have been defeated.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_AttackIndarys",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3078511401174710666": {
+    "Prev": "2866735503117516703",
+    "Next": "1436280762784821358",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Banden Indarys is already dead? The Redorans will not be so hasty to expand their territory now. You have done well, %PCName.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "banden indarys",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "HT_AttackIndarys",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HT_AttackIndarys 100",
+      "ModPCFacRep 10 \"Telvanni\"",
+      "ModDisposition 10",
+      "Player->ModReputation 1"
+    ]
+  },
+  "1436280762784821358": {
+    "Prev": "3078511401174710666",
+    "Next": "15408132141702522054",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "So Banden Indarys is dead. The Redorans will not be so hasty to expand their territory now. You have done well, %PCName.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "banden indarys",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_AttackIndarys",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HT_AttackIndarys 100",
+      "ModPCFacRep 10 \"Telvanni\"",
+      "ModDisposition 10",
+      "Player->ModReputation 1"
+    ]
+  },
+  "15408132141702522054": {
+    "Prev": "1436280762784821358",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Telvanni",
+    "Text": "Indarys Manor is built in the Bal Isra, named after the rows of stones there. You can find it on the road from Ald'ruhn to Maar Gan. Go there and slay the Redoran Banden Indarys.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_AttackRethan",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HT_AttackIndarys 10",
+      "ShowMap \"Bal Isra\""
+    ]
+  }
+}

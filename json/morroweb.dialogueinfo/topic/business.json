@@ -1,0 +1,2577 @@
+{
+  "2530620179628421004": {
+    "Prev": "19179164301317622870",
+    "Next": "1915929438198417015",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vivec_god",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Actually, I believe we've finished our business. I will notify the Temple that you are our champion. There shall be no more persecution of the Dissident Priests, and I hope both sides shall swiftly be reconciled. Now you are my guest, I am your host, and we have time for explanations. Or counsel. Or questions. Or bitter recriminations, if you like. Or you may leave, if you wish. As you wish. But I think before you leave you should hear how to defeat Dagoth Ur, and how you must use the artifact Wraithguard.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B8_MeetVivec",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1915929438198417015": {
+    "Prev": "2530620179628421004",
+    "Next": "20571299903066227513",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vivec_god",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "[There is a brief sensation of motion in total darkness, floating, but without a sense of weight or direction.] ...you know it. Now. I will notify the Temple that you are our champion. There shall be no more persecution of the Dissident Priests, and I hope both sides shall swiftly be reconciled. We have time for questions, if you like. Or you may leave, as you wish. But I think there are at least two things you ought to know before you leave: how to use Wraithguard, and how to defeat Dagoth Ur.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 8.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_wraithguard_no_equip",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"B8_MeetVivec\" 50",
+      "player->additem \"Wraithguard\" 1",
+      "player->removeitem \"misc_Wraithguard_no_equip\" 1",
+      "modFactionReaction Temple Nerevarine 6",
+      "modFactionReaction Redoran Nerevarine 2",
+      "modFactionReaction Hlaalu Nerevarine 2",
+      "wulf->enable",
+      "player->modReputation 5"
+    ]
+  },
+  "20571299903066227513": {
+    "Prev": "1915929438198417015",
+    "Next": "22053304572540420424",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vivec_god",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "[There is a brief sensation of motion in total darkness, floating, but without a sense of weight or direction.] ...you know it. Now. I will notify the Temple that you are our champion. There shall be no more persecution of the Dissident Priests, and I hope both sides shall swiftly be reconciled. We have time for questions, if you like. Or you may leave, as you wish. But I think there are at least two things you ought to know before you leave: how to use Wraithguard, and how to defeat Dagoth Ur.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 8.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_wraithguard_no_equip",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"B8_MeetVivec\" 50",
+      "player->additem \"Wraithguard\" 1",
+      "player->removeitem \"misc_Wraithguard_no_equip\" 1",
+      "modFactionReaction Temple Nerevarine 10",
+      "modFactionReaction Redoran Nerevarine 2",
+      "modFactionReaction Hlaalu Nerevarine 2",
+      "wulf->enable",
+      "player->modReputation 5"
+    ]
+  },
+  "22053304572540420424": {
+    "Prev": "20571299903066227513",
+    "Next": "4715135021278523560",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vivec_god",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Temple",
+    "Text": "[There is a brief sensation of motion in total darkness, floating, but without a sense of weight or direction.] ...you know it. Now. I will notify the Temple that you are our champion. There shall be no more persecution of the Dissident Priests, and I hope both sides shall swiftly be reconciled. We have time for questions, if you like. Or you may leave, as you wish.  But I think there are at least two things you ought to know before you leave: how to use Wraithguard, and how to defeat Dagoth Ur.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 8.0
+      }
+    ],
+    "Script": [
+      "Journal \"B8_MeetVivec\" 50",
+      "player->additem \"Wraithguard\" 1",
+      "modFactionReaction Temple Nerevarine 6",
+      "modFactionReaction Redoran Nerevarine 2",
+      "modFactionReaction Hlaalu Nerevarine 2",
+      "wulf->enable",
+      "player->removeitem \"misc_Wraithguard_no_equip\" 1",
+      "player->modReputation 5"
+    ]
+  },
+  "4715135021278523560": {
+    "Prev": "22053304572540420424",
+    "Next": "1389871372227023138",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vivec_god",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "[There is a brief sensation of motion in total darkness, floating, but without a sense of weight or direction.] ...you know it. Now. I will notify the Temple that you are our champion. There shall be no more persecution of the Dissident Priests, and I hope both sides shall swiftly be reconciled. We have time for questions, if you like. Or you may leave, as you wish.  But I think there are at least two things you ought to know before you leave: how to use Wraithguard, and how to defeat Dagoth Ur.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 8.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_wraithguard_no_equip",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"B8_MeetVivec\" 50",
+      "player->additem \"Wraithguard\" 1",
+      "modFactionReaction Temple Nerevarine 10",
+      "modFactionReaction Redoran Nerevarine 2",
+      "modFactionReaction Hlaalu Nerevarine 2",
+      "wulf->enable",
+      "player->removeitem \"misc_Wraithguard_no_equip\" 1",
+      "player->modReputation 5"
+    ]
+  },
+  "1389871372227023138": {
+    "Prev": "4715135021278523560",
+    "Next": "8334214621756822057",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vivec_god",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "[There is a brief sensation of motion in total darkness, floating, but without a sense of weight or direction.] ...you know it. Now. I will notify the Temple that you are our champion. There shall be no more persecution of the Dissident Priests, and I hope both sides shall swiftly be reconciled. We have time for questions, if you like. Or you may leave, as you wish.  But I think there are at least two things you ought to know before you leave: how to use Wraithguard, and how to defeat Dagoth Ur.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 8.0
+      }
+    ],
+    "Script": [
+      "Journal \"B8_MeetVivec\" 50",
+      "player->additem \"Wraithguard\" 1",
+      "modFactionReaction Temple Nerevarine 10",
+      "modFactionReaction Redoran Nerevarine 2",
+      "modFactionReaction Hlaalu Nerevarine 2",
+      "wulf->enable",
+      "player->modReputation 5"
+    ]
+  },
+  "8334214621756822057": {
+    "Prev": "1389871372227023138",
+    "Next": "2415110759132931569",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vivec_god",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A sensible response. Alas, I am not looking for someone sensible. I'm sorry. I'm afraid that you will not find Wraithguard of much use to you, for without your oath, I shall not teach you how to use it. So that concludes our interview. I hope it has not been an inconvenience. And if you change your mind, come back.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 7.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_wraithguard_no_equip",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"B8_MeetVivec\" 40"
+    ]
+  },
+  "2415110759132931569": {
+    "Prev": "8334214621756822057",
+    "Next": "2133311851905214528",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vivec_god",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A sensible response. Alas, I am not looking for someone sensible. I'm sorry. I'm afraid that you will not find Wraithguard of much use to you, for without your oath, I shall not teach you how to use it. So that concludes our interview. I hope it has not been an inconvenience. And if you change your mind, come back.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 7.0
+      }
+    ],
+    "Script": [
+      "Journal \"B8_MeetVivec\" 40"
+    ]
+  },
+  "2133311851905214528": {
+    "Prev": "2415110759132931569",
+    "Next": "3106115163765829584",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vivec_god",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sorry. I'm afraid, then, that you will not find Wraithguard of much use to you, for without your oath, I shall not teach you how to use it. So that concludes our interview. I hope it has not been an inconvenience. And if you change your mind, come back.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_wraithguard_no_equip",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"B8_MeetVivec\" 38"
+    ]
+  },
+  "3106115163765829584": {
+    "Prev": "2133311851905214528",
+    "Next": "13783146652734014349",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vivec_god",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sorry. I'm afraid, then, that you will not find Wraithguard of much use to you, for without your oath, I shall not teach you how to use it. So that concludes our interview. I hope it has not been an inconvenience. And if you change your mind, come back.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": [
+      "Journal \"B8_MeetVivec\" 38"
+    ]
+  },
+  "13783146652734014349": {
+    "Prev": "3106115163765829584",
+    "Next": "30571826548214184",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vivec_god",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Not very sensible. But very good. I was hoping for someone who would have no hesitations about making such an oath. You will now have a brief, momentary sensation of time passing. Don't be alarmed. You are being taken out of time in order to avoid the unpleasant experience of learning how to use Wraithguard. It will be over before...",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 8"
+    ]
+  },
+  "30571826548214184": {
+    "Prev": "13783146652734014349",
+    "Next": "977083230312155",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vivec_god",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll take your 'maybe' as a 'no.' Then that concludes our interview. I hope it has not been an inconvenience. And if you change your mind, come back.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "Journal \"B8_MeetVivec\" 36"
+    ]
+  },
+  "977083230312155": {
+    "Prev": "30571826548214184",
+    "Next": "323618749958311718",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vivec_god",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then that concludes our interview. I hope it has not been an inconvenience. And if you change your mind, come back.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal \"B8_MeetVivec\" 34"
+    ]
+  },
+  "323618749958311718": {
+    "Prev": "977083230312155",
+    "Next": "781611952132852829",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vivec_god",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. Sensible of you. And now, will you give your oath, before all gods and men, before all spirits visible and invisible, before my honor and your honor, to dedicate yourself and Wraithguard to the defeat and destruction of Dagoth Ur, and the preservation of Morrowind and its people?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, I so swear\" 5 \"No, I shall not swear\" 6 \"Maybe... it depends...\" 7"
+    ]
+  },
+  "781611952132852829": {
+    "Prev": "323618749958311718",
+    "Next": "26276111512336711749",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vivec_god",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Next, I propose to surrender to you the power and responsibility of defeating Dagoth Ur. You may choose to refuse; I will not compel you. You will receive the power as a gift, in the form of an artifact called 'Wraithguard.\" You may accept the gift, then do with it as you will. You will receive the responsibility as an oath. You may give your oath, then keep it or break it as you like. First, will you accept Wraithguard as a gift?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, I accept Wraithguard\" 2 \"No, I refuse Wraithguard\" 3 \"Maybe... it depends...\" 4"
+    ]
+  },
+  "26276111512336711749": {
+    "Prev": "781611952132852829",
+    "Next": "832512132506726163",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vivec_god",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Let's see. You accepted an artifact called Wraithguard. Then I proposed that you accept the responsibility of defeating Dagoth Ur, and swearing an oath to that effect. You may give your oath, then keep it or break it as you like. So. Will you give your oath, before all gods and men, before all spirits visible and invisible, before my honor and your honor, to dedicate yourself and Wraithguard to the defeat and destruction of Dagoth Ur, and the preservation of Morrowind and its people?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "B8_MeetVivec",
+        "Value": 40.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_wraithguard_no_equip",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, I so swear\" 5 \"No, I shall not swear\" 6 \"Maybe... it depends...\" 7"
+    ]
+  },
+  "832512132506726163": {
+    "Prev": "26276111512336711749",
+    "Next": "1191819453148052298",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vivec_god",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Let's see. You accepted an artifact called Wraithguard. Then I proposed that you accept the responsibility of defeating Dagoth Ur, and swearing an oath to that effect. You may give your oath, then keep it or break it as you like. So. Will you give your oath, before all gods and men, before all spirits visible and invisible, before my honor and your honor, to dedicate yourself and Wraithguard to the defeat and destruction of Dagoth Ur, and the preservation of Morrowind and its people?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "B8_MeetVivec",
+        "Value": 38.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_wraithguard_no_equip",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, I so swear\" 5 \"No, I shall not swear\" 6 \"Maybe... it depends...\" 7"
+    ]
+  },
+  "1191819453148052298": {
+    "Prev": "832512132506726163",
+    "Next": "10614846064858263",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vivec_god",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Let's try again, shall we? I propose to give you an artifact called 'Wraithguard.\" You may accept the gift, then do with it as you will. I propose that you accept the responsibility of defeating Dagoth Ur, and swearing an oath to that effect. You may give your oath, then keep it or break it as you like. First, will you accept Wraithguard as a gift?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "B8_MeetVivec",
+        "Value": 36.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, I accept Wraithguard\" 2 \"No, I refuse Wraithguard\" 3 \"Maybe... it depends...\" 4"
+    ]
+  },
+  "10614846064858263": {
+    "Prev": "1191819453148052298",
+    "Next": "9654141542779126358",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vivec_god",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Let's try again, shall we? I propose to give you an artifact called 'Wraithguard.\" You may accept the gift, then do with it as you will. I propose that you accept the responsibility of defeating Dagoth Ur, and swearing an oath to that effect. You may give your oath, then keep it or break it as you like. First, will you accept Wraithguard as a gift?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "B8_MeetVivec",
+        "Value": 34.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, I accept Wraithguard\" 2 \"No, I refuse Wraithguard\" 3 \"Maybe... it depends...\" 4"
+    ]
+  },
+  "9654141542779126358": {
+    "Prev": "10614846064858263",
+    "Next": "23639281082304622292",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vivec_god",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "When I was young like you, I was very impatient. So I will keep our business short. Then, later, there may be time for other things. First, I propose to remove my curse upon the Nerevarine, end the persecution of the Dissident Priests, and proclaim to all Morrowind that %PCName is the Incarnate and Nerevarine, the prophesied savior of Morrowind, and the last hope to withstand the menace of Dagoth Ur and the Sixth House. These things I will do, whether you wish or not.",
+    "Filters": [],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  },
+  "23639281082304622292": {
+    "Prev": "9654141542779126358",
+    "Next": "27763163211212118790",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hassour zainsubani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, my friend %PCName. You say you want to ask me some questions. What would you wish to know about the Ashlanders and the Nerevarine cult? Or perhaps you wish to know more about my life as a trader?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_11_ZainsubaniInformant",
+        "Value": 31.0
+      }
+    ],
+    "Script": []
+  },
+  "27763163211212118790": {
+    "Prev": "23639281082304622292",
+    "Next": "8973149151212329660",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hassour zainsubani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I believe I have answered your questions about choosing a thoughtful gift. That was your business with me, was it not?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_11_ZainsubaniInformant",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "8973149151212329660": {
+    "Prev": "27763163211212118790",
+    "Next": "2557799611354620779",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hassour zainsubani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Everything? I am not so wise as to know everything about the Ashlanders, and I have no wish to spend long hours with a stranger attempting such a task. If you will excuse me....",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_11_ZainsubaniInformant",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "2557799611354620779": {
+    "Prev": "8973149151212329660",
+    "Next": "18391127743166232332",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hassour zainsubani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sorry, but your request is not a proper one, and I will not discuss this with strangers. If you will excuse me....",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_11_ZainsubaniInformant",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "18391127743166232332": {
+    "Prev": "2557799611354620779",
+    "Next": "3224919880373231894",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hassour zainsubani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A curious question. A gift is a sign of courtesy among strangers, and affection among friends. Among strangers, a thoughtful gift is a sign that you are cautious, and considerate, and aware of the other's wants and needs. Such is particularly useful for traders and travelers. Among friends, it is a private thing, and subtle, with great risks, for the test of the gift is how well it is tailored to the receiver.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_11_ZainsubaniInformant",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "3224919880373231894": {
+    "Prev": "18391127743166232332",
+    "Next": "284891313219116585",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hassour zainsubani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see. You wish to learn of Ashlanders from me. And what is it that you wish to learn?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_11_ZainsubaniInformant",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"What are their gift-giving customs?\" 1 \"What do you know about the Nerevarine cult\" 2 \"Tell me everything.\" 3"
+    ]
+  },
+  "284891313219116585": {
+    "Prev": "3224919880373231894",
+    "Next": "315331857463478502",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Vedam Dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Surely you do not expect me to discuss business with you when you have broken the rules. You must make amends, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "315331857463478502": {
+    "Prev": "284891313219116585",
+    "Next": "2850088431265210407",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "Vedam Dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "House Hlaalu's business is in your hands now, %PCName.",
+    "Filters": [],
+    "Script": []
+  },
+  "2850088431265210407": {
+    "Prev": "315331857463478502",
+    "Next": "18786176901061512283",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "Vedam Dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "To be %NextPCRank in anything other than name, you must win control of the Camonna Tong from my brother, Orvas Dren.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_WinSaryoni",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "18786176901061512283": {
+    "Prev": "2850088431265210407",
+    "Next": "24810172091641526445",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "Vedam Dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "In order for House Hlaalu and the most virtuous aspects of the Empire to survive, we must find a way to control the Ordinators.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HH_WinSaryoni",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "24810172091641526445": {
+    "Prev": "18786176901061512283",
+    "Next": "168693420113732656",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Vedam Dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Perhaps I will discuss business with you when you have earned a higher rank in House Hlaalu.",
+    "Filters": [],
+    "Script": []
+  },
+  "168693420113732656": {
+    "Prev": "24810172091641526445",
+    "Next": "5125210912504723923",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "How can I trust you if you cannot stick to the simple rules of House Hlaalu?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "5125210912504723923": {
+    "Prev": "168693420113732656",
+    "Next": "1646225972260727326",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "You have done all that I would ask. Speak with Crassius Curio or my father, Duke Dren.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_TwinLamps3",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1646225972260727326": {
+    "Prev": "5125210912504723923",
+    "Next": "33681084949773781",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "The real business of Vvardenfell is slavery.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_LiteracyCampaign",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "33681084949773781": {
+    "Prev": "1646225972260727326",
+    "Next": "453711957525225546",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Business? How can you talk about business when people cannot read?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HH_LiteracyCampaign",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "453711957525225546": {
+    "Prev": "33681084949773781",
+    "Next": "20598282182891213468",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ilmeni dren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "What business? Prove yourself in House Hlaalu and then perhaps we can discuss business.",
+    "Filters": [],
+    "Script": []
+  },
+  "20598282182891213468": {
+    "Prev": "453711957525225546",
+    "Next": "2312725998153272213",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "You've broken the rules of House Hlaalu, sweetie. It brings tears to my eyes when I think about your disloyalty. Maybe you can make amends and make everything better.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2312725998153272213": {
+    "Prev": "20598282182891213468",
+    "Next": "1333213500351817338",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can't talk about business to anyone who doesn't belong to House Hlaalu, sweetie.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1333213500351817338": {
+    "Prev": "2312725998153272213",
+    "Next": "27722183252963525488",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "I have no more business for you, pudding. Maybe it's time you were introduced to Duke Vedam Dren in Ebonheart.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_DestroyTelUvirith",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "27722183252963525488": {
+    "Prev": "1333213500351817338",
+    "Next": "22289122691671718174",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "The naughty Telvanni also built a stronghold without a charter. Before the Duke grants this stronghold legitimacy, I want you to deal with the Telvanni sorcerer Reynel Uvirith.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BeroSupport",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 200.0
+      }
+    ],
+    "Script": []
+  },
+  "22289122691671718174": {
+    "Prev": "27722183252963525488",
+    "Next": "861676401378717692",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 6,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "You know how I feel about you, but I just can't discuss business with anyone under the rank of %NextPCRank. You'll also need to build a big stronghold.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BeroSupport",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "861676401378717692": {
+    "Prev": "22289122691671718174",
+    "Next": "201288990252962879",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 6,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "It would be a good idea to win the support of another Councilman, my sweet. Of all the Councilmen, I believe only Dram Bero has the courage to support an outlander.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_DestroyIndarysManor",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HH_BeroSupport 10"
+    ]
+  },
+  "201288990252962879": {
+    "Prev": "861676401378717692",
+    "Next": "28029291762234614585",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 6,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "House Redoran built a stronghold without a charter from the Duke. You're the perfect %PCRace to teach Redoran Lord Banden Indarys a lesson.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_NordSmugglers",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "28029291762234614585": {
+    "Prev": "201288990252962879",
+    "Next": "3650187842756516767",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "You know how I feel about you, but I just can't discuss business with you right now. Have you checked your advancement in House Hlaalu, dumpling?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "RankRequirement",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_NordSmugglers",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Stronghold",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3650187842756516767": {
+    "Prev": "28029291762234614585",
+    "Next": "12572144892470120733",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "You know how I feel about you, but I just can't discuss business with you right now. Have you checked your advancement in House Hlaalu, dumpling? You also need to build yourself a stronghold.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "RankRequirement",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_NordSmugglers",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "12572144892470120733": {
+    "Prev": "3650187842756516767",
+    "Next": "17258200042046829022",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "You know how I feel about you, but I just don't have any business to discuss with any %PCRank. Maybe Edryno Arethi here in Vivec or Nileno Dorvayn in Balmora can help you out.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_NordSmugglers",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "17258200042046829022": {
+    "Prev": "12572144892470120733",
+    "Next": "1860766962834532205",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Now that you've had some experience in ebony smuggling, pudding pie, I want you to look for Velfred the Outlaw.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EbonyDelivery",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1860766962834532205": {
+    "Prev": "17258200042046829022",
+    "Next": "1117113995377626704",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Make sure Odral Helvi gets arrested for the shipment of ebony he wants my little sweetheart to deliver.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EbonyDelivery",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "1117113995377626704": {
+    "Prev": "1860766962834532205",
+    "Next": "20963185872032015548",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "You're doing well, dumpling. Just speak with Odral Helvi again and keep me informed.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BankFraud",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "20963185872032015548": {
+    "Prev": "1117113995377626704",
+    "Next": "3628283521129728633",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 4,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Speak with Odral Helvi in Caldera. Turn your charms on him, sweetie, and talk about business. If you feel his request is questionable, speak with me for further directions. Keep Uncle Crassius well informed, and I'll reward you.",
+    "Filters": [],
+    "Script": [
+      "Journal HH_BankFraud 5"
+    ]
+  },
+  "3628283521129728633": {
+    "Prev": "20963185872032015548",
+    "Next": "13817163092139214286",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "I do not have any business for you right now, %PCName.",
+    "Filters": [],
+    "Script": []
+  },
+  "13817163092139214286": {
+    "Prev": "3628283521129728633",
+    "Next": "2407829818866830623",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't think so. You've been expelled.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2407829818866830623": {
+    "Prev": "13817163092139214286",
+    "Next": "1975389172802530530",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There is no business that must be done here in Caldera.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EbonyDelivery",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1975389172802530530": {
+    "Prev": "2407829818866830623",
+    "Next": "1538253213186831688",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I need you deliver a shipment of ebony to a friend of mine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_RentCollector",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1538253213186831688": {
+    "Prev": "1975389172802530530",
+    "Next": "1064819235715623",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am responsible for land in the Ascadian Isles and at this time of year, I need to collect the rent and taxes from the farmers.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_ReplaceDocs",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1064819235715623": {
+    "Prev": "1538253213186831688",
+    "Next": "1038812370104151217",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There is an error in some of the documents in the Hall of Records. I need someone to replace these erroneous documents.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_CaptureSpy",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1038812370104151217": {
+    "Prev": "1064819235715623",
+    "Next": "152411345827291790",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Important documents are missing from the offices here in Caldera. I need someone to catch whoever stole the Caldera mining contracts.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BankFraud",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "152411345827291790": {
+    "Prev": "1038812370104151217",
+    "Next": "196872834366430786",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I need a courier to deliver a package of sealed orders.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BankFraud",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "196872834366430786": {
+    "Prev": "152411345827291790",
+    "Next": "13644267092915212775",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled. Go up to the Plaza and talk with Crassius Curio to make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "13644267092915212775": {
+    "Prev": "196872834366430786",
+    "Next": "1511124819313232685",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's business as usual in Vivec. Speak with Crassius Curio at his manor here in the Hlaalu Compound or speak with Nileno Dorvayn in Balmora.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_GuardMerchant",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1511124819313232685": {
+    "Prev": "13644267092915212775",
+    "Next": "172662958831501274",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thieves have broken into a shop here in Vivec three nights in a row. I need someone to defend Ralen Tilvur's shop.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_SunkenTreasure",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "172662958831501274": {
+    "Prev": "1511124819313232685",
+    "Next": "1211346992252624367",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A ship wrecked off Azura's coast over a year ago. I need someone to find the wreckage of the Prelude.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_AshlanderEbony",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1211346992252624367": {
+    "Prev": "172662958831501274",
+    "Next": "22320224861140512191",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The business of Vvardenfell is the ebony trade.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_TheExterminator",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Odirniran",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "22320224861140512191": {
+    "Prev": "1211346992252624367",
+    "Next": "1084532371793912498",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Today's business involves Yngling Half-Troll's prized game rats.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Odirniran",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EscortMerchant",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1084532371793912498": {
+    "Prev": "22320224861140512191",
+    "Next": "1882511482964028504",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Not business today, but duty. House Hlaalu sent a team to an illegal Telvanni base, but they have not returned from Odirniran.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EscortMerchant",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1882511482964028504": {
+    "Prev": "1084532371793912498",
+    "Next": "304514284982221469",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Bandits are always bad for business. Because of bandits on the road to Pelagiad, the Hlaalu trader Tarvyn Faren needs an escort.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BuriedTreasure",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "304514284982221469": {
+    "Prev": "1882511482964028504",
+    "Next": "2140417512378819679",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I need someone to collect a debt from Murudius Flaeus.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_BankCourier",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2140417512378819679": {
+    "Prev": "304514284982221469",
+    "Next": "1906819117996216090",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, of course, I need a courier to deliver this sealed report.",
+    "Filters": [],
+    "Script": []
+  },
+  "1906819117996216090": {
+    "Prev": "2140417512378819679",
+    "Next": "17785267832841114552",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled. I can't give you duties, but perhaps I can help you make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "17785267832841114552": {
+    "Prev": "1906819117996216090",
+    "Next": "281421122316734830",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "What can I do for you, %PCRank?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_IndEsp4",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "281421122316734830": {
+    "Prev": "17785267832841114552",
+    "Next": "2188414712131681506",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have no more business for you. Why not speak with Crassius Curio or Edryno Arethi? They both live in the Hlaalu Canton in Vivec. Curio Manor is in the Plaza, and Edryno lives in the Waistworks.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Retaliation",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_IndEsp3",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_IndEsp4",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2188414712131681506": {
+    "Prev": "281421122316734830",
+    "Next": "18302821131843301",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Business as usual, except for the ebony trade.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Retaliation",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_IndEsp3",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "18302821131843301": {
+    "Prev": "2188414712131681506",
+    "Next": "30332181942176210856",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ralen Hlaalu was murdered recently. I would ask for you to retaliate against this crime, but perhaps you've found Ralen Hlaalo's murderer already...",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_IndEsp3",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "town_balmora",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "30332181942176210856": {
+    "Prev": "18302821131843301",
+    "Next": "23520118791343631855",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A Hlaalu noble was recently murdered. I need someone to find out who killed Ralen Hlaalo.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_IndEsp3",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "23520118791343631855": {
+    "Prev": "30332181942176210856",
+    "Next": "252702831620587956",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No. I heard you killed Bivale Teneran. I will not discuss business with you any more.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "bivale teneran",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_IndEsp2",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "252702831620587956": {
+    "Prev": "23520118791343631855",
+    "Next": "1596209191259920175",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I need someone to deliver new orders to Bivale Teneran.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_IndEsp2",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1596209191259920175": {
+    "Prev": "252702831620587956",
+    "Next": "23759173511560924816",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "House Redoran sells more guar hides than House Hlaalu. Someone needs to convince the alchemists in Vivec to buy only imported House Hlaalu guar hides.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EggMine",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "23759173511560924816": {
+    "Prev": "1596209191259920175",
+    "Next": "1626626658685928313",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A rival of House Hlaalu gets his wealth from an egg mine. I need someone to destroy this rival's wealth by killing the queen in the Inanius egg mine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_IndEsp1",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1626626658685928313": {
+    "Prev": "23759173511560924816",
+    "Next": "161119938163597032",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I need someone to visit an apothecary in Vivec and... acquire certain alchemical formulas.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_DisguisedArmor",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "161119938163597032": {
+    "Prev": "1626626658685928313",
+    "Next": "14606224187126867",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "I need someone to visit an apothecary in Vivec and... acquire certain alchemical formulas.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "PCRace",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "14606224187126867": {
+    "Prev": "161119938163597032",
+    "Next": "23070227192935122659",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "I need someone to visit an apothecary in Vivec and... acquire certain alchemical formulas.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "PCRace",
+        "Value": 6.0
+      }
+    ],
+    "Script": []
+  },
+  "23070227192935122659": {
+    "Prev": "14606224187126867",
+    "Next": "662426651178401914",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Like I said, wear Felsen Sethandus' helm and use the phrase \"orphan of Arnesia\" with Neminda in Ald'ruhn.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_DisguisedArmor",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "662426651178401914": {
+    "Prev": "23070227192935122659",
+    "Next": "16866243742322118151",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Like I said, wear Relmerea Saram's helm and use the phrase \"orphan of Arnesia\" with Neminda in Ald'ruhn.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameSex",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_DisguisedArmor",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "16866243742322118151": {
+    "Prev": "662426651178401914",
+    "Next": "1805121922893719179",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "Just a minute, %PCName. Say that again.",
+    "Filters": [],
+    "Script": []
+  },
+  "1805121922893719179": {
+    "Prev": "16866243742322118151",
+    "Next": "11115191771879031203",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you want to talk business, you've come to the right place. Do you want to join House Hlaalu?",
+    "Filters": [],
+    "Script": []
+  },
+  "11115191771879031203": {
+    "Prev": "1805121922893719179",
+    "Next": "313639872174827490",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Hlaalu",
+    "SpeakerCell": "Balmora",
+    "PlayerFaction": "",
+    "Text": "If you want to talk business, speak with Nileno Dorvayn.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "313639872174827490": {
+    "Prev": "11115191771879031203",
+    "Next": "22838144922953728258",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Hlaalu",
+    "SpeakerCell": "Vivec",
+    "PlayerFaction": "",
+    "Text": "If you want to talk business, speak with Crassius Curio or Edryno Arethi.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "3748250542379720869": {
+    "Prev": "",
+    "Next": "19179164301317622870",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dovor Oren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It's no concern of yours, %PCRace.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Warlords",
+        "Value": 200.0
+      }
+    ],
+    "Script": []
+  },
+  "19179164301317622870": {
+    "Prev": "3748250542379720869",
+    "Next": "2530620179628421004",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dovor Oren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've done more than enough for us, %PCName. Thank you for your help.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_Warlords",
+        "Value": 120.0
+      }
+    ],
+    "Script": []
+  },
+  "22838144922953728258": {
+    "Prev": "313639872174827490",
+    "Next": "1572968893026920615",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dovor Oren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, let's discuss what you can do to assist my, err, our cause.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_Warlords",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "1572968893026920615": {
+    "Prev": "22838144922953728258",
+    "Next": "1976941562344311212",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dovor Oren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hmm.  At a second glance, perhaps I shouldn't be so dismissive.  You seem a rather resourceful sort.  We're, ah, investing in the future, you see.  The city right now exists under a blanket of fear; a blind guar can see that the tension between the Imperials and the Temple will soon be boiling over into the streets.  When that happens, it's going to be every %PCRace for himself, yes?  Well, we're stockpiling for just that occasion, which is certainly inevitable at this point.  And maybe you can assist us.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Felvan Ienith",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Olvyne Dobar",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal MS_Warlords 10"
+    ]
+  },
+  "1976941562344311212": {
+    "Prev": "1572968893026920615",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Dovor Oren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't recall inviting you to discuss the issue; you can't be trusted.  Keep walking, %PCRace.",
+    "Filters": [],
+    "Script": [
+      "Goodbye"
+    ]
+  }
+}

@@ -1,0 +1,384 @@
+{
+  "626330163484113756": {
+    "Prev": "",
+    "Next": "13003183971474426943",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent. Yes, this Daedra Skin will serve my purpose. Take these 300 drakes. You know, Daedra skins if not properly prepared can causes paralysis, a useful effect in some circumstances. Perhaps you would like to paralyze your enemies...",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HT_DaedraSkin 100",
+      "Player->RemoveItem Ingred_Daedra_Skin_01 1",
+      "AddItem Ingred_Daedra_Skin_01 1",
+      "Player->AddItem Gold_001 300",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 5",
+      "Choice \"Teach me how to paralyze.\" 3 \"Nevermind.\" 4"
+    ]
+  },
+  "13003183971474426943": {
+    "Prev": "626330163484113756",
+    "Next": "43357462188501924",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I would not pay more than 300 drakes. For that price, I could go to an alchemist.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "43357462188501924": {
+    "Prev": "13003183971474426943",
+    "Next": "2768116247324665147",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is rather simple, actually. [Aryon teaches you the spell Paralyze.] This is a simple version of the spell. It is far more useful if you can cast it at a distance.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Player->AddSpell \"paralysis\""
+    ]
+  },
+  "2768116247324665147": {
+    "Prev": "43357462188501924",
+    "Next": "3244528316501924147",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, your choice, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": []
+  },
+  "3244528316501924147": {
+    "Prev": "2768116247324665147",
+    "Next": "3214617742935313526",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I do not need any more Daedra skins at the moment.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_DaedraSkin",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3214617742935313526": {
+    "Prev": "3244528316501924147",
+    "Next": "854220814411418728",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you brought me a Daedra skin? I will pay you 300 drakes for it.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_daedra_skin_01",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_DaedraSkin",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "854220814411418728": {
+    "Prev": "3214617742935313526",
+    "Next": "23734223691465230169",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "aryon",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I am looking for a Daedra skin. If you find one, please bring it to me. I will pay well for its delivery.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_DaedraSkin",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "23734223691465230169": {
+    "Prev": "854220814411418728",
+    "Next": "2803822364213596313",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galos mathendis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Master Aryon was pleased with the Daedra skin you brought him.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_DaedraSkin",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2803822364213596313": {
+    "Prev": "23734223691465230169",
+    "Next": "2008411972330818414",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galos mathendis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I see you have a Daedra skin. Please take it to Master Aryon in Tel Vos.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "ingred_daedra_skin_01",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_DaedraSkin",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "2008411972330818414": {
+    "Prev": "2803822364213596313",
+    "Next": "11099300371316110761",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galos mathendis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The skins of many kinds of Daedra can be recovered from Daedra who have recently been returned to Oblivion, but whose bodies remain here for a time. Alchemists will often sell Daedra skin as well. When you get the Daedra skin, please deliver it to Master Aryon in Tel Vos directly.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_FyrMessage",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HT_DaedraSkin 10"
+    ]
+  },
+  "11099300371316110761": {
+    "Prev": "2008411972330818414",
+    "Next": "302182842587958280",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Sadrith Mora",
+    "PlayerFaction": "",
+    "Text": "Anis Seloth the alchemist probably has some. Her shop is on the north side of town, next to Fara's Hole in the Wall.",
+    "Filters": [
+      {
+        "Type": "NotId",
+        "Func": "NotIdType",
+        "Compare": "Equal",
+        "Id": "anis seloth",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_DaedraSkin",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HT_DaedraSkin",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "302182842587958280": {
+    "Prev": "11099300371316110761",
+    "Next": "1552112570775215760",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tendris vedran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Daedra skin must be removed from the specimen while it remains on the mortal plane. Daedra skin has modest magical properties, but collecting it from the daedra is hard work and dangerous.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1552112570775215760": {
+    "Prev": "302182842587958280",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "anarenen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Daedra skin must be removed from the specimen while it remains on the mortal plane. Daedra skin has modest magical properties, but collecting it from the daedra is hard work and dangerous.",
+    "Filters": [
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

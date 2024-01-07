@@ -1,0 +1,381 @@
+{
+  "1627092351393528865": {
+    "Prev": "",
+    "Next": "1687720680306365900",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ignatius_flaccus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't know if my bots will ever be repaired now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_BattleBots1",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1687720680306365900": {
+    "Prev": "1627092351393528865",
+    "Next": "5583116162348726197",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ignatius_flaccus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you, %PCRace. Because of you, the Robot Arena can continue to entertain the citizens of Mournhold.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MS_BattleBots1",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "NotEqual",
+        "Id": "MS_BattleBots1",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "5583116162348726197": {
+    "Prev": "1687720680306365900",
+    "Next": "1141830315592813034",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ignatius_flaccus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent! Thank you very much. Now, let me start my repairs. Come back in a little while, and I'll have these warbots ready to go.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_dwrv_gear00",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_BattleBots1\" 20",
+      "Player->RemoveItem misc_dwrv_gear00 3",
+      "set ignatius_flaccus.WinLose to 2",
+      "set ignatius_flaccus.BotFix to 0",
+      "StartScript IgnatiusCellCheck",
+      "Goodbye"
+    ]
+  },
+  "1141830315592813034": {
+    "Prev": "5583116162348726197",
+    "Next": "236732795322661253",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ignatius_flaccus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do not lie to me, outlander. If you want to see a bot fight, you have to bring me three Dwemer cogs.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": []
+  },
+  "236732795322661253": {
+    "Prev": "1141830315592813034",
+    "Next": "875679122944424998",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ignatius_flaccus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can't repair my robots until you bring me those cogs, %PCRace.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 6.0
+      }
+    ],
+    "Script": []
+  },
+  "875679122944424998": {
+    "Prev": "236732795322661253",
+    "Next": "26701409899124786",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ignatius_flaccus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you have the cogs I requested, %PCName?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_BattleBots1",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here they are.\" 5 \"No, not yet.\" 6"
+    ]
+  },
+  "26701409899124786": {
+    "Prev": "875679122944424998",
+    "Next": "30615146761494723081",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ignatius_flaccus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, these are exactly what I was looking for. Thank you! Now, one more favor from you, and I can finish my repairs. The final pieces I require are three Dwemer cogs. Bring those to me, and we can watch the bots fight together.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_scrap_metal_01",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_BattleBots1\" 10",
+      "Player->RemoveItem ingred_scrap_metal_01 10"
+    ]
+  },
+  "30615146761494723081": {
+    "Prev": "26701409899124786",
+    "Next": "2584021353129820118",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ignatius_flaccus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do not lie to me, outlander. If you want to see a bot fight, you have to bring me ten pieces of scrap metal.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": []
+  },
+  "2584021353129820118": {
+    "Prev": "30615146761494723081",
+    "Next": "1899319002101522916",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ignatius_flaccus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We can't watch a fight until you bring me the ten pieces of scrap metal, %PCRace.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": []
+  },
+  "1899319002101522916": {
+    "Prev": "2584021353129820118",
+    "Next": "3156351741324213962",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ignatius_flaccus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do you have the scrap metal I requested, %PCName?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MS_BattleBots1",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here they are.\" 3 \"No, not yet.\" 4"
+    ]
+  },
+  "3156351741324213962": {
+    "Prev": "1899319002101522916",
+    "Next": "212752432982836241",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ignatius_flaccus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm glad to hear it. If you bring me ten pieces of Dwemer scrap metal, I can fashion the parts I need on my own. When I get the bots repaired, perhaps I can let you watch a fight.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_BattleBots1\" 1"
+    ]
+  },
+  "212752432982836241": {
+    "Prev": "3156351741324213962",
+    "Next": "10923285933072112500",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ignatius_flaccus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, that's really too bad. Then I doubt we'll be having any more Robot Arena fights for a while.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MS_BattleBots1\" 100"
+    ]
+  },
+  "10923285933072112500": {
+    "Prev": "212752432982836241",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ignatius_flaccus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My enchanting skills are incomparable, but after so much wear and tear from fighting each other, my robots are simply in need of some new parts. Would you be interested in helping me acquire the parts I need?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MS_BattleBots1",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, I will help you.\" 1 \"No, sorry. I don't have time.\" 2"
+    ]
+  }
+}

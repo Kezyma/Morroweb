@@ -1,0 +1,118 @@
+{
+  "17180204571278117749": {
+    "Prev": "",
+    "Next": "854321839181039859",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dremora_ttmg",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Your threats are weak like your flesh, mortal.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "tauntCount",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Set tauntcount to 1"
+    ]
+  },
+  "854321839181039859": {
+    "Prev": "17180204571278117749",
+    "Next": "85403155738245122",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dremora_ttmg",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Continue with your insults, mortal. I long to feast on your marrow.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "tauntCount",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Set tauntcount to 2"
+    ]
+  },
+  "85403155738245122": {
+    "Prev": "854321839181039859",
+    "Next": "1646375372901932545",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dremora_ttmg",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ha! Fine words from one born from the wrong end of a guar.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "tauntCount",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Set tauntcount to 3"
+    ]
+  },
+  "1646375372901932545": {
+    "Prev": "85403155738245122",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "dremora_ttmg",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "After I kill you, I will rape your corpse. Don't worry. I'll be gentle.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "tauntCount",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Set tauntcount to 0",
+      "Journal TT_MaarGan 30",
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  }
+}

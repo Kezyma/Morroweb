@@ -1,0 +1,279 @@
+{
+  "2221561711487114774": {
+    "Prev": "",
+    "Next": "7104163042119422624",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you for bringing me Galur Rithari's papers, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_VampireCure",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "7104163042119422624": {
+    "Prev": "2221561711487114774",
+    "Next": "659726566320879542",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, this is excellent, %PCName. A most interesting account. Please take this amulet with my gratitude. Perhaps you should travel to the Shrine of Bal Ur yourself.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_galur_rithari's_papers",
+        "Value": 0.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcVampire",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MG_VampireCure 100",
+      "Player->RemoveItem \"bk_galur_rithari's_papers\" 1",
+      "Player->AddItem \"amulet_skink_unique\" 1",
+      "AddItem \"bk_galur_rithari's_papers\" 1",
+      "ModPCFacRep 10 \"Mages Guild\"",
+      "ModDisposition 10",
+      "Player->ModReputation 1"
+    ]
+  },
+  "659726566320879542": {
+    "Prev": "7104163042119422624",
+    "Next": "13123101781215832265",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, this is excellent, %PCName. A most interesting account. Please take this amulet with my gratitude.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_galur_rithari's_papers",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal MG_VampireCure 100",
+      "Player->RemoveItem \"bk_galur_rithari's_papers\" 1",
+      "Player->AddItem \"amulet_skink_unique\" 1",
+      "AddItem \"bk_galur_rithari's_papers\" 1",
+      "ModPCFacRep 10 \"Mages Guild\"",
+      "ModDisposition 10",
+      "Player->ModReputation 1"
+    ]
+  },
+  "13123101781215832265": {
+    "Prev": "659726566320879542",
+    "Next": "129154651390532527",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am impressed, %PCName. But did you not bring the papers with you?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "129154651390532527": {
+    "Prev": "13123101781215832265",
+    "Next": "1033029041915110883",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Please keep looking, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "1033029041915110883": {
+    "Prev": "129154651390532527",
+    "Next": "30258310671584713696",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you found Galur Rithari's papers?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_VampireCure",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here they are.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "30258310671584713696": {
+    "Prev": "1033029041915110883",
+    "Next": "26272173271314622945",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "skinkintreesshade",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, these papers allegedly describe how an Ordinator from Bal Ur became a vampire and was cured. I would be most interested in a copy of this book. Ask booksellers and scholars. Someone surely knows where a copy is.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MG_SoulGem2",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal MG_VampireCure 10"
+    ]
+  },
+  "26272173271314622945": {
+    "Prev": "30258310671584713696",
+    "Next": "26391227948165920",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "jobasha",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "%Name has heard of this book. You might try looking at the library in the Hall of Justice here in Vivec. It is a well-hidden library and guarded at all times, but you will find a copy there. %Name does not have a copy of this book.",
+    "Filters": [],
+    "Script": []
+  },
+  "26391227948165920": {
+    "Prev": "26272173271314622945",
+    "Next": "512612503352915535",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "simine fralinie",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If you're not afraid of some risk, you might find a copy at the library in the Hall of Justice. It may take some searching to find it, but there's bound to be a copy there.",
+    "Filters": [],
+    "Script": []
+  },
+  "512612503352915535": {
+    "Prev": "26391227948165920",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "Bookseller",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have heard of it, but do not know where to find a copy. Try looking in Vivec.",
+    "Filters": [],
+    "Script": []
+  }
+}

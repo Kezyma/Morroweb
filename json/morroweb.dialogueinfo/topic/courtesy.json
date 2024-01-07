@@ -1,0 +1,358 @@
+{
+  "16690167762175227621": {
+    "Prev": "",
+    "Next": "91727091217833183",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "hassour zainsubani",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Ashlanders may challenge a stranger who enters a yurt without invitation. Customs differ with different tribes, but leave when requested, and you may be forgiven. Be particularly careful about ashkhans -- tribal chiefs -- and wise women -- tribal seers and counselors. Some are welcoming, some are hostile. Be courteous, and leave if requested. If offended, they may attack.",
+    "Filters": [],
+    "Script": []
+  },
+  "91727091217833183": {
+    "Prev": "16690167762175227621",
+    "Next": "31977268512746114953",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled, but maybe you can join the Imperial Legion again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "31977268512746114953": {
+    "Prev": "91727091217833183",
+    "Next": "244132092153395350",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You lost the challenge, but at least you had the courage to try.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Courtesy",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "244132092153395350": {
+    "Prev": "31977268512746114953",
+    "Next": "27451116663095514262",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You won the duel of courtesy. Perhaps the Armigers won't be so quick to judge us from now on.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Courtesy",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "27451116663095514262": {
+    "Prev": "244132092153395350",
+    "Next": "1953354682713416801",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "You murdered Salyn Sarethi. Now the Armigers will never accept us as equals. I can't expel you over this, but I can still give you orders: Leave Ebonheart now and do not return.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "salyn sarethi",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -25",
+      "Goodbye"
+    ]
+  },
+  "1953354682713416801": {
+    "Prev": "27451116663095514262",
+    "Next": "526323690307305232",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I heard. You lost the contest with Salyn Sarethi. But do not be ashamed. You accepted the challenge and matched wits with the best of the Buoyant Armigers.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Courtesy",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal IL_Courtesy 110",
+      "ModPCFacRep 5 \"Imperial Legion\"",
+      "ModDisposition 5"
+    ]
+  },
+  "526323690307305232": {
+    "Prev": "1953354682713416801",
+    "Next": "64156531260844632",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I heard. You won a poetry riddle contest against Salyn Sarethi, the best of the Buoyant Armigers. What I wouldn't give to be at the Tower of Dusk right now... Ah, but since you are not just a simple warrior, perhaps you would appreciate this book.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Courtesy",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal IL_Courtesy 100",
+      "Player->AddItem BookSkill_Speechcraft3 1",
+      "ModPCFacRep 10 \"Imperial Legion\"",
+      "ModDisposition 20"
+    ]
+  },
+  "64156531260844632": {
+    "Prev": "526323690307305232",
+    "Next": "387128214255514101",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "Salyn Sarethi, a Buoyant Armiger at the Tower of Dusk in Ghostgate claims we have no courtesy. Go best him in a duel of wit and poetry. You might want to find the Red Book of Riddles first.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcIntelligence",
+        "Compare": "Less",
+        "Id": "",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal IL_Courtesy 10"
+    ]
+  },
+  "387128214255514101": {
+    "Prev": "64156531260844632",
+    "Next": "183254484480519478",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Frald the White",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Imperial Legion",
+    "Text": "Salyn Sarethi, a Buoyant Armiger at the Tower of Dusk in Ghostgate claims we have no courtesy. Go best him in a duel of wit and poetry.",
+    "Filters": [],
+    "Script": [
+      "Journal IL_Courtesy 10"
+    ]
+  },
+  "183254484480519478": {
+    "Prev": "387128214255514101",
+    "Next": "179545473233801801",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "salyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The contest is over. And I still say the Legion has no courtesy.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Courtesy",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "179545473233801801": {
+    "Prev": "183254484480519478",
+    "Next": "31350207652475428208",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "salyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The contest is over. I admit that I was wrong.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Courtesy",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "31350207652475428208": {
+    "Prev": "179545473233801801",
+    "Next": "5005129522656816624",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "salyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Just as I expected, you have proven that the Legion has no courtesy.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Courtesy",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "5005129522656816624": {
+    "Prev": "31350207652475428208",
+    "Next": "53513050644325473",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "salyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I admit I was wrong. You have proven to me that the Legion has courtesy.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_Courtesy",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "53513050644325473": {
+    "Prev": "5005129522656816624",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "salyn sarethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I said that the Legion has no courtesy, wit, poetry, or honor. I will concede that you have wit and poetry if you can win a contest of riddles.",
+    "Filters": [],
+    "Script": []
+  }
+}

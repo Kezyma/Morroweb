@@ -1,0 +1,263 @@
+{
+  "108522390127803139": {
+    "Prev": "",
+    "Next": "3149223200273699605",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Didn't I say I don't want him dead? That's not the kind of example I'm looking to set for how this colony is run. If you're implying you have a problem with my orders, then I suggest you take it up with Carnius.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "3149223200273699605": {
+    "Prev": "108522390127803139",
+    "Next": "93565075276730753",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What? You're kidding me, right?... You honestly don't know how to throw a punch? Well, that certainly doesn't speak very highly of you, now does it? Go learn something about it, why don't you. Or use some sort of magic shenanigans to help yourself out. Really, I'm not here to hold your hand. Take some initiative, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal CO_2 40"
+    ]
+  },
+  "93565075276730753": {
+    "Prev": "3149223200273699605",
+    "Next": "2857513621300851089",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I DIDN'T WANT HIM DEAD! Did I give you orders to kill him? No. Do you have some sort of problems following orders? Clearly I can't trust you to do what's asked of you. Or are you more concerned with what Carnius wants than with the welfare of the colony? Bah, it's too late now. Just get out of here. Go tell Carnius what's happened; I'm sure he'll be delighted.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_2",
+        "Value": 60.0
+      }
+    ],
+    "Script": [
+      "Journal CO_2 80"
+    ]
+  },
+  "2857513621300851089": {
+    "Prev": "93565075276730753",
+    "Next": "2290222853053424653",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good work, %PCName. I appreciate you not being too harsh with him. Things can get back on track now, and not a minute too soon. Take the news to Carnius, will you? And here, take this. It's not much, but I like to reward those that can follow orders.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_2",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "player->additem \"gold_001\" 1000",
+      "Journal CO_2 70"
+    ]
+  },
+  "2290222853053424653": {
+    "Prev": "2857513621300851089",
+    "Next": "18398208342280023944",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Just be quick about it. I don't want to make this any more of a spectacle than it's already become. And don't kill him!",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_2",
+        "Value": 40.0
+      }
+    ],
+    "Script": []
+  },
+  "18398208342280023944": {
+    "Prev": "2290222853053424653",
+    "Next": "3011722534234436522",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Is he really that stubborn? Fine. I don't have time for this. We need to get in there and finish our work. You have my permission to rough him up a little bit. Bare fists only; no weapons, no spells. Are we clear? I want him to understand he's not welcome here; I don't want him dead.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_2",
+        "Value": 30.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcHandToHand",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal CO_2 40"
+    ]
+  },
+  "3011722534234436522": {
+    "Prev": "18398208342280023944",
+    "Next": "91381525142124686",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Is he really that stubborn? Fine. I don't have time for this. We need to get in there and finish our work. You have my permission to rough him up a little bit. Bare fists only; no weapons, no spells. Are we clear? I want him to understand he's not welcome here; I don't want him dead.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_2",
+        "Value": 30.0
+      },
+      {
+        "Type": "Function",
+        "Func": "PcHandToHand",
+        "Compare": "Less",
+        "Id": "",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Choice: \"I'm not very good with hand to hand combat.\" 1 \"Can't I just kill him?\" 2"
+    ]
+  },
+  "91381525142124686": {
+    "Prev": "3011722534234436522",
+    "Next": "41762341273725057",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, that's right. Go talk to him, and explain that he's not wanted here, and that he needs to leave.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_2",
+        "Value": 20.0
+      }
+    ],
+    "Script": []
+  },
+  "41762341273725057": {
+    "Prev": "91381525142124686",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Falco Galenus",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm sure that Carnius just wants him killed. Anything standing between Carnius and his profit deserves a death warrant, so far as he's concerned. But I can't be that harsh. I feel sorry for this poor man. It's clear his own people have abandoned him (though I can certainly understand why). I ask that you don't hurt him, %PCName. Try to reason with him. Failing that, come back and talk to me, and we can work something out.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "CO_2",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal CO_2 20"
+    ]
+  }
+}

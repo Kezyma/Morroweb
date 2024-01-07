@@ -1,0 +1,122 @@
+{
+  "2513430664228633970": {
+    "Prev": "",
+    "Next": "61247831742318017",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "teris raledran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I've got to get my shipment to Vivec.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Greater",
+        "Id": "MV_RichTrader",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_RichTrader",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "61247831742318017": {
+    "Prev": "2513430664228633970",
+    "Next": "2211478082729315767",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "teris raledran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "There's a good fellow! See, Rollie, I told you there are still some good folks in these lands! Rollie's become such a pessimist in his old age, but I told him we'd find someone to help! When we get there, I'll reward you. I think 100 septims seems fair. How about the three of us get going?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_RichTrader\" 20",
+      "\"Teris Raledran\"->AiFollow Player 0,0,0,0,0"
+    ]
+  },
+  "2211478082729315767": {
+    "Prev": "61247831742318017",
+    "Next": "9316114671971210465",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "teris raledran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? I'm sorry to hear that. Well, Rollie, it looks like we're on our own. Maybe we'll find someone else to help us.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_RichTrader\" 25",
+      "Goodbye"
+    ]
+  },
+  "9316114671971210465": {
+    "Prev": "2211478082729315767",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "teris raledran",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You see, Rollie and I are heading to Vivec to deliver this shipment of clothing to Agrippina Herrenia the clothier. Truly, it's some of the finest clothing you'll ever see...perhaps I could interest you in some? Well, regardless, I've heard rumor that the road to Vivec has become rather dangerous of late. Perhaps you'd be willing to escort the two of us? Rollie and I would be most appreciative, and would be willing to offer some compensation.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_RichTrader",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_RichTrader\" 10",
+      "Choice \"Certainly. I can help you...the both of you...get to Vivec.\" 1 \"Sorry. I don't have time for this right now.\" 2"
+    ]
+  }
+}

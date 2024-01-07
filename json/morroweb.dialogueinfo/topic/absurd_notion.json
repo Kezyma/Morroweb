@@ -1,0 +1,72 @@
+{
+  "2336626427211545337": {
+    "Prev": "",
+    "Next": "2454977152471127391",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athellor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Rieklings?  The Snow Elves of legend?  Preposterous.  You see, I believe the Falmer REALLY existed, centuries ago.  They were Elves, just like the Altmer, Dunmer or Bosmer. Then...they just faded away.  They bred with the other Elven races, and ceased to exist as an identifiable culture.  It's very likely that the Falmer are an important part of Elven ancestry.  %PCName, your glass is almost emptttyyyyy....",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Falmer",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Falmer",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "player->additem \"potion_cyro_brandy_01\" 1",
+      "Journal \"BM_Falmer\" 20",
+      "ModDisposition 10"
+    ]
+  },
+  "2454977152471127391": {
+    "Prev": "2336626427211545337",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "athellor",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The mere suggestion that the Falmer are no more than the Rieklings is ridiculous.  The Falmer WERE a real race, until they intermingled with the other Elven races.  It's quite clear to me that the Falmer are an important piece in the puzzle that is Elven Ancestry.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Falmer",
+        "Value": 20.0
+      },
+      {
+        "Type": "Function",
+        "Func": "TalkedToPc",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  }
+}

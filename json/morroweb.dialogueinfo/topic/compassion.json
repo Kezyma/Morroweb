@@ -1,0 +1,394 @@
+{
+  "27238305751399731599": {
+    "Prev": "",
+    "Next": "15886269761989117617",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have heard that you are a False Incarnate. I am not yet convinced, but I no longer trust you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B8_MeetVivec",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "15886269761989117617": {
+    "Prev": "27238305751399731599",
+    "Next": "2312527976221225592",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have been expelled from the Temple.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2312527976221225592": {
+    "Prev": "15886269761989117617",
+    "Next": "2002195351748419616",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Bulfim gra-Shugharz is dead.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_Compassion",
+        "Value": 200.0
+      }
+    ],
+    "Script": []
+  },
+  "2002195351748419616": {
+    "Prev": "2312527976221225592",
+    "Next": "29914238421347426986",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have already proven your compassion.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_Compassion",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "29914238421347426986": {
+    "Prev": "2002195351748419616",
+    "Next": "2215026641968827092",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have slain Bulfim gra-Shugharz?! You were to cure her -- not kill her! Perhaps you are not suited for the Temple.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "bulfim_gra_shugarz",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_Compassion",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal TT_Compassion 200",
+      "ModDisposition -20"
+    ]
+  },
+  "2215026641968827092": {
+    "Prev": "29914238421347426986",
+    "Next": "613064632292223605",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Bulfim gra-Shugharz is dead? That is a shame. Perhaps you can prove your compassion some other way.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "bulfim_gra_shugarz",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TT_Compassion",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TT_Compassion 200"
+    ]
+  },
+  "613064632292223605": {
+    "Prev": "2215026641968827092",
+    "Next": "1996065662610329587",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have performed beyond my expectations, %PCName. You are indeed resourceful as well as compassionate. Are you ready for further duties?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "p_cure_blight_s",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TT_Compassion",
+        "Value": 99.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem \"p_cure_blight_s\" 1",
+      "Journal TT_Compassion 110",
+      "ModPCFacRep 5 \"Temple\"",
+      "ModDisposition 10"
+    ]
+  },
+  "1996065662610329587": {
+    "Prev": "613064632292223605",
+    "Next": "710824588833415125",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Where is it? Oh, I see. You are joking.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "p_cure_blight_s",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TT_Compassion",
+        "Value": 99.0
+      }
+    ],
+    "Script": [
+      "Journal TT_Compassion 100",
+      "ModDisposition -5"
+    ]
+  },
+  "710824588833415125": {
+    "Prev": "1996065662610329587",
+    "Next": "2796670822571010700",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Unfortunate. But its use promoted a virtuous act. Well done, %PCName. Are you ready for further duties?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TT_Compassion",
+        "Value": 99.0
+      }
+    ],
+    "Script": [
+      "Journal TT_Compassion 100"
+    ]
+  },
+  "2796670822571010700": {
+    "Prev": "710824588833415125",
+    "Next": "102013759499815014",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You cured Bulfim gra-Shugharz and have proven your compassion. You might be interested in this book, which has an important lesson on the rewards of compassion. Were you able to preserve the potion?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TT_Compassion",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal TT_Compassion 99",
+      "Player->AddItem BookSkill_Restoration3 1",
+      "ModPCFacRep 5 \"Temple\"",
+      "ModDisposition 10",
+      "Choice \"Yes, I have it right here.\", 1, \"No. I had to use it.\", 2"
+    ]
+  },
+  "102013759499815014": {
+    "Prev": "2796670822571010700",
+    "Next": "148132270975028751",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Seek the Orc called Bulfim gra-Shugarz at the Maelkashishi Shrine. Cure her and learn the meaning of compassion. And if at all possible, return the potion which I have entrusted to your care.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TT_Compassion",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "148132270975028751": {
+    "Prev": "102013759499815014",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tuls valen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Vivec often showed compassion to his enemies. You must show compassion by curing Bulfim gra-Shugarz, a Sheogorath worshipper in Maelkashishi. Take this potion of cure blight. You can cure Bulfim by giving her the potion... But it is expensive. I would prefer you learned a spell such as \"Rilm's Gift\" and returned the potion to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TT_Compassion",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TT_Compassion 10",
+      "Player->AddItem \"p_cure_blight_s\" 1"
+    ]
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "755847831179519462": {
+    "Prev": "",
+    "Next": "1016716040111612897",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gualtierus spurius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? I thought Lusius would have given you better advice. I'm sorry. I can't let you ruin what I've got going on here. You'll have to kill me and all of my friends. Leave one, and he will carry on. Now, it is time for you to die.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Smugglers 95",
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "1016716040111612897": {
+    "Prev": "755847831179519462",
+    "Next": "143901736224822775",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gualtierus spurius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sounds good. You won't regret this. I'll be gone as soon as possible. Here, take this. I found it while doing a bit of traveling here on the island. Had a friend of mine throw a little enchantment on it as well. And, hey, take whatever you want from this stash. I'm sure nothing will be missed. Our secret...just between us.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Smugglers 93",
+      "set fightmod to 1",
+      "Player->AddItem \"BM nordic silver axe_spurius\" 1",
+      "Goodbye"
+    ]
+  },
+  "143901736224822775": {
+    "Prev": "1016716040111612897",
+    "Next": "14337273261010026742",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gualtierus spurius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As I said, you let me walk, and no one ever sees me again. The weapons stay here. And, I'll give you this axe. I think it's pretty valuable. What do you say, %PCName?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Smugglers",
+        "Value": 90.0
+      }
+    ],
+    "Script": [
+      "Choice \"You can go. Don't come back.\" 1 \"I can't let you do that.\" 2"
+    ]
+  },
+  "14337273261010026742": {
+    "Prev": "143901736224822775",
+    "Next": "3142627724182042095",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gualtierus spurius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll get off the island. Leave the weapons behind. You just let me go peacefully and don't cause any trouble with Carius, and I'm gone. And, look, I'll give you this nice axe as a little bonus for keeping this quiet. Carius will never miss me, and I'll just disappear. Ask Lusius about it. He'll give you good advice.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "BM_Smugglers",
+        "Value": 90.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "BM_Smugglers",
+        "Value": 30.0
+      }
+    ],
+    "Script": [
+      "Journal BM_Smugglers 90",
+      "Goodbye"
+    ]
+  },
+  "3142627724182042095": {
+    "Prev": "14337273261010026742",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "saenus lusius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Interesting. Well, I suppose you could let him go. I know Spurius, and while he wasn't the best soldier, he wasn't the worst, either. And I know he has a family to feed back home. Still, he has stolen from the Legion, and his crimes are punishable by death. I'm afraid the decision is yours, my friend. Whatever you decide, I will support it.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "BM_Smugglers",
+        "Value": 90.0
+      }
+    ],
+    "Script": []
+  }
+}

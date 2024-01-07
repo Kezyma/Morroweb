@@ -1,0 +1,329 @@
+{
+  "293362909430451391": {
+    "Prev": "",
+    "Next": "1987530856903725209",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So, %PCName. Are you looking for orders? Or did you have a question about the Blade Trainers?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "A1_2_AntabolisInformant",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_1_FindSpymaster",
+        "Value": 14.0
+      }
+    ],
+    "Script": []
+  },
+  "1987530856903725209": {
+    "Prev": "293362909430451391",
+    "Next": "2770528437160922231",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. Welcome to the service, Novice %PCName. Now you belong to the Blades. We're the Emperor's eyes and ears in the provinces. You can use my bed if you need to rest, but leave my personal stuff alone unless I say otherwise. If you like, you can improve your modest skills with our Blades Trainers now. Or if you're in a hurry. I can give you orders right away. But don't forget to visit the Blades Trainers.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "A1_2_AntabolisInformant",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal, \"A1_1_FindSpymaster\", 14",
+      "PCJoinFaction \"Blades\"",
+      "modDisposition 10",
+      "\"Rithleen\"->modDisposition 20",
+      "\"Tyermaillin\"->modDisposition 20",
+      "\"Nine_Toes\"->modDisposition 20",
+      "\"Surane Leoriane\"->modDisposition 20",
+      "\"Gildan\"->modDisposition 20",
+      "\"Sjorvar Horse-Mouth\"->modDisposition 20"
+    ]
+  },
+  "2770528437160922231": {
+    "Prev": "1987530856903725209",
+    "Next": "196929754891015386",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Fine. Then get out of here, and come back when you are ready.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "A1_2_AntabolisInformant",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal, \"A1_1_FindSpymaster\", 12",
+      "ModDisposition, -10",
+      "Goodbye"
+    ]
+  },
+  "196929754891015386": {
+    "Prev": "2770528437160922231",
+    "Next": "43741759216181215",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Are you ready to join the Blades and follow my orders, as the Emperor commands?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "A1_2_AntabolisInformant",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A1_1_FindSpymaster",
+        "Value": 12.0
+      }
+    ],
+    "Script": [
+      "Choice, \"Yes\", 3, \"No\", 4"
+    ]
+  },
+  "43741759216181215": {
+    "Prev": "196929754891015386",
+    "Next": "99237612474718017",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes. Very interesting. So. It says here the Emperor wants me to make you a Novice in the Blades. And that means you'll be following my orders. Are you ready to follow my orders, %PCName?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "A1_2_AntabolisInformant",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem, \"bk_A1_1_CaiusPackage\", 1",
+      "Choice, \"Yes\", 3, \"No\", 4"
+    ]
+  },
+  "99237612474718017": {
+    "Prev": "43741759216181215",
+    "Next": "1622410256110484714",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then we have nothing to talk about... until you're ready to give me the package. Goodbye.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "A1_2_AntabolisInformant",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal, \"A1_1_FindSpymaster\", 11",
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "1622410256110484714": {
+    "Prev": "99237612474718017",
+    "Next": "15425327421904220202",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So. Are you ready to give me the package?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "A1_2_AntabolisInformant",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_a1_1_caiuspackage",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "A1_1_FindSpymaster",
+        "Value": 11.0
+      }
+    ],
+    "Script": [
+      "Choice, \"Yes\", 1, \"No\", 2"
+    ]
+  },
+  "15425327421904220202": {
+    "Prev": "1622410256110484714",
+    "Next": "26751152351377319357",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So. You say your name is %PCName, and you've been told to report to me and deliver a package. But... let me see if I have this right... you don't HAVE the package? So... come back to me when you HAVE the package. Simple, right? I'm not speaking too quickly for you, I hope. Goodbye.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "bk_a1_1_caiuspackage",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "A1_2_AntabolisInformant",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition, -10",
+      "Goodbye"
+    ]
+  },
+  "26751152351377319357": {
+    "Prev": "15425327421904220202",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "caius cosades",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So. You say your name is %PCName, and you've been told to report to me and deliver a package. Perhaps you'll let me look at it?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "A1_2_AntabolisInformant",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice, \"Yes\", 1, \"No\", 2"
+    ]
+  }
+}

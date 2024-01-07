@@ -1,0 +1,146 @@
+{
+  "488011031880361": {
+    "Prev": "",
+    "Next": "3669157151196515",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "chargen captain",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Excellent. Head out back to the dock. You'll meet your crew there. Talk to the boat captain about the trip to Firemoth. May the Divines go with you, and with our blessings.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"ms_firemoth\" 10"
+    ]
+  },
+  "3669157151196515": {
+    "Prev": "488011031880361",
+    "Next": "28207159951009020306",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "chargen captain",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Not the answer I was hoping for. I hope you reconsider.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "28207159951009020306": {
+    "Prev": "3669157151196515",
+    "Next": "7049322901533732256",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "chargen captain",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is imperative that you return the Ward of Akavir to me. We must avenge our humiliating defeat there.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "ms_firemoth",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "7049322901533732256": {
+    "Prev": "28207159951009020306",
+    "Next": "25698274352778018313",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "chargen captain",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This Imperial fort offshore to the west was captured years ago by the undead horde of Grurn, who literally marched out of the ocean and overran the garrison there. The survivors were forced to leave behind the Ward of Akavir, and I'm looking for someone to lead a group to retrieve it. Are you up for it?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "ms_firemoth",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"I can lead this group. Show me the way.\" 1 \"No, not at this time.\" 2"
+    ]
+  },
+  "25698274352778018313": {
+    "Prev": "7049322901533732256",
+    "Next": "147086705101748041",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Legion",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The undead rule it now. It was overrun many years ago. Once a strategic strongpoint guarding the Inner Sea, now it is an all-but-forgotten ruin.",
+    "Filters": [],
+    "Script": []
+  },
+  "147086705101748041": {
+    "Prev": "25698274352778018313",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 20,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Imperial Legion",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do not speak of it. Do not go there. Only the legions of the dead guard the walls now.",
+    "Filters": [],
+    "Script": []
+  }
+}

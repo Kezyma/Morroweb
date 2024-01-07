@@ -1,0 +1,116 @@
+{
+  "26736149792318510638": {
+    "Prev": "",
+    "Next": "22468320082736016722",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He served his purpose. That's all that matter.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_12a",
+        "Value": 30.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Baslod",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "22468320082736016722": {
+    "Prev": "26736149792318510638",
+    "Next": "3144981641630825073",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I can't imagine he survived.... ah, well. He was cheap to hire.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_12a",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "3144981641630825073": {
+    "Prev": "22468320082736016722",
+    "Next": "223453039296044114",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't expect him to live through this. Of course, he doesn't know that. Just be sure you're not seen.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "CO_12a",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "223453039296044114": {
+    "Prev": "3144981641630825073",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Carnius Magius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I believe he will have placed some weapons for you at the top of the mining office tower in the colony: a bow and a very potent poison arrow. I've also contributed a scroll that may help insure the arrow finds it's mark, and that you are not seen. I'd suggest remaining in the Mining Tower for safety. Once you're prepared, ready your bow to signal that Baslod should make his attack. He'll draw the guards away, and then you strike. With Falco assassinated, the colony should collapse in a very short time.",
+    "Filters": [
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ColonySide",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal CO_12a 10",
+      "StartScript ColonyAssassin"
+    ]
+  }
+}

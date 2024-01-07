@@ -1,0 +1,279 @@
+{
+  "31249114601316122882": {
+    "Prev": "",
+    "Next": "819826881243726892",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am sure you can persuade Dram Bero to support you as Hortator... if you can find him. Orvas Dren has Nevena Ules and Velanda Omani in his pocket. You might want to make a little trip to the Dren Plantation before talking to them. And then there's Yngling Half-Troll.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B6_CurioHort",
+        "Value": 50.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "B6_HlaaluHort",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "ShowMap Dren Plantation"
+    ]
+  },
+  "819826881243726892": {
+    "Prev": "31249114601316122882",
+    "Next": "178297305545826399",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nibani maesa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Go to Balmora, the chief town of the Hlaalu. I believe the councilors meet there in a great house with many rooms. The Hlaalu are soft and cowardly, sly and greedy. Their traders are liars and cheats. Look behind the words they speak for the truths they are hiding.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "178297305545826399": {
+    "Prev": "819826881243726892",
+    "Next": "2527418891213027323",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The one you should speak with is Crassius Curio. His manor is in the Hlaalu Plaza in Vivec. Of the Hlaalu Councilors, he is one most likely to listen to your requests, whatever they may be.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "Gold_001",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal B6_HlaaluBook 30",
+      "ModDisposition 10",
+      "Player->RemoveItem Gold_001 50"
+    ]
+  },
+  "2527418891213027323": {
+    "Prev": "178297305545826399",
+    "Next": "897679231756326551",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Get some coins in your pocket and come see me again. Otherwise, I'll have to report you for trying to bribe a ranking member of House Hlaalu.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "897679231756326551": {
+    "Prev": "2527418891213027323",
+    "Next": "12356693050414283",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Very well.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "12356693050414283": {
+    "Prev": "897679231756326551",
+    "Next": "27380183962209717",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "As I said, Crassius Curio is the most open minded of the Hlaalu Councilors, though somewhat eccentric. If you get lost, consult a recent edition of the Yellow Book.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B6_HlaaluBook",
+        "Value": 30.0
+      }
+    ],
+    "Script": []
+  },
+  "27380183962209717": {
+    "Prev": "12356693050414283",
+    "Next": "291762421118566037",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You should consult the recent edition of the Yellow Book of Great House Hlaalu. It lists the current Hlaalu councilors and their residences.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B6_HlaaluBook",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Bribe her 50 drakes.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "291762421118566037": {
+    "Prev": "27380183962209717",
+    "Next": "28570270291785818555",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here's a recent edition of the Yellow Book of Great House Hlaalu. It lists the current Hlaalu councilors and their residences. I might tell you more for a small consideration.",
+    "Filters": [],
+    "Script": [
+      "Player->AddItem \"bk_YellowBook426\" 1",
+      "Journal B6_HlaaluBook 1",
+      "StartScript CouncilorTopicsHlaalu",
+      "Choice \"Bribe her 50 drakes.\" 1 \"Nevermind.\" 2"
+    ]
+  },
+  "28570270291785818555": {
+    "Prev": "291762421118566037",
+    "Next": "20830898023058847",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Hlaalu",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You should consult the recent edition of the Yellow Book of Great House Hlaalu. It lists the current Hlaalu councilors and their residences.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B6_HlaaluBook",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "20830898023058847": {
+    "Prev": "28570270291785818555",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 8,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Hlaalu",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here's a recent edition of the Yellow Book of Great House Hlaalu. It lists the current Hlaalu councilors and their residences.",
+    "Filters": [],
+    "Script": [
+      "Player->AddItem \"bk_YellowBook426\" 1",
+      "Journal B6_HlaaluBook 1",
+      "StartScript CouncilorTopicsHlaalu"
+    ]
+  }
+}

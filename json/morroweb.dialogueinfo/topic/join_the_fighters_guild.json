@@ -1,0 +1,266 @@
+{
+  "292531804432634565": {
+    "Prev": "",
+    "Next": "2498952861388531122",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 6,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Fighters Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are now %PCName the %NextPCRank in the Fighters Guild. Work hard, follow orders, and you'll do just fine. Seek me out if you feel you are ready for advancement.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "PCRaiseRank",
+      "ModDisposition 5"
+    ]
+  },
+  "2498952861388531122": {
+    "Prev": "292531804432634565",
+    "Next": "20537145132165415588",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 6,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Fighters Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Your duties are to your Lords and brethren. In all ways, proceed with honor and valor. Keep a keen and watchful mind and never succumb to the craven tricks of the weak. As a member, you are permitted to use items in our equipment chest. It is traitorous to fight or thieve from other members of your guild. If you break these rules, you must speak with at least a Warder of the Guild to redeem your standing. Do you feel you can uphold these simple ideals?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Choice \"You bet!\" 1 \"Nope.\" 4"
+    ]
+  },
+  "20537145132165415588": {
+    "Prev": "2498952861388531122",
+    "Next": "24869190251394419206",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 6,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Fighters Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Fighters Guild can forgive your actions this one time only, %PCRank %PCName. Personally, I'd like to kick your backside up around your ears, but there are some who think you might amount to something. You're back in.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "PCClearExpelled"
+    ]
+  },
+  "24869190251394419206": {
+    "Prev": "20537145132165415588",
+    "Next": "9302122742326012",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 6,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Fighters Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hmmm. No skin off mine.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "9302122742326012": {
+    "Prev": "24869190251394419206",
+    "Next": "16586289352405617021",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 6,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Fighters Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Worthless traitor. Get out of my sight.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Global",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "ExpFightersGuild",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -15",
+      "goodbye"
+    ]
+  },
+  "16586289352405617021": {
+    "Prev": "9302122742326012",
+    "Next": "31641126011843119037",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 6,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Fighters Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled from the Fighters Guild. We take the Fighters Guild Charter very seriously. If you break the rules just once, we think of it as a lesson. If you clear your name, you can be a member again. Do you wish to clear your name?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "choice \"Yes I do\" 3 \"No. Why should I?\" 4"
+    ]
+  },
+  "31641126011843119037": {
+    "Prev": "16586289352405617021",
+    "Next": "2739375643256517662",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 6,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Fighters Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You are already a member of the Fighters Guild, %PCName.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2739375643256517662": {
+    "Prev": "31641126011843119037",
+    "Next": "87143819197936888",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 6,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Fighters Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You look like you could take care of yourself. Before I sign you up, you might want to look at the Fighters Guild Charter. Are you ready to sign up now?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "RankRequirement",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      },
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Sign me up\" 1 \"Read Charter\" 2"
+    ]
+  },
+  "87143819197936888": {
+    "Prev": "2739375643256517662",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 6,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Fighters Guild",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Fighters Guild can't just sign up anyone. You don't meet our requirements.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "SameFaction",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}

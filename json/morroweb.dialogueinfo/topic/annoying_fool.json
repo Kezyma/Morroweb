@@ -1,0 +1,223 @@
+{
+  "29207228471433516167": {
+    "Prev": "",
+    "Next": "13367950927332461",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "miun_gei",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "He won't be a problem any longer.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_Actor",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "13367950927332461": {
+    "Prev": "29207228471433516167",
+    "Next": "29324731118607449",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "miun_gei",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've done it! I admire your persuasiveness, friend. Thank you for your help. Allow me to give you this as a token of my appreciation.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "EB_Actor",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Actor\" 80",
+      "ModDisposition 15",
+      "RemoveItem \"Iron Shardskewer\" 1",
+      "Player->AddItem \"Iron Shardskewer\" 1",
+      "\"marcel maurard\"->Disable"
+    ]
+  },
+  "29324731118607449": {
+    "Prev": "13367950927332461",
+    "Next": "20433326242228211354",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "miun_gei",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You killed him? Well, I suppose that's one way of taking of that problem. But now I'll have the guards around here asking questions, harassing my customers. I don't need that at all. I appreciate you getting rid of him, but there had to be another way. Anyway, take this. And you didn't get it from me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_Actor",
+        "Value": 30.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "marcel maurard",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Actor",
+        "Value": 90.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Actor\" 90",
+      "ModDisposition 5",
+      "RemoveItem \"Gold_001\" 250",
+      "Player->AddItem \"Gold_001\" 250"
+    ]
+  },
+  "20433326242228211354": {
+    "Prev": "29324731118607449",
+    "Next": "1734227218211531010",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "miun_gei",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, how I detest that ridiculous man.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "EB_Actor",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Actor",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "1734227218211531010": {
+    "Prev": "20433326242228211354",
+    "Next": "974713722577228386",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "miun_gei",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You think you can? I would like that. Make him go away, an I will have rewards for you!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Actor\" 30"
+    ]
+  },
+  "974713722577228386": {
+    "Prev": "1734227218211531010",
+    "Next": "2952574911355713556",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "miun_gei",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No? Perhaps you have not the skill. I understand. Maybe he will die a horrible death and all will be made right. It is possible, you know.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Actor\" 35"
+    ]
+  },
+  "2952574911355713556": {
+    "Prev": "974713722577228386",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "miun_gei",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Did you not see him as you entered? It is that Marcel Maurard. Outside my shop he stands all day, selling ridiculous wares. Get rid of him I would like to, but the law says he is within his rights. Perhaps you might find a way?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "EB_Actor",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "Journal \"EB_Actor\" 20",
+      "Choice \"I will try and make him leave.\" 1 \"I can do nothing for you.\" 2"
+    ]
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "3921147271407415216": {
+    "Prev": "",
+    "Next": "26882135782779822870",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled, but maybe you can join the Imperial Legion again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "26882135782779822870": {
+    "Prev": "3921147271407415216",
+    "Next": "1572130721416510255",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Proof of a conspiracy against the Emperor.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_TalosTreason",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "1572130721416510255": {
+    "Prev": "26882135782779822870",
+    "Next": "28845122431089326191",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am glad you brought me the axe. Now I know I was mistaken about Lugrub.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_WidowLand",
+        "Value": 120.0
+      }
+    ],
+    "Script": []
+  },
+  "28845122431089326191": {
+    "Prev": "1572130721416510255",
+    "Next": "295562660354152583",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have seen your proof, and I am convinced. Find Lugrub gro-Ogdum in the Gnisis Eggmine and kill him to avenge Mansilamat Vabdas.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_WidowLand",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "295562660354152583": {
+    "Prev": "28845122431089326191",
+    "Next": "28029214682771030601",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't care if you saw the ghost of Tiber Septim. I can't tell the Legion officers in Cyrodiil that I condemned a soldier to death because you talked to a ghost.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "moddisposition -2"
+    ]
+  },
+  "28029214682771030601": {
+    "Prev": "295562660354152583",
+    "Next": "1798469541298118987",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hm. Yes, this is Lugrub's Axe. I can see how it's been damaged from hitting bone here and here. With this, I have no choice but to believe your story. Lugrub gro-Odgum is an outlaw. Find him and kill him. Then justice will be served.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal IL_WidowLand 70",
+      "Player->RemoveItem \"Lugrub's Axe\" 1",
+      "moddisposition 3"
+    ]
+  },
+  "1798469541298118987": {
+    "Prev": "28029214682771030601",
+    "Next": "713312514151098125",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "These are serious accusations, %PCName, and Lugrub is your superior officer. If you don't have any proof, I might have to press charges of insubordination.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "moddisposition -5"
+    ]
+  },
+  "713312514151098125": {
+    "Prev": "1798469541298118987",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "general darius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "What kind of proof do you have?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "lugrub's axe",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "IL_WidowLand",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"I spoke with the ghost of Mansilamat Vabdas.\" 1 \"Here is Lugrub's Axe.\" 2 \"Nevermind.\" 3"
+    ]
+  }
+}

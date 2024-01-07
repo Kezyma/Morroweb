@@ -1,0 +1,132 @@
+{
+  "195281316563177139": {
+    "Prev": "",
+    "Next": "3208032034350723826",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Fjol",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You're still here? I think you'd best be on your way. I'd hate for any of those \"outlaws\" to find you. Heh.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "MV_Bastard",
+        "Value": 105.0
+      }
+    ],
+    "Script": []
+  },
+  "3208032034350723826": {
+    "Prev": "195281316563177139",
+    "Next": "178153472462823046",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Fjol",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A wise choice, traveler. As I mentioned, these are dangerous times. You had best be on your way now.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal \"MV_Bastard\" 105",
+      "Player->RemoveItem \"Gold_001\" 100",
+      "AddItem \"Gold_001\" 100",
+      "Goodbye"
+    ]
+  },
+  "178153472462823046": {
+    "Prev": "3208032034350723826",
+    "Next": "1915129571230053201",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Fjol",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Hrmph. It seemed a small price to pay for your life. No matter, though. I'll have that gold one way or another.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -40",
+      "SetFight 100",
+      "Startcombat Player",
+      "Goodbye"
+    ]
+  },
+  "1915129571230053201": {
+    "Prev": "178153472462823046",
+    "Next": "30269227881530530954",
+    "Type": "Topic",
+    "Disposition": 40,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Fjol",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Oh, yes, these are dangerous times. They'll rob you blind and cut your throat without giving it a second thought. It's a bad idea to carry anything of value on your person. In fact, it's probably best if you give me that gold of yours...100 septims, perhaps? I think you'll find the way less dangerous if you do.",
+    "Filters": [],
+    "Script": [
+      "Journal \"MV_Bastard\" 100",
+      "Choice \"Give Fjol 100 septims.\" 1 \"Refuse to give Fjol 100 septims.\" 2"
+    ]
+  },
+  "30269227881530530954": {
+    "Prev": "1915129571230053201",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Fjol",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Indeed. Like me. You'll be giving me 100 septims now, if you want to live through the day. Either way you choose is fine with me.",
+    "Filters": [],
+    "Script": [
+      "Journal \"MV_Bastard\" 100",
+      "Choice \"Give Fjol 100 septims\" 1 \"Refuse to give Fjol 100 septims\" 2"
+    ]
+  }
+}

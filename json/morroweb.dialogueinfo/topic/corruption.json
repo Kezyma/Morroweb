@@ -1,0 +1,629 @@
+{
+  "51864883781213184": {
+    "Prev": "",
+    "Next": "138615532154354579",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'm very disappointed in you, %PCName. You broke our rules, and I can't have one of your reputation in the Bal Molagmer. Make amends, and perhaps we can speak again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "138615532154354579": {
+    "Prev": "51864883781213184",
+    "Next": "153664241519130812",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "I'm disappointed in you, %PCName. You've been caught too many times. Tone down your act, pay off yours debts, then come see me again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcCrimeLevel",
+        "Compare": "GreaterEqual",
+        "Id": "",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "153664241519130812": {
+    "Prev": "138615532154354579",
+    "Next": "8399251941497716120",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "We'll never be able to prove his corruption with that ledger destroyed.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_SS_Yngling",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "8399251941497716120": {
+    "Prev": "153664241519130812",
+    "Next": "3116115784294229235",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "You brought me proof of Yngling Half-Troll's corruption.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_SS_Yngling",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "3116115784294229235": {
+    "Prev": "8399251941497716120",
+    "Next": "1230026433104975479",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "I knew he was misusing some of the money, but it looks like he took almost all of it. Why, Yngling Half-Troll was a bigger thief than any of us!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "yngling half-troll",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Yngling 100",
+      "Player->RemoveItem bk_YnglingLedger 1",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "1230026433104975479": {
+    "Prev": "3116115784294229235",
+    "Next": "739711990293969781",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "I knew he was misusing some of the money, but it looks like he took almost all of it. Why, Yngling Half-Troll is a bigger thief than any of us!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Yngling 100",
+      "Player->RemoveItem bk_YnglingLedger 1",
+      "ModPCFacRep 5 \"Thieves Guild\"",
+      "ModDisposition 10"
+    ]
+  },
+  "739711990293969781": {
+    "Prev": "1230026433104975479",
+    "Next": "26120146972871926459",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "If you don't give me that ledger, I can't show everyone the truth about Yngling Half-Troll.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "26120146972871926459": {
+    "Prev": "739711990293969781",
+    "Next": "21293186882884213048",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "You say he has already destroyed the ledger? How very odd. He must have suspected we were onto him. No matter. I have other jobs for you.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "bk_ynglingledger",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_SS_Yngling",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Yngling 110"
+    ]
+  },
+  "21293186882884213048": {
+    "Prev": "26120146972871926459",
+    "Next": "1553515068270865908",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "I still need the ledger if we are to prove his corruption.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "bk_ynglingledger",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Yngling",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "1553515068270865908": {
+    "Prev": "21293186882884213048",
+    "Next": "3056031756539929972",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Yes, this is the ledger I was looking for. Give it to me now so that I can publish the truth about Yngling Half-Troll.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_ynglingledger",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Yngling",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give Stacey the ledger.\" 1 \"Keep the ledger.\" 2"
+    ]
+  },
+  "3056031756539929972": {
+    "Prev": "1553515068270865908",
+    "Next": "1730620438234872797",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "You killed Yngling Half-Troll. No need to deny it; I have my sources. You and I know how corrupt he was, but the common people have heard the murderer was a member of the Guild. We need to clear our reputation by showing proof of Yngling's corruption. Go to Yngling Manor in Vivec and bring back Yngling's ledger which has proof of his corruption.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "yngling half-troll",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "braynas hlervu",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_SS_Generosity1",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Yngling 10"
+    ]
+  },
+  "1730620438234872797": {
+    "Prev": "3056031756539929972",
+    "Next": "261112441171928989",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "You killed Yngling Half-Troll. No need to deny it; I have my sources. You and I know how corrupt he was, but the common people have heard the murderer was a member of the Guild. We need to clear our reputation by showing proof of Yngling's corruption. Go to Yngling Manor in Vivec and bring back Yngling's ledger which has proof of his corruption.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "yngling half-troll",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Generosity1",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Yngling 10"
+    ]
+  },
+  "261112441171928989": {
+    "Prev": "1730620438234872797",
+    "Next": "13253271791963615474",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Yngling Half-Troll is corrupt. Many know this, but no one dares act. The Bal Molagmer bring justice to those who think themselves above justice. Go to Yngling Manor in Vivec. There you will find a ledger with proof of his corruption. Bring that ledger to me.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "braynas hlervu",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_SS_Generosity1",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Yngling 10"
+    ]
+  },
+  "13253271791963615474": {
+    "Prev": "261112441171928989",
+    "Next": "677528952398621886",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "stacey",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "Yngling Half-Troll is corrupt. Many know this, but no one dares act. The Bal Molagmer bring justice to those who think themselves above justice. Go to Yngling Manor in Vivec. There you will find a ledger with proof of his corruption. Bring that ledger to me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_SS_Generosity1",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Yngling 10"
+    ]
+  },
+  "677528952398621886": {
+    "Prev": "13253271791963615474",
+    "Next": "20134114891048010188",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yngling half-troll",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I think I told you that our conversation about this was over. You try my patience.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_SS_Yngling",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "ModFight 10"
+    ]
+  },
+  "20134114891048010188": {
+    "Prev": "677528952398621886",
+    "Next": "16557223191830611020",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yngling half-troll",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I think I told you that our conversation about this was over. You try my patience.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TG_SS_Yngling",
+        "Value": 110.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "ModFight 10"
+    ]
+  },
+  "16557223191830611020": {
+    "Prev": "20134114891048010188",
+    "Next": "127558548199509",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yngling half-troll",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You'll pay for that, thief!",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "127558548199509": {
+    "Prev": "16557223191830611020",
+    "Next": "2136224039262255990",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yngling half-troll",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. I'll just tear this ledger up. We are done speaking. Leave before I really get angry.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal TG_SS_Yngling 50",
+      "Player->RemoveItem bk_YnglingLedger 1",
+      "ModDisposition -20",
+      "Goodbye"
+    ]
+  },
+  "2136224039262255990": {
+    "Prev": "127558548199509",
+    "Next": "889132311324789578",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yngling half-troll",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Give me my ledger, thief, or you'll regret it.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "bk_ynglingledger",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"You're the real thief.\" 1 \"Take it.\" 2"
+    ]
+  },
+  "889132311324789578": {
+    "Prev": "2136224039262255990",
+    "Next": "12654120471785712610",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yngling half-troll",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You? Accuse me of corruption? Just who do you think you are?",
+    "Filters": [],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "12654120471785712610": {
+    "Prev": "889132311324789578",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "yngling half-troll",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You? Accuse me of corruption? Just who do you think you are?",
+    "Filters": [],
+    "Script": []
+  }
+}

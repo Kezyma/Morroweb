@@ -1,0 +1,370 @@
+{
+  "601830823562520650": {
+    "Prev": "",
+    "Next": "1492864292180021985",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sul-matuul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So? You have faced the Third Trial in the Cavern of the Incarnate? Tell me what you saw and heard there. [He listens carefully, with no sign of his feelings.] It is as Nibani Maesa says. Perhaps you are the chosen one. We shall see.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "1492864292180021985": {
+    "Prev": "601830823562520650",
+    "Next": "3079029978897331836",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sul-matuul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Seek the Third Trial in the Cavern of the Incarnate. You have my blessing, and the blessing of the tribe.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 15.0
+      }
+    ],
+    "Script": []
+  },
+  "3079029978897331836": {
+    "Prev": "1492864292180021985",
+    "Next": "145954890561910778",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sul-matuul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "This riddle is Wisdom's Test. Take counsel of the wisdom of the tribes, and you shall find the way. Seek the Cavern of the Incarnate. Gain the moon and star, and bring it to Nibani Maesa. Take with you my blessing, and the blessing of our tribe, Malipu-Ataman's Belt.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 10.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition 10",
+      "PCRaiseRank",
+      "player->modReputation 1",
+      "Journal \"A2_6_Incarnate\" 15",
+      "Player->AddItem \"Malipu_Ataman's_Belt\" 1",
+      "AddTopic \"eye of the needle\"",
+      "AddTopic \"teeth of the wind\"",
+      "AddTopic \"skin of the pearl\"",
+      "AddTopic \"the dream is the door\"",
+      "AddTopic  \"the star is the key\""
+    ]
+  },
+  "145954890561910778": {
+    "Prev": "3079029978897331836",
+    "Next": "31828326972765523739",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sul-matuul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "the eye of the needle lies in the teeth of the wind\r\nthe mouth of the cave lies in the skin of the pearl\r\nthe dream is the door and the star is the key",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 10.0
+      },
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 2"
+    ]
+  },
+  "31828326972765523739": {
+    "Prev": "145954890561910778",
+    "Next": "2300780741585217376",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sul-matuul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am impressed. These three tokens you have brought me. You may keep them. You have passed the Warrior's Test. And I will give you the secret of the Third Trial. 'In caverns dark Azura's eye sees/and makes to shine the moon and star.' This is the Third Vision. And you must go to the Cavern of the Incarnate, a place sacred to Azura, and look for the moon and star. The secret of the Cavern of the Incarnate is set in a riddle:",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 10.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "misc_goblet_dagoth",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "shadow_shield",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_corprus_weepings_01",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  },
+  "2300780741585217376": {
+    "Prev": "31828326972765523739",
+    "Next": "3220269021649926963",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sul-matuul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "When you bring me the three tokens from the ruins of Kogoruhn, I shall tell you the secret of the Third Trial.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "3220269021649926963": {
+    "Prev": "2300780741585217376",
+    "Next": "24551220402436128428",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sul-matuul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The first token is corprus weepings from a corprus beast, to show that you are proof against the disease's corruption. The second token is a cup with the mark of House Dagoth, for I have myself seen such cups there, and will know you have seen with your eyes what I have seen with mine. The third token is the Shadow Shield, which lies on the Tomb of Dagoth Morin, in the lava tunnels deep beneath ruined Kogoruhn. Bring these things to me, and then I will tell you the secret of the Third Test.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal \"A2_6_Incarnate\" 10"
+    ]
+  },
+  "24551220402436128428": {
+    "Prev": "3220269021649926963",
+    "Next": "6083324482612425094",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sul-matuul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Nearby lies Kogoruhn, the ancient halls of the forgotten house, House Dagoth. In recent time, creatures of the blight have come to dwell there. I myself went there, with some brave hunters, and came back again, but it was a bad place, and I am not ashamed to say I was afraid, for myself and my men. If you would have from me the secret of the Third Trial, the 'caverns dark' where Azura's eye sees, you will first bring to me three tokens from dark Kogoruhn.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 2"
+    ]
+  },
+  "6083324482612425094": {
+    "Prev": "24551220402436128428",
+    "Next": "21921299692257311286",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sul-matuul",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have entered the path of the Nerevarine. This is a hard thing to believe. But Nibani Maesa has spoken to me at length of this, and I have had time to consider. Therefore I shall keep my own counsel, and set before you my own test. I do not dispute with the wise women, but their ways are not the ways of the warrior. Many before have tried the path of the Nerevarine, but all have failed the warrior's test. You must have strength, courage, and cunning. These things I would test.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Choice \"Continue\" 1"
+    ]
+  },
+  "21921299692257311286": {
+    "Prev": "6083324482612425094",
+    "Next": "2377530945264214009",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nibani maesa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Tell me what you saw and heard in the Cavern of the Incarnate. [See listens carefully.] It is as I have seen in my dream. It is a true dream, sent from Azura to guide me.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "2377530945264214009": {
+    "Prev": "21921299692257311286",
+    "Next": "1271729426301492411",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nibani maesa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Sul-Matuul has sent you to seek the Third Trial. He has told you of the shrine to Azura called the Cavern of the Incarnate. I cannot tell you how to find this place. But he has said you may seek the wisdom of the tribes, and the wisdom of the wise woman I may share with you. Perhaps what I know can help you with these lines of the riddle: the star is the key, and the dream is the door.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_6_Incarnate",
+        "Value": 15.0
+      }
+    ],
+    "Script": []
+  },
+  "1271729426301492411": {
+    "Prev": "2377530945264214009",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nibani maesa",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "In legend there is a shrine to Azura called the Cavern of the Incarnate. There are secrets I may not tell you about this cavern. Do not ask.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "A2_1_MeetSulMatuul",
+        "Value": 45.0
+      }
+    ],
+    "Script": []
+  }
+}

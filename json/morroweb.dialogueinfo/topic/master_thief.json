@@ -1,0 +1,179 @@
+{
+  "117554496636022409": {
+    "Prev": "",
+    "Next": "18779117464824373",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sjoring hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled, %PCName. You must make amends before I'll discuss Guild matters with you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "18779117464824373": {
+    "Prev": "117554496636022409",
+    "Next": "2088116236291913216",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sjoring hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That information will help a great deal when I take over the Thieves Guild and the Camonna Tong myself. Now who's the \"Master Thief,\" %PCName?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_BigBosses 110",
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "2088116236291913216": {
+    "Prev": "18779117464824373",
+    "Next": "1108822922702429812",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "sjoring hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's too bad, %PCName. We could have worked together. Instead, you'll die alone.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Journal FG_BigBosses 110",
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "1108822922702429812": {
+    "Prev": "2088116236291913216",
+    "Next": "272228573618720353",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "sjoring hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Thieves Guild",
+    "Text": "What? You're the Master Thief? Well, why didn't you say so from the start? Tell you what, %PCName, between you and me and Camonna Tong, we've got a good deal here. Let's start by you telling me everything you know about the Thieves Guild operations in Vvardenfell.",
+    "Filters": [],
+    "Script": [
+      "Choice \"Tell All\" 1 \"Refuse\" 2"
+    ]
+  },
+  "272228573618720353": {
+    "Prev": "1108822922702429812",
+    "Next": "6500325681567321531",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 8,
+    "SpeakerId": "sjoring hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "I hear you killed the Master Thief. Great work, %PCName. Thanks for taking care of the Thieves Guild for me. Now the only one who can threaten my position...is you. You showed promise, but a bit too much ambition. You will not be missed.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "stacey",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_BigBosses 100",
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "6500325681567321531": {
+    "Prev": "272228573618720353",
+    "Next": "20614234792904519769",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 8,
+    "SpeakerId": "sjoring hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "The Master Thief and his second-in-command are in Simine Fralinie's bookstore. Get rid of Gentleman Jim Stacey, the Redguard. He's in charge. I wouldn't mind if you took out his lackey as well. Once you have crippled the Thieves Guild, I will make you the new Guildmaster and retire.",
+    "Filters": [],
+    "Script": [
+      "Journal FG_BigBosses 10"
+    ]
+  },
+  "20614234792904519769": {
+    "Prev": "6500325681567321531",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "sjoring hard-heart",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "First you need to advance to the rank of Champion.",
+    "Filters": [],
+    "Script": []
+  }
+}

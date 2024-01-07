@@ -1,0 +1,84 @@
+{
+  "11356187656004010": {
+    "Prev": "",
+    "Next": "22476175271989529620",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vorar helas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "About damn time. Here, here's your payment. Now get out of here.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_SlaveMule",
+        "Value": 109.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "ingred_moon_sugar_01",
+        "Value": 20.0
+      }
+    ],
+    "Script": [
+      "RemoveItem \"Gold_001\" 200",
+      "Player->AddItem \"Gold_001\" 200",
+      "Journal \"MV_SlaveMule\" 109",
+      "Goodbye"
+    ]
+  },
+  "22476175271989529620": {
+    "Prev": "11356187656004010",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "vorar helas",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You don't have it? You're starting to bother me, %PCRace.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Less",
+        "Id": "ingred_moon_sugar_01",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "MV_SlaveMule",
+        "Value": 101.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "MV_SlaveMule",
+        "Value": 109.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "ModFight 10",
+      "Goodbye"
+    ]
+  }
+}

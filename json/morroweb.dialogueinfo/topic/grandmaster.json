@@ -1,0 +1,137 @@
+{
+  "3187325367112827359": {
+    "Prev": "",
+    "Next": "20465231451806230869",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "Yes, I will retire soon. You are the Grandmaster.",
+    "Filters": [],
+    "Script": []
+  },
+  "20465231451806230869": {
+    "Prev": "3187325367112827359",
+    "Next": "8128213271705412308",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So be it. I will leave here soon. You are the new Grandmaster of the Morag Tong. Always watch for the Dark Brotherhood, for I am sure they will soon try to regain what you have taken from them here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal MT_Grandmaster 110",
+      "PCRaiseRank",
+      "Player->ModReputation 3"
+    ]
+  },
+  "8128213271705412308": {
+    "Prev": "20465231451806230869",
+    "Next": "888737321202418321",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "So be it.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "SetFight 100",
+      "StartCombat Player",
+      "Goodbye"
+    ]
+  },
+  "888737321202418321": {
+    "Prev": "8128213271705412308",
+    "Next": "24679268162514315733",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 8,
+    "SpeakerId": "eno hlaalu",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "Traditionally, the Grandmaster of the Morag Tong is honorably executed by the new Grandmaster. You can certainly fight me if you think you can win... But I am tired. If you allow me to retire peacefully, I will name you the new Grandmaster. No one will question our word.",
+    "Filters": [],
+    "Script": [
+      "Journal MT_Grandmaster 20",
+      "Choice \"Allow him to retire.\" 1 \"Slay him.\" 2"
+    ]
+  },
+  "24679268162514315733": {
+    "Prev": "888737321202418321",
+    "Next": "1651986161721322751",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": 9,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "Yes, you are the Grandmaster. What can I do for you?",
+    "Filters": [],
+    "Script": []
+  },
+  "1651986161721322751": {
+    "Prev": "24679268162514315733",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": 7,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Morag Tong",
+    "SpeakerCell": "",
+    "PlayerFaction": "Morag Tong",
+    "Text": "To become the Grandmaster of the Morag Tong, you must slay the current Grandmaster, Eno Hlaalu.",
+    "Filters": [],
+    "Script": []
+  }
+}

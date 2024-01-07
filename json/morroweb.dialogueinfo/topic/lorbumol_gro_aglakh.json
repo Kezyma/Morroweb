@@ -1,0 +1,197 @@
+{
+  "2104294983147624513": {
+    "Prev": "",
+    "Next": "938316462171328617",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Regretably, you broke the rules of the Fighters Guild and you have been expelled. Make amends and we'll speak of this again.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "938316462171328617": {
+    "Prev": "2104294983147624513",
+    "Next": "419314420283384079",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "The Fighters Guild is better off without him.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_KillCronies",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "419314420283384079": {
+    "Prev": "938316462171328617",
+    "Next": "10615135202472210185",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Now that Lorbumol gro-Aglakh is dead, you must take this battle to Sjoring Hard-Heart.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_KillCronies",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TG_BitterBribe",
+        "Value": 100.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "lorbumol gro-aglakh",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_KillCronies 100",
+      "ModPCFacRep 5 \"Fighters Guild\"",
+      "ModDisposition 20"
+    ]
+  },
+  "10615135202472210185": {
+    "Prev": "419314420283384079",
+    "Next": "299822978625620016",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Now that Eydis Fire-Eye and Lorbumol gro-Aglakh are dead, you must take this battle to Sjoring Hard-Heart.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_KillCronies",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "eydis fire-eye",
+        "Value": 1.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "lorbumol gro-aglakh",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_KillCronies 100",
+      "ModPCFacRep 5 \"Fighters Guild\"",
+      "ModDisposition 20"
+    ]
+  },
+  "299822978625620016": {
+    "Prev": "10615135202472210185",
+    "Next": "4880184866772598",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Good work, %PCName. You must also kill Eydis Fire-Eye.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "FG_KillCronies",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "lorbumol gro-aglakh",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_KillCronies 60"
+    ]
+  },
+  "4880184866772598": {
+    "Prev": "299822978625620016",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": 7,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Fighters Guild",
+    "Text": "Lorbumol is in the Guild of Fighters in Vivec. Kill him and report back to me.",
+    "Filters": [],
+    "Script": [
+      "Journal FG_KillCronies 15"
+    ]
+  }
+}

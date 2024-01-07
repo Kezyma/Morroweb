@@ -1,0 +1,660 @@
+{
+  "21258321652528915145": {
+    "Prev": "",
+    "Next": "100447372526118390",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is good and right that the Band be in my possession. Surely, it will be a boon to all of my people. Your efforts are appreciated.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_MazedBand",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "100447372526118390": {
+    "Prev": "21258321652528915145",
+    "Next": "2374359641917913512",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "It is I who serve all of Morrowind. Your help has been appreciated, %PCName. I have seen something in you that I have not seen in a very long time. I bestow the blessing of My Light upon you. We will speak again in the future.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem mazed_band 1",
+      "player->addspell \"almalexia's light\" 1",
+      "Journal TR_MazedBand 100"
+    ]
+  },
+  "2374359641917913512": {
+    "Prev": "100447372526118390",
+    "Next": "429323921202362942",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do not concern yourself too deeply in these matters, friend %PCName. I will use the ring as I do everything...to serve the Temple and all of Morrowind. You have been a pleasant surprise to meet. I have seen something in you that I have not seen in a very long time. I bestow the blessing of My Light upon you. May it serve you well. We will speak again soon.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem mazed_band 1",
+      "player->addspell \"almalexia's light\" 1",
+      "Journal TR_MazedBand 100"
+    ]
+  },
+  "429323921202362942": {
+    "Prev": "2374359641917913512",
+    "Next": "24535179462895914272",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "An interesting item, is it not? It seems ordinary enough, but it is much more. The ring is cold now, but the embers of its power still burn hot within. I will use my magic to reawaken this power.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_MazedBand",
+        "Value": 90.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "mazed_band",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Why did you want this ring?\" 1 \"It is my pleasure to serve you.\" 2"
+    ]
+  },
+  "24535179462895914272": {
+    "Prev": "429323921202362942",
+    "Next": "19288181742859910503",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "almalexia",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I was told you had the Mazed Band. Where is it? Retrieve it. Quickly.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_MazedBand",
+        "Value": 90.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Equal",
+        "Id": "mazed_band",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "19288181742859910503": {
+    "Prev": "24535179462895914272",
+    "Next": "1764329076152436329",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I understand that you've found this thing of legend and brought it to the goddess.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_MazedBand",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1764329076152436329": {
+    "Prev": "19288181742859910503",
+    "Next": "302811991723642981",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Torasa Aram",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Mazed Band may actually be no more than a legend, though there is no doubt of Barilzar's existence, or his power. It has been said that the Mazed Band was able to open rifts in time and space...that it could even open the gates of Oblivion. It's been said that it would take one of divine birth to wield the ring. Some speculate that that was how Barilzar himself met his end. Of course, this is all conjecture. No one really knows what happened to the man or the Band. All of that was lost centuries ago.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_MazedBand",
+        "Value": 55.0
+      }
+    ],
+    "Script": [
+      "Journal TR_MazedBand 55"
+    ]
+  },
+  "302811991723642981": {
+    "Prev": "1764329076152436329",
+    "Next": "4351258781176015618",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "plitinius mero",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've found the ring and returned it to the goddess? Foolish, foolish, foolish. I hope your faith in her is well-placed, %PCName. In the wrong hands, I shudder to guess what evils could be unleashed on the city.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_MazedBand",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "4351258781176015618": {
+    "Prev": "302811991723642981",
+    "Next": "8781583345642632",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "plitinius mero",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You should not even speak of that cursed object! I'm sorry, friend %PCName...I did not mean to snap at you. I have heard many tales of that ring, and the evil Barilzar who created it. It was to be a means of teleportation for the wizard, but it was much worse than that. That ring was said to open gates to hellish planes, releasing creatures best left in nightmare. I've heard the ring was stripped of its power, and that only a god could use it now and not be destroyed. The thought chills my bones.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_MazedBand",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal TR_MazedBand 53"
+    ]
+  },
+  "8781583345642632": {
+    "Prev": "4351258781176015618",
+    "Next": "2610620129228787432",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "barenziah",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I understand you have found the thing and returned it to the goddess. Walk with care, %PCName. It is wise to be wary of gods with mortal failings.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_MazedBand",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2610620129228787432": {
+    "Prev": "8781583345642632",
+    "Next": "4489112111547111936",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "barenziah",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have heard of this thing, %PCName, but I know very little about it. I've heard whispers about it, but few details. Some say it is cursed...some say it is not. I can't understand why the goddess would want such a thing. If you want to know more, I would suggest speaking with Torasa Aram at the Museum of Artifacts. She has great knowledge of these things. Take care...some things are best left buried.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_MazedBand",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal TR_MazedBand 50"
+    ]
+  },
+  "4489112111547111936": {
+    "Prev": "2610620129228787432",
+    "Next": "94403376266721707",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gavas drin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Speak with the Lady directly, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_MazedBand",
+        "Value": 90.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "mazed_band",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "94403376266721707": {
+    "Prev": "4489112111547111936",
+    "Next": "1951274982257317045",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gavas drin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been able to retrieve the Mazed Band? Amazing...Almalexia will want to hear about this immediately. You are to speak with her directly. I hope you realize what an honor you're receiving, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_MazedBand",
+        "Value": 70.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "mazed_band",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_MazedBand",
+        "Value": 90.0
+      }
+    ],
+    "Script": [
+      "Journal TR_MazedBand 90"
+    ]
+  },
+  "1951274982257317045": {
+    "Prev": "94403376266721707",
+    "Next": "101043159716126970",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gavas drin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You'll need to retrieve the Band from the Temple ruins. Quickly. The goddess wishes to have it in her possession.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_MazedBand",
+        "Value": 40.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_MazedBand",
+        "Value": 70.0
+      }
+    ],
+    "Script": []
+  },
+  "101043159716126970": {
+    "Prev": "1951274982257317045",
+    "Next": "2602152341601113805",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "gavas drin",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes...the Mazed Band. Barilzar himself was a powerful mage...quite powerful, in fact. He created the band sometime in the middle of the Second Era, and soon after disappeared. The purpose of the artifact is unknown to me, %PCName. All I know is that the Lady wants it. I can only assume it will allow her to better minister to her people, though I find that hard to imagine.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_MazedBand",
+        "Value": 20.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_MazedBand",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal TR_MazedBand 40"
+    ]
+  },
+  "2602152341601113805": {
+    "Prev": "101043159716126970",
+    "Next": "200419903282923223",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris hler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have nothing more to say about the thing. You've been told what to do.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_MazedBand",
+        "Value": 80.0
+      }
+    ],
+    "Script": []
+  },
+  "200419903282923223": {
+    "Prev": "2602152341601113805",
+    "Next": "2603317352197715073",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris hler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You got the Mazed Band? Interesting.... I won't be the one to take it. Speak with the priest, Drin. He'll know what should be done.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "TR_MazedBand",
+        "Value": 70.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "GreaterEqual",
+        "Id": "mazed_band",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TR_MazedBand 80"
+    ]
+  },
+  "2603317352197715073": {
+    "Prev": "200419903282923223",
+    "Next": "137965039266238565",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris hler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "All I know is that you're to retrieve it from the Temple ruins. That's all you should need to know as well.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_MazedBand",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_MazedBand",
+        "Value": 70.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "gavas drin",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "137965039266238565": {
+    "Prev": "2603317352197715073",
+    "Next": "460022086259443902",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris hler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "All I know is that you're to retrieve it from the Temple ruins. That's all you should need to know as well. Talk to Drin if you need to know more.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_MazedBand",
+        "Value": 30.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "TR_MazedBand",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Journal TR_MazedBand 30"
+    ]
+  },
+  "460022086259443902": {
+    "Prev": "137965039266238565",
+    "Next": "2884823021355625687",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris hler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "All I know is that the goddess wants it returned. You'll find it in the ruins beneath the Temple. Search to the northwest in the sewers. There was a passageway in the Abandoned Crypt that had been blocked off by a cave-in, but Almalexia had the area cleared. As for the item itself, I don't really see why you'd need to know any more about it. Gavas Drin could tell you more...were he not dead.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_MazedBand",
+        "Value": 10.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "gavas drin",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal TR_MazedBand 20"
+    ]
+  },
+  "2884823021355625687": {
+    "Prev": "460022086259443902",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "fedris hler",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "All I know is that the goddess wants it returned. You'll find it in the ruins beneath the Temple. Search to the northwest in the sewers. There was a passageway in the Abandoned Crypt that had been blocked off by a cave-in, but Almalexia had the area cleared. As for the item itself, I don't really see why you'd need to know any more about it. If you must inquire, perhaps Gavas Drin can give you more details.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "TR_MazedBand",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal TR_MazedBand 20"
+    ]
+  }
+}

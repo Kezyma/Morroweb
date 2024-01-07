@@ -1,0 +1,706 @@
+{
+  "67745541018611087": {
+    "Prev": "",
+    "Next": "14840633068801139",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ashibaal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "No, you have convinced me. We will trade ebony only with our partner, House Hlaalu. We will stand side by side like two strong warriors and the Empire will trade the way we tell them.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_AshlanderEbony",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "14840633068801139": {
+    "Prev": "67745541018611087",
+    "Next": "8833145621801010547",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ashibaal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I hear the truth of your words. When two strong warriors stand side by side, no one dares challenge them. I will trade ebony with House Hlaalu.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HH_AshlanderEbony 50"
+    ]
+  },
+  "8833145621801010547": {
+    "Prev": "14840633068801139",
+    "Next": "2211038052156625862",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ashibaal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "We Zainab have ebony and are strong. You do not have ebony of your own, and you are too weak to speak with me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "2211038052156625862": {
+    "Prev": "8833145621801010547",
+    "Next": "1693061752763713125",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ashibaal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, that is true. The Zainab are very strong and we have ebony to sell. Why do you want our ebony when you have ebony of your own?",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "ModDisposition 10",
+      "Choice \"If we both sell ebony the price drops.\" 1 \"We do not have enough ebony.\" 2"
+    ]
+  },
+  "1693061752763713125": {
+    "Prev": "2211038052156625862",
+    "Next": "12993323382146311937",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ashibaal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Why does House Hlaalu want our ebony? House Hlaalu already has ebony.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Choice \"If we both sell ebony the price drops.\" 1 \"We do not have enough ebony.\" 2"
+    ]
+  },
+  "12993323382146311937": {
+    "Prev": "1693061752763713125",
+    "Next": "5560209771714117894",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ashibaal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then I will tell you to leave here.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 5.0
+      }
+    ],
+    "Script": [
+      "Goodbye"
+    ]
+  },
+  "5560209771714117894": {
+    "Prev": "12993323382146311937",
+    "Next": "166732153140648023",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "ashibaal",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Why are you speaking to me about ebony?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_AshlanderEbony",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"The Zainab are now strong enough to sell ebony.\" 3 \"I want you to sell ebony to House Hlaalu.\" 4 \"I was told to come here.\" 5"
+    ]
+  },
+  "166732153140648023": {
+    "Prev": "5560209771714117894",
+    "Next": "201291806208804",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled. I cannot discuss business with you unless you make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "201291806208804": {
+    "Prev": "166732153140648023",
+    "Next": "31027129612947918208",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The ebony trade is going well thanks to you, %PCName.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_AshlanderEbony",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "31027129612947918208": {
+    "Prev": "201291806208804",
+    "Next": "73312833611087136",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've killed some of the Zainab? Hm. I don't think they will deal with you now. We'll need to send someone else to trade with them.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_AshlanderEbony",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "B3_ZainabKill",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HH_AshlanderEbony 200"
+    ]
+  },
+  "73312833611087136": {
+    "Prev": "31027129612947918208",
+    "Next": "31858200923006932201",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thanks to you, the Empire must still buy all its ebony from House Hlaalu. Take these 1000 drakes as a share of House Hlaalu's future profits.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_AshlanderEbony",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal HH_AshlanderEbony 100",
+      "Player->AddItem Gold_001 1000",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 10",
+      "Player->ModReputation 1"
+    ]
+  },
+  "31858200923006932201": {
+    "Prev": "73312833611087136",
+    "Next": "3059212324387920977",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edryno arethi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Zainab have been trying to sell ebony. Go speak with the Zainab camp and make sure they only sell ebony through us.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_TheExterminator",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HH_AshlanderEbony 10"
+    ]
+  },
+  "3059212324387920977": {
+    "Prev": "31858200923006932201",
+    "Next": "3212312280354610345",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "Ashlanders",
+    "SpeakerCell": "Zainab Camp",
+    "PlayerFaction": "",
+    "Text": "Ebony? You must speak with gulakhan Ashibaal.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_AshlanderEbony",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HH_AshlanderEbony 30"
+    ]
+  },
+  "3212312280354610345": {
+    "Prev": "3059212324387920977",
+    "Next": "32072114361790331467",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Canctunian Ponius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already convinced me, you don't need to ask me again.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_IndEsp4",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "32072114361790331467": {
+    "Prev": "3212312280354610345",
+    "Next": "29083124951632117030",
+    "Type": "Topic",
+    "Disposition": 75,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Canctunian Ponius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Okay, you convinced me. Go back and tell House Hlaalu that I will sign a contract for another year.",
+    "Filters": [],
+    "Script": [
+      "Journal HH_IndEsp4 50"
+    ]
+  },
+  "29083124951632117030": {
+    "Prev": "32072114361790331467",
+    "Next": "69811142978106082",
+    "Type": "Topic",
+    "Disposition": 50,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Canctunian Ponius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Well, if you think you can make me a better offer...",
+    "Filters": [],
+    "Script": []
+  },
+  "69811142978106082": {
+    "Prev": "29083124951632117030",
+    "Next": "23859124073221416529",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Canctunian Ponius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Unless House Hlaalu lowers prices, my hands are tied.",
+    "Filters": [],
+    "Script": []
+  },
+  "23859124073221416529": {
+    "Prev": "69811142978106082",
+    "Next": "2038125452842219490",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled from House Hlaalu. You must make amends.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2038125452842219490": {
+    "Prev": "23859124073221416529",
+    "Next": "192531758917845353",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You helped protect House Hlaalu's ebony trade, %PCRank.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_IndEsp4",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "192531758917845353": {
+    "Prev": "2038125452842219490",
+    "Next": "3156274721472116571",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard that you shut down the Sudanit mine and had a few words with Canctunian Ponius. Excellent work, %PCName. Take these 1000 drakes as a gift from House Hlaalu. And why not take this glass armor as a special bonus?",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "darns tedalen",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_IndEsp4",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal HH_IndEsp4 110",
+      "Player->AddItem Gold_001 1000",
+      "Player->AddItem glass_boots 1",
+      "Player->AddItem glass_cuirass 1",
+      "Player->AddItem glass_greaves 1",
+      "ModPCFacRep 15 \"Hlaalu\"",
+      "ModDisposition 25",
+      "Player->ModReputation 2"
+    ]
+  },
+  "3156274721472116571": {
+    "Prev": "192531758917845353",
+    "Next": "2470539111783611256",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Yes, I heard you convinced Canctunian Ponius. Good work, %PCName. Please take these 1000 drakes as a gift from House Hlaalu.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_IndEsp4",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal HH_IndEsp4 100",
+      "Player->AddItem Gold_001 1000",
+      "ModPCFacRep 10 \"Hlaalu\"",
+      "ModDisposition 20",
+      "Player->ModReputation 1"
+    ]
+  },
+  "2470539111783611256": {
+    "Prev": "3156274721472116571",
+    "Next": "689514113426220269",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard that you shut down the Sudanit mine. Good work, %PCName. Take these 1000 drakes as a gift from House Hlaalu.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "darns tedalen",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_IndEsp4",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Journal HH_IndEsp4 110",
+      "Player->AddItem Gold_001 1000",
+      "ModPCFacRep 10 \"Hlaalu\"",
+      "ModDisposition 20",
+      "Player->ModReputation 1"
+    ]
+  },
+  "689514113426220269": {
+    "Prev": "2470539111783611256",
+    "Next": "317904973207495299",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "If Canctunian Ponius is dead, you'll have to kill Darns Tedalen in the Sudanit mine.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "Canctunian Ponius",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_IndEsp4",
+        "Value": 10.0
+      }
+    ],
+    "Script": []
+  },
+  "317904973207495299": {
+    "Prev": "689514113426220269",
+    "Next": "126121974303042916",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "nileno dorvayn",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The East Empire Company threatened to buy ebony from House Redoran unless we lowered prices. Either convince Canctunian Ponius in Ebonheart to buy ebony from us, or kill Darns Tedalen, the head of mining operations in the Sudanit Mine. If you do both, there might be a bonus in it for you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_Retaliation",
+        "Value": 100.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_IndEsp3",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HH_IndEsp4 10"
+    ]
+  },
+  "126121974303042916": {
+    "Prev": "317904973207495299",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tarvyn faren",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "Hlaalu",
+    "Text": "We had a good deal going with Caldera, but then House Redoran opened their traditional mines for trade with the Empire. Even the Ashlanders have been sneaking across the ghost fence to a mine there and trying to sell ebony.",
+    "Filters": [],
+    "Script": []
+  }
+}

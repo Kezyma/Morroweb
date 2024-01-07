@@ -1,0 +1,250 @@
+{
+  "13400123532355317101": {
+    "Prev": "",
+    "Next": "13183303663232616895",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edd theman",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I already gave you the ring. That's the only Ring of Equity I know of.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_EddieRing",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "13183303663232616895": {
+    "Prev": "13400123532355317101",
+    "Next": "858431552224218015",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edd theman",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I got the ring for you. It's all yours. It should help if you have a fight another wizard, but you can only use it once or twice in a fight.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_EddieRing",
+        "Value": 70.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem Ring_Equity_uniq 1",
+      "Journal HT_EddieRing 100",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "Player->ModReputation 1"
+    ]
+  },
+  "858431552224218015": {
+    "Prev": "13183303663232616895",
+    "Next": "16657149642242823302",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edd theman",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll be on my way soon. I shouldn't be gone more than two or three days.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_EddieRing",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "16657149642242823302": {
+    "Prev": "858431552224218015",
+    "Next": "2032813256333028271",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edd theman",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Great. I'll go to Tel Naga and get the Ring of Equity. If I'm not back in a week, I'm probably dead.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "key_nelothtelnaga",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem Key_NelothTelNaga 1",
+      "Journal HT_EddieRing 50",
+      "StartScript FastEddieRing"
+    ]
+  },
+  "2032813256333028271": {
+    "Prev": "16657149642242823302",
+    "Next": "386625786238216640",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edd theman",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Where is it? You need to give me the key before I'll risk going into Tel Naga for the Ring of Equity.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "386625786238216640": {
+    "Prev": "2032813256333028271",
+    "Next": "19416215422611013685",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edd theman",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I'll just wait here until you find the key then.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "19416215422611013685": {
+    "Prev": "386625786238216640",
+    "Next": "275423701179225673",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edd theman",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you found the key yet?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_EddieRing",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "275423701179225673": {
+    "Prev": "19416215422611013685",
+    "Next": "21953122645964575",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edd theman",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I know Master Neloth is dead, but you probably didn't see all the hiding places I know about. See if there are still some keys to Tel Naga. Bring me one of those keys, and I'll get the Ring of Equity for you.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "neloth",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HT_EddieRing 10"
+    ]
+  },
+  "21953122645964575": {
+    "Prev": "275423701179225673",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "edd theman",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "The Ring of Equity is well hidden in Tel Naga, Neloth's tower here in Sadrith Mora. I'll fetch it for you if you bring me the key to Tel Naga. Master Neloth has a key and many of his servants probably have keys as well. They're all the same. Just find one of these keys and bring it back to me.",
+    "Filters": [],
+    "Script": [
+      "Journal HT_EddieRing 10"
+    ]
+  }
+}

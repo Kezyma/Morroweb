@@ -1,0 +1,329 @@
+{
+  "221203792280099714": {
+    "Prev": "",
+    "Next": "14907237482778020549",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "divayth fyr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I gave you the response to Master Aryon's request. I will not change my answer.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_FyrMessage",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "14907237482778020549": {
+    "Prev": "221203792280099714",
+    "Next": "22456288281347113467",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "divayth fyr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here. Take this back to Mouth Galos Mathendis. Tell him that I must reject his master's thoughtful proposal.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem \"bk_ResponseFromDivaythFyr\" 1",
+      "Journal HT_FyrMessage 50"
+    ]
+  },
+  "22456288281347113467": {
+    "Prev": "14907237482778020549",
+    "Next": "29884170711652327409",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "divayth fyr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Please wait here while I read this. In just a minute I will write a reply.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 3.0
+      }
+    ],
+    "Script": [
+      "Player->RemoveItem \"bk_MessageFromMasterAryon\" 1",
+      "Choice \"Wait.\" 1"
+    ]
+  },
+  "29884170711652327409": {
+    "Prev": "22456288281347113467",
+    "Next": "1293225621339832243",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "divayth fyr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You came here to tell me that you had a message from Master Aryon, but you will not give it to me? House Telvanni tolerates madness among some of the more... advanced members, but not among those as young as you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 4.0
+      }
+    ],
+    "Script": []
+  },
+  "1293225621339832243": {
+    "Prev": "29884170711652327409",
+    "Next": "1331410032266527236",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "divayth fyr",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A message from Master Aryon? Yes, I will accept this message.",
+    "Filters": [],
+    "Script": [
+      "Choice \"Give him the message.\" 3 \"Nevermind.\" 4"
+    ]
+  },
+  "1331410032266527236": {
+    "Prev": "1293225621339832243",
+    "Next": "1233276991960424273",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galos mathendis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already delivered the message, though the response was somewhat disappointing. I do not have any more messages for you to deliver.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_FyrMessage",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "1233276991960424273": {
+    "Prev": "1331410032266527236",
+    "Next": "1950227264696310897",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galos mathendis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I heard you overpowered Divayth Fyr. While I am impressed with this accomplishment, I do not believe Master Aryon will instruct me to give you any more duties.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Greater",
+        "Id": "divayth fyr",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "1950227264696310897": {
+    "Prev": "1233276991960424273",
+    "Next": "3070222323313478984",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galos mathendis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Thank you, %PCName. I will deliver this message to my patron, Master Aryon. Please take this courier fee of 500 drakes.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_responsefromdivaythfyr",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Journal HT_FyrMessage 100",
+      "Player->RemoveItem \"bk_ResponseFromDivaythFyr\" 1",
+      "Player->AddItem Gold_001 500",
+      "ModPCFacRep 5 \"Telvanni\"",
+      "ModDisposition 5",
+      "\"Aryon\"->ModDisposition 10"
+    ]
+  },
+  "3070222323313478984": {
+    "Prev": "1950227264696310897",
+    "Next": "16476267211507815211",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galos mathendis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have a response? Bring it to me. This is a matter of utmost urgency.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "16476267211507815211": {
+    "Prev": "3070222323313478984",
+    "Next": "9477210592169914377",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galos mathendis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Then deliver the message to Divayth Fyr and await an answer.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "9477210592169914377": {
+    "Prev": "16476267211507815211",
+    "Next": "21664174012860815518",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galos mathendis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Has Divayth Fyr given you a response to my patron's message?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HT_FyrMessage",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, here it is.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "21664174012860815518": {
+    "Prev": "9477210592169914377",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "galos mathendis",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "My patron, Master Aryon, wants this coded message delivered to Divayth Fyr. He lives in Tel Fyr. You might need some help getting there. Why not take these potions of water walking? And these potions of healing. And perhaps a few potions of swift swim as well. If Divayth Fyr responds to this message, please deliver his response back to me.",
+    "Filters": [],
+    "Script": [
+      "Journal HT_FyrMessage 10",
+      "Player->AddItem \"bk_MessageFromMasterAryon\" 1",
+      "Player->AddItem \"p_water_walking_s\" 4",
+      "Player->AddItem \"p_swift_swim_q\" 4",
+      "Player->AddItem \"p_restore_health_q\" 7",
+      "ShowMap \"Tel Fyr\""
+    ]
+  }
+}

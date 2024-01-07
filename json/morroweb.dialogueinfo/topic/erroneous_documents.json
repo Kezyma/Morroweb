@@ -1,0 +1,854 @@
+{
+  "29410575965254179": {
+    "Prev": "",
+    "Next": "11942496753623167",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't think so. You've been expelled. Until you make amends, I don't have to discuss business with you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "11942496753623167": {
+    "Prev": "29410575965254179",
+    "Next": "2435023709918512107",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have done as I asked and corrected the errors in the land deed.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_ReplaceDocs",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "2435023709918512107": {
+    "Prev": "11942496753623167",
+    "Next": "6220231571311115105",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will take your word that you put the deed in the right place. This is the erroneous deed, which I will dispose of personally. Take these scrolls for your troubles.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_landdeed_hhrd",
+        "Value": 0.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_ReplaceDocs",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Journal HH_ReplaceDocs 100",
+      "Player->RemoveItem bk_landdeed_hhrd 1",
+      "Player->AddItem sc_uthshandofheaven 2",
+      "Player->AddItem sc_tranasasspelltwist 2",
+      "Player->AddItem sc_blackstorm 2",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 15"
+    ]
+  },
+  "6220231571311115105": {
+    "Prev": "2435023709918512107",
+    "Next": "494849963089213134",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will take your word that you put the deed in the right place. This is the erroneous deed, which I will dispose of personally. Take these scrolls for your troubles.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_landdeed_hhrd",
+        "Value": 0.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "replacedDocs",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HH_ReplaceDocs 100",
+      "Player->RemoveItem bk_landdeed_hhrd 1",
+      "Player->AddItem sc_uthshandofheaven 2",
+      "Player->AddItem sc_tranasasspelltwist 2",
+      "Player->AddItem sc_blackstorm 2",
+      "ModPCFacRep 5 \"Hlaalu\"",
+      "ModDisposition 15"
+    ]
+  },
+  "494849963089213134": {
+    "Prev": "6220231571311115105",
+    "Next": "606029156189788458",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will take your word that you put the deed I gave you in the right place, but I need to have the old deed as well. Bring that to me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_ReplaceDocs",
+        "Value": 50.0
+      }
+    ],
+    "Script": []
+  },
+  "606029156189788458": {
+    "Prev": "494849963089213134",
+    "Next": "141952741167131900",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I will take your word that you put the deed I gave you in the right place, but I need to have the old land deed as well. Bring that to me.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      },
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "replacedDocs",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "141952741167131900": {
+    "Prev": "606029156189788458",
+    "Next": "1624525812570717492",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have not done what I asked! Go to the Hlaalu Records in Vivec. Find a chest of land deeds. Put the scroll I gave you in that chest. Bring me the scroll you find in that chest.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "1624525812570717492": {
+    "Prev": "141952741167131900",
+    "Next": "1789821194174609764",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Do I have to find someone more reliable to do my petty deliveries? Go replace this forg... that is, erroneous deed in the chest at the Hlaalu Treasury in Vivec. Make sure you bring me the original.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "1789821194174609764": {
+    "Prev": "1624525812570717492",
+    "Next": "16762312791896220719",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Have you done as I asked? Do you have the old land deed? And is the new one in its place?",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_ReplaceDocs",
+        "Value": 10.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, I have.\" 1 \"No, not yet.\" 2"
+    ]
+  },
+  "16762312791896220719": {
+    "Prev": "1789821194174609764",
+    "Next": "3831376228400737",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "odral helvi",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I have discovered a serious error in some of the land deeds for the Ascadian Isles. I want you to take this land deed to the Hlaalu Records in Vivec. Look for a chest of land deeds for the Ascadian Isles. Put this scroll in the chest and bring me the old land deed.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_CaptureSpy",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "Journal HH_ReplaceDocs 10",
+      "Player->AddItem bk_landdeedfake_hhrd 1"
+    ]
+  },
+  "3831376228400737": {
+    "Prev": "16762312791896220719",
+    "Next": "421414877711310587",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rovone arvel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I am grateful for the role you played in Odral's arrest.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_EbonyDelivery",
+        "Value": 110.0
+      }
+    ],
+    "Script": []
+  },
+  "421414877711310587": {
+    "Prev": "3831376228400737",
+    "Next": "7486224602720221831",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rovone arvel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You have already given me the forged land deed. I will make sure the Ordinators investigate this matter.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "givenDocuments",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "7486224602720221831": {
+    "Prev": "421414877711310587",
+    "Next": "208194634158948246",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rovone arvel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good. I will bring this matter to the Ordinators. It is time they had reason to investigate Odral and his Caldera operations. Perhaps this will be enough to make them act. I am a bit short on drakes today, but I believe you will find this ring is a just compensation.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HH_ReplaceDocs 55",
+      "Player->RemoveItem bk_landdeedfake_hhrd 1",
+      "AddItem bk_landdeedfake_hhrd 1",
+      "Player->AddItem \"murdrum ring\" 1",
+      "ModDisposition 15",
+      "Set givenDocuments to 1"
+    ]
+  },
+  "208194634158948246": {
+    "Prev": "7486224602720221831",
+    "Next": "20629633195515562",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rovone arvel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I might give you a small consideration for bringing this to my attention, but I will not submit to blackmail. Do what Odral asks if you think it is in your best interests. But I will remember what you did when the Ordinators investigate this.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -5"
+    ]
+  },
+  "20629633195515562": {
+    "Prev": "208194634158948246",
+    "Next": "31148216112993327609",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "rovone arvel",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I cannot believe that Odral still interferes with my affairs. Will you give me the forged land deed you hold so that I may use it as proof against him?",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_landdeedfake_hhrd",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give him the land deed.\" 1 \"Keep the land deed.\" 2"
+    ]
+  },
+  "31148216112993327609": {
+    "Prev": "20629633195515562",
+    "Next": "15855187692651430721",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've broken the rules of House Hlaalu, sweetie. It brings tears to my eyes when I think about your disloyalty. Maybe you can make amends and make everything better.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "15855187692651430721": {
+    "Prev": "31148216112993327609",
+    "Next": "2685827211432416921",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Don't worry your pretty little head about it. I'll take care of everything.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "givenDocuments",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2685827211432416921": {
+    "Prev": "15855187692651430721",
+    "Next": "526514177238543749",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Don't trouble your sweet little head over this anymore. If you don't have the original land deed, you'll still need to fetch that for Odral. When you speak with him again, turn your irresistible charms on him some more. Don't let him suspect a thing. And take this little present from me. Wouldn't want anything to happen to you.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal HH_ReplaceDocs 50",
+      "Player->RemoveItem bk_landdeedfake_hhrd 1",
+      "Player->AddItem \"amulet of domination\" 1",
+      "ModDisposition 10",
+      "Set givenDocuments to 1"
+    ]
+  },
+  "526514177238543749": {
+    "Prev": "2685827211432416921",
+    "Next": "1241034183150629760",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I just love it when you tease me, dumpling.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "1241034183150629760": {
+    "Prev": "526514177238543749",
+    "Next": "185693549180461078",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "crassius curio",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Give me the old land deed, pudding, and Uncle Crassius will take care of everything.",
+    "Filters": [
+      {
+        "Type": "Item",
+        "Func": "ItemType",
+        "Compare": "Greater",
+        "Id": "bk_landdeedfake_hhrd",
+        "Value": 0.0
+      }
+    ],
+    "Script": [
+      "Choice \"Give him Odral's land deed.\" 1 \"Keep Odral's land deed.\" 2"
+    ]
+  },
+  "185693549180461078": {
+    "Prev": "1241034183150629760",
+    "Next": "29951277272282129085",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "tenisi lladri",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You'll do what he says, %PCName, if you know what's good for you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_ReplaceDocs",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HH_ReplaceDocs",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "29951277272282129085": {
+    "Prev": "185693549180461078",
+    "Next": "263592657294330850",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baren alen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I made a copy of the land deed for you. You should take it back to Odral in Caldera before he gets suspicious.",
+    "Filters": [
+      {
+        "Type": "Local",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "givenDocuments",
+        "Value": 1.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_ReplaceDocs",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HH_ReplaceDocs",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "263592657294330850": {
+    "Prev": "29951277272282129085",
+    "Next": "2828978738010817",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baren alen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Here you go. I doubt Odral can tell the difference. If he asks you to do anything else odd here in the Hlaalu Treasury or Hlaalu Vaults, be sure to keep me informed.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Player->AddItem bk_landdeed_hhrd 1",
+      "Set givenDocuments to 1"
+    ]
+  },
+  "2828978738010817": {
+    "Prev": "263592657294330850",
+    "Next": "69007457331918576",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baren alen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I hope you're not planning on stealing the documents. That would be a serious crime.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "Choice",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 2.0
+      }
+    ],
+    "Script": []
+  },
+  "69007457331918576": {
+    "Prev": "2828978738010817",
+    "Next": "2772720154297881666",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baren alen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Crassius Curio has told me enough of what Odral is planning. Since Odral will not be satisfied unless he has the original land deed, perhaps you'd like me to make you a copy... for a token fee of 10 gold, of course.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_ReplaceDocs",
+        "Value": 50.0
+      }
+    ],
+    "Script": [
+      "Choice \"Yes, thank you.\" 1 \"No, nevermind.\" 2"
+    ]
+  },
+  "2772720154297881666": {
+    "Prev": "69007457331918576",
+    "Next": "30045319061542430232",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "baren alen",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "A land deed from Odral? He does not have the authority to issue land deeds or make corrections. Stay out of the Hlaalu Records and let me take care of this.",
+    "Filters": [],
+    "Script": []
+  },
+  "30045319061542430232": {
+    "Prev": "2772720154297881666",
+    "Next": "14397231733040829660",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec, Hlaalu Treasury",
+    "PlayerFaction": "",
+    "Text": "I don't care what Odral told you. Our records are accurate, our integrity is unquestionable, and I resent your implications. I suggest you leave before I call the guards.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_ReplaceDocs",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HH_ReplaceDocs",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  },
+  "14397231733040829660": {
+    "Prev": "30045319061542430232",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 30,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Vivec, Hlaalu Records",
+    "PlayerFaction": "",
+    "Text": "I don't care what Odral told you. Our records are accurate, our integrity is unquestionable, and I resent your implications. I suggest you leave before I call the guards.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "GreaterEqual",
+        "Id": "HH_ReplaceDocs",
+        "Value": 10.0
+      },
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Less",
+        "Id": "HH_ReplaceDocs",
+        "Value": 100.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10",
+      "Goodbye"
+    ]
+  }
+}

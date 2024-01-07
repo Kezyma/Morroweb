@@ -1,0 +1,306 @@
+{
+  "3199124815949424497": {
+    "Prev": "",
+    "Next": "1911410961396931476",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You shouldn't have killed him, %PCName.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Rufinus Alleius",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "ModDisposition -10"
+    ]
+  },
+  "1911410961396931476": {
+    "Prev": "3199124815949424497",
+    "Next": "214877922244015699",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "persius mercius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Killing an Imperial Magistrate is a serious offense. All I can suggest is to disobey orders and refuse this contract.",
+    "Filters": [],
+    "Script": []
+  },
+  "214877922244015699": {
+    "Prev": "1911410961396931476",
+    "Next": "2665319200174794018",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You've been expelled, and I don't have to talk to you about any contracts.",
+    "Filters": [
+      {
+        "Type": "Function",
+        "Func": "PcExpelled",
+        "Compare": "Equal",
+        "Id": "",
+        "Value": 1.0
+      }
+    ],
+    "Script": []
+  },
+  "2665319200174794018": {
+    "Prev": "214877922244015699",
+    "Next": "132761327679524796",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "I don't have any more contracts for a %PCRank right now.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_SilenceMagistrate",
+        "Value": 100.0
+      }
+    ],
+    "Script": []
+  },
+  "132761327679524796": {
+    "Prev": "2665319200174794018",
+    "Next": "679917671276097269",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "You already killed him? I don't know if I ought to believe that. Well, here's the bounty I owe you.",
+    "Filters": [
+      {
+        "Type": "Journal",
+        "Func": "JournalType",
+        "Compare": "Equal",
+        "Id": "FG_SilenceMagistrate",
+        "Value": 0.0
+      },
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Rufinus Alleius",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_SilenceMagistrate 100",
+      "ModPCFacRep 10 \"Fighters Guild\"",
+      "ModDisposition 20",
+      "Player->AddItem Gold_001 1000"
+    ]
+  },
+  "679917671276097269": {
+    "Prev": "132761327679524796",
+    "Next": "16562308982341117012",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "Good work. I hope the guards didn't give you any trouble. Here's the 1000 septims I owe you.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "GreaterEqual",
+        "Id": "Rufinus Alleius",
+        "Value": 1.0
+      }
+    ],
+    "Script": [
+      "Journal FG_SilenceMagistrate 100",
+      "ModPCFacRep 10 \"Fighters Guild\"",
+      "ModDisposition 20",
+      "Player->AddItem Gold_001 1000"
+    ]
+  },
+  "16562308982341117012": {
+    "Prev": "679917671276097269",
+    "Next": "8468424990031315",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "lorbumol gro-aglakh",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "One of the Magistrates has been giving our client trouble. Go to the Grand Council in Ebonheart and kill Rufinus Alleius, and this 1000 septim bounty is yours.",
+    "Filters": [],
+    "Script": [
+      "Journal FG_SilenceMagistrate 10"
+    ]
+  },
+  "8468424990031315": {
+    "Prev": "16562308982341117012",
+    "Next": "318443015763774599",
+    "Type": "Topic",
+    "Disposition": 0,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "Rufinus Alleius",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "",
+    "PlayerFaction": "",
+    "Text": "That's me.",
+    "Filters": [],
+    "Script": []
+  },
+  "318443015763774599": {
+    "Prev": "8468424990031315",
+    "Next": "12546212432998829579",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ebonheart, Imperial Commission",
+    "PlayerFaction": "",
+    "Text": "He's around here somewhere.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Rufinus Alleius",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "12546212432998829579": {
+    "Prev": "318443015763774599",
+    "Next": "2614431212169885984",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ebonheart, Grand Council Chambers Tower",
+    "PlayerFaction": "",
+    "Text": "Rufinus? He's actually next door in the Imperial Commission.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Rufinus Alleius",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  },
+  "2614431212169885984": {
+    "Prev": "12546212432998829579",
+    "Next": "",
+    "Type": "Topic",
+    "Disposition": 60,
+    "SpeakerRank": -1,
+    "SpeakerSex": "Any",
+    "PlayerRank": -1,
+    "SpeakerId": "",
+    "SpeakerRace": "",
+    "SpeakerClass": "",
+    "SpeakerFaction": "",
+    "SpeakerCell": "Ebonheart, Grand Council Chambers",
+    "PlayerFaction": "",
+    "Text": "Rufinus? He's actually next door in the Imperial Commission. You can get there through a door in the north side of this building.",
+    "Filters": [
+      {
+        "Type": "Dead",
+        "Func": "DeadType",
+        "Compare": "Equal",
+        "Id": "Rufinus Alleius",
+        "Value": 0.0
+      },
+      {
+        "Type": "NotLocal",
+        "Func": "VariableCompare",
+        "Compare": "Equal",
+        "Id": "NoLore",
+        "Value": 0.0
+      }
+    ],
+    "Script": []
+  }
+}
