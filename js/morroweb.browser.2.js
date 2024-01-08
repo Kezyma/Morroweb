@@ -5,6 +5,7 @@ const mw_attributeMap = ["strength", "intelligence", "willpower", "agility", "sp
 //#endregion
 
 //#region Pre-Load
+var lookupInit = false
 function mw_preLoad() {
     $.get({
         url: "json/morroweb.gmst.json",
@@ -14,13 +15,36 @@ function mw_preLoad() {
             }
         }
     });
+    $.get({
+        url: "json/morroweb.lookup.json",
+        success: function (data) {
+            mw_effectIcon_lookup = data["magiceffecticon"]
+            mw_spell_lookup = data["spell"]
+            for (var spell in data["spelleffect"]) {
+                mw_spellIcon_lookup[spell] = mw_effectIcon_lookup[data["spelleffect"][spell]]
+            }
+        }
+    });
 }
 var mw_gmst_lookup = {}
+var mw_effectIcon_lookup = {}
+var mw_spell_lookup = {}
+var mw_spellIcon_lookup = {}
+var currentTable = null;
+var allTables = {}
 
 $(document).ready(function () {
     mw_preLoad();
     //setInterval(mw_resize, 1000);
 });
+
+var wait = (ms) => {
+    const start = Date.now();
+    let now = start;
+    while (now - start < ms) {
+        now = Date.now();
+    }
+}
 
 function mw_resize() {
     $(window).trigger("resize");
@@ -29,48 +53,103 @@ function mw_resize() {
 
 //#region Table Functions
 function mw_newTable(id) {
-    return $(`<table id='mw_${id}_table' class='mw-table table-sm table-borderless display table table-compact table-striped'></table>`);
+    return $(`<table id='mw_${id}_table' class='mw-table table-sm table-borderless display table'></table>`);
 }
 
-function mw_newDataTable(container, id, headings, rows) {
+function mw_newDataTable(container, id, headings, rows, filterWidths) {
     // Generate the DataTable.
     var table = mw_newTable(id);
     var cardBody = $(`#${container}`);
     cardBody.append(table);
-    currentTable = new DataTable(`#mw_${id}_table`, {
+    var newTable = new DataTable(`#mw_${id}_table`, {
         columns: headings,
         data: rows,
-        paging: false,
+        paging: true,
         scrollCollapse: true,
         scrollY: true,
         scrollY: "calc(100vh - 18rem)",
         scrollX: true,
         sScrollX: "100%",
+        deferRender: true,
+        scroller: true,
         initComplete: function (settings) {
-
+            var preFilters = {}
             var ft = $("<tr></tr>");
             for (var i in headings) {
-                ft.append($(`<th>${mw_textFilter(i)}</th>`))
+                var w = 1;
+                if (filterWidths != null && filterWidths.length > i) {
+                    w = filterWidths[i]
+                }
+                // Check if this filter has a value in the querystring.
+                var qs = new URL(location.href).searchParams.get(i);
+                if (qs != null && qs != undefined && qs != "") {
+                    preFilters[i] = qs;
+                }
+
+                // Create a new filter.
+                ft.append($(`<th>${mw_textFilter(i, id, w)}</th>`))
             }
             $(settings.nTHead).append(ft);
 
+            // Set any values from the querystring.
+            for (var i in preFilters) {
+                $(`input[data-table=${id}][data-ix=${i}]`).val(preFilters[i]).change();
+            }
+
+            // Resizing hack to fix headings rendering wrong.
             mw_resize();
             setTimeout(mw_resize, 1000);
+            
         }
     });
+    allTables[container] = newTable;
+    currentTable = newTable;
 
+    // Handle filtering.
     $(currentTable.table().container()).on('keyup', 'thead input', function () {
-        currentTable
-            .column($(this).data('ix'))
-            .search(this.value)
-            .draw();
+        mw_filterColumn(this);
     });
 
     // Initialise Bootstrap tooltips.
     var tooltipTriggerList = $(`#mw_${id}_table [data-bs-toggle="tooltip"]`);
     [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
-    
+    // Apply current filters.
+    mw_applyFilters(container);
+}
+
+function mw_applyFilters(id) {
+    var query = new URL(location.href.split("&")[0]);
+    for (var i = 0; i < $(`#${id} .dataTables_scrollHead .mw-table-filter`).length; i++) {
+        var input = $(`#${id} .dataTables_scrollHead .mw-table-filter`)[i]
+        var val = $(input).val()
+        var ix = $(input).data("ix")
+        if (ix != undefined) {
+            currentTable.column(ix).search(val).draw()
+            if (val != "") {
+                query.searchParams.set(ix, val)
+            }
+        }
+    }
+    window.history.pushState({ title: "Morroweb", html: window.html, id: val }, null, query.href);
+}
+
+function mw_filterColumn(input) {
+    var query = new URL(location.href);
+    var p = $(input).data('ix');
+    var v = $(input).val()
+    if (v != "") {
+        query.searchParams.set(p, v)
+    }
+    else {
+        query.searchParams.delete(p)
+    }
+    window.history.pushState({ title: "Morroweb", html: window.html, id: v }, null, query.href);
+
+    currentTable
+        .column($(input).data('ix'))
+        .search(input.value)
+        .draw();
 }
 
 function mw_showPanel(container) {
@@ -141,7 +220,7 @@ function mw_list_format(list) {
 }
 
 function mw_attribute_list(attributes=[]) {
-    var div = `<div>`;
+    var div = `<div class='text-nowrap'  style='line-height:32px;'>`;
     for (var a in attributes) {
         div += `<div class="d-inline d-xl-block">${mw_attribute_icon(attributes[a])} <div class="d-none d-xl-inline">${mw_titleCase(attributes[a])}</div></div>`
     }
@@ -149,8 +228,20 @@ function mw_attribute_list(attributes=[]) {
     return div;
 }
 
+function mw_spell_list(spells=[], collapse=true) {
+    var div = `<div class='text-nowrap' style='line-height:32px;'>`;
+    for (var s in spells) {
+        var spell = spells[s]
+        var icon = mw_spellIcon_lookup[spell];
+        var name = mw_spell_lookup[spell];
+        div += `<div ${collapse ? 'class="d-inline d-xl-block"' : ""}>${mw_magicEffect_icon(icon, mw_titleCase(name))} <div class="${collapse ? 'd-none d-xl-inline' : "d-inline"}">${mw_titleCase(name)}</div></div>`
+    }
+    div += "</div>";
+    return div;
+}
+
 function mw_skill_list(skills = []) {
-    var div = `<div>`;
+    var div = `<div  class='text-nowrap' style='line-height:32px;'>`;
     for (var a in skills) {
         div += `<div class="d-inline d-xl-block">${mw_skill_icon(skills[a])} <div class="d-none d-xl-inline">${mw_titleCase(mw_gmst_lookup["sskill" + skills[a].toLowerCase()])}</div></div>`
     }
@@ -169,8 +260,8 @@ function mw_titleCase(str) {
     return "";
 }
 
-function mw_textFilter(ix) {
-    return `<input type='text' data-ix='${ix}' class='' placeholder='Filter' />`;
+function mw_textFilter(ix, tbl, w) {
+    return `<input type='text' data-ix='${ix}' data-table='${tbl}' class='mw-table-filter' placeholder='Filter' style='width:${(w * 10)}em;' />`;
 }
 
 function mw_selectFilter(ix, opts) {
@@ -205,6 +296,10 @@ function mw_gmst_browser(container) {
             }
         });
     }
+    else {
+        currentTable = allTables[container];
+        mw_applyFilters(container);
+    }
 }
 
 var mw_global_init = false;
@@ -226,6 +321,10 @@ function mw_global_browser(container) {
                 mw_global_init = true;
             }
         });
+    }
+    else {
+        currentTable = allTables[container];
+        mw_applyFilters(container);
     }
 }
 
@@ -260,6 +359,10 @@ function mw_skill_browser(container) {
             }
         });
     }
+    else {
+        currentTable = allTables[container];
+        mw_applyFilters(container);
+    }
 }
 
 var mw_class_init = false;
@@ -292,17 +395,22 @@ function mw_class_browser(container) {
                         data[key]["Services"]
                     ]);
                 }
-                mw_newDataTable(container, "class", columns, rows);
+                var filters = [1,1,1,1,1,1,.5,1]
+                mw_newDataTable(container, "class", columns, rows, filters);
                 mw_class_init = true;
             }
         });
     }
+    else {
+        currentTable = allTables[container];
+        mw_applyFilters(container);
+    }
 }
 
-var mwb_magiceffect_init = false;
+var mw_magiceffect_init = false;
 function mw_magicEffect_browser(container) {
     mw_showPanel(container);
-    if (!mwb_magiceffect_init) {
+    if (!mw_magiceffect_init) {
         $.get({
             url: "json/morroweb.magiceffect.json",
             success: function (data) {
@@ -340,10 +448,149 @@ function mw_magicEffect_browser(container) {
                         data[key]["Enchanting"]
                     ]);
                 }
-                mw_newDataTable(container, "magiceffect", columns, rows);
-                mwb_magiceffect_init = true;
+                var filters = [1,1,1,.5,.5,.5,.5,.5,.5]
+                mw_newDataTable(container, "magiceffect", columns, rows, filters);
+                mw_magiceffect_init = true;
             }
         });
+    }
+    else {
+        currentTable = allTables[container];
+        mw_applyFilters(container);
+    }
+}
+
+var mw_spell_init = false;
+function mw_spell_browser(container) {
+    mw_showPanel(container);
+    if (!mw_spell_init) {
+        $.get({
+            url: "json/morroweb.spell.json",
+            success: function (data) {
+                var columns = [
+                    { title: "Id", render: mw_id_format },
+                    { title: "Name", class: "text-nowrap" },
+                    { title: "Type" },
+                    { title: "Cost" },
+                    { title: "Effect", class: "text-nowrap", render: function (e) {
+                        var r = "";
+                        for (var ef in e) {
+                            var eff = e[ef]["Effect"]
+                            var nm = mw_gmst_lookup[`seffect${eff.toLowerCase()}`]
+                            if (nm == null || nm == undefined || nm == "") {
+                                nm = eff
+                            }
+                            r += `<div>${mw_magicEffect_icon(mw_effectIcon_lookup[eff], nm)} ${nm}</div>`;
+                        }
+                        return r;
+                    } },
+                    { title: "Target", class: "text-nowrap", render: function (e) {
+                        var r = "";
+                        for (var ef in e) {
+                            var at = e[ef]["Attribute"]
+                            var sk = e[ef]["Skill"]
+                            var t = ""
+                            if (at != "None") {
+                                r += `<div style='height:2rem'>${mw_attribute_icon(at)} ${at}</div>`;
+                            }
+                            else if (sk != "None") {
+                                r += `<div style='height:2rem'>${mw_skill_icon(sk)} ${mw_gmst_lookup["sskill" + sk.toLowerCase()]}</div>`;
+                            }
+                            else {
+                                r += "<div style='height:2rem'>&nbsp;</div>"
+                            }
+                        }
+                        return r;
+                    } },
+                    { title: "Range", render: (r) => r.map((e) => `<div style='height:2rem'>${e["Range"].replace("On", "")}</div>`).join("") },
+                    { title: "Area", render: (r) => r.map((e) => `<div style='height:2rem'>${e["Area"]}</div>`).join("") },
+                    { title: "Duration", render: (r) => r.map((e) => `<div style='height:2rem'>${e["Duration"]}</div>`).join("") },
+                    { title: "Magnitude", render: (r) => r.map((e) => `<div style='height:2rem'>${e["Magnitude"][0]} - ${e["Magnitude"][1]}</div>`).join("") }
+                ];
+                var rows = [];
+                for (var key in data) {
+                    var itm = data[key]
+                    rows.push([
+                        key,
+                        itm["Name"],
+                        itm["Type"],
+                        itm["Cost"],
+                        itm["Effects"],
+                        itm["Effects"],
+                        itm["Effects"],
+                        itm["Effects"],
+                        itm["Effects"],
+                        itm["Effects"]
+                    ]);
+                }
+                var filters = [1,1,.5,.5,1,1,.5,.5,.5,.5]
+                mw_newDataTable(container, "spell", columns, rows, filters);
+                mw_spell_init = true;
+            }
+        });
+    }
+    else {
+        currentTable = allTables[container];
+        mw_applyFilters(container);
+    }
+}
+
+var mw_race_init = false;
+function mw_race_browser(container) {
+    mw_showPanel(container);
+    if (!mw_race_init) {
+        $.get({
+            url: "json/morroweb.race.json",
+            success: function (data) {
+                var columns = [
+                    { title: "Id", render: mw_id_format },
+                    { title: "Name" },
+                    { title: "Spells", class: "text-nowrap", render: (s) => mw_spell_list(s, false) },
+                    { title: "Attributes", render: function (attr) {
+                        var div = `<div style='line-height:32px;'>`;
+                        for (var a in attr) {
+                            div += `<div class='row'><div class='col-3 text-nowrap'>${attr[a][0]} / ${attr[a][1]}</div><div class='col'>${mw_attribute_icon(a)} ${mw_titleCase(a)}</div></div>`
+                        }
+                        div += "</div>";
+                        return div;
+                    } },
+                    { title: "Skills", render: function (skill) {
+                        var div = `<div style='line-height:32px;'>`;
+                        for (var s in skill) {
+                            div += `<div class='row'><div class='col-2 text-nowrap'>+${skill[s]}</div><div class='col'>${mw_skill_icon(s)} ${mw_titleCase(mw_gmst_lookup["sskill" + s.toLowerCase()])}</div></div>`
+                        }
+                        div += "</div>";
+                        return div;
+                    }
+                    },
+                    { title: "Height", render: (h) => `${h[0]} / ${h[1]}` },
+                    { title: "Weight", render: (h) => `${h[0]} / ${h[1]}` },
+                    { title: "Playable", render: mw_yn_format },
+                    { title: "Beast", render: mw_yn_format },
+                ];
+                var rows = [];
+                for (var key in data) {
+                    rows.push([
+                        key,
+                        data[key]["Name"],
+                        data[key]["Spells"],
+                        data[key]["Attributes"],
+                        data[key]["SkillBonuses"],
+                        data[key]["Height"],
+                        data[key]["Weight"],
+                        data[key]["Playable"],
+                        data[key]["Beast"]
+                    ]);
+                }
+                var filters = [1, 1, 1, 1, 1, .5, .5, .5, .5]
+                mw_newDataTable(container, "race", columns, rows, filters);
+                mw_race_init = true;
+            }
+        });
+    }
+    else {
+        currentTable = allTables[container];
+        mw_applyFilters(container);
     }
 }
 //#endregion

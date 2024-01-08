@@ -103,6 +103,8 @@ namespace EspConverter
             // Overwrite records and export.
             var outputDict = new Dictionary<string, Dictionary<string, object>>();
             var dialogueDict = new Dictionary<string, Dictionary<string, object>>();
+            var lookupDict = new Dictionary<string, Dictionary<string, object>>();
+                
             foreach (var key in finalOrder)
             {
                 dynamic jsonData = JsonConvert.DeserializeObject(File.ReadAllText(Path.Combine(jsonDir, $"{key}.json")));
@@ -246,6 +248,9 @@ namespace EspConverter
                                     { "Spellmaking", magicEffect.data.flags.Contains("ALLOW_SPELLMAKING") },
                                     { "Enchanting", magicEffect.data.flags.Contains("ALLOW_ENCHANTING") }
                                 };
+
+                            if (!lookupDict.ContainsKey("magiceffecticon")) lookupDict["magiceffecticon"] = [];
+                            lookupDict["magiceffecticon"][magicEffect.effect_id] = magicEffect.icon.Split("\\").Last().Split(".").First();
                             break;
                         case "Spell":
                             if (!outputDict.ContainsKey("spell")) outputDict["spell"] = [];
@@ -268,6 +273,10 @@ namespace EspConverter
                                         })
                                     }
                                 };
+                            if (!lookupDict.ContainsKey("spell")) lookupDict["spell"] = [];
+                            lookupDict["spell"][spell.id] = spell.name;
+                            if (!lookupDict.ContainsKey("spelleffect")) lookupDict["spelleffect"] = [];
+                            lookupDict["spelleffect"][spell.id] = spell.effects[0].magic_effect;
                             break;
                         case "Enchanting":
                             if (!outputDict.ContainsKey("enchanting")) outputDict["enchanting"] = [];
@@ -748,6 +757,9 @@ namespace EspConverter
                 var dataFile = Path.Combine(outputDir, $"morroweb.{key}.json");
                 File.WriteAllText(dataFile, JsonConvert.SerializeObject(outputDict[key], Formatting.Indented));
             }
+
+            var lookupFile = Path.Combine(outputDir, "morroweb.lookup.json");
+            File.WriteAllText(lookupFile, JsonConvert.SerializeObject(lookupDict, Formatting.Indented));
 
             Console.WriteLine("Json generation complete.");
         }

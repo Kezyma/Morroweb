@@ -3,12 +3,14 @@
     <head>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css" />
+        <link rel="stylesheet" href="https://cdn.datatables.net/scroller/2.3.0/css/scroller.dataTables.min.css" />
 
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.13.8/js/dataTables.bootstrap5.min.js"></script>
+        <script src="https://cdn.datatables.net/scroller/2.3.0/js/dataTables.scroller.min.js"></script>
 
         <title>Morroweb</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,16 +25,18 @@
             </div>
         </nav>
 
-        <div id="mw-browser" class="container-fluid">
+        <div id="mw-browser" class="container-fluid" style="max-width:1920px;">
             <div id="mw-browser-card" class="mw-card card">
                 <div class="card-header mw-card-header">
                     <select id="mw-browser-select" class="form-control form-control-sm">
-                        <option value="">Select...</option>
+                        <option value="home">Select...</option>
                         <option value="gmst">Game Settings</option>
                         <option value="global">Global Variables</option>
                         <option value="skill">Skills</option>
                         <option value="class">Classes</option>
                         <option value="magiceffect">Magic Effects</option>
+                        <option value="spell">Spell</option>
+                        <option value="race">Race</option>
                     </select>
                 </div>
                 <div class="mw-card-body card-body">
@@ -44,6 +48,8 @@
                     <div id="mw_skill_container" role="tabpanel" class="tab-pane mwb-panel"></div>
                     <div id="mw_class_container" role="tabpanel" class="tab-pane mwb-panel"></div>
                     <div id="mw_magiceffect_container" role="tabpanel" class="tab-pane mwb-panel"></div>
+                    <div id="mw_spell_container" role="tabpanel" class="tab-pane mwb-panel"></div>
+                    <div id="mw_race_container" role="tabpanel" class="tab-pane mwb-panel"></div>
                 </div>
             </div>
         </div>
@@ -53,38 +59,51 @@
                 var qs = new URL(location.href).searchParams.get("b");
                 if (qs != null && qs != undefined && qs != "") {
                     $("#mw-browser-select").val(qs).change();
+                    switchTab(qs)
                 }
+
+                $("#mw-browser-select").change(function () {
+                    setQueryString($("#mw-browser-select").val());
+                    switchTab($("#mw-browser-select").val());
+                });
             });
 
             function setQueryString(val) {
-                var query = new URL(location.href);
+                var query = new URL(location.href.split("?")[0]);
                 query.searchParams.set("b", val)
                 window.history.pushState({title: "Morroweb", html: window.html, id: val}, null, query.href);
             }
 
-            $("#mw-browser-select").change(function () {
-                setQueryString($("#mw-browser-select").val());
-                switch ($("#mw-browser-select").val()) {
+            function switchTab(tab) {
+                var c = `mw_${tab}_container`;
+                switch (tab) {
                     case "gmst":
-                        mw_gmst_browser('mw_gmst_container');
+                        mw_gmst_browser(c);
                         break;
                     case "global":
-                        mw_global_browser('mw_global_container');
+                        mw_global_browser(c);
                         break;
                     case "skill":
-                        mw_skill_browser('mw_skill_container');
+                        mw_skill_browser(c);
                         break;
                     case "class":
-                        mw_class_browser("mw_class_container");
+                        mw_class_browser(c);
                         break;
                     case "magiceffect":
-                        mw_magicEffect_browser("mw_magiceffect_container");
+                        mw_magicEffect_browser(c);
+                        break;
+                    case "spell":
+                        mw_spell_browser(c);
+                        break;
+                    case "race":
+                        mw_race_browser(c);
                         break;
                     default:
-                        mw_showPanel('mw_home_container');
+                        mw_showPanel(c);
                         break;
                 }
-            });
+            }
+
         </script>
     </body>
 </html>
