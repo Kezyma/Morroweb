@@ -4,6 +4,23 @@ const mw_specialisationMap = ["combat", "magic", "stealth"]
 const mw_attributeMap = ["strength", "intelligence", "willpower", "agility", "speed", "endurance", "personality", "luck"];
 //#endregion
 
+var entityMap = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;',
+    '/': '&#x2F;',
+    '`': '&#x60;',
+    '=': '&#x3D;'
+};
+
+function escapeHtml(string) {
+    return String(string).replace(/[&<>"'`=\/]/g, function (s) {
+        return entityMap[s];
+    });
+}
+
 //#region Pre-Load
 var lookupInit = false
 function mw_preLoad() {
@@ -105,6 +122,10 @@ function mw_newDataTable(container, id, headings, rows, filterWidths) {
     var tooltipTriggerList = $(`#mw_${id}_table [data-bs-toggle="tooltip"]`);
     [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
+
+    var popoverTriggerList = $(`#mw_${id}_table [data-bs-toggle="popover"]`);
+    [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
     // Apply current filters.
     mw_applyFilters(container);
 }
@@ -166,6 +187,14 @@ function mw_skill_icon(skill = "") {
     return "";
 }
 
+function mw_item_icon(icon = "", name="") {
+    var a = icon.toLowerCase().trim()
+    if (a != "" && a != "none") {
+        return mw_icon(`item/${a}.png`, mw_titleCase(name))
+    }
+    return "";
+}
+
 function mw_magicEffect_icon(icon = "", title = "") {
     if (icon != "" && icon != "none") {
         return mw_icon(`magiceffect/b_${icon.toLowerCase()}.png`, title)
@@ -174,7 +203,14 @@ function mw_magicEffect_icon(icon = "", title = "") {
 }
 
 function mw_icon(url, title) {
-    return `<img src='img/icons/${url}' data-bs-toggle="tooltip" data-bs-custom-class="mw-tooltip" data-bs-title='${title}' />`
+    return `<img src='img/icons/${url}' data-bs-toggle="tooltip" data-bs-custom-class="mw-tooltip" data-bs-title='${escapeHtml(title)}' />`
+}
+
+function mw_description(description) {
+    if (description != null && description != "" && description.length > 0) {
+        return `<button class="mw-button" data-bs-toggle="popover" data-bs-custom-class="mw-tooltip" data-bs-trigger='hover' data-bs-content="${escapeHtml(description)}">View Description</button><span class='d-none'>${description}</span>`
+    }
+    return ""
 }
 
 function mw_collapse_label(text = "") {
@@ -194,7 +230,7 @@ function mw_yn_format(bool) {
 
 function mw_list_format(list) {
     if (list.length > 0) {
-        var long = `<ul class="d-none d-xl-block">`
+        var long = `<ul class="d-none d-xl-block ps-0" style='list-style-type: none;'>`
         var short = `<select class='d-inline d-xl-none form-control form-control-sm mw-input' style='width:fit-content;'>`
 
         for (var i in list) {
@@ -375,7 +411,8 @@ function mw_class_browser(container) {
                     { title: "Major Skills", render: (s) => mw_skill_list(s) },
                     { title: "Minor Skills", render: (s) => mw_skill_list(s) },
                     { title: "Playable", render: mw_yn_format },
-                    { title: "Services", render: (s) => mw_list_format(s.map((i) => mw_titleCase(i.replace("_", " ").replace("_", " ")))) }
+                    { title: "Services", render: (s) => mw_list_format(s.map((i) => mw_titleCase(i.replace("_", " ").replace("_", " ")))) },
+                    { title: "Description", render: mw_description },
                 ];
                 var rows = [];
                 for (var key in data) {
@@ -387,10 +424,11 @@ function mw_class_browser(container) {
                         data[key]["Major"],
                         data[key]["Minor"],
                         data[key]["Playable"],
-                        data[key]["Services"]
+                        data[key]["Services"],
+                        data[key]["Description"],
                     ]);
                 }
-                var filters = [1,1,1,1,1,1,.5,1]
+                var filters = [1,1,1,1,1,1,.5,1,1]
                 mw_newDataTable(container, "class", columns, rows, filters);
                 mw_class_init = true;
             }
@@ -418,7 +456,7 @@ function mw_magicEffect_browser(container) {
                         render: function (e) {
                         var nm = mw_gmst_lookup[`seffect${e.toLowerCase()}`]
                         if (nm == null || nm == undefined || nm == "") {
-                            nm = key
+                            nm = e
                         }
                         return `${mw_magicEffect_icon(data[e]["Icon"], nm)} ${nm}`
                     } },
@@ -428,7 +466,8 @@ function mw_magicEffect_browser(container) {
                     { title: "Size" },
                     { title: "Size Cap" },
                     { title: "Spellmaking", render: mw_yn_format },
-                    { title: "Enchanting", render: mw_yn_format }
+                    { title: "Enchanting", render: mw_yn_format },
+                    { title: "Description", render: mw_description },
                 ];
                 var rows = [];
                 for (var key in data) {
@@ -441,10 +480,11 @@ function mw_magicEffect_browser(container) {
                         data[key]["Size"],
                         data[key]["SizeCap"],
                         data[key]["Spellmaking"],
-                        data[key]["Enchanting"]
+                        data[key]["Enchanting"],
+                        data[key]["Description"],
                     ]);
                 }
-                var filters = [1,1,1,.5,.5,.5,.5,.5,.5]
+                var filters = [1, 1, 1, .5, .5, .5, .5, .5, .5, 1]
                 mw_newDataTable(container, "magiceffect", columns, rows, filters);
                 mw_magiceffect_init = true;
             }
@@ -565,6 +605,7 @@ function mw_race_browser(container) {
                     { title: "Weight", render: (h) => `${h[0]} / ${h[1]}` },
                     { title: "Playable", render: mw_yn_format },
                     { title: "Beast", render: mw_yn_format },
+                    { title: "Description", render: mw_description },
                 ];
                 var rows = [];
                 for (var key in data) {
@@ -577,10 +618,11 @@ function mw_race_browser(container) {
                         data[key]["Height"],
                         data[key]["Weight"],
                         data[key]["Playable"],
-                        data[key]["Beast"]
+                        data[key]["Beast"],
+                        data[key]["Description"],
                     ]);
                 }
-                var filters = [1, 1, 1, 1, 1, .5, .5, .5, .5]
+                var filters = [1, 1, 1, 1, 1, .5, .5, .5, .5,1]
                 mw_newDataTable(container, "race", columns, rows, filters);
                 mw_race_init = true;
             }
@@ -591,4 +633,358 @@ function mw_race_browser(container) {
         mw_applyFilters(container);
     }
 }
+
+var mw_faction_init = false;
+function mw_faction_browser(container) {
+    mw_showPanel(container);
+    if (!mw_faction_init) {
+        $.get({
+            url: "json/morroweb.faction.json",
+            cache: true,
+            success: function (data) {
+                var columns = [
+                    { title: "Id", render: mw_id_format },
+                    { title: "Name" },
+                    { title: "Ranks", render: (r) => mw_list_format(r.map((v, i) => `${i} ${v}`))},
+                    { title: "Attributes", render: mw_attribute_list },
+                    { title: "Skills", render: mw_skill_list },
+                    { title: "Reactions", render: (r) => {
+                        var list = []
+                        for (var k in r) {
+                            list.push(`${r[k] > 0 ? "+" : ""}${r[k]} ${k}`)
+                        }
+                        return mw_list_format(list);
+                    }}
+                ];
+                var rows = [];
+                for (var key in data) {
+                    rows.push([
+                        key,
+                        data[key]["Name"],
+                        data[key]["Ranks"],
+                        data[key]["Attributes"],
+                        data[key]["Skills"],
+                        data[key]["Reactions"],
+                    ]);
+                }
+                var filters = [1, 1, 1, 1, 1, 1]
+                mw_newDataTable(container, "faction", columns, rows, filters);
+                mw_faction_init = true;
+            }
+        });
+    }
+    else {
+        currentTable = allTables[container];
+        mw_applyFilters(container);
+    }
+}
+
+var mw_miscitem_init = false;
+function mw_miscItem_browser(container) {
+    mw_showPanel(container);
+    if (!mw_miscitem_init) {
+        $.get({
+            url: "json/morroweb.miscitem.json",
+            cache: true,
+            success: function (data) {
+                var columns = [
+                    { title: "Id", render: mw_id_format },
+                    { title: "Name", class: "text-nowrap", render: (k) => `${mw_item_icon(data[k]["Icon"], data[k]["Name"])} ${data[k]["Name"]}` },
+                    { title: "Weight" },
+                    { title: "Value" },
+                    { title: "Key", render: (k) => mw_yn_format(k == "KEY") }
+                ];
+                var rows = [];
+                for (var key in data) {
+                    rows.push([
+                        key,
+                        key,
+                        data[key]["Weight"],
+                        data[key]["Value"],
+                        data[key]["Flags"]
+                    ]);
+                }
+                var filters = [1, 1, .5, .5, .5]
+                mw_newDataTable(container, "miscitem", columns, rows, filters);
+                mw_miscitem_init = true;
+            }
+        });
+    }
+    else {
+        currentTable = allTables[container];
+        mw_applyFilters(container);
+    }
+}
+
+var mw_lockpick_init = false;
+function mw_lockpick_browser(container) {
+    mw_showPanel(container);
+    if (!mw_lockpick_init) {
+        $.get({
+            url: "json/morroweb.lockpick.json",
+            cache: true,
+            success: function (data) {
+                var columns = [
+                    { title: "Id", render: mw_id_format },
+                    { title: "Name", class: "text-nowrap", render: (k) => `${mw_item_icon(data[k]["Icon"], data[k]["Name"])} ${data[k]["Name"]}` },
+                    { title: "Weight" },
+                    { title: "Value" },
+                    { title: "Quality" },
+                    { title: "Uses" }
+                ];
+                var rows = [];
+                for (var key in data) {
+                    rows.push([
+                        key,
+                        key,
+                        data[key]["Weight"],
+                        data[key]["Value"],
+                        data[key]["Quality"],
+                        data[key]["Uses"]
+                    ]);
+                }
+                var filters = [1, 1, .5, .5, .5, .5]
+                mw_newDataTable(container, "lockpick", columns, rows, filters);
+                mw_lockpick_init = true;
+            }
+        });
+    }
+    else {
+        currentTable = allTables[container];
+        mw_applyFilters(container);
+    }
+}
+
+var mw_repairitem_init = false;
+function mw_repairItem_browser(container) {
+    mw_showPanel(container);
+    if (!mw_repairitem_init) {
+        $.get({
+            url: "json/morroweb.repairitem.json",
+            cache: true,
+            success: function (data) {
+                var columns = [
+                    { title: "Id", render: mw_id_format },
+                    { title: "Name", class: "text-nowrap", render: (k) => `${mw_item_icon(data[k]["Icon"], data[k]["Name"])} ${data[k]["Name"]}` },
+                    { title: "Weight" },
+                    { title: "Value" },
+                    { title: "Quality" },
+                    { title: "Uses" }
+                ];
+                var rows = [];
+                for (var key in data) {
+                    rows.push([
+                        key,
+                        key,
+                        data[key]["Weight"],
+                        data[key]["Value"],
+                        data[key]["Quality"],
+                        data[key]["Uses"]
+                    ]);
+                }
+                var filters = [1, 1, .5, .5, .5, .5]
+                mw_newDataTable(container, "repairitem", columns, rows, filters);
+                mw_repairitem_init = true;
+            }
+        });
+    }
+    else {
+        currentTable = allTables[container];
+        mw_applyFilters(container);
+    }
+}
+
+var mw_probe_init = false;
+function mw_probe_browser(container) {
+    mw_showPanel(container);
+    if (!mw_probe_init) {
+        $.get({
+            url: "json/morroweb.probe.json",
+            cache: true,
+            success: function (data) {
+                var columns = [
+                    { title: "Id", render: mw_id_format },
+                    { title: "Name", class: "text-nowrap", render: (k) => `${mw_item_icon(data[k]["Icon"], data[k]["Name"])} ${data[k]["Name"]}` },
+                    { title: "Weight" },
+                    { title: "Value" },
+                    { title: "Quality" },
+                    { title: "Uses" }
+                ];
+                var rows = [];
+                for (var key in data) {
+                    rows.push([
+                        key,
+                        key,
+                        data[key]["Weight"],
+                        data[key]["Value"],
+                        data[key]["Quality"],
+                        data[key]["Uses"]
+                    ]);
+                }
+                var filters = [1, 1, .5, .5, .5, .5]
+                mw_newDataTable(container, "probe", columns, rows, filters);
+                mw_probe_init = true;
+            }
+        });
+    }
+    else {
+        currentTable = allTables[container];
+        mw_applyFilters(container);
+    }
+}
+
+var mw_apparatus_init = false;
+function mw_apparatus_browser(container) {
+    mw_showPanel(container);
+    if (!mw_apparatus_init) {
+        $.get({
+            url: "json/morroweb.apparatus.json",
+            cache: true,
+            success: function (data) {
+                var columns = [
+                    { title: "Id", render: mw_id_format },
+                    { title: "Name", class: "text-nowrap", render: (k) => `${mw_item_icon(data[k]["Icon"], data[k]["Name"])} ${data[k]["Name"]}` },
+                    { title: "Type" },
+                    { title: "Weight" },
+                    { title: "Value" },
+                    { title: "Quality" },
+                ];
+                var rows = [];
+                for (var key in data) {
+                    rows.push([
+                        key,
+                        key,
+                        data[key]["Type"],
+                        data[key]["Weight"],
+                        data[key]["Value"],
+                        data[key]["Quality"],
+                    ]);
+                }
+                var filters = [1, 1, .5, .5, .5, .5]
+                mw_newDataTable(container, "apparatus", columns, rows, filters);
+                mw_apparatus_init = true;
+            }
+        });
+    }
+    else {
+        currentTable = allTables[container];
+        mw_applyFilters(container);
+    }
+}
+
+var mw_alchemy_init = false;
+function mw_alchemy_browser(container) {
+    mw_showPanel(container);
+    if (!mw_alchemy_init) {
+        $.get({
+            url: "json/morroweb.alchemy.json",
+            cache: true,
+            success: function (data) {
+                var columns = [
+                    { title: "Id", render: mw_id_format },
+                    { title: "Name", class: "text-nowrap", render: (k) => `${mw_item_icon(data[k]["Icon"], data[k]["Name"])} ${data[k]["Name"]}` },
+                    { title: "Weight" },
+                    { title: "Value" },
+                    {
+                        title: "Effect", class: "text-nowrap", render: function (e) {
+                            var r = "";
+                            for (var ef in e) {
+                                var eff = e[ef]["Effect"]
+                                var nm = mw_gmst_lookup[`seffect${eff.toLowerCase()}`]
+                                if (nm == null || nm == undefined || nm == "") {
+                                    nm = eff
+                                }
+                                r += `<div>${mw_magicEffect_icon(mw_effectIcon_lookup[eff], nm)} ${nm}</div>`;
+                            }
+                            return r;
+                        }
+                    },
+                    {
+                        title: "Target", class: "text-nowrap", render: function (e) {
+                            var r = "";
+                            for (var ef in e) {
+                                var at = e[ef]["Attribute"]
+                                var sk = e[ef]["Skill"]
+                                var t = ""
+                                if (at != "None") {
+                                    r += `<div style='height:2rem'>${mw_attribute_icon(at)} ${at}</div>`;
+                                }
+                                else if (sk != "None") {
+                                    r += `<div style='height:2rem'>${mw_skill_icon(sk)} ${mw_gmst_lookup["sskill" + sk.toLowerCase()]}</div>`;
+                                }
+                                else {
+                                    r += "<div style='height:2rem'>&nbsp;</div>"
+                                }
+                            }
+                            return r;
+                        }
+                    },
+                    { title: "Range", render: (r) => r.map((e) => `<div style='height:2rem'>${e["Range"].replace("On", "")}</div>`).join("") },
+                    { title: "Area", render: (r) => r.map((e) => `<div style='height:2rem'>${e["Area"]}</div>`).join("") },
+                    { title: "Duration", render: (r) => r.map((e) => `<div style='height:2rem'>${e["Duration"]}</div>`).join("") },
+                    { title: "Magnitude", render: (r) => r.map((e) => `<div style='height:2rem'>${e["Magnitude"][0]} - ${e["Magnitude"][1]}</div>`).join("") }
+                ];
+                var rows = [];
+                for (var key in data) {
+                    var itm = data[key]
+                    rows.push([
+                        key,
+                        key,
+                        itm["Weight"],
+                        itm["Value"],
+                        itm["Effects"],
+                        itm["Effects"],
+                        itm["Effects"],
+                        itm["Effects"],
+                        itm["Effects"],
+                        itm["Effects"]
+                    ]);
+                }
+                var filters = [1, 1, .5, .5, 1, 1, .5, .5, .5, .5]
+                mw_newDataTable(container, "alchemy", columns, rows, filters);
+                mw_alchemy_init = true;
+            }
+        });
+    }
+    else {
+        currentTable = allTables[container];
+        mw_applyFilters(container);
+    }
+}
+
+var mw_birthsign_init = false;
+function mw_birthsign_browser(container) {
+    mw_showPanel(container);
+    if (!mw_birthsign_init) {
+        $.get({
+            url: "json/morroweb.birthsign.json",
+            cache: true,
+            success: function (data) {
+                var columns = [
+                    { title: "Id", render: mw_id_format },
+                    { title: "Name" },
+                    { title: "Spells", class: "text-nowrap", render: (s) => mw_spell_list(s, false) },
+                    { title: "Description", render: mw_description },
+                ];
+                var rows = [];
+                for (var key in data) {
+                    rows.push([
+                        key,
+                        data[key]["Name"],
+                        data[key]["Spells"],
+                        data[key]["Description"],
+                    ]);
+                }
+                var filters = [1, 1, 1, 1]
+                mw_newDataTable(container, "birthsign", columns, rows, filters);
+                mw_birthsign_init = true;
+            }
+        });
+    }
+    else {
+        currentTable = allTables[container];
+        mw_applyFilters(container);
+    }
+}
+
 //#endregion

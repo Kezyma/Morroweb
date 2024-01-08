@@ -27,15 +27,31 @@
         <div id="mw-browser" class="container-fluid" style="max-width:1920px;">
             <div id="mw-browser-card" class="mw-card card">
                 <div class="card-header mw-card-header">
-                    <select id="mw-browser-select" class="form-control form-control-sm">
+                    <select id="mw-browser-select" class="form-control form-control-sm" style="text-align: left;">
                         <option value="home">Select...</option>
-                        <option value="gmst">Game Settings</option>
-                        <option value="global">Global Variables</option>
-                        <option value="skill">Skills</option>
-                        <option value="class">Classes</option>
-                        <option value="magiceffect">Magic Effects</option>
-                        <option value="spell">Spell</option>
-                        <option value="race">Race</option>
+                        <optgroup label="Settings">
+                            <option value="gmst">Game Settings</option>
+                            <option value="global">Global Variables</option>
+                        </optgroup>
+                        <optgroup label="Stats">
+                            <option value="birthsign">Birthsigns</option>
+                            <option value="class">Classes</option>
+                            <option value="skill">Skills</option>
+                            <option value="race">Races</option>
+                            <option value="faction">Factions</option>
+                        </optgroup>
+                        <optgroup label="Magic">
+                            <option value="magiceffect">Magic Effects</option>
+                            <option value="spell">Spells</option>
+                        </optgroup>
+                        <optgroup label="Items">
+                            <option value="alchemy">Alchemy</option>
+                            <option value="apparatus">Apparatus</option>
+                            <option value="lockpick">Lockpicks</option>
+                            <option value="miscitem">Misc Items</option>
+                            <option value="probe">Probes</option>
+                            <option value="repairitem">Repair Items</option>
+                        </optgroup>
                     </select>
                 </div>
                 <div class="mw-card-body card-body">
@@ -51,6 +67,14 @@
                     <div id="mw_magiceffect_container" role="tabpanel" class="tab-pane mwb-panel"></div>
                     <div id="mw_spell_container" role="tabpanel" class="tab-pane mwb-panel"></div>
                     <div id="mw_race_container" role="tabpanel" class="tab-pane mwb-panel"></div>
+                    <div id="mw_faction_container" role="tabpanel" class="tab-pane mwb-panel"></div>
+                    <div id="mw_miscitem_container" role="tabpanel" class="tab-pane mwb-panel"></div>
+                    <div id="mw_lockpick_container" role="tabpanel" class="tab-pane mwb-panel"></div>
+                    <div id="mw_probe_container" role="tabpanel" class="tab-pane mwb-panel"></div>
+                    <div id="mw_repairitem_container" role="tabpanel" class="tab-pane mwb-panel"></div>
+                    <div id="mw_apparatus_container" role="tabpanel" class="tab-pane mwb-panel"></div>
+                    <div id="mw_alchemy_container" role="tabpanel" class="tab-pane mwb-panel"></div>
+                    <div id="mw_birthsign_container" role="tabpanel" class="tab-pane mwb-panel"></div>
                 </div>
             </div>
         </div>
@@ -98,6 +122,30 @@
                         break;
                     case "race":
                         mw_race_browser(c);
+                        break;
+                    case "faction":
+                        mw_faction_browser(c);
+                        break;
+                    case "miscitem":
+                        mw_miscItem_browser(c);
+                        break;
+                    case "lockpick":
+                        mw_lockpick_browser(c);
+                        break;
+                    case "apparatus":
+                        mw_apparatus_browser(c);
+                        break;
+                    case "repairitem":
+                        mw_repairItem_browser(c);
+                        break;
+                    case "probe":
+                        mw_probe_browser(c);
+                        break;
+                    case "alchemy":
+                        mw_alchemy_browser(c);
+                        break;
+                    case "birthsign":
+                        mw_birthsign_browser(c);
                         break;
                     default:
                         mw_showPanel(c);
