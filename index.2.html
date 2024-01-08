@@ -32,6 +32,7 @@
                         <option value="global">Global Variables</option>
                         <option value="skill">Skills</option>
                         <option value="class">Classes</option>
+                        <option value="magiceffect">Magic Effects</option>
                     </select>
                 </div>
                 <div class="mw-card-body card-body">
@@ -42,6 +43,7 @@
                     <div id="mw_global_container" role="tabpanel" class="tab-pane mwb-panel"></div>
                     <div id="mw_skill_container" role="tabpanel" class="tab-pane mwb-panel"></div>
                     <div id="mw_class_container" role="tabpanel" class="tab-pane mwb-panel"></div>
+                    <div id="mw_magiceffect_container" role="tabpanel" class="tab-pane mwb-panel"></div>
                 </div>
             </div>
         </div>
@@ -74,6 +76,9 @@
                         break;
                     case "class":
                         mw_class_browser("mw_class_container");
+                        break;
+                    case "magiceffect":
+                        mw_magicEffect_browser("mw_magiceffect_container");
                         break;
                     default:
                         mw_showPanel('mw_home_container');

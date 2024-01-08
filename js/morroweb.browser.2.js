@@ -19,7 +19,7 @@ var mw_gmst_lookup = {}
 
 $(document).ready(function () {
     mw_preLoad();
-    setInterval(mw_resize, 1000);
+    //setInterval(mw_resize, 1000);
 });
 
 function mw_resize() {
@@ -29,7 +29,7 @@ function mw_resize() {
 
 //#region Table Functions
 function mw_newTable(id) {
-    return $(`<table id='mw_${id}_table' class='mw-table table-sm table-borderless display table table-compact table-striped nowrap'></table>`);
+    return $(`<table id='mw_${id}_table' class='mw-table table-sm table-borderless display table table-compact table-striped'></table>`);
 }
 
 function mw_newDataTable(container, id, headings, rows) {
@@ -45,13 +45,32 @@ function mw_newDataTable(container, id, headings, rows) {
         scrollY: true,
         scrollY: "calc(100vh - 18rem)",
         scrollX: true,
-        sScrollX: "100%"
+        sScrollX: "100%",
+        initComplete: function (settings) {
+
+            var ft = $("<tr></tr>");
+            for (var i in headings) {
+                ft.append($(`<th>${mw_textFilter(i)}</th>`))
+            }
+            $(settings.nTHead).append(ft);
+
+            mw_resize();
+            setTimeout(mw_resize, 1000);
+        }
+    });
+
+    $(currentTable.table().container()).on('keyup', 'thead input', function () {
+        currentTable
+            .column($(this).data('ix'))
+            .search(this.value)
+            .draw();
     });
 
     // Initialise Bootstrap tooltips.
     var tooltipTriggerList = $(`#mw_${id}_table [data-bs-toggle="tooltip"]`);
     [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
+    
 }
 
 function mw_showPanel(container) {
@@ -64,7 +83,7 @@ function mw_showPanel(container) {
 function mw_attribute_icon(attribute="") {
     var a = attribute.toLowerCase().trim()
     if (a != "" && a != "none") {
-        return `<img src='img/icons/attribute/attribute_${a}.png' data-bs-toggle="tooltip" data-bs-custom-class="mw-tooltip" data-bs-title='${mw_titleCase(attribute)}' />`
+        return mw_icon(`attribute/attribute_${a}.png`, mw_titleCase(attribute))
     }
     return "";
 }
@@ -72,9 +91,20 @@ function mw_attribute_icon(attribute="") {
 function mw_skill_icon(skill = "") {
     var a = skill.toLowerCase().trim()
     if (a != "" && a != "none") {
-        return `<img src='img/icons/skill/${a}.png' data-bs-toggle="tooltip" data-bs-custom-class="mw-tooltip" data-bs-title='${mw_titleCase(mw_gmst_lookup["sskill" + skill.toLowerCase()])}' />`
+        return mw_icon(`skill/${a}.png`, mw_titleCase(mw_gmst_lookup["sskill" + skill.toLowerCase()]))
     }
     return "";
+}
+
+function mw_magicEffect_icon(icon = "", title = "") {
+    if (icon != "" && icon != "none") {
+        return mw_icon(`magiceffect/b_${icon.toLowerCase()}.png`, title)
+    }
+    return "";
+}
+
+function mw_icon(url, title) {
+    return `<img src='img/icons/${url}' data-bs-toggle="tooltip" data-bs-custom-class="mw-tooltip" data-bs-title='${title}' />`
 }
 
 function mw_collapse_label(text = "") {
@@ -135,9 +165,23 @@ function mw_titleCase(str) {
         str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
     }
     return str.join(' ');
+    }
+    return "";
 }
-return "";
+
+function mw_textFilter(ix) {
+    return `<input type='text' data-ix='${ix}' class='' placeholder='Filter' />`;
 }
+
+function mw_selectFilter(ix, opts) {
+    var sel = `<select data-ix='${id}'>`;
+    for (i in opts) {
+        var o = opts[i]
+        sel += `<option value='${o}'>${o}</option>`
+    }
+    return sel + "</select>";
+}
+
 //#endregion
 
 //#region Table Generators
@@ -250,6 +294,54 @@ function mw_class_browser(container) {
                 }
                 mw_newDataTable(container, "class", columns, rows);
                 mw_class_init = true;
+            }
+        });
+    }
+}
+
+var mwb_magiceffect_init = false;
+function mw_magicEffect_browser(container) {
+    mw_showPanel(container);
+    if (!mwb_magiceffect_init) {
+        $.get({
+            url: "json/morroweb.magiceffect.json",
+            success: function (data) {
+                var columns = [
+                    { title: "Id", render: mw_id_format },
+                    {
+                        title: "Name", 
+                        class: "text-nowrap", 
+                        render: function (e) {
+                        var nm = mw_gmst_lookup[`seffect${e.toLowerCase()}`]
+                        if (nm == null || nm == undefined || nm == "") {
+                            nm = key
+                        }
+                        return `${mw_magicEffect_icon(data[e]["Icon"], nm)} ${nm}`
+                    } },
+                    { title: "School", render: (a) => `${mw_skill_icon(a)} ${a}` },
+                    { title: "Cost" },
+                    { title: "Speed" },
+                    { title: "Size" },
+                    { title: "Size Cap" },
+                    { title: "Spellmaking", render: mw_yn_format },
+                    { title: "Enchanting", render: mw_yn_format }
+                ];
+                var rows = [];
+                for (var key in data) {
+                    rows.push([
+                        key,
+                        key,
+                        data[key]["School"],
+                        data[key]["Cost"],
+                        data[key]["Speed"],
+                        data[key]["Size"],
+                        data[key]["SizeCap"],
+                        data[key]["Spellmaking"],
+                        data[key]["Enchanting"]
+                    ]);
+                }
+                mw_newDataTable(container, "magiceffect", columns, rows);
+                mwb_magiceffect_init = true;
             }
         });
     }
