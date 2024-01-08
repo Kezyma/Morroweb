@@ -1,104 +1,108 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css" />
+        <link rel="stylesheet" href="https://cdn.datatables.net/scroller/2.3.0/css/scroller.dataTables.min.css" />
+
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.13.8/js/dataTables.bootstrap5.min.js"></script>
+        <script src="https://cdn.datatables.net/scroller/2.3.0/js/dataTables.scroller.min.js"></script>
 
         <title>Morroweb</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/morroweb.css" />
         <script src="js/morroweb.browser.js"></script>
-        <script src="js/morroweb.js"></script>
     </head>
     <body>
         <nav id="mw-nav" class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
                 <a id="mw-title" class="navbar-brand mw-button" href="#">Morroweb</a>
-                <!--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link mw-button" aria-current="page" href="#" onclick="init_browser()">Browser</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mw-button" aria-current="page" href="#" onclick="init_game()">Play</a>
-                        </li>
-                    </ul>-->
-                    <!--<form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>-->
-                <!--</div>-->
             </div>
         </nav>
 
-        <!--
-        <div class="container">
-            <div class="card mw-card">
+        <div id="mw-browser" class="container-fluid" style="max-width:1920px;">
+            <div id="mw-browser-card" class="mw-card card">
                 <div class="card-header mw-card-header">
-                    <span class="mw-card-title">Heading</span>
-                </div>
-                <div class="card-body mw-card-body">
-                    Card Text
-                </div>
-            </div>
-        </div>-->
-        
-
-        <div id="morroweb-browser" class="container-fluid" style="display: none;">
-            <div id="morroweb-browser-card" class="mw-card card mt-3">
-                <div class="card-header mw-card-header p-0" role="tablist">
-                    <button class="mw-button nav-link d-inline active" data-bs-toggle="tab" data-bs-target="#mwb-home-panel" onclick="mwb_browserTab()">Browser</button>
-                    <button class="mw-button nav-link d-inline" data-bs-toggle="tab" data-bs-target="#mwb-class-table" onclick="mwb_classTable()">Class</button>
-                    <button class="mw-button nav-link d-inline" data-bs-toggle="tab" data-bs-target="#mwb-faction-table" onclick="mwb_factionTable()">Faction</button>
-                    <button class="mw-button nav-link d-inline" data-bs-toggle="tab" data-bs-target="#mwb-magiceffect-table"onclick="mwb_magicEffectTable()">Magic Effects</button>
-                    <button class="mw-button nav-link d-inline" data-bs-toggle="tab" data-bs-target="#mwb-skill-table"onclick="mwb_skillTable()">Skill</button>
-                    <button class="mw-button nav-link d-inline" data-bs-toggle="tab" data-bs-target="#mwb-spell-table"onclick="mwb_spellTable()">Spell</button>
-                    <button class="mw-button nav-link d-inline" data-bs-toggle="tab" data-bs-target="#mwb-race-table" onclick="mwb_raceTable()">Race</button>
-                    <button class="mw-button nav-link d-inline" data-bs-toggle="tab" data-bs-target="#mwb-miscitem-table"onclick="mwb_miscItemTable()">Misc Items</button>
-                    <button class="mw-button nav-link d-inline" data-bs-toggle="tab" data-bs-target="#mwb-weapon-table" onclick="mwb_weaponTable()">Weapons</button>
+                    <select id="mw-browser-select" class="form-control form-control-sm">
+                        <option value="home">Select...</option>
+                        <option value="gmst">Game Settings</option>
+                        <option value="global">Global Variables</option>
+                        <option value="skill">Skills</option>
+                        <option value="class">Classes</option>
+                        <option value="magiceffect">Magic Effects</option>
+                        <option value="spell">Spell</option>
+                        <option value="race">Race</option>
+                    </select>
                 </div>
                 <div class="mw-card-body card-body">
-                    <div id="mwb-home-panel" role="tabpanel" class="tab-pane mwb-panel p-2">
+                    <div id="mw_home_container" role="tabpanel" class="tab-pane mwb-panel p-2">
                         Welcome to the Morroweb browser. Records are directly exported from the GOTY esm files, as well as the Official Plugin esp files.
                     </div>
-                    <div id="mwb-class-table" role="tabpanel" class="tab-pane mwb-panel"></div>
-                    <div id="mwb-faction-table" role="tabpanel" class="tab-pane mwb-panel"></div>
-                    <div id="mwb-magiceffect-table" role="tabpanel" class="tab-pane mwb-panel"></div>
-                    <div id="mwb-skill-table" role="tabpanel" class="tab-pane mwb-panel"></div>
-                    <div id="mwb-spell-table" role="tabpanel" class="tab-pane mwb-panel"></div>
-                    <div id="mwb-race-table" role="tabpanel" class="tab-pane mwb-panel"></div>
-                    <div id="mwb-miscitem-table" role="tabpanel" class="tab-pane mwb-panel"></div>
-                    <div id="mwb-weapon-table" role="tabpanel" class="tab-pane mwb-panel"></div>
+                    <div id="mw_gmst_container" role="tabpanel" class="tab-pane mwb-panel"></div>
+                    <div id="mw_global_container" role="tabpanel" class="tab-pane mwb-panel"></div>
+                    <div id="mw_skill_container" role="tabpanel" class="tab-pane mwb-panel"></div>
+                    <div id="mw_class_container" role="tabpanel" class="tab-pane mwb-panel"></div>
+                    <div id="mw_magiceffect_container" role="tabpanel" class="tab-pane mwb-panel"></div>
+                    <div id="mw_spell_container" role="tabpanel" class="tab-pane mwb-panel"></div>
+                    <div id="mw_race_container" role="tabpanel" class="tab-pane mwb-panel"></div>
                 </div>
             </div>
         </div>
-        <div id="morroweb-game" style="display: none;"></div>
 
         <script>
-            function init_browser() {
-                $("#morroweb-browser").show();
-                $("#morroweb-game").hide();
-                mwb_init();
-            }
-
-            function init_game() {
-                $("#morroweb-browser").hide();
-                $("#morroweb-game").show();
-            }
-
             $(document).ready(function () {
-                mw_init("morrowind-container");
-                init_browser()
+                var qs = new URL(location.href).searchParams.get("b");
+                if (qs != null && qs != undefined && qs != "") {
+                    $("#mw-browser-select").val(qs).change();
+                    switchTab(qs)
+                }
+
+                $("#mw-browser-select").change(function () {
+                    setQueryString($("#mw-browser-select").val());
+                    switchTab($("#mw-browser-select").val());
+                });
             });
+
+            function setQueryString(val) {
+                var query = new URL(location.href.split("?")[0]);
+                query.searchParams.set("b", val)
+                window.history.pushState({title: "Morroweb", html: window.html, id: val}, null, query.href);
+            }
+
+            function switchTab(tab) {
+                var c = `mw_${tab}_container`;
+                switch (tab) {
+                    case "gmst":
+                        mw_gmst_browser(c);
+                        break;
+                    case "global":
+                        mw_global_browser(c);
+                        break;
+                    case "skill":
+                        mw_skill_browser(c);
+                        break;
+                    case "class":
+                        mw_class_browser(c);
+                        break;
+                    case "magiceffect":
+                        mw_magicEffect_browser(c);
+                        break;
+                    case "spell":
+                        mw_spell_browser(c);
+                        break;
+                    case "race":
+                        mw_race_browser(c);
+                        break;
+                    default:
+                        mw_showPanel(c);
+                        break;
+                }
+            }
+
         </script>
     </body>
 </html>
