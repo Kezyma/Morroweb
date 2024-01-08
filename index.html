@@ -80,7 +80,9 @@
         </div>
 
         <script>
-            $(document).ready(function () {
+            
+            // Add an event listener
+            document.addEventListener("mw-loaded", function (e) {
                 var qs = new URL(location.href).searchParams.get("b");
                 if (qs != null && qs != undefined && qs != "") {
                     $("#mw-browser-select").val(qs).change();

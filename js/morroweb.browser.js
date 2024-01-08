@@ -23,6 +23,8 @@ function escapeHtml(string) {
 
 //#region Pre-Load
 var lookupInit = false
+
+// Create the event
 function mw_preLoad() {
     $.get({
         url: "json/morroweb.gmst.json",
@@ -42,6 +44,8 @@ function mw_preLoad() {
             for (var spell in data["spelleffect"]) {
                 mw_spellIcon_lookup[spell] = mw_effectIcon_lookup[data["spelleffect"][spell]]
             }
+            var event = new CustomEvent("mw-loaded");
+            document.dispatchEvent(event);
         }
     });
 }
