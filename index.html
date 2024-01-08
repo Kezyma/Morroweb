@@ -46,11 +46,13 @@
                         </optgroup>
                         <optgroup label="Items">
                             <option value="alchemy">Alchemy</option>
+                            <option value="armour">Armour</option>
                             <option value="apparatus">Apparatus</option>
                             <option value="lockpick">Lockpicks</option>
                             <option value="miscitem">Misc Items</option>
                             <option value="probe">Probes</option>
                             <option value="repairitem">Repair Items</option>
+                            <option value="weapon">Weapons</option>
                         </optgroup>
                     </select>
                 </div>
@@ -75,6 +77,8 @@
                     <div id="mw_apparatus_container" role="tabpanel" class="tab-pane mwb-panel"></div>
                     <div id="mw_alchemy_container" role="tabpanel" class="tab-pane mwb-panel"></div>
                     <div id="mw_birthsign_container" role="tabpanel" class="tab-pane mwb-panel"></div>
+                    <div id="mw_armour_container" role="tabpanel" class="tab-pane mwb-panel"></div>
+                    <div id="mw_weapon_container" role="tabpanel" class="tab-pane mwb-panel"></div>
                 </div>
             </div>
         </div>
@@ -148,6 +152,12 @@
                         break;
                     case "birthsign":
                         mw_birthsign_browser(c);
+                        break;
+                    case "armour":
+                        mw_armour_browser(c);
+                        break;
+                    case "weapon":
+                        mw_weapon_browser(c);
                         break;
                     default:
                         mw_showPanel(c);

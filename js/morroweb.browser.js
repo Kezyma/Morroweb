@@ -24,7 +24,15 @@ function escapeHtml(string) {
 //#region Pre-Load
 var lookupInit = false
 
-// Create the event
+var mw_load_count = 0
+document.addEventListener("mw-sub-loaded", function (e) {
+    mw_load_count++;
+    if (mw_load_count == 3) {
+        var event = new CustomEvent("mw-loaded");
+        document.dispatchEvent(event);
+    }
+});
+
 function mw_preLoad() {
     $.get({
         url: "json/morroweb.gmst.json",
@@ -33,6 +41,8 @@ function mw_preLoad() {
             for (var s in data) {
                 mw_gmst_lookup[s.toLowerCase()] = data[s]
             }
+            var event = new CustomEvent("mw-sub-loaded");
+            document.dispatchEvent(event);
         }
     });
     $.get({
@@ -44,12 +54,22 @@ function mw_preLoad() {
             for (var spell in data["spelleffect"]) {
                 mw_spellIcon_lookup[spell] = mw_effectIcon_lookup[data["spelleffect"][spell]]
             }
-            var event = new CustomEvent("mw-loaded");
+            var event = new CustomEvent("mw-sub-loaded");
+            document.dispatchEvent(event);
+        }
+    });
+    $.get({
+        url: "json/morroweb.enchanting.json",
+        cache: true,
+        success: function (data) {
+            mw_enchant_lookup = data
+            var event = new CustomEvent("mw-sub-loaded");
             document.dispatchEvent(event);
         }
     });
 }
 var mw_gmst_lookup = {}
+var mw_enchant_lookup = null
 var mw_effectIcon_lookup = {}
 var mw_spell_lookup = {}
 var mw_spellIcon_lookup = {}
@@ -84,6 +104,8 @@ function mw_newDataTable(container, id, headings, rows, filterWidths) {
         scrollY: "calc(100vh - 18rem)",
         scrollX: true,
         sScrollX: "100%",
+        //scroller: true,
+        //deferRender: true,
         initComplete: function (settings) {
             var preFilters = {}
             var ft = $("<tr></tr>");
@@ -111,7 +133,7 @@ function mw_newDataTable(container, id, headings, rows, filterWidths) {
             // Resizing hack to fix headings rendering wrong.
             mw_resize();
             setTimeout(mw_resize, 1000);
-            
+            setTimeout(mw_resize, 5000);
         }
     });
     allTables[container] = newTable;
@@ -993,4 +1015,222 @@ function mw_birthsign_browser(container) {
     }
 }
 
+var mw_armour_init = false;
+function mw_armour_browser(container) {
+    mw_showPanel(container);
+    if (!mw_armour_init) {
+        $.get({
+            url: "json/morroweb.armour.json",
+            cache: true,
+            success: function (data) {
+                var columns = [
+                    { title: "Id", render: mw_id_format },
+                    { title: "Name", class: "text-nowrap", render: (k) => `${mw_item_icon(data[k]["Icon"], data[k]["Name"])} ${data[k]["Name"]}` },
+                    { title: "Type" },
+                    { title: "Weight" },
+                    { title: "Value" },
+                    { title: "Rating" },
+                    { title: "Health" },
+                    { title: "Enchantment" },
+                    { title: "Enchanting", render: mw_id_format },
+                    { title: "Enchant Type", render: (e) => e != "" ? mw_enchant_lookup[e]["Type"] : "" },
+                    { title: "Cost", render: (e) => e != "" ? mw_enchant_lookup[e]["Cost"] : "" },
+                    { title: "Charge", render: (e) => e != "" ? mw_enchant_lookup[e]["Charge"] : "" },
+                    {
+                        title: "Effect", class: "text-nowrap", render: function (e) {
+                            if (e != "") {
+                                var ench = mw_enchant_lookup[e]
+                                var r = "";
+                                for (var ef in ench["Effects"]) {
+                                    var eff = ench["Effects"][ef]["Effect"]
+                                    var nm = mw_gmst_lookup[`seffect${eff.toLowerCase()}`]
+                                    if (nm == null || nm == undefined || nm == "") {
+                                        nm = eff
+                                    }
+                                    r += `<div>${mw_magicEffect_icon(mw_effectIcon_lookup[eff], nm)} ${nm}</div>`;
+                                }
+                                return r;
+                            }
+                            return ""
+                        }
+                    },
+                    {
+                        title: "Target", class: "text-nowrap", render: function (e) {
+                            if (e != "") {
+                                var ench = mw_enchant_lookup[e]
+                                var r = "";
+                                for (var ef in ench["Effects"]) {
+                                    var at = ench["Effects"][ef]["Attribute"]
+                                    var sk = ench["Effects"][ef]["Skill"]
+                                    var t = ""
+                                    if (at != "None") {
+                                        r += `<div style='height:2rem'>${mw_attribute_icon(at)} ${at}</div>`;
+                                    }
+                                    else if (sk != "None") {
+                                        r += `<div style='height:2rem'>${mw_skill_icon(sk)} ${mw_gmst_lookup["sskill" + sk.toLowerCase()]}</div>`;
+                                    }
+                                    else {
+                                        r += "<div style='height:2rem'>&nbsp;</div>"
+                                    }
+                                }
+                                return r;
+                            }
+                            return "";
+                        }
+                    },
+                    { title: "Range", render: (r) => r != "" ? mw_enchant_lookup[r]["Effects"].map((e) => `<div style='height:2rem'>${e["Range"].replace("On", "")}</div>`).join("") : "" },
+                    { title: "Area", render: (r) => r != "" ? mw_enchant_lookup[r]["Effects"].map((e) => `<div style='height:2rem'>${e["Area"]}</div>`).join("") : "" },
+                    { title: "Duration", render: (r) => r != "" ? mw_enchant_lookup[r]["Effects"].map((e) => `<div style='height:2rem'>${e["Duration"]}</div>`).join("") : "" },
+                    { title: "Magnitude", render: (r) => r != "" ? mw_enchant_lookup[r]["Effects"].map((e) => `<div style='height:2rem'>${e["Magnitude"][0]} - ${e["Magnitude"][1]}</div>`).join("") : "" }
+                ];
+                var rows = [];
+                for (var key in data) {
+                    var itm = data[key]
+                    rows.push([
+                        key,
+                        key,
+                        itm["Type"],
+                        itm["Weight"],
+                        itm["Value"],
+                        itm["Rating"],
+                        itm["Health"],
+                        itm["Enchantment"],
+                        itm["Enchanting"],
+                        itm["Enchanting"],
+                        itm["Enchanting"],
+                        itm["Enchanting"],
+                        itm["Enchanting"],
+                        itm["Enchanting"],
+                        itm["Enchanting"],
+                        itm["Enchanting"],
+                        itm["Enchanting"],
+                        itm["Enchanting"],
+                    ]);
+                }
+                var filters = [1, 1, 1, .5, .5, .5, .5, .5, 1, 1, .5, .5, 1, 1, .5, .5, .5, .5]
+                mw_newDataTable(container, "armour", columns, rows, filters);
+                mw_armour_init = true;
+            }
+        });
+    }
+    else {
+        currentTable = allTables[container];
+        mw_applyFilters(container);
+    }
+}
+
+var mw_weapon_init = false;
+function mw_weapon_browser(container) {
+    mw_showPanel(container);
+    if (!mw_weapon_init) {
+        $.get({
+            url: "json/morroweb.weapon.json",
+            cache: true,
+            success: function (data) {
+                var columns = [
+                    { title: "Id", render: mw_id_format },
+                    { title: "Name", class: "text-nowrap", render: (k) => `${mw_item_icon(data[k]["Icon"], data[k]["Name"])} ${data[k]["Name"]}` },
+                    { title: "Type" },
+                    { title: "Weight" },
+                    { title: "Value" },
+                    { title: "Health" },
+                    { title: "Speed" },
+                    { title: "Reach" },
+                    { title: "Chop", render: (x) => `${x[0]} - ${x[1]}` },
+                    { title: "Slash", render: (x) => `${x[0]} - ${x[1]}` },
+                    { title: "Thrust", render: (x) => `${x[0]} - ${x[1]}` },
+                    { title: "Silver", render: (x) => mw_yn_format(x.includes("SILVER")) },
+                    { title: "Ignore Resist", render: (x) => mw_yn_format(x.includes("IGNORES_NORMAL_WEAPON_RESISTANCE")) },
+                    { title: "Enchantment" },
+                    { title: "Enchanting", render: mw_id_format },
+                    { title: "Enchant Type", render: (e) => e != "" ? mw_enchant_lookup[e]["Type"] : "" },
+                    { title: "Cost", render: (e) => e != "" ? mw_enchant_lookup[e]["Cost"] : "" },
+                    { title: "Charge", render: (e) => e != "" ? mw_enchant_lookup[e]["Charge"] : "" },
+                    {
+                        title: "Effect", class: "text-nowrap", render: function (e) {
+                            if (e != "") {
+                                var ench = mw_enchant_lookup[e]
+                                var r = "";
+                                for (var ef in ench["Effects"]) {
+                                    var eff = ench["Effects"][ef]["Effect"]
+                                    var nm = mw_gmst_lookup[`seffect${eff.toLowerCase()}`]
+                                    if (nm == null || nm == undefined || nm == "") {
+                                        nm = eff
+                                    }
+                                    r += `<div>${mw_magicEffect_icon(mw_effectIcon_lookup[eff], nm)} ${nm}</div>`;
+                                }
+                                return r;
+                            }
+                            return ""
+                        }
+                    },
+                    {
+                        title: "Target", class: "text-nowrap", render: function (e) {
+                            if (e != "") {
+                                var ench = mw_enchant_lookup[e]
+                                var r = "";
+                                for (var ef in ench["Effects"]) {
+                                    var at = ench["Effects"][ef]["Attribute"]
+                                    var sk = ench["Effects"][ef]["Skill"]
+                                    if (at != "None") {
+                                        r += `<div style='height:2rem'>${mw_attribute_icon(at)} ${at}</div>`;
+                                    }
+                                    else if (sk != "None") {
+                                        r += `<div style='height:2rem'>${mw_skill_icon(sk)} ${mw_gmst_lookup["sskill" + sk.toLowerCase()]}</div>`;
+                                    }
+                                    else {
+                                        r += "<div style='height:2rem'>&nbsp;</div>"
+                                    }
+                                }
+                                return r;
+                            }
+                            return "";
+                        }
+                    },
+                    { title: "Range", render: (r) => r != "" ? mw_enchant_lookup[r]["Effects"].map((e) => `<div style='height:2rem'>${e["Range"].replace("On", "")}</div>`).join("") : "" },
+                    { title: "Area", render: (r) => r != "" ? mw_enchant_lookup[r]["Effects"].map((e) => `<div style='height:2rem'>${e["Area"]}</div>`).join("") : "" },
+                    { title: "Duration", render: (r) => r != "" ? mw_enchant_lookup[r]["Effects"].map((e) => `<div style='height:2rem'>${e["Duration"]}</div>`).join("") : "" },
+                    { title: "Magnitude", render: (r) => r != "" ? mw_enchant_lookup[r]["Effects"].map((e) => `<div style='height:2rem'>${e["Magnitude"][0]} - ${e["Magnitude"][1]}</div>`).join("") : "" }
+                ];
+                var rows = [];
+                for (var key in data) {
+                    var itm = data[key]
+                    rows.push([
+                        key,
+                        key,
+                        itm["Type"],
+                        itm["Weight"],
+                        itm["Value"],
+                        itm["Health"],
+                        itm["Speed"],
+                        itm["Reach"],
+                        itm["Chop"],
+                        itm["Slash"],
+                        itm["Thrust"],
+                        itm["Flags"],
+                        itm["Flags"],
+                        itm["Enchantment"],
+                        itm["Enchanting"],
+                        itm["Enchanting"],
+                        itm["Enchanting"],
+                        itm["Enchanting"],
+                        itm["Enchanting"],
+                        itm["Enchanting"],
+                        itm["Enchanting"],
+                        itm["Enchanting"],
+                        itm["Enchanting"],
+                        itm["Enchanting"]
+                    ]);
+                }
+                var filters = [1, 1, 1, .5, .5, .5, .5, .5, .5, .5, .5, .5, .65, .5, 1, 1, .5, .5, 1, 1, .5, .5, .5, .5]
+                mw_newDataTable(container, "weapon", columns, rows, filters);
+                mw_weapon_init = true;
+            }
+        });
+    }
+    else {
+        currentTable = allTables[container];
+        mw_applyFilters(container);
+    }
+}
 //#endregion
