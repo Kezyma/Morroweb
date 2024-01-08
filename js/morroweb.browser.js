@@ -373,7 +373,8 @@ function mw_skill_browser(container) {
                     {   title: "Attribute",
                         render: (a) => `${mw_attribute_icon(mw_attributeMap[a])} ${mw_titleCase(mw_attributeMap[a])}`
                     },
-                    { title: "Specialisation", render: (s) => mw_titleCase(mw_specialisationMap[s]) }
+                    { title: "Specialisation", render: (s) => mw_titleCase(mw_specialisationMap[s]) },
+                    { title: "Description", render: mw_description },
                 ];
                 var rows = [];
                 for (var key in data) {
@@ -382,6 +383,7 @@ function mw_skill_browser(container) {
                         key,
                         data[key]["Attribute"],
                         data[key]["Specialisation"],
+                        data[key]["Description"],
                     ]);
                 }
                 mw_newDataTable(container, "skill", columns, rows);
